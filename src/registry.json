@@ -1,0 +1,32 @@
+{
+  "name": "MerokuDAO dAPP Store Registry",
+  "schema": {
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "nft creator",
+      "description": "NFT Creation dAPPs"
+    },
+    {
+      "name": "trade",
+      "description": "Trading of Digital assets"
+    }
+  ],
+  "dapps": [
+    {
+      "name": "CryptoBoys NFT Marketplace",
+      "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
+      "tags": [
+        "nft creator"
+      ]
+    },
+    {
+      "name": "PoolTogether",
+      "repoUrl": "https://github.com/r4881t/v4-ui",
+      "tags":[
+        "trade"
+      ]
+    }
+  ]
+}

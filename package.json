@@ -1,0 +1,9 @@
+{
+  "name": "dapp-store-registry",
+  "version": "0.0.1",
+  "description": "The dApp Store registry for MerokuDAO dAapp Store",
+  "main": "build/app.js",
+  "author": "MerokuDAO Monks",
+  "license": "LGPL-2.1",
+  "private": false
+}
