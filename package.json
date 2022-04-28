@@ -1,11 +1,24 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/merokudao/dapp-store-registry"
+  },
+  "homepage": "https://github.com/merokudao/dapp-store-registry/blob/main/README.md",
+  "keywords": [
+    "meroku", "dapp", "store", "registry"
+  ],
+  "bugs": {
+    "url": "https://github.com/merokudao/dapp-store-registry/issues/new"
+  },
   "main": "build/app.js",
   "author": "MerokuDAO Monks",
   "license": "LGPL-2.1",
-  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "cross-fetch": "^3.1.5",
     "fs-extra": "^10.1.0"
