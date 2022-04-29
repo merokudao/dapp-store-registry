@@ -136,7 +136,7 @@ export class RegistryContainer {
     return this.fromThis(dApps);
   };
 
-  searchForText = (queryTxt: string, queryFields: string[]) => {
+  searchForText = (queryTxt: string, queryFields: string[] = ['name']) => {
     const dApps = this.registry.dapps.filter((dapp: Dapp) => {
       return queryFields.some((field: string) => {
         const val = getKeyValue<keyof Dapp, Dapp>(field as keyof Dapp)(dapp);

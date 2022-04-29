@@ -1,6 +1,6 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
   "repository": {
     "type": "git",
@@ -13,7 +13,9 @@
   "bugs": {
     "url": "https://github.com/merokudao/dapp-store-registry/issues/new"
   },
-  "main": "build/app.js",
+  "main": "dist/main/index.js",
+  "typings": "dist/main/index.d.ts",
+  "module": "dist/module/index.js",
   "author": "MerokuDAO Monks",
   "license": "LGPL-2.1",
   "publishConfig": {

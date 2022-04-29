@@ -24,6 +24,10 @@ Install using NPM as `npm install @merokudao/dapp-store-registry` or using YARN 
 
 
 ```typescript
+// Import
+import { RegistryListProvider } from '@merokudao/dapp-store-registry';
+
+// Instantiate a registry.
 const registry = await new RegistryListProvider().resolve();
 
 // Find all the dApps
