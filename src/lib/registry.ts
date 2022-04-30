@@ -150,6 +150,12 @@ export class RegistryContainer {
 
   };
 
+  searchForExactName = (queryTxt: string): Dapp[] => {
+    return this.registry.dapps.filter((dapp: Dapp) => {
+      return dapp.name.toLowerCase() === queryTxt.toLowerCase();
+    });
+  };
+
   getRegistry = () => {
     return this.registry;
   };
