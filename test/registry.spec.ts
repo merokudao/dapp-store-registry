@@ -1,31 +1,81 @@
-import Ajv, { JSONSchemaType } from 'ajv';
-import fs from 'fs-extra';
 import { DAppStoreSchema } from 'interfaces/registrySchema';
 import chai from 'chai';
 
 chai.should();
 
-describe('Registry JSON', () => {
-  it('should be a valid JSON', (done) => {
-    const content = fs
-      .readFileSync('./src/registry.json')
-      .toString();
-    const json = JSON.parse(content) as DAppStoreSchema;
-    json.should.be.an('object');
-    done();
+describe('DappStoreRegistry', () => {
+
+  describe('Registry Strategy', () => {
+    it('uses the local registry file upon Static RegistryStrategy', (done) => {
+      done();
+    });
+
+    it('uses the remote registry file upon GitHub RegistryStrategy', (done) => {
+      done();
+    });
+
+    it('uses local registry if remote can\'t be loaded', (done) => {
+      done();
+    });
   });
 
-  it('should be compliant to schema', (done) => {
-    const content = fs
-      .readFileSync('./src/registry.json')
-      .toString();
-    const json = JSON.parse(content) as DAppStoreSchema;
-    const ajv = new Ajv({
-      strict: false
+  describe('#dapps', () => {
+    it('returns a list of dapps that are listed', (done) => {
+      done();
     });
-    const validate = ajv.compile(json);
-    const valid = validate(json);
-    valid.should.be.true;
-    done();
+  });
+
+  describe('#search', () => {
+    it('is able to search queryString in name of dApp', (done) => {
+      done();
+    });
+
+    it('is able to search queryString in tags of dApp', (done) => {
+      done();
+    });
+
+    it('returns null on empty queryString', (done) => {
+      done();
+    });
+
+    it('is able to filter results on chainId', (done) => {
+      done();
+    });
+
+    it('is able to filter results on language', (done) => {
+      done();
+    });
+
+    it('is able to filter results on platform availability', (done) => {
+      done();
+    });
+
+    it('is able to filter results on min age to access dApp', (done) => {
+      done();
+    });
+
+    it('is able to filter results on matureAudience flag', (done) => {
+      done();
+    });
+
+    it('is able to filter results on specific developer', (done) => {
+      done();
+    });
+
+    it('is able to filter results on allowed countries', (done) => {
+      done();
+    });
+
+    it('is able to filter results on blocked countries', (done) => {
+      done();
+    });
+
+    it('is able to filter results on or after certain list date', (done) => {
+      done();
+    });
+
+    it('is able to filter results on or before certain list date', (done) => {
+      done();
+    });
   });
 });

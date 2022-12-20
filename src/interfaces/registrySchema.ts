@@ -1,4 +1,5 @@
 import { DAppSchema } from "./dAppSchema";
+import { FeaturedSection } from "./featuredSections";
 
 /**
  * Schema for dApp Store
@@ -16,4 +17,6 @@ export interface DAppStoreSchema {
    * List of dApps
    */
   dapps: DAppSchema[];
+
+  featuredSections?: FeaturedSection[];
 }

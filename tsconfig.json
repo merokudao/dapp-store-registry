@@ -36,7 +36,7 @@
   "include": [
     "src/**/*",
     "src/**/*.json"
-, "test/registry.spec.ts"  ],
+, "test/registryJson.spec.ts"  ],
   "emitDecoratorMetadata": true,
   "experimentalDecorators": true,
   "strictPropertyInitialization": false,

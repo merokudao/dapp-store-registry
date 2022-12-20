@@ -4,6 +4,7 @@ import { FilterOptions } from '../interfaces/searchOptions';
 import {  DAppStoreSchema } from '../interfaces/registrySchema';
 import * as JsSearch from 'js-search';
 import porterStemmer from  '@stdlib/nlp-porter-stemmer';
+import parseISO from 'date-fns/parseISO'
 
 import registryJson from './../registry.json';
 
@@ -43,7 +44,7 @@ export class DappStoreRegistry {
   }
 
   private localRegistry = (): DAppStoreSchema => {
-    return registryJson;
+    return registryJson as DAppStoreSchema;
   }
 
   private static queryRemoteRegistry = async (remoteFile: string): Promise<DAppStoreSchema> => {
@@ -55,7 +56,7 @@ export class DappStoreRegistry {
       console.info(
         `@merokudao/dapp-store-registry: falling back to static repository.`
       );
-      return registryJson;
+      return registryJson as DAppStoreSchema;
     }
   };
 
@@ -79,8 +80,15 @@ export class DappStoreRegistry {
     this.searchEngine.addDocuments(docs);
   };
 
+  /**
+   * Returns the list of dApps that are listed in the registry.
+   * You would probably not want to call this function in your use case, as it
+   * simply returns all the dApps without any filtering.
+   * Use the search function instead.
+   * @returns The list of dApps that are listed in the registry
+   */
   public dApps = async(): Promise<DAppSchema[]> => {
-    return (await this.registry()).dapps;
+    return (await this.registry()).dapps.filter(d => d.isListed);
   };
 
   /**
@@ -91,6 +99,9 @@ export class DappStoreRegistry {
    */
   public search = (queryTxt: string, filterOpts: FilterOptions | undefined = undefined): DAppSchema[] => {
     let res =  this.searchEngine.search(queryTxt) as DAppSchema[];
+
+    // Filter to ensure only listed dapps make it to the results
+    res = res.filter(d => d.isListed);
 
     if (filterOpts) {
       if (filterOpts.chainId) {
@@ -104,9 +115,39 @@ export class DappStoreRegistry {
         const platforms = filterOpts.availableOnPlatform;
         res = res.filter(d => d.availableOnPlatform.some(platforms.includes));
       }
+      if (filterOpts.forMatureAudience) {
+        res = res.filter(d => d.isForMatureAudience === filterOpts.forMatureAudience);
+      }
+      if (filterOpts.minAge) {
+        const minAge = filterOpts.minAge;
+        res = res.filter(d => d.minAge > minAge);
+      }
+      if (filterOpts.listedOnOrAfter) {
+        const listedAfter = filterOpts.listedOnOrAfter;
+        res = res.filter(d => parseISO(d.listDate) >= listedAfter);
+      }
+      if (filterOpts.listedOnOrBefore) {
+        const listedBefore = filterOpts.listedOnOrBefore;
+        res = res.filter(d => parseISO(d.listDate) <= listedBefore);
+      }
+      if (filterOpts.allowedInCountries) {
+        const allowedCountries = filterOpts.allowedInCountries;
+        res = res.filter(d => d.geoRestrictions?.allowedCountries.some(allowedCountries.includes));
+      }
+      if (filterOpts.blockedInCountries) {
+        const blockedCountries = filterOpts.blockedInCountries;
+        res = res.filter(d => d.geoRestrictions?.blockedCountries.some(blockedCountries.includes));
+      }
+      if (filterOpts.categories) {
+        const categories = filterOpts.categories;
+        res = res.filter(d => categories.includes(d.category));
+      }
     }
 
     return res;
   }
 
+  public getFeaturedDapps = async () => {
+    return (await this.registry()).featuredSections;
+  }
 }

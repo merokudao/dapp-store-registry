@@ -25,15 +25,19 @@
         "language": "en",
         "version": "0.0.1",
         "availableOnPlatform": ["web"],
+        "isListed": true,
         "listDate": "2022-12-12",
         "developer": {
           "legalName": "Bitpack",
+          "logo": "https://something.com/image.png",
+          "githubID": "bitpack",
           "website": "https://something.com",
           "privacyPolicyUrl": "https://somethingelse.com",
           "support": {
             "url": "https://something.com"
           }
-        }
+        },
+        "category": "finance"
       }
   ]
 }

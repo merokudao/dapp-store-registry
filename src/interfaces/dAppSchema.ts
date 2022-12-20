@@ -2,6 +2,36 @@ const dAppDeploymentPlatforms = ['ios', 'web', 'android'] as const;
 
 export type DAppDeploymentPlatform = typeof dAppDeploymentPlatforms[number];
 
+const dAppCategory = [
+  "books",
+  "business",
+  "developer tools",
+  "education",
+  "entertainment",
+  "finance",
+  "food and drink",
+  "games",
+  "graphics and design",
+  "health and fitness",
+  "lifestyle",
+  "kids",
+  "magazines and newspapers",
+  "medical",
+  "music",
+  "navigation",
+  "news",
+  "photo and video",
+  "productivity",
+  "reference",
+  "shopping",
+  "social networking",
+  "sports",
+  "travel",
+  "utilities",
+  "weather"] as const;
+
+export type DAppCategory = typeof dAppCategory[number];
+
 /**
  * A schema for dapps for dApp Registry
  */
@@ -14,7 +44,7 @@ export interface DAppSchema {
    * A detailed description of the dApp
    */
   description: string;
-  images: {
+  images?: {
     logo: string;
     banner: string;
     screenshots: string[];
@@ -47,6 +77,7 @@ export interface DAppSchema {
    * The version of the dApp that is available on the dApp store
    */
   version: string;
+  isListed: boolean;
   /**
    * The date on which this dApp is listed on dApp store. This date can be a future date as well. This can not be in past.
    */
@@ -56,7 +87,13 @@ export interface DAppSchema {
    *
    * @minItems 1
    */
-  availableOnPlatform: string[];
+  availableOnPlatform: DAppDeploymentPlatform[];
+
+  geoRestrictions?: {
+    allowedCountries: string[];
+    blockedCountries: string[];
+  };
+
   developer: {
     /**
      * Legal name of the developer or the company
@@ -69,6 +106,7 @@ export interface DAppSchema {
       url: string;
       email?: string;
     };
+    githubID: string;
   };
   /**
    * @minItems 1
@@ -78,4 +116,6 @@ export interface DAppSchema {
    * @minItems 1
    */
   chains: number[];
+
+  category: DAppCategory;
 }

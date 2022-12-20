@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/merokuDappStore.dAppSchema.json",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppSchema.json",
   "title": "dApp Schema",
   "description": "A schema for dapps for dApp Registry",
   "type": "object",
@@ -56,7 +56,7 @@
     "minAge": {
       "type": "integer",
       "description": "The min age of user who should access this dApp",
-      "exclusiveMinimum": 8
+      "exclusiveMinimum": 3
     },
     "isForMatureAudience": {
       "type": "boolean",
@@ -73,6 +73,10 @@
     "version": {
       "type": "string",
       "description": "The version of the dApp that is available on the dApp store"
+    },
+    "isListed": {
+      "type": "boolean",
+      "description": "Boolean to signify if the dApp is listed on the dApp store"
     },
     "listDate": {
       "type": "string",
@@ -92,6 +96,26 @@
       "minItems": 1,
       "description": "A string signifying if the dApp is available on which platform - web, iOS, android"
     },
+    "geoRestrictions": {
+      "type": "object",
+      "description": "A list of countries where the dApp is available or unavailable. If this is not present, the dApp is available everywhere. If this is present, then one of either allowedCountries or blockedCountries should be present. If both are present, then the dApp is available in allowedCountries and unavailable in blockedCountries. The name of countries should be in ISO-3661-1 Alpha-2 Code.",
+      "properties": {
+        "allowedCountries": {
+          "type": "array",
+          "description": "A list of countries where the dApp is available",
+          "items": {
+            "type": "string"
+          }
+        },
+        "blockedCountries": {
+          "type": "array",
+          "description": "A list of countries where the dApp is unavailable",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "developer": {
       "type": "object",
       "required": [
@@ -99,7 +123,8 @@
         "logo",
         "website",
         "privacyPolicyUrl",
-        "support"
+        "support",
+        "githubID"
       ],
       "properties": {
         "legalName": {
@@ -134,6 +159,10 @@
               "format": "email"
             }
           }
+        },
+        "githubID": {
+          "type": "string",
+          "description": "The github ID of the developer"
         }
       }
     },
@@ -152,6 +181,38 @@
       "items": {
         "type": "integer"
       }
+    },
+    "category": {
+      "type": "string",
+      "description": "The category of the dApp. You can assign one category to your dApp. The category you select is particularly important for your app’s discoverability on the dApp Store. This will be the category in which the app appears when users browse the dApp Store or filter search results, and it determines placement on the dApps tab or Games",
+      "enum": [
+        "books",
+        "business",
+        "developer tools",
+        "education",
+        "entertainment",
+        "finance",
+        "food and drink",
+        "games",
+        "graphics and design",
+        "health and fitness",
+        "lifestyle",
+        "kids",
+        "magazines and newspapers",
+        "medical",
+        "music",
+        "navigation",
+        "news",
+        "photo and video",
+        "productivity",
+        "reference",
+        "shopping",
+        "social networking",
+        "sports",
+        "travel",
+        "utilities",
+        "weather"
+      ]
     }
   },
   "required": [
@@ -167,6 +228,8 @@
     "developer",
     "tags",
     "chains",
-    "listDate"
+    "listDate",
+    "isListed",
+    "category"
   ]
 }

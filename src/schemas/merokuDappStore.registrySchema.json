@@ -1,6 +1,6 @@
 {
   "schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/merokuDappStore.registrySchema.json",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.registrySchema.json",
   "title": "dApp Store Schema",
   "description": "Schema for dApp Store",
   "type": "object",
@@ -20,7 +20,14 @@
       "type": "array",
       "description": "List of dApps",
       "items": {
-        "$ref": "src/merokuDappStore.dAppSchema.json"
+        "$ref": "src/schemas/merokuDappStore.dAppSchema.json"
+      }
+    },
+    "featuredSections": {
+      "type": "array",
+      "description": "List of featured sections",
+      "items": {
+        "$ref": "src/schemas/merokuDappStore.featuredSectionSchema.json"
       }
     }
   },
