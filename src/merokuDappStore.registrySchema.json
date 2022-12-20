@@ -1,0 +1,33 @@
+{
+  "schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/merokuDappStore.registrySchema.json",
+  "title": "dApp Store Schema",
+  "description": "Schema for dApp Store",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "Title of the dApp Store",
+      "type": "string"
+    },
+    "chains": {
+      "type": "array",
+      "description": "List of chains supported by the dApp. This should be chainID of an EVM powered network. Ref https://chainlist.org/",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "dapps": {
+      "type": "array",
+      "description": "List of dApps",
+      "items": {
+        "$ref": "src/merokuDappStore.dAppSchema.json"
+      }
+    }
+  },
+  "required": [
+    "title",
+    "chains",
+    "dapps"
+  ],
+  "additionalProperties": false
+}

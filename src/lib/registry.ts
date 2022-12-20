@@ -1,166 +1,112 @@
 import { fetch } from 'cross-fetch';
+import { DAppSchema } from '../interfaces/dAppSchema';
+import { FilterOptions } from '../interfaces/searchOptions';
+import {  DAppStoreSchema } from '../interfaces/registrySchema';
+import * as JsSearch from 'js-search';
+import porterStemmer from  '@stdlib/nlp-porter-stemmer';
 
-import registry from './../registry.json';
+import registryJson from './../registry.json';
 
-
-export interface Chain {
-  readonly name: string;
-  readonly chainId: number;
-}
-
-export interface Version {
-  readonly version: string;
-}
-
-export interface Tag {
-  readonly name: string;
-  readonly description?: string;
-}
-
-export interface Dapp {
-  readonly name: string;
-  readonly repoUrl: string;
-  readonly description?: string;
-  readonly chains: number[];
-  readonly tags: string[];
-}
-
-export interface Registry {
-  readonly name: string;
-  readonly schema: Version;
-  readonly tags: Tag[];
-  readonly chains: Chain[];
-  readonly dapps: Dapp[];
-}
-
-export enum Strategy {
+export enum RegistryStrategy {
   GitHub = 'GitHub',
   Static = 'Static'
 }
 
-export class StaticTokenListResolutionStrategy {
-  resolve = (): Registry => {
-    return registry;
-  };
-}
+export class DappStoreRegistry {
 
-const queryJsonFiles = async (files: string[]): Promise<Registry> => {
-  const responses: Registry[] = (await Promise.all(
-    files.map(async (repo) => {
-      try {
-        const response = await fetch(repo);
-        const json = (await response.json()) as Registry;
-        return json;
-      } catch {
-        console.info(
-          `@merokudao/dapp-store-registry: falling back to static repository.`
-        );
-        return registry;
-      }
-    })
-  )) as Registry[];
+  strategy: RegistryStrategy;
 
-  const dApps = responses
-    .map((registry: Registry) => registry.dapps)
-    .reduce((acc, arr) => (acc as Dapp[]).concat(arr), []);
+  private registryRemoteUrl =
+  'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json';
 
-  return {
-    name: responses[0].name,
-    schema: responses[0].schema,
-    tags: responses[0].tags,
-    chains: responses[0].chains,
-    dapps: dApps
-  };
-};
+  private searchEngine = new JsSearch.Search('dappId');
 
-export class GitHubTokenListResolutionStrategy {
-  repositories = [
-    'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json',
-  ];
+  private cachedRegistry: DAppStoreSchema | undefined;
 
-  resolve = () => {
-    return queryJsonFiles(this.repositories);
-  };
-}
+  constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
+    this.strategy = strategy;
 
-export class RegistryListProvider {
-  static strategies = {
-    [Strategy.GitHub]: new GitHubTokenListResolutionStrategy(),
-    [Strategy.Static]: new StaticTokenListResolutionStrategy()
-  };
-
-  resolve = async (
-    strategy: Strategy = Strategy.Static
-  ): Promise<RegistryContainer> => {
-    return new RegistryContainer(
-      await RegistryListProvider.strategies[strategy].resolve()
+    // Configure the search engine Index
+    this.searchEngine.indexStrategy = new JsSearch.PrefixIndexStrategy();
+    this.searchEngine.tokenizer = new JsSearch.StopWordsTokenizer(
+    	new JsSearch.SimpleTokenizer());
+    this.searchEngine.tokenizer = new JsSearch.StemmingTokenizer(
+      porterStemmer,
+      new JsSearch.SimpleTokenizer()
     );
-  };
-}
-
-const getKeyValue = <U extends keyof T, T extends object>(key: U) => (obj: T) => {
-  return obj[key];
-};
-
-
-export class RegistryContainer {
-  private registry: Registry;
-
-  constructor(registry: Registry) {
-    this.registry = registry;
+    this.searchEngine.addIndex('name');
+    this.searchEngine.addIndex('tags');
   }
 
-  public fromThis(this: RegistryContainer, dapps: Dapp[]): RegistryContainer {
-    return new RegistryContainer({
-      name: this.registry.name,
-      schema: this.registry.schema,
-      tags: this.registry.tags,
-      chains: this.registry.chains,
-      dapps: dapps
-    })
+  public async init() {
+    await this.addDocsForSearch();
+  }
+
+  private localRegistry = (): DAppStoreSchema => {
+    return registryJson;
+  }
+
+  private static queryRemoteRegistry = async (remoteFile: string): Promise<DAppStoreSchema> => {
+    try {
+      const response = await fetch(remoteFile);
+      const json = (await response.json()) as DAppStoreSchema;
+      return json;
+    } catch {
+      console.info(
+        `@merokudao/dapp-store-registry: falling back to static repository.`
+      );
+      return registryJson;
+    }
+  };
+
+  private registry = async (): Promise<DAppStoreSchema> => {
+    // TODO - check if remote registry is updated than this.cachedRegistry, then
+    // fetch from remote
+    if (!this.cachedRegistry) {
+      switch (this.strategy) {
+        case RegistryStrategy.GitHub:
+          return await DappStoreRegistry.queryRemoteRegistry(this.registryRemoteUrl);
+        case RegistryStrategy.Static:
+          return this.localRegistry();
+      }
+    } else {
+      return this.cachedRegistry;
+    }
+  };
+
+  private addDocsForSearch = async (): Promise<void> => {
+    const docs = (await this.registry()).dapps;
+    this.searchEngine.addDocuments(docs);
+  };
+
+  public dApps = async(): Promise<DAppSchema[]> => {
+    return (await this.registry()).dapps;
   };
 
   /**
-   * Creates a new instance of the registry container with the dapps filtered by tag
-   * @param tag
-   * @returns
+   * Performs search & filter on the dApps in the registry
+   * @param queryTxt The text to search for
+   * @param filterOpts The filter options. If undefined, no filtering is performed
+   * @returns The filtered & sorted list of dApps
    */
-  filterByTag = (tag: string) => {
-    return this.fromThis(this.registry.dapps.filter(dapp => {
-      return dapp.tags.some(t => t.toLocaleLowerCase().includes(tag));
-    }));
-  };
+  public search = (queryTxt: string, filterOpts: FilterOptions | undefined = undefined): DAppSchema[] => {
+    let res =  this.searchEngine.search(queryTxt) as DAppSchema[];
 
-  filterByChainId = (chainId: number) => {
-    const dApps = this.registry.dapps.filter((item) => item.chains.includes(chainId));
-    return this.fromThis(dApps);
-  };
+    if (filterOpts) {
+      if (filterOpts.chainId) {
+        const chainId = filterOpts.chainId;
+        res = res.filter(d => d.chains.includes(chainId));
+      }
+      if (filterOpts.language) {
+        res = res.filter(d => d.language === filterOpts.language);
+      }
+      if (filterOpts.availableOnPlatform) {
+        const platforms = filterOpts.availableOnPlatform;
+        res = res.filter(d => d.availableOnPlatform.some(platforms.includes));
+      }
+    }
 
-  searchForText = (queryTxt: string, queryFields: string[] = ['name']) => {
-    const dApps = this.registry.dapps.filter((dapp: Dapp) => {
-      return queryFields.some((field: string) => {
-        const val = getKeyValue<keyof Dapp, Dapp>(field as keyof Dapp)(dapp);
-        if (val && typeof val === 'string') {
-          return val.toLowerCase().includes(queryTxt.toLowerCase());
-        }
-        return false;
-      });
-    });
-    return this.fromThis(dApps);
+    return res;
+  }
 
-  };
-
-  searchForExactName = (queryTxt: string): Dapp[] => {
-    return this.registry.dapps.filter((dapp: Dapp) => {
-      return dapp.name.toLowerCase() === queryTxt.toLowerCase();
-    });
-  };
-
-  getRegistry = () => {
-    return this.registry;
-  };
-
-  getDapps = () => {
-    return this.registry.dapps;
-  };
 }
