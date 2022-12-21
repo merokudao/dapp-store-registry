@@ -10,7 +10,6 @@ the dApp Store registry and a helper class to search, filter & list dApps
 3. Create a PR
 4. After PR is approved and merged, your dApp will be listed in the Meroku dApp Store.
 
-
 # Usage
 
 ## Installation
@@ -22,10 +21,9 @@ Install using NPM as `npm install @merokudao/dapp-store-registry` or using YARN 
 
 ### Basic
 
-
 ```typescript
 // Import
-import { DappStoreRegistry } from '@merokudao/dapp-store-registry';
+import { DappStoreRegistry } from "@merokudao/dapp-store-registry";
 
 // Instantiate a registry.
 const registry = await new Registry().init();
@@ -34,8 +32,7 @@ const registry = await new Registry().init();
 const dApps = await registry.dApps();
 
 // Search dApps with query string "nft"
-const dAppsResult = registry.search('nft')
-
+const dAppsResult = registry.search("nft");
 ```
 
 Detailed docs coming soon.

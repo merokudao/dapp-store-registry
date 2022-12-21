@@ -16,28 +16,14 @@
     "outDir": "dist",
     "baseUrl": ".",
     "skipLibCheck": true,
-    "types": [
-      "node",
-      "mocha"
-    ],
-    "typeRoots": [
-      "types",
-      "../../node_modules/@types",
-      "node_modules/@types"
-    ],
+    "types": ["node", "mocha"],
+    "typeRoots": ["types", "../../node_modules/@types", "node_modules/@types"],
     "paths": {
-      "*": [
-        "../../node_modules/*",
-        "node_modules/*",
-        "src/*"
-      ]
+      "*": ["../../node_modules/*", "node_modules/*", "src/*"]
     }
   },
-  "include": [
-    "src/**/*",
-    "src/**/*.json"
-, "test/registryJson.spec.ts"  ],
+  "include": ["src/**/*", "src/**/*.json", "test/registryJson.spec.ts"],
   "emitDecoratorMetadata": true,
   "experimentalDecorators": true,
-  "strictPropertyInitialization": false,
+  "strictPropertyInitialization": false
 }

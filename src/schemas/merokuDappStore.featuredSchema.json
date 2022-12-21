@@ -25,11 +25,6 @@
       }
     }
   },
-  "required": [
-    "title",
-    "description",
-    "key",
-    "dappIds"
-  ],
+  "required": ["title", "description", "key", "dappIds"],
   "additionalProperties": false
 }

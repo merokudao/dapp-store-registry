@@ -1,5 +1,4 @@
 export interface FeaturedSection {
-
   title: string;
 
   description: string;
@@ -7,4 +6,4 @@ export interface FeaturedSection {
   key: string;
 
   dappIds: string[];
-};
+}

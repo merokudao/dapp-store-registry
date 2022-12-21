@@ -17,11 +17,7 @@
     },
     "images": {
       "type": "object",
-      "required": [
-        "logo",
-        "banner",
-        "screenshots"
-      ],
+      "required": ["logo", "banner", "screenshots"],
       "properties": {
         "logo": {
           "type": "string",
@@ -87,11 +83,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": [
-          "ios",
-          "web",
-          "android"
-        ]
+        "enum": ["ios", "web", "android"]
       },
       "minItems": 1,
       "description": "A string signifying if the dApp is available on which platform - web, iOS, android"
@@ -146,9 +138,7 @@
         },
         "support": {
           "type": "object",
-          "required": [
-            "url"
-          ],
+          "required": ["url"],
           "properties": {
             "url": {
               "type": "string",
