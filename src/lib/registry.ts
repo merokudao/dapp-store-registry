@@ -13,6 +13,7 @@ import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
+import { Octokit, App } from "octokit";
 
 const debug = Debug("@merokudao:dapp-store-registry:Registry");
 
@@ -28,8 +29,11 @@ export class DappStoreRegistry {
 
   private lastRegistryCheckedAt: Date | undefined;
 
+  private readonly githubOwner = 'merokudao';
+  private readonly githubRepo = 'dapp-store-registry';
+
   public readonly registryRemoteUrl =
-    "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json";
+    `https://raw.githubusercontent.com/${this.githubOwner}/${this.githubRepo}/main/src/registry.json`;
 
   private searchEngine = new JsSearch.Search("dappId");
 
@@ -235,6 +239,45 @@ export class DappStoreRegistry {
     return res;
   }
 
+  private async updateRegistry(name: string,
+    email: string,
+    accessToken: string,
+    newRegistry: DAppStoreSchema,
+    org: string | undefined = undefined) {
+      // Fork repo from merokudao to the authenticated user
+      const octokit = new Octokit({
+        userAgent: "@merokudao/dAppStore/v1.2.3",
+      });
+
+      const res = await octokit.request('POST /repos/{owner}/{repo}/forks', {
+        owner: this.githubOwner,
+        repo: this.githubRepo,
+        organization: org,
+        name: this.githubRepo,
+        default_branch_only: true
+      });
+
+      // Commit the changes
+      // Push the changes to the forked repo
+      await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
+        owner: this.githubOwner,
+        repo: this.githubRepo,
+        path: 'src/registry.json',
+        message: `Add ${dapp.name} ${dapp.dappId}`,
+        committer: {
+          name: name,
+          email: email
+        },
+        content: JSON.stringify(newRegistry)
+      });
+
+      // Open a PR against the main branch of the merokudao repo
+      // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
+      // Since it's not possible to create a PR from one repo to another, we'll have to
+      // resort to returning a URL that, when the user goes to, prompts to create a PR
+      return `https://github.com/${this.githubOwner}/${this.githubRepo}/compare/main...${dapp.developer.githubID}:${this.githubRepo}:main?expand=1`;
+  }
+
   /**
    * Initializes the registry. This is required before you can use the registry.
    * It builds the search Index and caches the registry. Specifically it performs
@@ -277,6 +320,48 @@ export class DappStoreRegistry {
 
     return res;
   };
+
+  /**
+   * Starts the protocol to add a dApp to the registry. This is a two step process.
+   * 1. A PR is opened against http://github.com/merokudao/dapp-store-registry
+   * `main` branch. The PR contains the new dApp details.
+   * The name of the branch is `add-dapp-<dapp-id>`. The PR title is `Add <dapp-name> <dap-id>`
+   * 2. The PR is merged by the registry maintainers. If there are any
+   * @param dapp
+   */
+  public async addOrUpdateDapp(name: string,
+    email: string,
+    accessToken: string,
+    dapp: DAppSchema,
+    org: string | undefined = undefined) {
+
+    // TODO - Populate the new registry
+    const newRegistry = {} as DAppStoreSchema;
+
+    return await this.updateRegistry(name, email, accessToken, newRegistry, org);
+  }
+
+  public deleteDapp = async (name: string,
+    email: string,
+    accessToken: string,
+    dappId: string,
+    org: string | undefined = undefined) => {
+    // TODO - Populate the new registry
+    const newRegistry = {} as DAppStoreSchema;
+
+    return await this.updateRegistry(name, email, accessToken, newRegistry, org);
+  }
+
+  public async toggleListing(name: string,
+    email: string,
+    accessToken: string,
+    dappId: string,
+    org: string | undefined = undefined) {
+    // TODO - Populate the new registry
+    const newRegistry = {} as DAppStoreSchema;
+
+    return await this.updateRegistry(name, email, accessToken, newRegistry, org);
+  }
 
   /**
    * Performs search & filter on the dApps in the registry. This always returns the dApps
