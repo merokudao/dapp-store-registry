@@ -13,7 +13,7 @@ import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
-import { Octokit, App } from "octokit";
+import { Octokit } from "octokit";
 
 const debug = Debug("@merokudao:dapp-store-registry:Registry");
 
@@ -29,11 +29,10 @@ export class DappStoreRegistry {
 
   private lastRegistryCheckedAt: Date | undefined;
 
-  private readonly githubOwner = 'merokudao';
-  private readonly githubRepo = 'dapp-store-registry';
+  private readonly githubOwner = "merokudao";
+  private readonly githubRepo = "dapp-store-registry";
 
-  public readonly registryRemoteUrl =
-    `https://raw.githubusercontent.com/${this.githubOwner}/${this.githubRepo}/main/src/registry.json`;
+  public readonly registryRemoteUrl = `https://raw.githubusercontent.com/${this.githubOwner}/${this.githubRepo}/main/src/registry.json`;
 
   private searchEngine = new JsSearch.Search("dappId");
 
@@ -239,43 +238,47 @@ export class DappStoreRegistry {
     return res;
   }
 
-  private async updateRegistry(name: string,
+  private async updateRegistry(
+    name: string,
     email: string,
+    githubId: string,
     accessToken: string,
     newRegistry: DAppStoreSchema,
-    org: string | undefined = undefined) {
-      // Fork repo from merokudao to the authenticated user
-      const octokit = new Octokit({
-        userAgent: "@merokudao/dAppStore/v1.2.3",
-      });
+    commitMessage: string,
+    org: string | undefined = undefined
+  ) {
+    // Fork repo from merokudao to the authenticated user
+    const octokit = new Octokit({
+      userAgent: "@merokudao/dAppStore/v1.2.3"
+    });
 
-      const res = await octokit.request('POST /repos/{owner}/{repo}/forks', {
-        owner: this.githubOwner,
-        repo: this.githubRepo,
-        organization: org,
-        name: this.githubRepo,
-        default_branch_only: true
-      });
+    await octokit.request("POST /repos/{owner}/{repo}/forks", {
+      owner: this.githubOwner,
+      repo: this.githubRepo,
+      organization: org,
+      name: this.githubRepo,
+      default_branch_only: true
+    });
 
-      // Commit the changes
-      // Push the changes to the forked repo
-      await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
-        owner: this.githubOwner,
-        repo: this.githubRepo,
-        path: 'src/registry.json',
-        message: `Add ${dapp.name} ${dapp.dappId}`,
-        committer: {
-          name: name,
-          email: email
-        },
-        content: JSON.stringify(newRegistry)
-      });
+    // Commit the changes
+    // Push the changes to the forked repo
+    await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
+      owner: this.githubOwner,
+      repo: this.githubRepo,
+      path: "src/registry.json",
+      message: commitMessage,
+      committer: {
+        name: name,
+        email: email
+      },
+      content: JSON.stringify(newRegistry)
+    });
 
-      // Open a PR against the main branch of the merokudao repo
-      // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
-      // Since it's not possible to create a PR from one repo to another, we'll have to
-      // resort to returning a URL that, when the user goes to, prompts to create a PR
-      return `https://github.com/${this.githubOwner}/${this.githubRepo}/compare/main...${dapp.developer.githubID}:${this.githubRepo}:main?expand=1`;
+    // Open a PR against the main branch of the merokudao repo
+    // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
+    // Since it's not possible to create a PR from one repo to another, we'll have to
+    // resort to returning a URL that, when the user goes to, prompts to create a PR
+    return `https://github.com/${this.githubOwner}/${this.githubRepo}/compare/main...${githubId}:${this.githubRepo}:main?expand=1`;
   }
 
   /**
@@ -321,46 +324,94 @@ export class DappStoreRegistry {
     return res;
   };
 
-  /**
-   * Starts the protocol to add a dApp to the registry. This is a two step process.
-   * 1. A PR is opened against http://github.com/merokudao/dapp-store-registry
-   * `main` branch. The PR contains the new dApp details.
-   * The name of the branch is `add-dapp-<dapp-id>`. The PR title is `Add <dapp-name> <dap-id>`
-   * 2. The PR is merged by the registry maintainers. If there are any
-   * @param dapp
-   */
-  public async addOrUpdateDapp(name: string,
+  public async addOrUpdateDapp(
+    name: string,
     email: string,
     accessToken: string,
     dapp: DAppSchema,
-    org: string | undefined = undefined) {
+    org: string | undefined = undefined
+  ) {
+    const currRegistry = await this.registry();
+    const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
 
-    // TODO - Populate the new registry
-    const newRegistry = {} as DAppStoreSchema;
+    if (dappExists.length === 0) {
+      currRegistry.dapps.push(dapp);
+    } else if (dappExists.length === 1) {
+      const idx = currRegistry.dapps.findIndex(x => x.dappId === dapp.dappId);
+      currRegistry.dapps[idx] = dapp;
+    } else {
+      throw new Error(`Multiple dApps with the same ID ${dapp.dappId} found`);
+    }
 
-    return await this.updateRegistry(name, email, accessToken, newRegistry, org);
+    return await this.updateRegistry(
+      name,
+      email,
+      dapp.developer.githubID,
+      accessToken,
+      currRegistry,
+      `add-${dapp.dappId}`,
+      org
+    );
   }
 
-  public deleteDapp = async (name: string,
+  public deleteDapp = async (
+    name: string,
     email: string,
     accessToken: string,
     dappId: string,
-    org: string | undefined = undefined) => {
-    // TODO - Populate the new registry
-    const newRegistry = {} as DAppStoreSchema;
+    org: string | undefined = undefined
+  ) => {
+    const currRegistry = await this.registry();
+    const dappExists = currRegistry.dapps.filter(x => x.dappId === dappId);
 
-    return await this.updateRegistry(name, email, accessToken, newRegistry, org);
-  }
+    if (dappExists.length === 0) {
+      throw new Error(`No dApp with the ID ${dappId} found`);
+    } else if (dappExists.length === 1) {
+      const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
+      currRegistry.dapps.splice(idx, 1);
+    } else {
+      throw new Error(`Multiple dApps with the same ID ${dappId} found`);
+    }
 
-  public async toggleListing(name: string,
+    return await this.updateRegistry(
+      name,
+      email,
+      dappExists[0].developer.githubID,
+      accessToken,
+      currRegistry,
+      `delete-${dappId}`,
+      org
+    );
+  };
+
+  public async toggleListing(
+    name: string,
     email: string,
     accessToken: string,
     dappId: string,
-    org: string | undefined = undefined) {
-    // TODO - Populate the new registry
-    const newRegistry = {} as DAppStoreSchema;
+    org: string | undefined = undefined
+  ) {
+    const currRegistry = await this.registry();
+    const dappExists = currRegistry.dapps.filter(x => x.dappId === dappId);
 
-    return await this.updateRegistry(name, email, accessToken, newRegistry, org);
+    if (dappExists.length === 0) {
+      throw new Error(`No dApp with the ID ${dappId} found`);
+    } else if (dappExists.length === 1) {
+      const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
+      currRegistry.dapps[idx].isListed = !currRegistry.dapps[idx].isListed;
+    } else {
+      throw new Error(`Multiple dApps with the same ID ${dappId} found`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      accessToken,
+      dappExists[0].developer.githubID,
+      currRegistry,
+      `toggle-listing-${dappId}`,
+      org
+    );
   }
 
   /**
