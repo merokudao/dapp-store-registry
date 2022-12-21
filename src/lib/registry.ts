@@ -1,10 +1,15 @@
 import { fetch } from 'cross-fetch';
-import { DAppSchema } from '../interfaces/dAppSchema';
-import { FilterOptions } from '../interfaces/searchOptions';
-import {  DAppStoreSchema } from '../interfaces/registrySchema';
+import {  DAppSchema, DAppStoreSchema, FilterOptions } from '../interfaces';
 import * as JsSearch from 'js-search';
 import porterStemmer from  '@stdlib/nlp-porter-stemmer';
-import parseISO from 'date-fns/parseISO'
+import parseISO from 'date-fns/parseISO';
+import Ajv2019 from "ajv/dist/2019";
+import addFormats from 'ajv-formats';
+import crypto from 'crypto';
+
+import dAppRegistrySchema from '../schemas/merokuDappStore.registrySchema.json';
+import featuredSchema from '../schemas/merokuDappStore.featuredSchema.json';
+import dAppSchema from '../schemas/merokuDappStore.dAppSchema.json';
 
 import registryJson from './../registry.json';
 
@@ -16,6 +21,10 @@ export enum RegistryStrategy {
 export class DappStoreRegistry {
 
   strategy: RegistryStrategy;
+
+  private static TTL = 10 * 60 * 1000; // 10 minutes
+
+  private lastRegistryCheckedAt: Date | undefined;
 
   private registryRemoteUrl =
   'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json';
@@ -39,69 +48,93 @@ export class DappStoreRegistry {
     this.searchEngine.addIndex('tags');
   }
 
-  public async init() {
-    await this.addDocsForSearch();
-  }
-
   private localRegistry = (): DAppStoreSchema => {
-    return registryJson as DAppStoreSchema;
+    const res = registryJson as DAppStoreSchema;
+    if (this.validateRegistryJson(res)[0]) {
+      return res;
+    } else {
+      throw new Error(
+        `@merokudao/dapp-store-registry: local registry is invalid.`
+      );
+    }
   }
 
-  private static queryRemoteRegistry = async (remoteFile: string): Promise<DAppStoreSchema> => {
+  private queryRemoteRegistry = async (remoteFile: string): Promise<DAppStoreSchema> => {
+    let registry: DAppStoreSchema;
     try {
       const response = await fetch(remoteFile);
       const json = (await response.json()) as DAppStoreSchema;
-      return json;
+      if (this.validateRegistryJson(json)[0]) {
+        registry =  json as DAppStoreSchema;
+      } else {
+        console.info(
+          `@merokudao/dapp-store-registry: remote registry is invalid. Falling back to static repository.`
+        );
+        registry = this.localRegistry();
+      }
     } catch {
       console.info(
-        `@merokudao/dapp-store-registry: falling back to static repository.`
+        `@merokudao/dapp-store-registry: Can't fetch remote. falling back to static repository.`
       );
-      return registryJson as DAppStoreSchema;
+      registry = this.localRegistry();
     }
+    return registry;
   };
 
+  private validateRegistryJson = (json: DAppStoreSchema) => {
+    const ajv = new Ajv2019({
+      strict: false
+    });
+    addFormats(ajv);
+    ajv.addSchema(featuredSchema, 'featuredSchema');
+    ajv.addSchema(dAppSchema, 'dAppSchema');
+    const validate = ajv.compile(dAppRegistrySchema);
+    const valid = validate(json);
+    return [valid, validate.errors];
+  }
+
   private registry = async (): Promise<DAppStoreSchema> => {
-    // TODO - check if remote registry is updated than this.cachedRegistry, then
-    // fetch from remote
     if (!this.cachedRegistry) {
       switch (this.strategy) {
         case RegistryStrategy.GitHub:
-          return await DappStoreRegistry.queryRemoteRegistry(this.registryRemoteUrl);
+          this.cachedRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
+          this.lastRegistryCheckedAt = new Date();
         case RegistryStrategy.Static:
-          return this.localRegistry();
+          this.cachedRegistry = this.localRegistry();
       }
+      this.searchEngine.addDocuments(this.cachedRegistry.dapps);
     } else {
-      return this.cachedRegistry;
+      if (this.lastRegistryCheckedAt &&
+        new Date().getTime() - this.lastRegistryCheckedAt.getTime() < DappStoreRegistry.TTL) {
+        return this.cachedRegistry;
+      }
+
+      const remoteRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
+      const checksumCached = crypto
+        .createHash('md5')
+        .update(JSON.stringify(this.cachedRegistry))
+        .digest('hex');
+      const checksumRemote = crypto
+        .createHash('md5')
+        .update(JSON.stringify(remoteRegistry))
+        .digest('hex');
+      if (checksumCached !== checksumRemote) {
+        this.cachedRegistry = remoteRegistry;
+        this.lastRegistryCheckedAt = new Date();
+        this.searchEngine.addDocuments(this.cachedRegistry.dapps);
+      }
     }
+
+    return this.cachedRegistry;
   };
 
-  private addDocsForSearch = async (): Promise<void> => {
+  private buildSearchIndex = async (): Promise<void> => {
     const docs = (await this.registry()).dapps;
     this.searchEngine.addDocuments(docs);
   };
 
-  /**
-   * Returns the list of dApps that are listed in the registry.
-   * You would probably not want to call this function in your use case, as it
-   * simply returns all the dApps without any filtering.
-   * Use the search function instead.
-   * @returns The list of dApps that are listed in the registry
-   */
-  public dApps = async(): Promise<DAppSchema[]> => {
-    return (await this.registry()).dapps.filter(d => d.isListed);
-  };
-
-  /**
-   * Performs search & filter on the dApps in the registry
-   * @param queryTxt The text to search for
-   * @param filterOpts The filter options. If undefined, no filtering is performed
-   * @returns The filtered & sorted list of dApps
-   */
-  public search = (queryTxt: string, filterOpts: FilterOptions | undefined = undefined): DAppSchema[] => {
-    let res =  this.searchEngine.search(queryTxt) as DAppSchema[];
-
-    // Filter to ensure only listed dapps make it to the results
-    res = res.filter(d => d.isListed);
+  private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
+    let res = dapps;
 
     if (filterOpts) {
       if (filterOpts.chainId) {
@@ -147,6 +180,64 @@ export class DappStoreRegistry {
     return res;
   }
 
+  /**
+   * Initializes the registry. This is required before you can use the registry.
+   * It builds the search Index and caches the registry. Specifically it performs
+   * the following steps
+   * 1. If there's no cached Registry or the cached registry is stale, it fetches
+   *   the registry from the remote URL
+   * 2. It builds the search index
+   *
+   * If the strategy is Static, then the first load will **always** happen from
+   * local registry.json file. Any subsequent calls after TTL will fetch the
+   * registry from the remote URL (if static is stale) & rebuild the search index.
+   * @returns A promise that resolves when the registry is initialized
+   */
+  public async init() {
+    await this.buildSearchIndex();
+  }
+
+  /**
+   * Returns the list of dApps that are listed in the registry. You can optionally
+   * filter the results. This always returns the dApps that are listed.
+   * @param filterOpts The filter options. If undefined, no filtering is performed
+   * @returns The list of dApps that are listed in the registry
+   */
+  public dApps = async(filterOpts: FilterOptions | undefined = undefined): Promise<DAppSchema[]> => {
+    let res = (await this.registry()).dapps.filter(d => d.isListed);
+
+    if (filterOpts) {
+      res = this.filterDapps(res, filterOpts);
+    }
+
+    return res;
+  };
+
+  /**
+   * Performs search & filter on the dApps in the registry. This always returns the dApps
+   * that are listed.
+   * @param queryTxt The text to search for
+   * @param filterOpts The filter options. If undefined, no filtering is performed
+   * @returns The filtered & sorted list of dApps
+   */
+  public search = (queryTxt: string, filterOpts: FilterOptions | undefined = undefined): DAppSchema[] => {
+    let res =  this.searchEngine.search(queryTxt) as DAppSchema[];
+
+    // Filter to ensure only listed dapps make it to the results
+    res = res.filter(d => d.isListed);
+
+    if (filterOpts) {
+      res = this.filterDapps(res, filterOpts);
+    }
+
+    return res;
+  }
+
+  /**
+   * Gets all the featured sections defined in the registry. Along with the dApps.
+   * If no featured section is defined, returns `undefined`
+   * @returns The list of featured sections and the dApps in that section
+   */
   public getFeaturedDapps = async () => {
     return (await this.registry()).featuredSections;
   }

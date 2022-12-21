@@ -20,14 +20,14 @@
       "type": "array",
       "description": "List of dApps",
       "items": {
-        "$ref": "src/schemas/merokuDappStore.dAppSchema.json"
+        "$ref": "merokuDappStore.dAppSchema.json"
       }
     },
     "featuredSections": {
       "type": "array",
       "description": "List of featured sections",
       "items": {
-        "$ref": "src/schemas/merokuDappStore.featuredSectionSchema.json"
+        "$ref": "merokuDappStore.featuredSchema.json"
       }
     }
   },
