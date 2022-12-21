@@ -4,10 +4,12 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:eslint-comments/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
     "prettier"
   ],
+  "globals": { "BigInt": true, "console": true, "WebAssembly": true },
   "rules": {
     "no-console": 1, // Means warning
     "prettier/prettier": 2 // Means error
