@@ -81,4 +81,25 @@ describe('registry.json & Schema Validations', () => {
 
     done();
   });
+
+  it('ensure that fixture is valid', (done) => {
+    const ajv = new Ajv2019({
+      strict: false
+    });
+    addFormats(ajv);
+    ajv.addSchema(featuredSchema, 'featuredSchema');
+    ajv.addSchema(dAppSchema, 'dAppSchema');
+    const validate = ajv.compile(dAppRegistrySchema);
+
+    const content = fs
+      .readFileSync('./test/fixtures/registry.json')
+      .toString();
+    const json = JSON.parse(content) as DAppStoreSchema;
+
+    const valid = validate(json);
+    console.log(validate.errors);
+    valid.should.be.true;
+
+    done();
+  });
 });

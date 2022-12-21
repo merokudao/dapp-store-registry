@@ -90,8 +90,8 @@ export interface DAppSchema {
   availableOnPlatform: DAppDeploymentPlatform[];
 
   geoRestrictions?: {
-    allowedCountries: string[];
-    blockedCountries: string[];
+    allowedCountries?: string[];
+    blockedCountries?: string[];
   };
 
   developer: {

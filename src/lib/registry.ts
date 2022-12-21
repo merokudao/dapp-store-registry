@@ -6,12 +6,17 @@ import parseISO from 'date-fns/parseISO';
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from 'ajv-formats';
 import crypto from 'crypto';
+import Debug from 'debug';
+import axios from 'axios';
 
 import dAppRegistrySchema from '../schemas/merokuDappStore.registrySchema.json';
 import featuredSchema from '../schemas/merokuDappStore.featuredSchema.json';
 import dAppSchema from '../schemas/merokuDappStore.dAppSchema.json';
 
 import registryJson from './../registry.json';
+import { de } from 'date-fns/locale';
+
+const debug = Debug('@merokudao:dapp-store-registry:Registry');
 
 export enum RegistryStrategy {
   GitHub = 'GitHub',
@@ -26,8 +31,7 @@ export class DappStoreRegistry {
 
   private lastRegistryCheckedAt: Date | undefined;
 
-  private registryRemoteUrl =
-  'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json';
+  public readonly registryRemoteUrl = 'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json';
 
   private searchEngine = new JsSearch.Search('dappId');
 
@@ -60,24 +64,28 @@ export class DappStoreRegistry {
   }
 
   private queryRemoteRegistry = async (remoteFile: string): Promise<DAppStoreSchema> => {
+    debug(`fetching remote registry from ${remoteFile}`);
     let registry: DAppStoreSchema;
+
     try {
       const response = await fetch(remoteFile);
+      if (response.status > 400) {
+        throw new Error(`@merokudao/dapp-store-registry: remote registry is invalid. status: ${response.status} ${response.statusText}`);
+      }
+      debug(`remote registry fetched. status: ${response.status} ${response.statusText}`)
       const json = (await response.json()) as DAppStoreSchema;
       if (this.validateRegistryJson(json)[0]) {
         registry =  json as DAppStoreSchema;
       } else {
-        console.info(
-          `@merokudao/dapp-store-registry: remote registry is invalid. Falling back to static repository.`
-        );
+        debug(`remote registry is invalid. Falling back to static repository.`);
         registry = this.localRegistry();
       }
-    } catch {
-      console.info(
-        `@merokudao/dapp-store-registry: Can't fetch remote. falling back to static repository.`
-      );
+    } catch (err) {
+        debug(err);
+        debug(`Can't fetch remote. falling back to static repository.`);
       registry = this.localRegistry();
     }
+
     return registry;
   };
 
@@ -95,18 +103,27 @@ export class DappStoreRegistry {
 
   private registry = async (): Promise<DAppStoreSchema> => {
     if (!this.cachedRegistry) {
+      debug('registry not cached. fetching with strategy ' + this.strategy + '...');
       switch (this.strategy) {
         case RegistryStrategy.GitHub:
           this.cachedRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
           this.lastRegistryCheckedAt = new Date();
+          break;
         case RegistryStrategy.Static:
           this.cachedRegistry = this.localRegistry();
+          break;
+        default:
+          throw new Error(
+            `@merokudao/dapp-store-registry: invalid registry strategy ${this.strategy}`
+          );
+          break;
       }
       this.searchEngine.addDocuments(this.cachedRegistry.dapps);
     } else {
       if (this.lastRegistryCheckedAt &&
         new Date().getTime() - this.lastRegistryCheckedAt.getTime() < DappStoreRegistry.TTL) {
-        return this.cachedRegistry;
+          debug('registry cached. returning...');
+          return this.cachedRegistry;
       }
 
       const remoteRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
@@ -119,6 +136,7 @@ export class DappStoreRegistry {
         .update(JSON.stringify(remoteRegistry))
         .digest('hex');
       if (checksumCached !== checksumRemote) {
+        debug('registry changed. updating...');
         this.cachedRegistry = remoteRegistry;
         this.lastRegistryCheckedAt = new Date();
         this.searchEngine.addDocuments(this.cachedRegistry.dapps);
@@ -137,7 +155,7 @@ export class DappStoreRegistry {
     let res = dapps;
 
     if (filterOpts) {
-      if (filterOpts.isListed) {
+      if (filterOpts.isListed !== undefined) {
         res = res.filter(d => d.isListed === filterOpts.isListed);
       }
       if (filterOpts.chainId) {
@@ -149,9 +167,9 @@ export class DappStoreRegistry {
       }
       if (filterOpts.availableOnPlatform) {
         const platforms = filterOpts.availableOnPlatform;
-        res = res.filter(d => d.availableOnPlatform.some(platforms.includes));
+        res = res.filter(d => d.availableOnPlatform.some(x => platforms.includes(x)));
       }
-      if (filterOpts.forMatureAudience) {
+      if (filterOpts.forMatureAudience !== undefined) {
         res = res.filter(d => d.isForMatureAudience === filterOpts.forMatureAudience);
       }
       if (filterOpts.minAge) {
@@ -168,15 +186,27 @@ export class DappStoreRegistry {
       }
       if (filterOpts.allowedInCountries) {
         const allowedCountries = filterOpts.allowedInCountries;
-        res = res.filter(d => d.geoRestrictions?.allowedCountries.some(allowedCountries.includes));
+        res = res.filter((d) => {
+          if (d.geoRestrictions && d.geoRestrictions.allowedCountries) {
+            return d.geoRestrictions.allowedCountries.some(x => allowedCountries.includes(x));
+          }
+        });
       }
       if (filterOpts.blockedInCountries) {
         const blockedCountries = filterOpts.blockedInCountries;
-        res = res.filter(d => d.geoRestrictions?.blockedCountries.some(blockedCountries.includes));
+        res = res.filter((d) => {
+          if(d.geoRestrictions && d.geoRestrictions.blockedCountries) {
+            return d.geoRestrictions.blockedCountries.some(x => blockedCountries.includes(x));
+          }
+        });
       }
       if (filterOpts.categories) {
         const categories = filterOpts.categories;
         res = res.filter(d => categories.includes(d.category));
+      }
+      if (filterOpts.developer) {
+        const developerId = filterOpts.developer.githubID;
+        res = res.filter(d => d.developer?.githubID === developerId);
       }
     }
 
@@ -198,6 +228,14 @@ export class DappStoreRegistry {
    */
   public async init() {
     await this.buildSearchIndex();
+  }
+
+  /**
+   *
+   * @returns The title of the registry
+   */
+  public async getRegistryTitle() {
+    return (await this.registry()).title;
   }
 
   /**
