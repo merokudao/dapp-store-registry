@@ -1,39 +1,37 @@
-import { fetch } from 'cross-fetch';
-import {  DAppSchema, DAppStoreSchema, FilterOptions } from '../interfaces';
-import * as JsSearch from 'js-search';
-import porterStemmer from  '@stdlib/nlp-porter-stemmer';
-import parseISO from 'date-fns/parseISO';
+import { fetch } from "cross-fetch";
+import { DAppSchema, DAppStoreSchema, FilterOptions } from "../interfaces";
+import * as JsSearch from "js-search";
+import porterStemmer from "@stdlib/nlp-porter-stemmer";
+import parseISO from "date-fns/parseISO";
 import Ajv2019 from "ajv/dist/2019";
-import addFormats from 'ajv-formats';
-import crypto from 'crypto';
-import Debug from 'debug';
-import axios from 'axios';
+import addFormats from "ajv-formats";
+import crypto from "crypto";
+import Debug from "debug";
 
-import dAppRegistrySchema from '../schemas/merokuDappStore.registrySchema.json';
-import featuredSchema from '../schemas/merokuDappStore.featuredSchema.json';
-import dAppSchema from '../schemas/merokuDappStore.dAppSchema.json';
+import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
+import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
+import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
-import registryJson from './../registry.json';
-import { de } from 'date-fns/locale';
+import registryJson from "./../registry.json";
 
-const debug = Debug('@merokudao:dapp-store-registry:Registry');
+const debug = Debug("@merokudao:dapp-store-registry:Registry");
 
 export enum RegistryStrategy {
-  GitHub = 'GitHub',
-  Static = 'Static'
+  GitHub = "GitHub",
+  Static = "Static"
 }
 
 export class DappStoreRegistry {
-
   strategy: RegistryStrategy;
 
   private static TTL = 10 * 60 * 1000; // 10 minutes
 
   private lastRegistryCheckedAt: Date | undefined;
 
-  public readonly registryRemoteUrl = 'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json';
+  public readonly registryRemoteUrl =
+    "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json";
 
-  private searchEngine = new JsSearch.Search('dappId');
+  private searchEngine = new JsSearch.Search("dappId");
 
   private cachedRegistry: DAppStoreSchema | undefined;
 
@@ -43,13 +41,14 @@ export class DappStoreRegistry {
     // Configure the search engine Index
     this.searchEngine.indexStrategy = new JsSearch.PrefixIndexStrategy();
     this.searchEngine.tokenizer = new JsSearch.StopWordsTokenizer(
-    	new JsSearch.SimpleTokenizer());
+      new JsSearch.SimpleTokenizer()
+    );
     this.searchEngine.tokenizer = new JsSearch.StemmingTokenizer(
       porterStemmer,
       new JsSearch.SimpleTokenizer()
     );
-    this.searchEngine.addIndex('name');
-    this.searchEngine.addIndex('tags');
+    this.searchEngine.addIndex("name");
+    this.searchEngine.addIndex("tags");
   }
 
   private localRegistry = (): DAppStoreSchema => {
@@ -61,28 +60,34 @@ export class DappStoreRegistry {
         `@merokudao/dapp-store-registry: local registry is invalid.`
       );
     }
-  }
+  };
 
-  private queryRemoteRegistry = async (remoteFile: string): Promise<DAppStoreSchema> => {
+  private queryRemoteRegistry = async (
+    remoteFile: string
+  ): Promise<DAppStoreSchema> => {
     debug(`fetching remote registry from ${remoteFile}`);
     let registry: DAppStoreSchema;
 
     try {
       const response = await fetch(remoteFile);
       if (response.status > 400) {
-        throw new Error(`@merokudao/dapp-store-registry: remote registry is invalid. status: ${response.status} ${response.statusText}`);
+        throw new Error(
+          `@merokudao/dapp-store-registry: remote registry is invalid. status: ${response.status} ${response.statusText}`
+        );
       }
-      debug(`remote registry fetched. status: ${response.status} ${response.statusText}`)
+      debug(
+        `remote registry fetched. status: ${response.status} ${response.statusText}`
+      );
       const json = (await response.json()) as DAppStoreSchema;
       if (this.validateRegistryJson(json)[0]) {
-        registry =  json as DAppStoreSchema;
+        registry = json as DAppStoreSchema;
       } else {
         debug(`remote registry is invalid. Falling back to static repository.`);
         registry = this.localRegistry();
       }
     } catch (err) {
-        debug(err);
-        debug(`Can't fetch remote. falling back to static repository.`);
+      debug(err);
+      debug(`Can't fetch remote. falling back to static repository.`);
       registry = this.localRegistry();
     }
 
@@ -94,19 +99,23 @@ export class DappStoreRegistry {
       strict: false
     });
     addFormats(ajv);
-    ajv.addSchema(featuredSchema, 'featuredSchema');
-    ajv.addSchema(dAppSchema, 'dAppSchema');
+    ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppSchema, "dAppSchema");
     const validate = ajv.compile(dAppRegistrySchema);
     const valid = validate(json);
     return [valid, validate.errors];
-  }
+  };
 
   private registry = async (): Promise<DAppStoreSchema> => {
     if (!this.cachedRegistry) {
-      debug('registry not cached. fetching with strategy ' + this.strategy + '...');
+      debug(
+        "registry not cached. fetching with strategy " + this.strategy + "..."
+      );
       switch (this.strategy) {
         case RegistryStrategy.GitHub:
-          this.cachedRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
+          this.cachedRegistry = await this.queryRemoteRegistry(
+            this.registryRemoteUrl
+          );
           this.lastRegistryCheckedAt = new Date();
           break;
         case RegistryStrategy.Static:
@@ -120,23 +129,28 @@ export class DappStoreRegistry {
       }
       this.searchEngine.addDocuments(this.cachedRegistry.dapps);
     } else {
-      if (this.lastRegistryCheckedAt &&
-        new Date().getTime() - this.lastRegistryCheckedAt.getTime() < DappStoreRegistry.TTL) {
-          debug('registry cached. returning...');
-          return this.cachedRegistry;
+      if (
+        this.lastRegistryCheckedAt &&
+        new Date().getTime() - this.lastRegistryCheckedAt.getTime() <
+          DappStoreRegistry.TTL
+      ) {
+        debug("registry cached. returning...");
+        return this.cachedRegistry;
       }
 
-      const remoteRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
+      const remoteRegistry = await this.queryRemoteRegistry(
+        this.registryRemoteUrl
+      );
       const checksumCached = crypto
-        .createHash('md5')
+        .createHash("md5")
         .update(JSON.stringify(this.cachedRegistry))
-        .digest('hex');
+        .digest("hex");
       const checksumRemote = crypto
-        .createHash('md5')
+        .createHash("md5")
         .update(JSON.stringify(remoteRegistry))
-        .digest('hex');
+        .digest("hex");
       if (checksumCached !== checksumRemote) {
-        debug('registry changed. updating...');
+        debug("registry changed. updating...");
         this.cachedRegistry = remoteRegistry;
         this.lastRegistryCheckedAt = new Date();
         this.searchEngine.addDocuments(this.cachedRegistry.dapps);
@@ -167,10 +181,14 @@ export class DappStoreRegistry {
       }
       if (filterOpts.availableOnPlatform) {
         const platforms = filterOpts.availableOnPlatform;
-        res = res.filter(d => d.availableOnPlatform.some(x => platforms.includes(x)));
+        res = res.filter(d =>
+          d.availableOnPlatform.some(x => platforms.includes(x))
+        );
       }
       if (filterOpts.forMatureAudience !== undefined) {
-        res = res.filter(d => d.isForMatureAudience === filterOpts.forMatureAudience);
+        res = res.filter(
+          d => d.isForMatureAudience === filterOpts.forMatureAudience
+        );
       }
       if (filterOpts.minAge) {
         const minAge = filterOpts.minAge;
@@ -186,17 +204,21 @@ export class DappStoreRegistry {
       }
       if (filterOpts.allowedInCountries) {
         const allowedCountries = filterOpts.allowedInCountries;
-        res = res.filter((d) => {
+        res = res.filter(d => {
           if (d.geoRestrictions && d.geoRestrictions.allowedCountries) {
-            return d.geoRestrictions.allowedCountries.some(x => allowedCountries.includes(x));
+            return d.geoRestrictions.allowedCountries.some(x =>
+              allowedCountries.includes(x)
+            );
           }
         });
       }
       if (filterOpts.blockedInCountries) {
         const blockedCountries = filterOpts.blockedInCountries;
-        res = res.filter((d) => {
-          if(d.geoRestrictions && d.geoRestrictions.blockedCountries) {
-            return d.geoRestrictions.blockedCountries.some(x => blockedCountries.includes(x));
+        res = res.filter(d => {
+          if (d.geoRestrictions && d.geoRestrictions.blockedCountries) {
+            return d.geoRestrictions.blockedCountries.some(x =>
+              blockedCountries.includes(x)
+            );
           }
         });
       }
@@ -244,7 +266,9 @@ export class DappStoreRegistry {
    * @param filterOpts The filter options. Defaults to `{ isListed: true}`
    * @returns The list of dApps that are listed in the registry
    */
-  public dApps = async(filterOpts: FilterOptions = { isListed: true }): Promise<DAppSchema[]> => {
+  public dApps = async (
+    filterOpts: FilterOptions = { isListed: true }
+  ): Promise<DAppSchema[]> => {
     let res = (await this.registry()).dapps;
 
     if (filterOpts) {
@@ -261,15 +285,18 @@ export class DappStoreRegistry {
    * @param filterOpts The filter options. Defaults to `{ isListed: true}`
    * @returns The filtered & sorted list of dApps
    */
-  public search = (queryTxt: string, filterOpts: FilterOptions = { isListed: true }): DAppSchema[] => {
-    let res =  this.searchEngine.search(queryTxt) as DAppSchema[];
+  public search = (
+    queryTxt: string,
+    filterOpts: FilterOptions = { isListed: true }
+  ): DAppSchema[] => {
+    let res = this.searchEngine.search(queryTxt) as DAppSchema[];
 
     if (filterOpts) {
       res = this.filterDapps(res, filterOpts);
     }
 
     return res;
-  }
+  };
 
   /**
    * Gets all the featured sections defined in the registry. Along with the dApps.
@@ -278,5 +305,5 @@ export class DappStoreRegistry {
    */
   public getFeaturedDapps = async () => {
     return (await this.registry()).featuredSections;
-  }
+  };
 }

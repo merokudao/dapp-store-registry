@@ -1,20 +1,13 @@
 {
   "title": "MerokuDAO dAPP Store Registry Fixture",
-  "chains": [
-    1,
-    137
-  ],
+  "chains": [1, 137],
   "dapps": [
     {
       "name": "A dapp listed on polygon",
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
-      "tags": [
-        "nft creator"
-      ],
-      "chains": [
-        137
-      ],
+      "tags": ["nft creator"],
+      "chains": [137],
       "dappId": "bitpack.example.dapp",
       "minAge": 13,
       "isForMatureAudience": true,
@@ -44,12 +37,8 @@
       "name": "A dapp listed on ethereum in hindi for 18plus",
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
-      "tags": [
-        "nft creator"
-      ],
-      "chains": [
-        1
-      ],
+      "tags": ["nft creator"],
+      "chains": [1],
       "dappId": "bitpack.example2.dapp",
       "minAge": 18,
       "isForMatureAudience": false,
@@ -75,13 +64,8 @@
       "name": "A dapp listed on polygon & ethereum",
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
-      "tags": [
-        "nft creator"
-      ],
-      "chains": [
-        137,
-        1
-      ],
+      "tags": ["nft creator"],
+      "chains": [137, 1],
       "dappId": "bitpack.example3.dapp",
       "minAge": 13,
       "isForMatureAudience": false,
@@ -111,13 +95,8 @@
       "name": "A dapp NOT listed on polygon & ethereum",
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
-      "tags": [
-        "nft creator"
-      ],
-      "chains": [
-        137,
-        1
-      ],
+      "tags": ["nft creator"],
+      "chains": [137, 1],
       "dappId": "bitpack.example3.dapp",
       "minAge": 13,
       "isForMatureAudience": false,

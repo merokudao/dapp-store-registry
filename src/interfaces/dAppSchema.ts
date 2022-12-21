@@ -1,4 +1,4 @@
-const dAppDeploymentPlatforms = ['ios', 'web', 'android'] as const;
+const dAppDeploymentPlatforms = ["ios", "web", "android"] as const;
 
 export type DAppDeploymentPlatform = typeof dAppDeploymentPlatforms[number];
 
@@ -28,7 +28,8 @@ const dAppCategory = [
   "sports",
   "travel",
   "utilities",
-  "weather"] as const;
+  "weather"
+] as const;
 
 export type DAppCategory = typeof dAppCategory[number];
 

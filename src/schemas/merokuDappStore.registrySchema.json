@@ -31,10 +31,6 @@
       }
     }
   },
-  "required": [
-    "title",
-    "chains",
-    "dapps"
-  ],
+  "required": ["title", "chains", "dapps"],
   "additionalProperties": false
 }
