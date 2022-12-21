@@ -10,5 +10,4 @@ export interface FilterOptions {
   blockedInCountries?: string[];
   categories?: string[];
   isListed?: boolean;
-};
-
+}
