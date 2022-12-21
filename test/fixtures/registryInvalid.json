@@ -1,5 +1,8 @@
 {
   "title": "MerokuDAO dAPP Store Registry",
+  "schema": {
+    "version": "1.0.0"
+  },
   "chains": [
     1,
     137
@@ -12,9 +15,6 @@
         "tags": [
           "nft creator"
         ],
-        "chains": [
-          137
-        ],
         "dappId": "bitpack.example.dapp",
         "minAge": 13,
         "isForMatureAudience": false,
@@ -22,19 +22,15 @@
         "language": "en",
         "version": "0.0.1",
         "availableOnPlatform": ["web"],
-        "isListed": true,
         "listDate": "2022-12-12",
         "developer": {
           "legalName": "Bitpack",
-          "logo": "https://something.com/image.png",
-          "githubID": "bitpack",
           "website": "https://something.com",
           "privacyPolicyUrl": "https://somethingelse.com",
           "support": {
             "url": "https://something.com"
           }
-        },
-        "category": "finance"
+        }
       }
   ]
 }

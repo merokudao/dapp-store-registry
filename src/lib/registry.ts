@@ -1,166 +1,244 @@
 import { fetch } from 'cross-fetch';
+import {  DAppSchema, DAppStoreSchema, FilterOptions } from '../interfaces';
+import * as JsSearch from 'js-search';
+import porterStemmer from  '@stdlib/nlp-porter-stemmer';
+import parseISO from 'date-fns/parseISO';
+import Ajv2019 from "ajv/dist/2019";
+import addFormats from 'ajv-formats';
+import crypto from 'crypto';
 
-import registry from './../registry.json';
+import dAppRegistrySchema from '../schemas/merokuDappStore.registrySchema.json';
+import featuredSchema from '../schemas/merokuDappStore.featuredSchema.json';
+import dAppSchema from '../schemas/merokuDappStore.dAppSchema.json';
 
+import registryJson from './../registry.json';
 
-export interface Chain {
-  readonly name: string;
-  readonly chainId: number;
-}
-
-export interface Version {
-  readonly version: string;
-}
-
-export interface Tag {
-  readonly name: string;
-  readonly description?: string;
-}
-
-export interface Dapp {
-  readonly name: string;
-  readonly repoUrl: string;
-  readonly description?: string;
-  readonly chains: number[];
-  readonly tags: string[];
-}
-
-export interface Registry {
-  readonly name: string;
-  readonly schema: Version;
-  readonly tags: Tag[];
-  readonly chains: Chain[];
-  readonly dapps: Dapp[];
-}
-
-export enum Strategy {
+export enum RegistryStrategy {
   GitHub = 'GitHub',
   Static = 'Static'
 }
 
-export class StaticTokenListResolutionStrategy {
-  resolve = (): Registry => {
-    return registry;
-  };
-}
+export class DappStoreRegistry {
 
-const queryJsonFiles = async (files: string[]): Promise<Registry> => {
-  const responses: Registry[] = (await Promise.all(
-    files.map(async (repo) => {
-      try {
-        const response = await fetch(repo);
-        const json = (await response.json()) as Registry;
-        return json;
-      } catch {
-        console.info(
-          `@merokudao/dapp-store-registry: falling back to static repository.`
-        );
-        return registry;
-      }
-    })
-  )) as Registry[];
+  strategy: RegistryStrategy;
 
-  const dApps = responses
-    .map((registry: Registry) => registry.dapps)
-    .reduce((acc, arr) => (acc as Dapp[]).concat(arr), []);
+  private static TTL = 10 * 60 * 1000; // 10 minutes
 
-  return {
-    name: responses[0].name,
-    schema: responses[0].schema,
-    tags: responses[0].tags,
-    chains: responses[0].chains,
-    dapps: dApps
-  };
-};
+  private lastRegistryCheckedAt: Date | undefined;
 
-export class GitHubTokenListResolutionStrategy {
-  repositories = [
-    'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json',
-  ];
+  private registryRemoteUrl =
+  'https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json';
 
-  resolve = () => {
-    return queryJsonFiles(this.repositories);
-  };
-}
+  private searchEngine = new JsSearch.Search('dappId');
 
-export class RegistryListProvider {
-  static strategies = {
-    [Strategy.GitHub]: new GitHubTokenListResolutionStrategy(),
-    [Strategy.Static]: new StaticTokenListResolutionStrategy()
-  };
+  private cachedRegistry: DAppStoreSchema | undefined;
 
-  resolve = async (
-    strategy: Strategy = Strategy.Static
-  ): Promise<RegistryContainer> => {
-    return new RegistryContainer(
-      await RegistryListProvider.strategies[strategy].resolve()
+  constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
+    this.strategy = strategy;
+
+    // Configure the search engine Index
+    this.searchEngine.indexStrategy = new JsSearch.PrefixIndexStrategy();
+    this.searchEngine.tokenizer = new JsSearch.StopWordsTokenizer(
+    	new JsSearch.SimpleTokenizer());
+    this.searchEngine.tokenizer = new JsSearch.StemmingTokenizer(
+      porterStemmer,
+      new JsSearch.SimpleTokenizer()
     );
-  };
-}
-
-const getKeyValue = <U extends keyof T, T extends object>(key: U) => (obj: T) => {
-  return obj[key];
-};
-
-
-export class RegistryContainer {
-  private registry: Registry;
-
-  constructor(registry: Registry) {
-    this.registry = registry;
+    this.searchEngine.addIndex('name');
+    this.searchEngine.addIndex('tags');
   }
 
-  public fromThis(this: RegistryContainer, dapps: Dapp[]): RegistryContainer {
-    return new RegistryContainer({
-      name: this.registry.name,
-      schema: this.registry.schema,
-      tags: this.registry.tags,
-      chains: this.registry.chains,
-      dapps: dapps
-    })
+  private localRegistry = (): DAppStoreSchema => {
+    const res = registryJson as DAppStoreSchema;
+    if (this.validateRegistryJson(res)[0]) {
+      return res;
+    } else {
+      throw new Error(
+        `@merokudao/dapp-store-registry: local registry is invalid.`
+      );
+    }
+  }
+
+  private queryRemoteRegistry = async (remoteFile: string): Promise<DAppStoreSchema> => {
+    let registry: DAppStoreSchema;
+    try {
+      const response = await fetch(remoteFile);
+      const json = (await response.json()) as DAppStoreSchema;
+      if (this.validateRegistryJson(json)[0]) {
+        registry =  json as DAppStoreSchema;
+      } else {
+        console.info(
+          `@merokudao/dapp-store-registry: remote registry is invalid. Falling back to static repository.`
+        );
+        registry = this.localRegistry();
+      }
+    } catch {
+      console.info(
+        `@merokudao/dapp-store-registry: Can't fetch remote. falling back to static repository.`
+      );
+      registry = this.localRegistry();
+    }
+    return registry;
+  };
+
+  private validateRegistryJson = (json: DAppStoreSchema) => {
+    const ajv = new Ajv2019({
+      strict: false
+    });
+    addFormats(ajv);
+    ajv.addSchema(featuredSchema, 'featuredSchema');
+    ajv.addSchema(dAppSchema, 'dAppSchema');
+    const validate = ajv.compile(dAppRegistrySchema);
+    const valid = validate(json);
+    return [valid, validate.errors];
+  }
+
+  private registry = async (): Promise<DAppStoreSchema> => {
+    if (!this.cachedRegistry) {
+      switch (this.strategy) {
+        case RegistryStrategy.GitHub:
+          this.cachedRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
+          this.lastRegistryCheckedAt = new Date();
+        case RegistryStrategy.Static:
+          this.cachedRegistry = this.localRegistry();
+      }
+      this.searchEngine.addDocuments(this.cachedRegistry.dapps);
+    } else {
+      if (this.lastRegistryCheckedAt &&
+        new Date().getTime() - this.lastRegistryCheckedAt.getTime() < DappStoreRegistry.TTL) {
+        return this.cachedRegistry;
+      }
+
+      const remoteRegistry = await this.queryRemoteRegistry(this.registryRemoteUrl);
+      const checksumCached = crypto
+        .createHash('md5')
+        .update(JSON.stringify(this.cachedRegistry))
+        .digest('hex');
+      const checksumRemote = crypto
+        .createHash('md5')
+        .update(JSON.stringify(remoteRegistry))
+        .digest('hex');
+      if (checksumCached !== checksumRemote) {
+        this.cachedRegistry = remoteRegistry;
+        this.lastRegistryCheckedAt = new Date();
+        this.searchEngine.addDocuments(this.cachedRegistry.dapps);
+      }
+    }
+
+    return this.cachedRegistry;
+  };
+
+  private buildSearchIndex = async (): Promise<void> => {
+    const docs = (await this.registry()).dapps;
+    this.searchEngine.addDocuments(docs);
+  };
+
+  private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
+    let res = dapps;
+
+    if (filterOpts) {
+      if (filterOpts.isListed) {
+        res = res.filter(d => d.isListed === filterOpts.isListed);
+      }
+      if (filterOpts.chainId) {
+        const chainId = filterOpts.chainId;
+        res = res.filter(d => d.chains.includes(chainId));
+      }
+      if (filterOpts.language) {
+        res = res.filter(d => d.language === filterOpts.language);
+      }
+      if (filterOpts.availableOnPlatform) {
+        const platforms = filterOpts.availableOnPlatform;
+        res = res.filter(d => d.availableOnPlatform.some(platforms.includes));
+      }
+      if (filterOpts.forMatureAudience) {
+        res = res.filter(d => d.isForMatureAudience === filterOpts.forMatureAudience);
+      }
+      if (filterOpts.minAge) {
+        const minAge = filterOpts.minAge;
+        res = res.filter(d => d.minAge > minAge);
+      }
+      if (filterOpts.listedOnOrAfter) {
+        const listedAfter = filterOpts.listedOnOrAfter;
+        res = res.filter(d => parseISO(d.listDate) >= listedAfter);
+      }
+      if (filterOpts.listedOnOrBefore) {
+        const listedBefore = filterOpts.listedOnOrBefore;
+        res = res.filter(d => parseISO(d.listDate) <= listedBefore);
+      }
+      if (filterOpts.allowedInCountries) {
+        const allowedCountries = filterOpts.allowedInCountries;
+        res = res.filter(d => d.geoRestrictions?.allowedCountries.some(allowedCountries.includes));
+      }
+      if (filterOpts.blockedInCountries) {
+        const blockedCountries = filterOpts.blockedInCountries;
+        res = res.filter(d => d.geoRestrictions?.blockedCountries.some(blockedCountries.includes));
+      }
+      if (filterOpts.categories) {
+        const categories = filterOpts.categories;
+        res = res.filter(d => categories.includes(d.category));
+      }
+    }
+
+    return res;
+  }
+
+  /**
+   * Initializes the registry. This is required before you can use the registry.
+   * It builds the search Index and caches the registry. Specifically it performs
+   * the following steps
+   * 1. If there's no cached Registry or the cached registry is stale, it fetches
+   *   the registry from the remote URL
+   * 2. It builds the search index
+   *
+   * If the strategy is Static, then the first load will **always** happen from
+   * local registry.json file. Any subsequent calls after TTL will fetch the
+   * registry from the remote URL (if static is stale) & rebuild the search index.
+   * @returns A promise that resolves when the registry is initialized
+   */
+  public async init() {
+    await this.buildSearchIndex();
+  }
+
+  /**
+   * Returns the list of dApps that are listed in the registry. You can optionally
+   * filter the results.
+   * @param filterOpts The filter options. Defaults to `{ isListed: true}`
+   * @returns The list of dApps that are listed in the registry
+   */
+  public dApps = async(filterOpts: FilterOptions = { isListed: true }): Promise<DAppSchema[]> => {
+    let res = (await this.registry()).dapps;
+
+    if (filterOpts) {
+      res = this.filterDapps(res, filterOpts);
+    }
+
+    return res;
   };
 
   /**
-   * Creates a new instance of the registry container with the dapps filtered by tag
-   * @param tag
-   * @returns
+   * Performs search & filter on the dApps in the registry. This always returns the dApps
+   * that are listed.
+   * @param queryTxt The text to search for
+   * @param filterOpts The filter options. Defaults to `{ isListed: true}`
+   * @returns The filtered & sorted list of dApps
    */
-  filterByTag = (tag: string) => {
-    return this.fromThis(this.registry.dapps.filter(dapp => {
-      return dapp.tags.some(t => t.toLocaleLowerCase().includes(tag));
-    }));
-  };
+  public search = (queryTxt: string, filterOpts: FilterOptions = { isListed: true }): DAppSchema[] => {
+    let res =  this.searchEngine.search(queryTxt) as DAppSchema[];
 
-  filterByChainId = (chainId: number) => {
-    const dApps = this.registry.dapps.filter((item) => item.chains.includes(chainId));
-    return this.fromThis(dApps);
-  };
+    if (filterOpts) {
+      res = this.filterDapps(res, filterOpts);
+    }
 
-  searchForText = (queryTxt: string, queryFields: string[] = ['name']) => {
-    const dApps = this.registry.dapps.filter((dapp: Dapp) => {
-      return queryFields.some((field: string) => {
-        const val = getKeyValue<keyof Dapp, Dapp>(field as keyof Dapp)(dapp);
-        if (val && typeof val === 'string') {
-          return val.toLowerCase().includes(queryTxt.toLowerCase());
-        }
-        return false;
-      });
-    });
-    return this.fromThis(dApps);
+    return res;
+  }
 
-  };
-
-  searchForExactName = (queryTxt: string): Dapp[] => {
-    return this.registry.dapps.filter((dapp: Dapp) => {
-      return dapp.name.toLowerCase() === queryTxt.toLowerCase();
-    });
-  };
-
-  getRegistry = () => {
-    return this.registry;
-  };
-
-  getDapps = () => {
-    return this.registry.dapps;
-  };
+  /**
+   * Gets all the featured sections defined in the registry. Along with the dApps.
+   * If no featured section is defined, returns `undefined`
+   * @returns The list of featured sections and the dApps in that section
+   */
+  public getFeaturedDapps = async () => {
+    return (await this.registry()).featuredSections;
+  }
 }

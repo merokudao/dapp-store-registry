@@ -1,0 +1,151 @@
+{
+  "title": "MerokuDAO dAPP Store Registry",
+  "schema": {
+    "version": "1.0.0"
+  },
+  "chains": [
+    1,
+    137
+  ],
+  "dapps": [
+      {
+        "name": "CryptoBoys NFT Marketplace",
+        "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
+        "description": "A Simple NFT Marketplace by CryptoBoys.",
+        "tags": [
+          "nft creator"
+        ],
+        "chains": [
+          137
+        ],
+        "dappId": "bitpack.example.dapp",
+        "minAge": 13,
+        "isForMatureAudience": false,
+        "isSelfModerated": false,
+        "language": "en",
+        "version": "0.0.1",
+        "availableOnPlatform": ["web"],
+        "listDate": "2022-12-12",
+        "developer": {
+          "legalName": "Bitpack",
+          "website": "https://something.com",
+          "privacyPolicyUrl": "https://somethingelse.com",
+          "support": {
+            "url": "https://something.com"
+          }
+        }
+      },
+      {
+        "name": "Uniswap",
+        "description": "Swapping made simple.",
+        "tags": [
+          "defi"
+        ],
+        "chains": [
+          137,
+          1
+        ],
+        "dappId": "uniswap.example.dapp",
+        "minAge": 13,
+        "isForMatureAudience": false,
+        "isSelfModerated": false,
+        "language": "en",
+        "version": "0.0.1",
+        "availableOnPlatform": ["web", "ios", "android"],
+        "listDate": "2022-12-12",
+        "developer": {
+          "legalName": "Uniswap",
+          "website": "https://something.com",
+          "privacyPolicyUrl": "https://somethingelse.com",
+          "support": {
+            "url": "https://something.com"
+          }
+        }
+      },
+      {
+        "name": "OpenSea NFT Marketplace",
+        "description": "NFT Marketplace by OpenSea. World's largest NFT marketplace.",
+        "tags": [
+          "nft marketplace",
+          "nft"
+        ],
+        "chains": [
+          137,
+          1
+        ],
+        "dappId": "opensea.example.dapp",
+        "minAge": 13,
+        "isForMatureAudience": false,
+        "isSelfModerated": true,
+        "language": "en",
+        "version": "0.0.1",
+        "availableOnPlatform": ["web"],
+        "listDate": "2022-12-12",
+        "developer": {
+          "legalName": "OpenSea",
+          "website": "https://something.com",
+          "privacyPolicyUrl": "https://somethingelse.com",
+          "support": {
+            "url": "https://something.com"
+          }
+        }
+      },
+      {
+        "name": "A Mature Web3 App",
+        "description": "Well Only for your fans.",
+        "tags": [
+          "fans",
+          "content",
+          "video",
+          "nft"
+        ],
+        "chains": [
+          137,
+          1
+        ],
+        "dappId": "matureApp.example.dapp",
+        "minAge": 18,
+        "isForMatureAudience": true,
+        "isSelfModerated": false,
+        "language": "en",
+        "version": "0.0.1",
+        "availableOnPlatform": ["web"],
+        "listDate": "2022-12-12",
+        "developer": {
+          "legalName": "Bitpack",
+          "website": "https://something.com",
+          "privacyPolicyUrl": "https://somethingelse.com",
+          "support": {
+            "url": "https://something.com"
+          }
+        }
+      },
+      {
+        "name": "German Web3 App",
+        "description": "A NFT App in German Language",
+        "tags": [
+          "nft creator",
+          "defi"
+        ],
+        "chains": [
+          1
+        ],
+        "dappId": "german.example.dapp",
+        "minAge": 13,
+        "isForMatureAudience": false,
+        "isSelfModerated": false,
+        "language": "de",
+        "version": "0.0.1",
+        "availableOnPlatform": ["web"],
+        "listDate": "2022-12-12",
+        "developer": {
+          "legalName": "Bitpack",
+          "website": "https://something.com",
+          "privacyPolicyUrl": "https://somethingelse.com",
+          "support": {
+            "url": "https://something.com"
+          }
+        }
+      }
+  ]
+}
