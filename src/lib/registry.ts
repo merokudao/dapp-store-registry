@@ -137,6 +137,9 @@ export class DappStoreRegistry {
     let res = dapps;
 
     if (filterOpts) {
+      if (filterOpts.isListed) {
+        res = res.filter(d => d.isListed === filterOpts.isListed);
+      }
       if (filterOpts.chainId) {
         const chainId = filterOpts.chainId;
         res = res.filter(d => d.chains.includes(chainId));
@@ -199,12 +202,12 @@ export class DappStoreRegistry {
 
   /**
    * Returns the list of dApps that are listed in the registry. You can optionally
-   * filter the results. This always returns the dApps that are listed.
-   * @param filterOpts The filter options. If undefined, no filtering is performed
+   * filter the results.
+   * @param filterOpts The filter options. Defaults to `{ isListed: true}`
    * @returns The list of dApps that are listed in the registry
    */
-  public dApps = async(filterOpts: FilterOptions | undefined = undefined): Promise<DAppSchema[]> => {
-    let res = (await this.registry()).dapps.filter(d => d.isListed);
+  public dApps = async(filterOpts: FilterOptions = { isListed: true }): Promise<DAppSchema[]> => {
+    let res = (await this.registry()).dapps;
 
     if (filterOpts) {
       res = this.filterDapps(res, filterOpts);
@@ -217,14 +220,11 @@ export class DappStoreRegistry {
    * Performs search & filter on the dApps in the registry. This always returns the dApps
    * that are listed.
    * @param queryTxt The text to search for
-   * @param filterOpts The filter options. If undefined, no filtering is performed
+   * @param filterOpts The filter options. Defaults to `{ isListed: true}`
    * @returns The filtered & sorted list of dApps
    */
-  public search = (queryTxt: string, filterOpts: FilterOptions | undefined = undefined): DAppSchema[] => {
+  public search = (queryTxt: string, filterOpts: FilterOptions = { isListed: true }): DAppSchema[] => {
     let res =  this.searchEngine.search(queryTxt) as DAppSchema[];
-
-    // Filter to ensure only listed dapps make it to the results
-    res = res.filter(d => d.isListed);
 
     if (filterOpts) {
       res = this.filterDapps(res, filterOpts);

@@ -9,5 +9,6 @@ export interface FilterOptions {
   allowedInCountries?: string[];
   blockedInCountries?: string[];
   categories?: string[];
+  isListed?: boolean;
 };
 

@@ -61,7 +61,7 @@ describe('registry.json & Schema Validations', () => {
     done();
   });
 
-  it('should be able to detect invalid registry.jso', (done) => {
+  it('should be able to detect invalid registry.json', (done) => {
 
     const ajv = new Ajv2019({
       strict: false
