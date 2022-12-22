@@ -252,7 +252,7 @@ export class DappStoreRegistry {
     // Fork repo from merokudao to the authenticated user
     const octokit = new Octokit({
       userAgent: "@merokudao/dAppStore/v1.2.3",
-      auth: accessToken,
+      auth: accessToken
     });
 
     await octokit.request("POST /repos/{owner}/{repo}/forks", {
@@ -263,11 +263,16 @@ export class DappStoreRegistry {
       default_branch_only: true
     });
 
-    const { data: { sha } } = await octokit.request('GET /repos/{owner}/{repo}/contents/{file_path}', {
-      owner: githubId,
-      repo: this.githubRepo,
-      file_path: registryFile
-    });
+    const {
+      data: { sha }
+    } = await octokit.request(
+      "GET /repos/{owner}/{repo}/contents/{file_path}",
+      {
+        owner: githubId,
+        repo: this.githubRepo,
+        file_path: registryFile
+      }
+    );
 
     // Commit the changes
     // Push the changes to the forked repo
@@ -280,7 +285,9 @@ export class DappStoreRegistry {
         name: name,
         email: email
       },
-      content: Buffer.from(JSON.stringify(newRegistry, null, 2)).toString("base64"),
+      content: Buffer.from(JSON.stringify(newRegistry, null, 2)).toString(
+        "base64"
+      ),
       sha: sha
     });
 
@@ -334,6 +341,21 @@ export class DappStoreRegistry {
     return res;
   };
 
+  /**
+   * Adds or updates the dApp in the registry. If the dApp already exists, it
+   * updates the dApp. If the dApp doesn't exist, it adds the dApp.
+   *
+   * Only the developer of the dApp can add or update the dApp.
+   * @param name The name of the developer (from GitHub)
+   * @param email The email of the developer (from Github)
+   * @param accessToken The JWT access token of the developer (from Github) for user to server
+   * API Calls
+   * @param githubID The GitHub ID of the developer
+   * @param dapp The dApp to add or update
+   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
+   * @returns A promise that resolves to PR URL when the dApp is added or updated. This should
+   * be shown to the user on UI, so that they can visit this URL and create a PR.
+   */
   public async addOrUpdateDapp(
     name: string,
     email: string,
@@ -341,7 +363,7 @@ export class DappStoreRegistry {
     githubID: string,
     dapp: DAppSchema,
     org: string | undefined = undefined
-  ) {
+  ): Promise<string> {
     const currRegistry = await this.registry();
     const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
 
@@ -370,6 +392,19 @@ export class DappStoreRegistry {
     );
   }
 
+  /**
+   * Deletes the dApp from registry. Only the developer who added this dApp can
+   * delete it.
+   * @param name The name of the developer (from GitHub)
+   * @param email The email of the developer (from Github)
+   * @param accessToken The JWT access token of the developer (from Github) for user to server
+   * API Calls
+   * @param githubID The GitHub ID of the developer
+   * @param dappId The ID of the dApp to delete
+   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
+   * @returns A promise that resolves to PR URL when the dApp is deleted. This should
+   * be shown to the user on UI, so that they can visit this URL and create a PR.
+   */
   public deleteDapp = async (
     name: string,
     email: string,
@@ -377,7 +412,7 @@ export class DappStoreRegistry {
     githubID: string,
     dappId: string,
     org: string | undefined = undefined
-  ) => {
+  ): Promise<string> => {
     const currRegistry = await this.registry();
     const dappExists = currRegistry.dapps.filter(x => x.dappId === dappId);
 
@@ -408,6 +443,19 @@ export class DappStoreRegistry {
     );
   };
 
+  /**
+   * Toggle the listing of the dApp. Only the developer who added this dApp can
+   * toggle the listing.
+   * @param name The name of the developer (from GitHub)
+   * @param email The email of the developer (from Github)
+   * @param accessToken The JWT access token of the developer (from Github) for user to server
+   * API Calls
+   * @param githubID The GitHub ID of the developer
+   * @param dappId The ID of the dApp to toggle listing
+   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
+   * @returns A promise that resolves to PR URL when the dApp is deleted. This should
+   * be shown to the user on UI, so that they can visit this URL and create a PR.
+   */
   public async toggleListing(
     name: string,
     email: string,
