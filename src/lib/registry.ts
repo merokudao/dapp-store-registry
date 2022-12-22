@@ -13,6 +13,7 @@ import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
+import { Octokit } from "octokit";
 
 const debug = Debug("@merokudao:dapp-store-registry:Registry");
 
@@ -28,8 +29,10 @@ export class DappStoreRegistry {
 
   private lastRegistryCheckedAt: Date | undefined;
 
-  public readonly registryRemoteUrl =
-    "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/registry.json";
+  private readonly githubOwner = "merokudao";
+  private readonly githubRepo = "dapp-store-registry";
+
+  public readonly registryRemoteUrl = `https://raw.githubusercontent.com/${this.githubOwner}/${this.githubRepo}/main/src/registry.json`;
 
   private searchEngine = new JsSearch.Search("dappId");
 
@@ -235,6 +238,66 @@ export class DappStoreRegistry {
     return res;
   }
 
+  private async updateRegistry(
+    name: string,
+    email: string,
+    githubId: string,
+    accessToken: string,
+    newRegistry: DAppStoreSchema,
+    commitMessage: string,
+    org: string | undefined = undefined
+  ) {
+    const registryFile = "src/registry.json";
+
+    // Fork repo from merokudao to the authenticated user
+    const octokit = new Octokit({
+      userAgent: "@merokudao/dAppStore/v1.2.3",
+      auth: accessToken
+    });
+
+    await octokit.request("POST /repos/{owner}/{repo}/forks", {
+      owner: this.githubOwner,
+      repo: this.githubRepo,
+      organization: org,
+      name: this.githubRepo,
+      default_branch_only: true
+    });
+
+    const {
+      data: { sha }
+    } = await octokit.request(
+      "GET /repos/{owner}/{repo}/contents/{file_path}",
+      {
+        owner: githubId,
+        repo: this.githubRepo,
+        file_path: registryFile
+      }
+    );
+
+    // Commit the changes
+    // Push the changes to the forked repo
+    await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
+      owner: githubId,
+      repo: this.githubRepo,
+      path: registryFile,
+      message: commitMessage,
+      committer: {
+        name: name,
+        email: email
+      },
+      content: Buffer.from(JSON.stringify(newRegistry, null, 2)).toString(
+        "base64"
+      ),
+      sha: sha
+    });
+
+    // Open a PR against the main branch of the merokudao repo
+    // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
+    // Since it's not possible to create a PR from one repo to another, we'll have to
+    // resort to returning a URL that, when the user goes to, prompts to create a PR
+    return `https://github.com/${this.githubOwner}/${this.githubRepo}/compare/main...${githubId}:${this.githubRepo}:main?expand=1`;
+  }
+
   /**
    * Initializes the registry. This is required before you can use the registry.
    * It builds the search Index and caches the registry. Specifically it performs
@@ -277,6 +340,159 @@ export class DappStoreRegistry {
 
     return res;
   };
+
+  /**
+   * Adds or updates the dApp in the registry. If the dApp already exists, it
+   * updates the dApp. If the dApp doesn't exist, it adds the dApp.
+   *
+   * Only the developer of the dApp can add or update the dApp.
+   * @param name The name of the developer (from GitHub)
+   * @param email The email of the developer (from Github)
+   * @param accessToken The JWT access token of the developer (from Github) for user to server
+   * API Calls
+   * @param githubID The GitHub ID of the developer
+   * @param dapp The dApp to add or update
+   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
+   * @returns A promise that resolves to PR URL when the dApp is added or updated. This should
+   * be shown to the user on UI, so that they can visit this URL and create a PR.
+   */
+  public async addOrUpdateDapp(
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    dapp: DAppSchema,
+    org: string | undefined = undefined
+  ): Promise<string> {
+    const currRegistry = await this.registry();
+    const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
+
+    if (dappExists.length === 0) {
+      currRegistry.dapps.push(dapp);
+    } else if (dappExists.length === 1) {
+      if (dapp.developer.githubID !== dappExists[0].developer.githubID) {
+        throw new Error(
+          `Cannot update dApp ${dapp.dappId} as you are not the owner`
+        );
+      }
+      const idx = currRegistry.dapps.findIndex(x => x.dappId === dapp.dappId);
+      currRegistry.dapps[idx] = dapp;
+    } else {
+      throw new Error(`Multiple dApps with the same ID ${dapp.dappId} found`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `add-${dapp.dappId}`,
+      org
+    );
+  }
+
+  /**
+   * Deletes the dApp from registry. Only the developer who added this dApp can
+   * delete it.
+   * @param name The name of the developer (from GitHub)
+   * @param email The email of the developer (from Github)
+   * @param accessToken The JWT access token of the developer (from Github) for user to server
+   * API Calls
+   * @param githubID The GitHub ID of the developer
+   * @param dappId The ID of the dApp to delete
+   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
+   * @returns A promise that resolves to PR URL when the dApp is deleted. This should
+   * be shown to the user on UI, so that they can visit this URL and create a PR.
+   */
+  public deleteDapp = async (
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    dappId: string,
+    org: string | undefined = undefined
+  ): Promise<string> => {
+    const currRegistry = await this.registry();
+    const dappExists = currRegistry.dapps.filter(x => x.dappId === dappId);
+
+    if (dappExists.length === 0) {
+      throw new Error(`No dApp with the ID ${dappId} found`);
+    } else if (dappExists.length === 1) {
+      if (
+        dappExists[0].developer.githubID !== dappExists[0].developer.githubID
+      ) {
+        throw new Error(
+          `Cannot delete dApp ${dappId} as you are not the owner`
+        );
+      }
+      const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
+      currRegistry.dapps.splice(idx, 1);
+    } else {
+      throw new Error(`Multiple dApps with the same ID ${dappId} found`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `delete-${dappId}`,
+      org
+    );
+  };
+
+  /**
+   * Toggle the listing of the dApp. Only the developer who added this dApp can
+   * toggle the listing.
+   * @param name The name of the developer (from GitHub)
+   * @param email The email of the developer (from Github)
+   * @param accessToken The JWT access token of the developer (from Github) for user to server
+   * API Calls
+   * @param githubID The GitHub ID of the developer
+   * @param dappId The ID of the dApp to toggle listing
+   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
+   * @returns A promise that resolves to PR URL when the dApp is deleted. This should
+   * be shown to the user on UI, so that they can visit this URL and create a PR.
+   */
+  public async toggleListing(
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    dappId: string,
+    org: string | undefined = undefined
+  ) {
+    const currRegistry = await this.registry();
+    const dappExists = currRegistry.dapps.filter(x => x.dappId === dappId);
+
+    if (dappExists.length === 0) {
+      throw new Error(`No dApp with the ID ${dappId} found`);
+    } else if (dappExists.length === 1) {
+      if (
+        dappExists[0].developer.githubID !== dappExists[0].developer.githubID
+      ) {
+        throw new Error(
+          `Cannot toggle listing for dApp ${dappId} as you are not the owner`
+        );
+      }
+      const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
+      currRegistry.dapps[idx].isListed = !currRegistry.dapps[idx].isListed;
+    } else {
+      throw new Error(`Multiple dApps with the same ID ${dappId} found`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `toggle-listing-${dappId}`,
+      org
+    );
+  }
 
   /**
    * Performs search & filter on the dApps in the registry. This always returns the dApps
