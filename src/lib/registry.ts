@@ -337,6 +337,11 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       currRegistry.dapps.push(dapp);
     } else if (dappExists.length === 1) {
+      if (dapp.developer.githubID !== dappExists[0].developer.githubID) {
+        throw new Error(
+          `Cannot update dApp ${dapp.dappId} as you are not the owner`
+        );
+      }
       const idx = currRegistry.dapps.findIndex(x => x.dappId === dapp.dappId);
       currRegistry.dapps[idx] = dapp;
     } else {
@@ -367,6 +372,13 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       throw new Error(`No dApp with the ID ${dappId} found`);
     } else if (dappExists.length === 1) {
+      if (
+        dappExists[0].developer.githubID !== dappExists[0].developer.githubID
+      ) {
+        throw new Error(
+          `Cannot delete dApp ${dappId} as you are not the owner`
+        );
+      }
       const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
       currRegistry.dapps.splice(idx, 1);
     } else {
@@ -397,6 +409,13 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       throw new Error(`No dApp with the ID ${dappId} found`);
     } else if (dappExists.length === 1) {
+      if (
+        dappExists[0].developer.githubID !== dappExists[0].developer.githubID
+      ) {
+        throw new Error(
+          `Cannot toggle listing for dApp ${dappId} as you are not the owner`
+        );
+      }
       const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
       currRegistry.dapps[idx].isListed = !currRegistry.dapps[idx].isListed;
     } else {
