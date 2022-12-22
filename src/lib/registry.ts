@@ -247,9 +247,12 @@ export class DappStoreRegistry {
     commitMessage: string,
     org: string | undefined = undefined
   ) {
+    const registryFile = "src/registry.json";
+
     // Fork repo from merokudao to the authenticated user
     const octokit = new Octokit({
-      userAgent: "@merokudao/dAppStore/v1.2.3"
+      userAgent: "@merokudao/dAppStore/v1.2.3",
+      auth: accessToken,
     });
 
     await octokit.request("POST /repos/{owner}/{repo}/forks", {
@@ -260,18 +263,25 @@ export class DappStoreRegistry {
       default_branch_only: true
     });
 
+    const { data: { sha } } = await octokit.request('GET /repos/{owner}/{repo}/contents/{file_path}', {
+      owner: githubId,
+      repo: this.githubRepo,
+      file_path: registryFile
+    });
+
     // Commit the changes
     // Push the changes to the forked repo
     await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-      owner: this.githubOwner,
+      owner: githubId,
       repo: this.githubRepo,
-      path: "src/registry.json",
+      path: registryFile,
       message: commitMessage,
       committer: {
         name: name,
         email: email
       },
-      content: JSON.stringify(newRegistry)
+      content: Buffer.from(JSON.stringify(newRegistry, null, 2)).toString("base64"),
+      sha: sha
     });
 
     // Open a PR against the main branch of the merokudao repo
@@ -328,6 +338,7 @@ export class DappStoreRegistry {
     name: string,
     email: string,
     accessToken: string,
+    githubID: string,
     dapp: DAppSchema,
     org: string | undefined = undefined
   ) {
@@ -351,7 +362,7 @@ export class DappStoreRegistry {
     return await this.updateRegistry(
       name,
       email,
-      dapp.developer.githubID,
+      githubID,
       accessToken,
       currRegistry,
       `add-${dapp.dappId}`,
@@ -363,6 +374,7 @@ export class DappStoreRegistry {
     name: string,
     email: string,
     accessToken: string,
+    githubID: string,
     dappId: string,
     org: string | undefined = undefined
   ) => {
@@ -388,7 +400,7 @@ export class DappStoreRegistry {
     return await this.updateRegistry(
       name,
       email,
-      dappExists[0].developer.githubID,
+      githubID,
       accessToken,
       currRegistry,
       `delete-${dappId}`,
@@ -400,6 +412,7 @@ export class DappStoreRegistry {
     name: string,
     email: string,
     accessToken: string,
+    githubID: string,
     dappId: string,
     org: string | undefined = undefined
   ) {
@@ -425,8 +438,8 @@ export class DappStoreRegistry {
     return await this.updateRegistry(
       name,
       email,
+      githubID,
       accessToken,
-      dappExists[0].developer.githubID,
       currRegistry,
       `toggle-listing-${dappId}`,
       org
