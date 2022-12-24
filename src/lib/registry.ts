@@ -213,6 +213,7 @@ export class DappStoreRegistry {
               allowedCountries.includes(x)
             );
           }
+          return false;
         });
       }
       if (filterOpts.blockedInCountries) {
@@ -223,6 +224,7 @@ export class DappStoreRegistry {
               blockedCountries.includes(x)
             );
           }
+          return false;
         });
       }
       if (filterOpts.categories) {

@@ -1,7 +1,7 @@
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
 import fs from "fs-extra";
-import { DAppStoreSchema } from "interfaces/registrySchema";
+import { DAppStoreSchema } from "../src/interfaces/registrySchema";
 import chai from "chai";
 
 import dAppRegistrySchema from "../src/schemas/merokuDappStore.registrySchema.json";

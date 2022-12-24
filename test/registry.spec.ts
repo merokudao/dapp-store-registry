@@ -2,7 +2,6 @@ import { DAppStoreSchema } from "../src/interfaces";
 import { DappStoreRegistry, RegistryStrategy } from "../src/lib/registry";
 import chai from "chai";
 import fs from "fs-extra";
-import Sinon from "sinon";
 import nock from "nock";
 import parseISO from "date-fns/parseISO";
 
@@ -22,14 +21,8 @@ const getRegistry = async (fixtureRegistryJson: DAppStoreSchema) => {
 describe("DappStoreRegistry", () => {
   describe("Registry Strategy", () => {
     let localRegistryJson: DAppStoreSchema;
-    let fixtureRegistryJson: DAppStoreSchema;
 
     before(() => {
-      const content = fs
-        .readFileSync("./test/fixtures/registry.json")
-        .toString();
-
-      fixtureRegistryJson = JSON.parse(content) as DAppStoreSchema;
       localRegistryJson = JSON.parse(
         fs.readFileSync("./src/registry.json").toString()
       );
@@ -42,7 +35,7 @@ describe("DappStoreRegistry", () => {
      */
     it("uses the local registry file upon Static RegistryStrategy", async () => {
       const response = await fetch(new DappStoreRegistry().registryRemoteUrl);
-      const localRegistryJson1 = await response.json();
+      const localRegistryJson1: DAppStoreSchema = await response.json();
 
       const registry = new DappStoreRegistry(RegistryStrategy.Static);
       await registry.init();
@@ -215,7 +208,7 @@ describe("DappStoreRegistry", () => {
       const dapps_2 = fixtureRegistryJson.dapps.filter(dapp =>
         dapp.availableOnPlatform.some(x => platforms.includes(x))
       );
-      registry_dapps_1.should.deep.equal(dapps_1);
+      registry_dapps_2.should.deep.equal(dapps_2);
     });
 
     it("is able to filter results on allowed countries", async () => {
