@@ -1,6 +1,6 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "@stdlib/nlp-porter-stemmer": "^0.0.7",
+    "ajv": "^8.11.2",
+    "ajv-formats": "^2.1.1",
     "axios": "^1.2.1",
     "chai": "^4.3.7",
     "cross-fetch": "^3.1.5",
@@ -48,8 +50,6 @@
     "@types/to-json-schema": "^0.2.1",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
-    "ajv": "^8.11.2",
-    "ajv-formats": "^2.1.1",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -73,18 +73,6 @@
     "LICENSE",
     "README.md"
   ],
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/esm/types/index.d.ts",
-        "default": "./dist/esm/index.mjs"
-      },
-      "require": {
-        "types": "./dist/cjs/types/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
-    }
-  },
   "engines": {
     "node": ">=18"
   },
