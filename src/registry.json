@@ -52,7 +52,7 @@
       "repoUrl": "http://example.com",
       "dappId": "example.store.dapp",
       "minAge": 13,
-      "isMatureForAudience": false,
+      "isForMatureAudience": false,
       "isSelfModerated": true,
       "language": "en",
       "version": "0.1.0",
@@ -79,7 +79,7 @@
           "url": "https://www.example.com/support",
           "email": "support@example.com"
         },
-        "githubId": "r4881t"
+        "githubID": "r4881t"
       },
       "tags": [
         "nft maker"

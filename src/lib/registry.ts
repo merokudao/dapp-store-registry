@@ -56,9 +56,11 @@ export class DappStoreRegistry {
 
   private localRegistry = (): DAppStoreSchema => {
     const res = registryJson as DAppStoreSchema;
-    if (this.validateRegistryJson(res)[0]) {
+    const [valid, errors] = this.validateRegistryJson(res);
+    if (valid) {
       return res;
     } else {
+      debug(errors);
       throw new Error(
         `@merokudao/dapp-store-registry: local registry is invalid.`
       );
@@ -82,9 +84,11 @@ export class DappStoreRegistry {
         `remote registry fetched. status: ${response.status} ${response.statusText}`
       );
       const json = (await response.json()) as DAppStoreSchema;
-      if (this.validateRegistryJson(json)[0]) {
+      const [valid, errors] = this.validateRegistryJson(json);
+      if (valid) {
         registry = json as DAppStoreSchema;
       } else {
+        debug(errors);
         debug(`remote registry is invalid. Falling back to static repository.`);
         registry = this.localRegistry();
       }
@@ -106,6 +110,7 @@ export class DappStoreRegistry {
     ajv.addSchema(dAppSchema, "dAppSchema");
     const validate = ajv.compile(dAppRegistrySchema);
     const valid = validate(json);
+    debug(validate.errors);
     return [valid, validate.errors];
   };
 
