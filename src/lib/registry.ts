@@ -257,7 +257,9 @@ export class DappStoreRegistry {
       auth: accessToken
     });
 
-    debug(`forking ${this.githubOwner}/${this.githubRepo} to ${githubId})`);
+    debug(
+      `forking ${this.githubOwner}/${this.githubRepo} to ${githubId}/${this.githubRepo}`
+    );
     await octokit.request("POST /repos/{owner}/{repo}/forks", {
       owner: this.githubOwner,
       repo: this.githubRepo,
@@ -268,13 +270,15 @@ export class DappStoreRegistry {
     debug(`forked ${this.githubOwner}/${this.githubRepo} to ${githubId})`);
 
     // Get the SHA of the registry file
-    debug(`getting sha of ${registryFile}`);
+    debug(
+      `getting sha of repos/${this.githubOwner}/${this.githubRepo}/contents/{registryFile}`
+    );
     const {
       data: { sha }
     } = await octokit.request(
       "GET /repos/{owner}/{repo}/contents/{file_path}",
       {
-        owner: githubId,
+        owner: this.githubOwner,
         repo: this.githubRepo,
         file_path: registryFile
       }
