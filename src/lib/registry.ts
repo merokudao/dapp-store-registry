@@ -276,14 +276,14 @@ export class DappStoreRegistry {
 
     // Get the SHA of the registry file
     debug(
-      `getting sha of repos/${this.githubOwner}/${this.githubRepo}/contents/{registryFile}`
+      `getting sha of repos/${githubId}/${this.githubRepo}/contents/${registryFile}`
     );
     const {
       data: { sha }
     } = await octokit.request(
       "GET /repos/{owner}/{repo}/contents/{file_path}",
       {
-        owner: this.githubOwner,
+        owner: githubId,
         repo: this.githubRepo,
         file_path: registryFile
       }
