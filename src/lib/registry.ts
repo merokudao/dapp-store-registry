@@ -513,9 +513,7 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       throw new Error(`No dApp with the ID ${dappId} found`);
     } else if (dappExists.length === 1) {
-      if (
-        dappExists[0].developer.githubID !== dappExists[0].developer.githubID
-      ) {
+      if (dappExists[0].developer.githubID !== githubID) {
         throw new Error(
           `Cannot toggle listing for dApp ${dappId} as you are not the owner`
         );

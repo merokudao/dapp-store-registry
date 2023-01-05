@@ -290,4 +290,76 @@ describe("DappStoreRegistry", () => {
       registry_dapps_1.should.deep.equal(dapps_1);
     });
   });
+
+  describe("#addOrUpdateDapp", () => {
+    it("throws error if githubID in dApp is not same as the person requesting", async () => {
+      const registry = new DappStoreRegistry();
+      await registry.init();
+
+      const dapp = (await registry.dApps())[0];
+      const otherGithubID = "someOtherID";
+
+      try {
+        await registry.addOrUpdateDapp(
+          "name",
+          "email",
+          "token",
+          otherGithubID,
+          dapp
+        );
+      } catch (e: any) {
+        e.message.should.equal(
+          `Cannot add/update dApp ${dapp.dappId} as you are not the owner`
+        );
+      }
+    });
+  });
+
+  describe("#deleteDapp", () => {
+    it("throws error if githubID in dApp is not same as the person requesting", async () => {
+      const registry = new DappStoreRegistry();
+      await registry.init();
+
+      const dapp = (await registry.dApps())[0];
+      const otherGithubID = "someOtherID";
+
+      try {
+        await registry.deleteDapp(
+          "name",
+          "email",
+          "token",
+          otherGithubID,
+          dapp.dappId
+        );
+      } catch (e: any) {
+        e.message.should.equal(
+          `Cannot delete dApp ${dapp.dappId} as you are not the owner`
+        );
+      }
+    });
+  });
+
+  describe("#toggleListing", () => {
+    it("throws error if githubID in dApp is not same as the person requesting", async () => {
+      const registry = new DappStoreRegistry();
+      await registry.init();
+
+      const dapp = (await registry.dApps())[0];
+      const otherGithubID = "someOtherID";
+
+      try {
+        await registry.toggleListing(
+          "name",
+          "email",
+          "token",
+          otherGithubID,
+          dapp.dappId
+        );
+      } catch (e: any) {
+        e.message.should.equal(
+          `Cannot toggle listing for dApp ${dapp.dappId} as you are not the owner`
+        );
+      }
+    });
+  });
 });
