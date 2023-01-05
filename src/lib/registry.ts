@@ -257,6 +257,7 @@ export class DappStoreRegistry {
       auth: accessToken
     });
 
+    debug(`forking ${this.githubOwner}/${this.githubRepo} to ${githubId})`);
     await octokit.request("POST /repos/{owner}/{repo}/forks", {
       owner: this.githubOwner,
       repo: this.githubRepo,
@@ -264,7 +265,10 @@ export class DappStoreRegistry {
       name: this.githubRepo,
       default_branch_only: true
     });
+    debug(`forked ${this.githubOwner}/${this.githubRepo} to ${githubId})`);
 
+    // Get the SHA of the registry file
+    debug(`getting sha of ${registryFile}`);
     const {
       data: { sha }
     } = await octokit.request(
@@ -278,6 +282,7 @@ export class DappStoreRegistry {
 
     // Commit the changes
     // Push the changes to the forked repo
+    debug(`pushing changes to ${githubId}/${this.githubRepo}`);
     await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
       owner: githubId,
       repo: this.githubRepo,
@@ -297,7 +302,10 @@ export class DappStoreRegistry {
     // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
     // Since it's not possible to create a PR from one repo to another, we'll have to
     // resort to returning a URL that, when the user goes to, prompts to create a PR
-    return `https://github.com/${this.githubOwner}/${this.githubRepo}/compare/main...${githubId}:${this.githubRepo}:main?expand=1`;
+    const prURL = `https://github.com/${this.githubOwner}/${this.githubRepo}/compare/main...${githubId}:${this.githubRepo}:main?expand=1`;
+
+    debug(`PR URL: ${prURL}`);
+    return prURL;
   }
 
   /**
