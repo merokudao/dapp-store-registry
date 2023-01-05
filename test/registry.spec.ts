@@ -34,8 +34,8 @@ describe("DappStoreRegistry", () => {
      * use the remote as the source of truth.
      */
     it("uses the local registry file upon Static RegistryStrategy", async () => {
-      const response = await fetch(new DappStoreRegistry().registryRemoteUrl);
-      const localRegistryJson1: DAppStoreSchema = await response.json();
+      // const response = await fetch(new DappStoreRegistry().registryRemoteUrl);
+      // const localRegistryJson1: DAppStoreSchema = await response.json();
 
       const registry = new DappStoreRegistry(RegistryStrategy.Static);
       await registry.init();
@@ -43,20 +43,16 @@ describe("DappStoreRegistry", () => {
       const dApps = await registry.dApps({});
 
       dApps.should.be.an("array");
-      dApps.should.deep.equal(localRegistryJson1.dapps);
+      dApps.should.deep.equal(localRegistryJson.dapps);
 
       const featuredDapps = await registry.getFeaturedDapps();
       if (featuredDapps) {
-        featuredDapps.should.equal(localRegistryJson1.featuredSections);
+        featuredDapps.should.equal(localRegistryJson.featuredSections);
       }
 
-      (await registry.getRegistryTitle()).should.equal(
-        localRegistryJson1.title
-      );
+      (await registry.getRegistryTitle()).should.equal(localRegistryJson.title);
 
-      const listedDapps = localRegistryJson1.dapps.filter(
-        dapp => dapp.isListed
-      );
+      const listedDapps = localRegistryJson.dapps.filter(dapp => dapp.isListed);
       (await registry.dApps()).should.deep.equal(listedDapps);
     });
 
@@ -260,7 +256,7 @@ describe("DappStoreRegistry", () => {
     });
 
     it("is able to filter results on or after certain list date", async () => {
-      let startDate = new Date(2022, 1, 1);
+      const startDate = new Date(2022, 1, 1);
       const registry_dapps_1 = await registry.dApps({
         listedOnOrAfter: startDate
       });
@@ -271,7 +267,7 @@ describe("DappStoreRegistry", () => {
     });
 
     it("is able to filter results on or before certain list date", async () => {
-      let endDate = new Date(2022, 1, 1);
+      const endDate = new Date(2022, 1, 1);
       const registry_dapps_1 = await registry.dApps({
         listedOnOrBefore: endDate
       });
