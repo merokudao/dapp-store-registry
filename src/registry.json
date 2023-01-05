@@ -1,20 +1,29 @@
 {
   "title": "MerokuDAO dAPP Store Registry Local",
-  "chains": [1, 137],
+  "chains": [
+    1,
+    137
+  ],
   "dapps": [
     {
       "name": "CryptoBoys NFT Marketplace",
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
-      "tags": ["nft creator"],
-      "chains": [137],
+      "tags": [
+        "nft creator"
+      ],
+      "chains": [
+        137
+      ],
       "dappId": "bitpack.example.dapp",
       "minAge": 13,
       "isForMatureAudience": false,
       "isSelfModerated": false,
       "language": "en",
       "version": "0.0.1",
-      "availableOnPlatform": ["web"],
+      "availableOnPlatform": [
+        "web"
+      ],
       "isListed": true,
       "listDate": "2022-12-12",
       "developer": {
@@ -28,6 +37,58 @@
         }
       },
       "category": "finance"
+    },
+    {
+      "name": "A 2 Cool NFT Creator dApp",
+      "description": "A really cool NFT Creator dApp",
+      "images": {
+        "logo": "https://example.com/logo.png",
+        "banner": "https://www.example.com/banner.png",
+        "screenshots": [
+          "https://www.example.com/screenshot_1.png",
+          "https://www.example.com/screenshot_2.png"
+        ]
+      },
+      "repoUrl": "http://example.com",
+      "dappId": "example.store.dapp",
+      "minAge": 13,
+      "isMatureForAudience": false,
+      "isSelfModerated": true,
+      "language": "en",
+      "version": "0.1.0",
+      "isListed": true,
+      "listDate": "2021-11-13",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "geoRestrictions": {
+        "allowedCountries": [
+          "US",
+          "IN"
+        ],
+        "blockedCountries": [
+          "CN"
+        ]
+      },
+      "developer": {
+        "legalName": "John Doe & Sons",
+        "logo": "https://www.example.com/logo_small.png",
+        "website": "https://www.example.com",
+        "privacyPolicyUrl": "https://www.example.com/privacy",
+        "support": {
+          "url": "https://www.example.com/support",
+          "email": "support@example.com"
+        },
+        "githubId": "r4881t"
+      },
+      "tags": [
+        "nft maker"
+      ],
+      "chains": [
+        1,
+        137
+      ],
+      "category": "books"
     }
   ]
 }
