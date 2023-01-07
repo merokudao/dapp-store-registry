@@ -102,6 +102,14 @@ export class DappStoreRegistry {
   };
 
   private validateRegistryJson = (json: DAppStoreSchema) => {
+    const dAppIDs = json.dapps.map(dapp => dapp.dappId);
+    const uniqueDAppIDs = Array.from(new Set(dAppIDs));
+    if (dAppIDs.length !== uniqueDAppIDs.length) {
+      throw new Error(
+        `@merokudao/dapp-store-registry: registry is invalid. dApp IDs must be unique.`
+      );
+    }
+
     const ajv = new Ajv2019({
       strict: false
     });
@@ -383,6 +391,12 @@ export class DappStoreRegistry {
     dapp: DAppSchema,
     org: string | undefined = undefined
   ): Promise<string> {
+    if (dapp.developer.githubID !== githubID) {
+      throw new Error(
+        `Cannot add/update dApp ${dapp.dappId} as you are not the owner`
+      );
+    }
+
     const currRegistry = await this.registry();
     const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
 
@@ -398,6 +412,12 @@ export class DappStoreRegistry {
       currRegistry.dapps[idx] = dapp;
     } else {
       throw new Error(`Multiple dApps with the same ID ${dapp.dappId} found`);
+    }
+
+    // Validate the registry
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json: ${errors}`);
     }
 
     return await this.updateRegistry(
@@ -438,9 +458,7 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       throw new Error(`No dApp with the ID ${dappId} found`);
     } else if (dappExists.length === 1) {
-      if (
-        dappExists[0].developer.githubID !== dappExists[0].developer.githubID
-      ) {
+      if (dappExists[0].developer.githubID !== githubID) {
         throw new Error(
           `Cannot delete dApp ${dappId} as you are not the owner`
         );
@@ -449,6 +467,12 @@ export class DappStoreRegistry {
       currRegistry.dapps.splice(idx, 1);
     } else {
       throw new Error(`Multiple dApps with the same ID ${dappId} found`);
+    }
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
 
     return await this.updateRegistry(
@@ -489,9 +513,7 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       throw new Error(`No dApp with the ID ${dappId} found`);
     } else if (dappExists.length === 1) {
-      if (
-        dappExists[0].developer.githubID !== dappExists[0].developer.githubID
-      ) {
+      if (dappExists[0].developer.githubID !== githubID) {
         throw new Error(
           `Cannot toggle listing for dApp ${dappId} as you are not the owner`
         );
@@ -500,6 +522,12 @@ export class DappStoreRegistry {
       currRegistry.dapps[idx].isListed = !currRegistry.dapps[idx].isListed;
     } else {
       throw new Error(`Multiple dApps with the same ID ${dappId} found`);
+    }
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
 
     return await this.updateRegistry(
