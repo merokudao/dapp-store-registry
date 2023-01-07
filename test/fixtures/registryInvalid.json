@@ -11,6 +11,7 @@
       "description": "A Simple NFT Marketplace by CryptoBoys.",
       "tags": ["nft creator"],
       "dappId": "bitpack.example.dapp",
+      "fileUrl": "https://s3:something.com",
       "minAge": 13,
       "isForMatureAudience": false,
       "isSelfModerated": false,

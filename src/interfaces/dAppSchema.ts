@@ -59,6 +59,11 @@ export interface DAppSchema {
    */
   dappId: string;
   /**
+   * Path to dApp file uploaded to aws-s3
+   */
+  fileUrl:string;
+  /**
+   * 
    * The min age of user who should access this dApp
    */
   minAge: number;

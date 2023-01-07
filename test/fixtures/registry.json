@@ -67,6 +67,7 @@
       "tags": ["nft creator"],
       "chains": [137, 1],
       "dappId": "bitpack.testSpec3.dapp",
+      "fileUrl": "https://s3:something.com",
       "minAge": 13,
       "isForMatureAudience": false,
       "isSelfModerated": false,

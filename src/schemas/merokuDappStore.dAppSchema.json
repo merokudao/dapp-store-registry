@@ -49,6 +49,10 @@
       "type": "string",
       "description": "A Unique ID for each dApp."
     },
+    "fileUrl":{
+      "type": "string",
+      "description": "Path to dApp file uploaded to aws-s3"
+    },
     "minAge": {
       "type": "integer",
       "description": "The min age of user who should access this dApp",
