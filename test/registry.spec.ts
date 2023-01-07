@@ -14,13 +14,16 @@ const debug = Debug("@merokudao:dapp-store:registry.spec.ts");
 
 chai.should();
 
-const getRegistry = async (fixtureRegistryJson: DAppStoreSchema) => {
+const getRegistry = async (
+  fixtureRegistryJson: DAppStoreSchema,
+  strategy = RegistryStrategy.GitHub
+) => {
   nock("https://raw.githubusercontent.com")
     .get("/merokudao/dapp-store-registry/main/src/registry.json")
     .twice()
     .reply(200, fixtureRegistryJson);
 
-  const registry = new DappStoreRegistry();
+  const registry = new DappStoreRegistry(strategy);
   await registry.init();
   return registry;
 };
@@ -44,8 +47,10 @@ describe("DappStoreRegistry", () => {
       // const response = await fetch(new DappStoreRegistry().registryRemoteUrl);
       // const localRegistryJson1: DAppStoreSchema = await response.json();
 
-      const registry = new DappStoreRegistry(RegistryStrategy.Static);
-      await registry.init();
+      const registry = await getRegistry(
+        localRegistryJson,
+        RegistryStrategy.Static
+      );
 
       const dApps = await registry.dApps({});
 
