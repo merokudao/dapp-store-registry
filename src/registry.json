@@ -91,9 +91,9 @@
       "category": "books"
     },
     {
-      "name": "Test",
-      "description": "https://example.com this is a test url",
-      "dappId": "example.test.dapp",
+      "name": "Minting DApp",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "dappId": "minting.example.dapp",
       "minAge": 18,
       "appUrl": "https://example.com",
       "isForMatureAudience": false,
@@ -104,7 +104,7 @@
         "logo": "https://example.com/logo.png",
         "banner": "https://example.com/banner.png",
         "screenshots": [
-          "https://example.com"
+          "https://www.lipsum.com/images/banners/black_234x60.gif"
         ]
       },
       "isListed": true,
@@ -124,7 +124,10 @@
         "githubID": "adarshmishra07"
       },
       "tags": [
-        "test"
+        "Mint",
+        "minter",
+        "dapp",
+        "registry"
       ],
       "chains": [
         137
