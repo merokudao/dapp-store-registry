@@ -118,8 +118,8 @@ export class DappStoreRegistry {
     ajv.addSchema(dAppSchema, "dAppSchema");
     const validate = ajv.compile(dAppRegistrySchema);
     const valid = validate(json);
-    debug(validate.errors);
-    return [valid, validate.errors];
+    debug(JSON.stringify(validate.errors));
+    return [valid, JSON.stringify(validate.errors)];
   };
 
   private registry = async (): Promise<DAppStoreSchema> => {
