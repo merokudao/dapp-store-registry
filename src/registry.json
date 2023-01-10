@@ -91,15 +91,15 @@
       "category": "books"
     },
     {
-      "name": "Example Dapp2",
-      "description": "this is example dapp 2 because example dapp already existed",
-      "dappId": "example2.store.dapp",
+      "name": "Test",
+      "description": "https://example.com this is a test url",
+      "dappId": "example.test.dapp",
       "minAge": 18,
       "appUrl": "https://example.com",
       "isForMatureAudience": false,
       "isSelfModerated": true,
       "language": "en",
-      "version": "0.2.2",
+      "version": "0.0.1",
       "images": {
         "logo": "https://example.com/logo.png",
         "banner": "https://example.com/banner.png",
@@ -124,8 +124,7 @@
         "githubID": "adarshmishra07"
       },
       "tags": [
-        "example",
-        "dapp2"
+        "test"
       ],
       "chains": [
         137
