@@ -91,20 +91,21 @@
       "category": "books"
     },
     {
-      "name": "Mint",
-      "description": "Mint is a community-led initiative for developers on the Ethereum ecosystem. It's reliable, scalable, and super easy to get started. The best part? It's completely open source.",
-      "dappId": "store.mint.dapp",
-      "minAge": 10,
-      "appUrl": "https://docs-a.meroku.store/#/operations/addDApp",
+      "name": "Test",
+      "description": "m Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchan",
+      "dappId": "test.store.dapp",
+      "minAge": 18,
+      "appUrl": "https://example.com/",
       "isForMatureAudience": false,
       "isSelfModerated": true,
       "language": "en",
-      "version": "0.1.1",
+      "version": "1",
       "images": {
         "logo": "https://example.com/logo.png",
         "banner": "https://example.com/banner.png",
         "screenshots": [
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcbB1SLGIUo5o2Yg1Gd6KdMPRQGIJDdiyGMa_LuepAg&s"
+          "https://example.com/logo.png",
+          "https://example.com/logo.png"
         ]
       },
       "isListed": true,
@@ -117,17 +118,16 @@
         "legalName": "Adarsh Mishra",
         "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
         "website": "https://github.com/adarshmishra07",
-        "privacyPolicyUrl": "https://docs-a.meroku.store/#/operations/addDApp",
+        "privacyPolicyUrl": "https://example.com/",
         "support": {
-          "url": "https://docs-a.meroku.store/#/operations/addDApp"
+          "url": "https://example.com/"
         },
         "githubID": "adarshmishra07"
       },
       "tags": [
-        "mint",
-        "minter",
-        "minting",
-        "dapp"
+        "test",
+        "dapp",
+        "example"
       ],
       "chains": [
         137
