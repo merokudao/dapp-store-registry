@@ -91,21 +91,20 @@
       "category": "books"
     },
     {
-      "name": "Test",
-      "description": "m Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchan",
-      "dappId": "test.store.dapp",
+      "name": "Example Dapp2",
+      "description": "this is example dapp 2 because example dapp already existed",
+      "dappId": "example2.store.dapp",
       "minAge": 18,
-      "appUrl": "https://example.com/",
+      "appUrl": "https://example.com",
       "isForMatureAudience": false,
       "isSelfModerated": true,
       "language": "en",
-      "version": "1",
+      "version": "0.2.2",
       "images": {
         "logo": "https://example.com/logo.png",
         "banner": "https://example.com/banner.png",
         "screenshots": [
-          "https://example.com/logo.png",
-          "https://example.com/logo.png"
+          "https://example.com"
         ]
       },
       "isListed": true,
@@ -118,16 +117,15 @@
         "legalName": "Adarsh Mishra",
         "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
         "website": "https://github.com/adarshmishra07",
-        "privacyPolicyUrl": "https://example.com/",
+        "privacyPolicyUrl": "https://example.com",
         "support": {
-          "url": "https://example.com/"
+          "url": "https://example.com"
         },
         "githubID": "adarshmishra07"
       },
       "tags": [
-        "test",
-        "dapp",
-        "example"
+        "example",
+        "dapp2"
       ],
       "chains": [
         137
