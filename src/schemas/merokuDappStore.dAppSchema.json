@@ -15,6 +15,11 @@
       "description": "A detailed description of the dApp",
       "minLength": 30
     },
+    "appUrl": {
+      "type": "string",
+      "description": "The URL of the dApp",
+      "format": "uri"
+    },
     "images": {
       "type": "object",
       "required": ["logo", "banner", "screenshots"],
