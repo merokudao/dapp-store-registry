@@ -89,6 +89,50 @@
         137
       ],
       "category": "books"
+    },
+    {
+      "name": "Mint",
+      "description": "Mint is a community-led initiative for developers on the Ethereum ecosystem. It's reliable, scalable, and super easy to get started. The best part? It's completely open source.",
+      "dappId": "store.mint.dapp",
+      "minAge": 10,
+      "appUrl": "https://docs-a.meroku.store/#/operations/addDApp",
+      "isForMatureAudience": false,
+      "isSelfModerated": true,
+      "language": "en",
+      "version": "0.1.1",
+      "images": {
+        "logo": "https://example.com/logo.png",
+        "banner": "https://example.com/banner.png",
+        "screenshots": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcbB1SLGIUo5o2Yg1Gd6KdMPRQGIJDdiyGMa_LuepAg&s"
+        ]
+      },
+      "isListed": true,
+      "repoUrl": "https://github.com/meroku-dao/",
+      "listDate": "2023-01-10",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "developer": {
+        "legalName": "Adarsh Mishra",
+        "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
+        "website": "https://github.com/adarshmishra07",
+        "privacyPolicyUrl": "https://docs-a.meroku.store/#/operations/addDApp",
+        "support": {
+          "url": "https://docs-a.meroku.store/#/operations/addDApp"
+        },
+        "githubID": "adarshmishra07"
+      },
+      "tags": [
+        "mint",
+        "minter",
+        "minting",
+        "dapp"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social networking"
     }
   ]
 }
