@@ -14,6 +14,7 @@ import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
 import { Octokit } from "octokit";
+import { cloneable } from "./utils";
 
 const debug = Debug("@merokudao:dapp-store-registry:Registry");
 
@@ -151,7 +152,7 @@ export class DappStoreRegistry {
           DappStoreRegistry.TTL
       ) {
         debug("registry cached. returning...");
-        return this.cachedRegistry;
+        return cloneable.deepCopy(this.cachedRegistry);
       }
 
       const remoteRegistry = await this.queryRemoteRegistry(
@@ -173,7 +174,7 @@ export class DappStoreRegistry {
       }
     }
 
-    return this.cachedRegistry;
+    return cloneable.deepCopy(this.cachedRegistry);
   };
 
   private buildSearchIndex = async (): Promise<void> => {

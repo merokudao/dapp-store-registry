@@ -1,5 +1,6 @@
 import { DAppSchema, DAppStoreSchema } from "../src/interfaces";
 import { DappStoreRegistry, RegistryStrategy } from "../src/lib/registry";
+import { cloneable } from "../src/lib/utils";
 import chai from "chai";
 import fs from "fs-extra";
 import nock from "nock";
@@ -337,7 +338,8 @@ describe("DappStoreRegistry", () => {
     });
 
     it("adds dApp when the new registry is valid", async () => {
-      const dApp: DAppSchema = fixtureRegistryJson.dapps[0];
+      const dApp: DAppSchema = cloneable.deepCopy(fixtureRegistryJson.dapps[0]);
+      dApp.dappId = "newDApp.dapp";
       const githubID = dApp.developer.githubID;
 
       const owner = "merokudao";
@@ -370,6 +372,10 @@ describe("DappStoreRegistry", () => {
       const expPrURL = `https://github.com/${owner}/${repo}/compare/main...${githubID}:${repo}:main?expand=1`;
 
       prURL.should.equal(expPrURL);
+
+      const dApps = await registry.dApps();
+      const newlyAddedAppIDExists = dApps.some(x => x.dappId === dApp.dappId);
+      newlyAddedAppIDExists.should.be.equal(false);
     });
   });
 
