@@ -397,6 +397,12 @@ export class DappStoreRegistry {
       );
     }
 
+    if (!dapp.dappId.endsWith(".dapp")) {
+      throw new Error(
+        `dApp ID ${dapp.dappId} is invalid. It must end with .dapp`
+      );
+    }
+
     const currRegistry = await this.registry();
     const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
 
