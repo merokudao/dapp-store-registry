@@ -91,57 +91,45 @@
       "category": "books"
     },
     {
-      "name": "My Cool NFT Creator dApp",
-      "description": "A really cool NFT Creator dApp",
-      "appUrl": "https://www.example.com",
-      "images": {
-        "logo": "https://example.com/logo.png",
-        "banner": "https://www.example.com/banner.png",
-        "screenshots": [
-          "https://www.example.com/screenshot_1.png",
-          "https://www.example.com/screenshot_2.png"
-        ]
-      },
-      "repoUrl": "http://example.com",
-      "dappId": "examp234le.store.dapp",
-      "minAge": 13,
-      "isForMatureAudience": false,
+      "name": "Test dApp",
+      "description": "test description test description test description test description test description test description test description test description test description test description test description test description ",
+      "dappId": "test.pran.dapp",
+      "minAge": 18,
+      "appUrl": "https://docs-a.meroku.store/",
+      "isForMatureAudience": true,
       "isSelfModerated": true,
       "language": "en",
-      "version": "0.1.0",
+      "version": "1",
+      "images": {
+        "logo": "https://example.com/logo.png",
+        "banner": "https://example.com/banner.png",
+        "screenshots": [
+          "https://docs-a.meroku.store/"
+        ]
+      },
       "isListed": true,
-      "listDate": "2021-11-13",
+      "repoUrl": "https://github.com/meroku-dao/",
+      "listDate": "2023-01-11",
       "availableOnPlatform": [
         "web"
       ],
-      "geoRestrictions": {
-        "allowedCountries": [
-          "US",
-          "IN"
-        ],
-        "blockedCountries": [
-          "CN"
-        ]
-      },
       "developer": {
-        "legalName": "John Doe & Sons",
-        "logo": "https://www.example.com/logo_small.png",
-        "website": "https://www.example.com",
-        "privacyPolicyUrl": "https://www.example.com/privacy",
+        "legalName": "r48Bit",
+        "logo": "https://avatars.githubusercontent.com/u/81687400?v=4",
+        "website": "https://meroku.store",
+        "privacyPolicyUrl": "https://docs-a.meroku.store/",
         "support": {
-          "url": "https://www.example.com/support",
-          "email": "support@example.com"
+          "url": "https://docs-a.meroku.store/"
         },
         "githubID": "r4881t"
       },
       "tags": [
-        "nft maker"
+        "pran"
       ],
       "chains": [
-        1,
         137
       ],
-      "category": "books"
+      "category": "social networking"
     }
   ]
 }
