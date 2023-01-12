@@ -18,7 +18,9 @@
     "appUrl": {
       "type": "string",
       "description": "The URL of the dApp",
-      "format": "uri"
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
     },
     "images": {
       "type": "object",
@@ -27,18 +29,24 @@
         "logo": {
           "type": "string",
           "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1,
           "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
         },
         "banner": {
           "type": "string",
           "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1,
           "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
         },
         "screenshots": {
           "type": "array",
           "items": {
             "type": "string",
-            "format": "uri"
+            "format": "uri",
+            "pattern": "^(https?|http?|ipfs?)://",
+            "minLength": 1
           },
           "minItems": 1,
           "description": "A list of URLs to the screenshots of the dApp. Should be 1284 x 2778 and in PNG format"
@@ -48,7 +56,9 @@
     "repoUrl": {
       "type": "string",
       "description": "If this is in OpenSource, the URL of the repository",
-      "format": "uri"
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
     },
     "dappId": {
       "type": "string",
@@ -139,7 +149,9 @@
         },
         "privacyPolicyUrl": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
         },
         "support": {
           "type": "object",
@@ -147,7 +159,9 @@
           "properties": {
             "url": {
               "type": "string",
-              "format": "uri"
+              "format": "uri",
+              "pattern": "^(https?|http?|ipfs?)://",
+              "minLength": 1
             },
             "email": {
               "type": "string",

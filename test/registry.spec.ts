@@ -4,6 +4,7 @@ import { cloneable } from "../src/lib/utils";
 import chai from "chai";
 import fs from "fs-extra";
 import nock from "nock";
+import Dotenv from "dotenv";
 import parseISO from "date-fns/parseISO";
 import * as ghForkResponseFixture from "./fixtures/ghForkResponse.json";
 import * as ghGetContentResponseFixture from "./fixtures/ghGetContentResponse.json";
@@ -12,7 +13,9 @@ import Debug from "debug";
 import fetchMock from "fetch-mock";
 
 const debug = Debug("@merokudao:dapp-store:registry.spec.ts");
-
+Dotenv.config({
+  path: ".env.test"
+});
 chai.should();
 
 const getRegistry = async (

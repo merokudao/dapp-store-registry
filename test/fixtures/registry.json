@@ -7,6 +7,7 @@
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
       "tags": ["nft creator"],
+      "appUrl": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/test.example11.dapp/Dapps.zip",
       "chains": [137],
       "dappId": "bitpack.testSpec.dapp",
       "minAge": 13,
