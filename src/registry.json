@@ -91,32 +91,32 @@
       "category": "books"
     },
     {
-      "name": "Minting DApp",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "dappId": "minting.example.dapp",
+      "name": "sadsdsd",
+      "description": "dsdsdsdsdsdsdsdsdsddsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd",
+      "dappId": "sdsdsd.sdsdsd.dapp",
       "minAge": 18,
-      "appUrl": "https://example.com",
+      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/Dapps.zip",
       "isForMatureAudience": false,
-      "isSelfModerated": true,
+      "isSelfModerated": false,
       "language": "en",
-      "version": "0.0.1",
+      "version": "1",
       "images": {
-        "logo": "https://example.com/logo.png",
-        "banner": "https://example.com/banner.png",
+        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/mINT_0010_1.png",
+        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/mINT_0010_1.png",
         "screenshots": [
-          "https://www.lipsum.com/images/banners/black_234x60.gif"
+          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/MINT_HERO_1.png"
         ]
       },
       "isListed": true,
       "repoUrl": "https://github.com/meroku-dao/",
-      "listDate": "2023-01-10",
+      "listDate": "2023-01-12",
       "availableOnPlatform": [
         "web"
       ],
       "developer": {
         "legalName": "Adarsh Mishra",
         "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
-        "website": "https://github.com/adarshmishra07",
+        "website": "https://meroku.store",
         "privacyPolicyUrl": "https://example.com",
         "support": {
           "url": "https://example.com"
@@ -124,10 +124,7 @@
         "githubID": "adarshmishra07"
       },
       "tags": [
-        "Mint",
-        "minter",
-        "dapp",
-        "registry"
+        "dssdsd"
       ],
       "chains": [
         137
