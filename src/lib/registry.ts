@@ -1,3 +1,4 @@
+import Dotenv from 'dotenv';
 import { fetch } from "cross-fetch";
 import { DAppSchema, DAppStoreSchema, FilterOptions } from "../interfaces";
 import * as JsSearch from "js-search";
@@ -14,7 +15,10 @@ import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
 import { Octokit } from "octokit";
+import { createAppAuth } from "@octokit/auth-app";
 import { cloneable } from "./utils";
+
+Dotenv.config();
 
 const debug = Debug("@merokudao:dapp-store-registry:Registry");
 
@@ -38,6 +42,16 @@ export class DappStoreRegistry {
   private searchEngine = new JsSearch.Search("dappId");
 
   private cachedRegistry: DAppStoreSchema | undefined;
+
+  private appOctokit = new Octokit({
+    authStrategy: createAppAuth,
+    auth: {
+      appId: process.env.GITHUB_APP_ID,
+      privateKey: process.env.GITHUB_APP_PRIVATE_KEY,
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET
+    }
+  });
 
   constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
     this.strategy = strategy;
@@ -117,6 +131,7 @@ export class DappStoreRegistry {
     addFormats(ajv);
     ajv.addSchema(featuredSchema, "featuredSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
+    ajv.addFormat("url", /^https?:\/\/.+/);
     const validate = ajv.compile(dAppRegistrySchema);
     const valid = validate(json);
     debug(JSON.stringify(validate.errors));
@@ -341,7 +356,30 @@ export class DappStoreRegistry {
    */
   public async init() {
     await this.buildSearchIndex();
+
+    const {
+      data: { slug }
+    } = await this.appOctokit.rest.apps.getAuthenticated();
+
+    return slug;
   }
+
+  public isGHAppInstalled = async (username: string): Promise<boolean> => {
+    const { data: installations } =
+      await this.appOctokit.rest.apps.listInstallations();
+    return installations.some(i =>
+      i.account ? i.account.login === username : false
+    );
+  };
+
+  /**
+   * Get the URL where the user can install the GitHub App
+   * @returns
+   */
+  public ghAppInstallURL = async () => {
+    const { data: app } = await this.appOctokit.rest.apps.getAuthenticated();
+    return `${app.html_url}/installations/new`;
+  };
 
   /**
    *
