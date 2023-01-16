@@ -91,9 +91,9 @@
       "category": "books"
     },
     {
-      "name": "sadsdsd",
-      "description": "dsdsdsdsdsdsdsdsdsddsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd",
-      "dappId": "sdsdsd.sdsdsd.dapp",
+      "name": "Test Dapp",
+      "description": "um has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to ",
+      "dappId": "test.minter.dapp",
       "minAge": 18,
       "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/Dapps.zip",
       "isForMatureAudience": false,
