@@ -1,29 +1,20 @@
 {
   "title": "MerokuDAO dAPP Store Registry Local",
-  "chains": [
-    1,
-    137
-  ],
+  "chains": [1, 137],
   "dapps": [
     {
       "name": "CryptoBoys NFT Marketplace",
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
-      "tags": [
-        "nft creator"
-      ],
-      "chains": [
-        137
-      ],
+      "tags": ["nft creator"],
+      "chains": [137],
       "dappId": "bitpack.example.dapp",
       "minAge": 13,
       "isForMatureAudience": false,
       "isSelfModerated": false,
       "language": "en",
       "version": "0.0.1",
-      "availableOnPlatform": [
-        "web"
-      ],
+      "availableOnPlatform": ["web"],
       "isListed": true,
       "listDate": "2022-12-12",
       "developer": {
@@ -58,17 +49,10 @@
       "version": "0.1.0",
       "isListed": true,
       "listDate": "2021-11-13",
-      "availableOnPlatform": [
-        "web"
-      ],
+      "availableOnPlatform": ["web"],
       "geoRestrictions": {
-        "allowedCountries": [
-          "US",
-          "IN"
-        ],
-        "blockedCountries": [
-          "CN"
-        ]
+        "allowedCountries": ["US", "IN"],
+        "blockedCountries": ["CN"]
       },
       "developer": {
         "legalName": "John Doe & Sons",
@@ -81,13 +65,8 @@
         },
         "githubID": "r4881t"
       },
-      "tags": [
-        "nft maker"
-      ],
-      "chains": [
-        1,
-        137
-      ],
+      "tags": ["nft maker"],
+      "chains": [1, 137],
       "category": "books"
     },
     {
@@ -129,7 +108,7 @@
       "chains": [
         137
       ],
-      "category": "social networking"
+      "category": "books"
     },
     {
       "name": "Buidler",
@@ -173,6 +152,7 @@
       "chains": [
         137
       ],
+
       "category": "social networking"
     }
   ]

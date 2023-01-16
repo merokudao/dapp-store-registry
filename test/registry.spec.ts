@@ -1,8 +1,10 @@
 import { DAppSchema, DAppStoreSchema } from "../src/interfaces";
 import { DappStoreRegistry, RegistryStrategy } from "../src/lib/registry";
+import { cloneable } from "../src/lib/utils";
 import chai from "chai";
 import fs from "fs-extra";
 import nock from "nock";
+import Dotenv from "dotenv";
 import parseISO from "date-fns/parseISO";
 import * as ghForkResponseFixture from "./fixtures/ghForkResponse.json";
 import * as ghGetContentResponseFixture from "./fixtures/ghGetContentResponse.json";
@@ -11,7 +13,9 @@ import Debug from "debug";
 import fetchMock from "fetch-mock";
 
 const debug = Debug("@merokudao:dapp-store:registry.spec.ts");
-
+Dotenv.config({
+  path: ".env.test"
+});
 chai.should();
 
 const getRegistry = async (
@@ -337,7 +341,8 @@ describe("DappStoreRegistry", () => {
     });
 
     it("adds dApp when the new registry is valid", async () => {
-      const dApp: DAppSchema = fixtureRegistryJson.dapps[0];
+      const dApp: DAppSchema = cloneable.deepCopy(fixtureRegistryJson.dapps[0]);
+      dApp.dappId = "newDApp.dapp";
       const githubID = dApp.developer.githubID;
 
       const owner = "merokudao";
@@ -370,6 +375,10 @@ describe("DappStoreRegistry", () => {
       const expPrURL = `https://github.com/${owner}/${repo}/compare/main...${githubID}:${repo}:main?expand=1`;
 
       prURL.should.equal(expPrURL);
+
+      const dApps = await registry.dApps();
+      const newlyAddedAppIDExists = dApps.some(x => x.dappId === dApp.dappId);
+      newlyAddedAppIDExists.should.be.equal(false);
     });
   });
 

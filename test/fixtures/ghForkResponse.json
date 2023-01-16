@@ -89,12 +89,7 @@
   "open_issues_count": 0,
   "open_issues": 0,
   "is_template": false,
-  "topics": [
-    "octocat",
-    "atom",
-    "electron",
-    "api"
-  ],
+  "topics": ["octocat", "atom", "electron", "api"],
   "has_issues": true,
   "has_projects": true,
   "has_wiki": true,
@@ -203,12 +198,7 @@
       "node_id": "MDc6TGljZW5zZW1pdA==",
       "html_url": "https://api.github.com/licenses/mit"
     },
-    "topics": [
-      "octocat",
-      "atom",
-      "electron",
-      "api"
-    ],
+    "topics": ["octocat", "atom", "electron", "api"],
     "has_issues": true,
     "has_projects": true,
     "has_wiki": true,
@@ -343,12 +333,7 @@
     "default_branch": "master",
     "open_issues_count": 0,
     "is_template": true,
-    "topics": [
-      "octocat",
-      "atom",
-      "electron",
-      "api"
-    ],
+    "topics": ["octocat", "atom", "electron", "api"],
     "has_issues": true,
     "has_projects": true,
     "has_wiki": true,
@@ -465,12 +450,7 @@
     "default_branch": "master",
     "open_issues_count": 0,
     "is_template": true,
-    "topics": [
-      "octocat",
-      "atom",
-      "electron",
-      "api"
-    ],
+    "topics": ["octocat", "atom", "electron", "api"],
     "has_issues": true,
     "has_projects": true,
     "has_wiki": true,

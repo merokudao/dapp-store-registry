@@ -1,6 +1,7 @@
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
 import fs from "fs-extra";
+import Dotenv from "dotenv";
 import { DAppStoreSchema } from "../src/interfaces/registrySchema";
 import chai from "chai";
 
@@ -8,6 +9,9 @@ import dAppRegistrySchema from "../src/schemas/merokuDappStore.registrySchema.js
 import featuredSchema from "../src/schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../src/schemas/merokuDappStore.dAppSchema.json";
 
+Dotenv.config({
+  path: ".env.test"
+});
 chai.should();
 
 describe("registry.json & Schema Validations", () => {
