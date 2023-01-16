@@ -130,6 +130,50 @@
         137
       ],
       "category": "social networking"
+    },
+    {
+      "name": "Buidler",
+      "description": "MerokuDAO dApp Store Registry is a package that allows application to add, search, update dApps into the ",
+      "dappId": "mint.buidl.dapp",
+      "minAge": 18,
+      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/build.zip",
+      "isForMatureAudience": false,
+      "isSelfModerated": true,
+      "language": "en",
+      "version": "0.0.1",
+      "images": {
+        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/logo.png",
+        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/banner.png",
+        "screenshots": [
+          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/screenshots-0.png"
+        ]
+      },
+      "isListed": true,
+      "repoUrl": "https://github.com/meroku-dao/",
+      "listDate": "2023-01-16",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "developer": {
+        "legalName": "Adarsh Mishra",
+        "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
+        "website": "https://meroku.store",
+        "privacyPolicyUrl": "https://0xmint.io",
+        "support": {
+          "url": "https://0xmint.io"
+        },
+        "githubID": "adarshmishra07"
+      },
+      "tags": [
+        "test",
+        "dapp",
+        "buidler",
+        "mintq"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social networking"
     }
   ]
 }
