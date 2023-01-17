@@ -1,4 +1,4 @@
-import Dotenv from 'dotenv';
+import Dotenv from "dotenv";
 import { fetch } from "cross-fetch";
 import { DAppSchema, DAppStoreSchema, FilterOptions } from "../interfaces";
 import * as JsSearch from "js-search";

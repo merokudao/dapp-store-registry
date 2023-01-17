@@ -89,9 +89,7 @@
       "isListed": true,
       "repoUrl": "https://github.com/meroku-dao/",
       "listDate": "2023-01-12",
-      "availableOnPlatform": [
-        "web"
-      ],
+      "availableOnPlatform": ["web"],
       "developer": {
         "legalName": "Adarsh Mishra",
         "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
@@ -102,12 +100,8 @@
         },
         "githubID": "adarshmishra07"
       },
-      "tags": [
-        "dssdsd"
-      ],
-      "chains": [
-        137
-      ],
+      "tags": ["dssdsd"],
+      "chains": [137],
       "category": "books"
     },
     {
@@ -130,9 +124,7 @@
       "isListed": true,
       "repoUrl": "https://github.com/meroku-dao/",
       "listDate": "2023-01-16",
-      "availableOnPlatform": [
-        "web"
-      ],
+      "availableOnPlatform": ["web"],
       "developer": {
         "legalName": "Adarsh Mishra",
         "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
@@ -143,15 +135,8 @@
         },
         "githubID": "adarshmishra07"
       },
-      "tags": [
-        "test",
-        "dapp",
-        "buidler",
-        "mintq"
-      ],
-      "chains": [
-        137
-      ],
+      "tags": ["test", "dapp", "buidler", "mintq"],
+      "chains": [137],
 
       "category": "social networking"
     }

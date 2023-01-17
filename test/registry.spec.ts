@@ -9,6 +9,7 @@ import parseISO from "date-fns/parseISO";
 import * as ghForkResponseFixture from "./fixtures/ghForkResponse.json";
 import * as ghGetContentResponseFixture from "./fixtures/ghGetContentResponse.json";
 import * as ghPutContentResponseFixture from "./fixtures/ghPutContentResponse.json";
+import * as ghAppResponse from "./fixtures/ghAppResponse.json";
 import Debug from "debug";
 import fetchMock from "fetch-mock";
 
@@ -18,6 +19,8 @@ Dotenv.config({
 });
 chai.should();
 
+fetchMock.config.overwriteRoutes = true;
+
 const getRegistry = async (
   fixtureRegistryJson: DAppStoreSchema,
   strategy = RegistryStrategy.GitHub
@@ -26,6 +29,8 @@ const getRegistry = async (
     .get("/merokudao/dapp-store-registry/main/src/registry.json")
     .twice()
     .reply(200, fixtureRegistryJson);
+
+  fetchMock.get(`https://api.github.com/app`, ghAppResponse);
 
   const registry = new DappStoreRegistry(strategy);
   await registry.init();
@@ -384,6 +389,8 @@ describe("DappStoreRegistry", () => {
 
   describe("#deleteDapp", () => {
     it("throws error if githubID in dApp is not same as the person requesting", async () => {
+      fetchMock.get(`https://api.github.com/app`, ghAppResponse);
+
       const registry = new DappStoreRegistry();
       await registry.init();
 
@@ -407,9 +414,22 @@ describe("DappStoreRegistry", () => {
   });
 
   describe("#toggleListing", () => {
+    let fixtureRegistryJson: DAppStoreSchema;
+    let registry: DappStoreRegistry;
+
+    before(async () => {
+      const content = fs
+        .readFileSync("./test/fixtures/registry.json")
+        .toString();
+
+      fixtureRegistryJson = JSON.parse(content) as DAppStoreSchema;
+
+      registry = await getRegistry(fixtureRegistryJson);
+    });
+
     it("throws error if githubID in dApp is not same as the person requesting", async () => {
-      const registry = new DappStoreRegistry();
-      await registry.init();
+      // const registry = new DappStoreRegistry();
+      // await registry.init();
 
       const dapp = (await registry.dApps())[0];
       const otherGithubID = "someOtherID";
