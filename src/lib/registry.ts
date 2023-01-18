@@ -1,6 +1,11 @@
 import Dotenv from "dotenv";
 import { fetch } from "cross-fetch";
-import { DAppSchema, DAppStoreSchema, FilterOptions } from "../interfaces";
+import {
+  DAppSchema,
+  DAppStoreSchema,
+  FeaturedSection,
+  FilterOptions
+} from "../interfaces";
 import * as JsSearch from "js-search";
 import porterStemmer from "@stdlib/nlp-porter-stemmer";
 import parseISO from "date-fns/parseISO";
@@ -341,6 +346,11 @@ export class DappStoreRegistry {
     return prURL;
   }
 
+  private githubContributors = async () => {
+    const contributors = await this.appOctokit.rest.repos.listContributors();
+    return contributors.data.map(c => c.login).filter((c): c is string => !!c);
+  };
+
   /**
    * Initializes the registry. This is required before you can use the registry.
    * It builds the search Index and caches the registry. Specifically it performs
@@ -604,6 +614,184 @@ export class DappStoreRegistry {
     }
 
     return res;
+  };
+
+  public addFeaturedSection = async (
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    section: FeaturedSection
+  ) => {
+    const contributors = await this.githubContributors();
+    if (!contributors.includes(githubID)) {
+      throw new Error(
+        `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+      );
+    }
+    const currFeaturedSections = await this.getFeaturedDapps();
+
+    // Ensure that a section with same name doesn't already exists
+    if (
+      currFeaturedSections &&
+      currFeaturedSections.filter(x => x.title === section.title).length > 0
+    ) {
+      throw new Error(`A section with name ${section.title} already exists`);
+    }
+
+    if (section.dappIds.length === 0) {
+      throw new Error(`A section must have at least one dApp`);
+    }
+
+    const currRegistry = await this.registry();
+    // Make sure the dapp ids exist in the registry
+    section.dappIds.forEach(dappId => {
+      if (
+        currRegistry.dapps.filter(x => x.dappId === dappId && x.isListed)
+          .length === 0
+      ) {
+        throw new Error(
+          `dApp ID ${dappId} not found or not listed in registry`
+        );
+      }
+    });
+
+    if (currRegistry.featuredSections) {
+      currRegistry.featuredSections.push(section);
+    } else {
+      currRegistry.featuredSections = [section];
+    }
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `add-featured-section-${section.title}`,
+      undefined
+    );
+  };
+
+  public addDappToFeaturedSection = async (
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    sectionTitle: string,
+    dappId: string
+  ) => {
+    const contributors = await this.githubContributors();
+    if (!contributors.includes(githubID)) {
+      throw new Error(
+        `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+      );
+    }
+    const currFeaturedSections = await this.getFeaturedDapps();
+
+    if (!currFeaturedSections) {
+      throw new Error(`No featured sections defined in the registry`);
+    }
+
+    const currRegistry = await this.registry();
+    // Make sure the dapp ids exist in the registry
+    if (
+      currRegistry.dapps.filter(x => x.dappId === dappId && x.isListed)
+        .length === 0
+    ) {
+      throw new Error(`dApp ID ${dappId} not found or not listed in registry`);
+    }
+
+    const section = currFeaturedSections.filter(
+      x => x.title === sectionTitle
+    )[0];
+    if (!section) {
+      throw new Error(`No section with title ${sectionTitle} found`);
+    }
+
+    if (section.dappIds.includes(dappId)) {
+      throw new Error(
+        `dApp ID ${dappId} already exists in section ${sectionTitle}`
+      );
+    }
+
+    section.dappIds.push(dappId);
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `add-dapp-to-featured-section-${sectionTitle}-${dappId}`,
+      undefined
+    );
+  };
+
+  public removeDappFromFeaturedSection = async (
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    sectionTitle: string,
+    dappId: string
+  ) => {
+    const contributors = await this.githubContributors();
+    if (!contributors.includes(githubID)) {
+      throw new Error(
+        `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+      );
+    }
+    const currFeaturedSections = await this.getFeaturedDapps();
+
+    if (!currFeaturedSections) {
+      throw new Error(`No featured sections defined in the registry`);
+    }
+
+    const currRegistry = await this.registry();
+
+    const section = currFeaturedSections.filter(
+      x => x.title === sectionTitle
+    )[0];
+    if (!section) {
+      throw new Error(`No section with title ${sectionTitle} found`);
+    }
+
+    if (!section.dappIds.includes(dappId)) {
+      throw new Error(
+        `dApp ID ${dappId} doesn't exist in section ${sectionTitle}`
+      );
+    }
+
+    section.dappIds = section.dappIds.filter(x => x !== dappId);
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `remove-dapp-from-featured-section-${sectionTitle}-${dappId}`,
+      undefined
+    );
   };
 
   /**

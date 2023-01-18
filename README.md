@@ -26,7 +26,8 @@ Install using NPM as `npm install @merokudao/dapp-store-registry` or using YARN 
 import { DappStoreRegistry } from "@merokudao/dapp-store-registry";
 
 // Instantiate a registry.
-const registry = await new Registry().init();
+const registry = new DappStoreRegistry();
+await registry.init();
 
 // Find all the dApps
 const dApps = await registry.dApps();
@@ -35,4 +36,4 @@ const dApps = await registry.dApps();
 const dAppsResult = registry.search("nft");
 ```
 
-Detailed docs coming soon.
+Detailed docs can be viewed at [docs](/docs/index.html).
