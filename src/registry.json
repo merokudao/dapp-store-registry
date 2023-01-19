@@ -140,5 +140,13 @@
 
       "category": "social networking"
     }
+  ],
+  "featuredSections": [
+    {
+      "title": "Curated List",
+      "dappIds": ["bitpack.example.dapp", "test.minter.dapp"],
+      "description": "A curated list of dapps that we think you will love.",
+      "key": "curated-list"
+    }
   ]
 }
