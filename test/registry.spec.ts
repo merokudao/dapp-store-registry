@@ -68,7 +68,7 @@ describe("DappStoreRegistry", () => {
 
       const featuredDapps = await registry.getFeaturedDapps();
       if (featuredDapps) {
-        featuredDapps.should.equal(localRegistryJson.featuredSections);
+        featuredDapps.should.deep.equal(localRegistryJson.featuredSections);
       }
 
       (await registry.getRegistryTitle()).should.equal(localRegistryJson.title);
@@ -92,7 +92,7 @@ describe("DappStoreRegistry", () => {
 
       const featuredDapps = await registry.getFeaturedDapps();
       if (featuredDapps) {
-        featuredDapps.should.equal(localRegistryJson.featuredSections);
+        featuredDapps.should.deep.equal(localRegistryJson.featuredSections);
       }
 
       nock.cleanAll();
@@ -109,7 +109,7 @@ describe("DappStoreRegistry", () => {
 
       const featuredDapps = await registry.getFeaturedDapps();
       if (featuredDapps) {
-        featuredDapps.should.equal(localRegistryJson.featuredSections);
+        featuredDapps.should.deep.equal(localRegistryJson.featuredSections);
       }
 
       (await registry.getRegistryTitle()).should.equal(localRegistryJson.title);
