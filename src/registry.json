@@ -174,59 +174,6 @@
         137
       ],
       "category": "social networking"
-    },
-    {
-      "name": "My Cool NFT Creator dApp",
-      "description": "A really cool NFT Creator dApp",
-      "appUrl": "https://www.example.com",
-      "images": {
-        "logo": "https://example.com/logo.png",
-        "banner": "https://www.example.com/banner.png",
-        "screenshots": [
-          "https://www.example.com/screenshot_1.png",
-          "https://www.example.com/screenshot_2.png"
-        ]
-      },
-      "repoUrl": "http://example.com",
-      "dappId": "example3.store4.dapp",
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": "en",
-      "version": "0.1.0",
-      "isListed": true,
-      "listDate": "2021-11-13",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "geoRestrictions": {
-        "allowedCountries": [
-          "US",
-          "IN"
-        ],
-        "blockedCountries": [
-          "CN"
-        ]
-      },
-      "developer": {
-        "legalName": "John Doe & Sons",
-        "logo": "https://www.example.com/logo_small.png",
-        "website": "https://www.example.com",
-        "privacyPolicyUrl": "https://www.example.com/privacy",
-        "support": {
-          "url": "https://www.example.com/support",
-          "email": "support@example.com"
-        },
-        "githubID": "r4881t"
-      },
-      "tags": [
-        "nft maker"
-      ],
-      "chains": [
-        1,
-        137
-      ],
-      "category": "books"
     }
   ],
   "featuredSections": [
@@ -238,6 +185,14 @@
       ],
       "description": "A curated list of dapps that we think you will love.",
       "key": "curated-list"
+    },
+    {
+      "title": "Our Curated list",
+      "dappIds": [
+        "bitpack.example.dapp"
+      ],
+      "description": "This is a curated list of dApps that we think you will like. Our curators have used these dApps and found them worthy of your attention.",
+      "key": "our-curated-list"
     }
   ]
 }
