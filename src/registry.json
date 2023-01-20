@@ -91,45 +91,153 @@
       "category": "books"
     },
     {
-      "name": "Test dApp",
-      "description": "test description test description test description test description test description test description test description test description test description test description test description test description ",
-      "dappId": "test.pran.dapp",
+      "name": "Test Dapp",
+      "description": "um has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to ",
+      "dappId": "test.minter.dapp",
       "minAge": 18,
-      "appUrl": "https://docs-a.meroku.store/",
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
+      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/Dapps.zip",
+      "isForMatureAudience": false,
+      "isSelfModerated": false,
       "language": "en",
       "version": "1",
       "images": {
-        "logo": "https://example.com/logo.png",
-        "banner": "https://example.com/banner.png",
+        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/mINT_0010_1.png",
+        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/mINT_0010_1.png",
         "screenshots": [
-          "https://docs-a.meroku.store/"
+          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/sdsdsd.sdsdsd.dapp/MINT_HERO_1.png"
         ]
       },
       "isListed": true,
       "repoUrl": "https://github.com/meroku-dao/",
-      "listDate": "2023-01-11",
+      "listDate": "2023-01-12",
       "availableOnPlatform": [
         "web"
       ],
       "developer": {
-        "legalName": "r48Bit",
-        "logo": "https://avatars.githubusercontent.com/u/81687400?v=4",
+        "legalName": "Adarsh Mishra",
+        "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
         "website": "https://meroku.store",
-        "privacyPolicyUrl": "https://docs-a.meroku.store/",
+        "privacyPolicyUrl": "https://example.com",
         "support": {
-          "url": "https://docs-a.meroku.store/"
+          "url": "https://example.com"
         },
-        "githubID": "r4881t"
+        "githubID": "adarshmishra07"
       },
       "tags": [
-        "pran"
+        "dssdsd"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Buidler",
+      "description": "MerokuDAO dApp Store Registry is a package that allows application to add, search, update dApps into the ",
+      "dappId": "mint.buidl.dapp",
+      "minAge": 18,
+      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/build.zip",
+      "isForMatureAudience": false,
+      "isSelfModerated": true,
+      "language": "en",
+      "version": "0.0.1",
+      "images": {
+        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/logo.png",
+        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/banner.png",
+        "screenshots": [
+          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/mint.buidl.dapp/screenshots-0.png"
+        ]
+      },
+      "isListed": true,
+      "repoUrl": "https://github.com/meroku-dao/",
+      "listDate": "2023-01-16",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "developer": {
+        "legalName": "Adarsh Mishra",
+        "logo": "https://avatars.githubusercontent.com/u/56035184?v=4",
+        "website": "https://meroku.store",
+        "privacyPolicyUrl": "https://0xmint.io",
+        "support": {
+          "url": "https://0xmint.io"
+        },
+        "githubID": "adarshmishra07"
+      },
+      "tags": [
+        "test",
+        "dapp",
+        "buidler",
+        "mintq"
       ],
       "chains": [
         137
       ],
       "category": "social networking"
+    },
+    {
+      "name": "My Cool NFT Creator dApp",
+      "description": "A really cool NFT Creator dApp",
+      "appUrl": "https://www.example.com",
+      "images": {
+        "logo": "https://example.com/logo.png",
+        "banner": "https://www.example.com/banner.png",
+        "screenshots": [
+          "https://www.example.com/screenshot_1.png",
+          "https://www.example.com/screenshot_2.png"
+        ]
+      },
+      "repoUrl": "http://example.com",
+      "dappId": "example3.store4.dapp",
+      "minAge": 13,
+      "isForMatureAudience": false,
+      "isSelfModerated": true,
+      "language": "en",
+      "version": "0.1.0",
+      "isListed": true,
+      "listDate": "2021-11-13",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "geoRestrictions": {
+        "allowedCountries": [
+          "US",
+          "IN"
+        ],
+        "blockedCountries": [
+          "CN"
+        ]
+      },
+      "developer": {
+        "legalName": "John Doe & Sons",
+        "logo": "https://www.example.com/logo_small.png",
+        "website": "https://www.example.com",
+        "privacyPolicyUrl": "https://www.example.com/privacy",
+        "support": {
+          "url": "https://www.example.com/support",
+          "email": "support@example.com"
+        },
+        "githubID": "r4881t"
+      },
+      "tags": [
+        "nft maker"
+      ],
+      "chains": [
+        1,
+        137
+      ],
+      "category": "books"
+    }
+  ],
+  "featuredSections": [
+    {
+      "title": "Curated List",
+      "dappIds": [
+        "bitpack.example.dapp",
+        "test.minter.dapp"
+      ],
+      "description": "A curated list of dapps that we think you will love.",
+      "key": "curated-list"
     }
   ]
 }
