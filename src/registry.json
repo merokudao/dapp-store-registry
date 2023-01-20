@@ -189,7 +189,7 @@
     {
       "title": "Our Curated list",
       "dappIds": [
-        "bitpack.example.dapp"
+        "example.store.dapp"
       ],
       "description": "This is a curated list of dApps that we think you will like. Our curators have used these dApps and found them worthy of your attention.",
       "key": "our-curated-list"
