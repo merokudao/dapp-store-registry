@@ -346,10 +346,10 @@ export class DappStoreRegistry {
     return prURL;
   }
 
-  private githubContributors = async () => {
-    const contributors = await this.appOctokit.rest.repos.listContributors();
-    return contributors.data.map(c => c.login).filter((c): c is string => !!c);
-  };
+  // private githubContributors = async () => {
+  //   const contributors = await this.appOctokit.rest.repos.listContributors();
+  //   return contributors.data.map(c => c.login).filter((c): c is string => !!c);
+  // };
 
   /**
    * Initializes the registry. This is required before you can use the registry.
@@ -623,12 +623,12 @@ export class DappStoreRegistry {
     githubID: string,
     section: FeaturedSection
   ) => {
-    const contributors = await this.githubContributors();
-    if (!contributors.includes(githubID)) {
-      throw new Error(
-        `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
-      );
-    }
+    // const contributors = await this.githubContributors();
+    // if (!contributors.includes(githubID)) {
+    //   throw new Error(
+    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+    //   );
+    // }
     const currFeaturedSections = await this.getFeaturedDapps();
 
     // Ensure that a section with same name doesn't already exists
@@ -687,12 +687,12 @@ export class DappStoreRegistry {
     sectionTitle: string,
     dappId: string
   ) => {
-    const contributors = await this.githubContributors();
-    if (!contributors.includes(githubID)) {
-      throw new Error(
-        `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
-      );
-    }
+    // const contributors = await this.githubContributors();
+    // if (!contributors.includes(githubID)) {
+    //   throw new Error(
+    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+    //   );
+    // }
     const currFeaturedSections = await this.getFeaturedDapps();
 
     if (!currFeaturedSections) {
@@ -748,12 +748,12 @@ export class DappStoreRegistry {
     sectionTitle: string,
     dappId: string
   ) => {
-    const contributors = await this.githubContributors();
-    if (!contributors.includes(githubID)) {
-      throw new Error(
-        `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
-      );
-    }
+    // const contributors = await this.githubContributors();
+    // if (!contributors.includes(githubID)) {
+    //   throw new Error(
+    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+    //   );
+    // }
     const currFeaturedSections = await this.getFeaturedDapps();
 
     if (!currFeaturedSections) {
