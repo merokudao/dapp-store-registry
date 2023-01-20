@@ -715,8 +715,8 @@ export class DappStoreRegistry {
       throw new Error(`No section with key ${sectionKey} found`);
     }
 
-    section.dappIds.map(dappId => {
-      if (dappIds.includes(dappId)) {
+    dappIds.map(dappId => {
+      if (section.dappIds.includes(dappId)) {
         throw new Error(
           `dApp ID ${dappId} already exists in section ${sectionKey}`
         );
@@ -769,8 +769,8 @@ export class DappStoreRegistry {
       throw new Error(`No section with key ${sectionKey} found`);
     }
 
-    section.dappIds.map(dappId => {
-      if (!dappIds.includes(dappId)) {
+    dappIds.map(dappId => {
+      if (!section.dappIds.includes(dappId)) {
         throw new Error(
           `dApp ID ${dappId} doesn't exist in section ${sectionKey}`
         );
