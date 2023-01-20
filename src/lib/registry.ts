@@ -684,8 +684,8 @@ export class DappStoreRegistry {
     email: string,
     accessToken: string,
     githubID: string,
-    sectionTitle: string,
-    dappId: string
+    sectionKey: string,
+    dappIds: string[]
   ) => {
     // const contributors = await this.githubContributors();
     // if (!contributors.includes(githubID)) {
@@ -700,28 +700,30 @@ export class DappStoreRegistry {
     }
 
     const currRegistry = await this.registry();
-    // Make sure the dapp ids exist in the registry
-    if (
-      currRegistry.dapps.filter(x => x.dappId === dappId && x.isListed)
-        .length === 0
-    ) {
-      throw new Error(`dApp ID ${dappId} not found or not listed in registry`);
-    }
+    // Make sure the dappIds exist in the registry
 
-    const section = currFeaturedSections.filter(
-      x => x.title === sectionTitle
-    )[0];
+    currRegistry.dapps.map(x => {
+      if (!(dappIds.includes(x.dappId) && x.isListed)) {
+        throw new Error(
+          `dApp ID ${x.dappId} not found or not listed in registry`
+        );
+      }
+    });
+
+    const section = currFeaturedSections.filter(x => x.key === sectionKey)[0];
     if (!section) {
-      throw new Error(`No section with title ${sectionTitle} found`);
+      throw new Error(`No section with key ${sectionKey} found`);
     }
 
-    if (section.dappIds.includes(dappId)) {
-      throw new Error(
-        `dApp ID ${dappId} already exists in section ${sectionTitle}`
-      );
-    }
+    section.dappIds.map(dappId => {
+      if (dappIds.includes(dappId)) {
+        throw new Error(
+          `dApp ID ${dappId} already exists in section ${sectionKey}`
+        );
+      }
+    });
 
-    section.dappIds.push(dappId);
+    section.dappIds = section.dappIds.concat(dappIds);
 
     // Validate the registry.json
     const [valid, errors] = this.validateRegistryJson(currRegistry);
@@ -735,7 +737,7 @@ export class DappStoreRegistry {
       githubID,
       accessToken,
       currRegistry,
-      `add-dapp-to-featured-section-${sectionTitle}-${dappId}`,
+      `add-dapp-to-featured-section-${sectionKey}-${dappIds.join("-")}`,
       undefined
     );
   };
@@ -745,8 +747,8 @@ export class DappStoreRegistry {
     email: string,
     accessToken: string,
     githubID: string,
-    sectionTitle: string,
-    dappId: string
+    sectionKey: string,
+    dappIds: string[]
   ) => {
     // const contributors = await this.githubContributors();
     // if (!contributors.includes(githubID)) {
@@ -762,20 +764,20 @@ export class DappStoreRegistry {
 
     const currRegistry = await this.registry();
 
-    const section = currFeaturedSections.filter(
-      x => x.title === sectionTitle
-    )[0];
+    const section = currFeaturedSections.filter(x => x.key === sectionKey)[0];
     if (!section) {
-      throw new Error(`No section with title ${sectionTitle} found`);
+      throw new Error(`No section with key ${sectionKey} found`);
     }
 
-    if (!section.dappIds.includes(dappId)) {
-      throw new Error(
-        `dApp ID ${dappId} doesn't exist in section ${sectionTitle}`
-      );
-    }
+    section.dappIds.map(dappId => {
+      if (!dappIds.includes(dappId)) {
+        throw new Error(
+          `dApp ID ${dappId} doesn't exist in section ${sectionKey}`
+        );
+      }
+    });
 
-    section.dappIds = section.dappIds.filter(x => x !== dappId);
+    section.dappIds = section.dappIds.filter(x => !dappIds.includes(x));
 
     // Validate the registry.json
     const [valid, errors] = this.validateRegistryJson(currRegistry);
@@ -789,7 +791,7 @@ export class DappStoreRegistry {
       githubID,
       accessToken,
       currRegistry,
-      `remove-dapp-from-featured-section-${sectionTitle}-${dappId}`,
+      `remove-dapp-from-featured-section-${sectionKey}-${dappIds.join("-")}`,
       undefined
     );
   };
