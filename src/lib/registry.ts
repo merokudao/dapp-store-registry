@@ -702,11 +702,15 @@ export class DappStoreRegistry {
     const currRegistry = await this.registry();
     // Make sure the dappIds exist in the registry
 
-    currRegistry.dapps.map(x => {
-      if (!(dappIds.includes(x.dappId) && x.isListed)) {
-        throw new Error(
-          `dApp ID ${x.dappId} not found or not listed in registry`
-        );
+    dappIds.map(x => {
+      const exist = currRegistry.dapps.filter(
+        y => y.dappId === x && y.isListed
+      );
+      if (exist.length === 0) {
+        throw new Error(`dApp ID ${x} not found or not listed in registry`);
+      }
+      if (exist.length > 1) {
+        throw new Error(`Multiple dApps with the same ID ${x} found`);
       }
     });
 
