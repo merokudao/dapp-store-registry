@@ -50,18 +50,27 @@ export class DappStoreRegistry {
 
   private cachedRegistry: DAppStoreSchema | undefined;
 
-  private appOctokit = new Octokit({
-    authStrategy: createAppAuth,
-    auth: {
-      appId: process.env.GITHUB_APP_ID,
-      privateKey: process.env.GITHUB_APP_PRIVATE_KEY,
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET
-    }
-  });
+  private appOctokit: Octokit | undefined = undefined;
 
   constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
     this.strategy = strategy;
+
+    if (
+      process.env.GITHUB_APP_ID &&
+      process.env.GITHUB_APP_PRIVATE_KEY &&
+      process.env.GITHUB_CLIENT_ID &&
+      process.env.GITHUB_CLIENT_SECRET
+    ) {
+      this.appOctokit = new Octokit({
+        authStrategy: createAppAuth,
+        auth: {
+          appId: process.env.GITHUB_APP_ID,
+          privateKey: process.env.GITHUB_APP_PRIVATE_KEY,
+          clientId: process.env.GITHUB_CLIENT_ID,
+          clientSecret: process.env.GITHUB_CLIENT_SECRET
+        }
+      });
+    }
 
     // Configure the search engine Index
     this.searchEngine.indexStrategy = new JsSearch.PrefixIndexStrategy();
@@ -73,6 +82,7 @@ export class DappStoreRegistry {
       new JsSearch.SimpleTokenizer()
     );
     this.searchEngine.addIndex("name");
+    this.searchEngine.addIndex("description");
     this.searchEngine.addIndex("tags");
   }
 
@@ -123,7 +133,7 @@ export class DappStoreRegistry {
     return registry;
   };
 
-  private validateRegistryJson = (json: DAppStoreSchema) => {
+  public validateRegistryJson = (json: DAppStoreSchema) => {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     const uniqueDAppIDs = Array.from(new Set(dAppIDs));
     if (dAppIDs.length !== uniqueDAppIDs.length) {
@@ -145,7 +155,7 @@ export class DappStoreRegistry {
     return [valid, JSON.stringify(validate.errors)];
   };
 
-  private registry = async (): Promise<DAppStoreSchema> => {
+  public registry = async (): Promise<DAppStoreSchema> => {
     if (!this.cachedRegistry) {
       debug(
         "registry not cached. fetching with strategy " + this.strategy + "..."
@@ -370,16 +380,16 @@ export class DappStoreRegistry {
     if (!this.initialized) {
       await this.buildSearchIndex();
 
-      const {
-        data: { slug }
-      } = await this.appOctokit.rest.apps.getAuthenticated();
-
-      return slug;
+      if (this.appOctokit) {
+        await this.appOctokit.rest.apps.getAuthenticated();
+      }
     }
-    return undefined;
   }
 
   public isGHAppInstalled = async (username: string): Promise<boolean> => {
+    if (!this.appOctokit) {
+      return false;
+    }
     const { data: installations } =
       await this.appOctokit.rest.apps.listInstallations();
     return installations.some(i =>
@@ -392,8 +402,12 @@ export class DappStoreRegistry {
    * @returns
    */
   public ghAppInstallURL = async () => {
-    const { data: app } = await this.appOctokit.rest.apps.getAuthenticated();
-    return `${app.html_url}/installations/new`;
+    if (this.appOctokit) {
+      const { data: app } = await this.appOctokit.rest.apps.getAuthenticated();
+      return `${app.html_url}/installations/new`;
+    } else {
+      return "";
+    }
   };
 
   /**
@@ -445,6 +459,9 @@ export class DappStoreRegistry {
     dapp: DAppSchema,
     org: string | undefined = undefined
   ): Promise<string> {
+    if (!dapp.developer) {
+      throw new Error(`Developer is unknown in dApp ${dapp.dappId}.`);
+    }
     if (dapp.developer.githubID !== githubID) {
       throw new Error(
         `Cannot add/update dApp ${dapp.dappId} as you are not the owner`
@@ -463,6 +480,9 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       currRegistry.dapps.push(dapp);
     } else if (dappExists.length === 1) {
+      if (!dappExists[0].developer) {
+        throw new Error(`Developer is unknown in dApp ${dapp.dappId}.`);
+      }
       if (dapp.developer.githubID !== dappExists[0].developer.githubID) {
         throw new Error(
           `Cannot update dApp ${dapp.dappId} as you are not the owner`
@@ -518,6 +538,9 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       throw new Error(`No dApp with the ID ${dappId} found`);
     } else if (dappExists.length === 1) {
+      if (!dappExists[0].developer) {
+        throw new Error(`Developer is unknown in dApp ${dappId}.`);
+      }
       if (dappExists[0].developer.githubID !== githubID) {
         throw new Error(
           `Cannot delete dApp ${dappId} as you are not the owner`
@@ -574,6 +597,9 @@ export class DappStoreRegistry {
     if (dappExists.length === 0) {
       throw new Error(`No dApp with the ID ${dappId} found`);
     } else if (dappExists.length === 1) {
+      if (!dappExists[0].developer) {
+        throw new Error(`Developer is unknown in dApp ${dappId}.`);
+      }
       if (dappExists[0].developer.githubID !== githubID) {
         throw new Error(
           `Cannot toggle listing for dApp ${dappId} as you are not the owner`

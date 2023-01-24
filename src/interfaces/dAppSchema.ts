@@ -55,9 +55,9 @@ export interface DAppSchema {
   appUrl?: string;
 
   images?: {
-    logo: string;
-    banner: string;
-    screenshots: string[];
+    logo?: string;
+    banner?: string;
+    screenshots?: string[];
   };
   /**
    * If this is in OpenSource, the URL of the repository
@@ -104,7 +104,7 @@ export interface DAppSchema {
     blockedCountries?: string[];
   };
 
-  developer: {
+  developer?: {
     /**
      * Legal name of the developer or the company
      */
@@ -121,7 +121,7 @@ export interface DAppSchema {
   /**
    * @minItems 1
    */
-  tags: string[];
+  tags?: string[];
   /**
    * @minItems 1
    */

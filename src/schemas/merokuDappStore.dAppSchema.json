@@ -8,12 +8,11 @@
     "name": {
       "type": "string",
       "description": "The name of the dApp. This is what is shown on listing",
-      "maxLength": 50
+      "maxLength": 100
     },
     "description": {
       "type": "string",
-      "description": "A detailed description of the dApp",
-      "minLength": 30
+      "description": "A detailed description of the dApp"
     },
     "appUrl": {
       "type": "string",
@@ -24,7 +23,6 @@
     },
     "images": {
       "type": "object",
-      "required": ["logo", "banner", "screenshots"],
       "properties": {
         "logo": {
           "type": "string",
@@ -234,8 +232,6 @@
     "language",
     "version",
     "availableOnPlatform",
-    "developer",
-    "tags",
     "chains",
     "listDate",
     "isListed",

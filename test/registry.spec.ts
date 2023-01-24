@@ -348,6 +348,9 @@ describe("DappStoreRegistry", () => {
     it("adds dApp when the new registry is valid", async () => {
       const dApp: DAppSchema = cloneable.deepCopy(fixtureRegistryJson.dapps[0]);
       dApp.dappId = "newDApp.dapp";
+      if (!dApp.developer) {
+        throw new Error("Developer is not defined");
+      }
       const githubID = dApp.developer.githubID;
 
       const owner = "merokudao";
