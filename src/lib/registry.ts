@@ -84,6 +84,7 @@ export class DappStoreRegistry {
     this.searchEngine.addIndex("name");
     this.searchEngine.addIndex("description");
     this.searchEngine.addIndex("tags");
+    this.searchEngine.addIndex("dappId");
   }
 
   private localRegistry = (): DAppStoreSchema => {
