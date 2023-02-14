@@ -54,6 +54,20 @@ export interface DAppSchema {
    */
   appUrl?: string;
 
+  downloadBaseUrls?: {
+    url: string;
+    platform: DAppDeploymentPlatform;
+    architecture: string;
+    minVersion: string;
+    maxVersion?: string;
+    screenDPI?: string;
+  }[];
+
+  contracts?: {
+    address: string;
+    chainId: string;
+  }[];
+
   images?: {
     logo?: string;
     banner?: string;
