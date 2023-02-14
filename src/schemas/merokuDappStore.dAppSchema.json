@@ -21,6 +21,68 @@
       "pattern": "^(https?|http?|ipfs?)://",
       "minLength": 1
     },
+    "downloadBaseUrls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "url",
+          "platform",
+          "architecture",
+          "minVersion"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The base URL of the dApp. This is used to download the dApp. Note that the actual URL will consist of security tokens and will be generated on the fly by the server.",
+            "format": "uri",
+            "pattern": "^(https?|http?|ipfs?)://",
+            "minLength": 1
+          },
+          "platform": {
+            "type": "string",
+            "description": "The platform on which the dApp is available",
+            "enum": ["ios", "web", "android"]
+          },
+          "architecture": {
+            "type": "string",
+            "description": "The architecture of the dApp"
+          },
+          "minVersion": {
+            "type": "string",
+            "description": "The minimum version of the dApp that is required to run this dApp"
+          },
+          "maxVersion": {
+            "type": "string",
+            "description": "The maximum version of the dApp that is required to run this dApp"
+          },
+          "screenDPI": {
+            "type": "string",
+            "description": "The screen DPI for which the dApp is optimised. If it is not specified, it's assumed to be optimised for all resolutions."
+          }
+        }
+      }
+    },
+    "contracts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "address",
+          "chainId"
+        ],
+        "properties": {
+          "address": {
+            "type": "string",
+            "description": "The address of the contract"
+          },
+          "chainId": {
+            "type": "string",
+            "description": "The chainId of the contract"
+          }
+        }
+      }
+    },
     "images": {
       "type": "object",
       "properties": {
