@@ -656,6 +656,9 @@ export class DappStoreRegistry {
     queryTxt: string,
     filterOpts: FilterOptions = { isListed: true }
   ): DAppSchema[] => {
+    // DappId as a Index for search options
+    this.searchEngine.addIndex("dappId");
+
     let res = this.searchEngine.search(queryTxt) as DAppSchema[];
 
     if (filterOpts) {
