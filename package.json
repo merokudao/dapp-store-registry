@@ -81,9 +81,7 @@
   },
   "scripts": {
     "clean": "rm -rf ./dist",
-    "doc": "run-s doc:html && open-cli build/docs/index.html",
-    "doc:html": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out build/docs",
-    "doc:json": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --json build/docs/typedoc.json",
+    "doc": "typedoc src/ --out docs",
     "test:unit": "mocha",
     "test:prettier": "prettier 'src/**/*.ts' --list-different",
     "test:lint": "eslint src --ext .ts",
