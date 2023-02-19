@@ -20,8 +20,8 @@ jobs:
       - name: Create the docs directory locally in CI
         run: npx typedoc src/index.ts
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: autogen-docs
           folder: docs
