@@ -1,8 +1,0 @@
-node_modules
-*.log
-.nyx_output
-dist
-.nyc_output/
-.DS_Store
-tsconfig.tsbuildinfo
-*.tgz

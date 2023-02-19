@@ -1,3 +1,5 @@
+@merokudao/dapp-store-registry / [Exports](modules.md)
+
 # dApp Store Registry
 
 MerokuDAO dApp Store Registry is self explanatory name. It contains
