@@ -36,4 +36,4 @@ const dApps = await registry.dApps();
 const dAppsResult = registry.search("nft");
 ```
 
-Detailed docs can be viewed at [docs](/docs/index.html).
+Detailed docs can be viewed at [https://merokudao.github.io/dapp-store-registry/](https://merokudao.github.io/dapp-store-registry/).
