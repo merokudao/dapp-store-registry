@@ -25,12 +25,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": [
-          "url",
-          "platform",
-          "architecture",
-          "minVersion"
-        ],
+        "required": ["url", "platform", "architecture", "minVersion"],
         "properties": {
           "url": {
             "type": "string",
@@ -67,10 +62,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": [
-          "address",
-          "chainId"
-        ],
+        "required": ["address", "chainId"],
         "properties": {
           "address": {
             "type": "string",
