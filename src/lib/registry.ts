@@ -92,7 +92,7 @@ export class DappStoreRegistry {
         "availableOnPlatform",
         "geoRestrictions",
         "tags",
-        " images",
+        "images",
         "chains",
         "minAge",
         "developer"
@@ -398,6 +398,7 @@ export class DappStoreRegistry {
       if (this.appOctokit) {
         await this.appOctokit.rest.apps.getAuthenticated();
       }
+      this.initialized = true;
     }
   }
 
