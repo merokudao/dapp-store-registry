@@ -6,8 +6,7 @@ import {
   FeaturedSection,
   FilterOptions
 } from "../interfaces";
-import * as JsSearch from "js-search";
-import porterStemmer from "@stdlib/nlp-porter-stemmer";
+import MiniSearch from "minisearch";
 import parseISO from "date-fns/parseISO";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
@@ -46,7 +45,7 @@ export class DappStoreRegistry {
 
   public readonly registryRemoteUrl = `https://raw.githubusercontent.com/${this.githubOwner}/${this.githubRepo}/main/src/registry.json`;
 
-  private searchEngine = new JsSearch.Search("dappId");
+  private searchEngine: MiniSearch<any> | undefined;
 
   private cachedRegistry: DAppStoreSchema | undefined;
 
@@ -72,19 +71,34 @@ export class DappStoreRegistry {
       });
     }
 
-    // Configure the search engine Index
-    this.searchEngine.indexStrategy = new JsSearch.PrefixIndexStrategy();
-    this.searchEngine.tokenizer = new JsSearch.StopWordsTokenizer(
-      new JsSearch.SimpleTokenizer()
-    );
-    this.searchEngine.tokenizer = new JsSearch.StemmingTokenizer(
-      porterStemmer,
-      new JsSearch.SimpleTokenizer()
-    );
-    this.searchEngine.addIndex("name");
-    this.searchEngine.addIndex("description");
-    this.searchEngine.addIndex("tags");
-    this.searchEngine.addIndex("dappId");
+    this.searchEngine = new MiniSearch({
+      idField: "dappId",
+      fields: ["name", "description", "dappId", "tags"],
+      storeFields: [
+        "name",
+        "description",
+        "dappId",
+        "category",
+        "appUrl",
+        "downloadBaseUrls",
+        "contracts",
+        "repoUrl",
+        "isForMatureAudience",
+        "isSelfModerated",
+        "language",
+        "version",
+        "isListed",
+        "listDate",
+        "availableOnPlatform",
+        "geoRestrictions",
+        "tags",
+        "images",
+        "chains",
+        "minAge",
+        "developer"
+      ],
+      searchOptions: { prefix: true }
+    });
   }
 
   private localRegistry = (): DAppStoreSchema => {
@@ -177,7 +191,7 @@ export class DappStoreRegistry {
           );
           break;
       }
-      this.searchEngine.addDocuments(this.cachedRegistry.dapps);
+      // this.searchEngine?.addAll(this.cachedRegistry.dapps);
     } else {
       if (
         this.lastRegistryCheckedAt &&
@@ -203,7 +217,7 @@ export class DappStoreRegistry {
         debug("registry changed. updating...");
         this.cachedRegistry = remoteRegistry;
         this.lastRegistryCheckedAt = new Date();
-        this.searchEngine.addDocuments(this.cachedRegistry.dapps);
+        // this.searchEngine?.addAll(this.cachedRegistry.dapps);
       }
     }
 
@@ -212,7 +226,7 @@ export class DappStoreRegistry {
 
   private buildSearchIndex = async (): Promise<void> => {
     const docs = (await this.registry()).dapps;
-    this.searchEngine.addDocuments(docs);
+    this.searchEngine?.addAll(docs);
   };
 
   private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
@@ -384,6 +398,7 @@ export class DappStoreRegistry {
       if (this.appOctokit) {
         await this.appOctokit.rest.apps.getAuthenticated();
       }
+      this.initialized = true;
     }
   }
 
@@ -656,12 +671,20 @@ export class DappStoreRegistry {
     queryTxt: string,
     filterOpts: FilterOptions = { isListed: true }
   ): DAppSchema[] => {
-    let res = this.searchEngine.search(queryTxt) as DAppSchema[];
+    let res = this.searchEngine?.search(queryTxt) as unknown as DAppSchema[];
 
     if (filterOpts) {
       res = this.filterDapps(res, filterOpts);
     }
 
+    return res;
+  };
+
+  public searchByDappId = (queryTxt: string): DAppSchema[] => {
+    let res = this.searchEngine?.search(queryTxt, {
+      fields: ["dappId"],
+      combineWith: "AND"
+    }) as unknown as DAppSchema[];
     return res;
   };
 

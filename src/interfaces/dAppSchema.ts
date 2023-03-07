@@ -1,6 +1,6 @@
 export const dAppDeploymentPlatforms = ["ios", "web", "android"] as const;
 
-export type DAppDeploymentPlatform = typeof dAppDeploymentPlatforms[number];
+export type DAppDeploymentPlatform = (typeof dAppDeploymentPlatforms)[number];
 
 export const dAppCategory = [
   "books",
@@ -31,7 +31,7 @@ export const dAppCategory = [
   "weather"
 ] as const;
 
-export type DAppCategory = typeof dAppCategory[number];
+export type DAppCategory = (typeof dAppCategory)[number];
 
 /**
  * A schema for dapps for dApp Registry

@@ -1,6 +1,6 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.1.27",
+  "version": "0.1.28",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "date-fns": "^2.29.3",
     "debug": "^4.3.4",
     "fs-extra": "^11.1.0",
-    "js-search": "^2.0.0",
+    "minisearch": "^6.0.1",
     "octokit": "^2.0.10"
   },
   "devDependencies": {
