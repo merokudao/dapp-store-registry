@@ -26965,12 +26965,12 @@
     },
     {
       "name": "NFTScan",
-      "description": "The NFT Explorer of Polygon made by NFTScan.",
+      "description": "The NFT Explorer of Polygon made by NFTScan. NFTScan provides professional NFT data services for Web3 developers.",
       "dappId": "polygon.nftscan.dapp",
       "minAge": 18,
       "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/polygon.nftscan.dapp/build.zip",
       "isForMatureAudience": false,
-      "isSelfModerated": true,
+      "isSelfModerated": false,
       "language": "en",
       "version": "1.0",
       "images": {
