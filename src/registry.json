@@ -27003,6 +27003,50 @@
         137
       ],
       "category": "social networking"
+    },
+    {
+      "name": "Push Protocol",
+      "description": "Push is the communication protocol of web3. Push protocol enables cross-chain notifications and messaging for dapps, wallets, and services tied to wallet addresses in an open, gasless, and platform-agnostic fashion. The open communication layer allows any crypto wallet /frontend to tap into the network and get the communication across.",
+      "dappId": "pushprotocol.dapp",
+      "minAge": 18,
+      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/pushprotocol.dapp/build.zip",
+      "isForMatureAudience": false,
+      "isSelfModerated": false,
+      "language": "en",
+      "version": "0.7.4",
+      "images": {
+        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/pushprotocol.dapp/logo.png",
+        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/pushprotocol.dapp/banner.png",
+        "screenshots": [
+          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/pushprotocol.dapp/screenshots-0.png"
+        ]
+      },
+      "isListed": true,
+      "repoUrl": "https://github.com/meroku-dao/",
+      "listDate": "2023-03-21",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "developer": {
+        "legalName": "Jun Gong",
+        "logo": "https://avatars.githubusercontent.com/u/62088951?v=4",
+        "website": "https://meroku.store",
+        "privacyPolicyUrl": "https://push.org/privacy",
+        "support": {
+          "url": "https://discord.gg/pushprotocol"
+        },
+        "githubID": "jgong29"
+      },
+      "tags": [
+        "web3",
+        "web3communication",
+        "chat",
+        "pushnotification"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social networking"
     }
   ],
   "featuredSections": [
