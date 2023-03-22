@@ -27003,6 +27003,47 @@
         137
       ],
       "category": "social networking"
+    },
+    {
+      "name": "Gelato Automate",
+      "description": "Gelato Automate is designed to make it super easy for you to setup and manage your smart contract automations. Our documentation gives you all the information on how to get started, with tutorials and template real-world examples",
+      "dappId": "automate.gelato.dapp",
+      "minAge": 18,
+      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/automate.gelato.dapp/build.zip",
+      "isForMatureAudience": false,
+      "isSelfModerated": false,
+      "language": "en",
+      "version": "1.0",
+      "images": {
+        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/automate.gelato.dapp/logo.png",
+        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/automate.gelato.dapp/banner.png",
+        "screenshots": [
+          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/automate.gelato.dapp/screenshots-0.png"
+        ]
+      },
+      "isListed": true,
+      "repoUrl": "https://github.com/meroku-dao/",
+      "listDate": "2023-03-22",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "developer": {
+        "legalName": "donoso.eth",
+        "logo": "https://avatars.githubusercontent.com/u/30406536?v=4",
+        "website": "https://meroku.store",
+        "privacyPolicyUrl": "https://www.gelato.network/docs/Gelato_Terms_of_Service.pdf",
+        "support": {
+          "url": "https://www.gelato.network/contact"
+        },
+        "githubID": "donoso-eth"
+      },
+      "tags": [
+        "Web3 Automation"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social networking"
     }
   ],
   "featuredSections": [
