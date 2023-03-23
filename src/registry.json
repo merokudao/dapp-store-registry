@@ -27003,6 +27003,52 @@
         137
       ],
       "category": "social networking"
+    },
+    {
+      "name": "QuickSwap",
+      "description": "QuickSwap is the largest DEX on the Polygon network",
+      "dappId": "quickswap.exchange.dapp",
+      "minAge": 18,
+      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/quickswap.exchange.dapp/build.zip",
+      "isForMatureAudience": false,
+      "isSelfModerated": false,
+      "language": "en",
+      "version": "1.0.0",
+      "images": {
+        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/quickswap.exchange.dapp/logo.png",
+        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/quickswap.exchange.dapp/banner.png",
+        "screenshots": [
+          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/quickswap.exchange.dapp/screenshots-0.png"
+        ]
+      },
+      "isListed": true,
+      "repoUrl": "https://github.com/meroku-dao/",
+      "listDate": "2023-03-23",
+      "availableOnPlatform": [
+        "web"
+      ],
+      "developer": {
+        "legalName": "Sameep Singhania",
+        "logo": "https://avatars.githubusercontent.com/u/3587020?v=4",
+        "website": "https://meroku.store",
+        "privacyPolicyUrl": "https://quickswap.exchange/",
+        "support": {
+          "url": "https://t.me/+UQZyrTE8qiw_gHCY"
+        },
+        "githubID": "sameepsi"
+      },
+      "tags": [
+        "dex",
+        "defi",
+        "perps",
+        "quickswap",
+        "qs",
+        "polygon"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social networking"
     }
   ],
   "featuredSections": [
