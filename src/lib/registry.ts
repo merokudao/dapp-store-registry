@@ -2,14 +2,14 @@ import Dotenv from "dotenv";
 import { fetch } from "cross-fetch";
 import {
   DAppSchema,
-  DAppSchemaSearch,
   DAppStoreSchema,
   FeaturedSection,
   FilterOptions,
-  OpenSearchConnectionOptions
+  OpenSearchConnectionOptions,
+  Pagination,
+  SearchResult
 } from "../interfaces";
 import MiniSearch from "minisearch";
-import parseISO from "date-fns/parseISO";
 import { format } from "date-fns";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
@@ -23,7 +23,7 @@ import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import registryJson from "./../registry.json";
 import { Octokit } from "octokit";
 import { createAppAuth } from "@octokit/auth-app";
-import { cloneable, searchFilters } from "./utils";
+import { cloneable, recordsPerPage, searchFilters } from "./utils";
 import { OpensearchRequest } from "../handlers"
 
 Dotenv.config();
@@ -242,78 +242,6 @@ export class DappStoreRegistry {
     this.searchEngine?.addAll(docs);
   };
 
-  private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
-    let res = dapps;
-
-    if (filterOpts) {
-      if (filterOpts.isListed !== undefined) {
-        res = res.filter(d => d.isListed === filterOpts.isListed);
-      }
-      if (filterOpts.chainId) {
-        const chainId = filterOpts.chainId;
-        res = res.filter(d => d.chains.includes(chainId));
-      }
-      if (filterOpts.language) {
-        res = res.filter(d => d.language === filterOpts.language);
-      }
-      if (filterOpts.availableOnPlatform) {
-        const platforms = filterOpts.availableOnPlatform;
-        res = res.filter(d =>
-          d.availableOnPlatform.some(x => platforms.includes(x))
-        );
-      }
-      if (filterOpts.forMatureAudience !== undefined) {
-        res = res.filter(
-          d => d.isForMatureAudience === filterOpts.forMatureAudience
-        );
-      }
-      if (filterOpts.minAge) {
-        const minAge = filterOpts.minAge;
-        res = res.filter(d => d.minAge > minAge);
-      }
-      if (filterOpts.listedOnOrAfter) {
-        const listedAfter = filterOpts.listedOnOrAfter;
-        res = res.filter(d => parseISO(d.listDate) >= listedAfter);
-      }
-      if (filterOpts.listedOnOrBefore) {
-        const listedBefore = filterOpts.listedOnOrBefore;
-        res = res.filter(d => parseISO(d.listDate) <= listedBefore);
-      }
-      if (filterOpts.allowedInCountries) {
-        const allowedCountries = filterOpts.allowedInCountries;
-        res = res.filter(d => {
-          if (d.geoRestrictions && d.geoRestrictions.allowedCountries) {
-            return d.geoRestrictions.allowedCountries.some(x =>
-              allowedCountries.includes(x)
-            );
-          }
-          return false;
-        });
-      }
-      if (filterOpts.blockedInCountries) {
-        const blockedCountries = filterOpts.blockedInCountries;
-        res = res.filter(d => {
-          if (d.geoRestrictions && d.geoRestrictions.blockedCountries) {
-            return d.geoRestrictions.blockedCountries.some(x =>
-              blockedCountries.includes(x)
-            );
-          }
-          return false;
-        });
-      }
-      if (filterOpts.categories) {
-        const categories = filterOpts.categories;
-        res = res.filter(d => categories.includes(d.category));
-      }
-      if (filterOpts.developer) {
-        const developerId = filterOpts.developer.githubID;
-        res = res.filter(d => d.developer?.githubID === developerId);
-      }
-    }
-
-    return res;
-  }
-
   private async updateRegistry(
     name: string,
     email: string,
@@ -455,14 +383,19 @@ export class DappStoreRegistry {
    */
   public dApps = async (
     filterOpts: FilterOptions = { isListed: true }
-  ): Promise<DAppSchema[]> => {
-    let res = (await this.registry()).dapps;
-
-    if (filterOpts) {
-      res = this.filterDapps(res, filterOpts);
-    }
-
-    return res;
+  ): Promise<{ response: DAppSchema[], pagination: Pagination}> => {
+    const query = searchFilters('', filterOpts);
+    const result: SearchResult = await this.opensearchApis.search(searchRegistry.alias, query);
+    const { hits: { hits: response, total: { value } } } = result.body || { hits: { hits: []} };
+    const pageCount = parseInt(`${value/recordsPerPage}`, 10);
+    return {
+      response,
+      pagination: {
+        page: filterOpts.page,
+        limit: recordsPerPage,
+        pageCount,
+      }
+    };
   };
 
   /**
@@ -683,11 +616,19 @@ export class DappStoreRegistry {
   public search = async (
     queryTxt: string,
     filterOpts: FilterOptions = { isListed: true }
-  ): Promise<DAppSchemaSearch[]> => {
+  ): Promise<{ response: DAppSchema[], pagination: Pagination}>=> {
     const query = searchFilters(queryTxt, filterOpts);
-    const result = await this.opensearchApis.search(searchRegistry.alias, query);
-    const { hits: { hits: res } } = result.body || { hits: { hits: []} };
-    return res;
+    const result: SearchResult = await this.opensearchApis.search(searchRegistry.alias, query);
+    const { hits: { hits: response, total: { value } } } = result.body || { hits: { hits: []} };
+    const pageCount = parseInt(`${value/recordsPerPage}`, 10);
+    return {
+      response,
+      pagination: {
+        page: filterOpts.page,
+        limit: recordsPerPage,
+        pageCount,
+      }
+    };
   };
 
   /**
@@ -697,7 +638,7 @@ export class DappStoreRegistry {
    */
   public searchByDappId = async (queryTxt: string): Promise<DAppSchema[]> => {
     const query = searchFilters('', { dappId: queryTxt });
-    const result = await this.opensearchApis.search(searchRegistry.alias, query);
+    const result: SearchResult = await this.opensearchApis.search(searchRegistry.alias, query);
     const { hits: { hits: res } } = result.body || { hits: { hits: []} };
     return res;
   };

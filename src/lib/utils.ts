@@ -22,7 +22,7 @@ export class cloneable {
   }
 }
 
-export const recordsPerPage = 20;
+export const recordsPerPage: number = 20;
 
 export const searchFilters = (search:string, payload:any): PaginationQuery => {
   const query: OpenSearchCompositeQuery = {
@@ -40,8 +40,8 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
     availableOnPlatform = null,
     listedOnOrAfter = null,
     listedOnOrBefore = null,
-    allowedInCountries = [],
-    blockedInCountries = [],
+    allowedInCountries = null,
+    blockedInCountries = null,
     categories = [],
     isListed = false,
     developer = null,
@@ -59,23 +59,23 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
 
   // it should be filter users location current not more then one country
   if (allowedInCountries.length) {
-    allowedInCountries.forEach((ac:string)=> {
+    allowedInCountries.split(',').forEach((ac:string)=> {
       query.bool.should.push({term: { "geoRestrictions.allowedCountries": ac.trim() }});
     })
   }
   // it should be filter users location current not more then one country
   if (blockedInCountries.length) {
-    blockedInCountries.forEach((bc:string)=> {
+    blockedInCountries.split(',').forEach((bc:string)=> {
       query.bool.must_not.push({term: { "geoRestrictions.blockedInCountries": bc.trim() }});
     })
   }
   if (isListed) query.bool.must.push({match: { isListed:  isListed === 'true' ? true: false }});
   if (developer) query.bool.must.push({match: { "developer.githubID":  developer.trim() }});
-  if (categories.length) query.bool.must.push({terms: { category: categories }});
+  if (categories.length) query.bool.must.push({terms: { category: categories.split(',').map((cat: string) => cat.trim()) }});
   if (dappId) query.bool.must.push({term: { id: dappId.trim() }})
 
   // search on customer string
-  if (!!search) {
+  if (!!search && search.length) {
     query.bool.should.push({ match: { name: { query: search, operator: "and" } } })
     query.bool.should.push({ match: { description: { query: search, operator: "and" } } })
     query.bool.should.push({ match: { daapId: { query: search, operator: "and" } } })
