@@ -2,12 +2,15 @@ import Dotenv from "dotenv";
 import { fetch } from "cross-fetch";
 import {
   DAppSchema,
+  DAppSchemaSearch,
   DAppStoreSchema,
   FeaturedSection,
-  FilterOptions
+  FilterOptions,
+  OpenSearchConnectionOptions
 } from "../interfaces";
 import MiniSearch from "minisearch";
 import parseISO from "date-fns/parseISO";
+import { format } from "date-fns";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
 import crypto from "crypto";
@@ -20,7 +23,8 @@ import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import registryJson from "./../registry.json";
 import { Octokit } from "octokit";
 import { createAppAuth } from "@octokit/auth-app";
-import { cloneable } from "./utils";
+import { cloneable, searchFilters } from "./utils";
+import { OpensearchRequest } from "../handlers"
 
 Dotenv.config();
 
@@ -29,6 +33,11 @@ const debug = Debug("@merokudao:dapp-store-registry:Registry");
 export enum RegistryStrategy {
   GitHub = "GitHub",
   Static = "Static"
+}
+
+export const searchRegistry = {
+  indexPrefix : 'dapp_registries',
+  alias: 'dapp_search_index'
 }
 
 export class DappStoreRegistry {
@@ -50,9 +59,13 @@ export class DappStoreRegistry {
   private cachedRegistry: DAppStoreSchema | undefined;
 
   private appOctokit: Octokit | undefined = undefined;
+  opensearchApis: OpensearchRequest;
 
-  constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
+
+  constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub, opensearchOptions: OpenSearchConnectionOptions) {
     this.strategy = strategy;
+
+    this.opensearchApis = new OpensearchRequest(opensearchOptions);
 
     if (
       process.env.GITHUB_APP_ID &&
@@ -489,7 +502,7 @@ export class DappStoreRegistry {
         `dApp ID ${dapp.dappId} is invalid. It must end with .dapp`
       );
     }
-
+    this.opensearchApis.createDoc(searchRegistry.alias, {id:dapp.dappId, ...dapp})
     const currRegistry = await this.registry();
     const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
 
@@ -573,7 +586,7 @@ export class DappStoreRegistry {
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
-
+    this.opensearchApis.deleteDoc(searchRegistry.alias, dappId)
     return await this.updateRegistry(
       name,
       email,
@@ -667,24 +680,25 @@ export class DappStoreRegistry {
    * @param filterOpts The filter options. Defaults to `{ isListed: true}`
    * @returns The filtered & sorted list of dApps
    */
-  public search = (
+  public search = async (
     queryTxt: string,
     filterOpts: FilterOptions = { isListed: true }
-  ): DAppSchema[] => {
-    let res = this.searchEngine?.search(queryTxt) as unknown as DAppSchema[];
-
-    if (filterOpts) {
-      res = this.filterDapps(res, filterOpts);
-    }
-
+  ): Promise<DAppSchemaSearch[]> => {
+    const query = searchFilters(queryTxt, filterOpts);
+    const result = await this.opensearchApis.search(searchRegistry.alias, query);
+    const { hits: { hits: res } } = result.body || { hits: { hits: []} };
     return res;
   };
 
-  public searchByDappId = (queryTxt: string): DAppSchema[] => {
-    let res = this.searchEngine?.search(queryTxt, {
-      fields: ["dappId"],
-      combineWith: "AND"
-    }) as unknown as DAppSchema[];
+  /**
+   * search by dapp id
+   * @param queryTxt dappId
+   * @returns if matches return dappInfo
+   */
+  public searchByDappId = async (queryTxt: string): Promise<DAppSchema[]> => {
+    const query = searchFilters('', { dappId: queryTxt });
+    const result = await this.opensearchApis.search(searchRegistry.alias, query);
+    const { hits: { hits: res } } = result.body || { hits: { hits: []} };
     return res;
   };
 
@@ -889,4 +903,37 @@ export class DappStoreRegistry {
   public getFeaturedDapps = async () => {
     return (await this.registry()).featuredSections;
   };
+
+  /**
+   * prepare payload for bulk insert
+   * @param index 
+   * @returns 
+   */
+  public addBulkDocsToIndex = async (index: string): Promise<any> => {
+    const { dapps = [] } = await this.registry();
+
+    const dappDocs = dapps.map(d => {
+      return {
+        id: d.dappId,
+        ...d
+      }
+    });
+    return this.opensearchApis.createBulkDoc(index, dappDocs);
+  };
+
+  /**
+   * create new search index with data from file or gitlab repo
+   * @returns acknowledgement
+   */
+  public createIndex = async () => {
+    const indexName = `${searchRegistry.indexPrefix}_${format(new Date(), 'yyyy-MM-dd-HH-mm-ss')}`;
+    await this.opensearchApis.createIndex(indexName);
+    await this.addBulkDocsToIndex(indexName);
+    await this.opensearchApis.attachAliasName(indexName, searchRegistry.alias);
+    await this.opensearchApis.removeAliasName(indexName, searchRegistry.alias);
+    return {
+      status: 200,
+      message: "successfull"
+    }
+  }
 }
