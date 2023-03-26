@@ -27003,6 +27003,108 @@
         137
       ],
       "category": "social networking"
+    },
+    {
+      "name": "0vix",
+      "description": "0VIX, the core Polygon Money Market Protocol.",
+      "appUrl": "https://www.0vix.com/",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmVEJ4FVtLw5ooZfMnwpvhxK45qcamP3gRC2Ew7NJVmH96",
+          "platform": "android",
+          "minVersion": "Android 11 (Red Velvet Cake)"
+        }
+      ],
+      "contracts": [
+        {
+          "address": "0x421FF03Fe1085bce50ec5Bf06c5907119d87672F",
+          "chainId": "137"
+        },
+        {
+          "address": "0xf29d0ae1A29C453df338C5eEE4f010CFe08bb3FF",
+          "chainId": "137"
+        },
+        {
+          "address": "0x8849f1a0cB6b5D6076aB150546EddEe193754F1C",
+          "chainId": "137"
+        },
+        {
+          "address": "0x15c7DAaD15E3EE00C30C16D6294ea3528641165a",
+          "chainId": "137"
+        },
+        {
+          "address": "0x188D24cfEB2837c11Fd22F1462C6E0174cD910Bc",
+          "chainId": "137"
+        },
+        {
+          "address": "0xE554E874c9c60E45F1Debd479389C76230ae25A8",
+          "chainId": "137"
+        },
+        {
+          "address": "0xb329FC9379dBf71BC58178383BA494D10D4E296F",
+          "chainId": "137"
+        },
+        {
+          "address": "0x3B9128Ddd834cE06A60B0eC31CCfB11582d8ee18",
+          "chainId": "137"
+        },
+        {
+          "address": "0x2175110F2936bf630a278660E9B6E4EFa358490A",
+          "chainId": "137"
+        },
+        {
+          "address": "0xb2D9646A1394bf784E376612136B3686e74A325F",
+          "chainId": "137"
+        },
+        {
+          "address": "0xEBb865Bf286e6eA8aBf5ac97e1b56A76530F3fBe",
+          "chainId": "137"
+        },
+        {
+          "address": "0x1372c34acC14F1E8644C72Dad82E3a21C211729f",
+          "chainId": "137"
+        },
+        {
+          "address": "0xC57E5e261d49Af3026446de3eC381172f17bB799",
+          "chainId": "137"
+        },
+        {
+          "address": "0xAAcc5108419Ae55Bc3588E759E28016d06ce5F40",
+          "chainId": "137"
+        },
+        {
+          "address": "0x29b0F07d5A61595685a17D5F9F86313742Ebd6Bc",
+          "chainId": "137"
+        },
+        {
+          "address": "0x6F063Fe661d922e4fd77227f8579Cb84f9f41F0B",
+          "chainId": "137"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmSWRAMJc8V2ymVqrkY5PPpBb7M6mVKQVufMZFxdx2a4bD",
+        "banner": "https://ipfs.io/ipfs/QmburnRBMKxk5NTQXwourbKEK44GcmDeBU7oaMnpVEmgKy",
+        "screenshots": "https://ipfs.io/ipfs/QmYRkJdwHbpQ4f5QhWHxeevqv59aQoTZqzdWroPcmSSTaf"
+      },
+      "dappId": "com.zerovix",
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": "en",
+      "version" : "v1",
+      "isListed": true,
+      "listDate" : "2023-03-26",
+      "availableOnPlatform": ["android"],
+      "developer": {
+        "legalName" : "Nima Boustanian",
+        "privacyPolicyUrl" : "https://docs.0vix.com/support/privacy-policy",
+        "support": {
+          "url": "https://docs.0vix.com/support/faq",
+          "email": "nima@gqtfinance.com"
+        }
+      },
+      "chains": [137],
+      "category": "DeFi"
     }
   ],
   "featuredSections": [
