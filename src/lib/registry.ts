@@ -4,7 +4,7 @@ import {
   DAppSchema,
   DAppStoreSchema,
   FeaturedSection,
-  FilterOptions,
+  FilterOptions
 } from "../interfaces";
 import MiniSearch from "minisearch";
 import parseISO from "date-fns/parseISO";
@@ -51,8 +51,8 @@ export class DappStoreRegistry {
 
   private appOctokit: Octokit | undefined = undefined;
 
-
   constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
+    this.strategy = strategy;
     if (
       process.env.GITHUB_APP_ID &&
       process.env.GITHUB_APP_PRIVATE_KEY &&
@@ -449,7 +449,7 @@ export class DappStoreRegistry {
     }
 
     return res;
-  }
+  };
 
   /**
    * Adds or updates the dApp in the registry. If the dApp already exists, it
@@ -488,6 +488,7 @@ export class DappStoreRegistry {
         `dApp ID ${dapp.dappId} is invalid. It must end with .dapp`
       );
     }
+
     const currRegistry = await this.registry();
     const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
 
@@ -571,6 +572,7 @@ export class DappStoreRegistry {
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
+
     return await this.updateRegistry(
       name,
       email,
