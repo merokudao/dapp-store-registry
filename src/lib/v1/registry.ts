@@ -1,9 +1,10 @@
 import { format } from "date-fns";
 
 import { OpensearchRequest } from "../../handlers";
-import { DAppSchema, FilterOptions, OpenSearchConnectionOptions, Pagination, SearchResult } from "../../interfaces";
+import { AddDappPayload, DAppSchema, DeleteDappPayload, FilterOptions, OpenSearchConnectionOptions, Pagination, SearchResult, StrandardResponse } from "../../interfaces";
 import { DappStoreRegistry} from "../"
 import { recordsPerPage, searchFilters } from "../utils";
+import debug from "debug";
 
 export const searchRegistry = {
     indexPrefix : `${process.env.environment}_dapp_registries`,
@@ -16,6 +17,7 @@ export class DappStoreRegistryV1 {
       this.opensearchApis = new OpensearchRequest(opensearchOptions);
       this.dappStoreRegistory = new DappStoreRegistry()
     }
+
     /**
      * prepare payload for bulk insert
      * @param index 
@@ -44,8 +46,8 @@ export class DappStoreRegistryV1 {
         await this.opensearchApis.attachAliasName(indexName, searchRegistry.alias);
         await this.opensearchApis.removeAliasName(indexName, searchRegistry.alias);
         return {
-        status: 200,
-        message: ["successfull"]
+            status: 200,
+            message: ["success"]
         }
     }
 
@@ -63,42 +65,72 @@ export class DappStoreRegistryV1 {
         const { hits: { hits: response, total: { value } } } = result.body || { hits: { hits: []} };
         const pageCount = parseInt(`${value/recordsPerPage}`, 10);
         return {
-        response,
-        pagination: {
-            page: filterOpts.page,
-            limit: recordsPerPage,
-            pageCount,
-        }
+            response,
+            pagination: {
+                page: filterOpts.page,
+                limit: recordsPerPage,
+                pageCount,
+            }
         };
     }
 
-    public async addOrUpdateDapp(
-        name: string,
-        email: string,
-        accessToken: string,
-        githubID: string,
-        dapp: DAppSchema,
-        org: string | undefined = undefined
-    ): Promise<string> {
+    /**
+     * add new dapp to index, when new app is registered on dapp store
+     * @param name 
+     * @param email 
+     * @param accessToken 
+     * @param githubID 
+     * @param dapp 
+     * @param org 
+     * @returns acknowledge
+     */
+    public async addOrUpdateDapp(payload: AddDappPayload): Promise<StrandardResponse> {
+        const {
+            name,
+            email,
+            githubID,
+            dapp,
+            org = undefined
+        } = payload;
         /**
          * have to add if any action have to do onchain
          */
-        this.opensearchApis.createDoc(searchRegistry.alias, {id:dapp.dappId, ...dapp})
-        return "done"
+        debug(`deleting the app, name: ${name}, email: ${email}, githubId: ${githubID}, org: ${org}`);
+        const res = await this.opensearchApis.createDoc(searchRegistry.alias, {id:dapp.dappId, ...dapp})
+        return {
+            status: 200,
+            message: ["success"],
+            data: [res]
+        }
     }
 
 
-    public deleteDapp = async (
-        name: string,
-        email: string,
-        accessToken: string,
-        githubID: string,
-        dappId: string,
-        org: string | undefined = undefined
-    ): Promise<string> => {
+    /**
+     * delete the dapp from index, not longer exists the dapp on our dappstore kit
+     * @param name 
+     * @param email 
+     * @param accessToken 
+     * @param githubID 
+     * @param dappId dappId of the dapp
+     * @param org 
+     * @returns acknowledgement
+     */
+    public deleteDapp = async (payload: DeleteDappPayload): Promise<StrandardResponse> => {
+        const {
+            name,
+            email,
+            githubID,
+            dappId,
+            org = undefined
+        } = payload;
         /**have to write code  for on chain actions*/
-        this.opensearchApis.deleteDoc(searchRegistry.alias, dappId)
-        return "done"
+        debug(`deleting the app, name: ${name}, email: ${email}, githubId: ${githubID}, org: ${org}`);
+        const res = await this.opensearchApis.deleteDoc(searchRegistry.alias, dappId)
+        return {
+            status: 200,
+            message: ["success"],
+            data: [res]
+        }
     }
 
     /**
@@ -107,7 +139,7 @@ export class DappStoreRegistryV1 {
      * @param queryTxt The text to search for
      * @param filterOpts The filter options. Defaults to `{ isListed: true}`
      * @returns The filtered & sorted list of dApps
-   */
+     */
     public search = async (
         queryTxt: string,
         filterOpts: FilterOptions = { isListed: true }

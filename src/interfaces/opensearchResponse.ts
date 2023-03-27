@@ -63,3 +63,27 @@ export interface Pagination {
     pageCount?: number,
     limit?: number,
 }
+
+export interface StrandardResponse {
+    status: number,
+    message?: string[],
+    data?: object[]
+}
+
+export interface AddDappPayload {
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    dapp: DAppSchema,
+    org: string | undefined
+}
+
+export interface DeleteDappPayload {
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    dappId: string,
+    org: string | undefined
+}
