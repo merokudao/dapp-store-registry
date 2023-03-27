@@ -272,8 +272,17 @@
         "sports",
         "travel",
         "utilities",
-        "weather"
+        "weather",
+        "defi",
+        "nft",
+        "gambling"
       ]
+    },
+    "packageId": {
+      "type": "string",
+      "description": "The package id of the dapp",
+      "minLength": 3,
+      "maxLength": 100
     }
   },
   "required": [
@@ -289,6 +298,7 @@
     "chains",
     "listDate",
     "isListed",
-    "category"
+    "category",
+    "developer"
   ]
 }
