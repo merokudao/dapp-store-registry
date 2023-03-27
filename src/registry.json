@@ -27084,9 +27084,9 @@
       "images": {
         "logo": "https://ipfs.io/ipfs/QmSWRAMJc8V2ymVqrkY5PPpBb7M6mVKQVufMZFxdx2a4bD",
         "banner": "https://ipfs.io/ipfs/QmburnRBMKxk5NTQXwourbKEK44GcmDeBU7oaMnpVEmgKy",
-        "screenshots": "https://ipfs.io/ipfs/QmYRkJdwHbpQ4f5QhWHxeevqv59aQoTZqzdWroPcmSSTaf"
+        "screenshots": ["https://ipfs.io/ipfs/QmYRkJdwHbpQ4f5QhWHxeevqv59aQoTZqzdWroPcmSSTaf"]
       },
-      "dappId": "com.zerovix",
+      "dappId": "com.0vix.dapp",
       "minAge": 18,
       "isForMatureAudience" : true,
       "isSelfModerated": false,
