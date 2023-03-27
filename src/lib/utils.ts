@@ -70,7 +70,7 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
     })
   }
   if (isListed) query.bool.must.push({match: { isListed:  isListed === 'true' ? true: false }});
-  if (developer) query.bool.must.push({match: { "developer.githubID":  developer.trim() }});
+  if (developer && developer.githubID) query.bool.must.push({match: { "developer.githubID":  developer.githubID.trim() }});
   if (categories.length) query.bool.must.push({terms: { category: categories.split(',').map((cat: string) => cat.trim()) }});
   if (dappId) query.bool.must.push({term: { id: dappId.trim() }})
 

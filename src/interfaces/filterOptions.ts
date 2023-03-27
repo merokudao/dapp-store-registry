@@ -33,6 +33,9 @@ export interface FilterOptions {
 
   isListed?: boolean;
 
-  developer?: string;
+  developer?: {
+    githubID: string;
+  };
+
   page?: string;
 }
