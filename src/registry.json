@@ -27104,7 +27104,93 @@
         }
       },
       "chains": [137],
-      "category": "DeFi"
+      "category": "defi"
+    },
+    {
+      "name": "hashmail",
+      "description": "hashmail is you unified web3 inbox. Now you can send and receive emails with your wallet address, ENS, lens handle, or unstoppable domains - all from the convenience of your phone. Use hashmail forwarding to auto-forward emails sent to your wallet address directly to your preferred channels - telegram, discord and web2 email.\\nTo login, use any of the methods below:\\n• Connect to the app using any installed wallet - we support over 170+ wallets\\n• Alternatively (if you only have browser wallets), connect your wallet using your PC on app.hashmail.dev. You can then scan a QR code to login (see bottom left on the browser)\\nWith the hashmail app, you can://n• Send and receive emails with all your connected wallets, and any DIDs//n• Auto-forward emails to your telegram, discord or web2 email//n• Set nicknames, activate / deactivate all your connected wallets from a single device//n• Be notified of new emails on-the-go, with notification centre//n• Organise your emails by archiving, deleting and reporting spam//n• Swipe to archive/delete, and quickly clear out your inbox//n• Send and receive attachments to your wallet address",
+      "appUrl": "https://hashmail.dev/",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmSfFhKpbNErwpegfEyWPfWqN55UHXEhQVEASubSjVi4kH",
+          "platform": "android",
+          "minVersion": "Android 11 (Red Velvet Cake)"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmXqiMoPCUddnYnNsCr9F1DmLwg8izJgpRoFjDgDvoEdEX",
+        "banner": "https://ipfs.io/ipfs/QmUYAyFZTAsJGSdu81u5R3gSQFvojN7rj556u1S1hLGsfN",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmYNNnuGrzoJ4V8Qhgy2ERBg6rPJi8ZZ49NBWpj5w3quzS",
+          "https://ipfs.io/ipfs/QmRit9cyosudjExP8ZaVYJTNKB3TUjRAupJkxUaaqqGpWj",
+          "https://ipfs.io/ipfs/QmYFqLihjAhVBNDKtgctKbeqMEv2qGRWYJfV9ZbvM6XdaU",
+          "https://ipfs.io/ipfs/QmNaAm7qZjht9M21gKyiWBVphjxJBbM5pf31ea7Emvy7EZ"
+        ]
+      },
+      "dappId": "dev.hashmail.dapp",
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0.16",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["web", "android"],
+      "tags":["web3 messaging", "web3 notifications", "web3 communications", "wallet messaging"],
+      "developer": {
+        "legalName" : "Rohit Bagul",
+        "website":"https://hashmail.dev/",
+        "privacyPolicyUrl" : "https://www.hashmail.dev/privacy",
+        "support": {
+          "email": "support@hashlabs.dev"
+        }
+      },
+      "chains": [1, 137, 56],
+      "category": "web3 messaging",
+      "packageId": "dev.hashmail.app"
+    },
+    {
+      "name": "Oohlala",
+      "description": "Oohlala is a platform that aggregate all music NFTs from multiple platforms and chains that make it easy to discover, evaluate, and collect Music NFTs.",
+      "appUrl": "https://oohlala.xyz/",
+      "dappId": "xyz.oohlala.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmXtmTBk5HW3wzoyUKoeGQavAv1nJ8fxZmkspfhuvjKC8d",
+          "platform": "android",
+          "minVersion": "Android 14 (Upside Down Cake)"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmVFT7yeLJzH8DTFJ1pW5acdco33nav2uoMRtnVbL6kNZt",
+        "banner": "https://ipfs.io/ipfs/QmNSLBuiK9pag9GjR9kD7hBG47eJzqnNTLjmiiiE8D3Cpr",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmQNvCMo3hveo6P2LzZTCnR7SyrMess6ZbaeBJvrScpE1W",
+          "https://ipfs.io/ipfs/QmeFXis2poqi6f5LmoQkNPvjzp5qLZLrmZdY8uRqHvqnSH",
+          "https://ipfs.io/ipfs/QmPhsrimT37D3DNWwQhurnd2DWBMrjCmfjTPs4qGzuevxt",
+          "https://ipfs.io/ipfs/QmZprh47R8FBwKaE7J9Wm7QHvyprWBPKkpjhQGLdzfmJf6"
+        ]
+      },
+      "minAge": 15,
+      "isForMatureAudience" : false,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-26",
+      "availableOnPlatform": ["web", "android", "ios"],
+      "tags":["music", "nft", "collect"],
+      "developer": {
+        "legalName" : "SpiderVille",
+        "website":"https://spiderville.xyz/",
+        "privacyPolicyUrl" : "https://spiderville.notion.site/Privacy-Policy-d0bdc04734ed41a9969d0bb0c74190c7",
+        "support": {
+          "email": "gm@oohlala.xyz"
+        }
+      },
+      "chains": [1, 137, 421],
+      "category": "nft",
+      "packageId": "xyz.spiderville.oohlala.webmobile"
     }
   ],
   "featuredSections": [
