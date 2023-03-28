@@ -27324,6 +27324,111 @@
       },
       "chains": [137],
       "category": "defi"
+    },
+    {
+      "name": "unjumble",
+      "description": "Keep up with your favourite web3 communities in a curated daily email, personalised to you.\\nSign up is easy - it takes less than two minutes, and is free.\\nSubmit your wallet and we will provide social media content, long-form content, data, and more - all in one place. You control who you see content from, and how you see it.\\nWe use a mixture of algorithmic and user curation. We search high and low for the updates you need to see - and so do other community members!\\nWe’re building a composable loyalty program that rewards engagement flexibly. Curate, create, and interact with your communities to level up and be rewarded. More info coming soon.\\nGet in touch with any feedback, questions, or if you want to use unjumble to automate engaging newsletters for your brand or community.",
+      "appUrl": "https://www.unjumble.xyz/",
+      "dappId": "xyz.unjumble.dapp",
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmfMnwbaU5m9ggNKJdXSiN2nJ9PyR1Pd61X7J23yWnNKSQ",
+        "banner": "https://ipfs.io/ipfs/QmajT97rFYghxUkBBJudMcuyMKKAMAyZoxXwykNzAwGxuZ",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmYjgULyzA8ybZXV255MxjsHEbpTfyTBqC6Zct6mhwt4Fg"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web"],
+      "developer": {
+        "legalName" : "unjumble",
+        "website":"https://www.unjumble.xyz/",
+        "privacyPolicyUrl" : "https://www.unjumble.xyz/privacy-policy",
+        "support": {
+          "email": "hello@unjumble.xyz"
+        }
+      },
+      "chains": [1, 137, 421],
+      "category": "nft"
+    },
+    {
+      "name": "Cryptorefills",
+      "description": "CryptoRefills allows you to buy mobile top-ups, gift cards, e-gifts, and vouchers with USDC, and USDT on the Polygon network.\\nCryptoRefills has thousands of gift cards from top brands in the following categories:\\n\\nEcommerce\\nGames\\nMobile Topup & Data\\nEntertainment\\nRetail\\nStreaming\\nFood\\nGroceries\\nHome & Furniture\\nElectronics\\nTravel & flights\\nApparel & clothing\\nHealth & beauty and more.",
+      "appUrl": "https://www.cryptorefills.com/",
+      "dappId": "com.cryptorefills.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmRSdWsJmXGa3QzvdiFnyLNQxkaJXr56Z3MmwUnNRL5WCx",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmdA3zGYcxcFR8VxsmiEMtLhJKrZpqUpVyRkz5JQAcue4h",
+        "banner": "https://ipfs.io/ipfs/QmZtkDGioCq9WLCMoPXEzdt2FBR1eDiitiQ6XzBqMdM8cY",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmQvcPZ24meyaJq1NLGBuiyMcN7fxoRt4F22BCF7syRMY3"
+        ]
+      },
+      "minAge": 16,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web", "android", "ios"],
+      "tags": ["crypto", "off-ramping", "e-commerce", "giftcard", "vouchers", "games", "amazon", "apple", "playstation"],
+      "developer": {
+        "legalName" : "Simonluca Landi",
+        "website":"https://cryptorefills.com",
+        "privacyPolicyUrl" : "https://www.cryptorefills.com/privacy-policy",
+        "support": {
+          "url": "https://www.cryptorefills.com/contact-us"
+        }
+      },
+      "chains": [1, 137, 56],
+      "category": "off-ramping",
+      "packageId": "com.cryptorefills"
+    },
+    {
+      "name": "HeyMint",
+      "description": "Create unlimited allowlists with robust joining requirements, for free!\\nYou can create and launch an allowlist in just 5 minutes! Use our robust requirements to help ensure the right collectors join your list.\\nNew projects launch an allowlist with us every single day! Use our explore page to stay up to date, and the collector’s dashboard to keep track of your submissions.",
+      "appUrl": "https://heymint.xyz/",
+      "dappId": "xyz.heymint.dapp",
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmYewdbeY1ShbGo4jmHCG9T3oA4ECAcFmehNCo2NujRr6n",
+        "banner": "https://ipfs.io/ipfs/QmRWzyPjuFKoBUfFDDUN7KDrYeGTd1DTYFc69vEEFDw3Ca",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmQ8HjXUwEo6QBDKidkz5Avr4RfexccjqzUcy5pSTroYDL",
+          "https://ipfs.io/ipfs/QmbSZwn3j219sDXu3strsdNfDSNveSYn4bFUVvgwwhtTFD",
+          "https://ipfs.io/ipfs/QmVEAyFuR9oyFaLHa34X8X4CUdcMgW5EH4EcCxNT6UMFmr"
+        ]
+      },
+      "minAge": 13,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web"],
+      "tags": ["allowlist", "collector", "creator", "whitelist"],
+      "developer": {
+        "legalName" : "Curious Addys",
+        "website":"https://heymint.xyz/",
+        "privacyPolicyUrl" : "https://heymint.xyz/privacy",
+        "support": {
+          "email": "hey@heymint.xyz"
+        }
+      },
+      "chains": [1, 137, 421],
+      "category": "nft"
     }
   ],
   "featuredSections": [
