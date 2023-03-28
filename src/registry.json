@@ -27012,7 +27012,7 @@
         {
           "url": "https://ipfs.io/ipfs/QmVEJ4FVtLw5ooZfMnwpvhxK45qcamP3gRC2Ew7NJVmH96",
           "platform": "android",
-          "minVersion": "Android 11 (Red Velvet Cake)"
+          "minVersion": "11.0.0"
         }
       ],
       "contracts": [
@@ -27114,7 +27114,7 @@
         {
           "url": "https://ipfs.io/ipfs/QmSfFhKpbNErwpegfEyWPfWqN55UHXEhQVEASubSjVi4kH",
           "platform": "android",
-          "minVersion": "Android 11 (Red Velvet Cake)"
+          "minVersion": "11.0.0"
         }
       ],
       "images": {
@@ -27158,7 +27158,7 @@
         {
           "url": "https://ipfs.io/ipfs/QmXtmTBk5HW3wzoyUKoeGQavAv1nJ8fxZmkspfhuvjKC8d",
           "platform": "android",
-          "minVersion": "Android 14 (Upside Down Cake)"
+          "minVersion": "14.0.0"
         }
       ],
       "images": {
@@ -27172,7 +27172,7 @@
         ]
       },
       "minAge": 15,
-      "isForMatureAudience" : false,
+      "isForMatureAudience" : true,
       "isSelfModerated": true,
       "language": "en",
       "version" : "v1.0",
@@ -27191,6 +27191,139 @@
       "chains": [1, 137, 421],
       "category": "nft",
       "packageId": "xyz.spiderville.oohlala.webmobile"
+    },
+    {
+      "name": "Floor: NFTs simplified",
+      "description": "Introducing the Floor app — the best way to stay connected to your NFTs, and understand the world of NFTs.\\n• Track your NFT portfolio in one place\\n• See live and historic activity for Collections\\n• Understand the value of NFTs with estimated value\\n• Discover collections that are trending and build lists of watched collections!\\n• Watch collections to follow prices and get push notifications for updates\\n• View current OpenSea floor prices and listings\\n• See ETH wallet balances\\n• And more...",
+      "appUrl": "https://www.floornfts.io/",
+      "dappId": "io.floornfts.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmQDu2zMGTYYMdgHCYPnxH8CVMLcXXRtxc2C7Js5Jqo2a6",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmRvQV4hXXm4oetmwAVvVa9xEq2dZ8gn9sovnEbrWX3z1Q",
+        "banner": "https://ipfs.io/ipfs/QmQzFJeKKLMvLfuCFHMHHu9iQ2TrTHtXVsQVueTVScP6yK",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmSC7DPQ3wngtjXtWmFff45Rc2aPaLh1SRFJDz6vJ5dEvb",
+          "https://ipfs.io/ipfs/QmRxKDPWJ4NpCG2CFv3ygQDHfJdnqBPSwsGNPTnb6Zv6WK",
+          "https://ipfs.io/ipfs/QmXdSan3BZicfFoJECDxhLeRTrWErMnhKXPCNf5ESs9s21",
+          "https://ipfs.io/ipfs/QmUF76uD1AeuyUjYccHTqbGSe7UU6Pdpog1Y1JAXHFgdZG"
+        ]
+      },
+      "geoRestrictions": {
+        "blockedCountries": ["cu", "ir", "kp", "ru", "sy", "ua"]
+      },
+      "minAge": 13,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": "en",
+      "version" : "v1.14.1",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["android"],
+      "tags":["nfts", "portfolio", "alerts", "content", "floor"],
+      "developer": {
+        "legalName" : "Floor NFTs",
+        "website":"https://www.floornfts.io/",
+        "privacyPolicyUrl" : "https://www.floornfts.io/privacy",
+        "support": {
+          "email": "support@floornfts.io"
+        }
+      },
+      "chains": [1, 137],
+      "category": "nft",
+      "packageId": "io.floornfts"
+    },
+    {
+      "name": "Virtualness",
+      "description": "Creators are the ultimate entrepreneurs. Our belief is that everything that can move from a physical form to a digital one will move. We are building a new economy unlocked by branded digital collectibles that deliver unique experiences, capability and value.\\nIf you identify as a creator: Virtualness is an intuitive, mobile-first platform with free creation tools to design and create your own branded digital collectables and associate them with experiences at a few clicks of a button. We provide free templates and easy-to-use advanced editing tools that allow you to create your own digitally branded collectibles to sell to your community. These could be art, video, music, or tokens to exclusive experiences – online or offline. You have complete control over what you want to create! You are only limited by your imagination.\\nIf creators inspire you: You will have access to a mobile-first experience, education personalization, AI-enabled discovery, easy purchasing experience and free community tools to engage and display your collections. Virtualness is where you will discover unique collections and experiences created exclusively by your favourite creators. You get to interact with your favourite creators directly and engage with other like-minded people. You will also be able to sell and trade the branded digital collectibles, experiences, and more with other fans, on the Virtualness and on other marketplaces. You can also share your branded digital collectibles on any social platform like Instagram, TikTok, and more!",
+      "appUrl": "https://virtualness.io/",
+      "dappId": "io.virtualness.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmVWhKozT6z4oH5DccXcceginz8fEe8kzndfPgPYPcdRFH",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmZyVZdmuiLitStteXytfCWL5KPhMEXKjZ7SgX9X7LaXAh",
+        "banner": "https://ipfs.io/ipfs/QmSjbLXAwkpc6s8DJ1f6dk8hHuuVZzr96Wv94TMChntY8F",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmVzdbrk1X9QBbRbN3W28Q9kYqBE2rkfLnV4SYXJ8z9ohs",
+          "https://ipfs.io/ipfs/QmVrc3P6NqB756JRkpKevKYy63QUEHUPeUCvaCLE6zczaA",
+          "https://ipfs.io/ipfs/QmX68bxLgkkZZNLCW7dih1S396uMGfg1QRFteEFhaNF4SQ",
+          "https://ipfs.io/ipfs/QmYUQA7FFWFuC7WoRgbzcqWmBarYBFJQarmLQF1Ck3v5My",
+          "https://ipfs.io/ipfs/Qma4FT7yReyB3Q6DXbkgqW1Tvuy88rsv6S3xSaEuFPtBkg"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["android"],
+      "tags":["creators", "digital collectibles", "nft", "sports", "fandom", "art"],
+      "developer": {
+        "legalName" : "Virtualness",
+        "website":"https://virtualness.io/",
+        "privacyPolicyUrl" : "https://virtualness.io/privacy-policy/",
+        "support": {
+          "email": "support@virtualness.io"
+        }
+      },
+      "chains": [137],
+      "category": "nft",
+      "packageId": "io.virtualness"
+    },
+    {
+      "name": "Purple Pay",
+      "description": "Purple Pay - Borderless Crypto Payments\\n\\nPurple Pay allows merchants and customers to seamlessly transact using their favorite cryptocurrencies! Transform your smartphone into a powerful point of sale (PoS) device and revolutionize the way you do business.\\n\\nKey Features:\\n\\n💜 Turn Your Smartphone into a PoS Device: Merchants can instantly convert their smartphones into a fully functional PoS device with just a few taps. No need for additional hardware or expensive equipment.\\n\\n💜 Crypto Payments Made Easy: Customers can use Purple Pay to scan the QR code on the merchant's PoS device, and instantly pay with their preferred cryptocurrency.\\n\\n💜 Wide Range of Supported Cryptocurrencies: Purple Pay supports a vast array of cryptocurrencies\\n\\n💜 Secure and Trustworthy: Purple Pay is designed with security at its core, ensuring the protection of your transactions and sensitive data through encryption and advanced security measures.\\n\\n💜 Instant Settlements: Transactions are processed in real-time, with instant settlements, allowing merchants to receive payments quickly and efficiently.\\n\\n💜 User-Friendly Interface: Purple Pay's clean and intuitive interface makes it easy for both merchants and customers to navigate and complete transactions with ease.\\n\\n💜 Transaction History and Analytics: Keep track of your sales and payments with Purple Pay's detailed transaction history and analytics features.\\n\\n💜 Global Reach: Purple Pay is designed to work seamlessly across borders, enabling merchants to tap into the global market and cater to a diverse customer base.\\n\\n💜 Low Transaction Fees: Enjoy competitive transaction fees that won't eat into your profits. Purple Pay's fees are among the lowest in the industry.\\n\\nGet started today by downloading Purple Pay, the all-in-one crypto payment solution for merchants and customers alike.\\n\\nEmbrace the future of digital payments and join the Purple Pay revolution!",
+      "appUrl": "http://pwa.purplepay.app/",
+      "dappId": "app.purplepay.pwa.dapp",
+      "repoUrl": "https://github.com/Purple-Pay/sdk",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/Qmbikwf3EVKQDXAJonDHxZwJGqmVAoYG8XR9WmUBDnTPyo",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmXMjUho5uzq4jikV2qYGi7W88RmMVnDktmmDPnkUKPaSB",
+        "banner": "https://ipfs.io/ipfs/QmdcCR19kC7a7SMkomgSKDwx5BPbDDSWCyLG2ryxS2dbwm",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmPACnavr4Hbc8oQXixX9TNnz7AeDv7tts8FqKaqGKcaXQ",
+          "https://ipfs.io/ipfs/QmZfPZsBFqSaH37A8BFkEUZCSf2y8EGqEZM3Q8LmTzskZA",
+          "https://ipfs.io/ipfs/QmYrUNaPncK12AhWyQMqStr2gQ9x3v9K9Zk3wdcbYE27MQ",
+          "https://ipfs.io/ipfs/QmPW8Z4PCT3Zx1YM2Rp8SmQBWiseiyZdbLRZP15AHatUer",
+          "https://ipfs.io/ipfs/QmZoLomEixFQd6gMhsitTHyL9S2MupGGtE4H2nnXpjSYtv"
+        ]
+      },
+      "minAge": 5,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0.1",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["web", "android"],
+      "developer": {
+        "legalName" : "arunank divya sharan",
+        "website":"https://github.com/Purple-Pay/",
+        "privacyPolicyUrl" : "https://arunanksharan.notion.site/Privacy-Policy-f4bb7e2c57b94c0399824e26c0006755",
+        "support": {
+          "email": "letstalk@purplepay.app"
+        }
+      },
+      "chains": [137],
+      "category": "defi"
     }
   ],
   "featuredSections": [
