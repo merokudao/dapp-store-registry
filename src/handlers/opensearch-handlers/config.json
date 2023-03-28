@@ -1,0 +1,149 @@
+{
+    "settings": {
+        "index": {
+            "number_of_shards": 2,
+            "number_of_replicas": 1
+        },
+        "analysis": {
+            "analyzer": {
+              "autocomplete": {
+                "tokenizer": "autocomplete",
+                "filter": [
+                  "lowercase"
+                ]
+              },
+              "autocomplete_search": {
+                "tokenizer": "lowercase"
+              }
+            },
+            "tokenizer": {
+              "autocomplete": {
+                "type": "edge_ngram",
+                "min_gram": 2,
+                "max_gram": 10,
+                "token_chars": [
+                  "letter",
+                  "digit"
+                ]
+              }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "name": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "autocomplete_search"
+            },
+            "description": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "autocomplete_search"
+            },
+            "appUrl": {
+                "type": "keyword"
+            },
+            "downloadBaseUrls": {
+                "type": "text"
+            },
+            "contracts": {
+                "type": "text"
+            },
+            "images": {
+                "properties": {
+                    "logo": {
+                        "type": "keyword"
+                    },
+                    "banner": {
+                        "type": "keyword"
+                    },
+                    "screenshots": {
+                        "type": "text"
+                    }
+                }
+            },
+            "repoUrl": {
+                "type": "keyword"
+            },
+            "dappId": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "autocomplete_search"
+            },
+            "minAge": {
+                "type": "integer"
+            },
+            "isForMatureAudience": {
+                "type": "boolean"
+            },
+            "isSelfModerated": {
+                "type": "boolean"
+            },
+            "language": {
+                "type": "keyword"
+            },
+            "version": {
+                "type": "keyword"
+            },
+            "isListed": {
+                "type": "boolean"
+            },
+            "listDate": {
+                "type": "date"
+            },
+            "availableOnPlatform": {
+                "type": "text"
+            },
+            "geoRestrictions": {
+                "properties": {
+                    "allowedCountries": {
+                        "type": "text"
+                    },
+                    "blockedCountries": {
+                        "type": "text"
+                    }
+                }
+            },
+            "developer": {
+                "properties": {
+                    "legalName": {
+                        "type": "keyword"
+                    },
+                    "logo": {
+                        "type": "keyword"
+                    },
+                    "website": {
+                        "type": "keyword"
+                    },
+                    "privacyPolicyUrl": {
+                        "type": "keyword"
+                    },
+                    "support": {
+                        "properties": {
+                            "url": {
+                                "type": "keyword"
+                            },
+                            "email": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "githubID": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "tags": {
+                "type": "text"
+            },
+            "chains": {
+                "type": "text"
+            },
+            "category": {
+                "type": "keyword"
+            }
+        }
+    }
+        
+}

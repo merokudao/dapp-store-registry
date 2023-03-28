@@ -1,6 +1,6 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
   "repository": {
     "type": "git",
@@ -25,10 +25,11 @@
     "access": "public"
   },
   "dependencies": {
+    "@opensearch-project/opensearch": "^2.2.0",
     "@stdlib/nlp-porter-stemmer": "^0.0.7",
     "ajv": "^8.11.2",
     "ajv-formats": "^2.1.1",
-    "axios": "^1.2.1",
+    "axios": "^1.3.4",
     "chai": "^4.3.7",
     "cross-fetch": "^3.1.5",
     "date-fns": "^2.29.3",

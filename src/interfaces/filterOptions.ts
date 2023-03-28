@@ -36,4 +36,6 @@ export interface FilterOptions {
   developer?: {
     githubID: string;
   };
+
+  page?: string;
 }

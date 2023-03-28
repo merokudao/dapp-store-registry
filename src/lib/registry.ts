@@ -53,7 +53,6 @@ export class DappStoreRegistry {
 
   constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
     this.strategy = strategy;
-
     if (
       process.env.GITHUB_APP_ID &&
       process.env.GITHUB_APP_PRIVATE_KEY &&
@@ -680,6 +679,11 @@ export class DappStoreRegistry {
     return res;
   };
 
+  /**
+   * search by dapp id
+   * @param queryTxt dappId
+   * @returns if matches return dappInfo
+   */
   public searchByDappId = (queryTxt: string): DAppSchema[] => {
     let res = this.searchEngine?.search(queryTxt, {
       fields: ["dappId"],
