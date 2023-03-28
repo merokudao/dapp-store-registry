@@ -42,7 +42,7 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
     listedOnOrBefore = null,
     allowedInCountries = null,
     blockedInCountries = null,
-    categories = [],
+    categories = null,
     isListed = false,
     developer = null,
     page = 1,
@@ -58,20 +58,20 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
   if (listedOnOrBefore) query.bool.must.push({range: { listDate: { lte: listedOnOrBefore } }});
 
   // it should be filter users location current not more then one country
-  if (allowedInCountries.length) {
+  if (blockedInCountries && allowedInCountries.length) {
     allowedInCountries.split(',').forEach((ac:string)=> {
       query.bool.should.push({term: { "geoRestrictions.allowedCountries": ac.trim() }});
     })
   }
   // it should be filter users location current not more then one country
-  if (blockedInCountries.length) {
+  if (blockedInCountries && blockedInCountries.length) {
     blockedInCountries.split(',').forEach((bc:string)=> {
       query.bool.must_not.push({term: { "geoRestrictions.blockedInCountries": bc.trim() }});
     })
   }
   if (isListed) query.bool.must.push({match: { isListed:  isListed === 'true' ? true: false }});
   if (developer && developer.githubID) query.bool.must.push({match: { "developer.githubID":  developer.githubID.trim() }});
-  if (categories.length) query.bool.must.push({terms: { category: categories.split(',').map((cat: string) => cat.trim()) }});
+  if (categories && categories.length) query.bool.must.push({terms: { category: categories.split(',').map((cat: string) => cat.trim()) }});
   if (dappId) query.bool.must.push({term: { id: dappId.trim() }})
 
   // search on customer string
@@ -81,12 +81,13 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
     query.bool.should.push({ match: { daapId: { query: search, operator: "and" } } })
   }
 
-  let pageNumber = parseInt(page);
-  pageNumber = pageNumber > 0 ? pageNumber: 1;
+  payload.page = parseInt(page);
+  payload.page = payload.page > 0 ? payload.page: 1;
+  
   const finalQuery: PaginationQuery = {
     query,
-    from: (pageNumber-1) * recordsPerPage,
-    size: pageNumber * recordsPerPage,
+    from: (payload.page-1) * recordsPerPage,
+    size: payload.page * recordsPerPage,
     sort: [{ _score: { order: "desc" }}]
   }
 
