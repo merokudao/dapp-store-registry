@@ -96,6 +96,13 @@ export class DappStoreRegistryV1 {
          * have to add if any action have to do onchain
          */
         debug(`deleting the app, name: ${name}, email: ${email}, githubId: ${githubID}, org: ${org}`);
+        const result = await this.searchByDappId(dapp.dappId);
+        if (!result.length && result[0]) {
+            if (result[0].developer && result[0].developer.githubID != githubID) throw new Error(
+                `Cannot delete dApp ${dapp.dappId} as you are not the owner`
+              );
+        }
+
         const res = await this.opensearchApis.createDoc(searchRegistry.alias, {id:dapp.dappId, ...dapp})
         return {
             status: 200,
