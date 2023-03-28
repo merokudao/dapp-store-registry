@@ -182,8 +182,7 @@
         "logo",
         "website",
         "privacyPolicyUrl",
-        "support",
-        "githubID"
+        "support"
       ],
       "properties": {
         "legalName": {
