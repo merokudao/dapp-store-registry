@@ -27354,7 +27354,7 @@
         }
       },
       "chains": [1, 137, 421],
-      "category": "nft"
+      "category": "social media"
     },
     {
       "name": "Cryptorefills",
@@ -27428,6 +27428,41 @@
         }
       },
       "chains": [1, 137, 421],
+      "category": "nft"
+    },
+    {
+      "name": "Mintify",
+      "description": "Mintify is a modular Pro trading terminal that aggregates NFT liquidity from public and private marketplaces.",
+      "appUrl": "https://app.mintify.xyz/",
+      "dappId": "xyz.mintify.dapp",
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmaygPHy8K5YLqRjuoXb7EVomniwQqViavPFPApNhEum8b",
+        "banner": "https://ipfs.io/ipfs/QmYBniG2hx2WyRXob776bMNSoEGERGw6nYwgPSNm6Wxb3J",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmRAwtQQBFNyNzJ5v4baLSy3PgvmXyiv5EKhET7zA3gkFp",
+          "https://ipfs.io/ipfs/Qmek6JuuGH7y3t6PWrA3KdDTw3GJmMnRs1a1XGZpeSjUEE",
+          "https://ipfs.io/ipfs/QmYs4yVLUGmrvY6HccTRV1sZTJXTfEn7A3DZybrJh9xaGA",
+          "https://ipfs.io/ipfs/QmXFg6JyXTxqWCeWMsww92zMVVmVeeUSQGbT4A3gZNHZt4"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web"],
+      "tags": ["nft", "trading", "pro", "terminal"],
+      "developer": {
+        "legalName" : "Mintify",
+        "website":"https://mintify.xyz/",
+        "privacyPolicyUrl" : "https://docs.mintify.xyz/legal/privacy-policy",
+        "support": {
+          "url": "https://docs.mintify.xyz/"
+        }
+      },
+      "chains": [1, 137],
       "category": "nft"
     }
   ],
