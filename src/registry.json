@@ -27074,6 +27074,7 @@
       "availableOnPlatform": ["android"],
       "developer": {
         "legalName" : "Nima Boustanian",
+        "website": "https://0vix.com/",
         "privacyPolicyUrl" : "https://docs.0vix.com/support/privacy-policy",
         "support": {
           "url": "https://docs.0vix.com/support/faq",
