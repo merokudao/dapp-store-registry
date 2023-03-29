@@ -123,11 +123,11 @@ export interface DAppSchema {
      * Legal name of the developer or the company
      */
     legalName: string;
-    logo: string;
+    logo?: string;
     website: string;
     privacyPolicyUrl: string;
     support: {
-      url: string;
+      url?: string;
       email?: string;
     };
     githubID: string;
