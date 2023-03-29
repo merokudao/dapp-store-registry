@@ -182,8 +182,7 @@
         "logo",
         "website",
         "privacyPolicyUrl",
-        "support",
-        "githubID"
+        "support"
       ],
       "properties": {
         "legalName": {
@@ -271,8 +270,18 @@
         "sports",
         "travel",
         "utilities",
-        "weather"
+        "weather",
+        "defi",
+        "nft",
+        "gambling",
+        "web3 messaging"
       ]
+    },
+    "packageId": {
+      "type": "string",
+      "description": "The package id of the dapp",
+      "minLength": 3,
+      "maxLength": 100
     }
   },
   "required": [
@@ -288,6 +297,7 @@
     "chains",
     "listDate",
     "isListed",
-    "category"
+    "category",
+    "developer"
   ]
 }
