@@ -25883,29 +25883,6 @@
       "dappId": "org.debets.app.dapp"
     },
     {
-      "name": "0VIX",
-      "description": "0VIX is a Decentralized Finance (DeFi) liquidity market protocol, built on Polygon. The 0VIX protocol enables users to effortlessly lend, borrow and earn interest with their digital assets. Depositors providing liquidity to the protocol may earn passive income, while borrowers are able to borrow using over-collateralization",
-      "appUrl": "https://www.0vix.com/",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/20353/0vix-dapp-defi-matic-logo_c42747885ceb78c46305d207077e8551.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": "en",
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "finance",
-      "chains": [
-        137
-      ],
-      "dappId": "com.0vix.dapp"
-    },
-    {
       "name": "Dark Throne: The Queen Rises",
       "description": "DARK THRONE: THE QUEEN RISES is a Free to Play, Play to Earn and Epic League’s first game series. This project includes Jeehyung Lee (cover artist for Marvel and DC Comics) as Art Director and a development team with years of expertise in the blockchain and gaming industry. The game follows the adventures of Paladin, Assassin, and Demon Hunter as they explore dungeons, take down monsters, and bring victory and glory to their worlds. You can play Dark Throne on Mobile (iOS and Android), Steam, and Web/PC. Epic League and DARK THRONE are currently available on the Polygon Chain and Binance Smart Chain. You can look forward to our team expanding to more in the future.",
       "appUrl": "https://darkthrone.epicleague.io/",

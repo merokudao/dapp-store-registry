@@ -151,6 +151,16 @@ export class DappStoreRegistry {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     const uniqueDAppIDs = Array.from(new Set(dAppIDs));
     if (dAppIDs.length !== uniqueDAppIDs.length) {
+      const counts: any = {}
+      const duplicaes: any = []
+      dAppIDs.forEach((item) => {
+        counts[item] = counts[item] ? counts[item]: 0;
+        counts[item] += 1
+        if (counts[item] >= 2) {
+          duplicaes.push(item)
+        }
+      });
+      debug(`duplicate dapp: ${JSON.stringify(duplicaes)}`);
       throw new Error(
         `@merokudao/dapp-store-registry: registry is invalid. dApp IDs must be unique.`
       );
