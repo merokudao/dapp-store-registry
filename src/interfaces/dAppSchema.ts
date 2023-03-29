@@ -143,5 +143,5 @@ export interface DAppSchema {
 
   category: DAppCategory;
 
-  packageId: string;
+  packageId?: string;
 }
