@@ -142,4 +142,6 @@ export interface DAppSchema {
   chains: number[];
 
   category: DAppCategory;
+
+  packageId: string;
 }
