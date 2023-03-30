@@ -81,7 +81,7 @@
                 "type": "boolean"
             },
             "language": {
-                "type": "keyword"
+                "type": "text"
             },
             "version": {
                 "type": "keyword"
@@ -141,6 +141,9 @@
                 "type": "text"
             },
             "category": {
+                "type": "keyword"
+            },
+            "packageId": {
                 "type": "keyword"
             }
         }
