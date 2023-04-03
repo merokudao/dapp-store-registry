@@ -61,6 +61,7 @@ export interface DAppSchema {
     minVersion: string;
     maxVersion?: string;
     screenDPI?: string;
+    packageId?: string;
   }[];
 
   contracts?: {
@@ -144,4 +145,6 @@ export interface DAppSchema {
   category: DAppCategory;
 
   packageId?: string;
+
+  walletApiVersion?: string;
 }

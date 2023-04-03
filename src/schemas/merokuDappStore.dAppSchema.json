@@ -54,6 +54,12 @@
           "screenDPI": {
             "type": "string",
             "description": "The screen DPI for which the dApp is optimised. If it is not specified, it's assumed to be optimised for all resolutions."
+          },
+          "packageId": {
+            "type": "string",
+            "description": "The package id of the dapp",
+            "minLength": 3,
+            "maxLength": 100
           }
         }
       }
@@ -281,7 +287,9 @@
         "social media",
         "off-ramping",
         "social",
-        "price aggregator"
+        "price aggregator",
+        "payments",
+        "discovery tool"
       ]
     },
     "packageId": {
@@ -289,6 +297,14 @@
       "description": "The package id of the dapp",
       "minLength": 3,
       "maxLength": 100
+    },
+    "walletApiVersion": {
+      "type": "string",
+      "description": "The wallet api version supported by the dapp",
+      "enum": [
+        "v1",
+        "v2"
+      ]
     }
   },
   "required": [

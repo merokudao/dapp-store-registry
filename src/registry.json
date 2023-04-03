@@ -27589,7 +27589,7 @@
       "developer": {
         "legalName" : "James",
         "website":"https://dmail.ai/",
-        "privacyPolicyUrl" : "https://dmail.ai/",
+        "privacyPolicyUrl" : "https://drive.google.com/file/d/1GywEFKdDmV8CGVjJyLHqxa9oRo9UhpON/view?usp=sharing",
         "support": {
           "url": "https://discord.gg/QbvaeqwMFg"
         }
@@ -27686,6 +27686,411 @@
       "chains": [1, 137],
       "category": "nft",
       "packageId": "com.surfaceboard"
+    },
+    {
+      "name": "Million On Mars",
+      "description": "Play and Own, as you craft and strategize on Mars in the hit blockchain game on WAX, Solana and Polygon.",
+      "appUrl": "https://milliononmars.io/",
+      "dappId": "io.milliononmars.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmcwWDA5U5vEm3W3RXsYqUNmka4VbwXH7MpH49y54A8kCG?filename=io.milliononmars.mom.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId": "io.milliononmars.mom"
+        }
+      ],
+      "contracts": [
+        {
+          "address": "0x1f0ff36c2Cc5F43a83b3857fA120f9007da1E84B",
+          "chainId": "137"
+        },
+        {
+          "address": "0xE4F7172433862AA929c6e98ea4578386726AA771",
+          "chainId": "137"
+        },
+        {
+          "address": "0x6053e99B4997466808aAcdEB86120Ea3fB86cb41",
+          "chainId": "137"
+        },
+        {
+          "address": "0x0f0E4e99e9c5746759602790bCA5B2e424c12cB1",
+          "chainId": "137"
+        },
+        {
+          "address": "0xa7d2d689d72a192e41B8515Bfc74e48375843942",
+          "chainId": "137"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmaR5T7hChM7hDpnDwCEu75e6L3W1eCpsRSKi8aYEXfeAi",
+        "banner": "https://ipfs.io/ipfs/Qma3jL9CoDKJRvDDmBjL6EU6pASaJE1hTbauHERnKCRy2o",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmcTCR38Lw9tRLjLHvy1mGndghV18wjvj8Cr3uiX56NLbp",
+          "https://ipfs.io/ipfs/QmSkLCJGXH5YyYgKMjXJ5zmm4xyuYaYRNBK9bLsWtxhvsY",
+          "https://ipfs.io/ipfs/QmTdYsHeFtESLk5Ji2EqQYMwLpRHwsrb2FGGbDE8YbTf5K",
+          "https://ipfs.io/ipfs/QmaoNVVDaumjWxMgbukVdP9VYhVUUXv8G8BZZcoF7uHroa",
+          "https://ipfs.io/ipfs/Qmf8Et5xZcdE6TaF5hBL4HCLudVoLfo7yTDibEPFYz4CUC"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version" : "v1.0.0.0",
+      "isListed": true,
+      "listDate" : "2023-03-30",
+      "availableOnPlatform": ["web", "android", "ios"],
+      "developer": {
+        "legalName" : "Million On Mars Inc",
+        "website":"https://milliononmars.com/",
+        "privacyPolicyUrl" : "https://www.milliononmars.com/privacy",
+        "support": {
+          "url": "https://www.milliononmars.com/support"
+        }
+      },
+      "chains": [137],
+      "category": "games",
+      "packageId": "io.milliononmars.mom",
+      "walletApiVersion": "v2"
+    },
+    {
+      "name": "KingFrog Crossing",
+      "description": "KingFrog needs your help to make his way across the boardwalk! Avoid obstacles, collect coins and power-ups, and set a new high score. Sup",
+      "appUrl": "https://supducks.com/",
+      "dappId": "com.supducks.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmNk1YG6KGK4MXcxGLFBqdAzc3351Fs9MkhkNoXKsNiVju?filename=com.supducks.apk",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmbH1pdkntYK27TuAzHmkGU6KuyBM1y8EkVovhHmLb1BKD",
+        "banner": "https://ipfs.io/ipfs/QmfAL1gCBVb4aQDv6hryqdHNcD7B2qJkH2haHc1oTQjspY",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmRWz9UbZwmsoYYKsjTWZWtCs35Rtf53fn7vyo7Vh48YHN",
+          "https://ipfs.io/ipfs/QmbFFQWnyE7hN9BYtHe36XMqE8FELgEhnSsUwUmjEVD45E",
+          "https://ipfs.io/ipfs/QmRz7v9j4ehV8MJtuUpvMo1pHuFqFidTcDqtkvy6RoVRXj",
+          "https://ipfs.io/ipfs/QmfJxtXTKr4HjrKDZ4XfK7NnR2RZ6GS5TaW2tn4H9mJ6Bt",
+          "https://ipfs.io/ipfs/Qmc2kqBHeND1zbJBtYXL1MEm5giDdfubw748bY4uz4o31U"
+        ]
+      },
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": ["en"],
+      "version" : "v1.11",
+      "isListed": true,
+      "listDate" : "2023-03-30",
+      "availableOnPlatform": ["android", "ios"],
+      "tags": ["supDucks","kingfrogs","megatoads","megaVolt","crossy","frog","jump","hop","frogger","game","fun"],
+      "developer": {
+        "legalName" : "MegaVolt Corp",
+        "website":"https://supducks.com/",
+        "privacyPolicyUrl" : "https://megavolt.notion.site/Privacy-Policy-4e8c3b230b3a42ef91571329c861af47",
+        "support": {
+          "url": "https://supducks.freshdesk.com/"
+        }
+      },
+      "chains": [137],
+      "category": "nft"
+    },
+    {
+      "name": "Reap",
+      "description": "Reap is a financial platform that integrates spend management software and innovative payment products to drive success for mid to large-sized enterprises.\\n\\nBy leveraging innovation to provide financial connectivity and accessibility, Reap empowers businesses globally to digitise their finances and make intelligent spending choices, allowing them to concentrate on achieving their maximum potential.",
+      "appUrl": "https://reap.global/",
+      "dappId": "global.reap.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmVtzKqpZgVk8T2urQMv34NqbEWwbkzk3qQ1EsZfc2VAaj?filename=com.reaphq.reapmobile.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId": "com.reaphq.reapmobile"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmPadgU7pKpXecsBYxFZhytiVGWM8LUMZAhUPN3FArcwwM",
+        "banner": "https://ipfs.io/ipfs/QmWnqik3a2ria3pfymQJU6oMVfyQ1mN3RmSoSZEXea8uoe",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmV2ARubR9jeAJRWu39FH8zjDUcLqkuRPqcZNfVi2xQEXV",
+          "https://ipfs.io/ipfs/QmVkwHZN86EbKoMaq9bPAtFFFxryoetrCHZhmCF1ktX8yy",
+          "https://ipfs.io/ipfs/QmV2xCYs3e4kBb4QdmC8mddkzeFVYH2UP434EWE8qjEsdB",
+          "https://ipfs.io/ipfs/QmRAjDHAwwTziaajNPQStogbJydLc9Yr2fS1HEz1eDbTs1",
+          "https://ipfs.io/ipfs/QmTeoVNqYfn5LyYpc6aXBAPh1ZbhXw9vgDk5zd1EknJV1b"
+        ]
+      },
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-31",
+      "availableOnPlatform": ["android", "ios"],
+      "tags": [],
+      "developer": {
+        "legalName" : "Reap Technologies Limited",
+        "website":"https://reap.global/",
+        "privacyPolicyUrl" : "https://reap.global/en/privacy-policy/",
+        "support": {
+          "url": "https://support.reap.global/en/"
+        }
+      },
+      "chains": [137],
+      "category": "defi",
+      "packageId": "com.reaphq.reapmobile"
+    },
+    {
+      "name": "NFT Trader",
+      "description": "NFTTrader.io is a P2P non-custodial platform that allows swaps of your digital assets in a more secure and social way.",
+      "appUrl": "https://www.nfttrader.io/",
+      "dappId": "io.nfttrader.dapp",
+      "contracts": [
+        {
+          "address": "0x00000000006c3852cbef3e08e8df289169ede581",
+          "chainId": "1"
+        },
+        {
+          "address": "0x00000000006c3852cbef3e08e8df289169ede581",
+          "chainId": "137"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmdkEPgjvdt8AKQvUKZs6xVEj1fGb12V6RhFu8YmEUJkxa",
+        "banner": "https://ipfs.io/ipfs/QmVuof3UoTihh2mrrPENPe1LVaKyih1pLmFrXngocbiNvq",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmYGrVhLDR4LstJFvwPcPSzUeGgvbaMaMPwhHp6KTydMeE"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": ["en", "ja"],
+      "version" : "v3.0",
+      "isListed": true,
+      "listDate" : "2023-03-31",
+      "availableOnPlatform": ["web"],
+      "geoRestrictions": {
+        "blockedCountries": ["af", "by", "cf", "cu", "et", "ir", "iq", "kp", "lb", "ly", "ml", "ni", "ru", "so", "ss", "sd", "sy", "ua", "ve", "ye", "zw"]
+      },
+      "tags": ["nft","nfts","digital collectibles", "evm", "polygon", "ethereum", "blockchain", "games"],
+      "developer": {
+        "legalName" : "NFTTrader Team",
+        "website":"https://www.nfttrader.io/",
+        "privacyPolicyUrl" : "https://www.nfttrader.io/privacy",
+        "support": {
+          "email": "info@nfttrader.io"
+        }
+      },
+      "chains": [1, 137],
+      "category": "nft",
+      "walletApiVersion": "v2"
+    },
+    {
+      "name": "Hive NFT APP",
+      "description": "Explore the world of NFTs (digital collectibles) and Web3 companies with Hive's mobile app\\n\\nAs the popularity of NFTs and Web3 technology continues to grow, it can be difficult to keep up with all the new and exciting projects in the space. That's where Hive's mobile app comes in. With just a swipe or a tap, you can discover a wide range of NFT collections, including digital collectables, from artists, marketplaces, and blockchains all over the world.\\n\\nHive - Features & Benefits\\n\\n• Browse and discover NFTs from top marketplaces like OpenSea, MagicEden, and more\\n• See the top trending NFT collections from big names like Bored Ape Yacht Club, DeGods, Crypto Kitties, and The Sandbox Metaverse, as well as lesser-known drops and collections\\n• Find curated NFT projects on a variety of blockchains including Polygon, Ethereum, Solana, Avalanche and more\\n• Keep your favorites in your \"LIKED\" page to stay up to date on all important information like; Floor Price/Listed/Owners/Volume/Supply all in real time.\\n\\nDiscover New NFT Projects\\n\\nHive's app makes it easy to discover new NFT projects from a variety of marketplaces, blockchains, and digital artists. Find NFTS and WEB3 companies and utilities you didn't even know existed.\\n\\nSave Your Favorite NFTs\\n\\nDid you find an NFT collection, DAO, or Web3 company that you're interested in? Swipe right on the project to save it to your \"LIKED PAGE\" found in your profile page found at the bottom of the app (a profile icon). This \"LIKED\" project will stay there until you \"DISLIKE\" it. (New feature: You can now super like by clicking the heart icon when the project is in your liked page. This will keep all super liked at the top for an easier and quick find)\\n\\nOther Features\\n\\nFind links to NFT project and Web3 URLs in the bio section of the app, allowing for easy access to more information about the projects that catch your eye.\\n\\nWe're constantly working on new features to enhance your NFT discovery and learning experience, so stay tuned! If you have any feedback or need assistance, don't hesitate to reach out to us at hello@hivenftapp.com. You can also follow us on Twitter to stay up to date on the latest NFT drops and giveaways. @thehivenftapp",
+      "appUrl": "https://hivenftapp.com/",
+      "dappId": "com.hivenftapp.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmYthPMm1tXRw9kmJ6fYE1q3RXq1uixFbovvNace2Wd5dQ?filename=com.hivenftapp.apk",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmcRHUtJCLyUYUyFJCm3XwZKxRJpb8SJUNs6mQQQ7P4oR6",
+        "banner": "https://ipfs.io/ipfs/QmPAm9SBME4Pk1vmwqoncUbBo1Vgt9kHvkXnvQZ4Ra1qDY",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmRmsPtasJzVVrtg3B1vGwK1j1nkg6uj2L6qF6VLPDTwL4",
+          "https://ipfs.io/ipfs/Qmc6D7VnSmyWkf7tafzXYwghp7J5yvc9i48cAMsLf7Ykjd",
+          "https://ipfs.io/ipfs/QmeBgEhgeGfxEpbfJ53txNJtqzxBVeCsXLtNk7vzavBjH2",
+          "https://ipfs.io/ipfs/QmPcQkoQxBdoAbJf1vUZB5gDVqurrtLL6AyEmtb3wkUg2o",
+          "https://ipfs.io/ipfs/QmZRV3jGAFpQoxZjmfLsF1mchfpYKKG6PX3qBTkzDMax35"
+        ]
+      },
+      "minAge": 12,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": ["en"],
+      "version" : "v2.0.6",
+      "isListed": true,
+      "listDate" : "2023-03-31",
+      "availableOnPlatform": ["android", "ios"],
+      "tags": ["nfts", "digital collectables", "nft marketplace", "polygon nfts", "solana nfts", "eth nfts", "buy an nft", "what is nft", "discovery tools"],
+      "developer": {
+        "legalName" : "Hive NFT APP",
+        "website":"https://hivenftapp.com/",
+        "privacyPolicyUrl" : "https://hivenftapp.com/privacy",
+        "support": {
+          "email": "hello@hivenftapp.com"
+        }
+      },
+      "chains": [1, 137, 56, 43114],
+      "category": "discovery tool"
+    },
+    {
+      "name": "Xion Global",
+      "description": "Introducing Xion Pay, a multi-chain crypto payment gateway where customers can checkout with a variety of crypto payment options and manage all their orders in one place.\\n\\nFeatures:\\n- Multi-chain crypto checkout (BTC, ETH, LTC, XRP, USDT, USDT & XGT (Polygon) & more)\\n- My Orders management dashboard to track all transactions, order codes and loyalty points from any online or in-store crypto purchases\\n\\nIt's an easy way to manage all your crypto payments in one dashboard on xionpay.app and all made possible through the Xion Pay SDK for developers.",
+      "appUrl": "https://xionpay.app/",
+      "dappId": "app.xionpay.dapp",
+      "repoUrl": "https://github.com/xion-global/xion_smart-contracts/tree/master/contracts",
+      "contracts": [
+        {
+          "address": "0x602c046DD2438FF9a76911B45fd4931Fc40f4D5F",
+          "chainId": "137"
+        },
+        {
+          "address": "0x9EB8A789Ed1Bd38D281962b523349d5D17A37d47",
+          "chainId": "137"
+        },
+        {
+          "address": "0x74d2137F4E67349E7D4De09b401816797A773bE7",
+          "chainId": "137"
+        },
+        {
+          "address": "0xa26805682C32E0Fb66cFDE70f19725178b03f6f8",
+          "chainId": "137"
+        },
+        {
+          "address": "0xce0dbfD82ef25a5fCd6F206A087D5b76DE280BF8",
+          "chainId": "137"
+        },
+        {
+          "address": "0x61e129d8b0836F05b64d7c59500F4fa042EA8c5B",
+          "chainId": "137"
+        },
+        {
+          "address": "0xB22752a307f6b81Eef67D81d43B993F8e8C84638",
+          "chainId": "137"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmXqtXv42mdE9AQwJmtcZPvczmycsWTqn4WZfKWVoeCJtD",
+        "banner": "https://ipfs.io/ipfs/Qmexf3hANwHMUN8eRa5yGdNhy8wepDQATLgv49EAV8mNr4",
+        "screenshots": [
+          "https://ipfs.io/ipfs/Qma8qasuJ5X7a1TEp9pkxZWu1RbqnBWdPDMkcB9H6dWLyf",
+          "https://ipfs.io/ipfs/QmfBNipJuyjgd278NT9NTkp3Ba7srGncKubscc6dGfQhUg",
+          "https://ipfs.io/ipfs/Qmdpd5ZTGnkXgerxAvcPs61XX3nPg3ht9upm8ouH2bLx7m",
+          "https://ipfs.io/ipfs/QmWuh2Xdsgoy8Y9FetG8rvMFGbzT9RGpkFKjnnEDjMGX7U"
+        ]
+      },
+      "minAge": 16,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version" : "v2.0",
+      "isListed": true,
+      "listDate" : "2023-04-01",
+      "availableOnPlatform": ["web", "android", "ios"],
+      "tags": ["crypto payments", "order management", "fintech", "web3"],
+      "developer": {
+        "legalName" : "aeryn@xion.global",
+        "website":"https://xion.global/",
+        "privacyPolicyUrl" : "https://checkout.xionpay.app/assets/Privacy_Policy.pdf",
+        "support": {
+          "email": "contact@xion.global"
+        }
+      },
+      "chains": [137],
+      "category": "payments",
+      "walletApiVersion": "v2"
+    },
+    {
+      "name": "Sunflower Land",
+      "description": "Sunflower Land is a farm simulation game that teaches users about how business works through building a vibrant, entertaining, and successful farm . Farmers can raise crops and hunt for resources, cook food and craft items before trading them with other players to build their empire. One of the game's main features is balancing supply and demand; when resources are scarce, they become more expensive because they're in high demand.\\n\\nThought Farm, the studio behind Sunflower Land, ensure players are always engaged by incorporating lore into the game and filling its world with a memorable cast of characters throughout the many available islands. Every item you harvest, gather, or craft is an asset that's 100% owned by you through the power of non-fungible tokens and identifiable on the Polygon Blockchain. This means that people can collect rare and valuable items and then trade them with friends or list them on supported trading platforms.",
+      "appUrl": "https://sunflower-land.com/play/",
+      "dappId": "com.sunflower-land.dapp",
+      "repoUrl": "https://github.com/sunflower-land/sunflower-land",
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmX9AxUHKEgLWPhsXvpx5g1deK13UJG4rXvhi3HnLpq38n",
+        "banner": "https://ipfs.io/ipfs/QmXbHhjCRxwYshZRLegsoRpNkGaRXECWNPzko7psViAoSq",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmU9xkmj5euR9gYVdxQwBnXfqghNJSKSczZcP8QVXmUVbH",
+          "https://ipfs.io/ipfs/QmSFptPa1Ufv5171Pzwu2xjBapGmB91VkUkoZLF1VPxLe6",
+          "https://ipfs.io/ipfs/QmTsF9uM3o7hhKHFxzXTzqV8kuWYVYfuFbuNAU5sHRGzfg",
+          "https://ipfs.io/ipfs/QmQtcnsPFSm1irrfp5Py51CYaeXmyouAuiY7RpxP2RSuT5"
+        ]
+      },
+      "contracts": [
+        {
+          "address": "0xD1f9c58e33933a993A3891F8acFe05a68E1afC05",
+          "chainId": "137"
+        },
+        {
+          "address": "0x2B4A66557A79263275826AD31a4cDDc2789334bD",
+          "chainId": "137"
+        },
+        {
+          "address": "0x22d5f9B75c524Fec1D6619787e582644CD4D7422",
+          "chainId": "137"
+        },
+        {
+          "address": "0x22F39FF254ac5c46Eb5A010634423E450FC58699",
+          "chainId": "137"
+        },
+        {
+          "address": "0xE8C3fd0278776BcBC5122f06d88E2f22d7F01375",
+          "chainId": "137"
+        },
+        {
+          "address": "0x624E4fa6980Afcf8EA27BFe08e2fB5979b64DF1C",
+          "chainId": "137"
+        },
+        {
+          "address": "0x4bb5b2461e9Ef782152c3a96698b2a4cF55B6162",
+          "chainId": "137"
+        },
+        {
+          "address": "0x687BcED586A8AECEdA5bd6b142577DE1d83a2a9c",
+          "chainId": "137"
+        },
+        {
+          "address": "0xcfA31cBAe3459c780999D12a9e5FdBd8E8588725",
+          "chainId": "137"
+        },
+        {
+          "address": "0x8E3e2b16f0aEf0890fE3d9Bb550Ccf10Afdd7CA7",
+          "chainId": "137"
+        },
+        {
+          "address": "0x24d32a94fA91d4C99f994622AF30Eb16bf76AEAC",
+          "chainId": "137"
+        },
+        {
+          "address": "0x1056A4ea959e3d84D6DC56Ac06B8Ff5B84648400",
+          "chainId": "137"
+        },
+        {
+          "address": "0x1F477673d165f058781BB254C6D96897FbCe42f0",
+          "chainId": "137"
+        },
+        {
+          "address": "0x9E5Cd8b8D5B2329f1299a5c40B87feD55dA502D0",
+          "chainId": "137"
+        }
+      ],
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version" : "v1.2.5",
+      "isListed": true,
+      "listDate" : "2023-04-03",
+      "availableOnPlatform": ["web"],
+      "developer": {
+        "legalName" : "Thought Farm Pty Ltd",
+        "website":"http://thought-farm.com.au/",
+        "privacyPolicyUrl" : "https://docs.sunflower-land.com/support/privacy-policy",
+        "support": {
+          "url": "https://sunflowerland.freshdesk.com/support/home"
+        }
+      },
+      "chains": [137],
+      "category": "nft",
+      "walletApiVersion": "v1"
     }
   ],
   "featuredSections": [
