@@ -26963,9 +26963,10 @@
       "appUrl": "https://www.0vix.com/",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmVEJ4FVtLw5ooZfMnwpvhxK45qcamP3gRC2Ew7NJVmH96",
+          "url": "https://ipfs.io/ipfs/QmVEJ4FVtLw5ooZfMnwpvhxK45qcamP3gRC2Ew7NJVmH96?filename=com.zerovix.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "com.zerovix"
         }
       ],
       "contracts": [
@@ -27058,7 +27059,8 @@
         }
       },
       "chains": [137],
-      "category": "defi"
+      "category": "defi",
+      "packageId": "com.zerovix"
     },
     {
       "name": "hashmail",
@@ -27066,9 +27068,10 @@
       "appUrl": "https://hashmail.dev/",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmSfFhKpbNErwpegfEyWPfWqN55UHXEhQVEASubSjVi4kH",
+          "url": "https://ipfs.io/ipfs/QmSfFhKpbNErwpegfEyWPfWqN55UHXEhQVEASubSjVi4kH?filename=dev.hashmail.app.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "dev.hashmail.app"
         }
       ],
       "images": {
@@ -27110,9 +27113,10 @@
       "dappId": "xyz.oohlala.dapp",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmXtmTBk5HW3wzoyUKoeGQavAv1nJ8fxZmkspfhuvjKC8d",
+          "url": "https://ipfs.io/ipfs/QmXtmTBk5HW3wzoyUKoeGQavAv1nJ8fxZmkspfhuvjKC8d?filename=xyz.spiderville.oohlala.webmobile.apk",
           "platform": "android",
-          "minVersion": "14.0.0"
+          "minVersion": "14.0.0",
+          "packageId": "xyz.spiderville.oohlala.webmobile"
         }
       ],
       "images": {
@@ -27153,9 +27157,10 @@
       "dappId": "io.floornfts.dapp",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmQDu2zMGTYYMdgHCYPnxH8CVMLcXXRtxc2C7Js5Jqo2a6",
+          "url": "https://ipfs.io/ipfs/QmQDu2zMGTYYMdgHCYPnxH8CVMLcXXRtxc2C7Js5Jqo2a6?filename=io.floornfts.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "io.floornfts"
         }
       ],
       "images": {
@@ -27199,9 +27204,10 @@
       "dappId": "io.virtualness.dapp",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmVWhKozT6z4oH5DccXcceginz8fEe8kzndfPgPYPcdRFH",
+          "url": "https://ipfs.io/ipfs/QmVWhKozT6z4oH5DccXcceginz8fEe8kzndfPgPYPcdRFH?filename=io.virtualness.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "io.virtualness"
         }
       ],
       "images": {
@@ -27244,9 +27250,10 @@
       "repoUrl": "https://github.com/Purple-Pay/sdk",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/Qmbikwf3EVKQDXAJonDHxZwJGqmVAoYG8XR9WmUBDnTPyo",
+          "url": "https://ipfs.io/ipfs/Qmbikwf3EVKQDXAJonDHxZwJGqmVAoYG8XR9WmUBDnTPyo?filename=app.purplepay.merchant.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "app.purplepay.merchant"
         }
       ],
       "images": {
@@ -27318,9 +27325,10 @@
       "dappId": "com.cryptorefills.dapp",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmRSdWsJmXGa3QzvdiFnyLNQxkaJXr56Z3MmwUnNRL5WCx",
+          "url": "https://ipfs.io/ipfs/QmRSdWsJmXGa3QzvdiFnyLNQxkaJXr56Z3MmwUnNRL5WCx?filename=com.cryptorefills.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "com.cryptorefills"
         }
       ],
       "images": {
@@ -27596,9 +27604,10 @@
       "dappId": "com.coingecko.dapp",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmcWEM4AcCVKUU3VUY49L7tXyXg7FmPJuRQSU9T9JpinEf",
+          "url": "https://ipfs.io/ipfs/QmcWEM4AcCVKUU3VUY49L7tXyXg7FmPJuRQSU9T9JpinEf?filename=com.coingecko.coingeckoapp.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "com.coingecko.coingeckoapp"
         }
       ],
       "images": {
@@ -27640,9 +27649,10 @@
       "dappId": "xyz.surfaceboard.dapp",
       "downloadBaseUrls": [
         {
-          "url": "https://ipfs.io/ipfs/QmQkv8mh86bsHGgX4SWcnvHJAL4G7BwkWVh8v5PdkkpS4f",
+          "url": "https://ipfs.io/ipfs/QmQkv8mh86bsHGgX4SWcnvHJAL4G7BwkWVh8v5PdkkpS4f?filename=com.surfaceboard.apk",
           "platform": "android",
-          "minVersion": "11.0.0"
+          "minVersion": "11.0.0",
+          "packageId": "com.surfaceboard"
         }
       ],
       "images": {
