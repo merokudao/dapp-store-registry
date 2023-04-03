@@ -94,7 +94,8 @@ export class DappStoreRegistry {
         "images",
         "chains",
         "minAge",
-        "developer"
+        "developer",
+        "packageId"
       ],
       searchOptions: { prefix: true }
     });
