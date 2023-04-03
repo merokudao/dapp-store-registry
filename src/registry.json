@@ -3628,29 +3628,6 @@
       "dappId": "io.cryptohodlers.dapp"
     },
     {
-      "name": "KingFrogs",
-      "description": "In this lonely, cold world everyone needs a companion and that companion is KingFrog! KingFrog is the perfect complement to your sick AF SupDuck pfp and is exceptionally dope in his own right. What's most exciting though, is KingFrog will herald a new dawn of NFT utility. Frog owners will be able to utilize VOLT to power their lab equipment and run all manner of crazy experiments. Frogs are fun. Frogs are dope. Get yours today!",
-      "appUrl": "https://supducks.com/",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/9680/kingfrogs-dapp-collectibles-ethereum-logo_7d1bdc975719824aa89bce6030d4326c.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": ["en"],
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "lifestyle",
-      "chains": [
-        1
-      ],
-      "dappId": "com.supducks.dapp"
-    },
-    {
       "name": "Cross Mint",
       "description": "Cross Mint is a multi-chain 721/1155 NFT minter that allows creators and hobbyists to mint out their creations on Binance Smart Chain #BSC, Polygon #MATIC, and Ethereum #ETH all from a unified interface. ? What makes this so interesting to us as an infrastructure project is that the NFT minter itself is designed with various components in mind which we will of course document quite extensively next week. This includes: 1. Creators having the full ability to take their NFTs to other platforms easily; 2. The Hot Cross platform benefiting from wide adoption via a fee structure in the mint; 3. Support for 3 chains and 2 NFT standards from Day 1; 4. No reliance on a view layer to perform beautifully; 5. Support for images, GIFs, audio, and video; 6. And a clear road to an SDK and API that other parties can integrate into their own products. ? And is this safe? Absolutely. Cross Mint itself has undergone audits from some of the best firms in the industry including SlowMist, Beosin, and Omniscia.",
       "appUrl": "https://mint.hotcross.com/",
@@ -23766,29 +23743,6 @@
       "dappId": "io.yup.dapp"
     },
     {
-      "name": "Sunflower Land",
-      "description": "Stranded on a deserted island, you must scavenge the land to gather seeds, minerals and resources in order to farm and grow your empire. Spend only a few minutes a day tending to your farm, completing daily quests, expanding your land, discovering new islands & trading with players. From the gold you mine, to the sunflower seeds you plant, everything is an identifiable resource on the Polygon Blockchain. There are thousands of unique in-game resources that are tradeable amongst players! Each week there are rare SFTs that you can craft with a limited supply - Make sure you collect the in-game resources so you don't miss out. Sunflower Land is a Blockchain-first game. Every tree you chop, radish pie you eat or experience you gain is saved to the Blockchain. You own your Bumpkin character and can grow and cherish them in a vibrant community. Sunflower Land was built by a team of passionate people who love building community driven projects. Come join the community of 60+ open source developers and 200+ artists today!",
-      "appUrl": "https://sunflower-land.com",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/14612/sunflowerland-dapp-games-matic-logo_65e0d31d95d2f52d8f79867bdc5ea60e.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": ["en"],
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "games",
-      "chains": [
-        137
-      ],
-      "dappId": "com.sunflower-land.dapp"
-    },
-    {
       "name": "PolyCub",
       "description": "Maximize Yield Alongside One of the Longest Standing Crypto Communities In the Space Not Your Average Yield Optimizer: Set it and Forget it, Save on Fees and Maximize Your Yield PolyCUB is a yield optimizer platform that provides a safe and easy way for DeFi users to discover yield and earn on the Polygon Network. The platform was built by the LeoFinance Project which has built nearly a dozen apps in the crypto space over the past 3 years and continues to build blockchain-based applications like leofinance.io, cubdefi.com, polycub.com and many more! PolyCUB is not your average Yield Optimizer platform. Farmers earn autocompounding yield from platforms like Quickswap and Sushiswap. Those are autonomously added to their deposited balance and can be withdrawn at any time. On top of this standard yield, farmers also earn POLYCUB tokens. When a farmer earns POLYCUB from staking LP tokens, they are locked for X blocks. Farmers can claim their POLYCUB harvests at any time, but if they claim it before the X blocks locking period, then 50% of their harvest is returned to the xPOLYCUB contract. The farmer who claims their POLYCUB harvest early (before the X block staking period) receives 50% of their POLYCUB yield The other 50% is returned to the xPOLYCUB staking contract and can be claimed by users who stake POLYCUB into xPOLYCUB. This mechanism works similarly to platforms like Adamant Finance. PolyCUB vaults automate the process of claiming base platform (i.e. QuickSwap/Sushiswap) yield and compound it into each user’s base deposit position. This dramatically lowers gas costs, saves time from manual compounds and maximizes the potential yield you can earn.",
       "appUrl": "https://polycub.com/",
@@ -27829,7 +27783,6 @@
       "isListed": true,
       "listDate" : "2023-03-31",
       "availableOnPlatform": ["android", "ios"],
-      "tags": [],
       "developer": {
         "legalName" : "Reap Technologies Limited",
         "website":"https://reap.global/",
