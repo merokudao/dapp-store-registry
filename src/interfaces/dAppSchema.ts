@@ -146,5 +146,5 @@ export interface DAppSchema {
 
   packageId?: string;
 
-  walletApiVersion?: string;
+  walletApiVersion?: string[];
 }
