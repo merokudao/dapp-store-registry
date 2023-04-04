@@ -299,8 +299,13 @@
       "maxLength": 100
     },
     "walletApiVersion": {
-      "type": "string",
+      "type": "array",
       "description": "The wallet api version supported by the dapp",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
       "enum": [
         "v1",
         "v2"

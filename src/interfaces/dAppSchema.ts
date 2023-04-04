@@ -97,7 +97,7 @@ export interface DAppSchema {
   /**
    * A string in ISO-639-1 which signifies the language of the dApp
    */
-  language: string[];
+  language: string[] | string;
   /**
    * The version of the dApp that is available on the dApp store
    */
