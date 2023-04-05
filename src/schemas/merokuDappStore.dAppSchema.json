@@ -25,7 +25,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["url", "platform", "architecture", "minVersion"],
+        "required": ["url", "platform", "minVersion"],
         "properties": {
           "url": {
             "type": "string",
@@ -179,7 +179,6 @@
       "type": "object",
       "required": [
         "legalName",
-        "logo",
         "website",
         "privacyPolicyUrl",
         "support"
@@ -206,7 +205,6 @@
         },
         "support": {
           "type": "object",
-          "required": ["url"],
           "properties": {
             "url": {
               "type": "string",
@@ -275,7 +273,9 @@
         "defi",
         "nft",
         "gambling",
-        "web3 messaging"
+        "web3 messaging",
+        "social media",
+        "off-ramping"
       ]
     },
     "packageId": {
@@ -298,7 +298,6 @@
     "chains",
     "listDate",
     "isListed",
-    "category",
-    "developer"
+    "category"
   ]
 }

@@ -25883,29 +25883,6 @@
       "dappId": "org.debets.app.dapp"
     },
     {
-      "name": "0VIX",
-      "description": "0VIX is a Decentralized Finance (DeFi) liquidity market protocol, built on Polygon. The 0VIX protocol enables users to effortlessly lend, borrow and earn interest with their digital assets. Depositors providing liquidity to the protocol may earn passive income, while borrowers are able to borrow using over-collateralization",
-      "appUrl": "https://www.0vix.com/",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/20353/0vix-dapp-defi-matic-logo_c42747885ceb78c46305d207077e8551.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": "en",
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "finance",
-      "chains": [
-        137
-      ],
-      "dappId": "com.0vix.dapp"
-    },
-    {
       "name": "Dark Throne: The Queen Rises",
       "description": "DARK THRONE: THE QUEEN RISES is a Free to Play, Play to Earn and Epic League’s first game series. This project includes Jeehyung Lee (cover artist for Marvel and DC Comics) as Art Director and a development team with years of expertise in the blockchain and gaming industry. The game follows the adventures of Paladin, Assassin, and Demon Hunter as they explore dungeons, take down monsters, and bring victory and glory to their worlds. You can play Dark Throne on Mobile (iOS and Android), Steam, and Web/PC. Epic League and DARK THRONE are currently available on the Polygon Chain and Binance Smart Chain. You can look forward to our team expanding to more in the future.",
       "appUrl": "https://darkthrone.epicleague.io/",
@@ -27012,7 +26989,7 @@
         {
           "url": "https://ipfs.io/ipfs/QmVEJ4FVtLw5ooZfMnwpvhxK45qcamP3gRC2Ew7NJVmH96",
           "platform": "android",
-          "minVersion": "Android 11 (Red Velvet Cake)"
+          "minVersion": "11.0.0"
         }
       ],
       "contracts": [
@@ -27084,9 +27061,9 @@
       "images": {
         "logo": "https://ipfs.io/ipfs/QmSWRAMJc8V2ymVqrkY5PPpBb7M6mVKQVufMZFxdx2a4bD",
         "banner": "https://ipfs.io/ipfs/QmburnRBMKxk5NTQXwourbKEK44GcmDeBU7oaMnpVEmgKy",
-        "screenshots": "https://ipfs.io/ipfs/QmYRkJdwHbpQ4f5QhWHxeevqv59aQoTZqzdWroPcmSSTaf"
+        "screenshots": ["https://ipfs.io/ipfs/QmYRkJdwHbpQ4f5QhWHxeevqv59aQoTZqzdWroPcmSSTaf"]
       },
-      "dappId": "com.zerovix",
+      "dappId": "com.0vix.dapp",
       "minAge": 18,
       "isForMatureAudience" : true,
       "isSelfModerated": false,
@@ -27097,6 +27074,7 @@
       "availableOnPlatform": ["android"],
       "developer": {
         "legalName" : "Nima Boustanian",
+        "website": "https://0vix.com/",
         "privacyPolicyUrl" : "https://docs.0vix.com/support/privacy-policy",
         "support": {
           "url": "https://docs.0vix.com/support/faq",
@@ -27104,7 +27082,366 @@
         }
       },
       "chains": [137],
-      "category": "DeFi"
+      "category": "defi"
+    },
+    {
+      "name": "hashmail",
+      "description": "hashmail is you unified web3 inbox. Now you can send and receive emails with your wallet address, ENS, lens handle, or unstoppable domains - all from the convenience of your phone. Use hashmail forwarding to auto-forward emails sent to your wallet address directly to your preferred channels - telegram, discord and web2 email.\\nTo login, use any of the methods below:\\n• Connect to the app using any installed wallet - we support over 170+ wallets\\n• Alternatively (if you only have browser wallets), connect your wallet using your PC on app.hashmail.dev. You can then scan a QR code to login (see bottom left on the browser)\\nWith the hashmail app, you can://n• Send and receive emails with all your connected wallets, and any DIDs//n• Auto-forward emails to your telegram, discord or web2 email//n• Set nicknames, activate / deactivate all your connected wallets from a single device//n• Be notified of new emails on-the-go, with notification centre//n• Organise your emails by archiving, deleting and reporting spam//n• Swipe to archive/delete, and quickly clear out your inbox//n• Send and receive attachments to your wallet address",
+      "appUrl": "https://hashmail.dev/",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmSfFhKpbNErwpegfEyWPfWqN55UHXEhQVEASubSjVi4kH",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmXqiMoPCUddnYnNsCr9F1DmLwg8izJgpRoFjDgDvoEdEX",
+        "banner": "https://ipfs.io/ipfs/QmUYAyFZTAsJGSdu81u5R3gSQFvojN7rj556u1S1hLGsfN",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmYNNnuGrzoJ4V8Qhgy2ERBg6rPJi8ZZ49NBWpj5w3quzS",
+          "https://ipfs.io/ipfs/QmRit9cyosudjExP8ZaVYJTNKB3TUjRAupJkxUaaqqGpWj",
+          "https://ipfs.io/ipfs/QmYFqLihjAhVBNDKtgctKbeqMEv2qGRWYJfV9ZbvM6XdaU",
+          "https://ipfs.io/ipfs/QmNaAm7qZjht9M21gKyiWBVphjxJBbM5pf31ea7Emvy7EZ"
+        ]
+      },
+      "dappId": "dev.hashmail.dapp",
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0.16",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["web", "android"],
+      "tags":["web3 messaging", "web3 notifications", "web3 communications", "wallet messaging"],
+      "developer": {
+        "legalName" : "Rohit Bagul",
+        "website":"https://hashmail.dev/",
+        "privacyPolicyUrl" : "https://www.hashmail.dev/privacy",
+        "support": {
+          "email": "support@hashlabs.dev"
+        }
+      },
+      "chains": [1, 137, 56],
+      "category": "web3 messaging",
+      "packageId": "dev.hashmail.app"
+    },
+    {
+      "name": "Oohlala",
+      "description": "Oohlala is a platform that aggregate all music NFTs from multiple platforms and chains that make it easy to discover, evaluate, and collect Music NFTs.",
+      "appUrl": "https://oohlala.xyz/",
+      "dappId": "xyz.oohlala.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmXtmTBk5HW3wzoyUKoeGQavAv1nJ8fxZmkspfhuvjKC8d",
+          "platform": "android",
+          "minVersion": "14.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmVFT7yeLJzH8DTFJ1pW5acdco33nav2uoMRtnVbL6kNZt",
+        "banner": "https://ipfs.io/ipfs/QmNSLBuiK9pag9GjR9kD7hBG47eJzqnNTLjmiiiE8D3Cpr",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmQNvCMo3hveo6P2LzZTCnR7SyrMess6ZbaeBJvrScpE1W",
+          "https://ipfs.io/ipfs/QmeFXis2poqi6f5LmoQkNPvjzp5qLZLrmZdY8uRqHvqnSH",
+          "https://ipfs.io/ipfs/QmPhsrimT37D3DNWwQhurnd2DWBMrjCmfjTPs4qGzuevxt",
+          "https://ipfs.io/ipfs/QmZprh47R8FBwKaE7J9Wm7QHvyprWBPKkpjhQGLdzfmJf6"
+        ]
+      },
+      "minAge": 15,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-26",
+      "availableOnPlatform": ["web", "android", "ios"],
+      "tags":["music", "nft", "collect"],
+      "developer": {
+        "legalName" : "SpiderVille",
+        "website":"https://spiderville.xyz/",
+        "privacyPolicyUrl" : "https://spiderville.notion.site/Privacy-Policy-d0bdc04734ed41a9969d0bb0c74190c7",
+        "support": {
+          "email": "gm@oohlala.xyz"
+        }
+      },
+      "chains": [1, 137, 421],
+      "category": "nft",
+      "packageId": "xyz.spiderville.oohlala.webmobile"
+    },
+    {
+      "name": "Floor: NFTs simplified",
+      "description": "Introducing the Floor app — the best way to stay connected to your NFTs, and understand the world of NFTs.\\n• Track your NFT portfolio in one place\\n• See live and historic activity for Collections\\n• Understand the value of NFTs with estimated value\\n• Discover collections that are trending and build lists of watched collections!\\n• Watch collections to follow prices and get push notifications for updates\\n• View current OpenSea floor prices and listings\\n• See ETH wallet balances\\n• And more...",
+      "appUrl": "https://www.floornfts.io/",
+      "dappId": "io.floornfts.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmQDu2zMGTYYMdgHCYPnxH8CVMLcXXRtxc2C7Js5Jqo2a6",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmRvQV4hXXm4oetmwAVvVa9xEq2dZ8gn9sovnEbrWX3z1Q",
+        "banner": "https://ipfs.io/ipfs/QmQzFJeKKLMvLfuCFHMHHu9iQ2TrTHtXVsQVueTVScP6yK",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmSC7DPQ3wngtjXtWmFff45Rc2aPaLh1SRFJDz6vJ5dEvb",
+          "https://ipfs.io/ipfs/QmRxKDPWJ4NpCG2CFv3ygQDHfJdnqBPSwsGNPTnb6Zv6WK",
+          "https://ipfs.io/ipfs/QmXdSan3BZicfFoJECDxhLeRTrWErMnhKXPCNf5ESs9s21",
+          "https://ipfs.io/ipfs/QmUF76uD1AeuyUjYccHTqbGSe7UU6Pdpog1Y1JAXHFgdZG"
+        ]
+      },
+      "geoRestrictions": {
+        "blockedCountries": ["cu", "ir", "kp", "ru", "sy", "ua"]
+      },
+      "minAge": 13,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": "en",
+      "version" : "v1.14.1",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["android"],
+      "tags":["nfts", "portfolio", "alerts", "content", "floor"],
+      "developer": {
+        "legalName" : "Floor NFTs",
+        "website":"https://www.floornfts.io/",
+        "privacyPolicyUrl" : "https://www.floornfts.io/privacy",
+        "support": {
+          "email": "support@floornfts.io"
+        }
+      },
+      "chains": [1, 137],
+      "category": "nft",
+      "packageId": "io.floornfts"
+    },
+    {
+      "name": "Virtualness",
+      "description": "Creators are the ultimate entrepreneurs. Our belief is that everything that can move from a physical form to a digital one will move. We are building a new economy unlocked by branded digital collectibles that deliver unique experiences, capability and value.\\nIf you identify as a creator: Virtualness is an intuitive, mobile-first platform with free creation tools to design and create your own branded digital collectables and associate them with experiences at a few clicks of a button. We provide free templates and easy-to-use advanced editing tools that allow you to create your own digitally branded collectibles to sell to your community. These could be art, video, music, or tokens to exclusive experiences – online or offline. You have complete control over what you want to create! You are only limited by your imagination.\\nIf creators inspire you: You will have access to a mobile-first experience, education personalization, AI-enabled discovery, easy purchasing experience and free community tools to engage and display your collections. Virtualness is where you will discover unique collections and experiences created exclusively by your favourite creators. You get to interact with your favourite creators directly and engage with other like-minded people. You will also be able to sell and trade the branded digital collectibles, experiences, and more with other fans, on the Virtualness and on other marketplaces. You can also share your branded digital collectibles on any social platform like Instagram, TikTok, and more!",
+      "appUrl": "https://virtualness.io/",
+      "dappId": "io.virtualness.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmVWhKozT6z4oH5DccXcceginz8fEe8kzndfPgPYPcdRFH",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmZyVZdmuiLitStteXytfCWL5KPhMEXKjZ7SgX9X7LaXAh",
+        "banner": "https://ipfs.io/ipfs/QmSjbLXAwkpc6s8DJ1f6dk8hHuuVZzr96Wv94TMChntY8F",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmVzdbrk1X9QBbRbN3W28Q9kYqBE2rkfLnV4SYXJ8z9ohs",
+          "https://ipfs.io/ipfs/QmVrc3P6NqB756JRkpKevKYy63QUEHUPeUCvaCLE6zczaA",
+          "https://ipfs.io/ipfs/QmX68bxLgkkZZNLCW7dih1S396uMGfg1QRFteEFhaNF4SQ",
+          "https://ipfs.io/ipfs/QmYUQA7FFWFuC7WoRgbzcqWmBarYBFJQarmLQF1Ck3v5My",
+          "https://ipfs.io/ipfs/Qma4FT7yReyB3Q6DXbkgqW1Tvuy88rsv6S3xSaEuFPtBkg"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["android"],
+      "tags":["creators", "digital collectibles", "nft", "sports", "fandom", "art"],
+      "developer": {
+        "legalName" : "Virtualness",
+        "website":"https://virtualness.io/",
+        "privacyPolicyUrl" : "https://virtualness.io/privacy-policy/",
+        "support": {
+          "email": "support@virtualness.io"
+        }
+      },
+      "chains": [137],
+      "category": "nft",
+      "packageId": "io.virtualness"
+    },
+    {
+      "name": "Purple Pay",
+      "description": "Purple Pay - Borderless Crypto Payments\\n\\nPurple Pay allows merchants and customers to seamlessly transact using their favorite cryptocurrencies! Transform your smartphone into a powerful point of sale (PoS) device and revolutionize the way you do business.\\n\\nKey Features:\\n\\n💜 Turn Your Smartphone into a PoS Device: Merchants can instantly convert their smartphones into a fully functional PoS device with just a few taps. No need for additional hardware or expensive equipment.\\n\\n💜 Crypto Payments Made Easy: Customers can use Purple Pay to scan the QR code on the merchant's PoS device, and instantly pay with their preferred cryptocurrency.\\n\\n💜 Wide Range of Supported Cryptocurrencies: Purple Pay supports a vast array of cryptocurrencies\\n\\n💜 Secure and Trustworthy: Purple Pay is designed with security at its core, ensuring the protection of your transactions and sensitive data through encryption and advanced security measures.\\n\\n💜 Instant Settlements: Transactions are processed in real-time, with instant settlements, allowing merchants to receive payments quickly and efficiently.\\n\\n💜 User-Friendly Interface: Purple Pay's clean and intuitive interface makes it easy for both merchants and customers to navigate and complete transactions with ease.\\n\\n💜 Transaction History and Analytics: Keep track of your sales and payments with Purple Pay's detailed transaction history and analytics features.\\n\\n💜 Global Reach: Purple Pay is designed to work seamlessly across borders, enabling merchants to tap into the global market and cater to a diverse customer base.\\n\\n💜 Low Transaction Fees: Enjoy competitive transaction fees that won't eat into your profits. Purple Pay's fees are among the lowest in the industry.\\n\\nGet started today by downloading Purple Pay, the all-in-one crypto payment solution for merchants and customers alike.\\n\\nEmbrace the future of digital payments and join the Purple Pay revolution!",
+      "appUrl": "http://pwa.purplepay.app/",
+      "dappId": "app.purplepay.pwa.dapp",
+      "repoUrl": "https://github.com/Purple-Pay/sdk",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/Qmbikwf3EVKQDXAJonDHxZwJGqmVAoYG8XR9WmUBDnTPyo",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmXMjUho5uzq4jikV2qYGi7W88RmMVnDktmmDPnkUKPaSB",
+        "banner": "https://ipfs.io/ipfs/QmdcCR19kC7a7SMkomgSKDwx5BPbDDSWCyLG2ryxS2dbwm",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmPACnavr4Hbc8oQXixX9TNnz7AeDv7tts8FqKaqGKcaXQ",
+          "https://ipfs.io/ipfs/QmZfPZsBFqSaH37A8BFkEUZCSf2y8EGqEZM3Q8LmTzskZA",
+          "https://ipfs.io/ipfs/QmYrUNaPncK12AhWyQMqStr2gQ9x3v9K9Zk3wdcbYE27MQ",
+          "https://ipfs.io/ipfs/QmPW8Z4PCT3Zx1YM2Rp8SmQBWiseiyZdbLRZP15AHatUer",
+          "https://ipfs.io/ipfs/QmZoLomEixFQd6gMhsitTHyL9S2MupGGtE4H2nnXpjSYtv"
+        ]
+      },
+      "minAge": 5,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0.1",
+      "isListed": true,
+      "listDate" : "2023-03-27",
+      "availableOnPlatform": ["web", "android"],
+      "developer": {
+        "legalName" : "arunank divya sharan",
+        "website":"https://github.com/Purple-Pay/",
+        "privacyPolicyUrl" : "https://arunanksharan.notion.site/Privacy-Policy-f4bb7e2c57b94c0399824e26c0006755",
+        "support": {
+          "email": "letstalk@purplepay.app"
+        }
+      },
+      "chains": [137],
+      "category": "defi"
+    },
+    {
+      "name": "unjumble",
+      "description": "Keep up with your favourite web3 communities in a curated daily email, personalised to you.\\nSign up is easy - it takes less than two minutes, and is free.\\nSubmit your wallet and we will provide social media content, long-form content, data, and more - all in one place. You control who you see content from, and how you see it.\\nWe use a mixture of algorithmic and user curation. We search high and low for the updates you need to see - and so do other community members!\\nWe’re building a composable loyalty program that rewards engagement flexibly. Curate, create, and interact with your communities to level up and be rewarded. More info coming soon.\\nGet in touch with any feedback, questions, or if you want to use unjumble to automate engaging newsletters for your brand or community.",
+      "appUrl": "https://www.unjumble.xyz/",
+      "dappId": "xyz.unjumble.dapp",
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmfMnwbaU5m9ggNKJdXSiN2nJ9PyR1Pd61X7J23yWnNKSQ",
+        "banner": "https://ipfs.io/ipfs/QmajT97rFYghxUkBBJudMcuyMKKAMAyZoxXwykNzAwGxuZ",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmYjgULyzA8ybZXV255MxjsHEbpTfyTBqC6Zct6mhwt4Fg"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web"],
+      "developer": {
+        "legalName" : "unjumble",
+        "website":"https://www.unjumble.xyz/",
+        "privacyPolicyUrl" : "https://www.unjumble.xyz/privacy-policy",
+        "support": {
+          "email": "hello@unjumble.xyz"
+        }
+      },
+      "chains": [1, 137, 421],
+      "category": "social media"
+    },
+    {
+      "name": "Cryptorefills",
+      "description": "CryptoRefills allows you to buy mobile top-ups, gift cards, e-gifts, and vouchers with USDC, and USDT on the Polygon network.\\nCryptoRefills has thousands of gift cards from top brands in the following categories:\\n\\nEcommerce\\nGames\\nMobile Topup & Data\\nEntertainment\\nRetail\\nStreaming\\nFood\\nGroceries\\nHome & Furniture\\nElectronics\\nTravel & flights\\nApparel & clothing\\nHealth & beauty and more.",
+      "appUrl": "https://www.cryptorefills.com/",
+      "dappId": "com.cryptorefills.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://ipfs.io/ipfs/QmRSdWsJmXGa3QzvdiFnyLNQxkaJXr56Z3MmwUnNRL5WCx",
+          "platform": "android",
+          "minVersion": "11.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmdA3zGYcxcFR8VxsmiEMtLhJKrZpqUpVyRkz5JQAcue4h",
+        "banner": "https://ipfs.io/ipfs/QmZtkDGioCq9WLCMoPXEzdt2FBR1eDiitiQ6XzBqMdM8cY",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmQvcPZ24meyaJq1NLGBuiyMcN7fxoRt4F22BCF7syRMY3"
+        ]
+      },
+      "minAge": 16,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web", "android", "ios"],
+      "tags": ["crypto", "off-ramping", "e-commerce", "giftcard", "vouchers", "games", "amazon", "apple", "playstation"],
+      "developer": {
+        "legalName" : "Simonluca Landi",
+        "website":"https://cryptorefills.com",
+        "privacyPolicyUrl" : "https://www.cryptorefills.com/privacy-policy",
+        "support": {
+          "url": "https://www.cryptorefills.com/contact-us"
+        }
+      },
+      "chains": [1, 137, 56],
+      "category": "off-ramping",
+      "packageId": "com.cryptorefills"
+    },
+    {
+      "name": "HeyMint",
+      "description": "Create unlimited allowlists with robust joining requirements, for free!\\nYou can create and launch an allowlist in just 5 minutes! Use our robust requirements to help ensure the right collectors join your list.\\nNew projects launch an allowlist with us every single day! Use our explore page to stay up to date, and the collector’s dashboard to keep track of your submissions.",
+      "appUrl": "https://heymint.xyz/",
+      "dappId": "xyz.heymint.dapp",
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmYewdbeY1ShbGo4jmHCG9T3oA4ECAcFmehNCo2NujRr6n",
+        "banner": "https://ipfs.io/ipfs/QmRWzyPjuFKoBUfFDDUN7KDrYeGTd1DTYFc69vEEFDw3Ca",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmQ8HjXUwEo6QBDKidkz5Avr4RfexccjqzUcy5pSTroYDL",
+          "https://ipfs.io/ipfs/QmbSZwn3j219sDXu3strsdNfDSNveSYn4bFUVvgwwhtTFD",
+          "https://ipfs.io/ipfs/QmVEAyFuR9oyFaLHa34X8X4CUdcMgW5EH4EcCxNT6UMFmr"
+        ]
+      },
+      "minAge": 13,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web"],
+      "tags": ["allowlist", "collector", "creator", "whitelist"],
+      "developer": {
+        "legalName" : "Curious Addys",
+        "website":"https://heymint.xyz/",
+        "privacyPolicyUrl" : "https://heymint.xyz/privacy",
+        "support": {
+          "email": "hey@heymint.xyz"
+        }
+      },
+      "chains": [1, 137, 421],
+      "category": "nft"
+    },
+    {
+      "name": "Mintify",
+      "description": "Mintify is a modular Pro trading terminal that aggregates NFT liquidity from public and private marketplaces.",
+      "appUrl": "https://app.mintify.xyz/",
+      "dappId": "xyz.mintify.dapp",
+      "images": {
+        "logo": "https://ipfs.io/ipfs/QmaygPHy8K5YLqRjuoXb7EVomniwQqViavPFPApNhEum8b",
+        "banner": "https://ipfs.io/ipfs/QmYBniG2hx2WyRXob776bMNSoEGERGw6nYwgPSNm6Wxb3J",
+        "screenshots": [
+          "https://ipfs.io/ipfs/QmRAwtQQBFNyNzJ5v4baLSy3PgvmXyiv5EKhET7zA3gkFp",
+          "https://ipfs.io/ipfs/Qmek6JuuGH7y3t6PWrA3KdDTw3GJmMnRs1a1XGZpeSjUEE",
+          "https://ipfs.io/ipfs/QmYs4yVLUGmrvY6HccTRV1sZTJXTfEn7A3DZybrJh9xaGA",
+          "https://ipfs.io/ipfs/QmXFg6JyXTxqWCeWMsww92zMVVmVeeUSQGbT4A3gZNHZt4"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": "en",
+      "version" : "v1.0",
+      "isListed": true,
+      "listDate" : "2023-03-28",
+      "availableOnPlatform": ["web"],
+      "tags": ["nft", "trading", "pro", "terminal"],
+      "developer": {
+        "legalName" : "Mintify",
+        "website":"https://mintify.xyz/",
+        "privacyPolicyUrl" : "https://docs.mintify.xyz/legal/privacy-policy",
+        "support": {
+          "url": "https://docs.mintify.xyz/"
+        }
+      },
+      "chains": [1, 137],
+      "category": "nft"
     }
   ]
 }
