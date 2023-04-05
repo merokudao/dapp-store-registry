@@ -1,6 +1,6 @@
 import Debug from "debug";
 import { Octokit } from "octokit";
-import { DappStoreRegistry, RegistryStrategy } from "./registry";
+import { RegistryStrategy } from "./registry";
 import { createAppAuth } from "@octokit/auth-app";
 import {
   cacheStoreOrRegistry,
@@ -12,7 +12,7 @@ import { FeaturedSection } from "../interfaces";
 
 const debug = Debug("@merokudao:dapp-store-registry:Stores");
 
-const DappRegistry = new DappStoreRegistry();
+// const DappRegistry = new DappStoreRegistry();
 
 export class DappStores {
   strategy: RegistryStrategy;
@@ -353,7 +353,7 @@ export class DappStores {
       githubID,
       accessToken,
       currDappStores,
-      `add-${key}`,
+      `delete-${key}`,
       org,
       this.githubOwner,
       this.githubRepo,
@@ -397,34 +397,38 @@ export class DappStores {
       throw new Error(`No store with key ${key} found`);
     }
     // Make sure the dappIds exist in the registry
+    if (currStore.bannedDAppIds) {
+      const dappIdsToRemove = dappIds.filter(dappId =>
+        currStore.bannedDAppIds.includes(dappId)
+      );
+      const dappIdsToAdd = dappIds.filter(
+        dappId => !currStore.bannedDAppIds.includes(dappId)
+      );
+      // dappIdsToAdd.map(x => {
+      //   const exist = currRegistry.dapps.filter(
+      //     y => y.dappId === x && y.isListed
+      //   );
+      //   if (exist.length === 0) {
+      //     throw new Error(`dApp ID ${x} not found or not listed in registry`);
+      //   }
+      //   if (exist.length > 1) {
+      //     throw new Error(`Multiple dApps with the same ID ${x} found`);
+      //   }
+      // });
+      debug(`Removing ${dappIdsToRemove} from banned list ${key}`);
+      debug(`Adding ${dappIdsToAdd} to from banned list ${key}`);
 
-    const dappIdsToRemove = dappIds.filter(dappId =>
-      currStore.bannedDAppIds.includes(dappId)
-    );
-    const dappIdsToAdd = dappIds.filter(
-      dappId => !currStore.bannedDAppIds.includes(dappId)
-    );
-    // dappIdsToAdd.map(x => {
-    //   const exist = currRegistry.dapps.filter(
-    //     y => y.dappId === x && y.isListed
-    //   );
-    //   if (exist.length === 0) {
-    //     throw new Error(`dApp ID ${x} not found or not listed in registry`);
-    //   }
-    //   if (exist.length > 1) {
-    //     throw new Error(`Multiple dApps with the same ID ${x} found`);
-    //   }
-    // });
-    debug(`Removing ${dappIdsToRemove} from banned list ${key}`);
-    debug(`Adding ${dappIdsToAdd} to from banned list ${key}`);
+      currStore.bannedDAppIds = currStore.bannedDAppIds.concat(dappIdsToAdd);
 
-    currStore.bannedDAppIds = currStore.bannedDAppIds.concat(dappIdsToAdd);
+      currStore.bannedDAppIds = currStore.bannedDAppIds.filter(
+        x => !dappIdsToRemove.includes(x)
+      );
 
-    currStore.bannedDAppIds = currStore.bannedDAppIds.filter(
-      x => !dappIdsToRemove.includes(x)
-    );
-
-    currDappStores.dappStores[storeIndex] = currStore;
+      currDappStores.dappStores[storeIndex] = currStore;
+    } else {
+      currStore.bannedDAppIds = dappIds;
+      currDappStores.dappStores[storeIndex] = currStore;
+    }
 
     // Validate the registry.json
     const [valid, errors] = validateSchema(currDappStores);
@@ -491,18 +495,18 @@ export class DappStores {
       throw new Error(`A section must have at least one dApp`);
     }
 
-    const currRegistry = await DappRegistry.registry();
-    // Make sure the dapp ids exist in the registry
-    section.dappIds.forEach(dappId => {
-      if (
-        currRegistry.dapps.filter(x => x.dappId === dappId && x.isListed)
-          .length === 0
-      ) {
-        throw new Error(
-          `dApp ID ${dappId} not found or not listed in registry`
-        );
-      }
-    });
+    // const currRegistry = await DappRegistry.registry();
+    // // Make sure the dapp ids exist in the registry
+    // section.dappIds.forEach(dappId => {
+    //   if (
+    //     currRegistry.dapps.filter(x => x.dappId === dappId && x.isListed)
+    //       .length === 0
+    //   ) {
+    //     throw new Error(
+    //       `dApp ID ${dappId} not found or not listed in registry`
+    //     );
+    //   }
+    // });
 
     if (currStore.featuredSections) {
       currStore.featuredSections.push(section);
@@ -632,24 +636,24 @@ export class DappStores {
       throw new Error(`No section with key ${sectionKey} found`);
     }
     // Make sure the dappIds exist in the registry
-    const currRegistry = await DappRegistry.registry();
+    // const currRegistry = await DappRegistry.registry();
     const dappIdsToRemove = dappIds.filter(dappId =>
       currFeaturedSections[sectionIndex].dappIds.includes(dappId)
     );
     const dappIdsToAdd = dappIds.filter(
       dappId => !currFeaturedSections[sectionIndex].dappIds.includes(dappId)
     );
-    dappIdsToAdd.map(x => {
-      const exist = currRegistry.dapps.filter(
-        y => y.dappId === x && y.isListed
-      );
-      if (exist.length === 0) {
-        throw new Error(`dApp ID ${x} not found or not listed in registry`);
-      }
-      if (exist.length > 1) {
-        throw new Error(`Multiple dApps with the same ID ${x} found`);
-      }
-    });
+    // dappIdsToAdd.map(x => {
+    //   const exist = currRegistry.dapps.filter(
+    //     y => y.dappId === x && y.isListed
+    //   );
+    //   if (exist.length === 0) {
+    //     throw new Error(`dApp ID ${x} not found or not listed in registry`);
+    //   }
+    //   if (exist.length > 1) {
+    //     throw new Error(`Multiple dApps with the same ID ${x} found`);
+    //   }
+    // });
     debug(`Removing ${dappIdsToRemove} from featured section ${sectionKey}`);
     debug(`Adding ${dappIdsToAdd} to featured section ${sectionKey}`);
 
