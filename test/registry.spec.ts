@@ -143,7 +143,7 @@ describe("DappStoreRegistry", () => {
       const language = "hi";
       const registry_dapps_1 = await registry.dApps({ language: language });
       const dapps_1 = fixtureRegistryJson.dapps.filter(
-        dapp => dapp.language === language
+        dapp => dapp.language.indexOf(language) !== -1
       );
       registry_dapps_1.should.deep.equal(dapps_1);
     });
@@ -306,7 +306,7 @@ describe("DappStoreRegistry", () => {
         minAge: age
       });
       const dapps_1 = fixtureRegistryJson.dapps.filter(
-        dapp => dapp.language === language && dapp.minAge > age
+        dapp => dapp.language.indexOf(language) !== -1 && dapp.minAge > age
       );
       registry_dapps_1.should.deep.equal(dapps_1);
     });
