@@ -14,7 +14,7 @@
       "minAge": 13,
       "isForMatureAudience": false,
       "isSelfModerated": false,
-      "language": "en",
+      "language": ["en"],
       "version": "0.0.1",
       "availableOnPlatform": ["web"],
       "listDate": "2022-12-12",
