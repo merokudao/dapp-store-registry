@@ -204,13 +204,8 @@ export const updateRegistryOrStores = async (
   githubRepo: string,
   schema: string
 ) => {
-  let File: string;
-  if (schema === "registry") {
-    File = "src/registry.json";
-  } else {
-    File = "src/dappStore.json";
-  }
-
+  const filePath =
+    schema === "registry" ? "src/registry.json" : "src/dappStore.json";
   // Fork repo from merokudao to the authenticated user
   const octokit = new Octokit({
     userAgent: "@merokudao/dAppStore/v1.2.3",
@@ -228,13 +223,13 @@ export const updateRegistryOrStores = async (
   debug(`forked ${githubOwner}/${githubRepo} to ${githubId})`);
 
   // Get the SHA of the registry file
-  debug(`getting sha of repos/${githubId}/${githubRepo}/contents/${File}`);
+  debug(`getting sha of repos/${githubId}/${githubRepo}/contents/${filePath}`);
   const {
     data: { sha }
   } = await octokit.request("GET /repos/{owner}/{repo}/contents/{file_path}", {
     owner: githubId,
     repo: githubRepo,
-    file_path: File
+    file_path: filePath
   });
 
   // Commit the changes
@@ -243,7 +238,7 @@ export const updateRegistryOrStores = async (
   await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
     owner: githubId,
     repo: githubRepo,
-    path: File,
+    path: filePath,
     message: commitMessage,
     committer: {
       name: name,
@@ -273,7 +268,7 @@ export const isExistInRegistry = async (
   DappRegistry: DappStoreRegistry
 ) => {
   const currRegistry = await DappRegistry.registry();
-  dappIds.map(x => {
+  dappIds.forEach(x => {
     const exist = currRegistry.dapps.filter(y => y.dappId === x && y.isListed);
     if (exist.length === 0) {
       throw new Error(`dApp ID ${x} not found or not listed in registry`);
