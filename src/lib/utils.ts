@@ -14,7 +14,7 @@ import dAppStoresSchema from "../schemas/merokuDappStore.dAppStores.json";
 import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
-import { RegistryStrategy } from "./registry";
+import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
 import { Octokit } from "octokit";
 
@@ -43,17 +43,13 @@ export class cloneable {
 }
 
 export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
-  debug("Inside validdate schema function");
   let uniqueIDs: string[];
   if ("title" in json) {
     uniqueIDs = json.dapps.map(dapp => dapp.dappId);
   } else {
-    debug("it is stores schema");
     uniqueIDs = json.dappStores.map(dapp => dapp.key);
   }
   const uniqueStoreIDs = Array.from(new Set(uniqueIDs));
-  debug(uniqueStoreIDs);
-  debug(uniqueIDs);
   if (uniqueIDs.length !== uniqueStoreIDs.length) {
     throw new Error(
       `@merokudao/dapp-store-registry: stores is invalid. key IDs must be unique.`
@@ -222,17 +218,13 @@ export const updateRegistryOrStores = async (
   });
 
   debug(`forking ${githubOwner}/${githubRepo} to ${githubId}/${githubRepo}`);
-  try {
-    await octokit.request("POST /repos/{owner}/{repo}/forks", {
-      owner: githubOwner,
-      repo: githubRepo,
-      organization: org,
-      name: githubRepo,
-      default_branch_only: true
-    });
-  } catch (e) {
-    console.log(JSON.stringify(e));
-  }
+  await octokit.request("POST /repos/{owner}/{repo}/forks", {
+    owner: githubOwner,
+    repo: githubRepo,
+    organization: org,
+    name: githubRepo,
+    default_branch_only: true
+  });
   debug(`forked ${githubOwner}/${githubRepo} to ${githubId})`);
 
   // Get the SHA of the registry file
@@ -271,6 +263,25 @@ export const updateRegistryOrStores = async (
 
   debug(`PR URL: ${prURL}`);
   return prURL;
+};
+
+/**
+ * It will check that dapps exist in registry or not.
+ */
+export const isExistInRegistry = async (
+  dappIds: string[],
+  DappRegistry: DappStoreRegistry
+) => {
+  const currRegistry = await DappRegistry.registry();
+  dappIds.map(x => {
+    const exist = currRegistry.dapps.filter(y => y.dappId === x && y.isListed);
+    if (exist.length === 0) {
+      throw new Error(`dApp ID ${x} not found or not listed in registry`);
+    }
+    if (exist.length > 1) {
+      throw new Error(`Multiple dApps with the same ID ${x} found`);
+    }
+  });
 };
 
 export const recordsPerPage = 20;
