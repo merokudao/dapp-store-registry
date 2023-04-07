@@ -23,8 +23,13 @@ export class DappStoreRegistryV1 {
      * @param index 
      * @returns 
      */
-    public addBulkDocsToIndex = async (index: string): Promise<any> => {
-        const { dapps = [] } = await this.dappStoreRegistory.registry();
+    public addBulkDocsToIndex = async (index: string, dapps: DAppSchema[] = []): Promise<any> => {
+        if (!dapps.length) {
+            const dappsResponse = await this.dappStoreRegistory.registry();
+            dapps = dappsResponse.dapps;
+        }
+
+        if(!dapps.length) return;
 
         const dappDocs = dapps.map(d => {
         return {
@@ -42,12 +47,26 @@ export class DappStoreRegistryV1 {
     public createIndex = async () => {
         const indexName = `${searchRegistry.indexPrefix}_${format(new Date(), 'yyyy-MM-dd-HH-mm-ss')}`;
         await this.opensearchApis.createIndex(indexName);
-        await this.addBulkDocsToIndex(indexName);
+        return {
+            status: 200,
+            message: ["success"],
+            indexName,
+        }
+    }
+
+    /**
+     * set alias to deploy a index, remove alias from old index
+     * @param indexName 
+     * @returns 
+     */
+    public liveIndex = async (indexName: string) => {
+        // await this.addBulkDocsToIndex(indexName);
         await this.opensearchApis.attachAliasName(indexName, searchRegistry.alias);
         await this.opensearchApis.removeAliasName(indexName, searchRegistry.alias);
         return {
             status: 200,
-            message: ["success"]
+            message: ["success"],
+            indexName,
         }
     }
 
