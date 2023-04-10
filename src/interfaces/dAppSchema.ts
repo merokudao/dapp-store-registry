@@ -62,6 +62,8 @@ export interface DAppSchema {
     maxVersion?: string;
     screenDPI?: string;
     packageId?: string;
+    version?: string;
+    versionCode?: string;
   }[];
 
   contracts?: {
@@ -102,6 +104,7 @@ export interface DAppSchema {
    * The version of the dApp that is available on the dApp store
    */
   version: string;
+  versionCode?: string;
   isListed: boolean;
   /**
    * The date on which this dApp is listed on dApp store. This date can be a future date as well. This can not be in past.

@@ -26920,7 +26920,9 @@
           "url": "https://bafybeihhbalx7vryqik5jh2fcxfmsym4tataqjr7f62pouhp3ag6nvrcuq.ipfs.dweb.link/_0VIX_Protocol_16878992.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.zerovix"
+          "packageId": "com.zerovix",
+          "version" : "1.0",
+          "versionCode": "1556608346"
         }
       ],
       "contracts": [
@@ -27001,7 +27003,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": false,
       "language": ["en"],
-      "version" : "1.0.0",
+      "version" : "1.0",
+      "versionCode": "1556608346",
       "isListed": true,
       "listDate" : "2023-03-26",
       "availableOnPlatform": ["android"],
@@ -27027,7 +27030,9 @@
           "url": "https://bafybeih36e3uohd3gysun3ycjscfpqqcfpeut7banhprtzr7xuyjze3vve.ipfs.dweb.link/hashmail%20%28v1.0.16%29.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "dev.hashmail.app"
+          "packageId": "dev.hashmail.app",
+          "version" : "1.0.15",
+          "versionCode": "17"
         }
       ],
       "images": {
@@ -27045,7 +27050,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": true,
       "language": ["en"],
-      "version" : "1.0.16",
+      "version" : "1.0.15",
+      "versionCode": "17",
       "isListed": true,
       "listDate" : "2023-03-27",
       "availableOnPlatform": ["web", "android"],
@@ -27072,7 +27078,9 @@
           "url": "https://bafybeiblgaru5v7escttsy45jyhks6hmsp525c677imxc4aseb4xkgaqxy.ipfs.dweb.link/oohlala_20230317.apk",
           "platform": "android",
           "minVersion": "14.0.0",
-          "packageId": "xyz.spiderville.oohlala.webmobile"
+          "packageId": "xyz.spiderville.oohlala.webmobile",
+          "version" : "1.0.0",
+          "versionCode": "1"
         }
       ],
       "images": {
@@ -27090,6 +27098,7 @@
       "isSelfModerated": true,
       "language": ["en"],
       "version" : "1.0.0",
+      "versionCode": "1",
       "isListed": true,
       "listDate" : "2023-03-26",
       "availableOnPlatform": ["web", "android", "ios"],
@@ -27116,7 +27125,9 @@
           "url": "https://bafybeie2i527b7w6xrded4ozwv5km66ozi6e5xcs3vt74lnvikkwyjz2lm.ipfs.dweb.link/Floor_1141_10140199.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "io.floornfts"
+          "packageId": "io.floornfts",
+          "version" : "1.14.1",
+          "versionCode": "10140199"
         }
       ],
       "images": {
@@ -27137,6 +27148,7 @@
       "isSelfModerated": false,
       "language": ["en"],
       "version" : "1.14.1",
+      "versionCode": "10140199",
       "isListed": true,
       "listDate" : "2023-03-27",
       "availableOnPlatform": ["android"],
@@ -27163,7 +27175,9 @@
           "url": "https://bafybeifkuike235uf5gt7drt5i35tb3fthkl7runjyfvgtawotiae2ltau.ipfs.dweb.link/Virtualness-production-htc-release.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "io.virtualness"
+          "packageId": "io.virtualness",
+          "version" : "1.0.0-htc",
+          "versionCode": "1"
         }
       ],
       "images": {
@@ -27181,7 +27195,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": true,
       "language": ["en"],
-      "version" : "1.0.0",
+      "version" : "1.0.0-htc",
+      "versionCode": "1",
       "isListed": true,
       "listDate" : "2023-03-27",
       "availableOnPlatform": ["android"],
@@ -27209,7 +27224,9 @@
           "url": "https://bafybeibz7cyllzg53wjr7wc24xiz7w22minbxxloe4aqwuy33brnamnopu.ipfs.dweb.link/Yy069dsVCE73CkUfG9nb_app-release-signed.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "app.purplepay.merchant"
+          "packageId": "app.purplepay.merchant",
+          "version" : "1",
+          "versionCode": "1"
         }
       ],
       "images": {
@@ -27227,7 +27244,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": true,
       "language": ["en"],
-      "version" : "1.0.1",
+      "version" : "1",
+      "versionCode": "1",
       "isListed": true,
       "listDate" : "2023-03-27",
       "availableOnPlatform": ["web", "android"],
@@ -27284,7 +27302,9 @@
           "url": "https://bafybeidwd2ytusk3fkh3hq3ygtbbew74xoqyjvj4zixhecv4uzxy5m4v74.ipfs.dweb.link/app-polygon-release.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.cryptorefills"
+          "packageId": "com.cryptorefills",
+          "version" : "1.0.2",
+          "versionCode": "4"
         }
       ],
       "images": {
@@ -27298,7 +27318,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": false,
       "language": ["en"],
-      "version" : "1.0.0",
+      "version" : "1.0.2",
+      "versionCode": "4",
       "isListed": true,
       "listDate" : "2023-03-28",
       "availableOnPlatform": ["web", "android", "ios"],
@@ -27564,7 +27585,9 @@
           "url": "https://bafybeihazipyuv57k5w4367maq5uwv4z3ngwrua7r3khewwmgz5p4uz7su.ipfs.dweb.link/CoinGecko-2.14.0.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.coingecko.coingeckoapp"
+          "packageId": "com.coingecko.coingeckoapp",
+          "version": "2.14.0",
+          "versionCode": "3840004"
         }
       ],
       "images": {
@@ -27583,6 +27606,7 @@
       "isSelfModerated": false,
       "language": ["en", "es", "de", "pt", "fr", "it", "pl", "id", "zh", "ja", "ko", "ru", "ar", "th", "vi", "tr", "sv", "hu", "ro", "nl"],
       "version" : "2.14.0",
+      "versionCode": "3840004",
       "isListed": true,
       "listDate" : "2023-03-30",
       "availableOnPlatform": ["android"],
@@ -27609,7 +27633,9 @@
           "url": "https://bafybeid3stlwygi5sqxradyfqt2owjtmmsxjifbjnjb7kc66dwooidtta4.ipfs.dweb.link/SurfaceBoard.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.surfaceboard"
+          "packageId": "com.surfaceboard",
+          "version" : "1.0",
+          "versionCode": "1"
         }
       ],
       "images": {
@@ -27627,7 +27653,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": false,
       "language": ["en"],
-      "version" : "1.0.0",
+      "version" : "1.0",
+      "versionCode": "1",
       "isListed": true,
       "listDate" : "2023-03-30",
       "availableOnPlatform": ["web", "android"],
@@ -27654,7 +27681,9 @@
           "url": "https://bafybeihyguavkb5cqs6mrgzw7y3v7xzh755rnjtzhkacrmuqrb5vaqoeyq.ipfs.dweb.link/milliononmars-release-1.0.0.0-1.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "io.milliononmars.mom"
+          "packageId": "io.milliononmars.mom",
+          "version" : "1.0.0.0",
+          "versionCode": "1"
         }
       ],
       "contracts": [
@@ -27695,6 +27724,7 @@
       "isSelfModerated": true,
       "language": ["en"],
       "version" : "1.0.0.0",
+      "versionCode": "1",
       "isListed": true,
       "listDate" : "2023-03-30",
       "availableOnPlatform": ["web", "android", "ios"],
@@ -27721,7 +27751,9 @@
           "url": "https://bafybeientq5g3uwv4zbp2lf47gxnnvkl2cooflwvr3wpygk4z46g5bfde4.ipfs.dweb.link/KingFrog-crossing_dApp-store_NoGoogleComponents.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.megaVoltCorp.kingfrogcrossing"
+          "packageId": "com.megaVoltCorp.kingfrogcrossing",
+          "version" : "1.11",
+          "versionCode": "11"
         }
       ],
       "images": {
@@ -27739,7 +27771,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": false,
       "language": ["en"],
-      "version" : "1.11.0",
+      "version" : "1.11",
+      "versionCode": "11",
       "isListed": true,
       "listDate" : "2023-03-30",
       "availableOnPlatform": ["android", "ios"],
@@ -27766,7 +27799,9 @@
           "url": "https://bafybeibo45gznn7nttbsdy5fub3mjl2hbr3sggprredyarpctbmunvij34.ipfs.dweb.link/prod-v160-10-4.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.reaphq.reapmobile"
+          "packageId": "com.reaphq.reapmobile",
+          "version" : "1.6.0",
+          "versionCode": "10"
         }
       ],
       "images": {
@@ -27784,7 +27819,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": true,
       "language": ["en"],
-      "version" : "1.0.0",
+      "version" : "1.6.0",
+      "versionCode": "10",
       "isListed": true,
       "listDate" : "2023-03-31",
       "availableOnPlatform": ["android", "ios"],
@@ -27856,7 +27892,9 @@
           "url": "https://bafybeiepcphv6ookxi6qzfw66wwthe5pxqgf3lkygew6g6g2ineubnxsum.ipfs.dweb.link/hivenft/app-release.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId":"com.app.hive"
+          "packageId":"com.app.hive",
+          "version" : "2.0.6",
+          "versionCode": "16"
         }
       ],
       "images": {
@@ -27875,6 +27913,7 @@
       "isSelfModerated": false,
       "language": ["en"],
       "version" : "2.0.6",
+      "versionCode": "16",
       "isListed": true,
       "listDate" : "2023-03-31",
       "availableOnPlatform": ["android", "ios"],
@@ -28063,7 +28102,9 @@
           "url": "https://bafybeifcyyjfxwby4wldgk5wtzkzpvvk43jnxll3zend56tynaxajul7j4.ipfs.dweb.link/app-release.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "io.epns.epns"
+          "packageId": "io.epns.epns",
+          "version" : "0.8.5",
+          "versionCode": "62"
         }
       ],
       "images": {
@@ -28082,6 +28123,7 @@
       "isSelfModerated": false,
       "language": ["en"],
       "version" : "0.8.5",
+      "versionCode": "62",
       "isListed": true,
       "listDate" : "2023-04-04",
       "availableOnPlatform": ["web", "android"],
@@ -28109,7 +28151,9 @@
           "url": "https://bafybeih4d7subi52roz3vyo2tstslcxptn4noweajit2a6jjujlvacz37u.ipfs.dweb.link/komet/komet-app-release%20%28v1%29.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.kometapp"
+          "packageId": "com.kometapp",
+          "version" : "1.0",
+          "versionCode": "1"
         }
       ],
       "images": {
@@ -28127,7 +28171,8 @@
       "isForMatureAudience" : true,
       "isSelfModerated": true,
       "language": ["en"],
-      "version" : "1.0.0",
+      "version" : "1.0",
+      "versionCode": "1",
       "isListed": true,
       "listDate" : "2023-04-04",
       "availableOnPlatform": ["web", "android"],
