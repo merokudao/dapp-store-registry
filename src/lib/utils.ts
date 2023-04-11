@@ -102,8 +102,6 @@ export const queryRemote = async (
   schema: string
 ): Promise<StoresSchema | DAppStoreSchema> => {
   debug(`fetching remote ${schema} from ${remoteFile}`);
-  let registry: DAppStoreSchema | StoresSchema;
-
   try {
     const response = await fetch(remoteFile);
     if (response.status > 400) {
@@ -114,31 +112,27 @@ export const queryRemote = async (
     debug(
       `remote ${schema} fetched. status: ${response.status} ${response.statusText}`
     );
-    let json;
-    if (schema === "registry") {
-      json = (await response.json()) as DAppStoreSchema;
-    } else {
-      json = (await response.json()) as StoresSchema;
-    }
+
+    const json =
+      schema === "registry"
+        ? ((await response.json()) as DAppStoreSchema)
+        : ((await response.json()) as StoresSchema);
+
     const [valid, errors] = validateSchema(json);
-    if (valid) {
-      if (schema === "registry") {
-        registry = json as DAppStoreSchema;
-      } else {
-        registry = json as StoresSchema;
-      }
-    } else {
+    if (!valid) {
       debug(errors);
       debug(`remote ${schema} is invalid. Falling back to static repository.`);
-      registry = local(schema);
+      return local(schema);
     }
+    if (schema === "registry") {
+      return json as DAppStoreSchema;
+    }
+    return json as StoresSchema;
   } catch (err) {
     debug(err);
     debug(`Can't fetch remote. falling back to static ${schema}.`);
-    registry = local(schema);
+    return local(schema);
   }
-
-  return registry;
 };
 
 export const cacheStoreOrRegistry = async (

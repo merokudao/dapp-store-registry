@@ -550,8 +550,12 @@ export class DappStores {
     const currDappStores = await this.dappStores();
     const currStore = currDappStores.dappStores.find(x => x.key === storeKey);
     if (!currStore) {
-      return "No Store Found";
+      throw new Error(`No Store Found with ${storeKey}`);
     }
-    return currStore.featuredSections;
+    const currFeaturedSections = currStore.featuredSections;
+    if (!currFeaturedSections) {
+      throw new Error(`No featured sections defined in the store`);
+    }
+    return currFeaturedSections;
   };
 }
