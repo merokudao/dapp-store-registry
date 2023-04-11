@@ -27065,7 +27065,7 @@
         }
       },
       "chains": [1, 137, 56, 42161],
-      "category": "web3 messaging",
+      "category": "messaging",
       "packageId": "dev.hashmail.app"
     },
     {
@@ -28501,7 +28501,7 @@
         }
       },
       "chains": [1, 137, 56, 42161],
-      "category": "messenger app",
+      "category": "messaging",
       "walletApiVersion": ["v1"]
     }
   ],

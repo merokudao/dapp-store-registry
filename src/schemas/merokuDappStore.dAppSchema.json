@@ -298,13 +298,14 @@
         "defi",
         "nft",
         "gambling",
-        "web3 messaging",
+        "messaging",
         "social media",
         "off-ramping",
         "social",
         "price aggregator",
         "payments",
-        "discovery tool"
+        "discovery tool",
+        "airdrop tool"
       ]
     },
     "packageId": {
