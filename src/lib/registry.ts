@@ -86,6 +86,7 @@ export class DappStoreRegistry {
         "isSelfModerated",
         "language",
         "version",
+        "versionCode",
         "isListed",
         "listDate",
         "availableOnPlatform",
