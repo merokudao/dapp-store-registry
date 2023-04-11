@@ -1,6 +1,11 @@
 import Dotenv from "dotenv";
 import { fetch } from "cross-fetch";
-import { DAppSchema, DAppStoreSchema, FilterOptions } from "../interfaces";
+import {
+  DAppSchema,
+  DAppStoreSchema,
+  FeaturedSection,
+  FilterOptions
+} from "../interfaces";
 import MiniSearch from "minisearch";
 import parseISO from "date-fns/parseISO";
 import Ajv2019 from "ajv/dist/2019";
@@ -700,5 +705,207 @@ export class DappStoreRegistry {
       combineWith: "AND"
     }) as unknown as DAppSchema[];
     return res;
+  };
+
+  public addFeaturedSection = async (
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    section: FeaturedSection
+  ) => {
+    // const contributors = await this.githubContributors();
+    // if (!contributors.includes(githubID)) {
+    //   throw new Error(
+    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+    //   );
+    // }
+    const currFeaturedSections = await this.getFeaturedDapps();
+
+    // Ensure that a section with same name doesn't already exists
+    if (
+      currFeaturedSections &&
+      currFeaturedSections.filter(x => x.title === section.title).length > 0
+    ) {
+      throw new Error(`A section with name ${section.title} already exists`);
+    }
+
+    if (section.dappIds.length === 0) {
+      throw new Error(`A section must have at least one dApp`);
+    }
+
+    const currRegistry = await this.registry();
+    // Make sure the dapp ids exist in the registry
+    section.dappIds.forEach(dappId => {
+      if (
+        currRegistry.dapps.filter(x => x.dappId === dappId && x.isListed)
+          .length === 0
+      ) {
+        throw new Error(
+          `dApp ID ${dappId} not found or not listed in registry`
+        );
+      }
+    });
+
+    if (currRegistry.featuredSections) {
+      currRegistry.featuredSections.push(section);
+    } else {
+      currRegistry.featuredSections = [section];
+    }
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `add-featured-section-${section.title}`,
+      undefined
+    );
+  };
+
+  public removeFeaturedSection = async (
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    sectionKey: string
+  ) => {
+    // const contributors = await this.githubContributors();
+    // if (!contributors.includes(githubID)) {
+    //   throw new Error(
+    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+    //   );
+    // }
+
+    const currRegistry = await this.registry();
+    if (!currRegistry.featuredSections) {
+      throw new Error(`No featured sections found`);
+    }
+
+    const idx = currRegistry.featuredSections.findIndex(
+      x => x.key === sectionKey
+    );
+    if (idx === -1) {
+      throw new Error(`No featured section with key ${sectionKey} found`);
+    }
+
+    currRegistry.featuredSections.splice(idx, 1);
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `remove-featured-section-${sectionKey}`,
+      undefined
+    );
+  };
+
+  /**
+   * Toggles the dApp in the featured section. If the dApp is already in the section,
+   * it is removed. If it is not in the section, it is added.
+   * @param name
+   * @param email
+   * @param accessToken
+   * @param githubID
+   * @param sectionKey
+   * @param dappIds
+   * @returns
+   */
+  public toggleDappInFeaturedSection = async (
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    sectionKey: string,
+    dappIds: string[]
+  ) => {
+    // const contributors = await this.githubContributors();
+    // if (!contributors.includes(githubID)) {
+    //   throw new Error(
+    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
+    //   );
+    // }
+
+    const currRegistry = await this.registry();
+    const currFeaturedSections = currRegistry.featuredSections;
+    if (!currFeaturedSections) {
+      throw new Error(`No featured sections defined in the registry`);
+    }
+    const sectionIndex = currFeaturedSections.findIndex(
+      x => x.key === sectionKey
+    );
+    if (sectionIndex < 0) {
+      throw new Error(`No section with key ${sectionKey} found`);
+    }
+    // Make sure the dappIds exist in the registry
+
+    const dappIdsToRemove = dappIds.filter(dappId =>
+      currFeaturedSections[sectionIndex].dappIds.includes(dappId)
+    );
+    const dappIdsToAdd = dappIds.filter(
+      dappId => !currFeaturedSections[sectionIndex].dappIds.includes(dappId)
+    );
+    dappIdsToAdd.map(x => {
+      const exist = currRegistry.dapps.filter(
+        y => y.dappId === x && y.isListed
+      );
+      if (exist.length === 0) {
+        throw new Error(`dApp ID ${x} not found or not listed in registry`);
+      }
+      if (exist.length > 1) {
+        throw new Error(`Multiple dApps with the same ID ${x} found`);
+      }
+    });
+    debug(`Removing ${dappIdsToRemove} from featured section ${sectionKey}`);
+    debug(`Adding ${dappIdsToAdd} to featured section ${sectionKey}`);
+
+    currFeaturedSections[sectionIndex].dappIds =
+      currFeaturedSections[sectionIndex].dappIds.concat(dappIdsToAdd);
+
+    currFeaturedSections[sectionIndex].dappIds = currFeaturedSections[
+      sectionIndex
+    ].dappIds.filter(x => !dappIdsToRemove.includes(x));
+
+    currRegistry.featuredSections = currFeaturedSections;
+
+    // Validate the registry.json
+    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
+    }
+
+    return await this.updateRegistry(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currRegistry,
+      `add-dapp-to-featured-section-${sectionKey}-${dappIds.join("-")}`,
+      undefined
+    );
+  };
+
+  /**
+   * Gets all the featured sections defined in the registry. Along with the dApps.
+   * If no featured section is defined, returns `undefined`
+   * @returns The list of featured sections and the dApps in that section
+   */
+  public getFeaturedDapps = async () => {
+    return (await this.registry()).featuredSections;
   };
 }

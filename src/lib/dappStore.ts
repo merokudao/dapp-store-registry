@@ -542,12 +542,16 @@ export class DappStores {
   };
 
   /**
-   * Gets all the featured sections defined in the store. Along with the dApps.
+   * Gets all the featured sections defined in th2e store. Along with the dApps.
    * If no featured section is defined, returns `undefined`
    * @returns The list of featured sections and the dApps in that section
    */
   public getFeaturedDapps = async (storeKey: string) => {
     const currDappStores = await this.dappStores();
-    return currDappStores.dappStores.find(x => x.key === storeKey);
+    const currStore = currDappStores.dappStores.find(x => x.key === storeKey);
+    if (!currStore) {
+      return "No Store Found";
+    }
+    return currStore.featuredSections;
   };
 }
