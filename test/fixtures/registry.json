@@ -15,8 +15,8 @@
       "isSelfModerated": false,
       "language": ["en"],
       "geoRestrictions": {
-        "allowedCountries": ["IN", "AU"],
-        "blockedCountries": ["CN", "RU"]
+        "allowedCountries": ["in", "au"],
+        "blockedCountries": ["cn", "ru"]
       },
       "version": "0.0.1",
       "availableOnPlatform": ["android"],
@@ -76,8 +76,8 @@
       "availableOnPlatform": ["web"],
       "isListed": true,
       "geoRestrictions": {
-        "allowedCountries": ["IN", "US"],
-        "blockedCountries": ["CN", "RU"]
+        "allowedCountries": ["in", "us"],
+        "blockedCountries": ["cn", "ru"]
       },
       "listDate": "2021-01-01",
       "developer": {
