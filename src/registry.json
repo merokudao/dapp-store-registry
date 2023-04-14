@@ -28503,6 +28503,100 @@
       "chains": [1, 137, 56, 42161],
       "category": "messaging",
       "walletApiVersion": ["v1"]
+    },
+    {
+      "name": "Stader Polygon",
+      "description": "Stake your Matic and earn staking rewards with MaticX, Stader's liquid staking token. Earn staking rewards, get instant liquidity and explore exciting DeFi opportunities across the Polygon ecosystem.",
+      "appUrl": "https://www.staderlabs.com/polygon?utm_source=polygon&utm_medium=marketplace&utm_campaign=dApp_store",
+      "dappId": "com.staderlabs.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://bafybeihxx7xvh2u7odjorkngtt6kuf6asv7lteulw3ui4cjq7r76vublw4.ipfs.dweb.link/polygonStakingv1.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId": "com.staderlabs.www.twa",
+          "version": "1",
+          "versionCode": "1"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeihxx7xvh2u7odjorkngtt6kuf6asv7lteulw3ui4cjq7r76vublw4.ipfs.dweb.link/logo-s.png",
+        "banner": "https://bafybeihxx7xvh2u7odjorkngtt6kuf6asv7lteulw3ui4cjq7r76vublw4.ipfs.dweb.link/banner-App%20store%20banner%202.png",
+        "screenshots": [
+          "https://bafybeihxx7xvh2u7odjorkngtt6kuf6asv7lteulw3ui4cjq7r76vublw4.ipfs.dweb.link/sc-1-Screenshot%202023-04-11%20at%207.26.29%20PM.png"
+        ]
+      },
+      "minAge": 21,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version" : "1",
+      "versionCode": "1",
+      "isListed": true,
+      "listDate" : "2023-04-11",
+      "availableOnPlatform": ["web", "android"],
+      "tags": ["staking", "liquid staking", "stader", "polygon", "polygon liquid staking", "defi"],
+      "developer": {
+        "legalName" : "Stader Labs",
+        "website":"https://www.staderlabs.com/",
+        "privacyPolicyUrl" : "https://www.staderlabs.com/terms-of-service/",
+        "support": {
+          "url": "https://t.me/StaderLabs_Polygon_Official"
+        }
+      },
+      "chains": [1, 137],
+      "category": "defi",
+      "packageId": "com.staderlabs.www.twa",
+      "walletApiVersion": ["v1"]
+    },
+    {
+      "name": "1inch Wallet",
+      "description": "The 1inch Wallet is a fast and secure non-custodial crypto wallet with a built-in DEX aggregator. Use the app to store, send, receive and trade crypto on Ethereum, BNB Chain, Polygon, Optimistic Ethereum (OΞ), Arbitrum, Gnosis Chain, Avalanche and Fantom in a protected and efficient way. The 1inch Wallet supports hundreds of tokens across all of these networks.\\n\\n1inch offers users an easy entry into DeFi, providing access to deep liquidity across multiple blockchains and better rates for crypto swaps than any single cryptocurrency exchange. Moreover, 1inch saves users time, as they no longer have to manually check each exchange for the best swap prices.\\n\\nUser-friendliness:\\n\\nEIP-1559 support.\\nCustom token support - search for tokens or add them manually.\\nENS support.\\n\\nVersatility:\\n\\nConvenient import of popular crypto wallets by private key & seed phrase scanning with the phone camera directly in the app.\\nWeb3 browser support - take advantage of the leading dApps' power.\\nFull-featured WalletConnect integration - connect the 1inch Wallet to dApp in any browser on any device.\\n\\nTop level security:\\n\\nProtection from front-running and \"sandwich attacks\".\\nGoogle Drive and file backup.\\n\nBiometric authentication.\\nPasscode lock.\\n\\nAdvanced crypto trading features:\\n\\nAbility to cancel sent transactions or adjust gas prices to speed up the execution of transactions.\\nInstant approval and signing of transactions, regardless of their size.\\nAdvanced transaction management - send raw hex data and set up a gas limit.\\nFlashbot transaction support.\\n\\nDownload the 1inch Wallet to enjoy convenient and efficient DeFi transactions, as well as the best token swap rates!\\n\\nCome say hello!\\n\\nTwitter: https://twitter.com/1inch Telegram: https://t.me/OneInchNetwork Facebook: https://facebook.com/1inchNetwork Discord: https://discord.com/invite/1inch",
+      "appUrl": "https://1inch.io/wallet/",
+      "dappId": "io.1inch.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/1inchWallet-1.12.1-s-281.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId": "io.oneinch.android",
+          "version": "1.12.1-s",
+          "versionCode": "281"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/logo-ic_launcher-playstore.png",
+        "banner": "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/banner-featureGraphic.png",
+        "screenshots": [
+          "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/sc-1-4_send_flash_transactions.png",
+          "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/sc-2-3_swap_tokens.png",
+          "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/sc-3-2_multiple_networks.png",
+          "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/sc-4-1_user_friendly_and_fast.png",
+          "https://bafybeihcutkreeezd4ncbo6eddgkjzamg4wdrqstb6ex2voqupepqa3kku.ipfs.dweb.link/sc-5-0_best_wallet.png"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["de", "en", "es", "fr", "hi", "id", "ja", "ko", "pt", "ru", "tr", "vi", "zh"],
+      "version": "1.12.1-s",
+      "versionCode": "281",
+      "isListed": true,
+      "listDate" : "2023-04-11",
+      "availableOnPlatform": ["android"],
+      "tags": ["wallet"],
+      "developer": {
+        "legalName" : "1Inch",
+        "website":"https://1inch.io/",
+        "privacyPolicyUrl" : "https://1inch.io/assets/wallet/1inch_wallet_privacy_policy.html",
+        "support": {
+          "url": "https://1inch.io/contacts/"
+        }
+      },
+      "chains": [1, 10, 56, 100, 137, 250, 8217, 42161, 43114, 1313161554],
+      "category": "nft",
+      "packageId": "io.oneinch.android",
+      "walletApiVersion":["v1", "v2"]
     }
   ],
   "featuredSections": [
