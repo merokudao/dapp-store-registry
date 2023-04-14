@@ -153,13 +153,13 @@ export class DappStoreRegistry {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
 
     // find duplicate dapp
-    const counts: any = {}
-    const duplicaes: any = []
-    dAppIDs.forEach((item) => {
-      counts[item] = counts[item] ? counts[item]: 0;
-      counts[item] += 1
+    const counts: any = {};
+    const duplicaes: any = [];
+    dAppIDs.forEach(item => {
+      counts[item] = counts[item] ? counts[item] : 0;
+      counts[item] += 1;
       if (counts[item] >= 2) {
-        duplicaes.push(item)
+        duplicaes.push(item);
       }
     });
 
@@ -254,7 +254,9 @@ export class DappStoreRegistry {
         res = res.filter(d => d.chains.includes(chainId));
       }
 
-      res = res.filter(d => (!filterOpts.language || d.language.includes(filterOpts.language)));
+      res = res.filter(
+        d => !filterOpts.language || d.language.includes(filterOpts.language)
+      );
 
       if (filterOpts.availableOnPlatform) {
         const platforms = filterOpts.availableOnPlatform;
@@ -699,7 +701,7 @@ export class DappStoreRegistry {
    * @returns if matches return dappInfo
    */
   public searchByDappId = (queryTxt: string): DAppSchema[] => {
-    let res = this.searchEngine?.search(queryTxt, {
+    const res = this.searchEngine?.search(queryTxt, {
       fields: ["dappId"],
       combineWith: "AND"
     }) as unknown as DAppSchema[];
