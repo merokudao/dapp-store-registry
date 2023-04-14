@@ -26920,7 +26920,7 @@
           "url": "https://bafybeihhbalx7vryqik5jh2fcxfmsym4tataqjr7f62pouhp3ag6nvrcuq.ipfs.dweb.link/_0VIX_Protocol_16878992.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.zerovix",
+          "packageId": "com.ww0VIXProtocol_16878992",
           "version" : "1.0",
           "versionCode": "1556608346"
         }
@@ -27019,7 +27019,7 @@
       },
       "chains": [137],
       "category": "defi",
-      "packageId": "com.zerovix"
+      "packageId": "com.ww0VIXProtocol_16878992"
     },
     {
       "name": "hashmail",
@@ -27224,7 +27224,7 @@
           "url": "https://bafybeibz7cyllzg53wjr7wc24xiz7w22minbxxloe4aqwuy33brnamnopu.ipfs.dweb.link/Yy069dsVCE73CkUfG9nb_app-release-signed.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "app.purplepay.merchant",
+          "packageId": "xyz.appmaker.mhibhs",
           "version" : "1",
           "versionCode": "1"
         }
@@ -27259,7 +27259,7 @@
       },
       "chains": [137],
       "category": "defi",
-      "packageId": "app.purplepay.merchant"
+      "packageId": "xyz.appmaker.mhibhs"
     },
     {
       "name": "unjumble",
@@ -27751,7 +27751,7 @@
           "url": "https://bafybeientq5g3uwv4zbp2lf47gxnnvkl2cooflwvr3wpygk4z46g5bfde4.ipfs.dweb.link/KingFrog-crossing_dApp-store_NoGoogleComponents.apk",
           "platform": "android",
           "minVersion": "11.0.0",
-          "packageId": "com.megaVoltCorp.kingfrogcrossing",
+          "packageId": "com.MegaVoltCorp.KingFrogCrossing",
           "version" : "1.11",
           "versionCode": "11"
         }
@@ -27787,7 +27787,7 @@
       },
       "chains": [137],
       "category": "games",
-      "packageId": "com.megaVoltCorp.kingfrogcrossing"
+      "packageId": "com.MegaVoltCorp.KingFrogCrossing"
     },
     {
       "name": "Reap",
@@ -28511,10 +28511,10 @@
       "dappId": "com.staderlabs.dapp",
       "downloadBaseUrls": [
         {
-          "url": "https://bafybeihxx7xvh2u7odjorkngtt6kuf6asv7lteulw3ui4cjq7r76vublw4.ipfs.dweb.link/polygonStakingv1.apk",
+          "url": "https://bafybeiaj2kbvyej6zf73ld54aoyj5jces74dde5jn265azb3dkq2vsf24i.ipfs.dweb.link/stader-polygon-app.apk",
           "platform": "android",
-          "minVersion": "11.0.0",
-          "packageId": "com.staderlabs.www.twa",
+          "minVersion": "8.0.0",
+          "packageId": "com.staderlabs.www.polygon.twa",
           "version": "1",
           "versionCode": "1"
         }
@@ -28546,7 +28546,7 @@
       },
       "chains": [1, 137],
       "category": "defi",
-      "packageId": "com.staderlabs.www.twa",
+      "packageId": "com.staderlabs.www.polygon.twa",
       "walletApiVersion": ["v1"]
     },
     {
@@ -28597,6 +28597,79 @@
       "category": "nft",
       "packageId": "io.oneinch.android",
       "walletApiVersion":["v1", "v2"]
+    },
+    {
+      "name": "Bitrefill",
+      "description": "**Bitrefill: Live on Crypto**\\n\\nBitrefill, the world's largest crypto-only e-commerce site, lets you buy Gift Cards from popular brands, top up your phone with 900+ carriers, and pay with various cryptocurrencies. Enjoy an average rating of 4.5/5 from 1000+ reviews and join our hundreds of thousands of happy customers.\\n\\n**Key Features:**\\n- Retail: Purchase Gift Cards and shop millions of items from numerous retailers with crypto\\n- Video Games: Buy your next game on any platform with cryptocurrency\\n- Travel: Book flights, hotels, and taxis for a credit-card-free vacation\\n- Apps: Pay for app purchases with crypto\\n- Entertainment: Access the latest music, movies, and TV shows\\n- Mobile Recharge: Top up your phone in 170+ countries worldwide\\n\\n**How it Works:**\\n1. Create an order: Choose a product, amount, and payment method\\n2. Pay with your crypto wallet\\n3. Redeem your order instantly\\n\\n**Stay Connected:**\\n- Browse Gift Cards: [bitrefill.com](https://bitrefill.com )\\n- Facebook: [facebook.com/bitrefill](https://facebook.com/bitrefill )\\n- Twitter: [twitter.com/bitrefill](https://twitter.com/bitrefill )",
+      "appUrl": "https://www.bitrefill.com/",
+      "dappId": "com.bitrefill.dapp",
+      "images": {
+        "logo": "https://bafybeig6zxusonvr2gotirst6h3bajiylcddpzdigksdxvrhj3icue5hjq.ipfs.dweb.link/logo-Avatar.png",
+        "banner": "https://bafybeig6zxusonvr2gotirst6h3bajiylcddpzdigksdxvrhj3icue5hjq.ipfs.dweb.link/banner-Cover%20desktop.png",
+        "screenshots": [
+          "https://bafybeig6zxusonvr2gotirst6h3bajiylcddpzdigksdxvrhj3icue5hjq.ipfs.dweb.link/sc-1-Screenshot.png",
+          "https://bafybeig6zxusonvr2gotirst6h3bajiylcddpzdigksdxvrhj3icue5hjq.ipfs.dweb.link/sc-2-Screenshot%20Mobile.png"
+        ]
+      },
+      "minAge": 0,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en", "de", "es", "fr", "it", "pt", "ru", "zh-cn", "ja", "ko"],
+      "version" : "1.32.2",
+      "isListed": true,
+      "listDate" : "2023-04-14",
+      "availableOnPlatform": ["web"],
+      "geoRestrictions": {
+        "allowedCountries": ["ae","af","al","am", "ao", "ar", "at", "au", "az", "ba", "bb", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bo", "br", "bs", "bw", "by", "ca", "cd", "cg", "ch", "ci", "cm", "co", "cr", "cy", "cz", "de", "dj", "dk", "do", "dz", "ec", "ee", "eg", "er", "es", "et", "fi", "fj", "fr", "ga", "gb", "ge", "gf", "gg", "gh", "gi", "gm", "gn", "gq", "gr", "gt", "hn", "hr", "ht", "hu", "id","ie", "il", "in", "iq", "is", "it", "je", "jm", "jo", "jp", "ke", "kg", "kh", "km", "kn", "kr", "kw", "kz", "la", "lb", "lc", "lk", "lr", "ls", "lt", "lu", "lv", "ly", "ma", "mc", "md", "mg", "mk", "ml", "mn", "mr", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "ne", "ng", "ni", "nl", "no", "np", "nz", "om", "pa", "pe", "pg", "ph", "pk", "pl", "pt", "py", "qa", "ro", "rs", "rw", "sa", "sd", "se", "sg", "si", "sk", "sl", "sm", "sn", "so", "sr", "st", "sv", "sy", "sz", "td", "tg", "th", "tj", "tl", "tm", "tn", "to", "tr", "tt", "tw", "tz", "ua", "ug", "us", "uy", "uz", "va", "vc", "ve", "vn", "vu", "xk", "ye", "za", "zm", "zw"]
+      },
+      "tags": ["bitrefill", "giftcards", "mobiletopup", "cryptocurrency", "bitcoin", "ethereum", "payments", "airtime", "prepaid", "digitalproducts", "recharge", "stablecoins", "marketplace"],
+      "developer": {
+        "legalName" : "Bitrefill",
+        "website":"https://www.bitrefill.com/",
+        "privacyPolicyUrl" : "https://www.bitrefill.com/privacy/",
+        "support": {
+          "url": "https://bitrefill.zendesk.com/hc/en-us"
+        }
+      },
+      "chains": [0],
+      "category": "defi",
+      "walletApiVersion":["v1"]
+    },
+    {
+      "name": "SOCLLY",
+      "description": "SOCLLY is a decentralized network with a Difference. This is a creator-centric platform where Creators will feel at home. They can use all the tools that we’re offering from the get-go! But before we reveal all the unique offerings of the product, we want to take you through the background journey of SOCLLY and why we even care about the creators more than ever!\\n\\nWe were and are always focused on expanding the base layer of LENS by adding more CREATOR-centric features.\\n\\nWe believe that every creator deserves a fair share of the value they bring to the platform. Our mission is to create an ecosystem where they can thrive, collaborate, and engage with their audience, without fear of the platform's control of their data.\\n\\nOur vision is to create a world where creators have the freedom to express themselves without worrying about censorship or being shut down by centralized entities. Our platform is built on trust, transparency, and a belief in the power of creators to shape the future of social media.\\n\\nJoin us on this journey to create a decentralized social network that puts the power back in the hands of the creators. Together, we can build a better future for all. Let's create a world where every creator can own their data, express themselves, and share their unique perspective with the world.\\n\\nUSPs of SOCLLY\\n\\nDecentralized Calendly:\\nIt empowers users to schedule appointments without relying on a central server, providing greater control, security, and privacy. Say goodbye to a single point of failure and enjoy the benefits of a peer-to-peer network for quickly scheduling meetings.\\n\\nEscrow Service: \\nDon't Let Scams Hold You Back - SOCLLY's Web3 Escrow Services Have You Covered! Requester’s money is safe until the services are not rendered from the Creator’s side. No one can scam anyone on SOCLLY.\\n\\nOn-Chain Availability:\\nNo More Traditional Scheduling Woes! Decentralized calendly and on-chain availability at your fingertips. Your productivity has never been this efficient!  Don't settle for traditional scheduling methods - embrace the future and take control of your time with this game-changing solution.\\n\\nSponsored Tweets (Coming soon):\\nHarness the power of social media and boost your brand's visibility with sponsored tweets. Reach a highly-engaged audience and drive conversions with the help of trusted influencers & creators. Elevate your marketing game and achieve your business goals with this effective strategy!\\n\\nToken-Gated Courses (Coming soon):\\nThe Future of Education is Here - Token-Gated Courses for Limitless Learning! Access valuable educational content without worrying about the traditional payment barriers with digital tokens, befitting both the instructor and the student, creating a win-win situation.",
+      "appUrl": "https://app.soclly.com/",
+      "dappId": "com.soclly.app.dapp",
+      "images": {
+        "logo": "https://bafybeidoypl2n7fsu4kmwqabghnvwfqvkytfeeaesgqorie4gflbyx2zpa.ipfs.dweb.link/logo-SOCLLY%20512%20x%20512.png",
+        "banner": "https://bafybeidoypl2n7fsu4kmwqabghnvwfqvkytfeeaesgqorie4gflbyx2zpa.ipfs.dweb.link/banner-SOCLLY%201920%20x%201081.png",
+        "screenshots": [
+          "https://bafybeidoypl2n7fsu4kmwqabghnvwfqvkytfeeaesgqorie4gflbyx2zpa.ipfs.dweb.link/sc-1-IMG_3965.png",
+          "https://bafybeidoypl2n7fsu4kmwqabghnvwfqvkytfeeaesgqorie4gflbyx2zpa.ipfs.dweb.link/sc-2-IMG_3964.png",
+          "https://bafybeidoypl2n7fsu4kmwqabghnvwfqvkytfeeaesgqorie4gflbyx2zpa.ipfs.dweb.link/sc-3-IMG_3963.png",
+          "https://bafybeidoypl2n7fsu4kmwqabghnvwfqvkytfeeaesgqorie4gflbyx2zpa.ipfs.dweb.link/sc-4-IMG_3962.png"
+        ]
+      },
+      "minAge": 16,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version" : "0.1",
+      "isListed": true,
+      "listDate" : "2023-04-14",
+      "availableOnPlatform": ["web"],
+      "tags": ["socialnetwork", "web3social", "creatoreconomy"],
+      "developer": {
+        "legalName" : "Prayag Singh",
+        "website":"https://www.soclly.com/",
+        "privacyPolicyUrl" : "https://uploads-ssl.webflow.com/61e00970be3a3210a3c192d8/622060c7e85d0a5eb28aee57_reachout-privacypolicy.pdf",
+        "support": {
+          "email": "prayag@soclly.com"
+        }
+      },
+      "chains": [137],
+      "category": "nft",
+      "walletApiVersion": ["v2"]
     }
   ],
   "featuredSections": [
