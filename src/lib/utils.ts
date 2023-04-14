@@ -1,4 +1,7 @@
 import { OpenSearchCompositeQuery, PaginationQuery } from '../interfaces';
+import * as opensearchConfig from "../handlers/opensearch-handlers/config.json";
+
+const { _source: { autocompleteFields, searchFields } } = opensearchConfig;
 
 export class cloneable {
   public static deepCopy<T>(source: T): T {
@@ -23,13 +26,34 @@ export class cloneable {
 }
 
 export const recordsPerPage: number = 20;
+export const recordsPerPageAutoComplete: number = 7;
 
-export const searchFilters = (search:string, payload:any): PaginationQuery => {
+/**
+ * return order 
+ * @param params 
+ * @returns 
+ */
+export const orderBy = (params: any) => {
+  const order:any = [{ _score: { order: "desc" }}];
+  if (params.rating) {
+    order.push({ "matrics.rating": { order: params.rating }});
+  }
+  if (params.visits) {
+    order.push({ "matrics.visits": { order: params.visits }});
+  }
+  if (params.installs) {
+    order.push({ "matrics.installs": { order: params.installs }});
+  }
+  return order;
+}
+
+export const searchFilters = (search:string, payload:any, autoComplete = false): PaginationQuery => {
   const query: OpenSearchCompositeQuery = {
     bool: {
         must: [],
         must_not: [],
-        should: []
+        should: [],
+        filter: []
     }
   }
   const {
@@ -43,10 +67,11 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
     allowedInCountries = null,
     blockedInCountries = null,
     categories = null,
-    isListed = false,
+    isListed = "true",
     developer = null,
     page = 1,
-    dappId = null
+    dappId = null,
+    searchById = false
   } = payload
 
   if (!!isForMatureAudience) query.bool.must.push({match: { isForMatureAudience: isForMatureAudience ==='true' ? true : false } });
@@ -58,18 +83,19 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
   if (listedOnOrBefore) query.bool.must.push({range: { listDate: { lte: listedOnOrBefore } }});
 
   // it should be filter users location current not more then one country
-  if (blockedInCountries && allowedInCountries.length) {
+  if (allowedInCountries && allowedInCountries.length) {
     allowedInCountries.split(',').forEach((ac:string)=> {
       query.bool.should.push({term: { "geoRestrictions.allowedCountries": ac.trim() }});
+      query.bool.must_not.push({term: { "geoRestrictions.blockedCountries": ac.trim() }});
     })
   }
   // it should be filter users location current not more then one country
   if (blockedInCountries && blockedInCountries.length) {
     blockedInCountries.split(',').forEach((bc:string)=> {
-      query.bool.must_not.push({term: { "geoRestrictions.blockedInCountries": bc.trim() }});
+      query.bool.must_not.push({term: { "geoRestrictions.blockedCountries": bc.trim() }});
     })
   }
-  if (isListed) query.bool.must.push({match: { isListed:  isListed === 'true' ? true: false }});
+
   if (developer && developer.githubID) query.bool.must.push({match: { "developer.githubID":  developer.githubID.trim() }});
   if (categories && categories.length) query.bool.must.push({terms: { category: categories.split(',').map((cat: string) => cat.trim()) }});
   if (dappId) query.bool.must.push({term: { id: dappId.trim() }})
@@ -79,16 +105,20 @@ export const searchFilters = (search:string, payload:any): PaginationQuery => {
     query.bool.should.push({ match: { name: { query: search, operator: "and" } } })
     query.bool.should.push({ match: { description: { query: search, operator: "and" } } })
     query.bool.should.push({ match: { daapId: { query: search, operator: "and" } } })
+    query.bool.should.push({ match: { category: { query: search, operator: "and" } } })
+    query.bool.filter.push({ term: { isListed: isListed === 'true' ? true: false  } })
   }
+  if (isListed && !searchById && !search) query.bool.must.push({match: { isListed:  isListed === 'true' ? true: false }});
 
   payload.page = parseInt(page);
   payload.page = payload.page > 0 ? payload.page: 1;
-  
+  const limit = autoComplete ? recordsPerPageAutoComplete: recordsPerPage;
   const finalQuery: PaginationQuery = {
+    _source: autoComplete ? autocompleteFields : searchFields,
     query,
-    from: (payload.page-1) * recordsPerPage,
-    size: payload.page * recordsPerPage,
-    sort: [{ _score: { order: "desc" }}]
+    from: (payload.page-1) * limit,
+    size: payload.page * limit,
+    sort: orderBy(payload.orderBy || {})
   }
 
   return finalQuery;

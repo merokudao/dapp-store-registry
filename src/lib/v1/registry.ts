@@ -1,14 +1,14 @@
 import { format } from "date-fns";
 
 import { OpensearchRequest } from "../../handlers";
-import { AddDappPayload, DAppSchema, DeleteDappPayload, FilterOptions, OpenSearchConnectionOptions, Pagination, SearchResult, StrandardResponse } from "../../interfaces";
+import { AddDappPayload, DAppSchema, DeleteDappPayload, FilterOptions, OpenSearchConnectionOptions, SearchResult, StandardResponse } from "../../interfaces";
 import { DappStoreRegistry} from "../"
 import { recordsPerPage, searchFilters } from "../utils";
 import debug from "debug";
 
 export const searchRegistry = {
-    indexPrefix : `${process.env.environment}_dapp_registries`,
-    alias: `${process.env.environment}_dapp_search_index`
+    indexPrefix : `${process.env.ENVIRONMENT}_dapp_registries`,
+    alias: `${process.env.ENVIRONMENT}_dapp_search_index`
 }
 export class DappStoreRegistryV1 {
     opensearchApis: OpensearchRequest;
@@ -77,14 +77,16 @@ export class DappStoreRegistryV1 {
      * @returns The list of dApps that are listed in the registry
      */
     public dApps = async (
-        filterOpts: FilterOptions = { isListed: true }
-    ): Promise<{ response: DAppSchema[], pagination: Pagination}> => {
+        filterOpts: FilterOptions = { isListed: "true" }
+    ): Promise<StandardResponse> => {
         const query = searchFilters('', filterOpts);
         const result: SearchResult = await this.opensearchApis.search(searchRegistry.alias, query);
         const { hits: { hits: response, total: { value } } } = result.body || { hits: { hits: []} };
-        const pageCount = parseInt(`${value/recordsPerPage}`, 10);
+        const pageCount = Math.ceil(value/recordsPerPage);
         return {
-            response,
+            status: 200,
+            message: ["success"],
+            data: response.map(rs => rs._source),
             pagination: {
                 page: filterOpts.page,
                 limit: recordsPerPage,
@@ -103,7 +105,7 @@ export class DappStoreRegistryV1 {
      * @param org 
      * @returns acknowledge
      */
-    public async addOrUpdateDapp(payload: AddDappPayload): Promise<StrandardResponse> {
+    public async addOrUpdateDapp(payload: AddDappPayload): Promise<StandardResponse> {
         const {
             name,
             email,
@@ -115,11 +117,10 @@ export class DappStoreRegistryV1 {
          * have to add if any action have to do onchain
          */
         debug(`deleting the app, name: ${name}, email: ${email}, githubId: ${githubID}, org: ${org}`);
-        const res = await this.opensearchApis.createDoc(searchRegistry.alias, {id:dapp.dappId, ...dapp})
+        await this.opensearchApis.createDoc(searchRegistry.alias, {id:dapp.dappId, ...dapp})
         return {
             status: 200,
             message: ["success"],
-            data: [res]
         }
     }
 
@@ -134,7 +135,7 @@ export class DappStoreRegistryV1 {
      * @param org 
      * @returns acknowledgement
      */
-    public deleteDapp = async (payload: DeleteDappPayload): Promise<StrandardResponse> => {
+    public deleteDapp = async (payload: DeleteDappPayload): Promise<StandardResponse> => {
         const {
             name,
             email,
@@ -144,11 +145,10 @@ export class DappStoreRegistryV1 {
         } = payload;
         /**have to write code  for on chain actions*/
         debug(`deleting the app, name: ${name}, email: ${email}, githubId: ${githubID}, org: ${org}`);
-        const res = await this.opensearchApis.deleteDoc(searchRegistry.alias, dappId)
+        await this.opensearchApis.deleteDoc(searchRegistry.alias, dappId)
         return {
             status: 200,
-            message: ["success"],
-            data: [res]
+            message: ["success"]
         }
     }
 
@@ -161,14 +161,16 @@ export class DappStoreRegistryV1 {
      */
     public search = async (
         queryTxt: string,
-        filterOpts: FilterOptions = { isListed: true }
-      ): Promise<{ response: DAppSchema[], pagination: Pagination}>=> {
+        filterOpts: FilterOptions = { isListed: "true" }
+      ): Promise<StandardResponse>=> {
         const query = searchFilters(queryTxt, filterOpts);
         const result: SearchResult = await this.opensearchApis.search(searchRegistry.alias, query);
         const { hits: { hits: response, total: { value } } } = result.body || { hits: { hits: []} };
-        const pageCount = parseInt(`${value/recordsPerPage}`, 10);
+        const pageCount = Math.ceil(value/recordsPerPage);
         return {
-          response,
+            status: 200,
+            message: ["success"],
+          data: response.map(rs => rs._source),
           pagination: {
             page: filterOpts.page,
             limit: recordsPerPage,
@@ -182,10 +184,28 @@ export class DappStoreRegistryV1 {
      * @param queryTxt dappId
      * @returns if matches return dappInfo
      */
-    public searchByDappId = async (queryTxt: string): Promise<DAppSchema[]> => {
-        const query = searchFilters('', { dappId: queryTxt });
+    public searchByDappId = async (queryTxt: string): Promise<StandardResponse> => {
+        const query = searchFilters('', { dappId: queryTxt, searchById: true });
         const result: SearchResult = await this.opensearchApis.search(searchRegistry.alias, query);
-        const { hits: { hits: res } } = result.body || { hits: { hits: []} };
-        return res;
+        const { hits: { hits: res } } = result.body || { hits: { hits: [] } };
+        return {
+            status: 200,
+            message: ["success"],
+            data: (res && res.map(rs => rs._source))
+        };
     };
+
+    public autoComplete =async (
+        queryTxt: string,
+        filterOpts: FilterOptions = { isListed: "true" }
+    ): Promise<StandardResponse> => {
+        const query = searchFilters(queryTxt, filterOpts, true);
+        const result: SearchResult = await this.opensearchApis.search(searchRegistry.alias, query);
+        const { hits: { hits: response } } = result.body || { hits: { hits: []} };
+        return {
+            status: 200,
+            message: ["success"],
+            data: (response && response.map(rs => rs._source))
+        };
+    }
 }

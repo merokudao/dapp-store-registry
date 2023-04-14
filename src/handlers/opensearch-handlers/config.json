@@ -7,7 +7,7 @@
         "analysis": {
             "analyzer": {
               "autocomplete": {
-                "tokenizer": "autocomplete",
+                "tokenizer": "autocomplete_tokenizer",
                 "filter": [
                   "lowercase"
                 ]
@@ -17,13 +17,28 @@
               }
             },
             "tokenizer": {
-              "autocomplete": {
+              "autocomplete_tokenizer": {
                 "type": "edge_ngram",
                 "min_gram": 2,
-                "max_gram": 10,
+                "max_gram": 20,
                 "token_chars": [
                   "letter",
-                  "digit"
+                  "digit",
+                  "whitespace",
+                  "punctuation",
+                  "symbol",
+                  "custom"
+                ],
+                "custom_token_chars":[
+                    "!",
+                    ".",
+                    "+",
+                    "=",
+                    "-",
+                    "&",
+                    "#",
+                    "@",
+                    "*"
                 ]
               }
             }
@@ -45,10 +60,24 @@
                 "type": "keyword"
             },
             "downloadBaseUrls": {
-                "type": "text"
+                "type": "nested",
+                "properties": {
+                    "url": { "type": "keyword" },
+                    "platform": { "type": "keyword" },
+                    "minVersion": { "type": "keyword" },
+                    "maxVersion": { "type": "keyword" },
+                    "packageId": {  "type": "keyword" },
+                    "version": { "type": "keyword" },
+                    "versionCode": { "type": "keyword" },
+                    "screenDPI": { "type": "keyword" }
+                }
             },
             "contracts": {
-                "type": "text"
+                "type": "nested",
+                "properties": {
+                    "address": { "type": "keyword" },
+                    "chainId": { "type": "keyword" }
+                }
             },
             "images": {
                 "properties": {
@@ -141,15 +170,62 @@
                 "type": "text"
             },
             "category": {
-                "type": "keyword"
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "autocomplete_search"
             },
             "packageId": {
                 "type": "keyword"
             },
             "walletApiVersion": {
                 "type": "keyword"
+            },
+            "matrics":{
+                "properties": {
+                    "downloads": { "type": "integer" },
+                    "installs": { "type": "integer" },
+                    "uninstalls": { "type": "integer" },
+                    "ratingsCount": { "type": "integer" },
+                    "visits": { "type": "integer" },
+                    "rating": { "type": "double" }
+                }
             }
         }
-    }
-        
+    },
+    "_source": {
+        "autocompleteFields": [
+            "name",
+            "dappId",
+            "appUrl",
+            "category",
+            "minAge",
+            "isForMatureAudience"
+        ],
+        "searchFields": [
+            "name",
+            "description",
+            "appUrl",
+            "downloadBaseUrls",
+            "contracts",
+            "images",
+            "repoUrl",
+            "dappId",
+            "minAge",
+            "isForMatureAudience",
+            "isSelfModerated",
+            "isListed",
+            "language",
+            "version",
+            "versionCode",
+            "listDate",
+            "availableOnPlatform",
+            "tags",
+            "category",
+            "geoRestrictions",
+            "chains",
+            "packageId",
+            "walletApiVersion",
+            "matrics"
+        ]
+    }  
 }

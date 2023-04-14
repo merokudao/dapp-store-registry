@@ -22,19 +22,23 @@ export interface OpenSearchCompositeQuery {
         must     : object [],
         must_not : object [],
         should : object [],
+        filter : object [],
     }
 }
 
 export interface PaginationQuery {
+    _source: string[],
     query: OpenSearchCompositeQuery,
     from: number,
     size: number,
     sort: object[]
 }
 
-export interface DAppSchemaSearch extends DAppSchema {
+export interface DAppSchemaSearch {
     id: string,
-    index: string
+    index: string,
+    _source: DAppSchema
+
 }
 
 export interface SearchResult {
@@ -64,10 +68,11 @@ export interface Pagination {
     limit?: number,
 }
 
-export interface StrandardResponse {
+export interface StandardResponse {
     status: number,
     message?: string[],
-    data?: object[]
+    data?: object[],
+    pagination?: Pagination
 }
 
 export interface AddDappPayload {
