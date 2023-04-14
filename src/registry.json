@@ -28611,7 +28611,7 @@
           "https://bafybeig6zxusonvr2gotirst6h3bajiylcddpzdigksdxvrhj3icue5hjq.ipfs.dweb.link/sc-2-Screenshot%20Mobile.png"
         ]
       },
-      "minAge": 0,
+      "minAge": 4,
       "isForMatureAudience" : true,
       "isSelfModerated": true,
       "language": ["en", "de", "es", "fr", "it", "pt", "ru", "zh-cn", "ja", "ko"],
