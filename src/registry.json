@@ -28632,7 +28632,7 @@
         }
       },
       "chains": [0],
-      "category": "defi",
+      "category": "e-commerce",
       "walletApiVersion":["v1"]
     },
     {
@@ -28668,7 +28668,7 @@
         }
       },
       "chains": [137],
-      "category": "nft",
+      "category": "social networking",
       "walletApiVersion": ["v2"]
     }
   ],
