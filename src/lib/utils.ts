@@ -37,14 +37,29 @@ export const recordsPerPageAutoComplete = 7;
  */
 export const orderBy = (params: any) => {
   const order: any = [{ _score: { order: "desc" } }];
-  if (params.rating) {
-    order.push({ "matrics.rating": { order: params.rating } });
+  const {
+    rating = null,
+    visits= null,
+    installs = null,
+    listDate = null,
+    name = null,
+  } = params;
+  if (rating) {
+    order.push({ "matrics.rating": { order: rating } });
   }
-  if (params.visits) {
-    order.push({ "matrics.visits": { order: params.visits } });
+  if (visits) {
+    order.push({ "matrics.visits": { order: visits } });
   }
-  if (params.installs) {
-    order.push({ "matrics.installs": { order: params.installs } });
+  if (installs) {
+    order.push({ "matrics.installs": { order: installs } });
+  }
+
+  if (listDate) {
+    order.push({ "listDate": { order: listDate } });
+  }
+
+  if (name) {
+    order.push({ "name": { order: name } });
   }
   return order;
 };
