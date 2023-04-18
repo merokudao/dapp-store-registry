@@ -97,7 +97,8 @@ export class DappStoreRegistry {
         "minAge",
         "developer",
         "packageId",
-        "walletApiVersion"
+        "walletApiVersion",
+        "subCategory",
       ],
       searchOptions: { prefix: true }
     });
