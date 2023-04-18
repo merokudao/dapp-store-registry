@@ -1123,30 +1123,6 @@
       "dappId": "com.bravefrontierheroes.dapp"
     },
     {
-      "name": "Rarible",
-      "description": "Today is the non-fungible reality of tomorrow. Turn your products or services into publicly tradable assets. Create and sell digital collectibles secured with blockchain.",
-      "appUrl": "https://rarible.com",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/3182/rarible-dapp-marketplaces-eth-logo_6c8ebd4c788fc618a2cd1645c22950c9.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": ["en"],
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "shopping",
-      "chains": [
-        1,
-        137
-      ],
-      "dappId": "com.rarible.dapp"
-    },
-    {
       "name": "Synthetix",
       "description": "Synthetix is a decentralized platform on Ethereum for the creation of Synths: on-chain synthetic assets that track the value of real-world assets. Born as stablecoin project Havven, Synthetix rebranded and expanded its scope prior to launching on mainnet in February 2019. As of May 2019, the Synthetix platform supports over 20 Synths representing fiat currencies, commodities (e.g., gold), and cryptoassets. Stocks, indices, and other derivatives are expected to be added soon.",
       "appUrl": "https://www.synthetix.io/",
@@ -28670,6 +28646,101 @@
       "chains": [137],
       "category": "social networking",
       "walletApiVersion": ["v2"]
+    },
+    {
+      "name": "p(x)Card: crypto & NFT wallet",
+      "description": "Are you looking for the piece of paper where you wrote the private key?\\n\\nNow you have an easier option to store your crypto.\\n\\nIntroducing p(x)Card.\\n\\nBuilt upon Function X and Infineon technologies SECORA™ Blockchain security solution, p(x)Card is an easy-to-use self-custody hardware wallet supporting multiple blockchain networks. The card is the private key itself. p(x)Card keeps your private key contained in your card and stays offline like your cold storage wallet. No more complicated settings.\\n\\nUsers can use p(x)Card to authorize crypto payment or store NFTs via p(x)Card app or XPOS point-of-sale platform developed by Pundi X Labs. Cryptocurrencies and NFTs, all in one card!\\n\\nThis app enables the p(x)Card users sign the transactions using NFC technology. The hardware wallet card is equipped with Infineon’s field-proven security chip featuring Integrity Guard security technology, supporting Global Platform Secure Channel Protocol 03 (SCP03) for secure authentication and encrypted communication.\\n\\nYou can manage both your cryptocurrencies & NFTs using p(x)Card App:\\n\\n*Check the assets purchased via XPOS and stored in your card wallet\\n\\n*Transfer your assets from/to your another blockchain wallet. \\n\\n*You can also find all stores available to pay/purchase with your p(x)Card nearby. Everything is on the go.\\n\\nList of supported blockchain networks\\n- Binance Smart Chain\\n- Ethereum\\n- f(x)Core\\n- Polygon\\n- Tron\\n\\nComing soon\\n- Avalanche C-Chain",
+      "appUrl": "https://pxcard.io/",
+      "dappId": "io.pxcard.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://bafybeib3bshzij2kpiij3tnnvpvrmjrb4s34at2pfvxdptp6azu7jyfnda.ipfs.dweb.link/p%28x%29Card_1.0.0_release.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId": "com.functionx.xcard",
+          "version": "1.0.0",
+          "versionCode": "103"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeib3bshzij2kpiij3tnnvpvrmjrb4s34at2pfvxdptp6azu7jyfnda.ipfs.dweb.link/logo-Icon%20Template%20512pt@2x.png",
+        "banner": "https://bafybeib3bshzij2kpiij3tnnvpvrmjrb4s34at2pfvxdptp6azu7jyfnda.ipfs.dweb.link/banner%E7%BD%AE%E9%A1%B6%E5%A4%A7%E5%9B%BE@1x.png",
+        "screenshots": [
+          "https://bafybeib3bshzij2kpiij3tnnvpvrmjrb4s34at2pfvxdptp6azu7jyfnda.ipfs.dweb.link/sc-1-Screenshot%204.png",
+          "https://bafybeib3bshzij2kpiij3tnnvpvrmjrb4s34at2pfvxdptp6azu7jyfnda.ipfs.dweb.link/sc-2-Screenshot%203.png",
+          "https://bafybeib3bshzij2kpiij3tnnvpvrmjrb4s34at2pfvxdptp6azu7jyfnda.ipfs.dweb.link/sc-3-Screenshot%202.png",
+          "https://bafybeib3bshzij2kpiij3tnnvpvrmjrb4s34at2pfvxdptp6azu7jyfnda.ipfs.dweb.link/sc-4-Screenshot%201.png"
+        ]
+      },
+      "minAge": 14,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": ["en"],
+      "version": "1.0.0",
+      "versionCode": "103",
+      "isListed": true,
+      "listDate" : "2023-04-17",
+      "availableOnPlatform": ["android"],
+      "developer": {
+        "legalName" : "Function X Foundation",
+        "website":"http://functionx.io/",
+        "privacyPolicyUrl" : "https://agreement.functionx.io/en/pxCard/privacyPolicy.html",
+        "support": {
+          "email": "developer@xblockchain.app"
+        }
+      },
+      "chains": [1, 137, 56],
+      "category": "nft",
+      "packageId": "com.functionx.xcard"
+    },
+    {
+      "name": "Rarible",
+      "description": "Rarible: NFT Aggregator & Portfolio\\n\\nThe app is a convenient tool by Rarible for user to browse any NFTs available on blockchain.\\n\\nUse this application to:\\n- view any NFTs: description, history, details & more\\n- view the list of trending collections\\n- view featured items\\n- find new items via app feed and search\\n- track your portfolio",
+      "appUrl": "https://rarible.com/",
+      "dappId": "com.rarible.dapp",
+      "downloadBaseUrls": [
+        {
+          "url": "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/Rarible_%20NFT%20Aggregator_3.6_.com.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId": "com.rarible.android.release",
+          "version": "3.6",
+          "versionCode": "40"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/Logo.png",
+        "banner": "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/Banner.png",
+        "screenshots": [
+          "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/sc-1-Screenshot-05.png",
+          "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/sc-2-Screenshot-04.png",
+          "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/sc-3-Screenshot-03.png",
+          "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/sc-4-Screenshot-02.png",
+          "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/sc-5-Screenshot-01.png"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "3.6",
+      "versionCode": "40",
+      "isListed": true,
+      "listDate" : "2023-04-17",
+      "availableOnPlatform": ["web", "android"],
+      "tags": ["nft", "marketplace"],
+      "developer": {
+        "legalName" : "Kevin Noessler",
+        "website":"https://help.rarible.com/hc/en-us",
+        "privacyPolicyUrl" : "https://static.rarible.com/privacy.pdf",
+        "support": {
+          "email": "info@rarible.com"
+        }
+      },
+      "chains": [1, 137],
+      "category": "nft",
+      "packageId": "com.rarible.android.release",
+      "walletApiVersion":["v2"]
     }
   ],
   "featuredSections": [
