@@ -21,17 +21,14 @@ export interface StoreSchema {
 export interface EnrichSchema {
   storeKey: string;
   dappId: string;
-  filds: EnrichFieldSchema;
+  fields?: EnrichFieldSchema;
 }
 
 export interface EnrichFieldSchema {
   images?: {
     logo?: string;
     banner?: string;
-    screenshots?: {
-      value?: string;
-      index?: number;
-    }[];
+    screenshots?: ScreenShotSchema[];
   };
   description?: string;
   minAge?: number;
@@ -41,4 +38,17 @@ export interface EnrichFieldSchema {
     blockedCountries?: string[];
   };
   tags?: string[];
+}
+
+export interface ScreenShotSchema {
+  value?: string;
+  index?: number;
+}
+
+export interface DappEnrichPayload {
+  key: string;
+  dappId: string;
+  githubId: string;
+  remove?: string[];
+  add?: EnrichFieldSchema;
 }
