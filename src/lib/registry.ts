@@ -18,6 +18,8 @@ import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
+import categoryJson from "./../dappCategory.json";
+
 import { Octokit } from "octokit";
 import { createAppAuth } from "@octokit/auth-app";
 import { cloneable } from "./utils";
@@ -97,7 +99,8 @@ export class DappStoreRegistry {
         "minAge",
         "developer",
         "packageId",
-        "walletApiVersion"
+        "walletApiVersion",
+        "subCategory",
       ],
       searchOptions: { prefix: true }
     });
@@ -923,4 +926,8 @@ export class DappStoreRegistry {
   public getFeaturedDapps = async () => {
     return (await this.registry()).featuredSections;
   };
+
+  public getAllCategories = () => {
+    return categoryJson;
+  }
 }

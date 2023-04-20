@@ -147,6 +147,8 @@ export interface DAppSchema {
 
   category: DAppCategory;
 
+  subCategory?: string;
+
   packageId?: string;
 
   walletApiVersion?: string[];
