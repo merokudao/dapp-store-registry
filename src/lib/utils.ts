@@ -1,9 +1,29 @@
-import { OpenSearchCompositeQuery, PaginationQuery } from "../interfaces";
 import * as opensearchConfig from "../handlers/opensearch-handlers/config.json";
 
 const {
   _source: { autocompleteFields, searchFields }
 } = opensearchConfig;
+import {
+  DAppStoreSchema,
+  StoresSchema,
+  OpenSearchCompositeQuery,
+  PaginationQuery
+} from "../interfaces";
+import storesJson from "../dappStore.json";
+import registryJson from "./../registry.json";
+import Debug from "debug";
+import Ajv2019 from "ajv/dist/2019";
+import addFormats from "ajv-formats";
+import dAppStoreSchema from "../schemas/merokuDappStore.dAppStore.json";
+import dAppStoresSchema from "../schemas/merokuDappStore.dAppStores.json";
+import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
+import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
+import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
+import { DappStoreRegistry, RegistryStrategy } from "./registry";
+import crypto from "crypto";
+import { Octokit } from "octokit";
+
+const debug = Debug("@merokudao:dapp-store-registry:utils");
 
 export class cloneable {
   public static deepCopy<T>(source: T): T {
@@ -64,6 +84,237 @@ export const orderBy = (params: any) => {
   return order;
 };
 
+export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
+  let uniqueIDs: string[];
+  if ("title" in json) {
+    uniqueIDs = json.dapps.map(dapp => dapp.dappId);
+  } else {
+    uniqueIDs = json.dappStores.map(dapp => dapp.key);
+  }
+  const uniqueStoreIDs = Array.from(new Set(uniqueIDs));
+  if (uniqueIDs.length !== uniqueStoreIDs.length) {
+    throw new Error(
+      `@merokudao/dapp-store-registry: stores is invalid. key IDs must be unique.`
+    );
+  }
+
+  const ajv = new Ajv2019({
+    strict: false
+  });
+  addFormats(ajv);
+  let validate;
+  if ("title" in json) {
+    // registry
+    ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppSchema, "dAppSchema");
+    ajv.addFormat("url", /^https?:\/\/.+/);
+    validate = ajv.compile(dAppRegistrySchema);
+  } else {
+    // dAppStores
+    ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppStoreSchema, "dAppStoreSchema");
+    validate = ajv.compile(dAppStoresSchema);
+  }
+  const valid = validate(json);
+  debug(JSON.stringify(validate.errors));
+  return [valid, JSON.stringify(validate.errors)];
+};
+
+export const local = (schema: string): StoresSchema | DAppStoreSchema => {
+  // const res = storesJson as storesSchema;
+  let res;
+  if (schema === "registry") {
+    res = registryJson as DAppStoreSchema;
+  } else {
+    res = storesJson as StoresSchema;
+  }
+  const [valid, errors] = validateSchema(res);
+  if (valid) {
+    return res;
+  } else {
+    debug(errors);
+    throw new Error(
+      `@merokudao/dapp-store-registry: local ${schema} is invalid.`
+    );
+  }
+};
+
+export const queryRemote = async (
+  remoteFile: string,
+  schema: string
+): Promise<StoresSchema | DAppStoreSchema> => {
+  debug(`fetching remote ${schema} from ${remoteFile}`);
+  try {
+    const response = await fetch(remoteFile);
+    if (response.status > 400) {
+      throw new Error(
+        `@merokudao/dapp-store-registry: remote ${schema} is invalid. status: ${response.status} ${response.statusText}`
+      );
+    }
+    debug(
+      `remote ${schema} fetched. status: ${response.status} ${response.statusText}`
+    );
+
+    const json =
+      schema === "registry"
+        ? ((await response.json()) as DAppStoreSchema)
+        : ((await response.json()) as StoresSchema);
+
+    const [valid, errors] = validateSchema(json);
+    if (!valid) {
+      debug(errors);
+      debug(`remote ${schema} is invalid. Falling back to static repository.`);
+      return local(schema);
+    }
+    if (schema === "registry") {
+      return json as DAppStoreSchema;
+    }
+    return json as StoresSchema;
+  } catch (err) {
+    debug(err);
+    debug(`Can't fetch remote. falling back to static ${schema}.`);
+    return local(schema);
+  }
+};
+
+export const cacheStoreOrRegistry = async (
+  remoteFile: string,
+  cached: DAppStoreSchema | StoresSchema | undefined,
+  strategy: RegistryStrategy,
+  schema: string,
+  lastCheckedAt: Date | undefined,
+  TTL: number
+): Promise<[DAppStoreSchema | StoresSchema, Date | undefined]> => {
+  if (!cached) {
+    debug(`${schema} not cached. fetching with strategy " + strategy + "...`);
+    switch (strategy) {
+      case RegistryStrategy.GitHub:
+        cached = await queryRemote(remoteFile, schema);
+        lastCheckedAt = new Date();
+        break;
+      case RegistryStrategy.Static:
+        cached = local(schema);
+        break;
+      default:
+        throw new Error(
+          `@merokudao/dapp-store-registry: invalid registry strategy ${strategy}`
+        );
+        break;
+    }
+    // this.searchEngine?.addAll(this.cachedRegistry.dapps);
+  } else {
+    if (lastCheckedAt && new Date().getTime() - lastCheckedAt.getTime() < TTL) {
+      debug(`${schema} cached. returning...`);
+      return [cloneable.deepCopy(cached), lastCheckedAt];
+    }
+
+    const remote = await queryRemote(remoteFile, schema);
+    const checksumCached = crypto
+      .createHash("md5")
+      .update(JSON.stringify(cached))
+      .digest("hex");
+    const checksumRemote = crypto
+      .createHash("md5")
+      .update(JSON.stringify(remote))
+      .digest("hex");
+    if (checksumCached !== checksumRemote) {
+      debug(`${schema} changed. updating...`);
+      cached = remote;
+      lastCheckedAt = new Date();
+      // this.searchEngine?.addAll(this.cachedRegistry.dapps);
+    }
+  }
+
+  return [cloneable.deepCopy(cached), lastCheckedAt];
+};
+
+export const updateRegistryOrStores = async (
+  name: string,
+  email: string,
+  githubId: string,
+  accessToken: string,
+  newRegistry: DAppStoreSchema | StoresSchema,
+  commitMessage: string,
+  org: string | undefined = undefined,
+  githubOwner: string,
+  githubRepo: string,
+  schema: string
+) => {
+  const filePath =
+    schema === "registry" ? "src/registry.json" : "src/dappStore.json";
+  // Fork repo from merokudao to the authenticated user
+  const octokit = new Octokit({
+    userAgent: "@merokudao/dAppStore/v1.2.3",
+    auth: accessToken
+  });
+
+  debug(`forking ${githubOwner}/${githubRepo} to ${githubId}/${githubRepo}`);
+  await octokit.request("POST /repos/{owner}/{repo}/forks", {
+    owner: githubOwner,
+    repo: githubRepo,
+    organization: org,
+    name: githubRepo,
+    default_branch_only: true
+  });
+  debug(`forked ${githubOwner}/${githubRepo} to ${githubId})`);
+
+  // Get the SHA of the registry file
+  debug(`getting sha of repos/${githubId}/${githubRepo}/contents/${filePath}`);
+  const {
+    data: { sha }
+  } = await octokit.request("GET /repos/{owner}/{repo}/contents/{file_path}", {
+    owner: githubId,
+    repo: githubRepo,
+    file_path: filePath
+  });
+
+  // Commit the changes
+  // Push the changes to the forked repo
+  debug(`pushing changes to ${githubId}/${githubRepo}`);
+  await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
+    owner: githubId,
+    repo: githubRepo,
+    path: filePath,
+    message: commitMessage,
+    committer: {
+      name: name,
+      email: email
+    },
+    content: Buffer.from(JSON.stringify(newRegistry, null, 2)).toString(
+      "base64"
+    ),
+    sha: sha
+  });
+
+  // Open a PR against the main branch of the merokudao repo
+  // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
+  // Since it's not possible to create a PR from one repo to another, we'll have to
+  // resort to returning a URL that, when the user goes to, prompts to create a PR
+  const prURL = `https://github.com/${githubOwner}/${githubRepo}/compare/main...${githubId}:${githubRepo}:main?expand=1`;
+
+  debug(`PR URL: ${prURL}`);
+  return prURL;
+};
+
+/**
+ * It will check that dapps exist in registry or not.
+ */
+export const isExistInRegistry = async (
+  dappIds: string[],
+  DappRegistry: DappStoreRegistry
+) => {
+  const currRegistry = await DappRegistry.registry();
+  dappIds.forEach(x => {
+    const exist = currRegistry.dapps.filter(y => y.dappId === x && y.isListed);
+    if (exist.length === 0) {
+      throw new Error(`dApp ID ${x} not found or not listed in registry`);
+    }
+    if (exist.length > 1) {
+      throw new Error(`Multiple dApps with the same ID ${x} found`);
+    }
+  });
+};
+
 export const searchFilters = (
   search: string,
   payload: any,
@@ -95,7 +346,8 @@ export const searchFilters = (
     searchById = false
   } = payload;
 
-  if (isForMatureAudience)
+  // eslint-disable-next-line no-extra-boolean-cast
+  if (!!isForMatureAudience)
     query.bool.must.push({
       match: {
         isForMatureAudience: isForMatureAudience === "true" ? true : false

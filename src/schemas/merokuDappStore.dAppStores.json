@@ -1,0 +1,18 @@
+{
+    "schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppStores.json",
+    "title": "dApp Store Schema",
+    "description": "A dApp store schema",
+    "type": "object",
+    "properties": {
+        "dappStores": {
+            "type": "array",
+            "description": "List of dapp stores",
+            "items": {
+              "$ref": "merokuDappStore.dAppStore.json"
+            }
+        }
+    },
+    "required": ["dappStores"],
+    "additionalProperties": false
+}

@@ -18,6 +18,8 @@ import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
+import categoryJson from "./../dappCategory.json";
+
 import { Octokit } from "octokit";
 import { createAppAuth } from "@octokit/auth-app";
 import { cloneable } from "./utils";
@@ -86,6 +88,7 @@ export class DappStoreRegistry {
         "isSelfModerated",
         "language",
         "version",
+        "versionCode",
         "isListed",
         "listDate",
         "availableOnPlatform",
@@ -96,7 +99,8 @@ export class DappStoreRegistry {
         "minAge",
         "developer",
         "packageId",
-        "walletApiVersion"
+        "walletApiVersion",
+        "subCategory",
       ],
       searchOptions: { prefix: true }
     });
@@ -151,7 +155,6 @@ export class DappStoreRegistry {
 
   public validateRegistryJson = (json: DAppStoreSchema) => {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
-
     // find duplicate dapp
     const counts: any = {};
     const duplicaes: any = [];
@@ -284,12 +287,19 @@ export class DappStoreRegistry {
       if (filterOpts.allowedInCountries) {
         const allowedCountries = filterOpts.allowedInCountries;
         res = res.filter(d => {
+          // return true if any country matches in allowed countries.
           if (d.geoRestrictions && d.geoRestrictions.allowedCountries) {
             return d.geoRestrictions.allowedCountries.some(x =>
               allowedCountries.includes(x)
             );
           }
-          return false;
+          // return false if any country matches in blocked countries
+          if (d.geoRestrictions && d.geoRestrictions.blockedCountries) {
+            return !d.geoRestrictions.blockedCountries.some(x =>
+              allowedCountries.includes(x)
+            );
+          }
+          return true;
         });
       }
       if (filterOpts.blockedInCountries) {
@@ -297,6 +307,13 @@ export class DappStoreRegistry {
         res = res.filter(d => {
           if (d.geoRestrictions && d.geoRestrictions.blockedCountries) {
             return d.geoRestrictions.blockedCountries.some(x =>
+              blockedCountries.includes(x)
+            );
+          }
+
+          // return false if any country matches in allowed countries.
+          if (d.geoRestrictions && d.geoRestrictions.allowedCountries) {
+            return !d.geoRestrictions.allowedCountries.some(x =>
               blockedCountries.includes(x)
             );
           }
@@ -909,4 +926,8 @@ export class DappStoreRegistry {
   public getFeaturedDapps = async () => {
     return (await this.registry()).featuredSections;
   };
+
+  public getAllCategories = () => {
+    return categoryJson;
+  }
 }

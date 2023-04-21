@@ -180,6 +180,9 @@
             "walletApiVersion": {
                 "type": "keyword"
             },
+            "subCategory": {
+                "type": "text"
+            },
             "matrics":{
                 "properties": {
                     "downloads": { "type": "integer" },

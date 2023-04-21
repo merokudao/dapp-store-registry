@@ -229,49 +229,73 @@ describe("DappStoreRegistry", () => {
     });
 
     it("is able to filter results on allowed countries", async () => {
-      let validCountries = ["IN"];
+      let validCountries = ["in"];
       const registry_dapps_1 = await registry.dApps({
         allowedInCountries: validCountries
       });
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp => {
-        return dapp.geoRestrictions?.allowedCountries?.some(x =>
+        return !dapp.geoRestrictions?.allowedCountries || dapp.geoRestrictions?.allowedCountries?.some(x =>
           validCountries.includes(x)
         );
       });
       registry_dapps_1.should.deep.equal(dapps_1);
 
-      validCountries = ["AU", "US"];
+      validCountries = ["au", "us"];
       const registry_dapps_2 = await registry.dApps({
-        allowedInCountries: ["AU", "US"]
+        allowedInCountries: ["au", "us"]
       });
       const dapps_2 = fixtureRegistryJson.dapps.filter(dapp => {
-        return dapp.geoRestrictions?.allowedCountries?.some(x =>
-          validCountries.includes(x)
-        );
+        if (dapp.geoRestrictions?.allowedCountries) {
+          return dapp.geoRestrictions.allowedCountries.some(x =>
+            validCountries.includes(x)
+          );
+        }
+        if (dapp.geoRestrictions?.blockedCountries) {
+          return !dapp.geoRestrictions.blockedCountries.some(x =>
+            validCountries.includes(x)
+          );
+        }
+        return true;
       });
       registry_dapps_2.should.deep.equal(dapps_2);
     });
 
     it("is able to filter results on blocked countries", async () => {
-      let invalidCountries = ["CN"];
+      let invalidCountries = ["ja"];
       const registry_dapps_1 = await registry.dApps({
         blockedInCountries: invalidCountries
       });
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp => {
-        return dapp.geoRestrictions?.blockedCountries?.some(x =>
-          invalidCountries.includes(x)
-        );
+        if (dapp.geoRestrictions?.blockedCountries) {
+          return dapp.geoRestrictions.blockedCountries.some(x =>
+            invalidCountries.includes(x)
+          );
+        }
+        if (dapp.geoRestrictions?.allowedCountries) {
+          return !dapp.geoRestrictions.allowedCountries.some(x =>
+            invalidCountries.includes(x)
+          );
+        }
+        return false;
       });
       registry_dapps_1.should.deep.equal(dapps_1);
 
-      invalidCountries = ["RU"];
+      invalidCountries = ["uk"];
       const registry_dapps_2 = await registry.dApps({
         blockedInCountries: invalidCountries
       });
       const dapps_2 = fixtureRegistryJson.dapps.filter(dapp => {
-        return dapp.geoRestrictions?.blockedCountries?.some(x =>
-          invalidCountries.includes(x)
-        );
+        if (dapp.geoRestrictions && dapp.geoRestrictions.blockedCountries) {
+          return dapp.geoRestrictions.blockedCountries.some(x =>
+            invalidCountries.includes(x)
+          );
+        }
+        if (dapp.geoRestrictions && dapp.geoRestrictions.allowedCountries) {
+          return !dapp.geoRestrictions.allowedCountries.some(x =>
+            invalidCountries.includes(x)
+          );
+        }
+        return false;
       });
       registry_dapps_2.should.deep.equal(dapps_2);
     });
