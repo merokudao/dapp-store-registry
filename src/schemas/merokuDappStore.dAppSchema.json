@@ -328,6 +328,22 @@
       "items": {
         "type": "string"
       }
+    },
+    "minted": {
+      "type": "boolean",
+      "description": "The minting status of Dapp",
+      "default": false
+    },
+    "referredBy":{
+      "type": "object",
+      "properties": {
+        "name": {
+          "type":"string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
     }
   },
   "allOf": [
