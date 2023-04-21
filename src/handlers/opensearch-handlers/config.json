@@ -183,6 +183,19 @@
             "subCategory": {
                 "type": "text"
             },
+            "minted": {
+                "type": "boolean"
+            },
+            "referredBy": {
+                "properties": {
+                    "name": {
+                        "type":"text"
+                    },
+                    "url": {
+                        "type": "text"
+                    }
+                }
+            },
             "matrics":{
                 "properties": {
                     "downloads": { "type": "integer" },

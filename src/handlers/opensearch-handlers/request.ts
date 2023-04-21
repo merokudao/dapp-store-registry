@@ -40,7 +40,7 @@ export class OpensearchRequest {
    * @returns response
    */
   public async createDoc(index: string, body: any): Promise<any> {
-    return this.opensearchClient.create({
+    return this.opensearchClient.index({
       index,
       body,
       id: body.id,
