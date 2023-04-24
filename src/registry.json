@@ -28719,6 +28719,104 @@
           "https://bafybeibqzy7373hrb4ieltmp3lo7z4zkx4wxugqlqd6m2zkp5a53k2igva.ipfs.dweb.link/sc-5-Screenshot-01.png"
         ]
       },
+      "contracts": [
+        {
+          "address": "0xfa0607a4EbbB6F3783dCC0967a7bD44dC616f2E0",
+          "chainId": "1"
+        },
+        {
+          "address": "0x75a8B7c0B22D973E0B46CfBD3e2f6566905AA79f",
+          "chainId": "1"
+        },
+        {
+          "address": "0xB66a603f4cFe17e3D27B87a8BfCaD319856518B8",
+          "chainId": "1"
+        },
+        {
+          "address": "0x027d7bc9f6a37600fe936cb98cea3e32ef82812e",
+          "chainId": "1"
+        },
+        {
+          "address": "0xDA5BFe0bD4443d63833C8f4E3284357299eaE6BC",
+          "chainId": "1"
+        },
+        {
+          "address": "0xb8e4526e0da700e9ef1f879af713d691f81507d8",
+          "chainId": "1"
+        },
+        {
+          "address": "0xbb7829BFdD4b557EB944349b2E2c965446052497",
+          "chainId": "1"
+        },
+        {
+          "address": "0xF6793dA657495ffeFF9Ee6350824910Abc21356C",
+          "chainId": "1"
+        },
+        {
+          "address": "0x71dbe051df4176b1c7795294427a0d68ee2b5f8d",
+          "chainId": "1"
+        },
+        {
+          "address": "0x6E42262978de5233C8d5B05B128C121fBa110DA4",
+          "chainId": "1"
+        },
+        {
+          "address": "0xc9154424B823b10579895cCBE442d41b9Abd96Ed",
+          "chainId": "1"
+        },
+        {
+          "address": "0x0890b2d8b6F938CF93b8b243AB8f0589031e158f",
+          "chainId": "1"
+        },
+        {
+          "address": "0xC286C8b4bF8E29AD049a42B17DDf4A7c3248BBE1",
+          "chainId": "1"
+        },
+        {
+          "address": "0x09EaB21c40743B2364b94345419138eF80f39e30",
+          "chainId": "1"
+        },
+        {
+          "address": "0x09EaB21c40743B2364b94345419138eF80f39e30",
+          "chainId": "1"
+        },
+        {
+          "address": "0x9757F2d2b135150BBeb65308D4a91804107cd8D6",
+          "chainId": "1"
+        },
+        {
+          "address": "0x096Bd9a7a2e703670088C05035e23c7a9F428496",
+          "chainId": "1"
+        },
+        {
+          "address": "0xa3aaa33e13bd42fe5cbdefc72fb0a0888cfb44c0",
+          "chainId": "1"
+        },
+        {
+          "address": "0xdf907c1b541b1843b511d115e2fef78a6a830772",
+          "chainId": "1"
+        },
+        {
+          "address": "0xc633F65A1BEBD433DF12D9F3ac7aCF31b26Ca1E6",
+          "chainId": "1"
+        },
+        {
+          "address": "0x1968Ca49240C01730Ba734ff97679CC5C8B29B6D",
+          "chainId": "1"
+        },
+        {
+          "address": "0xEa90CFad1b8e030B8Fd3E63D22074E0AEb8E0DCD",
+          "chainId": "1"
+        },
+        {
+          "address": "0x4fee7b061c97c9c496b01dbce9cdb10c02f0a0be",
+          "chainId": "1"
+        },
+        {
+          "address": "0x661AA0fcE9BA700D652433DfC8134C2BdF0ba443",
+          "chainId": "1"
+        }
+      ],
       "minAge": 18,
       "isForMatureAudience" : true,
       "isSelfModerated": true,
@@ -28741,6 +28839,144 @@
       "category": "nft",
       "packageId": "com.rarible.android.release",
       "walletApiVersion":["v2"]
+    },
+    {
+      "name": "DappLooker",
+      "description": "DappLooker is a no-code web3 analytics platform that allows for the analysis of over 120M+ users' data across 200+ Dapps and 10+ networks. Our cutting-edge no-code technology provides a simple and intuitive experience for users to gain insights on the web3 ecosystem. DappLooker is subgraph native, and we provide analytics on both off-chain and on-chain data together with the power of no-code. DappLooker is the perfect solution for those who need powerful analytics with an intuitive, easy-to-use interface.",
+      "appUrl": "https://dapplooker.com/",
+      "dappId": "com.dapplooker.dapp",
+      "repoUrl": "https://github.com/dapplooker",
+      "downloadBaseUrls": [
+        {
+          "url": "https://bafybeienrjzm2zfxt7cuzudvm66js7stgylffci6n3ekdqldqkl2omhpvu.ipfs.dweb.link/app-release.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId":"com.dapplooker.dapplooker",
+          "version": "1.0",
+          "versionCode": "10000"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeienrjzm2zfxt7cuzudvm66js7stgylffci6n3ekdqldqkl2omhpvu.ipfs.dweb.link/logo-DappLooker%20-512x512.png",
+        "banner": "https://bafybeienrjzm2zfxt7cuzudvm66js7stgylffci6n3ekdqldqkl2omhpvu.ipfs.dweb.link/banner.png",
+        "screenshots": [
+          "https://bafybeienrjzm2zfxt7cuzudvm66js7stgylffci6n3ekdqldqkl2omhpvu.ipfs.dweb.link/sc-1-mobil_1.png"
+        ]
+      },
+      "minAge": 8,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "1.0",
+      "versionCode": "10000",
+      "isListed": true,
+      "listDate" : "2023-04-21",
+      "availableOnPlatform": ["web", "android"],
+      "tags": ["analytics", "defi", "ethereum", "nft", "gaming", "dapplooker"],
+      "developer": {
+        "legalName" : "Abhinav",
+        "website":"https://www.webintoapp.com/",
+        "privacyPolicyUrl" : "https://dapplooker.com/privacy",
+        "support": {
+          "email": "help@dapplooker.com"
+        }
+      },
+      "chains": [1, 137, 56],
+      "category": "games",
+      "packageId": "com.dapplooker.dapplooker"
+    },
+    {
+      "name": "Mocaverse",
+      "description": "Mocaverse is the Animoca Brands membership NFT collection of 8,888 unique beings that thrive in unity: The Mocas. There are 5 incredible Moca tribes of the Angels, Builders, Dreamers, Connectors, and Neo-Capitalists.\\nJoin the Mocas in the realms to Learn, Play, Do Good, and Build together as we champion our Web3 values!",
+      "appUrl": "https://www.mocaverse.xyz/",
+      "dappId": "xyz.mocaverse.dapp",
+      "images": {
+        "logo": "https://bafybeidrfjglmcwh4sfsmvje4xviusqprigqu3mrtj2dpxxqsanh3kdh2q.ipfs.dweb.link/mocaverse%20logo.png",
+        "banner": "https://bafybeidrfjglmcwh4sfsmvje4xviusqprigqu3mrtj2dpxxqsanh3kdh2q.ipfs.dweb.link/banner-Untitled%20design.png",
+        "screenshots": [
+          "https://bafybeidrfjglmcwh4sfsmvje4xviusqprigqu3mrtj2dpxxqsanh3kdh2q.ipfs.dweb.link/sc-1-Screenshot%202023-04-24%20at%2012.25.35%20PM.png",
+          "https://bafybeidrfjglmcwh4sfsmvje4xviusqprigqu3mrtj2dpxxqsanh3kdh2q.ipfs.dweb.link/sc-2-Screenshot%202023-04-24%20at%2012.25.16%20PM.png",
+          "https://bafybeidrfjglmcwh4sfsmvje4xviusqprigqu3mrtj2dpxxqsanh3kdh2q.ipfs.dweb.link/sc-3-Screenshot%202023-04-24%20at%2012.24.51%20PM.png",
+          "https://bafybeidrfjglmcwh4sfsmvje4xviusqprigqu3mrtj2dpxxqsanh3kdh2q.ipfs.dweb.link/sc-4-Screenshot%202023-04-24%20at%2012.24.40%20PM.png"
+        ]
+      },
+      "contracts": [
+        {
+          "address": "0x59325733eb952a92e069C87F0A6168b29E80627f",
+          "chainId": "1"
+        }
+      ],
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": ["en"],
+      "version": "1",
+      "isListed": true,
+      "listDate" : "2023-04-24",
+      "availableOnPlatform": ["web"],
+      "tags": ["nft", "animocabrands"],
+      "developer": {
+        "legalName" : "Animoca Brands",
+        "website":"https://www.mocaverse.xyz/",
+        "privacyPolicyUrl" : "https://policy.animocabrands.com/privacy-policy/",
+        "support": {
+          "url": "https://discord.gg/mocaversenft"
+        }
+      },
+      "chains": [1],
+      "category": "nft",
+      "walletApiVersion":["v1"]
+    },
+    {
+      "name": "Verida Wallet",
+      "description": "The Verida Wallet is a self-custody mobile application to easily manage decentralized identity, personal data, crypto and Web3 apps.\\n- Create new blockchain wallets, manage private keys, create a decentralized identity and facilitate single sign on across an ecosystem of decentralized applications.\\n- Own and control your personal data. Browse your encrypted data and apply a set of delegated permissions when consensually sharing it with other users and services.\\n- A secure data inbox built into the Verida Wallet that allows you to safely transfer messages and data to other users or third-party services.\\n- A superior sign-in experience with simple authentication and anti-phishing architecture securing your access to decentralized applications developed on the Verida network.\\n- Manage your NFTs and Collectibles across multiple blockchains.",
+      "appUrl": "https://www.verida.io/",
+      "dappId": "io.verida.dapp",
+      "repoUrl": "https://github.com/verida/",
+      "downloadBaseUrls": [
+        {
+          "url": "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/app-production-release-0.3.35.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId":"io.verida.vault",
+          "version":"0.3.35",
+          "versionCode": "24"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/logo-Wallet%20Icon%20512x512.png",
+        "banner": "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/banner-verida%20wallet%201.png",
+        "screenshots": [
+          "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/sc-1-screen%206.png",
+          "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/sc-2-screen%205.png",
+          "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/sc-3-screen%204.png",
+          "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/sc-4-screen%202.png",
+          "https://bafybeibzco4wzdg546a336rgbcciacnrav3ci4qkdf2z7kru3il2p2we64.ipfs.dweb.link/sc-5-screen%201.png"
+        ]
+      },
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "0.3.35",
+      "versionCode": "24",
+      "isListed": true,
+      "listDate" : "2023-04-24",
+      "availableOnPlatform": ["android"],
+      "tags": ["identity", "selfsovereigndata", "nft", "sbt", "wallet", "credentials", "privacy", "decentralizedidentity"],
+      "developer": {
+        "legalName" : "Verida",
+        "website":"https://www.verida.io/",
+        "privacyPolicyUrl" : "https://www.verida.io/wallet/terms-and-conditions",
+        "support": {
+          "url": "https://github.com/verida/support"
+        }
+      },
+      "chains": [1, 137],
+      "category": "utilities",
+      "subCategory": "wallets",
+      "packageId": "io.verida.vault",
+      "walletApiVersion":["v1", "v2"]
     }
   ],
   "featuredSections": [

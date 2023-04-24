@@ -153,7 +153,7 @@ export interface DAppSchema {
 
   walletApiVersion?: string[];
 
-  minted?: string[];
+  minted?: boolean;
 
   referredBy?: {
     name: string;
