@@ -5,13 +5,9 @@
     "description": "A dApp overridable schema",
     "type": "object",
     "properties": {
-        "storeKey": {
-            "type": "string",
-            "description": "store key for which dapp properties overriding"
-        },
         "dappId": {
             "type": "string",
-            "description": "dapp id for properties will change"
+            "description": "The dappId for metioned properties will be replace for a dapp store"
         },
         "fields": {
             "type": "object",
@@ -79,11 +75,11 @@
                     "minItems": 1,
                     "uniqueItems": true
                 }
-            }
+            },
+            "additionalProperties": false
         }
     },
     "required": [
-        "storeKey",
         "dappId",
         "fields"
     ],

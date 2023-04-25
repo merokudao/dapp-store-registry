@@ -406,14 +406,15 @@ export const searchFilters = (
 
 export const addNewDappEnrichDataForStore = (
   data:DappEnrichPayload,
-  currDappStores: StoresSchema
+  currDappStores: StoresSchema,
+  storeIndex: number
 ) => {
   const dappsEnrichDetails = {
-    storeKey: data.key,
     dappId: data.dappId,
     fields: data.add
   };
-  currDappStores.dappsEnrich.push(dappsEnrichDetails);
+  if (!currDappStores.dappStores[storeIndex].dappsEnrich) currDappStores.dappStores[storeIndex].dappsEnrich = [];
+  currDappStores.dappStores[storeIndex].dappsEnrich?.push(dappsEnrichDetails);
   return currDappStores;
 };
 
@@ -440,6 +441,7 @@ export const updateDappEnrichDataForStore = (
   data:DappEnrichPayload,
   currDappStores: StoresSchema,
   dappsEnrichDetails: EnrichSchema,
+  storeIndex: number,
   idx: number
 ) => {
   const { remove = [], add } = data;
@@ -451,8 +453,11 @@ export const updateDappEnrichDataForStore = (
   let screenshots = add.images?.screenshots || [];
   screenshots = mergeArrayOfObject(screenshots, existing);
 
-  if (add.images?.screenshots || screenshots.length) Object.assign(add, { ...add.images, screenshots });
+  if (add.images?.screenshots || screenshots.length) Object.assign(add, { images: {...add.images, screenshots } });
   dappsEnrichDetails.fields = {...dappsEnrichDetails?.fields, ...add };
-  if (idx >= 0) currDappStores.dappsEnrich[idx] = dappsEnrichDetails;
+
+  const dappEnrich = currDappStores.dappStores[storeIndex].dappsEnrich || [];
+  dappEnrich[idx] = dappsEnrichDetails;
+  currDappStores.dappStores[storeIndex].dappsEnrich = dappEnrich;
   return;
 }

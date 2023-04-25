@@ -190,7 +190,9 @@ export class DappStores {
 
     // store exist than update the store
     const idx = currDappStores.dappStores.findIndex(x => x.key === store.key);
-    currDappStores.dappStores[idx] = store;
+
+    const dappsEnrich = currDappStores.dappStores[idx].dappsEnrich || [];
+    currDappStores.dappStores[idx] = { ...store, dappsEnrich };
 
     // Validate the dappStores
     const [valid, errors] = validateSchema(currDappStores);
@@ -597,19 +599,20 @@ export class DappStores {
 
     const currDappStores = await this.dappStores();
     await dappMustExistInRegistry([data.dappId], DappRegistry);
-    const storeExists = currDappStores.dappStores.filter(
+    const storeIndex = currDappStores.dappStores.findIndex(
       x => x.key === data.key
     );
 
-    if (!storeExists.length) {
+    if (storeIndex === -1) {
       throw new Error(`Store not exist with the ID ${data.key}`);
     }
 
     // store exist than update the store
-    const idx = currDappStores.dappsEnrich.findIndex(x => x.storeKey === data.key && x.dappId === data.dappId);
-    let dappsEnrichDetails = idx >= 0 && currDappStores.dappsEnrich[idx] || null;
-    if(!dappsEnrichDetails) addNewDappEnrichDataForStore(data, currDappStores);
-    else updateDappEnrichDataForStore(data, currDappStores, dappsEnrichDetails, idx);
+    const storeEnrich = currDappStores.dappStores[storeIndex].dappsEnrich || [];
+    const idx = storeEnrich.findIndex(x => x.dappId === data.dappId);
+    let dappsEnrichDetails = idx >= 0 && storeEnrich[idx] || null;
+    if(!dappsEnrichDetails) addNewDappEnrichDataForStore(data, currDappStores, storeIndex);
+    else updateDappEnrichDataForStore(data, currDappStores, dappsEnrichDetails, storeIndex, idx);
     // Validate the dappStores
     const [valid, errors] = validateSchema(currDappStores);
     if (!valid) {

@@ -2,7 +2,6 @@ import { FeaturedSection } from "./featuredSections";
 
 export interface StoresSchema {
   dappStores: StoreSchema[];
-  dappsEnrich: EnrichSchema[];
 }
 
 /**
@@ -16,10 +15,11 @@ export interface StoreSchema {
   key: string;
 
   bannedDAppIds: string[];
+
+  dappsEnrich ?: EnrichSchema[];
 }
 
 export interface EnrichSchema {
-  storeKey: string;
   dappId: string;
   fields?: EnrichFieldSchema;
 }
