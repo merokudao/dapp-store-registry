@@ -152,4 +152,11 @@ export interface DAppSchema {
   packageId?: string;
 
   walletApiVersion?: string[];
+
+  minted?: boolean;
+
+  referredBy?: {
+    name: string;
+    url?: string;
+  }
 }
