@@ -7,7 +7,10 @@ import {
   DAppStoreSchema,
   StoresSchema,
   OpenSearchCompositeQuery,
-  PaginationQuery
+  PaginationQuery,
+  DappEnrichPayload,
+  EnrichSchema,
+  ScreenShotSchema
 } from "../interfaces";
 import storesJson from "../dappStore.json";
 import registryJson from "./../registry.json";
@@ -15,6 +18,7 @@ import Debug from "debug";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
 import dAppStoreSchema from "../schemas/merokuDappStore.dAppStore.json";
+import dAppEnrichSchema from "../schemas/merokuDappStore.dAppEnrich.json";
 import dAppStoresSchema from "../schemas/merokuDappStore.dAppStores.json";
 import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
@@ -113,6 +117,7 @@ export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
     // dAppStores
     ajv.addSchema(featuredSchema, "featuredSchema");
     ajv.addSchema(dAppStoreSchema, "dAppStoreSchema");
+    ajv.addSchema(dAppEnrichSchema, "dappsEnrich");
     validate = ajv.compile(dAppStoresSchema);
   }
   const valid = validate(json);
@@ -126,7 +131,7 @@ export const local = (schema: string): StoresSchema | DAppStoreSchema => {
   if (schema === "registry") {
     res = registryJson as DAppStoreSchema;
   } else {
-    res = storesJson as StoresSchema;
+    res = storesJson as unknown as StoresSchema;
   }
   const [valid, errors] = validateSchema(res);
   if (valid) {
@@ -315,6 +320,23 @@ export const isExistInRegistry = async (
   });
 };
 
+/**
+ * It will check that dapps exist in registry or not.
+ */
+export const dappMustExistInRegistry = async (
+  dappIds: string[],
+  DappRegistry: DappStoreRegistry
+) => {
+  const currRegistry = await DappRegistry.registry();
+  dappIds.forEach(x => {
+    const exist = currRegistry.dapps.filter(y => y.dappId === x && y.isListed);
+    if (exist.length === 0) {
+      throw new Error(`dApp ID ${x} not found or not listed in registry`);
+    }
+  });
+  return;
+};
+
 export const searchFilters = (
   search: string,
   payload: any,
@@ -433,3 +455,61 @@ export const searchFilters = (
 
   return finalQuery;
 };
+
+export const addNewDappEnrichDataForStore = (
+  data:DappEnrichPayload,
+  currDappStores: StoresSchema,
+  storeIndex: number
+) => {
+  const dappsEnrichDetails = {
+    dappId: data.dappId,
+    fields: data.add
+  };
+  if (!currDappStores.dappStores[storeIndex].dappsEnrich) currDappStores.dappStores[storeIndex].dappsEnrich = [];
+  currDappStores.dappStores[storeIndex].dappsEnrich?.push(dappsEnrichDetails);
+  return currDappStores;
+};
+
+export const deleteKeyFromObject = (path: string, data: any): any => {
+  const [key, ...restPath] = path.split('.')
+  if (!data[key]) return 
+  if (!restPath.length) return delete data[key];
+  return deleteKeyFromObject(restPath.join('.'), data[key]);
+}
+
+export const mergeArrayOfObject = (
+  input: ScreenShotSchema[],
+  existing: ScreenShotSchema[],
+) => {
+  if (!existing.length) return input;
+  input.forEach((inputObject) => {
+    const idx = existing.findIndex((e) => e.index === inputObject.index);
+    idx >= 0 ? existing.splice(idx, 1): null;
+  })
+  return input.concat(existing);
+}
+
+export const updateDappEnrichDataForStore = (
+  data:DappEnrichPayload,
+  currDappStores: StoresSchema,
+  dappsEnrichDetails: EnrichSchema,
+  storeIndex: number,
+  idx: number
+) => {
+  const { remove = [], add } = data;
+  //start delete keys
+  if (remove.length) remove.forEach(path => deleteKeyFromObject(path, dappsEnrichDetails.fields));
+  if (!add || !Object.keys(add).length) return;
+
+  const existing = dappsEnrichDetails?.fields?.images?.screenshots || [];
+  let screenshots = add.images?.screenshots || [];
+  screenshots = mergeArrayOfObject(screenshots, existing);
+
+  if (add.images?.screenshots || screenshots.length) Object.assign(add, { images: {...add.images, screenshots } });
+  dappsEnrichDetails.fields = {...dappsEnrichDetails?.fields, ...add };
+
+  const dappEnrich = currDappStores.dappStores[storeIndex].dappsEnrich || [];
+  dappEnrich[idx] = dappsEnrichDetails;
+  currDappStores.dappStores[storeIndex].dappsEnrich = dappEnrich;
+  return;
+}

@@ -3,12 +3,15 @@ import { Octokit } from "octokit";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import { createAppAuth } from "@octokit/auth-app";
 import {
+  addNewDappEnrichDataForStore,
   cacheStoreOrRegistry,
+  dappMustExistInRegistry,
   isExistInRegistry,
+  updateDappEnrichDataForStore,
   updateRegistryOrStores,
   validateSchema
 } from "./utils";
-import { StoreSchema, StoresSchema } from "../interfaces/dAppStoreSchema";
+import { StoreSchema, StoresSchema, DappEnrichPayload } from "../interfaces/dAppStoreSchema";
 import { FeaturedSection } from "../interfaces";
 
 const debug = Debug("@merokudao:dapp-store-registry:Stores");
@@ -187,7 +190,9 @@ export class DappStores {
 
     // store exist than update the store
     const idx = currDappStores.dappStores.findIndex(x => x.key === store.key);
-    currDappStores.dappStores[idx] = store;
+
+    const dappsEnrich = currDappStores.dappStores[idx].dappsEnrich || [];
+    currDappStores.dappStores[idx] = { ...store, dappsEnrich };
 
     // Validate the dappStores
     const [valid, errors] = validateSchema(currDappStores);
@@ -558,4 +563,74 @@ export class DappStores {
     }
     return currFeaturedSections;
   };
+
+  /**
+   * override dapps details in the dappStores.
+   * Only the owner of the store can add or update the store.
+   * @param name The name of the owner (from GitHub)
+   * @param email The email of the owner (from Github)
+   * @param accessToken The JWT access token of the owner (from Github) for user to server
+   * API Calls
+   * @param githubID The GitHub ID of the owner
+   * @param data details of dapp to be override
+   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
+   * @returns A promise that resolves to PR URL when the dApp is added or updated. This should
+   * be shown to the user on UI, so that they can visit this URL and create a PR.
+   */
+  public async overrideDappDetailsForDappStore(
+    name: string,
+    email: string,
+    accessToken: string,
+    githubID: string,
+    data: DappEnrichPayload,
+    org: string | undefined = undefined
+  ): Promise<string> {
+    if (data.githubId !== githubID) {
+      throw new Error(
+        `Cannot add/update store ${data.key} as you are not the owner`
+      );
+    }
+
+    if (!data.key.endsWith(".dappstore")) {
+      throw new Error(
+        `Unique id ${data.key} is invalid. It must end with .dappstore`
+      );
+    }
+
+    const currDappStores = await this.dappStores();
+    await dappMustExistInRegistry([data.dappId], DappRegistry);
+    const storeIndex = currDappStores.dappStores.findIndex(
+      x => x.key === data.key
+    );
+
+    if (storeIndex === -1) {
+      throw new Error(`Store not exist with the ID ${data.key}`);
+    }
+
+    // store exist than update the store
+    const storeEnrich = currDappStores.dappStores[storeIndex].dappsEnrich || [];
+    const idx = storeEnrich.findIndex(x => x.dappId === data.dappId);
+    let dappsEnrichDetails = idx >= 0 && storeEnrich[idx] || null;
+    if(!dappsEnrichDetails) addNewDappEnrichDataForStore(data, currDappStores, storeIndex);
+    else updateDappEnrichDataForStore(data, currDappStores, dappsEnrichDetails, storeIndex, idx);
+    // Validate the dappStores
+    const [valid, errors] = validateSchema(currDappStores);
+    if (!valid) {
+      throw new Error(`This update leads to Invalid dappStore.json: ${errors}`);
+    }
+
+    return updateRegistryOrStores(
+      name,
+      email,
+      githubID,
+      accessToken,
+      currDappStores,
+      `update-dapp-for-store-${data.key}`,
+      org,
+      this.githubOwner,
+      this.githubRepo,
+      this.schema
+    );
+  }
+
 }

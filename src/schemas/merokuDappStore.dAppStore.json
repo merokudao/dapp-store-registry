@@ -26,6 +26,13 @@
         "items": {
           "type": "string"
         }
+      },
+      "dappsEnrich": {
+        "type": "array",
+        "description": "List of a dapp with properties to change values for the dapp store",
+        "items": {
+            "$ref": "merokuDappStore.dAppEnrich.json"
+        }
       }
     },
     "required": ["githubId", "featuredSections", "key"],
