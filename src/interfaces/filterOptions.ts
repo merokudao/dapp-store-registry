@@ -31,11 +31,13 @@ export interface FilterOptions {
 
   categories?: string[];
 
-  isListed?: boolean;
+  isListed?: boolean | string;
 
   developer?: {
     githubID: string;
   };
 
   page?: string;
+
+  searchById?: boolean;
 }
