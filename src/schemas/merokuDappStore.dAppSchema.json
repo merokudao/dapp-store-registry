@@ -25,7 +25,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["url", "platform", "minVersion"],
+        "required": ["url", "platform", "minVersion", "packageId", "version", "versionCode"],
         "properties": {
           "url": {
             "type": "string",
@@ -327,6 +327,25 @@
       "uniqueItems": true,
       "items": {
         "type": "string"
+      }
+    },
+    "minted": {
+      "type": "boolean",
+      "description": "The minted status will be used to denote if a dapp is claimed by owner or not.",
+      "default": false
+    },
+    "referredBy":{
+      "type": "object",
+      "description": "The details of a vendor, who have reffered this dapp to dapp registry",
+      "properties": {
+        "name": {
+          "type":"string",
+          "description": "The name of the vendor."
+        },
+        "url": {
+          "type": "string",
+          "description": "The website link of the vendor."
+        }
       }
     }
   },

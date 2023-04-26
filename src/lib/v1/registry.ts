@@ -7,17 +7,16 @@ import {
   DeleteDappPayload,
   FilterOptions,
   OpenSearchConnectionOptions,
-  Pagination,
   SearchResult,
-  StrandardResponse
+  StandardResponse
 } from "../../interfaces";
 import { DappStoreRegistry } from "../";
 import { recordsPerPage, searchFilters } from "../utils";
 import debug from "debug";
 
 export const searchRegistry = {
-  indexPrefix: `${process.env.environment}_dapp_registries`,
-  alias: `${process.env.environment}_dapp_search_index`
+  indexPrefix: `${process.env.ENVIRONMENT}_dapp_registries`,
+  alias: `${process.env.ENVIRONMENT}_dapp_search_index`
 };
 export class DappStoreRegistryV1 {
   opensearchApis: OpensearchRequest;
@@ -32,8 +31,16 @@ export class DappStoreRegistryV1 {
    * @param index
    * @returns
    */
-  public addBulkDocsToIndex = async (index: string): Promise<any> => {
-    const { dapps = [] } = await this.dappStoreRegistory.registry();
+  public addBulkDocsToIndex = async (
+    index: string,
+    dapps: DAppSchema[] = []
+  ): Promise<any> => {
+    if (!dapps.length) {
+      const dappsResponse = await this.dappStoreRegistory.registry();
+      dapps = dappsResponse.dapps;
+    }
+
+    if (!dapps.length) return;
 
     const dappDocs = dapps.map(d => {
       return {
@@ -54,12 +61,26 @@ export class DappStoreRegistryV1 {
       "yyyy-MM-dd-HH-mm-ss"
     )}`;
     await this.opensearchApis.createIndex(indexName);
-    await this.addBulkDocsToIndex(indexName);
+    return {
+      status: 200,
+      message: ["success"],
+      indexName
+    };
+  };
+
+  /**
+   * set alias to deploy a index, remove alias from old index
+   * @param indexName
+   * @returns
+   */
+  public liveIndex = async (indexName: string) => {
+    // await this.addBulkDocsToIndex(indexName);
     await this.opensearchApis.attachAliasName(indexName, searchRegistry.alias);
     await this.opensearchApis.removeAliasName(indexName, searchRegistry.alias);
     return {
       status: 200,
-      message: ["success"]
+      message: ["success"],
+      indexName
     };
   };
 
@@ -70,8 +91,8 @@ export class DappStoreRegistryV1 {
    * @returns The list of dApps that are listed in the registry
    */
   public dApps = async (
-    filterOpts: FilterOptions = { isListed: true }
-  ): Promise<{ response: DAppSchema[]; pagination: Pagination }> => {
+    filterOpts: FilterOptions = { isListed: "true" }
+  ): Promise<StandardResponse> => {
     const query = searchFilters("", filterOpts);
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
@@ -83,9 +104,11 @@ export class DappStoreRegistryV1 {
         total: { value }
       }
     } = result.body || { hits: { hits: [] } };
-    const pageCount = parseInt(`${value / recordsPerPage}`, 10);
+    const pageCount = Math.ceil(value / recordsPerPage);
     return {
-      response,
+      status: 200,
+      message: ["success"],
+      data: response.map(rs => rs._source),
       pagination: {
         page: filterOpts.page,
         limit: recordsPerPage,
@@ -106,7 +129,7 @@ export class DappStoreRegistryV1 {
    */
   public async addOrUpdateDapp(
     payload: AddDappPayload
-  ): Promise<StrandardResponse> {
+  ): Promise<StandardResponse> {
     const { name, email, githubID, dapp, org = undefined } = payload;
     /**
      * have to add if any action have to do onchain
@@ -114,14 +137,13 @@ export class DappStoreRegistryV1 {
     debug(
       `deleting the app, name: ${name}, email: ${email}, githubId: ${githubID}, org: ${org}`
     );
-    const res = await this.opensearchApis.createDoc(searchRegistry.alias, {
+    await this.opensearchApis.createDoc(searchRegistry.alias, {
       id: dapp.dappId,
       ...dapp
     });
     return {
       status: 200,
-      message: ["success"],
-      data: [res]
+      message: ["success"]
     };
   }
 
@@ -137,20 +159,16 @@ export class DappStoreRegistryV1 {
    */
   public deleteDapp = async (
     payload: DeleteDappPayload
-  ): Promise<StrandardResponse> => {
+  ): Promise<StandardResponse> => {
     const { name, email, githubID, dappId, org = undefined } = payload;
     /**have to write code  for on chain actions*/
     debug(
       `deleting the app, name: ${name}, email: ${email}, githubId: ${githubID}, org: ${org}`
     );
-    const res = await this.opensearchApis.deleteDoc(
-      searchRegistry.alias,
-      dappId
-    );
+    await this.opensearchApis.deleteDoc(searchRegistry.alias, dappId);
     return {
       status: 200,
-      message: ["success"],
-      data: [res]
+      message: ["success"]
     };
   };
 
@@ -163,8 +181,8 @@ export class DappStoreRegistryV1 {
    */
   public search = async (
     queryTxt: string,
-    filterOpts: FilterOptions = { isListed: true }
-  ): Promise<{ response: DAppSchema[]; pagination: Pagination }> => {
+    filterOpts: FilterOptions = { isListed: "true" }
+  ): Promise<StandardResponse> => {
     const query = searchFilters(queryTxt, filterOpts);
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
@@ -176,9 +194,11 @@ export class DappStoreRegistryV1 {
         total: { value }
       }
     } = result.body || { hits: { hits: [] } };
-    const pageCount = parseInt(`${value / recordsPerPage}`, 10);
+    const pageCount = Math.ceil(value / recordsPerPage);
     return {
-      response,
+      status: 200,
+      message: ["success"],
+      data: response.map(rs => rs._source),
       pagination: {
         page: filterOpts.page,
         limit: recordsPerPage,
@@ -192,8 +212,10 @@ export class DappStoreRegistryV1 {
    * @param queryTxt dappId
    * @returns if matches return dappInfo
    */
-  public searchByDappId = async (queryTxt: string): Promise<DAppSchema[]> => {
-    const query = searchFilters("", { dappId: queryTxt });
+  public searchByDappId = async (
+    queryTxt: string
+  ): Promise<StandardResponse> => {
+    const query = searchFilters("", { dappId: queryTxt, searchById: true });
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
       query
@@ -201,6 +223,29 @@ export class DappStoreRegistryV1 {
     const {
       hits: { hits: res }
     } = result.body || { hits: { hits: [] } };
-    return res;
+    return {
+      status: 200,
+      message: ["success"],
+      data: res && res.map(rs => rs._source)
+    };
+  };
+
+  public autoComplete = async (
+    queryTxt: string,
+    filterOpts: FilterOptions = { isListed: "true" }
+  ): Promise<StandardResponse> => {
+    const query = searchFilters(queryTxt, filterOpts, true);
+    const result: SearchResult = await this.opensearchApis.search(
+      searchRegistry.alias,
+      query
+    );
+    const {
+      hits: { hits: response }
+    } = result.body || { hits: { hits: [] } };
+    return {
+      status: 200,
+      message: ["success"],
+      data: response && response.map(rs => rs._source)
+    };
   };
 }

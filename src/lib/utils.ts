@@ -1,3 +1,8 @@
+import * as opensearchConfig from "../handlers/opensearch-handlers/config.json";
+
+const {
+  _source: { autocompleteFields, searchFields }
+} = opensearchConfig;
 import {
   DAppStoreSchema,
   StoresSchema,
@@ -45,6 +50,43 @@ export class cloneable {
       : (source as T);
   }
 }
+
+export const recordsPerPage = 20;
+export const recordsPerPageAutoComplete = 7;
+
+/**
+ * return order
+ * @param params
+ * @returns
+ */
+export const orderBy = (params: any) => {
+  const order: any = [{ _score: { order: "desc" } }];
+  const {
+    rating = null,
+    visits= null,
+    installs = null,
+    listDate = null,
+    name = null,
+  } = params;
+  if (rating) {
+    order.push({ "matrics.rating": { order: rating } });
+  }
+  if (visits) {
+    order.push({ "matrics.visits": { order: visits } });
+  }
+  if (installs) {
+    order.push({ "matrics.installs": { order: installs } });
+  }
+
+  if (listDate) {
+    order.push({ "listDate": { order: listDate } });
+  }
+
+  if (name) {
+    order.push({ "name": { order: name } });
+  }
+  return order;
+};
 
 export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
   let uniqueIDs: string[];
@@ -278,7 +320,6 @@ export const isExistInRegistry = async (
   });
 };
 
-
 /**
  * It will check that dapps exist in registry or not.
  */
@@ -296,18 +337,17 @@ export const dappMustExistInRegistry = async (
   return;
 };
 
-
-export const recordsPerPage = 20;
-
 export const searchFilters = (
   search: string,
-  payload: any
+  payload: any,
+  autoComplete = false
 ): PaginationQuery => {
   const query: OpenSearchCompositeQuery = {
     bool: {
       must: [],
       must_not: [],
-      should: []
+      should: [],
+      filter: []
     }
   };
   const {
@@ -321,10 +361,11 @@ export const searchFilters = (
     allowedInCountries = null,
     blockedInCountries = null,
     categories = null,
-    isListed = false,
+    isListed = "true",
     developer = null,
     page = 1,
-    dappId = null
+    dappId = null,
+    searchById = false
   } = payload;
 
   // eslint-disable-next-line no-extra-boolean-cast
@@ -347,10 +388,13 @@ export const searchFilters = (
     query.bool.must.push({ range: { listDate: { lte: listedOnOrBefore } } });
 
   // it should be filter users location current not more then one country
-  if (blockedInCountries && allowedInCountries.length) {
+  if (allowedInCountries && allowedInCountries.length) {
     allowedInCountries.split(",").forEach((ac: string) => {
       query.bool.should.push({
         term: { "geoRestrictions.allowedCountries": ac.trim() }
+      });
+      query.bool.must_not.push({
+        term: { "geoRestrictions.blockedCountries": ac.trim() }
       });
     });
   }
@@ -358,14 +402,11 @@ export const searchFilters = (
   if (blockedInCountries && blockedInCountries.length) {
     blockedInCountries.split(",").forEach((bc: string) => {
       query.bool.must_not.push({
-        term: { "geoRestrictions.blockedInCountries": bc.trim() }
+        term: { "geoRestrictions.blockedCountries": bc.trim() }
       });
     });
   }
-  if (isListed)
-    query.bool.must.push({
-      match: { isListed: isListed === "true" ? true : false }
-    });
+
   if (developer && developer.githubID)
     query.bool.must.push({
       match: { "developer.githubID": developer.githubID.trim() }
@@ -389,16 +430,27 @@ export const searchFilters = (
     query.bool.should.push({
       match: { daapId: { query: search, operator: "and" } }
     });
+    query.bool.should.push({
+      match: { category: { query: search, operator: "and" } }
+    });
+    query.bool.filter.push({
+      term: { isListed: isListed === "true" ? true : false }
+    });
   }
+  if (isListed && !searchById && !search)
+    query.bool.must.push({
+      match: { isListed: isListed === "true" ? true : false }
+    });
 
   payload.page = parseInt(page);
   payload.page = payload.page > 0 ? payload.page : 1;
-
+  const limit = autoComplete ? recordsPerPageAutoComplete : recordsPerPage;
   const finalQuery: PaginationQuery = {
+    _source: autoComplete ? autocompleteFields : searchFields,
     query,
-    from: (payload.page - 1) * recordsPerPage,
-    size: payload.page * recordsPerPage,
-    sort: [{ _score: { order: "desc" } }]
+    from: (payload.page - 1) * limit,
+    size: payload.page * limit,
+    sort: orderBy(payload.orderBy || {})
   };
 
   return finalQuery;

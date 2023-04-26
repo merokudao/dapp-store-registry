@@ -16,16 +16,27 @@
                     "type": "object",
                     "properties": {
                         "logo": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "uri",
+                            "pattern": "^(https?|http?|ipfs?)://",
+                            "minLength": 1,
+                            "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
                         },
                         "banner": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "uri",
+                            "pattern": "^(https?|http?|ipfs?)://",
+                            "minLength": 1,
+                            "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
                         },
                         "screenshots": {
                             "type": "array",
                             "properties": {
                                 "value": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "format": "uri",
+                                    "pattern": "^(https?|http?|ipfs?)://",
+                                    "minLength": 1
                                 },
                                 "index": {
                                     "type": "number"
