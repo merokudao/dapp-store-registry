@@ -324,6 +324,12 @@ export class DappStoreRegistry {
         const categories = filterOpts.categories;
         res = res.filter(d => categories.includes(d.category));
       }
+
+      if (filterOpts.subCategory) {
+        const subCategory = filterOpts.subCategory;
+        res = res.filter(d => !d.subCategory || subCategory.includes(d.subCategory));
+      }
+
       if (filterOpts.developer) {
         const developerId = filterOpts.developer.githubID;
         res = res.filter(d => d.developer?.githubID === developerId);
