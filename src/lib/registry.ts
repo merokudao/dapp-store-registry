@@ -327,7 +327,7 @@ export class DappStoreRegistry {
 
       if (filterOpts.subCategory) {
         const subCategory = filterOpts.subCategory;
-        res = res.filter(d => !d.subCategory || subCategory.includes(d.subCategory));
+        res = res.filter(d => d.subCategory && subCategory.includes(d.subCategory));
       }
 
       if (filterOpts.developer) {
