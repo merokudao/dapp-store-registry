@@ -101,6 +101,7 @@ export class DappStoreRegistry {
         "packageId",
         "walletApiVersion",
         "subCategory",
+        "expiryDate"
       ],
       searchOptions: { prefix: true }
     });
