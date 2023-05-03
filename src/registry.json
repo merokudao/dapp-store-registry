@@ -24754,29 +24754,6 @@
       "dappId": "io.bombcrypto.polygon.dapp"
     },
     {
-      "name": "Jump.trade",
-      "description": "Jump.trade, a premium NFT marketplace, brings exclusive NFT collections in a one-of-a-kind ecosystem featuring game, brands and international artists. UnfoldingNFTs that hold a global impact. As an initial launch, Jump dropped World’s First P2E Cricket Game NFT collection, 55,000NFTs from Meta Cricket League NFTs, getting sold in under 9 mins. Not just that, the Cricket game NFT drop, unfolds Meta Cricket League, the World’s First P2E Cricket NFT Game. Hence, enabling enormous meta possibilities. In the same view, Jump.trade NFT marketplace mobile app is designed, making the system more intuitive, accessible, and easily navigable.The app is compliant with the highest standards of security and is also designed in line with the best practices of the mobile application platform. Please be informed that the app is intended only to serve as a platform for communication and information, and not any kind of transaction.",
-      "appUrl": "https://www.jump.trade/",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17573/jumptrade-dapp-marketplaces-matic-logo_3ff6123ad848b677975cfb94637f06cc.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": ["en"],
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "shopping",
-      "chains": [
-        137
-      ],
-      "dappId": "trade.jump.dapp"
-    },
-    {
       "name": "MAFIAFOOT",
       "description": "MAFIAFOOT is a Play To Earn FOOTBALL CLUB MANAGEMENT game witch integrate a strong TYCOON part. Generate revenues while evolving your NFT cards, winning tournaments and managing your club’s infrastructures!",
       "appUrl": "https://mafiafoot.com",
@@ -28977,6 +28954,72 @@
       "subCategory": "wallets",
       "packageId": "io.verida.vault",
       "walletApiVersion":["v1", "v2"]
+    },
+    {
+      "name": "Jump.trade",
+      "description": "Jump.trade is Asia’s largest NFT marketplace, bringing exclusive NFT collections in a one-of-a-kind ecosystem featuring games, brands, and international artists.",
+      "appUrl": "https://www.jump.trade/",
+      "dappId": "trade.jump.dapp",
+      "images": {
+        "logo": "https://bafybeih4ntfly2pph5x4ybgzbfotkzmupni243hq5cp56tkja5s2pq4ipa.ipfs.dweb.link/log-Jumptrade_logo_dApp.png",
+        "banner": "https://bafybeih4ntfly2pph5x4ybgzbfotkzmupni243hq5cp56tkja5s2pq4ipa.ipfs.dweb.link/banner_dApp_Banner.png",
+        "screenshots": [
+          "https://bafybeih4ntfly2pph5x4ybgzbfotkzmupni243hq5cp56tkja5s2pq4ipa.ipfs.dweb.link/sc-1-App_Screenshot3_dApp.png",
+          "https://bafybeih4ntfly2pph5x4ybgzbfotkzmupni243hq5cp56tkja5s2pq4ipa.ipfs.dweb.link/sc-2-App_Screenshot2_dApp.png",
+          "https://bafybeih4ntfly2pph5x4ybgzbfotkzmupni243hq5cp56tkja5s2pq4ipa.ipfs.dweb.link/sc-3-App_Screenshot1_dApp.png"
+        ]
+      },
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "3.4.4",
+      "isListed": true,
+      "listDate" : "2023-05-01",
+      "availableOnPlatform": ["web", "android"],
+      "tags": ["nft", "gaming", "mcl", "raddx", "play to earn", "marketplace"],
+      "developer": {
+        "legalName" : "GUARDIAN BLOCKCHAIN LABS PTE LTD",
+        "website":"https://www.jump.trade/",
+        "privacyPolicyUrl" : "https://www.jump.trade/privacy-policy",
+        "support": {
+          "email": "support@jump.trade"
+        }
+      },
+      "chains": [137],
+      "category": "nft"
+    },
+    {
+      "name": "Meta Cricket League",
+      "description": "Meta Cricket League (MCL) is the first-of-its-kind Web3 P2e cricket game. The game combines intriguing gameplay, special bats, and animations... All are centered around NFTs. The game's first drop sold 55000 NFTs in about 9 minutes - a resounding testimony to the game's awesomeness and cricket's emotional magnetism!",
+      "appUrl": "https://www.jump.trade/mcl-game",
+      "dappId": "mcl-game.trade.jump.dapp",
+      "images": {
+        "logo": "https://bafybeibii5vacsjhdebnes44lxzc2ztdbr27nz573bdemb5m2z6wgfisfe.ipfs.dweb.link/MCL_logo_dApp.png",
+        "banner": "https://bafybeibii5vacsjhdebnes44lxzc2ztdbr27nz573bdemb5m2z6wgfisfe.ipfs.dweb.link/MCL_banner_dApp.png",
+        "screenshots": [
+          "https://bafybeibii5vacsjhdebnes44lxzc2ztdbr27nz573bdemb5m2z6wgfisfe.ipfs.dweb.link/sc-1App_screenshot_dApp.png"
+        ]
+      },
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "1.3.5",
+      "isListed": true,
+      "listDate" : "2023-05-01",
+      "availableOnPlatform": ["web"],
+      "tags": ["gaming", "mcl", "cricket", "play to earn", "nft"],
+      "developer": {
+        "legalName" : "GUARDIAN BLOCKCHAIN LABS PTE LTD",
+        "website": "https://www.jump.trade/",
+        "privacyPolicyUrl" : "https://www.jump.trade/privacy-policy",
+        "support": {
+          "email": "support@jump.trade"
+        }
+      },
+      "chains": [137],
+      "category": "nft"
     }
   ],
   "featuredSections": [
