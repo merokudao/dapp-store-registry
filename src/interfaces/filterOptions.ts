@@ -40,4 +40,6 @@ export interface FilterOptions {
   page?: string;
 
   searchById?: boolean;
+
+  subCategory?: string[];
 }
