@@ -11,7 +11,7 @@ import {
   StandardResponse
 } from "../../interfaces";
 import { DappStoreRegistry } from "../";
-import { recordsPerPage, searchFilters } from "../utils";
+import { searchFilters } from "../utils";
 import debug from "debug";
 
 export const searchRegistry = {
@@ -45,6 +45,7 @@ export class DappStoreRegistryV1 {
     const dappDocs = dapps.map(d => {
       return {
         id: d.dappId,
+        nameKeyword: d.name,
         ...d
       };
     });
@@ -93,10 +94,10 @@ export class DappStoreRegistryV1 {
   public dApps = async (
     filterOpts: FilterOptions = { isListed: "true" }
   ): Promise<StandardResponse> => {
-    const query = searchFilters("", filterOpts);
+    const { finalQuery, limit } = searchFilters("", filterOpts);
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
-      query
+      finalQuery
     );
     const {
       hits: {
@@ -104,14 +105,14 @@ export class DappStoreRegistryV1 {
         total: { value }
       }
     } = result.body || { hits: { hits: [] } };
-    const pageCount = Math.ceil(value / recordsPerPage);
+    const pageCount = Math.ceil(value / limit);
     return {
       status: 200,
       message: ["success"],
       data: response.map(rs => rs._source),
       pagination: {
         page: filterOpts.page,
-        limit: recordsPerPage,
+        limit,
         pageCount
       }
     };
@@ -139,6 +140,7 @@ export class DappStoreRegistryV1 {
     );
     await this.opensearchApis.createDoc(searchRegistry.alias, {
       id: dapp.dappId,
+      nameKeyword: dapp.name,
       ...dapp
     });
     return {
@@ -183,10 +185,10 @@ export class DappStoreRegistryV1 {
     queryTxt: string,
     filterOpts: FilterOptions = { isListed: "true" }
   ): Promise<StandardResponse> => {
-    const query = searchFilters(queryTxt, filterOpts);
+    const { finalQuery, limit } = searchFilters(queryTxt, filterOpts);
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
-      query
+      finalQuery
     );
     const {
       hits: {
@@ -194,14 +196,14 @@ export class DappStoreRegistryV1 {
         total: { value }
       }
     } = result.body || { hits: { hits: [] } };
-    const pageCount = Math.ceil(value / recordsPerPage);
+    const pageCount = Math.ceil(value / limit);
     return {
       status: 200,
       message: ["success"],
       data: response.map(rs => rs._source),
       pagination: {
         page: filterOpts.page,
-        limit: recordsPerPage,
+        limit,
         pageCount
       }
     };
@@ -215,10 +217,13 @@ export class DappStoreRegistryV1 {
   public searchByDappId = async (
     queryTxt: string
   ): Promise<StandardResponse> => {
-    const query = searchFilters("", { dappId: queryTxt, searchById: true });
+    const { finalQuery } = searchFilters("", {
+      dappId: queryTxt,
+      searchById: true
+    });
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
-      query
+      finalQuery
     );
     const {
       hits: { hits: res }
@@ -234,10 +239,10 @@ export class DappStoreRegistryV1 {
     queryTxt: string,
     filterOpts: FilterOptions = { isListed: "true" }
   ): Promise<StandardResponse> => {
-    const query = searchFilters(queryTxt, filterOpts, true);
+    const { finalQuery } = searchFilters(queryTxt, filterOpts, true);
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
-      query
+      finalQuery
     );
     const {
       hits: { hits: response }

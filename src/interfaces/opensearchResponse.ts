@@ -74,12 +74,12 @@ export interface StandardResponse {
 }
 
 export interface AddDappPayload {
-  name: string;
-  email: string;
-  accessToken: string;
-  githubID: string;
+  name?: string;
+  email?: string;
+  accessToken?: string;
+  githubID?: string;
   dapp: DAppSchema;
-  org: string | undefined;
+  org?: string | undefined;
 }
 
 export interface DeleteDappPayload {

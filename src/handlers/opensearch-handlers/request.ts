@@ -57,7 +57,7 @@ export class OpensearchRequest {
     return this.opensearchClient.helpers.bulk({
       datasource: body,
       onDocument(doc: any) {
-        return { create: { _index: index, _id: doc.id } };
+        return { index: { _index: index, _id: doc.id } };
       }
     });
   }
