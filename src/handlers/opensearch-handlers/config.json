@@ -51,6 +51,9 @@
                 "analyzer": "autocomplete",
                 "search_analyzer": "autocomplete_search"
             },
+            "nameKeyword": {
+                "type": "keyword"
+            },
             "description": {
                 "type": "text",
                 "analyzer": "autocomplete",

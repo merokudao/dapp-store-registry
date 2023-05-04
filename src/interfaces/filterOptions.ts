@@ -42,4 +42,5 @@ export interface FilterOptions {
   searchById?: boolean;
 
   subCategory?: string[];
+  limit?: number;
 }

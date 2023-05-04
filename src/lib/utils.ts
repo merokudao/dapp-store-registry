@@ -61,12 +61,15 @@ export const recordsPerPageAutoComplete = 7;
  */
 export const orderBy = (params: any) => {
   const order: any = [{ _score: { order: "desc" } }];
+  try {
+    params = JSON.parse(params);
+  } catch (error) {}
   const {
     rating = null,
-    visits= null,
+    visits = null,
     installs = null,
     listDate = null,
-    name = null,
+    name = null
   } = params;
   if (rating) {
     order.push({ "matrics.rating": { order: rating } });
@@ -79,11 +82,11 @@ export const orderBy = (params: any) => {
   }
 
   if (listDate) {
-    order.push({ "listDate": { order: listDate } });
+    order.push({ listDate: { order: listDate } });
   }
 
   if (name) {
-    order.push({ "name": { order: name } });
+    order.push({ nameKeyword: { order: name } });
   }
   return order;
 };
@@ -341,7 +344,7 @@ export const searchFilters = (
   search: string,
   payload: any,
   autoComplete = false
-): PaginationQuery => {
+): { finalQuery: PaginationQuery; limit: number } => {
   const query: OpenSearchCompositeQuery = {
     bool: {
       must: [],
@@ -367,6 +370,7 @@ export const searchFilters = (
     dappId = null,
     searchById = false
   } = payload;
+  let { limit = recordsPerPage } = payload;
 
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!isForMatureAudience)
@@ -380,7 +384,7 @@ export const searchFilters = (
   if (language) query.bool.must.push({ match: { language } });
   if (availableOnPlatform)
     query.bool.must.push({
-      match: { availableOnPlatform: availableOnPlatform }
+      terms: { availableOnPlatform }
     });
   if (listedOnOrAfter)
     query.bool.must.push({ range: { listDate: { gte: listedOnOrAfter } } });
@@ -389,23 +393,20 @@ export const searchFilters = (
 
   // it should be filter users location current not more then one country
   if (allowedInCountries && allowedInCountries.length) {
-    allowedInCountries.split(",").forEach((ac: string) => {
-      query.bool.should.push({
-        term: { "geoRestrictions.allowedCountries": ac.trim() }
-      });
+    query.bool.should.push({
+      terms: { "geoRestrictions.allowedCountries": allowedInCountries }
+    });
+    allowedInCountries.forEach((ac: string) => {
       query.bool.must_not.push({
-        term: { "geoRestrictions.blockedCountries": ac.trim() }
+        term: { "geoRestrictions.blockedCountries": ac }
       });
     });
   }
   // it should be filter users location current not more then one country
-  if (blockedInCountries && blockedInCountries.length) {
-    blockedInCountries.split(",").forEach((bc: string) => {
-      query.bool.must_not.push({
-        term: { "geoRestrictions.blockedCountries": bc.trim() }
-      });
+  if (blockedInCountries && blockedInCountries.length)
+    query.bool.must.push({
+      terms: { "geoRestrictions.blockedCountries": blockedInCountries }
     });
-  }
 
   if (developer && developer.githubID)
     query.bool.must.push({
@@ -414,7 +415,7 @@ export const searchFilters = (
   if (categories && categories.length)
     query.bool.must.push({
       terms: {
-        category: categories.split(",").map((cat: string) => cat.trim())
+        category: categories
       }
     });
   if (dappId) query.bool.must.push({ term: { id: dappId.trim() } });
@@ -444,7 +445,8 @@ export const searchFilters = (
 
   payload.page = parseInt(page);
   payload.page = payload.page > 0 ? payload.page : 1;
-  const limit = autoComplete ? recordsPerPageAutoComplete : recordsPerPage;
+  const limitV1 = autoComplete ? recordsPerPageAutoComplete : recordsPerPage;
+  if (limit > limitV1) limit = limitV1;
   const finalQuery: PaginationQuery = {
     _source: autoComplete ? autocompleteFields : searchFields,
     query,
@@ -453,11 +455,11 @@ export const searchFilters = (
     sort: orderBy(payload.orderBy || {})
   };
 
-  return finalQuery;
+  return { finalQuery, limit };
 };
 
 export const addNewDappEnrichDataForStore = (
-  data:DappEnrichPayload,
+  data: DappEnrichPayload,
   currDappStores: StoresSchema,
   storeIndex: number
 ) => {
@@ -465,32 +467,33 @@ export const addNewDappEnrichDataForStore = (
     dappId: data.dappId,
     fields: data.add
   };
-  if (!currDappStores.dappStores[storeIndex].dappsEnrich) currDappStores.dappStores[storeIndex].dappsEnrich = [];
+  if (!currDappStores.dappStores[storeIndex].dappsEnrich)
+    currDappStores.dappStores[storeIndex].dappsEnrich = [];
   currDappStores.dappStores[storeIndex].dappsEnrich?.push(dappsEnrichDetails);
   return currDappStores;
 };
 
 export const deleteKeyFromObject = (path: string, data: any): any => {
-  const [key, ...restPath] = path.split('.')
-  if (!data[key]) return 
+  const [key, ...restPath] = path.split(".");
+  if (!data[key]) return;
   if (!restPath.length) return delete data[key];
-  return deleteKeyFromObject(restPath.join('.'), data[key]);
-}
+  return deleteKeyFromObject(restPath.join("."), data[key]);
+};
 
 export const mergeArrayOfObject = (
   input: ScreenShotSchema[],
-  existing: ScreenShotSchema[],
+  existing: ScreenShotSchema[]
 ) => {
   if (!existing.length) return input;
-  input.forEach((inputObject) => {
-    const idx = existing.findIndex((e) => e.index === inputObject.index);
-    idx >= 0 ? existing.splice(idx, 1): null;
-  })
+  input.forEach(inputObject => {
+    const idx = existing.findIndex(e => e.index === inputObject.index);
+    idx >= 0 ? existing.splice(idx, 1) : null;
+  });
   return input.concat(existing);
-}
+};
 
 export const updateDappEnrichDataForStore = (
-  data:DappEnrichPayload,
+  data: DappEnrichPayload,
   currDappStores: StoresSchema,
   dappsEnrichDetails: EnrichSchema,
   storeIndex: number,
@@ -498,18 +501,22 @@ export const updateDappEnrichDataForStore = (
 ) => {
   const { remove = [], add } = data;
   //start delete keys
-  if (remove.length) remove.forEach(path => deleteKeyFromObject(path, dappsEnrichDetails.fields));
+  if (remove.length)
+    remove.forEach(path =>
+      deleteKeyFromObject(path, dappsEnrichDetails.fields)
+    );
   if (!add || !Object.keys(add).length) return;
 
   const existing = dappsEnrichDetails?.fields?.images?.screenshots || [];
   let screenshots = add.images?.screenshots || [];
   screenshots = mergeArrayOfObject(screenshots, existing);
 
-  if (add.images?.screenshots || screenshots.length) Object.assign(add, { images: {...add.images, screenshots } });
-  dappsEnrichDetails.fields = {...dappsEnrichDetails?.fields, ...add };
+  if (add.images?.screenshots || screenshots.length)
+    Object.assign(add, { images: { ...add.images, screenshots } });
+  dappsEnrichDetails.fields = { ...dappsEnrichDetails?.fields, ...add };
 
   const dappEnrich = currDappStores.dappStores[storeIndex].dappsEnrich || [];
   dappEnrich[idx] = dappsEnrichDetails;
   currDappStores.dappStores[storeIndex].dappsEnrich = dappEnrich;
   return;
-}
+};

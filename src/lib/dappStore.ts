@@ -11,7 +11,11 @@ import {
   updateRegistryOrStores,
   validateSchema
 } from "./utils";
-import { StoreSchema, StoresSchema, DappEnrichPayload } from "../interfaces/dAppStoreSchema";
+import {
+  StoreSchema,
+  StoresSchema,
+  DappEnrichPayload
+} from "../interfaces/dAppStoreSchema";
 import { FeaturedSection } from "../interfaces";
 
 const debug = Debug("@merokudao:dapp-store-registry:Stores");
@@ -610,9 +614,17 @@ export class DappStores {
     // store exist than update the store
     const storeEnrich = currDappStores.dappStores[storeIndex].dappsEnrich || [];
     const idx = storeEnrich.findIndex(x => x.dappId === data.dappId);
-    let dappsEnrichDetails = idx >= 0 && storeEnrich[idx] || null;
-    if(!dappsEnrichDetails) addNewDappEnrichDataForStore(data, currDappStores, storeIndex);
-    else updateDappEnrichDataForStore(data, currDappStores, dappsEnrichDetails, storeIndex, idx);
+    const dappsEnrichDetails = (idx >= 0 && storeEnrich[idx]) || null;
+    if (!dappsEnrichDetails)
+      addNewDappEnrichDataForStore(data, currDappStores, storeIndex);
+    else
+      updateDappEnrichDataForStore(
+        data,
+        currDappStores,
+        dappsEnrichDetails,
+        storeIndex,
+        idx
+      );
     // Validate the dappStores
     const [valid, errors] = validateSchema(currDappStores);
     if (!valid) {
@@ -632,5 +644,4 @@ export class DappStores {
       this.schema
     );
   }
-
 }

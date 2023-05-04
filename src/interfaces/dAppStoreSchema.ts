@@ -16,7 +16,7 @@ export interface StoreSchema {
 
   bannedDAppIds: string[];
 
-  dappsEnrich ?: EnrichSchema[];
+  dappsEnrich?: EnrichSchema[];
 }
 
 export interface EnrichSchema {
