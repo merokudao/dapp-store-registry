@@ -171,6 +171,11 @@
       "format": "date",
       "description": "The date on which this dApp is listed on dApp store. This date can be a future date as well. This can not be in past."
     },
+    "expiryDate": {
+      "type": "string",
+      "format": "date",
+      "description": "The date on which this dApp name will expiry. This date will be calculate based on dapp name registation date with addition of purchased time."
+    },
     "availableOnPlatform": {
       "type": "array",
       "items": {

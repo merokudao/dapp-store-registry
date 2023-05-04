@@ -159,4 +159,5 @@ export interface DAppSchema {
     name: string;
     url?: string;
   }
+  expiryDate?: string;
 }
