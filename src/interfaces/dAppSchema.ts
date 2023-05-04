@@ -158,5 +158,6 @@ export interface DAppSchema {
   referredBy?: {
     name: string;
     url?: string;
-  };
+  }
+  expiryDate?: string;
 }

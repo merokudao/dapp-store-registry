@@ -124,6 +124,9 @@
             "listDate": {
                 "type": "date"
             },
+            "expiryDate": {
+                "type": "date"
+            },
             "availableOnPlatform": {
                 "type": "text"
             },
