@@ -364,6 +364,7 @@ export const searchFilters = (
     allowedInCountries = null,
     blockedInCountries = null,
     categories = null,
+    subCategories = null,
     isListed = "true",
     developer = null,
     page = 1,
@@ -418,6 +419,14 @@ export const searchFilters = (
         category: categories
       }
     });
+
+  if (subCategories && subCategories.length)
+    query.bool.must.push({
+      terms: {
+        subCategory: subCategories
+      }
+    });
+
   if (dappId) query.bool.must.push({ term: { id: dappId.trim() } });
 
   // search on customer string
