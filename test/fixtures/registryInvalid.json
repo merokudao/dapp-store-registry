@@ -10,7 +10,7 @@
       "repoUrl": "https://github.com/r4881t/cryptoboys-nft-marketplace",
       "description": "A Simple NFT Marketplace by CryptoBoys.",
       "tags": ["nft creator"],
-      "dappId": "bitpack.example.dapp",
+      "dappId": "bitpack.example.app",
       "minAge": 13,
       "isForMatureAudience": false,
       "isSelfModerated": false,
