@@ -525,7 +525,7 @@ export class DappStoreRegistry {
       );
     }
 
-    if (!dapp.dappId.endsWith(".dapp")) {
+    if (!dapp.dappId.endsWith(".app")) {
       throw new Error(
         `dApp ID ${dapp.dappId} is invalid. It must end with .dapp`
       );
