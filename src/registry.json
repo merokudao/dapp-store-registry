@@ -29020,6 +29020,38 @@
       },
       "chains": [137],
       "category": "nft"
+    },
+    {
+      "name": "Onmeta",
+      "description": "Onmeta provides enterprise on and off ramp solutions (API/widget integration) for India & SEA to web3 companies to help them improve their user experience and accelerate their adoption by mainstream users. It supports local payment methods like UPI and bank transfer in India & GrabPay, Gcash & PayMaya in the Philippines. It supports 6000+ tokens across 10+ blockchains and processes payments instantly in 60 seconds. It has in-built KYC & AML features and have live chat for instant support.\\n\\nOnmeta has raised USD 1.5M in equity funding from Skycatcher Fund, GSF Fund, Luno Expeditions and includes Chingari, Ledger, Sequence Wallet, Frontier Wallet & Crazy Defense Heroes among the 50+ clients it serves.",
+      "appUrl": "https://onmeta.in/",
+      "dappId": "in.onmeta.dapp",
+      "images": {
+        "logo": "https://bafybeidg4ycmpuhki6mvmwichcohg2u25qj2kcdniuuiszxuziuuxlraty.ipfs.dweb.link/logo_Onmeta_500x500.png",
+        "banner": "https://bafybeidg4ycmpuhki6mvmwichcohg2u25qj2kcdniuuiszxuziuuxlraty.ipfs.dweb.link/banner-image.png",
+        "screenshots": [
+          "https://bafybeidg4ycmpuhki6mvmwichcohg2u25qj2kcdniuuiszxuziuuxlraty.ipfs.dweb.link/sc-1-Screenshot%202023-05-04%20at%2011.33.14%20PM.png"
+        ]
+      },
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "1",
+      "isListed": true,
+      "listDate" : "2023-05-04",
+      "availableOnPlatform": ["web"],
+      "tags": ["fiatonramp", "onramp", "offramp"],
+      "developer": {
+        "legalName" : "Prateek Gupta",
+        "website":"https://onmeta.in/",
+        "privacyPolicyUrl" : "https://onmeta.in/privacypolicy",
+        "support": {
+          "email": "support@onmeta.in"
+        }
+      },
+      "chains": [1, 137, 56, 42161, 43114, 250, 100, 8217],
+      "category": "payments"
     }
   ],
   "featuredSections": [
