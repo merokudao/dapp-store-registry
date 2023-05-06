@@ -202,7 +202,7 @@
                     }
                 }
             },
-            "matrics":{
+            "metrics":{
                 "properties": {
                     "downloads": { "type": "integer" },
                     "installs": { "type": "integer" },
@@ -247,7 +247,7 @@
             "chains",
             "packageId",
             "walletApiVersion",
-            "matrics"
+            "metrics"
         ]
     }  
 }

@@ -72,13 +72,13 @@ export const orderBy = (params: any) => {
     name = null
   } = params;
   if (rating) {
-    order.push({ "matrics.rating": { order: rating } });
+    order.push({ "metrics.rating": { order: rating } });
   }
   if (visits) {
-    order.push({ "matrics.visits": { order: visits } });
+    order.push({ "metrics.visits": { order: visits } });
   }
   if (installs) {
-    order.push({ "matrics.installs": { order: installs } });
+    order.push({ "metrics.installs": { order: installs } });
   }
 
   if (listDate) {
