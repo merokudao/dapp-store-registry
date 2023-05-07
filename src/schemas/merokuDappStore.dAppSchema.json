@@ -238,9 +238,7 @@
       "type": "object",
       "required": [
         "legalName",
-        "website",
-        "privacyPolicyUrl",
-        "support"
+        "website"
       ],
       "properties": {
         "legalName": {
@@ -255,27 +253,6 @@
         "website": {
           "type": "string",
           "format": "uri"
-        },
-        "privacyPolicyUrl": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^(https?|http?|ipfs?)://",
-          "minLength": 1
-        },
-        "support": {
-          "type": "object",
-          "properties": {
-            "url": {
-              "type": "string",
-              "format": "uri",
-              "pattern": "^(https?|http?|ipfs?)://",
-              "minLength": 1
-            },
-            "email": {
-              "type": "string",
-              "format": "email"
-            }
-          }
         },
         "githubID": {
           "type": "string",
@@ -379,6 +356,27 @@
         "url": {
           "type": "string",
           "description": "The website link of the vendor."
+        }
+      }
+    },
+    "privacyPolicyUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
+    },
+    "support": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
         }
       }
     }
