@@ -109,7 +109,7 @@ export class DappStoreRegistry {
 
   private localRegistry = (): DAppStoreSchema => {
     const res = registryJson as DAppStoreSchema;
-    const [valid, errors] = this.validateRegistryJson(res);
+    const [valid, errors] = DappStoreRegistry.validateRegistryJson(res);
     if (valid) {
       return res;
     } else {
@@ -137,7 +137,7 @@ export class DappStoreRegistry {
         `remote registry fetched. status: ${response.status} ${response.statusText}`
       );
       const json = (await response.json()) as DAppStoreSchema;
-      const [valid, errors] = this.validateRegistryJson(json);
+      const [valid, errors] = DappStoreRegistry.validateRegistryJson(json);
       if (valid) {
         registry = json as DAppStoreSchema;
       } else {
@@ -154,21 +154,21 @@ export class DappStoreRegistry {
     return registry;
   };
 
-  public validateRegistryJson = (json: DAppStoreSchema) => {
+  public static validateRegistryJson = (json: DAppStoreSchema) => {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     // find duplicate dapp
     const counts: any = {};
-    const duplicaes: any = [];
+    const duplicates: any = [];
     dAppIDs.forEach(item => {
       counts[item] = counts[item] ? counts[item] : 0;
       counts[item] += 1;
       if (counts[item] >= 2) {
-        duplicaes.push(item);
+        duplicates.push(item);
       }
     });
 
-    if (duplicaes.length) {
-      debug(`duplicate dapp: ${JSON.stringify(duplicaes)}`);
+    if (duplicates.length) {
+      debug(`duplicate dapp: ${JSON.stringify(duplicates)}`);
       throw new Error(
         `@merokudao/dapp-store-registry: registry is invalid. dApp IDs must be unique.`
       );
@@ -552,7 +552,8 @@ export class DappStoreRegistry {
     }
 
     // Validate the registry
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    const [valid, errors] =
+      DappStoreRegistry.validateRegistryJson(currRegistry);
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json: ${errors}`);
     }
@@ -610,7 +611,8 @@ export class DappStoreRegistry {
     }
 
     // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    const [valid, errors] =
+      DappStoreRegistry.validateRegistryJson(currRegistry);
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
@@ -685,7 +687,8 @@ export class DappStoreRegistry {
     }
 
     // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    const [valid, errors] =
+      DappStoreRegistry.validateRegistryJson(currRegistry);
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
@@ -781,7 +784,8 @@ export class DappStoreRegistry {
     }
 
     // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    const [valid, errors] =
+      DappStoreRegistry.validateRegistryJson(currRegistry);
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
@@ -826,7 +830,8 @@ export class DappStoreRegistry {
     currRegistry.featuredSections.splice(idx, 1);
 
     // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    const [valid, errors] =
+      DappStoreRegistry.validateRegistryJson(currRegistry);
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }
@@ -911,7 +916,8 @@ export class DappStoreRegistry {
     currRegistry.featuredSections = currFeaturedSections;
 
     // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
+    const [valid, errors] =
+      DappStoreRegistry.validateRegistryJson(currRegistry);
     if (!valid) {
       throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
     }

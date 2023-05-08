@@ -63,7 +63,9 @@ export const orderBy = (params: any) => {
   const order: any = [{ _score: { order: "desc" } }];
   try {
     params = JSON.parse(params);
-  } catch (error) {}
+  } catch (error) {
+    //
+  }
   const {
     rating = null,
     visits = null,

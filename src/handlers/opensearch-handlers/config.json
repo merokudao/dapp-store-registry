@@ -1,253 +1,241 @@
 {
-    "settings": {
-        "index": {
-            "number_of_shards": 2,
-            "number_of_replicas": 1
+  "settings": {
+    "index": {
+      "number_of_shards": 2,
+      "number_of_replicas": 1
+    },
+    "analysis": {
+      "analyzer": {
+        "autocomplete": {
+          "tokenizer": "autocomplete_tokenizer",
+          "filter": ["lowercase"]
         },
-        "analysis": {
-            "analyzer": {
-              "autocomplete": {
-                "tokenizer": "autocomplete_tokenizer",
-                "filter": [
-                  "lowercase"
-                ]
-              },
-              "autocomplete_search": {
-                "tokenizer": "lowercase"
-              }
-            },
-            "tokenizer": {
-              "autocomplete_tokenizer": {
-                "type": "edge_ngram",
-                "min_gram": 2,
-                "max_gram": 20,
-                "token_chars": [
-                  "letter",
-                  "digit",
-                  "whitespace",
-                  "punctuation",
-                  "symbol",
-                  "custom"
-                ],
-                "custom_token_chars":[
-                    "!",
-                    ".",
-                    "+",
-                    "=",
-                    "-",
-                    "&",
-                    "#",
-                    "@",
-                    "*"
-                ]
-              }
-            }
+        "autocomplete_search": {
+          "tokenizer": "lowercase"
         }
-    },
-    "mappings": {
+      },
+      "tokenizer": {
+        "autocomplete_tokenizer": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 20,
+          "token_chars": [
+            "letter",
+            "digit",
+            "whitespace",
+            "punctuation",
+            "symbol",
+            "custom"
+          ],
+          "custom_token_chars": ["!", ".", "+", "=", "-", "&", "#", "@", "*"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "name": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "nameKeyword": {
+        "type": "keyword"
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "appUrl": {
+        "type": "keyword"
+      },
+      "downloadBaseUrls": {
+        "type": "nested",
         "properties": {
-            "name": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-            },
-            "nameKeyword": {
-                "type": "keyword"
-            },
-            "description": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-            },
-            "appUrl": {
-                "type": "keyword"
-            },
-            "downloadBaseUrls": {
-                "type": "nested",
-                "properties": {
-                    "url": { "type": "keyword" },
-                    "platform": { "type": "keyword" },
-                    "minVersion": { "type": "keyword" },
-                    "maxVersion": { "type": "keyword" },
-                    "packageId": {  "type": "keyword" },
-                    "version": { "type": "keyword" },
-                    "versionCode": { "type": "keyword" },
-                    "screenDPI": { "type": "keyword" }
-                }
-            },
-            "contracts": {
-                "type": "nested",
-                "properties": {
-                    "address": { "type": "keyword" },
-                    "chainId": { "type": "keyword" }
-                }
-            },
-            "images": {
-                "properties": {
-                    "logo": {
-                        "type": "keyword"
-                    },
-                    "banner": {
-                        "type": "keyword"
-                    },
-                    "screenshots": {
-                        "type": "text"
-                    }
-                }
-            },
-            "repoUrl": {
-                "type": "keyword"
-            },
-            "dappId": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-            },
-            "minAge": {
-                "type": "integer"
-            },
-            "isForMatureAudience": {
-                "type": "boolean"
-            },
-            "isSelfModerated": {
-                "type": "boolean"
-            },
-            "language": {
-                "type": "text"
-            },
-            "version": {
-                "type": "keyword"
-            },
-            "isListed": {
-                "type": "boolean"
-            },
-            "listDate": {
-                "type": "date"
-            },
-            "expiryDate": {
-                "type": "date"
-            },
-            "availableOnPlatform": {
-                "type": "text"
-            },
-            "geoRestrictions": {
-                "properties": {
-                    "allowedCountries": {
-                        "type": "text"
-                    },
-                    "blockedCountries": {
-                        "type": "text"
-                    }
-                }
-            },
-            "developer": {
-                "properties": {
-                    "legalName": {
-                        "type": "keyword"
-                    },
-                    "logo": {
-                        "type": "keyword"
-                    },
-                    "website": {
-                        "type": "keyword"
-                    },
-                    "privacyPolicyUrl": {
-                        "type": "keyword"
-                    },
-                    "support": {
-                        "properties": {
-                            "url": {
-                                "type": "keyword"
-                            },
-                            "email": {
-                                "type": "keyword"
-                            }
-                        }
-                    },
-                    "githubID": {
-                        "type": "keyword"
-                    }
-                }
-            },
-            "tags": {
-                "type": "text"
-            },
-            "chains": {
-                "type": "text"
-            },
-            "category": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-            },
-            "packageId": {
-                "type": "keyword"
-            },
-            "walletApiVersion": {
-                "type": "keyword"
-            },
-            "subCategory": {
-                "type": "text"
-            },
-            "minted": {
-                "type": "boolean"
-            },
-            "referredBy": {
-                "properties": {
-                    "name": {
-                        "type":"text"
-                    },
-                    "url": {
-                        "type": "text"
-                    }
-                }
-            },
-            "metrics":{
-                "properties": {
-                    "downloads": { "type": "integer" },
-                    "installs": { "type": "integer" },
-                    "uninstalls": { "type": "integer" },
-                    "ratingsCount": { "type": "integer" },
-                    "visits": { "type": "integer" },
-                    "rating": { "type": "double" }
-                }
-            }
+          "url": { "type": "keyword" },
+          "platform": { "type": "keyword" },
+          "minVersion": { "type": "keyword" },
+          "maxVersion": { "type": "keyword" },
+          "packageId": { "type": "keyword" },
+          "version": { "type": "keyword" },
+          "versionCode": { "type": "keyword" },
+          "screenDPI": { "type": "keyword" }
         }
-    },
-    "_source": {
-        "autocompleteFields": [
-            "name",
-            "dappId",
-            "appUrl",
-            "category",
-            "minAge",
-            "isForMatureAudience"
-        ],
-        "searchFields": [
-            "name",
-            "description",
-            "appUrl",
-            "downloadBaseUrls",
-            "contracts",
-            "images",
-            "repoUrl",
-            "dappId",
-            "minAge",
-            "isForMatureAudience",
-            "isSelfModerated",
-            "isListed",
-            "language",
-            "version",
-            "versionCode",
-            "listDate",
-            "availableOnPlatform",
-            "tags",
-            "category",
-            "geoRestrictions",
-            "chains",
-            "packageId",
-            "walletApiVersion",
-            "metrics"
-        ]
-    }  
+      },
+      "contracts": {
+        "type": "nested",
+        "properties": {
+          "address": { "type": "keyword" },
+          "chainId": { "type": "keyword" }
+        }
+      },
+      "images": {
+        "properties": {
+          "logo": {
+            "type": "keyword"
+          },
+          "banner": {
+            "type": "keyword"
+          },
+          "screenshots": {
+            "type": "text"
+          }
+        }
+      },
+      "repoUrl": {
+        "type": "keyword"
+      },
+      "dappId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "minAge": {
+        "type": "integer"
+      },
+      "isForMatureAudience": {
+        "type": "boolean"
+      },
+      "isSelfModerated": {
+        "type": "boolean"
+      },
+      "language": {
+        "type": "text"
+      },
+      "version": {
+        "type": "keyword"
+      },
+      "isListed": {
+        "type": "boolean"
+      },
+      "listDate": {
+        "type": "date"
+      },
+      "expiryDate": {
+        "type": "date"
+      },
+      "availableOnPlatform": {
+        "type": "text"
+      },
+      "geoRestrictions": {
+        "properties": {
+          "allowedCountries": {
+            "type": "text"
+          },
+          "blockedCountries": {
+            "type": "text"
+          }
+        }
+      },
+      "developer": {
+        "properties": {
+          "legalName": {
+            "type": "keyword"
+          },
+          "logo": {
+            "type": "keyword"
+          },
+          "website": {
+            "type": "keyword"
+          },
+          "privacyPolicyUrl": {
+            "type": "keyword"
+          },
+          "support": {
+            "properties": {
+              "url": {
+                "type": "keyword"
+              },
+              "email": {
+                "type": "keyword"
+              }
+            }
+          },
+          "githubID": {
+            "type": "keyword"
+          }
+        }
+      },
+      "tags": {
+        "type": "text"
+      },
+      "chains": {
+        "type": "text"
+      },
+      "category": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "packageId": {
+        "type": "keyword"
+      },
+      "walletApiVersion": {
+        "type": "keyword"
+      },
+      "subCategory": {
+        "type": "text"
+      },
+      "minted": {
+        "type": "boolean"
+      },
+      "referredBy": {
+        "properties": {
+          "name": {
+            "type": "text"
+          },
+          "url": {
+            "type": "text"
+          }
+        }
+      },
+      "metrics": {
+        "properties": {
+          "downloads": { "type": "integer" },
+          "installs": { "type": "integer" },
+          "uninstalls": { "type": "integer" },
+          "ratingsCount": { "type": "integer" },
+          "visits": { "type": "integer" },
+          "rating": { "type": "double" }
+        }
+      }
+    }
+  },
+  "_source": {
+    "autocompleteFields": [
+      "name",
+      "dappId",
+      "appUrl",
+      "category",
+      "minAge",
+      "isForMatureAudience"
+    ],
+    "searchFields": [
+      "name",
+      "description",
+      "appUrl",
+      "downloadBaseUrls",
+      "contracts",
+      "images",
+      "repoUrl",
+      "dappId",
+      "minAge",
+      "isForMatureAudience",
+      "isSelfModerated",
+      "isListed",
+      "language",
+      "version",
+      "versionCode",
+      "listDate",
+      "availableOnPlatform",
+      "tags",
+      "category",
+      "geoRestrictions",
+      "chains",
+      "packageId",
+      "walletApiVersion",
+      "metrics"
+    ]
+  }
 }

@@ -1,249 +1,207 @@
 [
-    {
-        "category": "books",
-        "subCategory": [
-            "ebooks",
-            "audiobooks",
-            "document-readers"
-        ]
-    },
-    {
-        "category": "business",
-        "subCategory": [
-            "communication",
-            "project-management",
-            "human-resources",
-            "decentralized-business-tools"
-        ]
-    },
-    {
-        "category": "developer tools",
-        "subCategory": []
-    },
-    {
-        "category": "education",
-        "subCategory": [
-            "learning tools",
-            "Reference",
-            "language-learning",
-            "stem"
-        ]
-    },
-    {
-        "category": "entertainment",
-        "subCategory": [
-            "video-streaming",
-            "music-streaming",
-            "live-events",
-            "nft-marketplaces"
-        ]
-    },
-    {
-        "category": "finance",
-        "subCategory": [
-            "banking",
-            "personal-finance",
-            "exchanges",
-            "defi",
-            "insurance",
-            "on-ramping",
-            "off-ramping"
-        ]
-    },
-    {
-        "category": "food and drink",
-        "subCategory": [
-            "cooking",
-            "recipes",
-            "restaurant-finding"
-        ]
-    },
-    {
-        "category": "games",
-        "subCategory": [
-            "action", 
-            "adventure",
-            "puzzle",
-            "role-playing", 
-            "strategy",
-            "sports",
-            "racing",
-            "board ",
-            "simulation", 
-            "word"
-        ]
-    },
-    {
-        "category": "graphics and design",
-        "subCategory": []
-    },
-    {
-        "category": "health and fitness",
-        "subCategory": [
-            "workout-apps",
-            "meditation",
-            "nutrition",
-            "sleep-trackers"
-        ]
-    },
-    {
-        "category": "lifestyle",
-        "subCategory": [
-            "home-automation",
-            "fashion",
-            "dating"
-        ]
-    },
-    {
-        "category": "kids",
-        "subCategory": []
-    },
-    {
-        "category": "magazines and newspapers",
-        "subCategory": [
-            "decentralized-news-platforms"
-        ]
-    },
-    {
-        "category": "medical",
-        "subCategory": []
-    },
-    {
-        "category": "music",
-        "subCategory": []
-    },
-    {
-        "category": "navigation",
-        "subCategory": []
-    },
-    {
-        "category": "news",
-        "subCategory": []
-    },
-    {
-        "category": "photo and video",
-        "subCategory": []
-    },
-    {
-        "category": "photography",
-        "subCategory": [
-            "photo-editing",
-            "camera-apps",
-            "photo-sharing"
-        ]
-    },
-    {
-        "category": "productivity",
-        "subCategory": [
-            "note-taking",
-            "task-management",
-            "time-management",
-            "calendar",
-            "decentralized-collaboration-tools"
-        ]
-    },
-    {
-        "category": "reference",
-        "subCategory": []
-    },
-    {
-        "category": "shopping",
-        "subCategory": [
-            "ecommerce",
-            "nft-marketplaces"
-        ]
-    },
-    {
-        "category": "social networking",
-        "subCategory": [
-            "decentralized-social-networks",
-            "messaging"
-        ]
-    },
-    {
-        "category": "sports",
-        "subCategory": [
-            "sports-news",
-            "team-management",
-            "live-scores"
-        ]
-    },
-    {
-        "category": "travel",
-        "subCategory": [
-            "navigation",
-            "accommodation-booking",
-            "transportation",
-            "trip-planning"
-        ]
-    },
-    {
-        "category": "utilities",
-        "subCategory": [
-            "file-management",
-            "browsers",
-            "security-and-privacy",
-            "wallets"
-        ]
-    },
-    {
-        "category": "weather",
-        "subCategory": []
-    },
-    {
-        "category": "defi",
-        "subCategory": []
-    },
-    {
-        "category": "nft",
-        "subCategory": []
-    },
-    {
-        "category": "gambling",
-        "subCategory": []
-    },
-    {
-        "category": "messaging",
-        "subCategory": []
-    },
-    {
-        "category": "social media",
-        "subCategory": []
-    },
-    {
-        "category": "off-ramping",
-        "subCategory": []
-    },
-    {
-        "category": "social",
-        "subCategory": []
-    },
-    {
-        "category": "price aggregator",
-        "subCategory": []
-    },
-    {
-        "category": "payments",
-        "subCategory": []
-    },
-    {
-        "category": "discovery tool",
-        "subCategory": []
-    },
-    {
-        "category": "airdrop tool",
-        "subCategory": []
-    },
-    {
-        "category": "ecommerce",
-        "subCategory": []
-    },
-    {
-        "category": "personalization",
-        "subCategory": [
-            "themes",
-            "wallpapers",
-            "customization-tools"
-        ]
-    }
+  {
+    "category": "books",
+    "subCategory": ["ebooks", "audiobooks", "document-readers"]
+  },
+  {
+    "category": "business",
+    "subCategory": [
+      "communication",
+      "project-management",
+      "human-resources",
+      "decentralized-business-tools"
+    ]
+  },
+  {
+    "category": "developer tools",
+    "subCategory": []
+  },
+  {
+    "category": "education",
+    "subCategory": ["learning tools", "Reference", "language-learning", "stem"]
+  },
+  {
+    "category": "entertainment",
+    "subCategory": [
+      "video-streaming",
+      "music-streaming",
+      "live-events",
+      "nft-marketplaces"
+    ]
+  },
+  {
+    "category": "finance",
+    "subCategory": [
+      "banking",
+      "personal-finance",
+      "exchanges",
+      "defi",
+      "insurance",
+      "on-ramping",
+      "off-ramping"
+    ]
+  },
+  {
+    "category": "food and drink",
+    "subCategory": ["cooking", "recipes", "restaurant-finding"]
+  },
+  {
+    "category": "games",
+    "subCategory": [
+      "action",
+      "adventure",
+      "puzzle",
+      "role-playing",
+      "strategy",
+      "sports",
+      "racing",
+      "board ",
+      "simulation",
+      "word"
+    ]
+  },
+  {
+    "category": "graphics and design",
+    "subCategory": []
+  },
+  {
+    "category": "health and fitness",
+    "subCategory": ["workout-apps", "meditation", "nutrition", "sleep-trackers"]
+  },
+  {
+    "category": "lifestyle",
+    "subCategory": ["home-automation", "fashion", "dating"]
+  },
+  {
+    "category": "kids",
+    "subCategory": []
+  },
+  {
+    "category": "magazines and newspapers",
+    "subCategory": ["decentralized-news-platforms"]
+  },
+  {
+    "category": "medical",
+    "subCategory": []
+  },
+  {
+    "category": "music",
+    "subCategory": []
+  },
+  {
+    "category": "navigation",
+    "subCategory": []
+  },
+  {
+    "category": "news",
+    "subCategory": []
+  },
+  {
+    "category": "photo and video",
+    "subCategory": []
+  },
+  {
+    "category": "photography",
+    "subCategory": ["photo-editing", "camera-apps", "photo-sharing"]
+  },
+  {
+    "category": "productivity",
+    "subCategory": [
+      "note-taking",
+      "task-management",
+      "time-management",
+      "calendar",
+      "decentralized-collaboration-tools"
+    ]
+  },
+  {
+    "category": "reference",
+    "subCategory": []
+  },
+  {
+    "category": "shopping",
+    "subCategory": ["ecommerce", "nft-marketplaces"]
+  },
+  {
+    "category": "social networking",
+    "subCategory": ["decentralized-social-networks", "messaging"]
+  },
+  {
+    "category": "sports",
+    "subCategory": ["sports-news", "team-management", "live-scores"]
+  },
+  {
+    "category": "travel",
+    "subCategory": [
+      "navigation",
+      "accommodation-booking",
+      "transportation",
+      "trip-planning"
+    ]
+  },
+  {
+    "category": "utilities",
+    "subCategory": [
+      "file-management",
+      "browsers",
+      "security-and-privacy",
+      "wallets"
+    ]
+  },
+  {
+    "category": "weather",
+    "subCategory": []
+  },
+  {
+    "category": "defi",
+    "subCategory": []
+  },
+  {
+    "category": "nft",
+    "subCategory": []
+  },
+  {
+    "category": "gambling",
+    "subCategory": []
+  },
+  {
+    "category": "messaging",
+    "subCategory": []
+  },
+  {
+    "category": "social media",
+    "subCategory": []
+  },
+  {
+    "category": "off-ramping",
+    "subCategory": []
+  },
+  {
+    "category": "social",
+    "subCategory": []
+  },
+  {
+    "category": "price aggregator",
+    "subCategory": []
+  },
+  {
+    "category": "payments",
+    "subCategory": []
+  },
+  {
+    "category": "discovery tool",
+    "subCategory": []
+  },
+  {
+    "category": "airdrop tool",
+    "subCategory": []
+  },
+  {
+    "category": "ecommerce",
+    "subCategory": []
+  },
+  {
+    "category": "personalization",
+    "subCategory": ["themes", "wallpapers", "customization-tools"]
+  }
 ]

@@ -28,7 +28,14 @@
           {
             "additionalProperties": false,
             "type": "object",
-            "required": ["url", "platform", "minVersion", "packageId", "version", "versionCode"],
+            "required": [
+              "url",
+              "platform",
+              "minVersion",
+              "packageId",
+              "version",
+              "versionCode"
+            ],
             "properties": {
               "url": {
                 "type": "string",
@@ -79,7 +86,7 @@
           {
             "additionalProperties": false,
             "type": "object",
-            "required":["url", "platform"],
+            "required": ["url", "platform"],
             "properties": {
               "url": {
                 "type": "string",
@@ -236,12 +243,7 @@
     },
     "developer": {
       "type": "object",
-      "required": [
-        "legalName",
-        "website",
-        "privacyPolicyUrl",
-        "support"
-      ],
+      "required": ["legalName", "website", "privacyPolicyUrl", "support"],
       "properties": {
         "legalName": {
           "type": "string",
@@ -368,12 +370,12 @@
       "description": "The minted status will be used to denote if a dapp is claimed by owner or not.",
       "default": false
     },
-    "referredBy":{
+    "referredBy": {
       "type": "object",
       "description": "The details of a vendor, who have reffered this dapp to dapp registry",
       "properties": {
         "name": {
-          "type":"string",
+          "type": "string",
           "description": "The name of the vendor."
         },
         "url": {
@@ -394,15 +396,15 @@
         "properties": {
           "subCategory": {
             "enum": [
-              "action", 
+              "action",
               "adventure",
               "puzzle",
-              "role-playing", 
+              "role-playing",
               "strategy",
               "sports",
               "racing",
               "board ",
-              "simulation", 
+              "simulation",
               "word"
             ]
           }
@@ -418,10 +420,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "decentralized-social-networks",
-              "messaging"
-            ]
+            "enum": ["decentralized-social-networks", "messaging"]
           }
         }
       }
@@ -454,12 +453,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "learning tools",
-              "Reference",
-              "language-learning",
-              "stem"
-            ]
+            "enum": ["learning tools", "Reference", "language-learning", "stem"]
           }
         }
       }
@@ -550,10 +544,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "ecommerce",
-              "nft-marketplaces"
-            ]
+            "enum": ["ecommerce", "nft-marketplaces"]
           }
         }
       }
@@ -589,9 +580,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "decentralized-news-platforms"
-            ]
+            "enum": ["decentralized-news-platforms"]
           }
         }
       }
@@ -605,11 +594,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "photo-editing",
-              "camera-apps",
-              "photo-sharing"
-            ]
+            "enum": ["photo-editing", "camera-apps", "photo-sharing"]
           }
         }
       }
@@ -623,11 +608,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "cooking",
-              "recipes",
-              "restaurant-finding"
-            ]
+            "enum": ["cooking", "recipes", "restaurant-finding"]
           }
         }
       }
@@ -641,11 +622,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "home-automation",
-              "fashion",
-              "Dating"
-            ]
+            "enum": ["home-automation", "fashion", "Dating"]
           }
         }
       }
@@ -659,11 +636,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "sports-news",
-              "team-management",
-              "live-scores"
-            ]
+            "enum": ["sports-news", "team-management", "live-scores"]
           }
         }
       }
@@ -696,11 +669,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "ebooks",
-              "audiobooks",
-              "document-readers"
-            ]
+            "enum": ["ebooks", "audiobooks", "document-readers"]
           }
         }
       }
@@ -714,11 +683,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "themes",
-              "wallpapers",
-              "customization-tools"
-            ]
+            "enum": ["themes", "wallpapers", "customization-tools"]
           }
         }
       }

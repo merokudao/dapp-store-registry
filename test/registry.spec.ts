@@ -234,8 +234,11 @@ describe("DappStoreRegistry", () => {
         allowedInCountries: validCountries
       });
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp => {
-        return !dapp.geoRestrictions?.allowedCountries || dapp.geoRestrictions?.allowedCountries?.some(x =>
-          validCountries.includes(x)
+        return (
+          !dapp.geoRestrictions?.allowedCountries ||
+          dapp.geoRestrictions?.allowedCountries?.some(x =>
+            validCountries.includes(x)
+          )
         );
       });
       registry_dapps_1.should.deep.equal(dapps_1);
