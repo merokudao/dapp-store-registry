@@ -155,8 +155,8 @@ export interface DAppSchema {
     url?: string;
   }
   expiryDate?: string;
-  privacyPolicyUrl: string;
-  support: {
+  privacyPolicyUrl?: string;
+  support?: {
     url?: string;
     email?: string;
   };
