@@ -369,7 +369,8 @@ export const searchFilters = (
     developer = null,
     page = 1,
     dappId = null,
-    searchById = false
+    searchById = false,
+    ownerAddress = null
   } = payload;
   let { limit = recordsPerPage } = payload;
 
@@ -447,6 +448,9 @@ export const searchFilters = (
       term: { isListed: isListed === "true" ? true : false }
     });
   }
+
+  if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
+
   if (isListed && !searchById && !search)
     query.bool.must.push({
       match: { isListed: isListed === "true" ? true : false }

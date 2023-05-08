@@ -211,6 +211,9 @@
                     "visits": { "type": "integer" },
                     "rating": { "type": "double" }
                 }
+            },
+            "ownerAddress": {
+                "type": "keyword"
             }
         }
     },
@@ -221,7 +224,8 @@
             "appUrl",
             "category",
             "minAge",
-            "isForMatureAudience"
+            "isForMatureAudience",
+            "ownerAddress"
         ],
         "searchFields": [
             "name",
@@ -247,7 +251,8 @@
             "chains",
             "packageId",
             "walletApiVersion",
-            "metrics"
+            "metrics",
+            "ownerAddress"
         ]
     }  
 }
