@@ -153,7 +153,7 @@ export interface DAppSchema {
   referredBy?: {
     name: string;
     url?: string;
-  }
+  };
   expiryDate?: string;
   privacyPolicyUrl?: string;
   support?: {
