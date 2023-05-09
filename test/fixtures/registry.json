@@ -26,13 +26,13 @@
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
         "githubID": "bitpack1",
-        "website": "https://something.com",
-        "privacyPolicyUrl": "https://somethingelse.com",
-        "support": {
-          "url": "https://something.com"
-        }
+        "website": "https://something.com"
       },
-      "category": "finance"
+      "category": "finance",
+      "privacyPolicyUrl": "https://somethingelse.com",
+      "support": {
+        "url": "https://something.com"
+      }
     },
     {
       "name": "A dapp listed on ethereum in hindi for 18plus",
@@ -53,13 +53,13 @@
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
         "githubID": "bitpack1",
-        "website": "https://something.com",
-        "privacyPolicyUrl": "https://somethingelse.com",
-        "support": {
-          "url": "https://something.com"
-        }
+        "website": "https://something.com"
       },
-      "category": "music"
+      "category": "music",
+      "privacyPolicyUrl": "https://somethingelse.com",
+      "support": {
+        "url": "https://something.com"
+      }
     },
     {
       "name": "A dapp listed on polygon & ethereum",
@@ -84,13 +84,13 @@
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
         "githubID": "bitpack2",
-        "website": "https://something.com",
-        "privacyPolicyUrl": "https://somethingelse.com",
-        "support": {
-          "url": "https://something.com"
-        }
+        "website": "https://something.com"
       },
-      "category": "lifestyle"
+      "category": "lifestyle",
+      "privacyPolicyUrl": "https://somethingelse.com",
+      "support": {
+        "url": "https://something.com"
+      }
     },
     {
       "name": "A dapp NOT listed on polygon & ethereum",
@@ -111,13 +111,13 @@
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
         "githubID": "bitpack3",
-        "website": "https://something.com",
-        "privacyPolicyUrl": "https://somethingelse.com",
-        "support": {
-          "url": "https://something.com"
-        }
+        "website": "https://something.com"
       },
-      "category": "games"
+      "category": "games",
+      "privacyPolicyUrl": "https://somethingelse.com",
+      "support": {
+        "url": "https://something.com"
+      }
     }
   ]
 }
