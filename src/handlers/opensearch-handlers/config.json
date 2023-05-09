@@ -151,19 +151,6 @@
                     "website": {
                         "type": "keyword"
                     },
-                    "privacyPolicyUrl": {
-                        "type": "keyword"
-                    },
-                    "support": {
-                        "properties": {
-                            "url": {
-                                "type": "keyword"
-                            },
-                            "email": {
-                                "type": "keyword"
-                            }
-                        }
-                    },
                     "githubID": {
                         "type": "keyword"
                     }
@@ -199,6 +186,19 @@
                     },
                     "url": {
                         "type": "text"
+                    }
+                }
+            },
+            "privacyPolicyUrl": {
+                "type": "keyword"
+            },
+            "support": {
+                "properties": {
+                    "url": {
+                        "type": "keyword"
+                    },
+                    "email": {
+                        "type": "keyword"
                     }
                 }
             },

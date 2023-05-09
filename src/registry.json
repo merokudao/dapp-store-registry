@@ -26850,12 +26850,12 @@
         "legalName": "zhwindy",
         "logo": "https://avatars.githubusercontent.com/u/10633936?v=4",
         "website": "https://meroku.store",
-        "privacyPolicyUrl": "https://www.nftscan.com/SERVICE_AGREEMENT.pdf",
-        "support": {
-          "url": "https://discord.com/invite/8c87fS2HHF"
-        },
         "githubID": "zhwindy"
       },
+      "support": {
+        "url": "https://discord.com/invite/8c87fS2HHF"
+      },
+      "privacyPolicyUrl": "https://www.nftscan.com/SERVICE_AGREEMENT.pdf",
       "tags": [
         "NFT"
       ],
@@ -26963,13 +26963,13 @@
       "availableOnPlatform": ["android"],
       "developer": {
         "legalName" : "Nima Boustanian",
-        "website": "https://0vix.com/",
-        "privacyPolicyUrl" : "https://docs.0vix.com/support/privacy-policy",
-        "support": {
-          "url": "https://docs.0vix.com/support/faq",
-          "email": "nima@gqtfinance.com"
-        }
+        "website": "https://0vix.com/"
       },
+      "support": {
+        "url": "https://docs.0vix.com/support/faq",
+        "email": "nima@gqtfinance.com"
+      },
+      "privacyPolicyUrl" : "https://docs.0vix.com/support/privacy-policy",
       "chains": [137],
       "category": "defi",
       "packageId": "com.ww0VIXProtocol_16878992"
@@ -27011,12 +27011,12 @@
       "tags":["web3 messaging", "web3 notifications", "web3 communications", "wallet messaging"],
       "developer": {
         "legalName" : "Rohit Bagul",
-        "website":"https://hashmail.dev/",
-        "privacyPolicyUrl" : "https://www.hashmail.dev/privacy",
-        "support": {
-          "email": "support@hashlabs.dev"
-        }
+        "website":"https://hashmail.dev/"
       },
+      "support": {
+        "email": "support@hashlabs.dev"
+      },
+      "privacyPolicyUrl" : "https://www.hashmail.dev/privacy",
       "chains": [1, 137, 56, 42161],
       "category": "messaging",
       "packageId": "dev.hashmail.app"
@@ -27058,12 +27058,12 @@
       "tags":["music", "nft", "collect"],
       "developer": {
         "legalName" : "SpiderVille",
-        "website":"https://spiderville.xyz/",
-        "privacyPolicyUrl" : "https://spiderville.notion.site/Privacy-Policy-d0bdc04734ed41a9969d0bb0c74190c7",
-        "support": {
-          "email": "gm@oohlala.xyz"
-        }
+        "website":"https://spiderville.xyz/"
       },
+      "support": {
+        "email": "gm@oohlala.xyz"
+      },
+      "privacyPolicyUrl" : "https://spiderville.notion.site/Privacy-Policy-d0bdc04734ed41a9969d0bb0c74190c7",
       "chains": [1, 137, 42161, 10],
       "category": "nft",
       "packageId": "xyz.spiderville.oohlala.webmobile"
@@ -27108,12 +27108,12 @@
       "tags":["nfts", "portfolio", "alerts", "content", "floor"],
       "developer": {
         "legalName" : "Floor NFTs",
-        "website":"https://www.floornfts.io/",
-        "privacyPolicyUrl" : "https://www.floornfts.io/privacy",
-        "support": {
-          "email": "support@floornfts.io"
-        }
+        "website":"https://www.floornfts.io/"
       },
+      "support": {
+        "email": "support@floornfts.io"
+      },
+      "privacyPolicyUrl" : "https://www.floornfts.io/privacy",
       "chains": [1, 137],
       "category": "nft",
       "packageId": "io.floornfts"
@@ -27156,12 +27156,12 @@
       "tags":["creators", "digital collectibles", "nft", "sports", "fandom", "art"],
       "developer": {
         "legalName" : "Virtualness",
-        "website":"https://virtualness.io/",
-        "privacyPolicyUrl" : "https://virtualness.io/privacy-policy/",
-        "support": {
-          "email": "support@virtualness.io"
-        }
+        "website":"https://virtualness.io/"
       },
+      "support": {
+        "email": "support@virtualness.io"
+      },
+      "privacyPolicyUrl" : "https://virtualness.io/privacy-policy/",
       "chains": [137],
       "category": "nft",
       "packageId": "io.virtualness"
@@ -27204,12 +27204,12 @@
       "availableOnPlatform": ["web", "android"],
       "developer": {
         "legalName" : "arunank divya sharan",
-        "website":"https://github.com/Purple-Pay/",
-        "privacyPolicyUrl" : "https://arunanksharan.notion.site/Privacy-Policy-f4bb7e2c57b94c0399824e26c0006755",
-        "support": {
-          "email": "letstalk@purplepay.app"
-        }
+        "website":"https://github.com/Purple-Pay/"
       },
+      "support": {
+        "email": "letstalk@purplepay.app"
+      },
+      "privacyPolicyUrl" : "https://arunanksharan.notion.site/Privacy-Policy-f4bb7e2c57b94c0399824e26c0006755",
       "chains": [137],
       "category": "defi",
       "packageId": "xyz.appmaker.mhibhs"
@@ -27236,12 +27236,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "unjumble",
-        "website":"https://www.unjumble.xyz/",
-        "privacyPolicyUrl" : "https://www.unjumble.xyz/privacy-policy",
-        "support": {
-          "email": "hello@unjumble.xyz"
-        }
+        "website":"https://www.unjumble.xyz/"
       },
+      "support": {
+        "email": "hello@unjumble.xyz"
+      },
+      "privacyPolicyUrl" : "https://www.unjumble.xyz/privacy-policy",
       "chains": [1, 137, 42161],
       "category": "social media"
     },
@@ -27279,12 +27279,12 @@
       "tags": ["crypto", "off-ramping", "e-commerce", "giftcard", "vouchers", "games", "amazon", "apple", "playstation"],
       "developer": {
         "legalName" : "Simonluca Landi",
-        "website":"https://cryptorefills.com",
-        "privacyPolicyUrl" : "https://www.cryptorefills.com/privacy-policy",
-        "support": {
-          "url": "https://www.cryptorefills.com/contact-us"
-        }
+        "website":"https://cryptorefills.com"
       },
+      "support": {
+        "url": "https://www.cryptorefills.com/contact-us"
+      },
+      "privacyPolicyUrl" : "https://www.cryptorefills.com/privacy-policy",
       "chains": [1, 137, 56, 42161, 250, 43114, 10],
       "category": "off-ramping",
       "packageId": "com.cryptorefills"
@@ -27314,12 +27314,12 @@
       "tags": ["allowlist", "collector", "creator", "whitelist"],
       "developer": {
         "legalName" : "Curious Addys",
-        "website":"https://heymint.xyz/",
-        "privacyPolicyUrl" : "https://heymint.xyz/privacy",
-        "support": {
-          "email": "hey@heymint.xyz"
-        }
+        "website":"https://heymint.xyz/"
       },
+      "support": {
+        "email": "hey@heymint.xyz"
+      },
+      "privacyPolicyUrl" : "https://heymint.xyz/privacy",
       "chains": [1, 137, 42161, 10],
       "category": "nft"
     },
@@ -27349,12 +27349,12 @@
       "tags": ["nft", "trading", "pro", "terminal"],
       "developer": {
         "legalName" : "Mintify",
-        "website":"https://mintify.xyz/",
-        "privacyPolicyUrl" : "https://docs.mintify.xyz/legal/privacy-policy",
-        "support": {
-          "url": "https://docs.mintify.xyz/"
-        }
+        "website":"https://mintify.xyz/"
       },
+      "support": {
+        "url": "https://docs.mintify.xyz/"
+      },
+      "privacyPolicyUrl" : "https://docs.mintify.xyz/legal/privacy-policy",
       "chains": [1, 137],
       "category": "nft"
     },
@@ -27402,12 +27402,12 @@
       "tags": ["defi", "yield", "farming", "staking"],
       "developer": {
         "legalName" : "Renat Gafarov",
-        "website":"https://rehold.io/",
-        "privacyPolicyUrl" : "https://rehold.io/privacy_policy.pdf",
-        "support": {
-          "email": "support@rehold.io"
-        }
+        "website":"https://rehold.io/"
       },
+      "support": {
+        "email": "support@rehold.io"
+      },
+      "privacyPolicyUrl" : "https://rehold.io/privacy_policy.pdf",
       "chains": [137, 56, 43114, 250],
       "category": "defi"
     },
@@ -27487,12 +27487,12 @@
       "tags": ["defi", "swap", "aggregation", "limitorder"],
       "developer": {
         "legalName" : "1inch",
-        "website":"https://1inch.io/",
-        "privacyPolicyUrl" : "https://1inch.io/assets/1inch_network_privacy_policy.pdf",
-        "support": {
-          "email": "support@1inch.io"
-        }
+        "website":"https://1inch.io/"
       },
+      "support": {
+        "email": "support@1inch.io"
+      },
+      "privacyPolicyUrl" : "https://1inch.io/assets/1inch_network_privacy_policy.pdf",
       "chains": [1, 10, 56, 100, 137, 250, 324, 8217, 42161, 43114, 1313161554],
       "category": "defi"
     },
@@ -27519,12 +27519,12 @@
       "tags": ["email", "notify", "aigc", "multi-chain", "daas", "web3", "infrastructure", "tools"],
       "developer": {
         "legalName" : "James",
-        "website":"https://dmail.ai/",
-        "privacyPolicyUrl" : "https://drive.google.com/file/d/1GywEFKdDmV8CGVjJyLHqxa9oRo9UhpON/view?usp=sharing",
-        "support": {
-          "url": "https://discord.gg/QbvaeqwMFg"
-        }
+        "website":"https://dmail.ai/"
       },
+      "support": {
+        "url": "https://discord.gg/QbvaeqwMFg"
+      },
+      "privacyPolicyUrl" : "https://drive.google.com/file/d/1GywEFKdDmV8CGVjJyLHqxa9oRo9UhpON/view?usp=sharing",
       "chains": [1, 137, 56, 321, 1030],
       "category": "social"
     },
@@ -27566,12 +27566,12 @@
       "tags": ["tokens", "price aggregator", "price", "portfolio", "price alerts"],
       "developer": {
         "legalName" : "CoinGecko",
-        "website":"https://www.coingecko.com/",
-        "privacyPolicyUrl" : "https://www.coingecko.com/en/privacy",
-        "support": {
-          "email": "hello@coingecko.com"
-        }
+        "website":"https://www.coingecko.com/"
       },
+      "support": {
+        "email": "hello@coingecko.com"
+      },
+      "privacyPolicyUrl" : "https://www.coingecko.com/en/privacy",
       "chains": [0],
       "category": "price aggregator",
       "packageId": "com.coingecko.coingeckoapp"
@@ -27614,12 +27614,12 @@
       "tags": ["nft", "analytics", "polygon"],
       "developer": {
         "legalName" : "Layer E",
-        "website":"https://layer-e.com/",
-        "privacyPolicyUrl" : "https://drive.google.com/file/d/1m_6tx7HTnv2K8jO5NPujU-xUzff-8y5u/view",
-        "support": {
-          "email": "hello@layer-e.com"
-        }
+        "website":"https://layer-e.com/"
       },
+      "support": {
+        "email": "hello@layer-e.com"
+      },
+      "privacyPolicyUrl" : "https://drive.google.com/file/d/1m_6tx7HTnv2K8jO5NPujU-xUzff-8y5u/view",
       "chains": [1, 137],
       "category": "nft",
       "packageId": "com.surfaceboard"
@@ -27683,12 +27683,12 @@
       "availableOnPlatform": ["web", "android", "ios"],
       "developer": {
         "legalName" : "Million On Mars Inc",
-        "website":"https://milliononmars.com/",
-        "privacyPolicyUrl" : "https://www.milliononmars.com/privacy",
-        "support": {
-          "url": "https://www.milliononmars.com/support"
-        }
+        "website":"https://milliononmars.com/"
       },
+      "support": {
+        "url": "https://www.milliononmars.com/support"
+      },
+      "privacyPolicyUrl" : "https://www.milliononmars.com/privacy",
       "chains": [137],
       "category": "games",
       "packageId": "io.milliononmars.mom",
@@ -27732,12 +27732,12 @@
       "tags": ["supDucks","kingfrogs","megatoads","megaVolt","crossy","frog","jump","hop","frogger","game","fun"],
       "developer": {
         "legalName" : "MegaVolt Corp",
-        "website":"https://supducks.com/",
-        "privacyPolicyUrl" : "https://megavolt.notion.site/Privacy-Policy-4e8c3b230b3a42ef91571329c861af47",
-        "support": {
-          "url": "https://supducks.freshdesk.com/"
-        }
+        "website":"https://supducks.com/"
       },
+      "support": {
+        "url": "https://supducks.freshdesk.com/"
+      },
+      "privacyPolicyUrl" : "https://megavolt.notion.site/Privacy-Policy-4e8c3b230b3a42ef91571329c861af47",
       "chains": [137],
       "category": "games",
       "packageId": "com.MegaVoltCorp.KingFrogCrossing"
@@ -27779,12 +27779,12 @@
       "availableOnPlatform": ["android", "ios"],
       "developer": {
         "legalName" : "Reap Technologies Limited",
-        "website":"https://reap.global/",
-        "privacyPolicyUrl" : "https://reap.global/en/privacy-policy/",
-        "support": {
-          "url": "https://support.reap.global/en/"
-        }
+        "website":"https://reap.global/"
       },
+      "support": {
+        "url": "https://support.reap.global/en/"
+      },
+      "privacyPolicyUrl" : "https://reap.global/en/privacy-policy/",
       "chains": [137],
       "category": "defi",
       "packageId": "com.reaphq.reapmobile"
@@ -27825,12 +27825,12 @@
       "tags": ["nft","nfts","digital collectibles", "evm", "polygon", "ethereum", "blockchain", "games"],
       "developer": {
         "legalName" : "NFTTrader Team",
-        "website":"https://www.nfttrader.io/",
-        "privacyPolicyUrl" : "https://www.nfttrader.io/privacy",
-        "support": {
-          "email": "info@nfttrader.io"
-        }
+        "website":"https://www.nfttrader.io/"
       },
+      "support": {
+        "email": "info@nfttrader.io"
+      },
+      "privacyPolicyUrl" : "https://www.nfttrader.io/privacy",
       "chains": [1, 137],
       "category": "nft",
       "walletApiVersion": [ "v2" ]
@@ -27873,12 +27873,12 @@
       "tags": ["nfts", "digital collectables", "nft marketplace", "polygon nfts", "solana nfts", "eth nfts", "buy an nft", "what is nft", "discovery tools"],
       "developer": {
         "legalName" : "Hive NFT APP",
-        "website":"https://hivenftapp.com/",
-        "privacyPolicyUrl" : "https://hivenftapp.com/privacy",
-        "support": {
-          "email": "hello@hivenftapp.com"
-        }
+        "website":"https://hivenftapp.com/"
       },
+      "support": {
+        "email": "hello@hivenftapp.com"
+      },
+      "privacyPolicyUrl" : "https://hivenftapp.com/privacy",
       "chains": [1, 137, 56, 43114],
       "category": "discovery tool",
       "packageId":"com.app.hive"
@@ -27940,12 +27940,12 @@
       "tags": ["crypto payments", "order management", "fintech", "web3"],
       "developer": {
         "legalName" : "aeryn@xion.global",
-        "website":"https://xion.global/",
-        "privacyPolicyUrl" : "https://checkout.xionpay.app/assets/Privacy_Policy.pdf",
-        "support": {
-          "email": "contact@xion.global"
-        }
+        "website":"https://xion.global/"
       },
+      "support": {
+        "email": "contact@xion.global"
+      },
+      "privacyPolicyUrl" : "https://checkout.xionpay.app/assets/Privacy_Policy.pdf",
       "chains": [137],
       "category": "payments",
       "walletApiVersion": [ "v2" ]
@@ -28034,12 +28034,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Thought Farm Pty Ltd",
-        "website":"http://thought-farm.com.au/",
-        "privacyPolicyUrl" : "https://docs.sunflower-land.com/support/privacy-policy",
-        "support": {
-          "url": "https://sunflowerland.freshdesk.com/support/home"
-        }
+        "website":"http://thought-farm.com.au/"
       },
+      "support": {
+        "url": "https://sunflowerland.freshdesk.com/support/home"
+      },
+      "privacyPolicyUrl" : "https://docs.sunflower-land.com/support/privacy-policy",
       "chains": [137],
       "category": "nft",
       "walletApiVersion": [ "v1" ]
@@ -28083,12 +28083,12 @@
       "tags": ["web3", "web3communication", "chatpushnotification"],
       "developer": {
         "legalName" : "Zaryab Afser",
-        "website":"https://push.org/",
-        "privacyPolicyUrl" : "https://push.org/privacy",
-        "support": {
-          "url": "https://discord.gg/pushprotocol"
-        }
+        "website":"https://push.org/"
       },
+      "support": {
+        "url": "https://discord.gg/pushprotocol"
+      },
+      "privacyPolicyUrl" : "https://push.org/privacy",
       "chains": [1, 137, 56, 42161],
       "category": "social networking",
       "packageId": "io.epns.epns",
@@ -28132,12 +28132,12 @@
       "tags": ["nfts", "smart contract wallet", "marketplace"],
       "developer": {
         "legalName" : "Kush Ratna Gupta",
-        "website":"https://komet.me",
-        "privacyPolicyUrl" : "https://komet.me/privacypolicy",
-        "support": {
-          "email": "support@komet.me"
-        }
+        "website":"https://komet.me"
       },
+      "support": {
+        "email": "support@komet.me"
+      },
+      "privacyPolicyUrl" : "https://komet.me/privacypolicy",
       "chains": [1, 137],
       "category": "nft",
       "packageId": "com.kometapp",
@@ -28167,12 +28167,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sendingme Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [56],
       "category": "games",
       "walletApiVersion": ["v1"]
@@ -28201,12 +28201,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sendingme Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "daria@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "daria@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [56],
       "category": "games",
       "walletApiVersion": ["v1"]
@@ -28236,12 +28236,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sending Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [1, 137, 56, 42161],
       "category": "nft",
       "walletApiVersion": ["v1"]
@@ -28271,12 +28271,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sending Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [1, 137, 56, 42161],
       "category": "nft",
       "walletApiVersion": ["v1"]
@@ -28306,12 +28306,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sending Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [1, 137, 56, 42161],
       "category": "airdrop tool",
       "walletApiVersion": ["v1"]
@@ -28341,12 +28341,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sending Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [1, 137, 56, 42161],
       "category": "nft",
       "walletApiVersion": ["v1"]
@@ -28376,12 +28376,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sending Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [1, 137, 56, 42161],
       "category": "nft",
       "walletApiVersion": ["v1"]
@@ -28411,12 +28411,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sending Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [1],
       "category": "nft",
       "walletApiVersion": ["v1"]
@@ -28447,12 +28447,12 @@
       "availableOnPlatform": ["web"],
       "developer": {
         "legalName" : "Sending Labs",
-        "website":"http://sending.me/",
-        "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
-        "support": {
-          "email": "jochen@sending.me"
-        }
+        "website":"http://sending.me/"
       },
+      "support": {
+        "email": "jochen@sending.me"
+      },
+      "privacyPolicyUrl" : "https://sending.me/privacypolicy/",
       "chains": [1, 137, 56, 42161],
       "category": "messaging",
       "walletApiVersion": ["v1"]
@@ -28491,12 +28491,12 @@
       "tags": ["staking", "liquid staking", "stader", "polygon", "polygon liquid staking", "defi"],
       "developer": {
         "legalName" : "Stader Labs",
-        "website":"https://www.staderlabs.com/",
-        "privacyPolicyUrl" : "https://www.staderlabs.com/terms-of-service/",
-        "support": {
-          "url": "https://t.me/StaderLabs_Polygon_Official"
-        }
+        "website":"https://www.staderlabs.com/"
       },
+      "support": {
+        "url": "https://t.me/StaderLabs_Polygon_Official"
+      },
+      "privacyPolicyUrl" : "https://www.staderlabs.com/terms-of-service/",
       "chains": [1, 137],
       "category": "defi",
       "packageId": "com.staderlabs.www.polygon.twa",
@@ -28540,12 +28540,12 @@
       "tags": ["wallet"],
       "developer": {
         "legalName" : "1Inch",
-        "website":"https://1inch.io/",
-        "privacyPolicyUrl" : "https://1inch.io/assets/wallet/1inch_wallet_privacy_policy.html",
-        "support": {
-          "url": "https://1inch.io/contacts/"
-        }
+        "website":"https://1inch.io/"
       },
+      "support": {
+        "url": "https://1inch.io/contacts/"
+      },
+      "privacyPolicyUrl" : "https://1inch.io/assets/wallet/1inch_wallet_privacy_policy.html",
       "chains": [1, 10, 56, 100, 137, 250, 8217, 42161, 43114, 1313161554],
       "category": "nft",
       "packageId": "io.oneinch.android",
@@ -28578,12 +28578,12 @@
       "tags": ["bitrefill", "giftcards", "mobiletopup", "cryptocurrency", "bitcoin", "ethereum", "payments", "airtime", "prepaid", "digitalproducts", "recharge", "stablecoins", "marketplace"],
       "developer": {
         "legalName" : "Bitrefill",
-        "website":"https://www.bitrefill.com/",
-        "privacyPolicyUrl" : "https://www.bitrefill.com/privacy/",
-        "support": {
-          "url": "https://bitrefill.zendesk.com/hc/en-us"
-        }
+        "website":"https://www.bitrefill.com/"
       },
+      "support": {
+        "url": "https://bitrefill.zendesk.com/hc/en-us"
+      },
+      "privacyPolicyUrl" : "https://www.bitrefill.com/privacy/",
       "chains": [0],
       "category": "ecommerce",
       "walletApiVersion":["v1"]
@@ -28614,12 +28614,12 @@
       "tags": ["socialnetwork", "web3social", "creatoreconomy"],
       "developer": {
         "legalName" : "Prayag Singh",
-        "website":"https://www.soclly.com/",
-        "privacyPolicyUrl" : "https://uploads-ssl.webflow.com/61e00970be3a3210a3c192d8/622060c7e85d0a5eb28aee57_reachout-privacypolicy.pdf",
-        "support": {
-          "email": "prayag@soclly.com"
-        }
+        "website":"https://www.soclly.com/"
       },
+      "support": {
+        "email": "prayag@soclly.com"
+      },
+      "privacyPolicyUrl" : "https://uploads-ssl.webflow.com/61e00970be3a3210a3c192d8/622060c7e85d0a5eb28aee57_reachout-privacypolicy.pdf",
       "chains": [137],
       "category": "social networking",
       "walletApiVersion": ["v2"]
@@ -28660,12 +28660,12 @@
       "availableOnPlatform": ["android"],
       "developer": {
         "legalName" : "Function X Foundation",
-        "website":"http://functionx.io/",
-        "privacyPolicyUrl" : "https://agreement.functionx.io/en/pxCard/privacyPolicy.html",
-        "support": {
-          "email": "developer@xblockchain.app"
-        }
+        "website":"http://functionx.io/"
       },
+      "support": {
+        "email": "developer@xblockchain.app"
+      },
+      "privacyPolicyUrl" : "https://agreement.functionx.io/en/pxCard/privacyPolicy.html",
       "chains": [1, 137, 56],
       "category": "nft",
       "packageId": "com.functionx.xcard"
@@ -28806,12 +28806,12 @@
       "tags": ["nft", "marketplace"],
       "developer": {
         "legalName" : "Kevin Noessler",
-        "website":"https://help.rarible.com/hc/en-us",
-        "privacyPolicyUrl" : "https://static.rarible.com/privacy.pdf",
-        "support": {
-          "email": "info@rarible.com"
-        }
+        "website":"https://help.rarible.com/hc/en-us"
       },
+      "support": {
+        "email": "info@rarible.com"
+      },
+      "privacyPolicyUrl" : "https://static.rarible.com/privacy.pdf",
       "chains": [1, 137],
       "category": "nft",
       "packageId": "com.rarible.android.release",
@@ -28852,12 +28852,12 @@
       "tags": ["analytics", "defi", "ethereum", "nft", "gaming", "dapplooker"],
       "developer": {
         "legalName" : "Abhinav",
-        "website":"https://www.webintoapp.com/",
-        "privacyPolicyUrl" : "https://dapplooker.com/privacy",
-        "support": {
-          "email": "help@dapplooker.com"
-        }
+        "website":"https://www.webintoapp.com/"
       },
+      "support": {
+        "email": "help@dapplooker.com"
+      },
+      "privacyPolicyUrl" : "https://dapplooker.com/privacy",
       "chains": [1, 137, 56],
       "category": "games",
       "packageId": "com.dapplooker.dapplooker"
@@ -28894,12 +28894,12 @@
       "tags": ["nft", "animocabrands"],
       "developer": {
         "legalName" : "Animoca Brands",
-        "website":"https://www.mocaverse.xyz/",
-        "privacyPolicyUrl" : "https://policy.animocabrands.com/privacy-policy/",
-        "support": {
-          "url": "https://discord.gg/mocaversenft"
-        }
+        "website":"https://www.mocaverse.xyz/"
       },
+      "support": {
+        "url": "https://discord.gg/mocaversenft"
+      },
+      "privacyPolicyUrl" : "https://policy.animocabrands.com/privacy-policy/",
       "chains": [1],
       "category": "nft",
       "walletApiVersion":["v1"]
@@ -28943,12 +28943,12 @@
       "tags": ["identity", "selfsovereigndata", "nft", "sbt", "wallet", "credentials", "privacy", "decentralizedidentity"],
       "developer": {
         "legalName" : "Verida",
-        "website":"https://www.verida.io/",
-        "privacyPolicyUrl" : "https://www.verida.io/wallet/terms-and-conditions",
-        "support": {
-          "url": "https://github.com/verida/support"
-        }
+        "website":"https://www.verida.io/"
       },
+      "support": {
+        "url": "https://github.com/verida/support"
+      },
+      "privacyPolicyUrl" : "https://www.verida.io/wallet/terms-and-conditions",
       "chains": [1, 137],
       "category": "utilities",
       "subCategory": "wallets",
@@ -28980,12 +28980,12 @@
       "tags": ["nft", "gaming", "mcl", "raddx", "play to earn", "marketplace"],
       "developer": {
         "legalName" : "GUARDIAN BLOCKCHAIN LABS PTE LTD",
-        "website":"https://www.jump.trade/",
-        "privacyPolicyUrl" : "https://www.jump.trade/privacy-policy",
-        "support": {
-          "email": "support@jump.trade"
-        }
+        "website":"https://www.jump.trade/"
       },
+      "support": {
+        "email": "support@jump.trade"
+      },
+      "privacyPolicyUrl" : "https://www.jump.trade/privacy-policy",
       "chains": [137],
       "category": "nft"
     },
@@ -29012,12 +29012,12 @@
       "tags": ["gaming", "mcl", "cricket", "play to earn", "nft"],
       "developer": {
         "legalName" : "GUARDIAN BLOCKCHAIN LABS PTE LTD",
-        "website": "https://www.jump.trade/",
-        "privacyPolicyUrl" : "https://www.jump.trade/privacy-policy",
-        "support": {
-          "email": "support@jump.trade"
-        }
+        "website": "https://www.jump.trade/"
       },
+      "support": {
+        "email": "support@jump.trade"
+      },
+      "privacyPolicyUrl" : "https://www.jump.trade/privacy-policy",
       "chains": [137],
       "category": "nft"
     },
@@ -29044,12 +29044,12 @@
       "tags": ["fiatonramp", "onramp", "offramp"],
       "developer": {
         "legalName" : "Prateek Gupta",
-        "website":"https://onmeta.in/",
-        "privacyPolicyUrl" : "https://onmeta.in/privacypolicy",
-        "support": {
-          "email": "support@onmeta.in"
-        }
+        "website":"https://onmeta.in/"
       },
+      "support": {
+        "email": "support@onmeta.in"
+      },
+      "privacyPolicyUrl" : "https://onmeta.in/privacypolicy",
       "chains": [1, 137, 56, 42161, 43114, 250, 100, 8217],
       "category": "payments"
     }

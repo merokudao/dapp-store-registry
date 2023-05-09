@@ -129,11 +129,6 @@ export interface DAppSchema {
     legalName: string;
     logo?: string;
     website: string;
-    privacyPolicyUrl: string;
-    support: {
-      url?: string;
-      email?: string;
-    };
     githubID: string;
   };
   /**
@@ -160,4 +155,9 @@ export interface DAppSchema {
     url?: string;
   }
   expiryDate?: string;
+  privacyPolicyUrl?: string;
+  support?: {
+    url?: string;
+    email?: string;
+  };
 }
