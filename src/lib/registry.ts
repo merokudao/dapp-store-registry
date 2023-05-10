@@ -22,7 +22,7 @@ import categoryJson from "./../dappCategory.json";
 
 import { Octokit } from "octokit";
 import { createAppAuth } from "@octokit/auth-app";
-import { cloneable } from "./utils";
+import { cloneable, getDappId } from "./utils";
 
 Dotenv.config();
 
@@ -938,5 +938,22 @@ export class DappStoreRegistry {
 
   public getAllCategories = () => {
     return categoryJson;
+  };
+
+  public getAllDappIds  = async (): Promise<number> => {
+    const dapps = (await this.registry()).dapps;
+    const newUrls: string[] = []
+    try {
+      const allNewDappIds = dapps.map((dapp) => {
+        const dappId = getDappId(dapp.appUrl, dapps, newUrls);
+        newUrls.push(dappId);
+        return dappId;
+      });
+      debug(`allNewDappIds: ${JSON.stringify(allNewDappIds)}`);
+      return 200;
+    } catch (error) {
+      console.log(`Error occured: ${(error)}`)
+      return 400;
+    }
   };
 }

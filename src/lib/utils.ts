@@ -10,7 +10,8 @@ import {
   PaginationQuery,
   DappEnrichPayload,
   EnrichSchema,
-  ScreenShotSchema
+  ScreenShotSchema,
+  DAppSchema
 } from "../interfaces";
 import storesJson from "../dappStore.json";
 import registryJson from "./../registry.json";
@@ -533,3 +534,47 @@ export const updateDappEnrichDataForStore = (
   currDappStores.dappStores[storeIndex].dappsEnrich = dappEnrich;
   return;
 };
+
+export const checkIfExists = (dappId: string, dapps: DAppSchema[], newUrls: string[]) => {
+  const idx = dapps.findIndex(x => x.dappId === dappId)
+  const idx1 = newUrls.indexOf(dappId);
+  return idx >= 0 || idx1 >= 0 ? true: false;
+}
+
+
+export const checkIfdappExistsInNew = (dappId: string, newUrls: string[]) => {
+  const idx = newUrls.indexOf(dappId)
+  return idx >= 0 ? false: true;
+}
+
+export const getDappId = (appUrl: string | undefined, dapps: DAppSchema[], newUrls:string[]) => {
+  if (!appUrl) return '';
+  appUrl = appUrl.split('?')[0];
+  appUrl = appUrl.split('#')[0];
+  appUrl = appUrl.replace("https://", "");
+  appUrl = appUrl.replace("http://", "");
+  appUrl = appUrl.replace("www.", "");
+  const parts = appUrl.split('/');
+  let urlSuffix = parts.splice(1, parts.length-1).join('-');
+  
+  if (urlSuffix[urlSuffix.length-1] === '-') urlSuffix = urlSuffix.split('').splice(0, urlSuffix.length-1).join('');
+
+  const [first, start, ...others] = parts[0].split('.').reverse();
+
+  // check if {domain}.app is available
+  let dappId = `${start}.app`.toLocaleLowerCase();
+  if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+  debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
+  
+  // check if {domain}-{subdomain}.app
+  dappId = `${start}${others.length > 0 ? '-'+others.join('-'): ''}.app`.toLocaleLowerCase();
+  if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+  debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
+  
+  // check if {domain}-{url-path}.app
+  dappId = `${start}${urlSuffix.length > 0 ? '-'+urlSuffix: ''}.app`.toLocaleLowerCase();
+  if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+  debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
+  return dappId;
+  // throw new Error(`dapp Id already exists, dappId: ${dappId}`);
+}
