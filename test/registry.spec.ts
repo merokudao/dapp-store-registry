@@ -475,5 +475,11 @@ describe("DappStoreRegistry", () => {
         );
       }
     });
+
+    // it("Throw Error if duplicate dappId", async() => {
+    //   const registry = new DappStoreRegistry(RegistryStrategy.Static);
+    //   const status = await registry.getAllDappIds();
+    //   status.should.equal(200);
+    // });
   });
 });
