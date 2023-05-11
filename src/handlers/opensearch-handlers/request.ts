@@ -114,10 +114,12 @@ export class OpensearchRequest {
    * @returns response
    */
   public async updateDoc(index: string, body: any): Promise<any> {
+    const id = body.id;
+    delete body.id;
     return this.opensearchClient.update({
       index,
-      body,
-      id: body.id,
+      id,
+      body: { doc: body },
       refresh: true
     });
   }
