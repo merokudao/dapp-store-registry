@@ -279,4 +279,30 @@ export class DappStoreRegistryV1 {
       data: res && res.map(rs => rs._source)
     };
   };
+
+
+  /**
+   *  update dapp to index, when new app is registered on dapp store
+   * @param name
+   * @param dapp
+   * @param org
+   * @returns acknowledge
+   */
+  public async updateDapp(
+    payload: AddDappPayload
+  ): Promise<StandardResponse> {
+    const { dapp } = payload;
+    /**
+     * have to add if any action have to do onchain
+     */
+    await this.opensearchApis.updateDoc(searchRegistry.alias, {
+      id: dapp.dappId,
+      ...dapp
+    });
+    return {
+      status: 200,
+      message: ["success"]
+    };
+  }
+
 }
