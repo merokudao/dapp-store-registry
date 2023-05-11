@@ -7203,7 +7203,7 @@
       "chains": [
         1
       ],
-      "dappId": "vercel.app",
+      "dappId": "roleformetaverse.app",
       "downloadBaseUrls": [
         {
           "url": "https://roleformetaverse.vercel.app/#/",
@@ -27674,7 +27674,7 @@
       "chains": [
         1
       ],
-      "dappId": "netlify.app",
+      "dappId": "degenskellies.app",
       "downloadBaseUrls": [
         {
           "url": "https://degenskellies.netlify.app/",
@@ -27738,7 +27738,7 @@
       "chains": [
         1
       ],
-      "dappId": "twitter.app",
+      "dappId": "central_frog.app",
       "downloadBaseUrls": [
         {
           "url": "https://twitter.com/central_frog",

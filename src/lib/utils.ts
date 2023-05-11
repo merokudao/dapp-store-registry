@@ -559,7 +559,21 @@ export const getDappId = (appUrl: string | undefined, dapps: DAppSchema[], newUr
   
   if (urlSuffix[urlSuffix.length-1] === '-') urlSuffix = urlSuffix.split('').splice(0, urlSuffix.length-1).join('');
 
+  const domainProviders = ['vercel', 'twitter', 'instagram', 'bitly', 'netlify'];
   const [first, start, ...others] = parts[0].split('.').reverse();
+  // only for domain providers
+  if (domainProviders.includes(start)) {
+    let dappId = `${others}.app`.toLocaleLowerCase();
+    if (others.length > 0) {
+      if(typeof others !== 'string')  dappId = `${others.join('-')}.app`.toLocaleLowerCase();
+      if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+    }
+    dappId = `${dappId.split('.app')[0]}`;
+    dappId = `${dappId.length > 0 ? dappId+'-'+urlSuffix: urlSuffix}.app`.toLocaleLowerCase();
+    if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+    // return dappId;
+    throw new Error(`dapp Id already exists, dappId: ${dappId}`);
+  }
 
   // check if {domain}.app is available
   let dappId = `${start}.app`.toLocaleLowerCase();
@@ -575,6 +589,6 @@ export const getDappId = (appUrl: string | undefined, dapps: DAppSchema[], newUr
   dappId = `${start}${urlSuffix.length > 0 ? '-'+urlSuffix: ''}.app`.toLocaleLowerCase();
   if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
   debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
-  return dappId;
-  // throw new Error(`dapp Id already exists, dappId: ${dappId}`);
+  // return dappId;
+  throw new Error(`dapp Id already exists, dappId: ${dappId}`);
 }
