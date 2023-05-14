@@ -452,7 +452,7 @@ export const searchFilters = (
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
 
-  if (isListed && !searchById && !search)
+  if (isListed && !searchById && !search && !ownerAddress)
     query.bool.must.push({
       match: { isListed: isListed === "true" ? true : false }
     });
