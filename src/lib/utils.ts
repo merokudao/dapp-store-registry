@@ -429,7 +429,7 @@ export const searchFilters = (
       }
     });
 
-  if (dappId) query.bool.must.push({ term: { id: dappId.trim() } });
+  if (dappId) query.bool.must.push({ term: { dappId: dappId.trim() } });
 
   // search on customer string
   if (!!search && search.length) {
