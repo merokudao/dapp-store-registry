@@ -263,8 +263,7 @@ export class DappStoreRegistryV1 {
     ownerAddress: string
   ): Promise<StandardResponse> => {
     const { finalQuery } = searchFilters("", {
-      ownerAddress,
-      onlyByOwnerAddress: true
+      ownerAddress
     });
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
