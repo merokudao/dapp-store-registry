@@ -429,7 +429,7 @@ export const searchFilters = (
       }
     });
 
-  if (dappId) query.bool.must.push({ term: { id: dappId.trim() } });
+  if (dappId) query.bool.must.push({ term: { dappId: dappId.trim() } });
 
   // search on customer string
   if (!!search && search.length) {
@@ -452,7 +452,7 @@ export const searchFilters = (
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
 
-  if (isListed && !searchById && !search)
+  if (isListed && !searchById && !search && !ownerAddress)
     query.bool.must.push({
       match: { isListed: isListed === "true" ? true : false }
     });
