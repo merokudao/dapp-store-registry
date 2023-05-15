@@ -99584,6 +99584,3450 @@
       "chains": [
         137
       ]
+    },
+    {
+      "name": "Pomp",
+      "description": "POMP (Proof of Membership Protocol) allows communities to create personalized PFP NFTs for their members to verify affiliation and access perks",
+      "appUrl": "http://gotpomp.com",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "subCategory": "nfts",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1680871000029_pomp.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/pomp/image_1680871001185_pomp_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://gotpomp.com",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "gotpomp.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Steerfinance",
+      "description": "Multi-chain decentralized compute protocol for off-chain execution of apps.\n\nDecentralized Compute Platform\nSteer helps you write cross-chain apps with 20+ programming languages, connect them to reliable external data, execute on any blockchain and monetize with our all-in-one easy-to-use platform.",
+      "appUrl": "http://steer.finance",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "others",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1680425183326_steer-finance.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/steer-finance/image_1680425183754_steer-finance_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/steer-finance/image_1680425183755_steer-finance_ss1.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://steer.finance",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "steer.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Moonpier",
+      "description": "Presale NFT before launch: Not Whitelist, Just ETH\n\n\"Collection Market Fit\" NFT platform",
+      "appUrl": "http://moonpier.xyz",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1680316732818_moonpier.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/moonpier/image_1680316733327_moonpier_ss0.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/moonpier/image_1680316733331_moonpier_ss1.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/moonpier/image_1680316733331_moonpier_ss2.jpeg"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://moonpier.xyz",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "moonpier.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Copperx",
+      "description": "Copperx enables companies to seamlessly incorporate cryptocurrency payments into their current apps. It enables businesses to accept cryptocurrency payments more easily without needing to have a deep understanding of blockchain networks.\n\nCopperx enables you to quickly accept cryptocurrency payments whether you are the owner of a Saas, an e-commerce site, or another type of business. You can make payment links for others to pay you, accept cryptocurrency payments, and produce invoices. If your company has certain specialty needs, you may also get in touch with the team.\n\nThe unique selling proposition (USP) of Copperx is its capacity to offer businesses a safe and simple way to accept cryptocurrency payments. Businesses can easily incorporate blockchain-based payments into their current goods or services thanks to Copperx's APIs. Real-time analytics are provided by its dashboard.",
+      "appUrl": "https://bit.ly/copperx-io",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "tooling",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1679317950733_copperx.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/copperx/image_1679317951256_copperx_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/copperx/image_1679317951263_copperx_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/copperx/image_1679317951261_copperx_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/copperx/image_1679317951258_copperx_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/copperx/image_1679317951263_copperx_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://bit.ly/copperx-io",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "bit.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Rbx",
+      "description": "RBX is a novel ecosystem to DeFi Dapps and protocols designed to accelerate the flow of capital, build by traders, for traders. RBX aims to provide a user friendly, high functional set of multi-chain trading tools, all in one platform.\n",
+      "appUrl": "http://rbxdefi.com",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "exchange",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1679252083062_rbx.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/rbx/image_1679252083791_rbx_ss0.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/rbx/image_1679252083791_rbx_ss1.jpeg"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://rbxdefi.com",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "rbxdefi.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Sharpe Labs",
+      "description": "DeFi R&D lab building institutional grade investment tooling and infrastructure.",
+      "appUrl": "http://www.sharpe.ai",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "infrastructure",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1678874780645_sharpe-labs.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/sharpe-labs/image_1678874781171_sharpe-labs_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/sharpe-labs/image_1678874781173_sharpe-labs_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/sharpe-labs/image_1678874781174_sharpe-labs_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/sharpe-labs/image_1678874781176_sharpe-labs_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/sharpe-labs/image_1678874781176_sharpe-labs_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/sharpe-labs/image_1678874781179_sharpe-labs_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://www.sharpe.ai",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "sharpe.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Onemint.Io",
+      "description": "Home of Dynamic NFTs\nNFT Tools for creators\nComplete NFT solution from Generation to Mint\n",
+      "appUrl": "https://onemint.io",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "nfts",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1678726153816_onemint-io.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/onemint-io/image_1678726154118_onemint-io_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/onemint-io/image_1678726154121_onemint-io_ss1.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://onemint.io",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "onemint.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Walletchat",
+      "description": "Wallet-to-wallet messaging for web3\nDM with your existing wallet via web app\nIntegrate chat inside your dapp via API & widget",
+      "appUrl": "https://walletchat.fun",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "infrastructure",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1678157489487_wallet-chat.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/wallet-chat/image_1678157489781_wallet-chat_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://walletchat.fun",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "walletchat.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Jumper Exchange",
+      "description": "Swap any token. From here to anywhere. Jumper will find you a route and get you there, as it:\n— maintains 15+ bridges\n— routes through 30+ DEXs\n— supports 20+ chains",
+      "appUrl": "https://jumper.exchange",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "exchange",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1677762762676_jumper-exchange.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/jumper-exchange/image_1677762763154_jumper-exchange_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/jumper-exchange/image_1677762763161_jumper-exchange_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/jumper-exchange/image_1677762763155_jumper-exchange_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://jumper.exchange",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "jumper.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Lensport",
+      "description": "Discover, collect, and trade Lens Protocol posts",
+      "appUrl": "http://lensport.io",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "nfts",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1677728902430_lens-port.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/lens-port/image_1677728902840_lens-port_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/lens-port/image_1677728902843_lens-port_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/lens-port/image_1677728902842_lens-port_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://lensport.io",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "lensport.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Octav",
+      "description": "Octav is a free, anonymous and editable data analytics platform that helps deciphering DeFi investment activity. Get comprehensive DeFi portfolio information such as cost-basis, profit and loss (P&L) and more.\n\nOctav’s user-editable dashboard and curated database, allow any DeFi trader to finally get an accurate picture of his portfolio to make better investment decisions. Then execute on those decisions by interacting directly with most EVM chains and protocols right in your dashboard.",
+      "appUrl": "https://octav.fi",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "nfts",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1677515252745_octav.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/octav/image_1677515252966_octav_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/octav/image_1677515252969_octav_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/octav/image_1677515252967_octav_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/octav/image_1677515252971_octav_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/octav/image_1677515252973_octav_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://octav.fi",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "octav.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Portals.Fi",
+      "description": "Portals is a yield and protocol aggregator API providing transaction bundling, any-to-any swaps, and real-time data for DeFi assets. Portals.fi manages the intricacies associated with composability and ensures that exchanging transferrable assets in web3 is as simple as signing an order, regardless of the complexity (or chain) of the underlying assets. Traders do not need to initiate and babysit multistep transactions, worry about gas, or defend against MEV.",
+      "appUrl": "https://portals.fi",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "infrastructure",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1676888359251_portals-fi.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/portals-fi/image_1676888359513_portals-fi_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://portals.fi",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "portals.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Fire",
+      "description": "Fire is a free extension that simulates web3 transactions, showing you exactly what will enter and exit your wallet before you sign the contract. All under control with your current wallet.",
+      "appUrl": "https://www.joinfire.xyz?utm_source=twitter&utm_medium=profile",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1676885270062_fire.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/fire/image_1676885270566_fire_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/fire/image_1676885270573_fire_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/fire/image_1676885270573_fire_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.joinfire.xyz?utm_source=twitter&utm_medium=profile",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "joinfire.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Omni",
+      "description": "Access all of Web3 in one easy to use wallet. Omni supports more blockchains so you get more tokens, more yields, more NFTs, and more fun!",
+      "appUrl": "https://connect.omni.app",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "subCategory": "wallets",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1676697857297_omni.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/omni/image_1676697857988_omni_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/omni/image_1676697857989_omni_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/omni/image_1676697858012_omni_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://connect.omni.app",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "omni.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Chaindrop",
+      "description": "ChainDrop is a multichain faucet where anyone can get testnet tokens directly in their wallet with ease. No wallet connection, No KYC, and No sign-up are required. ChainDrop is a one-stop destination where users can easily get test tokens of any chain directly in their wallets. It is currently live on 15 major testnets, including Ethereum Sepolia and Goerli, Polygon Testnet, BSC Testnet, Fantom Testnet, Shardeum Testnet, and Moonbase Alpha, among others. We are dedicated to providing the most accessible, secure, and easy-to-use multichain faucet for every Web3 user.",
+      "appUrl": "https://chaindrop.org",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "developer tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1676278724916_chain-drop.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/chain-drop/image_1676278725467_chain-drop_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/chain-drop/image_1676278725471_chain-drop_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/chain-drop/image_1676278725471_chain-drop_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://chaindrop.org",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "chaindrop.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Canvas",
+      "description": "Web3 Survey-to-Earn.\nAn all-new way to engage with your community\nand make better decisions. Community research made for Web 3.",
+      "appUrl": "https://canvas.lobby.so/forms",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1676467142728_canvas.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/canvas/image_1676467143145_canvas_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://canvas.lobby.so/forms",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "lobby.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Squid",
+      "description": "Squid is the cross-chain swap and liquidity routing protocol on Axelar Network. \nSquid utilises existing DEXs to swap and send any native token between chains. This can be done via our SDK, Front End or Contracts directly.\nSwaps are composable with Axelar's generalised message passing, so Squid can enable one-click transactions between any application and any user, using any asset. \nBuy NFTs from any marketplace, use multi-chain DeFi, play a game on another chain, all without signing multiple transactions or downloading multiple wallets.",
+      "appUrl": "https://www.squidrouter.com/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "exchange",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1675245860155_squid.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/squid/image_1675245860716_squid_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.squidrouter.com/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "squidrouter.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Filecoin",
+      "description": "Filecoin is making the web more secure and efficient with a decentralized data storage marketplace, protocol, and cryptocurrency.",
+      "appUrl": "https://filecoin.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1675063349608_filecoin.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://filecoin.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "filecoin.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Safetransfer",
+      "description": "No more tokens sent to the wrong address. \n\nWith SafeTransfer, instead of sending the tokens you allow the receiver to claim them directly from your wallet! And if there's any mistake, you can simply cancel the transaction at any time. \n\nSafeTransfer also allows you to create a link to request payments. It is a free and open source tool that will make your token transfers safer than ever before. ",
+      "appUrl": "https://bit.ly/safe-transfer",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1674662107768_safe-transfer.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/safe-transfer/image_1677499222461_safe-transfer_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/safe-transfer/image_1677499222457_safe-transfer_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/safe-transfer/image_1677499222464_safe-transfer_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/safe-transfer/image_1677499222453_safe-transfer_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/safe-transfer/image_1677499222447_safe-transfer_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://bit.ly/safe-transfer",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "bit-safe-transfer.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Airlyft",
+      "description": "At Kyte.One, we are developing AirLyft, the most complete decentralized, multichain, growth hacking platform ever created for projects to establish, expand, and engage their community. It is a feature-rich platform to incentivize on-chain/off-chain actions by the community. AirLyft also automates the validation, reward creation as well as distribution, thereby saving hours of marketing & development effort. This platform supports 9+ blockchains and is ready for all projects including DeFi, GameFi, NFT Projects, & Metaverses",
+      "appUrl": "https://www.airlyft.one/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1674562986427_air-lyft.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/air-lyft/image_1674562986890_air-lyft_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/air-lyft/image_1674562986892_air-lyft_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/air-lyft/image_1674562986893_air-lyft_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/air-lyft/image_1674562986900_air-lyft_ss3.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.airlyft.one/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "airlyft.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Cultdao",
+      "description": "Cult Dao is a completely decentralized funding mechanism that allows everybody to contribute novel solutions.",
+      "appUrl": "https://cultdao.io",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1674377983954_cult-dao.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/cult-dao/image_1674377984362_cult-dao_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://cultdao.io",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "cultdao.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Dune",
+      "description": "Dune is a crypto analytics tool by and for the community. You can create, find and fork 1000s of dashboards for FREE!",
+      "appUrl": "http://dune.com",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1674112655382_dune.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/dune/image_1674112655773_dune_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://dune.com",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "dune.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Wall",
+      "description": "Wall uses on-chain data segmentation to create ideal user persona and runs QUEST for projects to acquire new users. Wall also does social verifications and run social quests which can verify user's activity like follow Twitter, Join Discord etc. as part of the quest.",
+      "appUrl": "https://www.wall.app/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "subCategory": "wallets",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1673853245861_wall.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/wall/image_1673853246335_wall_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/wall/image_1673853246341_wall_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/wall/image_1673853246338_wall_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/wall/image_1673853246350_wall_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/wall/image_1673853246340_wall_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/wall/image_1673853246342_wall_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.wall.app/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "wall.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Vtvl",
+      "description": "VTVL streamlines and automates the token vesting process for founders and organizations. We provide a transparent and easy-to-use interface for stakeholder recipients while giving founders a bird's eye view of their token distribution process. The platform offers advanced features such as organizational accounts, multi-sig support, and multi-token tracking while prioritizing smart contract security with 24/7 support to users.",
+      "appUrl": "https://vtvl.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1673570834907_vtvl.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/vtvl/image_1673570822863_vtvl_ss0.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/vtvl/image_1673570822865_vtvl_ss1.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/vtvl/image_1673570822866_vtvl_ss2.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/vtvl/image_1673570822871_vtvl_ss3.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/vtvl/image_1673570822869_vtvl_ss4.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/vtvl/image_1673570822874_vtvl_ss5.jpeg"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://vtvl.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "vtvl.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Connectkit",
+      "description": "ConnectKit is a React library for connecting wallets to DApps.",
+      "appUrl": "http://family.co",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "subCategory": "wallets",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1673344985214_connect-kit.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/connect-kit/image_1673344985788_connect-kit_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/connect-kit/image_1673344985802_connect-kit_ss1.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://family.co",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "family.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Wallet01",
+      "description": "Wallet01 provides a plug n’ play architecture to make your app chain agnostic. Wallet01 package lets you interact with wallets of different ecosystems.",
+      "appUrl": "https://wallet01.vercel.app/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "subCategory": "wallets",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1672524915421_wallet-01.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://wallet01.vercel.app/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "wallet01.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Launchifi",
+      "description": "The most configurable Web3 launchpad to launch anything on the chain - 0 coding required. Multi-chain support for the most popular evm based chains. Deploy and verify your contract with one click of a button.",
+      "appUrl": "https://launchifi.xyz",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1672524481668_launchifi.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://launchifi.xyz",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "launchifi.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Ai Mint",
+      "description": "Generative art meets digital wallet — mint gasless nfts straight out of stable diffusion.",
+      "appUrl": "https://aimint.fun",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "art",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1672524251207_ai-mint.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/ai-mint/image_1672524251649_ai-mint_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/ai-mint/image_1672524251652_ai-mint_ss1.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://aimint.fun",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "aimint.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Y00Ts",
+      "description": "Y00ts is a generative art project of 15,000 NFTs. Designed to be aesthetic. Engineered to be functional. Curated to contain the best community of builders and creators on the internet.",
+      "appUrl": "https://y00ts.com",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "pfps",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1673337524403_y-00-ts.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/y-00-ts/image_1672171883216_y-00-ts_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/y-00-ts/image_1672171883217_y-00-ts_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/y-00-ts/image_1672171883221_y-00-ts_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/y-00-ts/image_1672171883226_y-00-ts_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/y-00-ts/image_1672171883223_y-00-ts_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://y00ts.com",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "y00ts.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Impersonator",
+      "description": "Allows you to Log-in to dapps as ANY Ethereum Address via WalletConnect, iFrame or Browser Extension.",
+      "appUrl": "https://impersonator.xyz",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "subCategory": "wallets",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1671610328259_impersonator.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/impersonator/image_1671610328818_impersonator_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/impersonator/image_1671610328825_impersonator_ss1.jpeg"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://impersonator.xyz",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "impersonator.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Opencord",
+      "description": "Opencord is a Web3-native social platform built for DAOs, providing a one-stop experience for DAO workflow.\nProposals, discussions and votings are aggregated in one place using different channels (chat, voice, forum etc.); servers could be personalized using integrated DAO tools and DApps.\n\nOpencord natively supports Web3 functions such as connect-wallet-to-login, token-gating, NFT avatar, etc. Offering an enhanced Web3 identity, and strengthens the credibility of users' social-graph across the whole Web3 ecosystem.\nRegardless of any external factors, the user's data is always their own and under their control.\nThe mission of Opencord is to become the open \"cord\" that connects DAOs, DApps and DAO friends, making Web3 more accessible for everyone. Opencord aims to make creating and managing DAOs and Web3 communities as easy as setting up a group chat.\n\nTaking a progressively decentralizing approach, Opencord is focused on creating a fully decentralized ecosystem that is built, operated and owned by users. The growth of the ecosystem will also be facilitated by its tokenomics, where users and communities will be working in a supportive, open and inclusive environment.",
+      "appUrl": "https://www.opencord.xyz",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "subCategory": "dao",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1671506767652_opencord.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/opencord/image_1671506768126_opencord_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/opencord/image_1671506768124_opencord_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/opencord/image_1671506769100_opencord_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/opencord/image_1671506768142_opencord_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/opencord/image_1671506769113_opencord_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/opencord/image_1673352371714_opencord_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.opencord.xyz",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "opencord.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Lensalert",
+      "description": "Notifications for all things Lens 🌿",
+      "appUrl": "https://lensalert.me/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "domain names",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1671226135834_lens-alert.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://lensalert.me/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "lensalert.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Bento",
+      "description": "Bento is an open-source web3 dashboard in that users can add multiple wallets and group their crypto assets into one.\nInvesting in DeFi? View not only balances but your stakes for various protocols as well.",
+      "appUrl": "http://bento.finance",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1670521849383_bento.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/bento/image_1670521849960_bento_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/bento/image_1670521849973_bento_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/bento/image_1670521849967_bento_ss2.jpeg"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://bento.finance",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "bento.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Earnifi",
+      "description": "Find airdrops, token mints and more. Notified folks over $150 million of zero-spam airdrops. Ran by Bankless Dao",
+      "appUrl": "https://earni.fi",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "nfts",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1670484418013_earnifi.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/earnifi/image_1670484418333_earnifi_ss0.jpeg"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://earni.fi",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "earni.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Spheron",
+      "description": "Spheron offers a decentralized cloud to ease the development and deployment of projects. One can easily collaborate in teams using Spheron for project deployments while assuring the best developer experience. Spheron helps the developers with various project development and deployment aspects, including the configuration of domains and ENS domains, as well as letting the teams build, preview, and decentralize their projects.",
+      "appUrl": "https://spheron.network/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1669275017165_spheron.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/spheron/image_1669275017768_spheron_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/spheron/image_1669275017778_spheron_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/spheron/image_1669275017790_spheron_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/spheron/image_1669275017782_spheron_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/spheron/image_1669275017807_spheron_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://spheron.network/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "spheron.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Grindery Gpay",
+      "description": "Create payouts for grants, bounties income or hourly fees and group them in a single transaction with a few clicks. Easily submit the batch payment as a withdrawal transaction to your Aragon DAO or Gnosis Safe, let members and owners vote and automatically execute the transaction. 100% decentralized, running on the blockchain, without additional fees, subscriptions or unnecessary provider reliance.",
+      "appUrl": "https://gpay.grindery.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1669145476394_grindery-g-pay.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://gpay.grindery.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "grindery.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Grindery Nexus",
+      "description": "Grindery is building Zapier for Web3. Financed by BinanceLabs Startup Incubator Season 4, Nexus is a low-/no-code middleware for Web3, enabling:\n- end-users to easily configure their own integration without code\n- developers to create integrations (plug-in, boosts) as self-standing dApps\n- dApp owners can launch and operate integrations.\n\nSign up with a wallet, and you can connect Web3 apps to the whole world of Web2 APIs as well.",
+      "appUrl": "https://nexus.grindery.org/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1669061383345_grindery-nexus.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://nexus.grindery.org/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "grindery-nexus.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Lenster",
+      "description": "Lenster is a composable, decentralized, and permissionless social media web app built with Lens Protocol ",
+      "appUrl": "https://lenster.xyz",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "domain names",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1668974706847_lenster.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://lenster.xyz",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "lenster.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Lens Frens",
+      "description": "Curated Lens profile based on your interactions.",
+      "appUrl": "https://lensfrens.xyz",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "subCategory": "domain names",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1668974537629_lens-frens.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://lensfrens.xyz",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "lensfrens.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Notifi",
+      "description": "Building the future of web3 communications. Embed notifications & messaging into your dApps — integrated on Solana, NEAR, Ethereum, Polygon & Aptos",
+      "appUrl": "https://notifi.network/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1668234652331_notifi.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/notifi/image_1668234652744_notifi_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/notifi/image_1668234652751_notifi_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/notifi/image_1668234652759_notifi_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/notifi/image_1668234652755_notifi_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/notifi/image_1668234652763_notifi_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://notifi.network/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "notifi.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "The Convo Space",
+      "description": "The Convo Space is a decentralized conversation layer of the internet. It offers toolings and infrastructure to build composable social platforms across the web. On top of all, it is supercharged by the power of Web3!\nConvo enables any platform to build and integrate a social layer inside itself. It offers all the tooling and infrastructure to add a social layer to any forum.",
+      "appUrl": "https://bit.ly/the-convo-space",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "subCategory": "others",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1667829628301_the-convo-space.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/the-convo-space/image_1667829628886_the-convo-space_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/the-convo-space/image_1667829628888_the-convo-space_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/the-convo-space/image_1667829628892_the-convo-space_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/the-convo-space/image_1667829628893_the-convo-space_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/the-convo-space/image_1667829628896_the-convo-space_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/the-convo-space/image_1667829628908_the-convo-space_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://bit.ly/the-convo-space",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "bit-the-convo-space.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Over The Reality",
+      "description": "We are a mixed reality metaverse that merges physical and virtual worlds to create a new dimension where users can augment and enhance their reality using a 📱.",
+      "appUrl": "https://overthereality.ai/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social networking",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1667716558471_over-the-reality.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/over-the-reality/image_1667716558902_over-the-reality_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/over-the-reality/image_1667716558913_over-the-reality_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/over-the-reality/image_1667716558906_over-the-reality_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/over-the-reality/image_1667716558905_over-the-reality_ss3.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://overthereality.ai/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "overthereality.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Asset Money",
+      "description": "Asset Money is a platform that manages your NFT collections. It provides real-time data and analytics to track wallets and NFTs as well as discover new ones.\nAsset Money aims to supercharge users' NFT adventure by discovering, investing, and managing all of their NFTs in one single place. You must be thinking that it must only be helpful for crypto degens and NFT enthusiasts. But no. The platform is handy for newcomers just starting with cryptocurrencies and NFTs.",
+      "appUrl": "https://www.asset.money",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "nfts",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1667223628753_asset-money.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/asset-money/image_1667223629216_asset-money_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/asset-money/image_1667223629233_asset-money_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/asset-money/image_1667223629221_asset-money_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/asset-money/image_1667223629252_asset-money_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/asset-money/image_1667223629237_asset-money_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/asset-money/image_1667223629228_asset-money_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.asset.money",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "asset.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Swidge",
+      "description": "Swidge is a multichain any-to-any swap protocol that enables users to exchange assets and swap them across multiple chains with only one confirmation. It helps users to access all of the crypto ecosystems in one spot.\n\"Any-to-Any Swap\" refers to moving a cryptocurrency from one chain to another while changing it into a different currency, all with just one user confirmation.",
+      "appUrl": "http://swidge.xyz",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1666011308517_swidge.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swidge/image_1666011308990_swidge_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swidge/image_1666011308998_swidge_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swidge/image_1666011308985_swidge_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swidge/image_1666011308988_swidge_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swidge/image_1666011308993_swidge_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://swidge.xyz",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "swidge.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Holdim",
+      "description": "Holdim app is a user-friendly DAO aggregator with a feed of AI-optimised shortened versions of proposals. Save your time and fully participate in your favorite DAO. ",
+      "appUrl": "https://holdim.to/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1665572204682_holdim.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/holdim/image_1665572205005_holdim_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://holdim.to/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "holdim.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Shinedao",
+      "description": "Permissionless & non-custodial marketplace for programmable OTC token deals. Deploy smart contracts through no-code UI in seconds.\n\n$SHN $veSHN",
+      "appUrl": "https://www.shinedao.finance/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1665047853940_shine-dao.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shine-dao/image_1665047854269_shine-dao_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shine-dao/image_1665047854271_shine-dao_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shine-dao/image_1665047854274_shine-dao_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shine-dao/image_1665047854281_shine-dao_ss3.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.shinedao.finance/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "shinedao.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Kleoverse",
+      "description": "Kleoverse is a DAO Working Platform with revolutionized talent signaling, measurement and discovery on the web. Kleoverse helps users to join DAOs by following joining guides curated by Kleoverse team or by getting started with DAO bounties. Kleoverse Profiles and Proof-of-Talent protocol helps users to verifiably showcase on-chain activity as a proof of activity in Web3 space.",
+      "appUrl": "https://about.kleoverse.com",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1664846638824_kleoverse.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/kleoverse/image_1664846639172_kleoverse_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://about.kleoverse.com",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "kleoverse.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Polysynth",
+      "description": "A suite of options and structured products enabling users to outperform across all market cycles.",
+      "appUrl": "https://oliveapp.finance",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1670714345690_polysynth.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/polysynth/image_1664734759131_polysynth_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/polysynth/image_1664734759132_polysynth_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/polysynth/image_1664734759134_polysynth_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/polysynth/image_1664734759135_polysynth_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/polysynth/image_1670714346103_polysynth_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/polysynth/image_1670714346107_polysynth_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://oliveapp.finance",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "oliveapp.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Phi",
+      "description": "Phi is the Web3 world created directly from ensdomains & wallet activities, enabling the easy visualization of on-chain identities.",
+      "appUrl": "https://philand.xyz/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "developer tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1664733698597_phi.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/phi/image_1664733699009_phi_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/phi/image_1664733699016_phi_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/phi/image_1664733699014_phi_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://philand.xyz/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "philand.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Float",
+      "description": "Float is the easiest way to get leverage, tokenized exposure to crypto assets, with no liquidations, loans, or collateralized debt positions. Go long or short in one transaction and swap, send or compose your tokenised positions any way you want.\n\nWe are not a fork. Float is a novel protocol built by a public team that puts trust and security first. Beyond our core product we’re constantly working on new, innovative financial primitives. To Float, code is law.\n",
+      "appUrl": "https://bit.ly/float-capital",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1664198864560_float.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/float/image_1664537498892_float_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/float/image_1664537498895_float_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/float/image_1664537498893_float_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/float/image_1664537498899_float_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/float/image_1664537498898_float_ss4.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://bit.ly/float-capital",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "bit-float-capital.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Daolens",
+      "description": "DaoLens is a one-stop community management tool for DAOs and communities. It combines everything required to operate a fully functional community into one platform.\nIt provides tools and plugins to integrate within your community so you can focus on engaging in your community rather than managing and organizing it.\nDaoLens aims to provide solutions for communities and DAOs to generate more value, and function like big organizations do today. It helps you manage your DAO on four fronts: discovery, onboarding, contribution, and operation.",
+      "appUrl": "https://bit.ly/dao-lens",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1663839425397_dao-lens.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/dao-lens/image_1678111271988_dao-lens_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/dao-lens/image_1678111272001_dao-lens_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/dao-lens/image_1678111272006_dao-lens_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/dao-lens/image_1678111272003_dao-lens_ss3.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://bit.ly/dao-lens",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "bit-dao-lens.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Ondefy",
+      "description": "Ondefy is fully on-chained and non-custodial; it supports eight different blockchains & 11400+ exchangeable tokens. All transactions that take place with Ondefy are transparent and traceable. Users are in total control of their crypto assets without any risk or restrictions from their wallets. \nOndefy aims to fill the same gap and onboard more people in the DeFi space. Ondefy believes everyone should be able to get the best out of the crypto world.",
+      "appUrl": "https://ondefy.com/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1663595374488_ondefy.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/ondefy/image_1663595374949_ondefy_ss0.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/ondefy/image_1663595374949_ondefy_ss1.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/ondefy/image_1663595374952_ondefy_ss2.jpeg",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/ondefy/image_1663595374994_ondefy_ss3.jpeg"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://ondefy.com/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "ondefy.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Mushrooms Finance",
+      "description": "Mushrooms Finance is a crypto asset earning platform with a focus on seeking sustainable profits in the DeFi universe via innovative products like auto portfolio-rebalancing tool MushMon and multi-chain yield optimizers.",
+      "appUrl": "https://mushrooms.finance",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_mushrooms-finance.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://mushrooms.finance",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "mushrooms.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Phaver",
+      "description": "Share-to-earn decentralised social app for the most interesting feed on your phone.",
+      "appUrl": "https://phaver.com/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_phaver.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://phaver.com/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "phaver.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Metrics Dao",
+      "description": "MetricsDAO is a community of data analysts who provide Web3 organizations with on-demand data insights and tooling. DAO allows anyone to participate in analytics bounty programs, sourcing questions, answering questions and reviewing others. DAO community through mentorship and education enables web3 participants to become Defi Analysts.",
+      "appUrl": "https://metricsdao.xyz/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_metrics-dao.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://metricsdao.xyz/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "metricsdao.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Volmex Finance",
+      "description": "Volmex Finance is a protocol for tokenized volatility built on Ethereum. The protocol enables VIX-like indices for crypto assets and trading functionality powered by Ethereum.\nUse cases of volmex.finance are:\n1. Traders can purchase volatility tokens to express a view on market volatility\n2. Volatility tokens can be used to hedge out risks from other derivatives venues\n3. Volatility arbitrage opportunities between other derivatives venues and Volmex\n4. DeFi protocols can integrate and reference Volmex volatility indices",
+      "appUrl": "https://volmex.finance/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_volmex-finance.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://volmex.finance/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "volmex.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Metashooter",
+      "description": "MetaShooter is the first decentralized blockchain-based hunting metaverse. MetaShooter joins millions of gaming enthusiasts in a community where they can experience realistic hunting in the open world and develop many activities with monetization opportunities.",
+      "appUrl": "https://metashooter.gg/#1",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social networking",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_meta-shooter.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/meta-shooter/image_meta-shooter_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://metashooter.gg/#1",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "metashooter.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Apostle Arena",
+      "description": "Apostle Arena is a 1v1 turn-based game. Each round, players can choose a [Stance] to face the opponent, and the [Stance] has a mutual restraint relationship like rock-paper-scissors. When one of the player’s HP drops below zero, the game is over.\nNot only NFTs from Evolution Land can participate, but all ERC-721 assets can participate in the gameplay through governance.",
+      "appUrl": "https://arena.evolution.land/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "games",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_apostle-arena.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://arena.evolution.land/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "evolution-arena.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Vera",
+      "description": "Vera is the best way for anyone to rent, lend, or mortgage non-fungible token (NFT) assets.\nFounded in 2021 by Vera Labs and backed by notable investors in the decentralized fintech space such as Animoca Brands (leader in blockchain gaming and NFTs; key investor in Axie Infinity, Open Sea, Dapper Labs, CryptoKitties, and much more) and the Web3 Foundation, Vera is on a mission to build open, secure, and powerful NFT financial products that are equally available to everyone everywhere.",
+      "appUrl": "https://rent.vera.financial/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_vera.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://rent.vera.financial/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "vera.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Edao",
+      "description": "The premier Culture Operating System for creators, brands and fandom to launch into Web3.\nNo borders, no rulers, just people creating stuff together. The richest, most accessible experience - on the blockchain or elsewhere - for both creators and collectors.\nShaping Web 3.0 into the largest culture multiverse.\nWe connect artists and fans through storytelling, experiences, and community build",
+      "appUrl": "http://www.edao.co",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1671259400855_e-dao.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "http://www.edao.co",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "edao.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Abachi",
+      "description": "Abachi is a longer term bet on the convergence of DeFi and the traditional world. We are certain these two worlds can meet in a way where jurisdictional, compliance and regulatory frameworks can be drafted to make the transmission of money and transactions much more efficient. Abachi is also a bet on some of the tech that will allow us to do this, which includes: Olympus Dao, Polygon, Gnosis & Luca PLUS (amongst others).",
+      "appUrl": "https://www.abachi.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_abachi.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/abachi/image_abachi_ss0.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/abachi/image_abachi_ss1.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/abachi/image_abachi_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.abachi.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "abachi.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Via Protocol",
+      "description": "Advanced cross-chain liquidity aggregation protocol",
+      "appUrl": "https://router.via.exchange/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_via-protocol.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://router.via.exchange/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "via-router.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Capx",
+      "description": "Capx is a non-custodial, decentralized, community-governed infrastructure that allows new and upcoming tokens to achieve decentralization by accelerating token distribution. Capx focuses on facilitating curated distributions for project communities, token streaming for investor distributions, and a liquid secondary market for tokens.\n\n",
+      "appUrl": "https://capx.fi",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_capx.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/capx/image_1676230943704_capx_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/capx/image_1676230943712_capx_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/capx/image_1676230943714_capx_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/capx/image_1676230943712_capx_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/capx/image_1676230943705_capx_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/capx/image_1676230943714_capx_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://capx.fi",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "capx.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Metapass",
+      "description": "Metapass allows the creation of events and their respective NFT tickets on Polygon. It is currently available only on the Polygon chain and will soon be available on Solana. With Metapass, anyone can create, organize, and host all sorts of events, including talk shows, concerts, meetups, parties, and much more.\nOnce the minting commences, you can sell these NFT tickets for fixed values to your concerned clientele, assuring no fake tickets to be allowed inside the event.\nThis initiative is taken to assure proof of attendance, and all that in just a matter of a few minutes, making the whole process much faster and less expensive.",
+      "appUrl": "https://www.metapasshq.xyz/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_metapass.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/metapass/image_1669366104232_metapass_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/metapass/image_1669366104238_metapass_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/metapass/image_1669366104233_metapass_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/metapass/image_1669366104241_metapass_ss3.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.metapasshq.xyz/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "metapasshq.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Beluga",
+      "description": "Beluga.fi is an innovative yield optimizer on Fantom and Polygon that aims to bring you the best yield farming strategies that give you exposure to the highest yields on your assets.",
+      "appUrl": "https://beluga.fi/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_beluga.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://beluga.fi/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "beluga.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Luxy",
+      "description": "LUXY is an NFT marketplace being developed on Polygon and Syscoin. It’s being designed to offer a fun NFT experience with fast transactions, low cost, and a user-friendly interface. \n ",
+      "appUrl": "https://luxy.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_luxy.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/luxy/image_luxy_ss0.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/luxy/image_luxy_ss1.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/luxy/image_luxy_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://luxy.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "luxy.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Argent",
+      "description": "Argent is the most simple and secure smart wallet for crypto. It does everything you'd expect from a bank - without the bank. Store and send; earn interest and invest. Without borders, barriers or boundaries. And only you can access your assets. Not us. Not anyone else.\n",
+      "appUrl": "https://www.argent.xyz/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "subCategory": "wallets",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_argent.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/argent/image_argent_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.argent.xyz/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "argent.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Atlendis",
+      "description": "Established by a team of 4 co-founders and former ConsenSys colleagues, Atlendis is a decentralized, non-custodial and capital-efficient DeFi lending protocol that allows liquidity providers (LPs) to lend digital assets to allowlisted institutional actors. The protocol is composed of a set of fully autonomous smart contracts that reside on the Polygon network and was launched in June 2022.\nAs opposed to other lending protocols that require the borrower to deposit collateral, Atlendis enables allowlisted borrowers to borrow without posting any collateral upfront. The unsecured nature of the loan exposes the lender to credit risk that is rewarded with a yield determined by the market's supply/demand dynamics. Atlendis partners with a credit scoring protocol to assess financial performance of borrowers on-chain, in a continuous and privacy conserving manner. From the borrower's perspective, unsecured borrowing allows for greater capital efficiency as well as greater flexibility to optimize their capital structure.",
+      "appUrl": "https://app.atlendis.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "lending & borrowing",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_atlendis.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://app.atlendis.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "atlendis-app.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Shunya",
+      "description": "Shunya is a customized DeFi deep analytics tool for investors that allows you to manage all of your assets' P&L (Profit and Loss Statements), as well as extensive asset analysis, current wallet positions across blockchains/protocols, and much more.",
+      "appUrl": "https://shunya.fi/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "tooling",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_shunya.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shunya/image_1669353170322_shunya_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shunya/image_1669353170333_shunya_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shunya/image_1669353170323_shunya_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shunya/image_1669353170325_shunya_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shunya/image_1669353170330_shunya_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/shunya/image_1669353170632_shunya_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://shunya.fi/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "shunya.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Swaap Finance",
+      "description": "Swaap is the first market neutral AMM that leverages a combination of oracles and dynamic spreads. Swaap not only provides sustainable yields for liquidity providers but also offers cheaper prices to traders, making it a win-win situation for both parties.\nSwaap strongly reduces arbitrage trading, a phenomenon whereby external actors extract value from a pool by taking advantage of price differences within the market. The value preserved from arbitrageurs is distributed to traders and Liquidity Providers (LPs).",
+      "appUrl": "https://www.swaap.finance/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_swaap-finance.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swaap-finance/image_1669704926784_swaap-finance_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swaap-finance/image_1669704926794_swaap-finance_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swaap-finance/image_1669704926793_swaap-finance_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swaap-finance/image_1669704926804_swaap-finance_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swaap-finance/image_1669704926802_swaap-finance_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/swaap-finance/image_1669704926789_swaap-finance_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.swaap.finance/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "swaap.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Safle",
+      "description": "Next-Gen identity wallet and composite blockchain infra provider for the decentralised cryptoverse, governed by the community.",
+      "appUrl": "https://getsafle.com/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_safle.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://getsafle.com/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "getsafle.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Veroxdex",
+      "description": "VeroxDex offers a next-level order book with unparalleled feature-set and minimal fees powered by our Matic-Ethereum bi-directional bridge. View live charts, set limit orders, stop-loss orders and more. Trade synthetic stock derivatives, earn rewards as a liquidity provider, deploy automated trading bots governed by VeroxAI algorithm and experience the speed and consistency of our next-generation automated market maker. VeroxAI and VeroxDEX is a complete ecosystem for cryptocurrency and synthetic asset management, analysis, investing and trading. ",
+      "appUrl": "https://veroxdex.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_verox-dex.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://veroxdex.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "veroxdex.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Evolution Land",
+      "description": "Evolution Land is the first Metaverse+Gamefi+cross-chain game with each continent built on different blockchain networks, such as the first Atlantis continent. The game will have up to 26 continents, each of which is deployed on a different public chain. Four continents have been built so far and have been deployed on Ethereum (Atlantis Continent), Tron (Byzantine), Columbus (Crab Network), Dawning (Heco) and Eden(Polygon).\nEvolution Land integrates various gameplays, including management, collection, education, gene, battle, auction, and game, which will continuously be evolving.",
+      "appUrl": "https://portal.evolution.land/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "games",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_evolution-land.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://portal.evolution.land/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "evolution-portal.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Yel",
+      "description": "Yield Enhancement Labs (YEL) is a multi-chain yield enhancement protocol who’s core mission is to help projects gain liquidity across multiple chains while building self-sustainable token economics with constant and organic buy-pressure for YEL token. YEL plans to accomplish this by the incentivization of investors and simplification of the research process for best APRs.",
+      "appUrl": "https://yel.finance/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_yel.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://yel.finance/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "yel.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Blocktorch",
+      "description": "Blocktorch offers superior developer experience and covers all observability pillars to view and analyze smart contracts. They provide observability as code, enhanced alerting capabilities via customizable Service Level Objectives, and intuitive search and visualization tools (with elastic search & dashboarding).\nBlocktorch is your go-to choice for observing any smart contract with relevant insights!\nThe amount of decentralized applications, their creators, and users are all expanding, and decentralized architecture is becoming increasingly difficult to comprehend. Reliability is essential if web3 aims to become mass-market ready. Appropriate tools are necessary for engineering teams pushing the boundaries of innovation to create the best products.",
+      "appUrl": "https://www.blocktorch.xyz/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_blocktorch.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/blocktorch/image_1669368665923_blocktorch_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/blocktorch/image_1669368665918_blocktorch_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/blocktorch/image_1669368665916_blocktorch_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/blocktorch/image_1669368665925_blocktorch_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/blocktorch/image_1669368666223_blocktorch_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/blocktorch/image_1669368666226_blocktorch_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.blocktorch.xyz/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "blocktorch.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Pinata",
+      "description": "Pinata is a dedicated gateway that allows you to request your content faster from IPFS nodes saving bandwidth and time. You can customize your gateway with your own branded domain, so your brand stays consistent across all your shared media.",
+      "appUrl": "https://www.pinata.cloud/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "utilities",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_pinata.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.pinata.cloud/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "pinata.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Consola.Finance",
+      "description": "Consola Finance is the most innovative finance and accounting SaaS platform that brings clarity and control to companies’ crypto finances. Consola.finance is the first human-readable block(chain) explorer with all financial tooling that web3 firms need.",
+      "appUrl": "https://consola.finance/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "productivity",
+      "subCategory": "decentralized-collaboration-tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_consola-finance.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://consola.finance/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "consola.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Nested Finance",
+      "description": "Nested allows users to put tokens (up to twelve) into a unique non-fungible token (NFT) known as a Nested portfolio. At the end of the creation process, the user receives an NFT that represents all the user's holdings. Each NFT issued on Nested is then backed by the underlying assets and their real market value.",
+      "appUrl": "https://app.nested.fi/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_nested-finance.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/nested-finance/image_nested-finance_ss0.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/nested-finance/image_nested-finance_ss1.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://app.nested.fi/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "nested-app.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Router Protocol",
+      "description": "A modular infrastructure layer enables blockchains to communicate with each other. With introducing Router Protocol, a mechanism for cross-chain communication that will initially focus on the specific use case of bridging assets across multiple layer 1 and layer 2 networks by using stable coins as the medium of value transfer. Besides asset transfers, the Router Protocol also enables the flow of arbitrary messages across chains securely and seamlessly, extending the compossibility of DeFi across various blockchains.",
+      "appUrl": "https://app.routerprotocol.com/swap",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "developer tools",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_router-protocol.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/router-protocol/image_router-protocol_ss0.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/router-protocol/image_router-protocol_ss1.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/router-protocol/image_router-protocol_ss2.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/router-protocol/image_router-protocol_ss3.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://app.routerprotocol.com/swap",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "routerprotocol.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Solace",
+      "description": "Solace is an insurance protocol that is aiming to invent the future of DeFi Insurance. The protocol helps you to protect your funds against smart-contracts exploits across 180+ protocols with a personalized single policy that dynamically updates as your portfolio changes.",
+      "appUrl": "https://solace.fi/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "insurance",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_solace.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://solace.fi/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "solace.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Floyx",
+      "description": "Floyx is the first product in the world to develop solution that will fully decentralize our social media. Your online persona and its actions will not be a product of big corporations.You cannot be canceled, deleted or hacked. You can choose how much of your personal data you want to keep in distributed blockchain vs Floyx servers vs your own storage. They do not sell your data or content. Your identity is secured by blockchain and monetization options are defined by smart contracts. Floyx will help the community decide on values – so derogatory content will get marked and classified but not canceled (just like the real world).",
+      "appUrl": "https://www.floyx.com/login",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_floyx.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.floyx.com/login",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "floyx.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Amplify Protocol",
+      "description": "Amplify Protocol is a decentralized financing application that enables borrowing against collateralized assets. It is designed to enable algorithmic lending from Borrowing Pools to serve supply chain financing through tokenized accounts receivable. These pools allow users to borrow and lend crypto-assets featuring mechanisms to equilibrate the loan market. The protocol is implemented as a set of persistent, non-upgradable smart contracts. These contracts are designed to promote inclusivity, self-custody, and security. The priority is to provide technological infrastructure that enables participants to transact without an intermediaries who may selectively restrict access.",
+      "appUrl": "https://ampt.finance/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "lending & borrowing",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_amplify-protocol.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/amplify-protocol/image_amplify-protocol_ss0.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/amplify-protocol/image_amplify-protocol_ss1.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/amplify-protocol/image_amplify-protocol_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://ampt.finance/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "ampt.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Riot Racers",
+      "description": "Riot Racers is a play-to-earn car racing game where players own parts of the game. Players can earn by playing the game or by simply owning NFTs in the game. All in-game activities are transacted in RIOT Tokens.",
+      "appUrl": "https://riotracers.com/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "games",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_riot-racers.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/riot-racers/image_riot-racers_ss0.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/riot-racers/image_riot-racers_ss1.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://riotracers.com/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "riotracers.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Snd.Xyz",
+      "description": "SND.XYZ is the world’s first post-to-earn, Web3 social media platform with fully decentralized governance controlled by its users. SND is a Web3 protocol built on the Polygon (Matic) Network, featuring low transaction fees, lightning-bolt transaction speed, and high scalability.",
+      "appUrl": "https://www.snd.xyz/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_snd-xyz.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.snd.xyz/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "snd.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Mimo Capital",
+      "description": "We believe the future of money is Self Custody. Mimo offers a suite of applications designed to allow users to use their digital assets — such as ETH or BTC — to mint PAR tokens, bridging the existing chasm between the DeFi world and the world of regulated financial institutions.",
+      "appUrl": "https://app.mimo.capital/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_mimo-capital.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://app.mimo.capital/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "mimo-app.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Superfluid",
+      "description": "Superfluid is a smart contract framework on EVM networks, enabling you to move assets on-chain following predefined rules called agreements. With a single on-chain transaction, the money will flow from your wallet to the receiver in real time! No further transactions required- it works like magic ",
+      "appUrl": "https://www.superfluid.finance/home",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "tooling",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_superfluid.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.superfluid.finance/home",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "superfluid-home.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Mirror Protocol",
+      "description": "Mirror is a DeFi protocol powered by smart contracts on the Terra network that enables the creation of synthetic assets called Mirrored Assets (mAssets). mAssets mimic the price behavior of real-world assets and give traders anywhere in the world open access to price exposure without the burdens of owning or transacting real assets.",
+      "appUrl": "https://mirrorprotocol.app/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "social media",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_mirror-protocol.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/mirror-protocol/image_mirror-protocol_ss0.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/mirror-protocol/image_mirror-protocol_ss1.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/mirror-protocol/image_mirror-protocol_ss2.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://mirrorprotocol.app/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "mirrorprotocol.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Nibbl",
+      "description": "Nibbl seeks to revolutionize NFT ownership by providing guaranteed liquidity on tokens and a price based buyout rejection game that uses continuous tokens to achieve token distribution.\nThe original NFT is fractionalized and split into fractions by the original NFT holders. The NFT is split in their wallets, but fractions are made public so that anyone can see them.\nUsers can communicate directly with other buyers of fractional tokens through a token-gated chat feature on the platform. This enables users to engage with a bigger community and move beyond simply holding tokens.",
+      "appUrl": "https://nibbl.xyz/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "nft",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_nibbl.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/nibbl/image_1669367568904_nibbl_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/nibbl/image_1669367568910_nibbl_ss1.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/nibbl/image_1669367568912_nibbl_ss2.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/nibbl/image_1669367568907_nibbl_ss3.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/nibbl/image_1669367568904_nibbl_ss4.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/nibbl/image_1669367568914_nibbl_ss5.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://nibbl.xyz/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "nibbl.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Plotx",
+      "description": "PlotX is a decentralized non-custodial Prediction Market protocol that provides crypto traders with an opportunity to earn rewards every hour by making price predictions of popular cryptocurrencies.\n\nPlotX provides a set of features that are specially built to suit the needs of crypto traders:\n- Crypto-focused markets\n- Rewards for correct predictions\n- Quick turnaround times\n- Gas-free trades\n- Use PLOT, MATIC, USDC, USDT, DAI, or WETH to make predictions\n- Use MetaMask, WalletConnect, or Email to log in",
+      "appUrl": "https://plotx.io/market",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "subCategory": "prediction markets",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_plot-x.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/plot-x/image_plot-x_ss0.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://plotx.io/market",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "plotx-market.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Citizen Finance",
+      "description": "Citizen Finance is a multi-chain ecosystem powering the next generation of NFT-based utilities in gaming, art and decentralized finance. With the aim to accelerate the world's transition into nfts and immersive technologies, Citizen Finance provides cheap and easy-to-use tools to encourage mass adoption.",
+      "appUrl": "https://www.citizenfinance.io/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_citizen-finance.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/citizen-finance/image_citizen-finance_ss1.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/citizen-finance/image_citizen-finance_ss2.png",
+          "https://images.thedapplist.com/dev/uploads/project-screenshots/citizen-finance/image_citizen-finance_ss3.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://www.citizenfinance.io/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "citizenfinance.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Mean Finance",
+      "description": "Mean Finance is the state-of-the-art DCA open protocol that enables users or dapps to Dollar Cost Average (DCA) any ERC20 to any other ERC20 with their preferred period frequency without sacrificing decentralization or giving up personal information to any centralized parties. Mean Finance does all this by leveraging Chainlink and Uniswap V3 TWAP oracles.\nIt enables anyone to set up actions like \"Swap 10 USDC for WBTC every day, for 30 days\". These token swaps will then occur regardless of the asset's price and at regular intervals, reducing the impact of volatility on the investment.",
+      "appUrl": "https://mean.finance/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_mean-finance.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/mean-finance/image_1669359570478_mean-finance_ss0.png",
+          "https://images.thedapplist.com/prod/uploads/project-screenshots/mean-finance/image_1669359570478_mean-finance_ss1.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://mean.finance/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "mean.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Arken Finance",
+      "description": "The best-in-class trading view to help you discover treasures from various decentralized exchanges.",
+      "appUrl": "https://swap.arken.finance",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_arken-finance.jpeg",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://swap.arken.finance",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "arken-swap.app",
+      "listDate": "2023-05-13"
+    },
+    {
+      "name": "Polylion",
+      "description": "PolyLion is the 1st Next Generation Automatic Liquidity (Safemoon-like mechanism) Acquisition yield farm and AMM decentralized exchange running on Polygon Network with lots of unique and creative features that let you earn and win for a long time.",
+      "appUrl": "https://polylion.exchange/",
+      "minAge": 18,
+      "isForMatureAudience": true,
+      "isSelfModerated": true,
+      "language": [
+        "en"
+      ],
+      "isListed": true,
+      "availableOnPlatform": [
+        "web"
+      ],
+      "chains": [
+        137
+      ],
+      "category": "defi",
+      "images": {
+        "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_poly-lion.png",
+        "banner": "https://placeholder.meroku.store/placeholder_banner.png",
+        "screenshots": [
+          "https://placeholder.meroku.store/placeholder_screenshot.png"
+        ]
+      },
+      "downloadBaseUrls": [
+        {
+          "url": "https://polylion.exchange/",
+          "version": "1.0.0",
+          "platform": "web"
+        }
+      ],
+      "dappId": "polylion.app",
+      "listDate": "2023-05-13"
     }
   ],
   "featuredSections": [
