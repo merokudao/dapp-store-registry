@@ -99744,7 +99744,7 @@
           "platform": "web"
         }
       ],
-      "dappId": "copperx.app",
+      "dappId": "copperx-io.app",
       "referredBy": {
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
@@ -100364,7 +100364,7 @@
           "platform": "web"
         }
       ],
-      "dappId": "bit-safe-transfer.app",
+      "dappId": "safe-transfer.app",
       "referredBy": {
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
@@ -101276,7 +101276,7 @@
           "platform": "web"
         }
       ],
-      "dappId": "bit-the-convo-space.app",
+      "dappId": "the-convo-space.app",
       "referredBy": {
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
@@ -101656,7 +101656,7 @@
           "platform": "web"
         }
       ],
-      "dappId": "bit-float-capital.app",
+      "dappId": "float-capital.app",
       "referredBy": {
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
@@ -101699,7 +101699,7 @@
           "platform": "web"
         }
       ],
-      "dappId": "bit-dao-lens.app",
+      "dappId": "dao-lens.app",
       "referredBy": {
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
