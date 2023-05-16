@@ -559,7 +559,7 @@ export const getDappId = (appUrl: string | undefined, dapps: DAppSchema[], newUr
   
   if (urlSuffix[urlSuffix.length-1] === '-') urlSuffix = urlSuffix.split('').splice(0, urlSuffix.length-1).join('');
 
-  const domainProviders = ['vercel', 'twitter', 'instagram', 'bitly', 'netlify'];
+  const domainProviders = ['vercel', 'twitter', 'instagram', 'bit', 'netlify'];
   const [first, start, ...others] = parts[0].split('.').reverse();
   // only for domain providers
   if (domainProviders.includes(start)) {
