@@ -99619,6 +99619,10 @@
         }
       ],
       "dappId": "gotpomp.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99656,6 +99660,10 @@
         }
       ],
       "dappId": "steer.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99693,6 +99701,10 @@
         }
       ],
       "dappId": "moonpier.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99732,7 +99744,11 @@
           "platform": "web"
         }
       ],
-      "dappId": "bit.app",
+      "dappId": "copperx.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99770,6 +99786,10 @@
         }
       ],
       "dappId": "rbxdefi.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99811,6 +99831,10 @@
         }
       ],
       "dappId": "sharpe.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99848,6 +99872,10 @@
         }
       ],
       "dappId": "onemint.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99884,6 +99912,10 @@
         }
       ],
       "dappId": "walletchat.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99922,6 +99954,10 @@
         }
       ],
       "dappId": "jumper.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -99960,6 +99996,10 @@
         }
       ],
       "dappId": "lensport.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100000,6 +100040,10 @@
         }
       ],
       "dappId": "octav.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100036,6 +100080,10 @@
         }
       ],
       "dappId": "portals.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100073,6 +100121,10 @@
         }
       ],
       "dappId": "joinfire.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100111,6 +100163,10 @@
         }
       ],
       "dappId": "omni.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100148,6 +100204,10 @@
         }
       ],
       "dappId": "chaindrop.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100183,6 +100243,10 @@
         }
       ],
       "dappId": "lobby.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100219,6 +100283,10 @@
         }
       ],
       "dappId": "squidrouter.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100254,6 +100322,10 @@
         }
       ],
       "dappId": "filecoin.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100293,6 +100365,10 @@
         }
       ],
       "dappId": "bit-safe-transfer.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100331,6 +100407,10 @@
         }
       ],
       "dappId": "airlyft.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100367,6 +100447,10 @@
         }
       ],
       "dappId": "cultdao.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100402,6 +100486,10 @@
         }
       ],
       "dappId": "dune.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100443,6 +100531,10 @@
         }
       ],
       "dappId": "wall.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100483,6 +100575,10 @@
         }
       ],
       "dappId": "vtvl.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100520,6 +100616,10 @@
         }
       ],
       "dappId": "family.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100556,6 +100656,10 @@
         }
       ],
       "dappId": "wallet01.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100591,6 +100695,10 @@
         }
       ],
       "dappId": "launchifi.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100628,6 +100736,10 @@
         }
       ],
       "dappId": "aimint.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100668,6 +100780,10 @@
         }
       ],
       "dappId": "y00ts.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100705,6 +100821,10 @@
         }
       ],
       "dappId": "impersonator.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100746,6 +100866,10 @@
         }
       ],
       "dappId": "opencord.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100782,6 +100906,10 @@
         }
       ],
       "dappId": "lensalert.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100819,6 +100947,10 @@
         }
       ],
       "dappId": "bento.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100855,6 +100987,10 @@
         }
       ],
       "dappId": "earni.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100894,6 +101030,10 @@
         }
       ],
       "dappId": "spheron.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100929,6 +101069,10 @@
         }
       ],
       "dappId": "grindery.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -100965,6 +101109,10 @@
         }
       ],
       "dappId": "grindery-nexus.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101001,6 +101149,10 @@
         }
       ],
       "dappId": "lenster.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101037,6 +101189,10 @@
         }
       ],
       "dappId": "lensfrens.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101076,6 +101232,10 @@
         }
       ],
       "dappId": "notifi.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101117,6 +101277,10 @@
         }
       ],
       "dappId": "bit-the-convo-space.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101155,6 +101319,10 @@
         }
       ],
       "dappId": "overthereality.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101196,6 +101364,10 @@
         }
       ],
       "dappId": "asset.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101235,6 +101407,10 @@
         }
       ],
       "dappId": "swidge.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101271,6 +101447,10 @@
         }
       ],
       "dappId": "holdim.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101310,6 +101490,10 @@
         }
       ],
       "dappId": "shinedao.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101345,6 +101529,10 @@
         }
       ],
       "dappId": "kleoverse.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101385,6 +101573,10 @@
         }
       ],
       "dappId": "oliveapp.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101422,6 +101614,10 @@
         }
       ],
       "dappId": "philand.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101461,6 +101657,10 @@
         }
       ],
       "dappId": "bit-float-capital.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101500,6 +101700,10 @@
         }
       ],
       "dappId": "bit-dao-lens.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101538,6 +101742,10 @@
         }
       ],
       "dappId": "ondefy.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101573,6 +101781,10 @@
         }
       ],
       "dappId": "mushrooms.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101608,6 +101820,10 @@
         }
       ],
       "dappId": "phaver.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101644,6 +101860,10 @@
         }
       ],
       "dappId": "metricsdao.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101679,6 +101899,10 @@
         }
       ],
       "dappId": "volmex.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101714,6 +101938,10 @@
         }
       ],
       "dappId": "metashooter.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101749,6 +101977,10 @@
         }
       ],
       "dappId": "evolution-arena.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101784,6 +102016,10 @@
         }
       ],
       "dappId": "vera.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101820,6 +102056,10 @@
         }
       ],
       "dappId": "edao.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101857,6 +102097,10 @@
         }
       ],
       "dappId": "abachi.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101892,6 +102136,10 @@
         }
       ],
       "dappId": "via-router.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101932,6 +102180,10 @@
         }
       ],
       "dappId": "capx.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -101970,6 +102222,10 @@
         }
       ],
       "dappId": "metapasshq.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102005,6 +102261,10 @@
         }
       ],
       "dappId": "beluga.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102042,6 +102302,10 @@
         }
       ],
       "dappId": "luxy.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102078,6 +102342,10 @@
         }
       ],
       "dappId": "argent.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102114,6 +102382,10 @@
         }
       ],
       "dappId": "atlendis-app.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102155,6 +102427,10 @@
         }
       ],
       "dappId": "shunya.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102195,6 +102471,10 @@
         }
       ],
       "dappId": "swaap.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102230,6 +102510,10 @@
         }
       ],
       "dappId": "getsafle.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102265,6 +102549,10 @@
         }
       ],
       "dappId": "veroxdex.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102300,6 +102588,10 @@
         }
       ],
       "dappId": "evolution-portal.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102335,6 +102627,10 @@
         }
       ],
       "dappId": "yel.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102375,6 +102671,10 @@
         }
       ],
       "dappId": "blocktorch.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102410,6 +102710,10 @@
         }
       ],
       "dappId": "pinata.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102446,6 +102750,10 @@
         }
       ],
       "dappId": "consola.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102482,6 +102790,10 @@
         }
       ],
       "dappId": "nested-app.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102520,6 +102832,10 @@
         }
       ],
       "dappId": "routerprotocol.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102556,6 +102872,10 @@
         }
       ],
       "dappId": "solace.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102591,6 +102911,10 @@
         }
       ],
       "dappId": "floyx.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102629,6 +102953,10 @@
         }
       ],
       "dappId": "ampt.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102665,6 +102993,10 @@
         }
       ],
       "dappId": "riotracers.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102700,6 +103032,10 @@
         }
       ],
       "dappId": "snd.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102735,6 +103071,10 @@
         }
       ],
       "dappId": "mimo-app.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102771,6 +103111,10 @@
         }
       ],
       "dappId": "superfluid-home.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102808,6 +103152,10 @@
         }
       ],
       "dappId": "mirrorprotocol.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102848,6 +103196,10 @@
         }
       ],
       "dappId": "nibbl.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102884,6 +103236,10 @@
         }
       ],
       "dappId": "plotx-market.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102921,6 +103277,10 @@
         }
       ],
       "dappId": "citizenfinance.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102957,6 +103317,10 @@
         }
       ],
       "dappId": "mean.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -102992,6 +103356,10 @@
         }
       ],
       "dappId": "arken-swap.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     },
     {
@@ -103027,6 +103395,10 @@
         }
       ],
       "dappId": "polylion.app",
+      "referredBy": {
+        "name": "The Dapp List",
+        "url": "https://thedapplist.com/"
+      },
       "listDate": "2023-05-13"
     }
   ],
