@@ -3680,39 +3680,6 @@
       ]
     },
     {
-      "name": "Gelato Network",
-      "description": "Gelato Network is web3’s automation network, enabling developers to automate & relay arbitrary smart contract executions on and across all EVM-based compatible blockchains such as Ethereum. Gelato now has more than 3 flagship products, including Gelato Ops, Sorbet Finance, Gelato Relay, and more. Gelato’s goal is to provide developers with a reliable, scalable & decentralized network to which they can outsource all of their web3 related DevOps operations. Examples of which features are powered by Gelato include:  Limit Orders on PancakeSwap Periodically updating debt ceilings on MakerDAO Offering users gasless token claims on Connext Automatically compounding yield farming vaults on Beefy Finance Automating the breeding of new digital racehorse NFTs on ZED RUN Rebasing of algorithmic stablecoins with Tomb Finance Updating price oracles and TWAP on Abracadabra",
-      "appUrl": "http://gelato.network/",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/6464/gelato-dapp-defi-ethereum-logo_9397d879cbf651c1cf7424a5f5cc1c35.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "finance",
-      "chains": [
-        1,
-        137
-      ],
-      "dappId": "gelato.app",
-      "downloadBaseUrls": [
-        {
-          "url": "http://gelato.network/",
-          "version": "unknown",
-          "platform": "web"
-        }
-      ]
-    },
-    {
       "name": "Rally.io",
       "description": "Introducing Creator Coin. Custom branded digital currencies for content creators & their communities providing better engagement & value via better economics.",
       "appUrl": "https://rally.io",
@@ -31431,38 +31398,6 @@
       ]
     },
     {
-      "name": "PRDT",
-      "description": "Know where the Market is going? The First Fully Decentralized Cross-Chain Prediction Platform On The Binance Smart Chain and Polygon Network.",
-      "appUrl": "https://www.prdt.finance/",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/10058/prdt-dapp-defi-bsc-logo_5dc191dc7684a11f97155203f66498cf.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "games",
-      "chains": [
-        137
-      ],
-      "dappId": "prdt.app",
-      "downloadBaseUrls": [
-        {
-          "url": "https://www.prdt.finance/",
-          "version": "unknown",
-          "platform": "web"
-        }
-      ]
-    },
-    {
       "name": "CafeSwap",
       "description": "CafeSwap is a yield farming and staking platform on BSC Chain, We have chosen BSC because of its low tnx fees and faster speed. We have built this project to provide the best experience with farming while regulating the supply, We believe in partnerships hence we aim to bring all BSC DeFi ecosystems in one place to have a friendly ecosystem for all of us. Thank You.",
       "appUrl": "https://cafeswap.finance/",
@@ -36353,38 +36288,6 @@
       "downloadBaseUrls": [
         {
           "url": "https://www.sheepfarmer.fun/",
-          "version": "unknown",
-          "platform": "web"
-        }
-      ]
-    },
-    {
-      "name": "OnePlanet",
-      "description": "OnePlanet is a Polygon-based NFT marketplace, where holders can define and expand the utilities of their NFTs. Starting as a marketplace to trade NFTs, OnePlanet also provides Social features to enable meaningful communication between holders and Technical infrastructure to accelerate a project’s development.",
-      "appUrl": "https://www.oneplanetnft.io/",
-      "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/21278/oneplanet-dapp-marketplaces-matic-logo_40b9f47d6373c5b583b121e264108a38.png"
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "version": "unknown",
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "shopping",
-      "chains": [
-        137
-      ],
-      "dappId": "oneplanetnft.app",
-      "downloadBaseUrls": [
-        {
-          "url": "https://www.oneplanetnft.io/",
           "version": "unknown",
           "platform": "web"
         }
@@ -103028,6 +102931,315 @@
       ],
       "dappId": "polylion.app",
       "listDate": "2023-05-13"
+    },
+    {
+      "name": "OnePlanet",
+      "description": "Polygon-dedicated NFT launchpad and marketplace where your NFT experience expands",
+      "appUrl": "https://oneplanetnft.io/",
+      "dappId": "oneplanetnft.app",
+      "downloadBaseUrls": [
+        {
+          "url": "https://oneplanetnft.io/",
+          "platform": "web",
+          "version": "2.11.0"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeibxey5d56hm63jowosgjhapkjtyxilehz2sz6rky64ewqx2hsewuy.ipfs.dweb.link/op_logo.png",
+        "banner": "https://bafybeibxey5d56hm63jowosgjhapkjtyxilehz2sz6rky64ewqx2hsewuy.ipfs.dweb.link/op_banner.png",
+        "screenshots": [
+          "https://bafybeibxey5d56hm63jowosgjhapkjtyxilehz2sz6rky64ewqx2hsewuy.ipfs.dweb.link/op_capture.png"
+        ]
+      },
+      "contracts": [
+        {
+          "address": "0xcbbecf690e030d096794f7685a1bf4a58378a575",
+          "chainId": "137"
+        }
+      ],
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "2.11.0",
+      "isListed": true,
+      "listDate" : "2023-05-16",
+      "availableOnPlatform": ["web"],
+      "tags": ["nft", "marketplace", "utility", "gaming", "launchpad", "pfp"],
+      "developer": {
+        "legalName" : "OnePlanet",
+        "website":"https://oneplanetnft.io/"
+      },
+      "chains": [137],
+      "category": "nft",
+      "privacyPolicyUrl" : "https://docs.oneplanetnft.io/oneplanet/privacy-policy",
+      "support": {
+        "url": "https://airtable.com/shrPDhYb0xXdbp7tR"
+      }
+    },
+    {
+      "name": "Gelato Automate",
+      "description": "Gelato Automate is designed to make it super easy for you to setup and manage your smart contract automations. Our documentation gives you all the information on how to get started, with tutorials and template real-world examples",
+      "appUrl": "https://app.gelato.network/",
+      "dappId": "gelato.app",
+      "repoUrl": "https://github.com/gelatodigital/automate",
+      "downloadBaseUrls": [
+        {
+          "url": "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/Gelato%20Automate.apk",
+          "platform": "android",
+          "minVersion": "11.0.0",
+          "packageId":"network.gelato.app.twa",
+          "version":"1.0.0.0",
+          "versionCode": "1"
+        },
+        {
+          "url": "https://app.gelato.network/",
+          "platform": "web",
+          "version": "1.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/logo-Gelato512-512.png",
+        "banner": "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/banner-automate.png",
+        "screenshots": [
+          "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/SCREEN-1.png",
+          "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/SCREEN-2.png",
+          "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/SCREEN-4.png",
+          "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/SCREEN-4.png",
+          "https://bafybeieb6sf3fhkdzw6by7urn6dbi6me6zpkj2u3kxdyedpxfgdl3xjvra.ipfs.dweb.link/SCREEN-5.png"
+        ]
+      },
+      "contracts": [
+        {
+          "address": "0x3CACa7b48D0573D793d3b0279b5F0029180E83b6",
+          "chainId": "1"
+        },
+        {
+          "address": "0xB3f5503f93d5Ef84b06993a1975B9D21B962892F",
+          "chainId": "1"
+        },
+        {
+          "address": "0x2807B4aE232b624023f87d0e237A3B1bf200Fd99",
+          "chainId": "1"
+        },
+        {
+          "address": "0x7598e84B2E114AB62CAB288CE5f7d5f6bad35BbA",
+          "chainId": "137"
+        },
+        {
+          "address": "0x527a819db1eb0e34426297b03bae11F2f8B3A19E",
+          "chainId": "137"
+        },
+        {
+          "address": "0x32DC6700AC87f6300277a63b0A4fDf132A8392bd",
+          "chainId": "137"
+        },
+        {
+          "address": "0xebA27A2301975FF5BF7864b99F55A4f7A457ED10",
+          "chainId": "250"
+        },
+        {
+          "address": "0x6EDe1597c05A0ca77031cBA43Ab887ccf24cd7e8",
+          "chainId": "250"
+        },
+        {
+          "address": "0x0af13072280E10907911ce5d046c2DfA1B604d23",
+          "chainId": "250"
+        },
+        {
+          "address": "0x4775aF8FEf4809fE10bf05867d2b038a4b5B2146",
+          "chainId": "42161"
+        },
+        {
+          "address": "0xB3f5503f93d5Ef84b06993a1975B9D21B962892F",
+          "chainId": "42161"
+        },
+        {
+          "address": "0xB2f34fd4C16e656163dADFeEaE4Ae0c1F13b140A",
+          "chainId": "42161"
+        },
+        {
+          "address": "0x7C5c4Af1618220C090A6863175de47afb20fa9Df",
+          "chainId": "43114"
+        },
+        {
+          "address": "0x8aB6aDbC1fec4F18617C9B889F5cE7F28401B8dB",
+          "chainId": "43114"
+        },
+        {
+          "address": "0xe167199A490b04042414aFD71830bBF165f44C09",
+          "chainId": "43114"
+        },
+        {
+          "address": "0x7C5c4Af1618220C090A6863175de47afb20fa9Df",
+          "chainId": "56"
+        },
+        {
+          "address": "0x527a819db1eb0e34426297b03bae11F2f8B3A19E",
+          "chainId": "56"
+        },
+        {
+          "address": "0xbECe6A2101eC94E817c072622671B399A3508Ac1",
+          "chainId": "56"
+        },
+        {
+          "address": "0x91f2A140cA47DdF438B9c583b7E71987525019bB",
+          "chainId": "25"
+        },
+        {
+          "address": "0x86B7e611194978F556007ac1F52D09d114D8f160",
+          "chainId": "25"
+        },
+        {
+          "address": "0xa5f9b728ecEB9A1F6FCC89dcc2eFd810bA4Dec41",
+          "chainId": "25"
+        },
+        {
+          "address": "0x29b6603D17B9D8f021EcB8845B6FD06E1Adf89DE",
+          "chainId": "100"
+        },
+        {
+          "address": "0x8aB6aDbC1fec4F18617C9B889F5cE7F28401B8dB",
+          "chainId": "100"
+        },
+        {
+          "address": "0x04462c8ad55a3d970fd9b4944A2f4C7c15700883",
+          "chainId": "100"
+        },
+        {
+          "address": "0x01051113D81D7d6DA508462F2ad6d7fD96cF42Ef",
+          "chainId": "10"
+        },
+        {
+          "address": "0x340759c8346A1E6Ed92035FB8B6ec57cE1D82c2c",
+          "chainId": "10"
+        },
+        {
+          "address": "0xB3f5503f93d5Ef84b06993a1975B9D21B962892F",
+          "chainId": "10"
+        },
+        {
+          "address": "0x91f2A140cA47DdF438B9c583b7E71987525019bB",
+          "chainId": "1284"
+        },
+        {
+          "address": "0x6c3224f9b3feE000A444681d5D45e4532D5BA531",
+          "chainId": "1284"
+        },
+        {
+          "address": "0xa5f9b728ecEB9A1F6FCC89dcc2eFd810bA4Dec41",
+          "chainId": "1284"
+        },
+        {
+          "address": "0x91f2A140cA47DdF438B9c583b7E71987525019bB",
+          "chainId": "1285"
+        },
+        {
+          "address": "0x86B7e611194978F556007ac1F52D09d114D8f160",
+          "chainId": "1285"
+        },
+        {
+          "address": "0xa5f9b728ecEB9A1F6FCC89dcc2eFd810bA4Dec41",
+          "chainId": "1285"
+        }
+      ],
+      "minAge": 18,
+      "isForMatureAudience" : true,
+      "isSelfModerated": false,
+      "language": ["en"],
+      "version": "1.0.0.0",
+      "versionCode": "1",
+      "isListed": true,
+      "listDate" : "2023-05-16",
+      "availableOnPlatform": ["web"],
+      "tags": ["web3automation", "defi", "cronjob", "schedule"],
+      "developer": {
+        "legalName" : "Javier Donoso",
+        "website":"https://github.com/donoso-eth"
+      },
+      "chains": [
+        1, 137, 56, 42161
+      ],
+      "category": "nft",
+      "packageId": "network.gelato.app.twa",
+      "privacyPolicyUrl" : "https://www.gelato.network/docs/Gelato_Privacy_Policy.pdf",
+      "support": {
+        "url": "https://www.gelato.network/contact"
+      },
+      "walletApiVersion":["v1"]
+    },
+    {
+      "name": "PRDT Finance",
+      "description": "The first cross-chain binary option & prediction platform in DeFi (BSC & Polygon Network)\\n\\nLong or Short and get rewarded for predicting correctly!\\n\\nPRDT has come a long way since its inception and has achieved remarkable milestones. Our decentralized cross-chain prediction markets protocol is the first of its kind and is currently live on both the BSC and Polygon blockchains. Users can trade on the value of an asset and earn if their market forecasts are true.\\n\\nWe take pride in engaging and entertaining our user-base to create the best products available. To that end, we have implemented several changes and improvements in the past year, some of which are:\\n\\nInstant Round Openings: We have introduced the feature of instant round openings, allowing users to have the best possible entry price when predicting with PRDT. This flexibility allows users to make quick trades and increase their chances of earning profits.\\n\\nImproved User Interface: PRDT Finance has undergone a major overhaul in terms of its user interface, making it more intuitive and user-friendly. The addition of new tabs for withdrawals, deposits, and history allows for easy access to transaction details.\\n\\nCash Back Trio Referral System: We have improved our referral system, allowing users to earn even more rewards by referring friends to the platform. With this three layer referral system, users can earn a percentage of their referrals' lost trades for life. There is no limit to the amount of referrals you can make.\\n\\nExpanded Time Frames: In response to user feedback, we have expanded our time frames to include options from 30 seconds all the way up to 30 minutes. Our payout multipliers have also been updated to reflect these changes, with 30s-120s at 1.3x, 120s-3min at 1.6x, and 3min-30mins at 1.7x.\\n\\nMax Payout Bonus: We have introduced a new Max Payout Bonus, allowing users to get an additional 2% added to their winnings when using the maximum bet to predict. This bonus brings the total payout multiplier from 1.7x to 1.72x.\\n\\nNew Trading Bot: PRDT Finance has launched a new trading bot, making trading even more convenient for our users. With the bot's advanced algorithms, users can make trades without constantly monitoring the market.\\n\\nTrading Arena: We reward the top five traders by volume. Weekly prizes are added to the winners pro version account on the BSC network. The top prize is $400, followed by $250 for 2nd place, $150 for 3rd place, $75 for 4th place, and $25 for 5th place.\\n\\nAt PRDT Finance, we continue to lead the way in binary options and price prediction platforms. We have achieved so much in the past year, and are excited about what the future holds. Our team is committed to providing our users with the best possible trading experience, and we look forward to bringing more exciting features and integrations to our platform.",
+      "appUrl": "https://prdt.finance/",
+      "dappId": "prdt.app",
+      "repoUrl": "https://github.com/PRDTfinance/contract",
+      "downloadBaseUrls": [
+        {
+          "url": "https://prdt.finance/",
+          "platform": "web",
+          "version":"2.0.0"
+        }
+      ],
+      "images": {
+        "logo": "https://bafybeif74up4wp4uuwhbxxzp44fmkoao5vgfo66ttfzlv46zlxuu43t46i.ipfs.dweb.link/App%20Logo.png",
+        "banner": "https://bafybeif74up4wp4uuwhbxxzp44fmkoao5vgfo66ttfzlv46zlxuu43t46i.ipfs.dweb.link/App%20Banner.png",
+        "screenshots": [
+          "https://bafybeif74up4wp4uuwhbxxzp44fmkoao5vgfo66ttfzlv46zlxuu43t46i.ipfs.dweb.link/Screenshot%202023-05-11%20at%2014.32%201.png",
+          "https://bafybeif74up4wp4uuwhbxxzp44fmkoao5vgfo66ttfzlv46zlxuu43t46i.ipfs.dweb.link/Screenshot%202023-05-11%20at%2014.34%201.png",
+          "https://bafybeif74up4wp4uuwhbxxzp44fmkoao5vgfo66ttfzlv46zlxuu43t46i.ipfs.dweb.link/SCREENSHOT-3.png"
+        ]
+      },
+      "contracts": [
+        {
+          "address": "0x22dB94d719659d7861612E0f43EE28C9FF9909C7",
+          "chainId": "56"
+        },
+        {
+          "address": "0x3Df33217F0f82c99fF3ff448512F22cEf39CC208",
+          "chainId": "56"
+        },
+        {
+          "address": "0x31B8A8Ee92961524fD7839DC438fd631D34b49C6",
+          "chainId": "56"
+        },
+        {
+          "address": "0xBE6CB6EaDf1bF80A991EB6F6fbf865eF6bA26E3B",
+          "chainId": "56"
+        },
+        {
+          "address": "0xd71b0366CD2f2E90dd1F80A1F0EA540F73Ac0EF6",
+          "chainId": "137"
+        },
+        {
+          "address": "0x8251E5EBc2d2C20f6a116144800D569FAF75d746",
+          "chainId": "137"
+        },
+        {
+          "address": "0x35AF667AfD82DE3c224Fcfca9a66D32B586F6D60",
+          "chainId": "137"
+        }
+      ],
+      "minAge": 4,
+      "isForMatureAudience" : true,
+      "isSelfModerated": true,
+      "language": ["en"],
+      "version": "2.0.0",
+      "isListed": true,
+      "listDate" : "2023-05-16",
+      "availableOnPlatform": ["web"],
+      "tags": ["predictions", "binaryoptions", "defi", "cryptotrading", "trading"],
+      "developer": {
+        "legalName" : "Steven",
+        "website":"https://prdt.finance/"
+      },
+      "chains": [56, 137],
+      "category": "nft",
+      "privacyPolicyUrl" : "https://prdt-finance.gitbook.io/",
+      "support": {
+        "url": "https://t.me/PRDT_Finance"
+      },
+      "walletApiVersion":["v1"]
     }
   ],
   "featuredSections": [
