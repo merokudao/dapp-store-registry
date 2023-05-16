@@ -1124,7 +1124,8 @@
       ],
       "category": "finance",
       "chains": [
-        1
+        1,
+        1101
       ],
       "dappId": "uniswap.app",
       "downloadBaseUrls": [
@@ -1607,7 +1608,8 @@
       ],
       "category": "finance",
       "chains": [
-        1
+        1,
+        1101
       ],
       "dappId": "aave.app",
       "downloadBaseUrls": [
@@ -1768,7 +1770,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "curve.app",
       "downloadBaseUrls": [
@@ -2029,7 +2032,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "balancer.app",
       "downloadBaseUrls": [
@@ -2191,7 +2195,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "sushi.app",
       "downloadBaseUrls": [
@@ -12899,7 +12904,8 @@
       ],
       "category": "finance",
       "chains": [
-        1
+        1,
+        1101
       ],
       "dappId": "metamask.app",
       "downloadBaseUrls": [
@@ -13444,7 +13450,8 @@
       ],
       "category": "finance",
       "chains": [
-        1
+        1,
+        1101
       ],
       "dappId": "abracadabra.app",
       "downloadBaseUrls": [
@@ -15027,7 +15034,8 @@
       "category": "shopping",
       "chains": [
         137,
-        1
+        1,
+        1101
       ],
       "dappId": "tofunft.app",
       "downloadBaseUrls": [
@@ -17245,7 +17253,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "kyberswap.app",
       "downloadBaseUrls": [
@@ -19342,7 +19351,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "bungee.app",
       "downloadBaseUrls": [
@@ -19729,7 +19739,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "celer.app",
       "downloadBaseUrls": [
@@ -21085,7 +21096,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "multichain.app",
       "downloadBaseUrls": [
@@ -21926,7 +21938,8 @@
       "category": "finance",
       "chains": [
         1,
-        137
+        137,
+        1101
       ],
       "dappId": "hop.app",
       "downloadBaseUrls": [
@@ -22896,7 +22909,8 @@
       ],
       "category": "finance",
       "chains": [
-        1
+        1,
+        1101
       ],
       "dappId": "rhino.app",
       "downloadBaseUrls": [
@@ -23927,7 +23941,8 @@
       ],
       "category": "finance",
       "chains": [
-        1
+        1,
+        1101
       ],
       "dappId": "hashflow.app",
       "downloadBaseUrls": [
@@ -29467,7 +29482,8 @@
       ],
       "category": "finance",
       "chains": [
-        137
+        137,
+        1101
       ],
       "dappId": "quickswap.app",
       "downloadBaseUrls": [
@@ -29659,7 +29675,8 @@
       ],
       "category": "finance",
       "chains": [
-        137
+        137,
+        1101
       ],
       "dappId": "gains.app",
       "downloadBaseUrls": [
@@ -29691,7 +29708,8 @@
       ],
       "category": "finance",
       "chains": [
-        137
+        137,
+        1101
       ],
       "dappId": "mai.app",
       "downloadBaseUrls": [
@@ -36315,7 +36333,8 @@
       ],
       "category": "finance",
       "chains": [
-        137
+        137,
+        1101
       ],
       "dappId": "synfutures.app",
       "downloadBaseUrls": [
@@ -37415,7 +37434,8 @@
       },
       "privacyPolicyUrl": "https://docs.0vix.com/support/privacy-policy",
       "chains": [
-        137
+        137,
+        1101
       ],
       "category": "defi",
       "packageId": "com.ww0VIXProtocol_16878992"
@@ -44849,7 +44869,8 @@
       "listDate": "2023-05-12",
       "isListed": true,
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -46946,7 +46967,8 @@
       "listDate": "2023-05-12",
       "isListed": true,
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -60532,7 +60554,8 @@
       "isListed": true,
       "repoUrl": "https://github.com/lifinance",
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -67865,7 +67888,8 @@
       "isListed": true,
       "repoUrl": "https://github.com/zkasino",
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -70479,7 +70503,8 @@
       "isListed": true,
       "repoUrl": "https://github.com/RabbyHub/Rabby",
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -70549,7 +70574,8 @@
       "listDate": "2023-05-12",
       "isListed": true,
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -72224,7 +72250,8 @@
       "isListed": true,
       "repoUrl": "https://github.com/0xsequence",
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -76718,7 +76745,8 @@
       "listDate": "2023-05-12",
       "isListed": true,
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -76896,7 +76924,8 @@
       "listDate": "2023-05-12",
       "isListed": true,
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -78475,7 +78504,8 @@
       "listDate": "2023-05-12",
       "isListed": true,
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -90442,7 +90472,8 @@
       "listDate": "2023-05-12",
       "isListed": true,
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -92571,7 +92602,8 @@
       "isListed": true,
       "repoUrl": "https://github.com/zeriontech",
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -96577,7 +96609,8 @@
       "isListed": true,
       "repoUrl": "https://github.com/OrbiterCross",
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
@@ -97561,7 +97594,8 @@
       "isListed": true,
       "repoUrl": "https://github.com/pyth-network",
       "chains": [
-        137
+        137,
+        1101
       ]
     },
     {
