@@ -18,13 +18,13 @@
     },
     {
         "category": "developer tools",
-        "subCategory": []
+        "subCategory": ["discovery tool"]
     },
     {
         "category": "education",
         "subCategory": [
             "learning tools",
-            "Reference",
+            "reference",
             "language-learning",
             "stem"
         ]
@@ -32,6 +32,8 @@
     {
         "category": "entertainment",
         "subCategory": [
+            "music",
+            "video",
             "video-streaming",
             "music-streaming",
             "live-events",
@@ -39,15 +41,17 @@
         ]
     },
     {
-        "category": "finance",
+        "category": "defi",
         "subCategory": [
             "banking",
             "personal-finance",
             "exchanges",
-            "defi",
             "insurance",
             "on-ramping",
-            "off-ramping"
+            "off-ramping",
+            "payments",
+            "finance",
+            "airdrop tool"
         ]
     },
     {
@@ -61,21 +65,16 @@
     {
         "category": "games",
         "subCategory": [
-            "action", 
+            "action",
             "adventure",
             "puzzle",
-            "role-playing", 
+            "role-playing",
             "strategy",
-            "sports",
             "racing",
             "board ",
-            "simulation", 
+            "simulation",
             "word"
         ]
-    },
-    {
-        "category": "graphics and design",
-        "subCategory": []
     },
     {
         "category": "health and fitness",
@@ -83,7 +82,8 @@
             "workout-apps",
             "meditation",
             "nutrition",
-            "sleep-trackers"
+            "sleep-trackers",
+            "medical"
         ]
     },
     {
@@ -99,30 +99,14 @@
         "subCategory": []
     },
     {
-        "category": "magazines and newspapers",
-        "subCategory": [
-            "decentralized-news-platforms"
-        ]
-    },
-    {
-        "category": "medical",
-        "subCategory": []
-    },
-    {
-        "category": "music",
-        "subCategory": []
-    },
-    {
-        "category": "navigation",
-        "subCategory": []
-    },
-    {
         "category": "news",
-        "subCategory": []
-    },
-    {
-        "category": "photo and video",
-        "subCategory": []
+        "subCategory": [
+            "sports-news",
+            "magazines",
+            "decentralized-news-platforms",
+            "newspapers",
+            "live-news"
+        ]
     },
     {
         "category": "photography",
@@ -139,18 +123,16 @@
             "task-management",
             "time-management",
             "calendar",
-            "decentralized-collaboration-tools"
+            "decentralized-collaboration-tools",
+            "graphics and design"
         ]
-    },
-    {
-        "category": "reference",
-        "subCategory": []
     },
     {
         "category": "shopping",
         "subCategory": [
             "ecommerce",
-            "nft-marketplaces"
+            "nft-marketplaces",
+            "price aggregator"
         ]
     },
     {
@@ -163,7 +145,6 @@
     {
         "category": "sports",
         "subCategory": [
-            "sports-news",
             "team-management",
             "live-scores"
         ]
@@ -183,16 +164,9 @@
             "file-management",
             "browsers",
             "security-and-privacy",
-            "wallets"
+            "wallets",
+            "weather"
         ]
-    },
-    {
-        "category": "weather",
-        "subCategory": []
-    },
-    {
-        "category": "defi",
-        "subCategory": []
     },
     {
         "category": "nft",
@@ -203,40 +177,8 @@
         "subCategory": []
     },
     {
-        "category": "messaging",
-        "subCategory": []
-    },
-    {
-        "category": "social media",
-        "subCategory": []
-    },
-    {
-        "category": "off-ramping",
-        "subCategory": []
-    },
-    {
         "category": "social",
-        "subCategory": []
-    },
-    {
-        "category": "price aggregator",
-        "subCategory": []
-    },
-    {
-        "category": "payments",
-        "subCategory": []
-    },
-    {
-        "category": "discovery tool",
-        "subCategory": []
-    },
-    {
-        "category": "airdrop tool",
-        "subCategory": []
-    },
-    {
-        "category": "ecommerce",
-        "subCategory": []
+        "subCategory": ["social media"]
     },
     {
         "category": "personalization",
