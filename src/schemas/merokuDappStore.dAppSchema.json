@@ -66,7 +66,7 @@
               },
               "version": {
                 "type": "string",
-                "description": "TThe version of the dapp that is available on dApp store",
+                "description": "The version of the dapp that is available on dApp store",
                 "minLength": 1
               },
               "versionCode": {
@@ -347,7 +347,7 @@
     },
     "referredBy":{
       "type": "object",
-      "description": "The details of a vendor, who have reffered this dapp to dapp registry",
+      "description": "The details of a vendor, who have referred this dapp to dapp registry",
       "properties": {
         "name": {
           "type":"string",
