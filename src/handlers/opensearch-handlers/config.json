@@ -139,19 +139,6 @@
           "website": {
             "type": "keyword"
           },
-          "privacyPolicyUrl": {
-            "type": "keyword"
-          },
-          "support": {
-            "properties": {
-              "url": {
-                "type": "keyword"
-              },
-              "email": {
-                "type": "keyword"
-              }
-            }
-          },
           "githubID": {
             "type": "keyword"
           }
@@ -190,6 +177,19 @@
           }
         }
       },
+      "privacyPolicyUrl": {
+        "type": "keyword"
+      },
+      "support": {
+        "properties": {
+          "url": {
+            "type": "keyword"
+          },
+          "email": {
+            "type": "keyword"
+          }
+        }
+      },
       "metrics": {
         "properties": {
           "downloads": { "type": "integer" },
@@ -199,6 +199,9 @@
           "visits": { "type": "integer" },
           "rating": { "type": "double" }
         }
+      },
+      "ownerAddress": {
+        "type": "keyword"
       }
     }
   },
@@ -209,7 +212,8 @@
       "appUrl",
       "category",
       "minAge",
-      "isForMatureAudience"
+      "isForMatureAudience",
+      "ownerAddress"
     ],
     "searchFields": [
       "name",
@@ -235,7 +239,9 @@
       "chains",
       "packageId",
       "walletApiVersion",
-      "metrics"
+      "metrics",
+      "ownerAddress",
+      "referredBy"
     ]
   }
 }

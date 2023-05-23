@@ -253,4 +253,51 @@ export class DappStoreRegistryV1 {
       data: response && response.map(rs => rs._source)
     };
   };
+
+  /**
+   * search by Owner Address
+   * @param ownerAddress dappId
+   * @returns if matches return dappInfo
+   */
+  public searchOwnerAddress = async (
+    ownerAddress: string
+  ): Promise<StandardResponse> => {
+    const { finalQuery } = searchFilters("", {
+      ownerAddress
+    });
+    const result: SearchResult = await this.opensearchApis.search(
+      searchRegistry.alias,
+      finalQuery
+    );
+    const {
+      hits: { hits: res }
+    } = result.body || { hits: { hits: [] } };
+    return {
+      status: 200,
+      message: ["success"],
+      data: res && res.map(rs => rs._source)
+    };
+  };
+
+  /**
+   *  update dapp to index, when new app is registered on dapp store
+   * @param name
+   * @param dapp
+   * @param org
+   * @returns acknowledge
+   */
+  public async updateDapp(payload: AddDappPayload): Promise<StandardResponse> {
+    const { dapp } = payload;
+    /**
+     * have to add if any action have to do onchain
+     */
+    await this.opensearchApis.updateDoc(searchRegistry.alias, {
+      id: dapp.dappId,
+      ...dapp
+    });
+    return {
+      status: 200,
+      message: ["success"]
+    };
+  }
 }

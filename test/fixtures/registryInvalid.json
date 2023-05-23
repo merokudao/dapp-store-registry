@@ -20,11 +20,11 @@
       "listDate": "2022-12-12",
       "developer": {
         "legalName": "Bitpack",
-        "website": "https://something.com",
-        "privacyPolicyUrl": "https://somethingelse.com",
-        "support": {
-          "url": "https://something.com"
-        }
+        "website": "https://something.com"
+      },
+      "privacyPolicyUrl": "https://somethingelse.com",
+      "support": {
+        "url": "https://something.com"
       }
     }
   ]

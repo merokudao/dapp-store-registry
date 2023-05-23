@@ -73,7 +73,7 @@
               },
               "version": {
                 "type": "string",
-                "description": "TThe version of the dapp that is available on dApp store",
+                "description": "The version of the dapp that is available on dApp store",
                 "minLength": 1
               },
               "versionCode": {
@@ -243,7 +243,7 @@
     },
     "developer": {
       "type": "object",
-      "required": ["legalName", "website", "privacyPolicyUrl", "support"],
+      "required": ["legalName", "website"],
       "properties": {
         "legalName": {
           "type": "string",
@@ -257,27 +257,6 @@
         "website": {
           "type": "string",
           "format": "uri"
-        },
-        "privacyPolicyUrl": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^(https?|http?|ipfs?)://",
-          "minLength": 1
-        },
-        "support": {
-          "type": "object",
-          "properties": {
-            "url": {
-              "type": "string",
-              "format": "uri",
-              "pattern": "^(https?|http?|ipfs?)://",
-              "minLength": 1
-            },
-            "email": {
-              "type": "string",
-              "format": "email"
-            }
-          }
         },
         "githubID": {
           "type": "string",
@@ -372,7 +351,7 @@
     },
     "referredBy": {
       "type": "object",
-      "description": "The details of a vendor, who have reffered this dapp to dapp registry",
+      "description": "The details of a vendor, who have referred this dapp to dapp registry",
       "properties": {
         "name": {
           "type": "string",
@@ -381,6 +360,27 @@
         "url": {
           "type": "string",
           "description": "The website link of the vendor."
+        }
+      }
+    },
+    "privacyPolicyUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
+    },
+    "support": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
         }
       }
     }
@@ -697,7 +697,6 @@
     "isForMatureAudience",
     "isSelfModerated",
     "language",
-    "version",
     "availableOnPlatform",
     "chains",
     "listDate",

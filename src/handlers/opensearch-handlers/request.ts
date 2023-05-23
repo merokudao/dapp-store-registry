@@ -106,4 +106,21 @@ export class OpensearchRequest {
   public async attachAliasName(index: string, alias: string) {
     return this.opensearchClient.indices.putAlias({ index, name: alias });
   }
+
+  /**
+   * insert a new doc to database
+   * @param index index name
+   * @param body doc
+   * @returns response
+   */
+  public async updateDoc(index: string, body: any): Promise<any> {
+    const id = body.id;
+    delete body.id;
+    return this.opensearchClient.update({
+      index,
+      id,
+      body: { doc: body },
+      refresh: true
+    });
+  }
 }
