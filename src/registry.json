@@ -6579,7 +6579,7 @@
       "availableOnPlatform": [
         "web"
       ],
-      "category": "lifestyle",
+      "category": "developer tools",
       "chains": [
         1
       ],
@@ -6590,7 +6590,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Timeless NFTs",
@@ -15093,7 +15094,7 @@
       "availableOnPlatform": [
         "web"
       ],
-      "category": "finance",
+      "category": "developer tools",
       "chains": [
         1,
         137
@@ -15105,7 +15106,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Kine Protocol",
@@ -22674,7 +22676,7 @@
       "availableOnPlatform": [
         "web"
       ],
-      "category": "utilities",
+      "category": "developer tools",
       "chains": [
         1,
         137
@@ -22686,7 +22688,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "NotOkayBears",
@@ -23530,7 +23533,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Liquidifty",
@@ -27233,7 +27237,7 @@
       "availableOnPlatform": [
         "web"
       ],
-      "category": "lifestyle",
+      "category": "games",
       "chains": [
         1
       ],
@@ -27244,7 +27248,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "VoxNET",
@@ -28045,7 +28050,7 @@
       "availableOnPlatform": [
         "web"
       ],
-      "category": "finance",
+      "category": "developer tools",
       "chains": [
         1,
         137
@@ -28057,7 +28062,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Musse",
@@ -32098,7 +32104,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Drakons",
@@ -33746,7 +33753,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "G-Bots by GAMEE",
@@ -34131,7 +34139,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Gravity Finance",
@@ -39556,7 +39565,8 @@
           "version": "unknown",
           "platform": "web"
         }
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "House",
@@ -43972,7 +43982,7 @@
     {
       "name": "Rainbow Protocol",
       "description": "Rainbow is a decentralized financial market infrastructure with insurance as its core. The purpose is to develop an open insurance protocol application based on blockchain technology, build an integrated and interoperable insurance protocol matrix, and form a unified insurance infrastructure to serve the decentralized financial network. Rainbow insures individual user assets, blocks traditional insurance products, and opens up mainstream insurance sectors such as NFT insurance and derivative risk hedging insurance to create one-stop insurance product usage and services for users. The mission of Rainbow’s decentralized insurance infrastructure is to take insurance as a breakthrough, encourage and improve the decentralized financial ecosystem, and promote it to become the core of the next generation of insurance infrastructure. It provides a wide range of applications and prospects for the insurance industry.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.rainbows.finance",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -44002,7 +44012,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Nostalgia DAO",
@@ -44160,7 +44171,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "ArtisLife Network",
@@ -44861,7 +44873,7 @@
     {
       "name": "Cross-Chain Bridge",
       "description": "Bridge tokens & NFTs. Stake & farm without Impermanent Loss! The Cross-Chain Bridge is a decentralized and security-focused token & NFT bridge with yield farming. Transfer tokens or NFTs between Polygon, Ethereum and Binance Smart Chain (more soon). Earn through yield farming or liquidity mining without Impermanent Loss. Self list tokens permissionlessly.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "http://crosschainbridge.org",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -44891,7 +44903,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "CryoPunks",
@@ -45932,7 +45945,7 @@
     {
       "name": "Cortex Application",
       "description": "The Cortex App is a decentralized notebook, wallet and wiki in one. It's the ultimate tool for creating, collaborating and transacting on the open metaverse...all on a completely decentralized web3 stack.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "http://crtx.app",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -45962,7 +45975,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "CryptoAlertify",
@@ -46282,12 +46296,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Mini MetaHeros",
       "description": "Mini MetaHeros are 5000 generative nfts of varying rarity that I'll be the stars of the upcoming Mini Metaheroes Play to Earn game that rewards players and offers upgrades in Polygon Matic tokens. Mini MetaHeros are available for mint at www.minimetaheros.com for only 10 Matic.",
-      "category": "defi",
+      "category": "games",
       "appUrl": "http://minimetaheros.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -46317,7 +46332,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Monke Farm",
@@ -46714,7 +46730,7 @@
     {
       "name": "Toilet Protocol",
       "description": "Toilet Protocol is a cryptocurrency that aims to recycle the trash tokens that exist on the Polygon Mainnet network. Too many tokens that are no longer useful on the Blockchain such as fraudulent tokens, rugpull, tokens that cannot be traded on the market and so on.\n\nThe mechanism of this protocol is that the trash token that is owned is sent to the Toilet Protocol smart contract so that this smart contract will issue a new token that is pTOI or can be called Proof of Recycle\n\nHow is the pTOI token different from other tokens? Many Coins and Tokens out there use Proof of Work (PoW) and Proof of Stake (PoS). Toilet Protocol uses an unprecedented Proof of Recycle (PoR), new tokens that can be printed through recycling.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "http://toilettoi.github.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -46744,7 +46760,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "BlockNewsMedia",
@@ -46821,7 +46838,7 @@
     {
       "name": "EverLight",
       "description": "EverLight is the first fully decentralized NFT Metaverse Game which deployed on the Ethereum Layer-2 network. The Creation of EverLight only created the necessary elements in the game (characters, equipment, currency, etc) and the simplest logical closed-loop, the direction and path after the Creation are full of imagination. EverLight is an autonomous game world, which relies on community governance to determine the core and economic operating parameters of the game by community autonomy. The game can evolve itself sustainably, the evolution and creation of the character, equipment, game's method and map completely depend on the contributions and innovations of game participants.",
-      "category": "nft",
+      "category": "games",
       "appUrl": "http://www.everlight.club",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -46851,7 +46868,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Hodl My Moon",
@@ -46897,7 +46915,7 @@
     {
       "name": "Qubc",
       "description": "Qubic is the best multi-chain NFT wallet for crypto newbies. Users are able to buy NFTs  via credit cards on OpenSea and other popular marketplaces.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "http://www.qubic.app",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -46928,7 +46946,8 @@
       "repoUrl": "https://github.com/getamis",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "SnowSwap",
@@ -46968,7 +46987,7 @@
     {
       "name": "ZeroHybrid Network",
       "description": "ZeroHybrid is the industry's first ARM-based decentralized trusted computing network that can use mobile devices to provide computing power. ZeroHybrid utilized the wildly spread ARM chipsets to implement TEE, which guarantees the process of computation through the power of the hardware, enabling a trusted environment not able to be modified by other software. With the diversity of ARM chips and wide range of application scenarios, to form a safe, credible, and decentralized computing environment.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "http://zerohybrid.network/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -46998,7 +47017,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "0xCrypto.io",
@@ -48792,7 +48812,7 @@
     {
       "name": "VXG",
       "description": "VXG automates the Esports competition by connecting games to players making it easy for players of all skill levels to access and monetize their talents. VXG leverages the user experience by combining stablecoin rewards with cashback and loyalty programs.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://app.vxgaming.org",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -48841,7 +48861,8 @@
       "repoUrl": "https://github.com/Venture-X-Gaming",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Zesty Market",
@@ -49514,7 +49535,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Augur",
@@ -49625,7 +49647,7 @@
     {
       "name": "Babilu Online",
       "description": "Polygon based MMO virtual room builder where users can import and display their EXISTING NFT's from other ecosystems within their rooms and enjoy them with friends. Babilu is focused on providing a play to earn structure through the use of lootboxes & DARIC our internal deflationary game token. \n\nBabilu token holders are awarded Daric and is the only way Daric is distributed in the ecosystem giving an incentive for investors to hold and stake their tokens, Babilu tokens are also used to governance Babilu by voting mechanisms for future implementations in the game meaning that holders of babilu tokens are whom dictate the future of Babilu.\n\nUsers are also able to Trade/Gamble NFT's in a P2P manner within the game via Smart Contracts & utilizing ChainLink for provably fair results.\n\nUsers are able to earn NFT 1155 lootboxes through in game activity and then open or sell the lootboxes to others.\nLootboxes can be opened by burning the internal game token DARIC, Once opened via smart contract the lootbox contains a random NFT item from a \"collection\" of items which the user can place and utilize within their rooms. Additional collections & drops will be via community driven competitions & sponsored events. \n\nWe already have a working Alpha version of the game that works across all platforms (browser, mobile, desktop). Our NFT Import tool is also online and working within the ecosystem.\n\nThe platform will utilize ICP for all its underlying room connectivity to ensure full decentralization of the game along with Phase 2 & 3 of the universe that will facilitate Augmented Reality glasses upon tech maturation (this is achieved though the underlying spatial grid for all rooms)",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://babilu.online",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -49655,7 +49677,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Bamboo Relay",
@@ -49730,7 +49753,7 @@
     {
       "name": "Bank of Memories",
       "description": "Bank of Memories- is a decentralized data storage and private family network aimed at preserving people's memory and creating a culture of sending messages to the future, transmitting data by inheritance and creating meaningful digital avatar. The project also digitizes cultural monuments and revives museums and exhibitions, adds a new level of interaction with NFT using AR technologies. \nThe uniqueness of the project is in the combination of fundamental values and technological solutions aimed at the evolutionary transformation of society.\n\nAt the heart of a startup is a great idea - to teach people to value their memories and store them so that they give the maximum response and benefit in the future.\n\nBy raising fundamental questions and bringing together the required functionality in one platform, the project has the potential to bring people far from cryptocurrency closer to the world of blockchain by creating an application that is useful and accessible to everyone.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://bankofmemories.org/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -49760,7 +49783,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Banxa",
@@ -50996,7 +51020,7 @@
     {
       "name": "bloXroute",
       "description": "bloXroute is a Blockchain Distribution Network (BDN) that utilizes a global network of servers optimized for network performance. In other words, bloXroute allows the network to communicate fast. Nodes access this network through open source Gateways and anyone can access it through the bloXroute public-API.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://bloxroute.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -51026,7 +51050,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Bonded Finance",
@@ -52748,7 +52773,7 @@
     {
       "name": "ClassZZ",
       "description": "ClassZZ (CZZ) is the world's first public chain to realize cross-chain transactions of native tokens. Users who want to buy gas of Polygon chain through HECO, BSC and ETH can use Classzz.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://classzz.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -52778,7 +52803,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Climate Futures",
@@ -52818,7 +52844,7 @@
     {
       "name": "Clover Finance",
       "description": "Clover Finance is a substrate-based blockchain infrastructure platform that’s focused on cross-chain compatibility for decentralised applications and interoperability between different blockchains. Clover aims to bring the most seamless multi-chain experience to users and developers through its EVM/Wasm-based application, advanced developer tools, CloverScan multi-chain blockchain browser and Clover multi-chain wallet, bridging reality and the metaverse.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://clover.finance/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -52848,7 +52874,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Cobak",
@@ -53030,7 +53057,7 @@
     {
       "name": "Coingrig",
       "description": "Coingrig is your easy-to-use Mobile App Wallet. A day-to-day multi-coin crypto wallet for Polygon and 1M+ of crypto assets.\nPrivate, Non-custodial.\nAs a private wallet, Coingrig Wallet ensures you always hold the keys to your crypto currencies and can always send and receive crypto with Coingrig and any other blockchain compatible apps.\nOpen source.\nBeing open source the Coingrig Wallet can be inspected by the community to ensure that no security issues can expose your private keys to your crypto currency.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://coingrig.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -53060,7 +53087,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "CoinKit",
@@ -53719,7 +53747,7 @@
     {
       "name": "Crossmint",
       "description": "Crossmint builds infrastructure for NFTs. Our core product is a credit card checkout that enables anyone to mint in 1 minute, even if they don't have a wallet. We have a broader suite of tools including minting APIs, custodial wallets, and allowlist tools",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "https://crossmint.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -53749,7 +53777,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Crow's Nest",
@@ -55161,12 +55190,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Deefy",
       "description": "Deefy is a decentralized protocol built on top of major blockchains that allows essential financial services for NFTs such as renting, lending, and mortgages. Decentralized protocols are non-custodial, meaning the services never rely on the custody of any middleman or intermediary.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://deefy.co",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -55196,7 +55226,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "DEESSE",
@@ -55232,12 +55263,13 @@
       "repoUrl": "https://github.com/DeesseGame/dee_contracts",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "DeFi Watch",
       "description": "DeFi portfolio tracker with detailed breakdowns and multichain pool search aggregator.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://defi.watch/?utm_source=awesome&utm_medium=polygon",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -55267,7 +55299,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Defiant Wallet",
@@ -55542,7 +55575,7 @@
     {
       "name": "DEFIYIELD",
       "description": "DEFIYIELD is a safe DeFi all-in-one ecosystem for crypto investing. You can manage, protect and grow your crypto assets with essential DeFi info and an integrated yield farming toolkit. It contains an investing dashboard, the audit and rekt database, approved contracts tool, and an automatic smart contract audit scanner.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://defiyield.app/dashboard",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -55572,7 +55605,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Deflect",
@@ -55612,7 +55646,7 @@
     {
       "name": "DePay",
       "description": "DePay pioneers Web3 Payments with the power of DeFi. Accept any token with on-the-fly conversion.Receive payments directly into your own wallet (P2P). Accepting crypto payments has never been simpler. DePay offers Web3 Payment drop-in solutions for platforms like: Shopify, Wordpress etc.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://depay.fi",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -55643,7 +55677,8 @@
       "repoUrl": "https://github.com/depayfi",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Shifty Sharks",
@@ -56082,7 +56117,7 @@
     {
       "name": "DFX Finance",
       "description": "Decentralized Exchange (AMM) for foreign stablecoins like CADC, EURS, XSGD, and more.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://dfx.finance/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -56112,7 +56147,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "DIA",
@@ -56153,7 +56189,7 @@
     {
       "name": "Diagonal Finance",
       "description": "Diagonal enables businesses and creators to monetise seamlessly with crypto native subscriptions across multiple chains and tokens.\nIntegrate fixed, usage, seat-based or Superfluid streaming subscriptions with just 7 line of code.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://diagonal.finance/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -56206,7 +56242,8 @@
       "repoUrl": "https://github.com/diagonal-finance",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "digitalARThomepage",
@@ -56885,7 +56922,7 @@
     {
       "name": "DxSale",
       "description": "DxSale is a decentralized, cross chain, token management platform as a service. DxSale DAO allows for seamless onboarding of chains to provide tools to facilitate and grow out a chains ecosystem.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://dxsale.network",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -56915,7 +56952,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "DYOR Audit",
@@ -56955,7 +56993,7 @@
     {
       "name": "FutureCoin",
       "description": "FutureCoin aims to build a complete ecosystem for the crypto market based on Destiny Wallet & Swap, CoinFiles – Market Data and social media platform, which uses 2 artificial intelligences, 1 to estimate the actual volume in the market and another 1 to check the market sentiment based on user posts and comments on the platform, electric cars using solar power as secondary energy to increase reliability and autonomy, virtual bank with fintech app, payment processor and ATM infrastructure, NFT marketplace and crypto gaming marketplace where users can have multiple PAY2EARN games on the same app (similar to STEAM, only for crypto gaming), cyber security platform offering full audits of projects and platforms in the crypto space dedicated to anti-scams, honeypots and rugpulls and its own launchpad.\nAnd at the core of our ecosystem is TRADELINK (our own chain) which uses a new validation system called Proof of Trade.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://e-futurecoin.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -56985,12 +57023,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "e-Money",
       "description": "The e-Money protocol is built for the issuance of a range of interest-bearing currency-backed stablecoins reflecting various world currencies. Each token is backed by a reserve of assets denominated in its underlying currency.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://e-money.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -57020,7 +57059,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "EarnBet",
@@ -57095,7 +57135,7 @@
     {
       "name": "Eartha",
       "description": "Payment and Escrow dApp displaying amounts in EUR, JPY, USD etc.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://eartha.org/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -57156,7 +57196,8 @@
       "repoUrl": "https://github.com/Eartha-Team",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "EcoSmartECS",
@@ -57450,7 +57491,7 @@
     {
       "name": "Encrypted Ink",
       "description": "Open source WalletConnect app for macOS.\nSupports all kinds of chains, including Polygon.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://encrypted.ink",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -57480,7 +57521,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "ENCTR",
@@ -57644,7 +57686,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Entice Games",
@@ -58254,7 +58297,7 @@
     {
       "name": "TrustFi Farmer",
       "description": "TrustFi Farmer is an autonomous liquidity mining and pool creation platform built on Web3.0. On Farmer, projects can own permissionless and code-free DeFi spaces and start deploying single-asset/LP/NFT staking pools in a minute, fully code-free, no maintenance, no waiting.\nThe Platform supports multiple EVM chains (BSC, Polygon, ETH, AVAX, GateChain, HuobiChain, OkExChain, and more) ",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://farmer.trustfi.org",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -58285,7 +58328,8 @@
       "repoUrl": "https://github.com/TrustFiNetwork",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Farsite - DeFi MMO RTS",
@@ -58614,7 +58658,7 @@
     {
       "name": "Flair",
       "description": "Production-ready Smart Contracts, SDK and APIs to unleash true power of NFTs",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://flair.finance/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -58645,7 +58689,8 @@
       "repoUrl": "https://github.com/0xFlair",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Fluidcoins",
@@ -58751,7 +58796,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "FM Gallery",
@@ -58933,7 +58979,7 @@
     {
       "name": "FORTA",
       "description": "The first real-time detection network for security & operational monitoring of blockchain activity. Given relevant alerts, protocol and investors will be able to react quickly to neutralize threats and prevent or minimize loss of funds.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://forta.org/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -58964,12 +59010,13 @@
       "repoUrl": "https://github.com/forta-protocol",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Fortmatic",
       "description": "Alternative to MetaMask. One SDK to let users interact with your dApp through a beautiful user experience from any browser or device.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://fortmatic.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -58999,7 +59046,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Rosebud",
@@ -59636,7 +59684,7 @@
     {
       "name": "1Hive Gardens",
       "description": "Community-first DAO Governance Framework",
-      "category": "productivity",
+      "category": "developer tools",
       "appUrl": "https://gardens.1hive.org",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -59651,7 +59699,7 @@
       "language": [
         "en"
       ],
-      "subCategory": "decentralized-collaboration-tools",
+      "subCategory": "developer infra",
       "dappId": "1hive.app",
       "availableOnPlatform": [
         "web"
@@ -60083,7 +60131,7 @@
     {
       "name": "Gannium",
       "description": "Gannium was created in the name of WD Gann, commodity market legend. It is a stakable token under Polygon Network. Previously it was SLP token under Bitcoin Cash blockchain, and gained 3% monthly rewards in BCH. Now, it is being migrated to the Polygon network. Existing Gannium investors can exchange their SLP Gannium tokens for Polygon Gannium tokens.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://github.com/SankarSrinivasan1/gannium",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -60113,12 +60161,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Gitshock Finance",
       "description": "Multi chain smart contract builder w/o codes, interchain-bridge and wallet in one service. Supports #BNB #ETH #SOL #AVAX #POLYGON #FTM #AURORA #METIS",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://gitshock.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -60149,7 +60198,8 @@
       "repoUrl": "https://github.com/gitshock-labs",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Glitch Finance",
@@ -60906,7 +60956,7 @@
     {
       "name": "Hi As Fuck ERC20 Tokken",
       "description": "HIAF ERC20 Tokken \nSymbol: HIAF\n\"Hi As Fuck\" Tokken\nContract: 0x8b48f155DDB39cF339Ebb99fFeAFB8336A20346c\n\nObjective: Hi As Fuck Tokken (HIAF) respectfully requests to be considered for a grant as well as assistance with ICO, IPO.  Community building, remote team infrastructure, developers, and thought leaders needed.\n\n\nAttention: Interested in investing in a new cryptocurrency?\n\nInterest: We are a new cryptocurrency that is looking to create a completely decentralized  cannabis supply chain. We have plans to scale and grow the HIAF brand, opening Texas Nugz Network, which will connect industry movers such as growers, dispensary owners, chefs, media, and influencers in an Amazon meechant format.\n\nDesire: By creating a connected flexible global reporting and testing compliance blockchain based decentralized alternative, we hope to reduce friction and reduce oversight cost for both sides. \n\nAction: Support HIAF by adding liquidity on Uniswap using the Hi As Fuck tokken address provided.\n\nHi As Fuck Token will decentralize and transform the broken seed to supply tracking and regulations compliance oversight system.\n\nHIAF reduces friction and reduces oversight cost for both sides and introduces a connected, flexible, global reporting and testing compliance blockchain based decentralized alternative. \n\nGrowth and scaling plans include introduction of the Texas Nugz Network, a network of industry movers such as growers, dispensary owners, chefs, media, and influencers connected in an Amazon style merchant infrastructure.\n\nThe Texas Nugz Network combines the best of Amazon.com's merchant platform and Chick-fil-A's fast serve delivery model and employee retention techniques to create a seemless merchant and end user experience  \n\nExperience: The core team founded, owned and operated one of the 1st dispensaries and medical Marijuana recommendation clinics in Denver, Co.  Operating as caregiver for more than 3000 new patients and serving more than $3 million in medical Marijuana in just 10 months.\n\nPresident HIAF - William D Nugent\nFriend, Blockchain Developer, Artist, Entrepreneur\n\nSKILLS\n\n- Solidity - 1 year. \n- Smart Contracts - 1 year\n- ETH and Binance ERC20 / BEP20 Token Creation - 1 year\n- NFT Non-Fungible Tokens - 1 year\n- DeFi - 1 year \n- Crypto Cryptocurrency - 10 years\n- Truffle - 1 year\n- Remix.eth - 1 year\n- Ganache - 1 year\n- React - 1 year\n- Node.js - 1 year\n- Linux - 3 years\n- HTML - 7 years\n- Github - 7 years\n- Open Zeppelin - 1 year\n*This is a short list of related skills in the president's toolbox.  This is not a complete list but a list addressing the most requested relevant and pertinent skills used on a weekly basis. \n\nFounder possess a thorough knowledge of: \ndigital marketing, graphics design, smart website design, SEO, local SEO, paid ads, content marketing, brand design, animated logo design, video production, editing and publishing, WordPress, Wix, NameCheap, Softaculous, Canva, SqL, SSL, DNS, sales funnels, and email market\nEXPERIENCE\n- President | Godaddy Dave Digital Marketing and Smart Website Design Agency | 03/2021 - Present\n- Creator of HIAF ERC20 token\n- Creator of \"in the clouds\" a NFT project on AirNFT.com (see nft collection @ airnft.com/creator/davedigital and https://rarible.com/davedigital)\n- Creator of Cryptoskunks, CryptoHunks, Gekko Boys Club, and CryptoTrunks\n\n- Currently coding a decentralized blockchain autonomous casino (trying to)\n- Currently coding a Memory style game on the Ethereum Network with in game matches result in a NFT of the matched symbol as prizes\n- owner of domain name ProofofHa.bit, currently under construction\n- owner of HIAFERC20.coin a blockchain domain\n- Created NFTspace on Quora Nftspace.quora.com \n- Created OkBoomer on Quora quora.com/q/okboomer \n\nProfessional Summary\nI am a pre proof of work Junior Blockchain developer, senior business owner, lifetime entrepreneur and a curiously talented artist. \nWhy blockchain? It changes everything. \n\nAWARDS\n\n\nSocial Networks\n\nFacebook\nhttps://www.facebook.com/william.d.nugent. \n\nLinkedin\nhttps://LinkedIn.com/in/godaddydave\n\nTwitter\nhttps://twitter.com/godaddydave\n\nOther\nproofofha.bit\nhttps://davedigital.ogn.app\n\n",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://HIAFERC20.coin",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -60936,7 +60986,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Hifi Finance",
@@ -61466,7 +61517,7 @@
     {
       "name": "HyperPay",
       "description": "Multi-ecosystem Digital Wallet, Safe and User-friendly",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://hyperpay.tech/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -61496,7 +61547,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Hypersign",
@@ -61925,7 +61977,7 @@
     {
       "name": "intrXn",
       "description": "intrXn is new-age & no-code payment infrastructure for gamefi, nft’s & Metaverse. intrXn solutions include payment apps, checkout, reputation management, loyalty & rewards. Our non-custodial payment solution is live and a business can start accepting crypto payments in under 5 minutes. We have various payment modules like invoices, payment links, API's & plugins etc.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://intrxn.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -61966,7 +62018,8 @@
       "repoUrl": "https://github.com/intrXn",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Inverse Finance",
@@ -62231,7 +62284,7 @@
     {
       "name": "Itez.com",
       "description": "Fiat-to-crypto gateway with MATIC (Polygon token) support. Integrate gateway into your service or buy MATIC.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://itez.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -62261,7 +62314,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Itheum",
@@ -62908,7 +62962,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "KogeCoin",
@@ -63088,7 +63143,7 @@
     {
       "name": "LaFranc",
       "description": "Implementation of the LaFranc TRC/ERC20 contract via dAISy(deterministic Artificial Intelligence Systems via Reinforcement Learning*\n-Build on TRON TRC/ERC 20 tokens FOR LaFranc token creation -> Tron/Ethereum -Mainnet \\\n- Make sure LaFranc is scalable to 10million+ users and transactions go through within a reasonable amount of time during/after each application.\n- The ‘global’ Proof of stake & Proof of Burn implemented for the LaFranc would be for maintaining asynchronous transactions ,giving the dAIsy the ability to determine staking/burning rates given market conditions versus user input.\n- Ability for users to create their own ETH- TRX/LFR wallets based on LFR token for holding,receiving,trading Tronlink/JustSwap, so users can convert freely within TRC20/ERC20 contracts.\n",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://lafranccoinbase.herokuapp.com/image-upload",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -63118,7 +63173,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Potato Media",
@@ -63194,7 +63250,7 @@
     {
       "name": "TrustFi Launchpad",
       "description": "TrustFi Launchpad is a DAO Governance, community-driven Launchpad that conducts Insured IDOs (No-loss guarantee) on multichain environment.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://launchpad.trustfi.org/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -63225,7 +63281,8 @@
       "repoUrl": "https://github.com/TrustFiNetwork",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Lazy.com",
@@ -63265,7 +63322,7 @@
     {
       "name": "The DeFi Coach - Complete DeFi Course",
       "description": "We have created a Polygon based DeFi course for beginners. It brings you from knowing nothing to understanding decentralization, lending your crypto, borrowing against your assets, yield farming, trading etc. \nThis is a 6 week long course. \nMore details at https://learn.thedeficoach.com\nWe specifically focus on safety surrounding secret phrases. \nWe do not fit into the categories on this form!\n\nSpecially for AwesomePolygon, we can offer people that come through the website a discount on the price of the course. \nIf someone can get in contact with me that would be great 🙂\n",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://learn.thedeficoach.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -63295,7 +63352,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Lets Ask",
@@ -63668,7 +63726,8 @@
       "repoUrl": "https://github.com/Link-Key",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "ALXLEALP",
@@ -63854,7 +63913,7 @@
     {
       "name": "Literully",
       "description": "Literully is a decentralized voting platform that allows users to create and participate in voting on any topic, all without giving up their privacy or control over their data.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://literully.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -63884,7 +63943,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "LOAD Finance",
@@ -64210,7 +64270,7 @@
     {
       "name": "Lynxer",
       "description": "Lynxer is a young French company with convincing, stable and well-developed projects and very good knowledge in their field.\n\nLynxer offers an operating system to forge your Web 3.0 identity & dashboard. Access exclusive tools, communities, worlds, and currency for people, with real utility across our ecosystem and the metaverse.\n\nCommitted to the shared stewardship of our sacred earth and a virtuous & innovative human experience in the open metaverse\n\nParticipating in the blockchain movement to ensure a consciously governed global ledger that we can all trust and depend on",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://lynxer.fr",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -64240,7 +64300,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Macaron Swap",
@@ -64370,7 +64431,7 @@
     {
       "name": "W3 Mail",
       "description": "The most secure and private email protocol built on the security of the Polygon blockchain.",
-      "category": "social",
+      "category": "developer tools",
       "appUrl": "https://mail.w3.one/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -64401,7 +64462,8 @@
       "repoUrl": "https://github.com/web3nameservice",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Make.Gifts",
@@ -65382,7 +65444,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "METAFORRA",
@@ -65570,7 +65633,7 @@
     {
       "name": "MetaMundo",
       "description": "The 3D NFT marketplace for building the metaverse.",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "https://metamundo.co/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -65600,7 +65663,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "MetaName",
@@ -65635,12 +65699,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "MetaverseLinker",
       "description": "MetaverseLinker is the world's leading decentralized traffic virtual economy aggregation system, which integrates aggregated identity authentication, aggregated mining, aggregated transactions, and aggregated traffic. Relying on the blue ocean of decentralized virtual economy, the system creates an aggregated traffic pool through innovative economic models, and is committed to becoming a super traffic gathering place and value fission aggregator in the GameFI field, realizing a decentralized meta-universe world in which everyone can participate.\n\"ML’s StarCards\" game steps：\n① Purchase constellation cards by paying tokens. The constellation cards will be generated in 88 constellations through a credible random process。After purchase, place it on the desktop to form a queue with the previous constellation card，If the same constellation card is already in the queue when placed, the holder of the starcards of the same constellation will get the bonus corresponding to all the starcards between the two starcards, the former gets 30%, the latter gets 70%。\n② After the start, after the last person has issued the card, no one has issued the card again for a period of time (for example, 6 hours). The last person will get all the constellation star card rewards in the room and the game ends.\n③ Users who purchase the first 8 constellation cards in each round of the game will receive a discount.\n④ The purchase of constellation card requires payment of a certain amount of service fee, and the service fee will enter the total prize pool of the platform for ecological governance.\n",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://metaverselinker.eth.link/#/?referrer=0x01Fe1E80A4C4061D62F50D01Dfa8d5674C1a0525",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -65670,7 +65735,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Mia & the Marbles",
@@ -67373,7 +67439,7 @@
     {
       "name": "ghostNFT",
       "description": "ghostNFT is the first application of ERC721Envious Standard. ghostNFT introduces an intuitive user experience enabling creators and users to add, redeem, and view collateral to individual NFTs and NFT collections. ghostNFT targets NFT collections, NFT owners, Token Holders, and Web3 Users.",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "https://nft.ghostchain.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -67404,7 +67470,8 @@
       "repoUrl": "https://github.com/realGhostChain/",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "MRST Mining Pets NFT",
@@ -67796,7 +67863,7 @@
     {
       "name": "NFTzie",
       "description": "An NFT Cross-chain bridge for Polygon, Ethereum, and Binance smart chain opening up the world to the Metaverse.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://nftzie.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -67826,7 +67893,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Crypto Nijigen",
@@ -68368,7 +68436,7 @@
     {
       "name": "NOWNodes",
       "description": "NOWNodes is a blockchain service that provides access to full Nodes and blockbook Explorers via API. A high-quality infrastructure that is quick, cost-effective, and reliable. You can get access to 40+ blockchain networks and over 1000 coins and tokens.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://nownodes.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -68399,7 +68467,8 @@
       "repoUrl": "https://github.com/NOWNodes",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "NOWPayments",
@@ -68862,7 +68931,7 @@
     {
       "name": "Openfabric",
       "description": "Openfabric will enable access to AI solutions for the participants on the Polygon ecosystem. Our mission is to get AI technology outside the enterprise, simplify the experience, and make it accessible to all end-users.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://openfabric.ai",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -68892,12 +68961,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Gas Stations Network",
       "description": "With GSN, the Ethereum Gas Station Network, your DApp users can interact with Ethereum contracts without needing ETH for transaction fees.\n",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://opengsn.org/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -68927,7 +68997,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "OpenPredict",
@@ -69003,7 +69074,7 @@
     {
       "name": "Balloon Drop",
       "description": "Hold On Tight! \nBalloon Drops are a collection of 100 unique, PIXEL balloons filled with life! \n****They are expected to release 01/01/2022! ****\nEach balloon will represent a physical book donation along with rewards tied to the development of our first children's book, Balloon Drop Adventures! Our mission is simple, everyone deserves access to literature. Books inspire hope, provide opportunity and teleport your mind to another world. \nJoin Us On DISCORD! https://discord.gg/n4xcZeE4",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://opensea.io/collection/balloondrop",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -69033,7 +69104,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Little Faun Tymus",
@@ -70045,7 +70117,7 @@
     {
       "name": "Pet Rocks Redeemable NFTs",
       "description": "Inspired by the 1975 pet rock craze, 250 pet rock nfts to own and redeem for a 1:1 physical tokenized pet rock handcrafted by the artist. Linking blockchain tokens to real world tokenized artworks.",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "https://petrocks.art",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -70075,12 +70147,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Pheasant Network",
       "description": "Pheasant Network is an optimistic bridge between Layer 1 and Layer 2.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://pheasant.network/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -70111,7 +70184,8 @@
       "repoUrl": "https://github.com/Pheasant-Network",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "PhoenixDAO",
@@ -70297,7 +70371,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Pizzap",
@@ -70576,7 +70651,8 @@
       "repoUrl": "https://github.com/cuytoken",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "ZKasino",
@@ -71761,7 +71837,7 @@
     {
       "name": "TARS Protocol",
       "description": "TARS  is a BaaS infrastructure offering various products including \n(1) TARS Space for building dedicated branded portals;\n(2) Staff Authenticator for verifying staff identities to avoid scams; \n(3) Smart SAFT for creating token sales;\n(4) Claimer for distributing tokens on custom unlock schedules; and more.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://polygon.tars.pro/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -71814,7 +71890,8 @@
       "repoUrl": "https://github.com/tars-protocol",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "PolygonFarm Finance",
@@ -72843,7 +72920,7 @@
     {
       "name": "PRYZ",
       "description": "PRYZ - Connecting the Blockchain, Empowering Holders.\n\nThe next generation launchpad, redefining whitelist access, connecting the blockchain, educating and empowering the community.\n\nPRYZ is the first of its kind, next-generation launchpad for upcoming cryptocurrency projects. Investors who hold our native token PRYZ have the opportunity to invest in new and exciting projects ahead of the general public, also known as “Presales”.\n\nPRYZ is deployed on the Polygon Network to provide their investors all of the benefits of the Ethereum Network while also having the additional scalability, speed of transactions and smaller gas fees that are associated with a layer 2 scaling solution. Going forward PRYZ will be bridged to other networks and the Polygon network offers the required multi-chain flexibility required to complete this.",
-      "category": "productivity",
+      "category": "developer tools",
       "appUrl": "https://pryz.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -72858,7 +72935,7 @@
       "language": [
         "en"
       ],
-      "subCategory": "decentralized-collaboration-tools",
+      "subCategory": "developer infra",
       "dappId": "pryz.app",
       "availableOnPlatform": [
         "web"
@@ -73069,7 +73146,7 @@
     {
       "name": "Quatrefinance",
       "description": "Quatrefinance is platform that builds decentralized financial and non-financial protocols. At launch, we are rolling out with one from our product's categories: Q-Core (Same as Q-Lend), then subsequently developing other products such as reformed decentralized exchange which we hope it will bridge between CEX and DEX, wallet and P2p, NFTs etc",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://quatre.finance",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -73099,7 +73176,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Quick Light",
@@ -73281,7 +73359,7 @@
     {
       "name": "Railgun",
       "description": "A privacy and anonymity system built directly on-chain on Ethereum, from which you can interact directly with DEXs, lending platforms, and popular smart contract applications. RAILGUN keeps your actions secret, protecting your privacy, and allows you to keep your identity secret - thus giving you anonymity. RAILGUN does this without you ever having to leave the safety and liveliness of Ethereum and its booming ecosystem. Not only that, RAILGUN will bring its revolutionary advantages to other blockchain ecosystems in rapid succession.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://railgun.ch/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -73312,7 +73390,8 @@
       "chains": [
         137,
         1101
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Rainbow",
@@ -73941,7 +74020,7 @@
     {
       "name": "RentaFi",
       "description": "RentaFi is the most asset-efficient and easy-to-integrate protocol and platform for lending and renting NFTs among users, redistributing NFT utility to more people.",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "https://rentafi.org",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -73972,7 +74051,8 @@
       "repoUrl": "https://github.com/synschismo/RentaFi",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Reverse",
@@ -74358,7 +74438,7 @@
     {
       "name": "Rubic",
       "description": "Rubic is a Multi-Chain protocol that allows to complete swaps between 10,500+ tokens on Ethereum, Binance Smart Chain, Polygon, Avalanche, MoonRiver, Fantom and Solana in 1 click. Our protocol features 60+ DEXs, fiat on-ramps and bridges.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://rubic.exchange/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -74388,7 +74468,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "RUG GAME",
@@ -74888,7 +74969,7 @@
     {
       "name": "Sequence",
       "description": "The smartest Web3 wallet and developer platform. Sequence Wallet makes web3 easy, fun and secure for users.\n\nThe Sequence platform makes building user-friendly web3 applications easy for developers.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://sequence.xyz",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -74946,7 +75027,8 @@
       "chains": [
         137,
         1101
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "SettleMint",
@@ -74986,7 +75068,7 @@
     {
       "name": "ShibaWallet",
       "description": "ShibaWallet is a decentralized wallet for unified all your NFT artworks and meme crypto coins in one app securely, self-governance and non-custodial entirely. Our goal is committed to aggregate all popular public chains into the app and all your tokens or NFT art collectibles in one safety place, ShibaWallet supports Ethereum, Binance Smart Chain, Polygon, Arbitrum currently, and soon will be supporting Solana chain. ShibaWallet is the first NFT and meme tokens aggregator app in the metaverse world.  ",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://shibawallet.pro/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -75016,12 +75098,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "SHIBLONMOON",
       "description": "$SHIBLONMOON: The Polygon Meme Token inspired by $SHIB and Elon Musk\n",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://shiblonmoon.xyz/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -75051,7 +75134,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Shield Protocol",
@@ -75126,7 +75210,7 @@
     {
       "name": "Shyft Network",
       "description": "Shyft Network is a public blockchain protocol designed to aggregate and embed trust and validation into data stored on public and private ecosystems, and permissioned and permissionless networks. By facilitating bridging across siloed datasets, Shyft allows for layering of context on top of data, ultimately turning raw data into meaningful information.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://shyft.network",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -75156,7 +75240,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "SimpleHold.io",
@@ -75395,7 +75480,7 @@
     {
       "name": "Slash Web3 Payments",
       "description": "Slash Web3 Payments contracts and core contracts automatically connect to the best-rate DEX swap router when making payments with different tokens.\n\nThis solution allows customers to pay with any token they want to use. *EVM token",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://slash.fi/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -75426,7 +75511,8 @@
       "repoUrl": "https://github.com/slash-fi-public",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Slime Pet",
@@ -75858,7 +75944,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Spinel Finance",
@@ -76242,7 +76329,7 @@
     {
       "name": "stakefish",
       "description": "We are a reliable validator for PoS blockchains. Delegate to us, stake with us. We know staking.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://stake.fish/en/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -76272,7 +76359,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "StakeHound",
@@ -76674,7 +76762,7 @@
     {
       "name": "Steakwallet",
       "description": "Steakwallet is a multi-chain wallet that makes staking your crypto as easy as possible. Start earning interest on your coins in seconds and manage all your Polygon assets in one place!",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://steakwallet.fi",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -76704,7 +76792,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Steelbird Finance",
@@ -76744,7 +76833,7 @@
     {
       "name": "StockPoly",
       "description": "Stockpoly is the first innovative microstock platform running on blockchain technology. This is a new ecosystem for microstock platform with a new payment method, instant and secure. Easy to sell and download a million images like vector, photos, videos and many more.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://stockpoly.net/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -76774,7 +76863,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Streaming Fast",
@@ -76891,7 +76981,7 @@
     {
       "name": "Subsquid",
       "description": "Subsquid is the open-source project behind squids, a new standard for on-chain data indexing and ETL. Already powering hundreds of applications, Subsquid is the most developer-friendly way to build, test, and deploy GraphQL APIs and versatile back-ends for next-gen applications.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://subsquid.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -76922,7 +77012,8 @@
       "repoUrl": "https://github.com/subsquid",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Lunargistics",
@@ -77289,7 +77380,7 @@
     {
       "name": "Vufi Finance",
       "description": "bring decentralized stablecoin to stabilize the current cryptocurrency market.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://sweepwidget.com/view/37303-wjahor24",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -77319,7 +77410,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Sweet",
@@ -78092,7 +78184,7 @@
     {
       "name": "USDT",
       "description": "USDT is a stablecoin (stable-value cryptocurrency) that mirrors the price of the U.S. dollar, issued by a Hong Kong-based company Tether.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://tether.to/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -78122,7 +78214,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "The Ally",
@@ -78618,7 +78711,7 @@
     {
       "name": "THX Network",
       "description": "Allows you to create and embed your own ERC-20 and ERC-721 tokens in any app or website, boosting engagement and increasing revenue.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://thx.network",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -78649,7 +78742,8 @@
       "repoUrl": "https://github.com/thxprotocol",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Time Collector",
@@ -79041,7 +79135,7 @@
     {
       "name": "Bitbond Token Tool",
       "description": "Bitbond Token Tool is a web3 app that enables users to effortlessly create, manage and multisend ERC20 / ERC1400 tokens and NFTs across leading EVM chains. Users can rely on Token Tool’s configurable smart contract templates that have been audited by CertiK instead of having to program their own smart contracts. Token Tool offers a convenient user interface as well as an API in its enterprise version. Banks, corporations, as well as tech companies and content creators alike use Token Tool to kick-start their tokenization projects.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://tokentool.bitbond.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -79072,7 +79166,8 @@
       "repoUrl": "https://github.com/bitbond",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Tokeny Solutions",
@@ -80222,7 +80317,7 @@
     {
       "name": "Uny",
       "description": "\nUny is a rating NFT mega-platform, similar in functionality to China's WeChat, but has a huge difference in the social network, which is based on the interests of the soul of a person and companies. Our AI analyzes interests, multi-links, social networks, reviews, and generates a rating, thanks to which you can easily make a decision about communication with the help of NFT gifts. A community with a high level of trust is the main goal of our company",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "https://uny.su",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -80253,7 +80348,8 @@
       "repoUrl": "https://github.com/unysu",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Upbit",
@@ -80328,7 +80424,7 @@
     {
       "name": "Payouts",
       "description": "Payouts takes your Web3 project to another dimension with efficient and secure management of all your on-chain income.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://usepayouts.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -80365,7 +80461,8 @@
       "repoUrl": "https://github.com/0xa-Technologies",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Valuables by Cent",
@@ -80405,7 +80502,7 @@
     {
       "name": "Vagabond",
       "description": "Vagabond is an innovative enterprise Blockchain-as-a-Service (BaaS) solution that helps businesses and individuals to create decentralized applications for the most pressing global challenges.\n\nVagabond is a Blockchain as a Service Platform that enables businesses to implement the benefits of Blockchain into their operations. We see a significant Market Potential that addresses the most notable challenges companies face in deploying Blockchain Solutions - the cost and time of implementation and adoption. Vagabond sets to build its community for individuals and supports users to experiment, learn or run their dApps (e.g. NFT Marketplace) based on the Vagabond platform. Vagabonds primary strengths are predefined processes and modules that the user can use and adapt without writing a single line of Source Code. Experts may use GitHub to deploy their own code on Vagabond or choose from our library. We asked ourselves what it would take to make Blockchain technology more accessible to a broader Market. It led to the creation of Vagabond, a platform that helps individuals and organizations to implement, migrate and maintain their new and existing Projects to the vagabond Platform, with just a few clicks.\n\n\n",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://vagabondapp.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -80435,7 +80532,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Valli",
@@ -80623,7 +80721,7 @@
     {
       "name": "Vennverse",
       "description": "\nVennverse - Decentralized Social media of the metaverse.Social media where you can share your thoughts photos, Videos & chat, and marketplace to sell your NFTs and digital assets",
-      "category": "defi",
+      "category": "games",
       "appUrl": "https://vennverse.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -80654,7 +80752,8 @@
       "repoUrl": "https://github.com/Vennverse/venn",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Vent Finance",
@@ -81055,7 +81154,7 @@
     {
       "name": "WalletConnect",
       "description": "WalletConnect is an open source protocol for connecting decentralised applications. dApps. Following decentralised finance.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://walletconnect.org",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -81086,7 +81185,8 @@
       "chains": [
         137,
         1101
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "NOW Wallet",
@@ -81156,7 +81256,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "WazirX",
@@ -81910,7 +82011,7 @@
     {
       "name": "Wallet Swap",
       "description": "WalletSwap is a decentralised Binance Smartchain & Ethereum based Web3 Mobile Wallet. The app works with several crypto tokens and blockchain wallets. It enables users to store, send and receive Smart Chain & Ethereum based tokens on the go. These functions are designed with a focus on user experience, providing a full suite of features for naive and seasoned enthusiasts. WalletSwap offers a seamless user experience. As we believe that ease of use is vital in the adoption of cryptocurrencies, the highly intuitive and user-friendly mobile application for accessing the blockchain.\nPlaystore Link: https://play.google.com/store/apps/details?id=com.wswap.wallet\nWSWAP Token & Usecase WSWAP will be the preferred token in our ecosystem. As the preferred token we plan to use the WSWAP Token for staking, governance, paying transaction fees and gaining eligibility in WalletSwap launch pool. Let’s understand them in details.\nStaking Users will be able to stake WSWAP directly from your WalletSwap app and the rewards will be added back to their wallet on harvesting.\nGovernance WSWAP token holders will influence decisions concerning the project such as proposing or deciding on new feature, proposals and even changing the governance system itself\nMiniting NFTs WalletSwap provides an easy way to store and access all your crypto collectibles with peace of mind and security. WalletSwap will allow WSWAP holders to upload and list digital artworks in the WalletSwap NFT marketplace.\nLaunchPool Eligibility WalletSwap Launchpad will be a full- service launchpad for new block chain projects who want to benefit from the security and trust lessness that smart contracts can provide. WSWAP token holders will be eligible to participate in WalletSwap launch pools.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://wswap.site",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -81940,7 +82041,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "WUBITS DeSocial",
@@ -82058,7 +82160,7 @@
     {
       "name": "4EVERLAND",
       "description": "4EVERLAND is a blockchain technology-powered cloud computing platform of web3, designed to help developers develop Web 3 applications efficiently. \n\nOur platform enables devs to quickly deploy the IPFS-based front-end with decentralised permanent storage, while being compatible with HTTP/HTTPS protocol access and global acceleration.（Ensuring a web2-like access experience）and really easy to operate,Deploy in 3 minutes without any plug-ins or configuration changes.\nThis is the demo we built based on the open source front-end code of the polygon part of the page, as well as our collaborative project to build the Dweb.We hope this will help you understand us better.\nhttps://matic-docs.4everland.app/\nhttps://dweb.bella.fi/\n\nWe are willing to be the infrastructure of the polygon ecosystem web3 to serve the projects and developers of the polygon ecosystem.\n\nIn the Beta version at the end of this year, we will choose polygon as our L2 solution to better improve our service.\n\nLooking forward to becoming an official eco-partner of polygon.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://www.4everland.org/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -82088,7 +82190,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "AAX",
@@ -82303,7 +82406,7 @@
     {
       "name": "Ambire Wallet",
       "description": "Ambire Wallet is the first DeFi wallet that combines power with ease of use,  solving common pain points of DeFi and EVM-compatible chains.\n",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.ambire.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -82333,7 +82436,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Animoca Brands",
@@ -82443,7 +82547,7 @@
     {
       "name": "Aquatic Wars",
       "description": "Aquatic Wars is 100% on-chain, dynamic, NFT game. \nThe goal of the game is simple: become the biggest fish in the ocean. \nEat other fish, extend your protective bubble and give your fish steroids to become the biggest fish on the ocean. ",
-      "category": "utilities",
+      "category": "games",
       "appUrl": "https://www.aquaticwars.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -82473,7 +82577,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Arkham",
@@ -82691,7 +82796,7 @@
     {
       "name": "Datagen Project",
       "description": "an integrated ecosystem that aims to close the efficiency gap between centralized end decentralized providers of different applications requiring cloud computing starting from a new decentralized infrastructure for privacy-friendly search engine optimization. The main elements are: \n-A fee-free crypto/fiat exchange that is completely free for users (that we will create only if we are in overfunding).\n-A blockchain-powered privacy-friendly web search engine which is a decentralized privacy-friendly search engine with miners that provide computing power on demand to make the researches. it can collect and analyze the blockchain-organized web researches and thanks to a special certificate it can receive the precise pattern of researches of every single device disconnected from the IP and so to the real person. In this way, it's possible to increase profitability and lower the costs for the blockchain-powered privacy-friendly search engines increasing the safety of users' data thanks to transparent blockchain technology.\n-A decentralized blockchain-powered open infrastructure where demand and supply of computing power can meet. Thought as a marketplace of computing power, can have different uses with different computational problems to be solved on demand. A new efficient way to require cloud computing with a focus on keeping it scalable (hybrid between PoW and PoS) and on building interconnectivity between different applications built on the top of the native blockchain (allowing involved companies to put their applications -voluntarily- on a dedicated app-store).\nInside the ecosystem, there is a native cryptocurrency (DataGen) to be used as the payment method for the services of the ecosystem itself.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.b-datagray.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -82721,7 +82826,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "B21",
@@ -82931,7 +83037,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Bettery",
@@ -83655,7 +83762,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Blinkfire",
@@ -83766,7 +83874,7 @@
     {
       "name": "Blocknative",
       "description": "The easy way to work with the mempool.\n\nBlocknative’s suite of enterprise-grade tools make it easy for builders and traders to add multi-chain mempool data into their Dapp and trading strategies. Get started today with: \n\nGas Platform - the most accurate Polygon gas estimation. Available as a browser extension or API. \n\nOnboard - Blocknative Web3-Onboard is the quickest and easiest way to add multi-wallet and multi-chain support to your project. With built-in modules for more than 35 unique hardware and software wallets, Web3-Onboard saves you time and headaches.\n\nMempool Explorer - Build real-time transaction event streams with Mempool Explorer. Fast, flexible, and easy-to-integrate with your projects and trading strategies.\n\nMempool API & SDK - Blocknative's proven mempool platform opens up the world of streaming transaction event data. Our API and SDK makes mempool data easy to build with and integrate. ",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://www.blocknative.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -83797,7 +83905,8 @@
       "repoUrl": "https://github.com/blocknative/",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Blockswap",
@@ -84013,7 +84122,7 @@
     {
       "name": "Boson Protocol",
       "description": "Boson Protocol is the decentralized network on which future commerce will run. And it starts with metaverse commerce.",
-      "category": "nft",
+      "category": "games",
       "appUrl": "https://www.bosonprotocol.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -84043,7 +84152,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Brand Extender",
@@ -84646,7 +84756,7 @@
     {
       "name": "USD Coin",
       "description": "USD Coin (USDC) is a digital stablecoin that is pegged to the United States dollar and runs on the Ethereum blockchain. Each USDC is backed by a dollar held in reserve.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.circle.com/en/usdc",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -84676,7 +84786,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Clinique",
@@ -84996,7 +85107,7 @@
     {
       "name": "Comoco",
       "description": "Comoco is building a new on-chain infrastructure (Comoco Licensor) and utilities (Comoco Sculptor, Lens & Marketplace) for NFT licensing. Our mission is to provide the go-to solution for NFT licensing, utilities and trading on L1 & L2, with higher flexibility and lower cost than Layer 1 solutions.\nTo provide the next-gen NFT/IP infrastructure and utilities, Comoco are building:\n1) Comoco Licensor is built in form of a series of new Layer 2 protocols for NFT, which support NFT licensing and trading on both L1 and L2.\n2) Comoco Sculptor is transforming 2D profile pictures into 3D avatars minted as derived NFTs with Comoco Licensor protocol. This can be used in the Comoco Lens app, VR/AR, 3D games, animations and other metaverse utilities.\n3) Comoco Lens is the utility application and showcase to use the 3D avatars for video calls, recording, AR/VR, games and metaverse.\n4) Comoco Marketplace is the first marketplace based on Comoco Licensor protocols and introducing 'NFT Series' format, which includes original NFT, derived NFT, leasing and sub-licensing trading in the same IP series. ",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "https://www.comoco.xyz/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -85061,7 +85172,8 @@
       "repoUrl": "https://github.com/comoco-labs",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Composable Finance",
@@ -86641,7 +86753,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Exceedme",
@@ -88388,7 +88501,7 @@
     {
       "name": "Ledger",
       "description": "The secure platform for digital assets and Web3.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.ledger.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -88418,7 +88531,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Likha NFT",
@@ -88610,7 +88724,7 @@
     {
       "name": "LegendsOfCrypto - LOCGame",
       "description": "Legends of Crypto is a play-to-earn trading card game where players compete in an epic duel using fantasy cards. The game is being developed by RBL Labs BV, Amsterdam-based gaming, and NFT studio headed by industry veterans Mik Mironov (CEO). Legends of Crypto pays tribute to the legends who shaped the crypto industry, by creating playable cards of these legends. Legend of Crypto is a competitive game which means players need to create the strongest deck in the game to outsmart the opponent. Players have complete ownership of cards which means they have the freedom to trade, sell, and use their cards within or beyond the game.  What's more, the game's own metaverse. The game introduces \"Cryptise City\" a place where the player can own land, customise their place, invite friends providing a best immersive experience.",
-      "category": "productivity",
+      "category": "games",
       "appUrl": "https://www.locgame.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -88625,7 +88739,7 @@
       "language": [
         "en"
       ],
-      "subCategory": "decentralized-collaboration-tools",
+      "subCategory": "metaverse",
       "dappId": "locgame.app",
       "availableOnPlatform": [
         "web"
@@ -88724,7 +88838,7 @@
     {
       "name": "MAP Protocol",
       "description": "Omnichain layer of Web3 with absolutely secure cross-chain communication built upon Light-client and zk-SNARK",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://www.maplabs.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -88755,7 +88869,8 @@
       "repoUrl": "https://github.com/mapprotocol",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Market.xyz",
@@ -89080,7 +89195,7 @@
     {
       "name": "MetaTravelers",
       "description": "We are a cross-metaverse ecosystem of gamified experiences and avatar embodiment driven by deep lore, emerging technologies, and community governance.",
-      "category": "nft",
+      "category": "games",
       "appUrl": "https://www.metatravelers.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -89111,7 +89226,8 @@
       "repoUrl": "https://github.com/NextDimensionStudios",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Meteorites Finance",
@@ -89186,7 +89302,7 @@
     {
       "name": "Mie Network",
       "description": "MIE Network is here to absorb the world into blockchain technology. We are here to do that by making MIE Network the largest blockchain-based operating system in the world. We are not just saying it but we have planned it all through.\n\nMIE Network is here to function as the most trusted and economical platform for individuals, entrepreneurs, start-ups, and small businesses for investing, trading, transacting, and prospering by having a global market position with a broad perspective that facilitates integrity, transparency, and economic well-being",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.mie.network/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -89216,7 +89332,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Minke",
@@ -89657,7 +89774,7 @@
     {
       "name": "Bridge Wallet",
       "description": "Bridge Wallet is a non-custodial multi-chain mobile wallet available on iOS and Android. It supports the Polygon network with a zero fees fiat on-ramp and off-ramp to buy and cash out MATIC, USDC and USDT directly to/from the Polygon network. Users can manually add any Polygon tokens to their wallet, swap them directly in the app on Quickswap, and use other Polygon dApps via WalletConnect.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.mtpelerin.com/bridge-wallet/polygon-wallet",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -89687,7 +89804,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "MyConstant",
@@ -89854,7 +89972,8 @@
       "repoUrl": "https://github.com/nakamotogames",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "NiceHash",
@@ -90596,7 +90715,7 @@
     {
       "name": "PEBO Coin",
       "description": "PEBO is the Cryptocurrency developed to solve the issue of plastic bottle accumulation and eradicate the problem by recycling the PETE (polyethylene terephthalate) bottles into polyester yarn and then to fabric for day-to-day use. A new reward system to collect the used plastic bottles with the use of $PEBO.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.pebocoin.com/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -90626,7 +90745,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Personal Tokens",
@@ -90736,7 +90856,7 @@
     {
       "name": "Polaris",
       "description": "Polaris is an open protocol that allows anyone to easily create secure liquidity mining pools. These pools (\"Supernovas\") incentivizes long-term liquidity provision and accrue value back to the POLAR token.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.polarisdefi.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -90766,7 +90886,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Polkamarkets",
@@ -91507,7 +91628,7 @@
     {
       "name": "Raised in Oblivion X",
       "description": "RIO is the result of one of the biggest collaborations in the blockchain gaming world. Dozens of professionals from different fields and a large number of their supporters have come together to release the first Polygon network-wide survival game using the latest technologies Play-to-Earn, Metaverse, NFTs, Smart Contracts, Machine Learn, Unreal Engine, etc.",
-      "category": "utilities",
+      "category": "games",
       "appUrl": "https://www.raisedinoblivionx.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -91537,7 +91658,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Rapica (RUF) NFT",
@@ -91719,7 +91841,7 @@
     {
       "name": "reBÜSE",
       "description": "reB‚àÜSE (\"Rebase\") is a social capital system with adaptive easing and yield farming.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.rebase.capital/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -91749,7 +91871,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Slink Labs(sLabs)",
@@ -92064,7 +92187,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Scalara",
@@ -92139,7 +92263,7 @@
     {
       "name": "SEOR Network",
       "description": "SEOR Network is an independent Oracle system, which can provide a unified general data protocol for off-chain data for different blockchain systems, and provide the required accurate data for various Dapps such as DeFi, Game, and Tools.\n\n",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://www.seor.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -92169,7 +92293,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Serious Dog Club",
@@ -92873,7 +92998,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Superfluid",
@@ -93516,7 +93642,7 @@
     {
       "name": "Triangle",
       "description": "Triangle powers businesses to embed Web3 experiences across DeFi, NFTs, payments, social, gaming, and many more by using the most powerful wallet infrastructure API.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://www.triangleplatform.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -93547,7 +93673,8 @@
       "repoUrl": "https://github.com/triangleplatform",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Tutellus",
@@ -94066,7 +94193,7 @@
     {
       "name": "VORZ",
       "description": "VORZ is a semi-decentralized Gateway To Meraverse that aims to bring together web2 applications and rebuild them in the web3 space, such as TikTok, OpenSea, and Shopee as the People's Entertainment Metaverse. It is designed to provide access to markets for the unbanked individuals in the social metaverse who are unable to do so in the traditional web2 space. The platform empowers content creators and ordinary users through the use of tokenization and blockchain technology, enabling them to earn income through the creation, posting, minting, and monetization of content. VORZ also plans to launch additional community projects, including a decentralized exchange and a launchpad for builders, in an effort to promote mass adoption and innovation in the web3 space through the use of social network tokenized content creator powered economy and non-fungible tokens for entertainment and human society in the crypto metaverse.",
-      "category": "productivity",
+      "category": "developer tools",
       "appUrl": "https://www.vorz.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -94081,7 +94208,7 @@
       "language": [
         "en"
       ],
-      "subCategory": "decentralized-collaboration-tools",
+      "subCategory": "developer infra",
       "dappId": "vorz.app",
       "availableOnPlatform": [
         "web"
@@ -94173,7 +94300,7 @@
     {
       "name": "XDEFI Wallet",
       "description": "XDEFI is a chain agnostic wallet that allows users to Store, receive and send all their digital assets irrespective of their native chain.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://www.xdefi.io/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -94203,7 +94330,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "XT.COM",
@@ -95075,7 +95203,7 @@
     {
       "name": "Zeromatic ZMATIC",
       "description": "Zpayments is a private payment system powered by Zeromatic protocol and Polygon network. With $ZMATIC users can send their funds confidentially (transferred amounts are private) and anonymously (identities of transactors are private). Zeromatic protocol based on Σ-Bullets (improved zero-knowledge proof system Bulletproof and Sigma protocol) with modifications for “many-out-of-many proofs”.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://zmatic.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -95105,12 +95233,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Zoociety",
       "description": "ZOOCIETY is a next-generation one-stop ecosystem that leverages the power of emerging technologies to bring a wide range of tools, resources, and services to create a more connected and creative world in a new, innovative way.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://zoociety.xyz",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -95141,7 +95270,8 @@
       "repoUrl": "https://github.com/Zoociety",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "ZORA",
@@ -95216,7 +95346,7 @@
     {
       "name": "Zyield Finance",
       "description": "Zyield is a DeFi interface and non-custodial wallet providing curated yield opportunities to Canadians.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://zyield.fi",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -95246,7 +95376,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "inToken",
@@ -95554,7 +95685,7 @@
     {
       "name": "Metakins World",
       "description": "Metakins World is a Professional Services Metaverse populated with NFTs from the Metakins NFT phase 1 product. Phase 2 is a side scroller metavere that unites the consumers with the service providers. Built on polygon. Metakins World is a fun place to goto but is rivaled only by the network of verified professionals that have set up shop in the metaverse.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "http://metakins.world",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -95584,7 +95715,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Metric Exchange",
@@ -96659,12 +96791,13 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Super Protocol",
       "description": "Unstoppable, trustless and permissionless cloud infrastructure for any kind of Web3 project. Fully decentralized unlike AWS",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "http://superprotocol.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -96695,7 +96828,8 @@
       "repoUrl": "https://github.com/Super-Protocol",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Sweep",
@@ -96841,7 +96975,7 @@
     {
       "name": "TacVue",
       "description": "TacVue is a social marketplace with tools for decentralized project development & intelligent applications.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "http://tacvue.io",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -96871,7 +97005,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Taho",
@@ -97064,7 +97199,7 @@
     {
       "name": "ULTI Arena",
       "description": "Ulti Arena is an NFT marketplace for Game Assets. Buyers/sellers can trade unique 2D/3D assets, Music, Sound and UI/HUD on the platform. Additionally we’ll implement Proof-of-Gaming, a gaming client allowing you to earn $ULTI when playing games such as Dota 2 (More game integrations will come in the future, CS:GO etc..). We believe that NFT’s will change the world of gaming as we know it. Imagine every game in the future to be made on Blockchain — you can transfer any existing game items from one to another. Assets can be traceable and also unique — artists and developers will have new ways to monetize their creations and see how they’re used. Ulti Arena has few major products:  NFT marketplace is made for Game Assets. Buyers or sellers can trade their unique 2D/3D assets such as music, sound and UI/HUD on the platform. The marketplace is gamer & eSport oriented. At the beta phase we are only allowing game artists and game studios to join and upload their artworks. You will be able to find high quality art at our marketplace. Proof-of-Gaming (PoG), a gaming client allowing you to earn ULTI tokens when playing games. In a beta phase, the client will be web only where you won’t need to download anything at your PC. Everything will be taking form our web client. You will only need to connect your game account with our platform. The first game which we will be supporting will be Dota 2. We do plan more integrations in the future such as CS:GO, LoL, PUBG but that’s something to look for once we finish our beta phase with the first game. Console and Mobile support is also a thing we will be looking for in the future. Crypto Collectable Card Game (CCCG) recently partnered with Remote Control Productions GmbH and Frag Games (Pvt.) Limited. Our partners have a history of innovative solutions in games, this will allow us to provide high quality game with success. The game style will be similar to LoL/Mobile Legends with Anime + Manga theme. The game will include a huge Pay to Earn element where users will be able to level up their cards/characters and later on sell it with profit. Make sure to check out our social media profiles for pre-order details. Ulti Arena Tournaments, a place where people will be able to compete against each other in a team. Something similar like FACEIT or ESEA gaming platform, but this time it will be made for the crypto world with crypto prizes. We plan to start with Dota 2 and slowly expand to newer titles same as PoG (Proof-of-Gaming). Discussion board which will be Reddit-type like where people will be able to express ideas, share new projects, assets in Gaming. Everyone will have the ability to upvote, downvote, earn ULTI Tokens through sharing quality projects, discussions or valuable answers. Depending on the level of ULTI Tokens earned through Discussion Boards, everyone will gain Badges (from Newbie level to Gosu). This is a great addition to the Ulti Arena project. Ulti Arena Financial Tools, reflections, staking and framing might also come in the near future. Please make sure to watch our social media for the newest news.",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "http://ultiarena.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -97094,7 +97229,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "UniDexBot",
@@ -97741,7 +97877,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Crypto Teens",
@@ -97776,7 +97913,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "DAOworks",
@@ -98581,7 +98719,8 @@
       "repoUrl": "https://github.com/Mummy-io",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Myax - My Avatar X",
@@ -98622,7 +98761,7 @@
     {
       "name": "Soullib",
       "description": "Soullib is a blockchain driven project targeted a Lifting Life's Weight by creating a community driven platform for people to pseudo-anonymously, confidentially and in an unstigmatised manner,  air their burdens on a peer-to-peer basis to someone who is more skillful and experienced in other to make informed decisions as to solving life's challenges.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "http://www.mysoullib.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -98652,7 +98791,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Project Ulysses",
@@ -98692,7 +98832,7 @@
     {
       "name": "NFTPort",
       "description": "NFTPort is the Stripe for NFTs: one-stop, simple NFT Infrastructure and APIs for developers to bring NFT applications to market in hours instead of months. \n\nNFTPort takes care of the infrastructure so that developers can focus on building their applications. NFTPort provides APIs for multi-chain NFT data and easy NFT minting, together with enhanced functionalities for search, recommendations and detecting NFT counterfeits.",
-      "category": "nft",
+      "category": "developer tools",
       "appUrl": "http://www.nftport.xyz",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -98723,7 +98863,8 @@
       "repoUrl": "https://github.com/nftport/",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "NOE CRYPTOBANK",
@@ -98834,7 +98975,7 @@
     {
       "name": "Orbiter Finance",
       "description": "A decentralized optimistic cross-rollup bridge, which is the infrastructure of Layer 2",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "http://www.orbiter.finance",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -98866,7 +99007,8 @@
       "chains": [
         137,
         1101
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Paraverse App",
@@ -99005,7 +99147,7 @@
     {
       "name": "Raaskoin",
       "description": "Raaskoin is a Stablecoin backed by gold, silver, and platinum.  See Summary here: https://www.linkedin.com/pulse/raaskoin-unique-revolutionary-crypto-stablecoin-dr-taranza-ganziro.",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "http://www.raaskoin.com",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -99035,7 +99177,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "RAVAverse",
@@ -99071,7 +99214,8 @@
       "repoUrl": "https://github.com/RavaChronicles",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Ready Player Motorsports",
@@ -99106,7 +99250,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "metaverse"
     },
     {
       "name": "Rogue Fox Guild",
@@ -99146,7 +99291,7 @@
     {
       "name": "Scalene",
       "description": "Aims to provide 3D Designers a blockchain infrastructure to create, shred and recreate 3D NFTs with proof of digital ownership on polygon network.",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "http://www.scalene.app",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -99176,7 +99321,8 @@
       "isListed": true,
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "SoulPrime",
@@ -100672,7 +100818,7 @@
     {
       "name": "Flashare",
       "description": "we're the first decentralized goFundMe built on Polygon!",
-      "category": "productivity",
+      "category": "developer tools",
       "appUrl": "https://flashare.app",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -100697,7 +100843,7 @@
       "language": [
         "en"
       ],
-      "subCategory": "decentralized-collaboration-tools",
+      "subCategory": "developer infra",
       "dappId": "flashare.app",
       "availableOnPlatform": [
         "web"
@@ -101053,7 +101199,7 @@
     {
       "name": "Xircus",
       "description": "Decentralized software as a service platform offering low-code and no-code solutions to deploy web3 apps in minutes at almost zero cost",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://xircus.app",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -101084,7 +101230,8 @@
       "repoUrl": "https://github.com/xircusweb3",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Decent",
@@ -101206,7 +101353,7 @@
     {
       "name": "Xion Global",
       "description": "Multi-chain crypto payment gateway",
-      "category": "utilities",
+      "category": "developer tools",
       "appUrl": "https://xion.global",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -101263,12 +101410,13 @@
       "repoUrl": "https://github.com/xion-global/xion_smart-contracts/tree/master/contracts/subscriptions",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Socket",
       "description": "Socket is a complete interoperability stack which allows asset & data transfer across chains, enabling developers to build truly cross-chain apps",
-      "category": "business",
+      "category": "developer tools",
       "appUrl": "https://socket.tech/",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -101299,7 +101447,8 @@
       "repoUrl": "https://github.com/SocketDotTech",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Assetux",
@@ -101489,7 +101638,7 @@
     {
       "name": "MtopSwap",
       "description": "MtopSwap is the world's first MultiDEX, offering a unique & innovative way for users to trade on multiple decentralized exchanges (DEX) simultaneously. Our platform standardizes the front-end of multiple DEXes into 1 simplified & intuitive user interface, which we refer to as a \"Module\". With our one-of-a-kind MultiDEX, users can seamlessly trade multiple tokens & DEXes of their choice on 10 EVM chains, on one screen, improving trading efficiency & saving time",
-      "category": "defi",
+      "category": "developer tools",
       "appUrl": "https://app.mtopswap.com/multidex",
       "images": {
         "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
@@ -101520,7 +101669,8 @@
       "repoUrl": "https://github.com/0xGuard-com/audit-reports/tree/master/MtopSwap%20NFT",
       "chains": [
         137
-      ]
+      ],
+      "subCategory": "developer infra"
     },
     {
       "name": "Echooo",
@@ -103400,7 +103550,7 @@
       "chains": [
         137
       ],
-      "category": "social networking",
+      "category": "games",
       "images": {
         "logo": "https://images.thedapplist.com/prod/uploads/projects/image_1667716558471_over-the-reality.png",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
@@ -103423,7 +103573,8 @@
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
       },
-      "listDate": "2023-05-13"
+      "listDate": "2023-05-13",
+      "subCategory": "metaverse"
     },
     {
       "name": "Asset Money",
@@ -104022,7 +104173,7 @@
       "chains": [
         137
       ],
-      "category": "social networking",
+      "category": "games",
       "images": {
         "logo": "https://images.thedapplist.com/dev/uploads/proposals/avatar_meta-shooter.png",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
@@ -104042,7 +104193,8 @@
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
       },
-      "listDate": "2023-05-13"
+      "listDate": "2023-05-13",
+      "subCategory": "metaverse"
     },
     {
       "name": "Apostle Arena",
@@ -104081,7 +104233,8 @@
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
       },
-      "listDate": "2023-05-13"
+      "listDate": "2023-05-13",
+      "subCategory": "metaverse"
     },
     {
       "name": "Vera",
@@ -104692,7 +104845,8 @@
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
       },
-      "listDate": "2023-05-13"
+      "listDate": "2023-05-13",
+      "subCategory": "metaverse"
     },
     {
       "name": "Yel",
@@ -105852,8 +106006,9 @@
     {
       "title": "Curated List",
       "dappIds": [
-        "org.uniswap.app",
-        "io.opensea.app"
+        "uniswap.app",
+        "opensea.app",
+        "walletconnect.app"
       ],
       "description": "A curated list of dapps that we think you will love.",
       "key": "curated-list"

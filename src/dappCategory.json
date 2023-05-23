@@ -18,7 +18,10 @@
     },
     {
         "category": "developer tools",
-        "subCategory": ["discovery tool"]
+        "subCategory": [
+            "discovery tool",
+            "developer infra"
+        ]
     },
     {
         "category": "education",
