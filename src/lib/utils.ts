@@ -371,7 +371,8 @@ export const searchFilters = (
     page = 1,
     dappId = null,
     searchById = false,
-    ownerAddress = null
+    ownerAddress = null,
+    isMinted = null
   } = payload;
   let { limit = recordsPerPage } = payload;
 
@@ -451,6 +452,8 @@ export const searchFilters = (
   }
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
+
+  if (isMinted) query.bool.must.push({ match: { minted : isMinted } });
 
   if (isListed && !searchById && !search && !ownerAddress)
     query.bool.must.push({

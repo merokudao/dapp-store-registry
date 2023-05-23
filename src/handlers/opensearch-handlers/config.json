@@ -253,7 +253,8 @@
             "walletApiVersion",
             "metrics",
             "ownerAddress",
-            "referredBy"
+            "referredBy",
+            "minted"
         ]
     }  
 }

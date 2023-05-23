@@ -15,4 +15,5 @@ export interface FilterOptions {
   page?: string;
   dappId?: string;
   developer?: any;
+  isMinted?: boolean;
 }
