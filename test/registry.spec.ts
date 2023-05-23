@@ -136,7 +136,7 @@ describe("DappStoreRegistry", () => {
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp =>
         dapp.chains.includes(1)
       );
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
     });
 
     it("is able to filter results on language", async () => {
@@ -145,7 +145,7 @@ describe("DappStoreRegistry", () => {
       const dapps_1 = fixtureRegistryJson.dapps.filter(
         dapp => dapp.language.indexOf(language) !== -1
       );
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
     });
 
     it("is able to filter results on age", async () => {
@@ -154,19 +154,19 @@ describe("DappStoreRegistry", () => {
       const dapps_1 = fixtureRegistryJson.dapps.filter(
         dapp => dapp.minAge > age
       );
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
     });
 
     it("is able to filter results on listing (isListed: true)", async () => {
       const registry_dapps_1 = await registry.dApps({ isListed: true });
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp => dapp.isListed);
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
     });
 
     it("is able to filter results on listing (isListed: false)", async () => {
       const registry_dapps_1 = await registry.dApps({ isListed: false });
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp => !dapp.isListed);
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
     });
 
     it("is able to filter results on matureAudience flag", async () => {
@@ -176,7 +176,7 @@ describe("DappStoreRegistry", () => {
       const dapps_1 = fixtureRegistryJson.dapps.filter(
         dapp => dapp.isForMatureAudience
       );
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
 
       const registry_dapps_2 = await registry.dApps({
         forMatureAudience: false
@@ -184,7 +184,7 @@ describe("DappStoreRegistry", () => {
       const dapps_2 = fixtureRegistryJson.dapps.filter(
         dapp => !dapp.isForMatureAudience
       );
-      registry_dapps_2.length.should.not.equal(dapps_2.length);
+      registry_dapps_2.should.deep.equal(dapps_2);
     });
 
     it("is able to filter results on specific developer", async () => {
@@ -205,7 +205,7 @@ describe("DappStoreRegistry", () => {
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp =>
         categories.includes(dapp.category)
       );
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
     });
 
     it("is able to filter results on platform", async () => {
@@ -216,7 +216,7 @@ describe("DappStoreRegistry", () => {
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp =>
         dapp.availableOnPlatform.some(x => platforms.includes(x))
       );
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
 
       platforms = ["ios", "android"];
       const registry_dapps_2 = await registry.dApps({
@@ -225,7 +225,7 @@ describe("DappStoreRegistry", () => {
       const dapps_2 = fixtureRegistryJson.dapps.filter(dapp =>
         dapp.availableOnPlatform.some(x => platforms.includes(x))
       );
-      registry_dapps_2.length.should.not.equal(dapps_2.length);
+      registry_dapps_2.should.deep.equal(dapps_2);
     });
 
     it("is able to filter results on allowed countries", async () => {
@@ -238,7 +238,7 @@ describe("DappStoreRegistry", () => {
           validCountries.includes(x)
         );
       });
-      registry_dapps_1.length.should.not.equal(dapps_1.length);
+      registry_dapps_1.should.deep.equal(dapps_1);
 
       validCountries = ["au", "us"];
       const registry_dapps_2 = await registry.dApps({
@@ -257,7 +257,7 @@ describe("DappStoreRegistry", () => {
         }
         return true;
       });
-      registry_dapps_2.length.should.not.equal(dapps_2.length);
+      registry_dapps_2.should.deep.equal(dapps_2);
     });
 
     it("is able to filter results on blocked countries", async () => {
@@ -297,7 +297,7 @@ describe("DappStoreRegistry", () => {
         }
         return false;
       });
-      registry_dapps_2.length.should.not.equal(dapps_2.length);
+      registry_dapps_2.should.deep.equal(dapps_2);
     });
 
     it("is able to filter results on or after certain list date", async () => {
