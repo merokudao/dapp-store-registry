@@ -247,6 +247,24 @@ export class DappStoreRegistry {
     this.searchEngine?.addAll(docs);
   };
 
+  private getCatSubCatMapping(category: string[] = [], subCategory:string[] = []) {
+    const catSubcatMapp = categoryJson.reduce((aggs: any, value) => {
+      aggs[value.category] = value.subCategory;
+      return aggs;
+    }, {});
+
+    return category.map(cat => {
+      const allSubcat = catSubcatMapp[cat];
+      let catFilter = { category: cat, subCategory: [] as string [] };
+      subCategory.map((sc: string) => {
+        if (allSubcat.includes(sc)) {
+          catFilter.subCategory.push(sc)
+        }
+      });
+      return catFilter;
+    });
+  };
+
   private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
     let res = dapps;
 
@@ -322,17 +340,19 @@ export class DappStoreRegistry {
           return false;
         });
       }
+
+      const catSubCatMapping = this.getCatSubCatMapping(filterOpts.categories, filterOpts.subCategory);
+      
       if (filterOpts.categories) {
         const categories = filterOpts.categories;
         res = res.filter(d => categories.includes(d.category));
       }
-
-      if (filterOpts.subCategory) {
-        const subCategory = filterOpts.subCategory;
-        res = res.filter(
-          d => d.subCategory && subCategory.includes(d.subCategory)
-        );
-      }
+      catSubCatMapping.forEach(catD => {
+        const { category, subCategory } = catD;
+        if (subCategory.length) {
+          res = res.filter(d => d.category !== category || (d.subCategory && subCategory.includes(d.subCategory)));
+        }
+      })
 
       if (filterOpts.developer) {
         const developerId = filterOpts.developer.githubID;
