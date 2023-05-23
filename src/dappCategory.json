@@ -18,7 +18,10 @@
     },
     {
         "category": "developer tools",
-        "subCategory": ["discovery tool"]
+        "subCategory": [
+            "discovery tool",
+            "developer infra"
+        ]
     },
     {
         "category": "education",
@@ -51,7 +54,12 @@
             "off-ramping",
             "payments",
             "finance",
-            "airdrop tool"
+            "airdrop tool",
+            "others",
+            "tooling",
+            "prediction markets",
+            "lending-and-borrowing",
+            "infrastructure"
         ]
     },
     {
@@ -171,7 +179,11 @@
     },
     {
         "category": "nft",
-        "subCategory": []
+        "subCategory": [
+            "art",
+            "pfps",
+            "domain names"
+        ]
     },
     {
         "category": "gambling",
