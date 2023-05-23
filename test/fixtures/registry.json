@@ -28,7 +28,7 @@
         "githubID": "bitpack1",
         "website": "https://something.com"
       },
-      "category": "finance",
+      "category": "defi",
       "privacyPolicyUrl": "https://somethingelse.com",
       "support": {
         "url": "https://something.com"
@@ -55,7 +55,7 @@
         "githubID": "bitpack1",
         "website": "https://something.com"
       },
-      "category": "music",
+      "category": "entertainment",
       "privacyPolicyUrl": "https://somethingelse.com",
       "support": {
         "url": "https://something.com"

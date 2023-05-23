@@ -8,27 +8,24 @@ export const dAppCategory = [
   "developer tools",
   "education",
   "entertainment",
-  "finance",
+  "defi",
   "food and drink",
   "games",
-  "graphics and design",
   "health and fitness",
   "lifestyle",
   "kids",
-  "magazines and newspapers",
-  "medical",
-  "music",
-  "navigation",
   "news",
-  "photo and video",
+  "photography",
   "productivity",
-  "reference",
   "shopping",
   "social networking",
   "sports",
   "travel",
   "utilities",
-  "weather"
+  "nft",
+  "gambling",
+  "social",
+  "personalization"
 ] as const;
 
 export type DAppCategory = (typeof dAppCategory)[number];

@@ -289,39 +289,23 @@
         "developer tools",
         "education",
         "entertainment",
-        "finance",
+        "defi",
         "food and drink",
         "games",
-        "graphics and design",
         "health and fitness",
         "lifestyle",
         "kids",
-        "magazines and newspapers",
-        "medical",
-        "music",
-        "navigation",
         "news",
-        "photo and video",
+        "photography",
         "productivity",
-        "reference",
         "shopping",
         "social networking",
         "sports",
         "travel",
         "utilities",
-        "weather",
-        "defi",
         "nft",
         "gambling",
-        "messaging",
-        "social media",
-        "off-ramping",
         "social",
-        "price aggregator",
-        "payments",
-        "discovery tool",
-        "airdrop tool",
-        "ecommerce",
         "personalization"
       ]
     },
@@ -389,23 +373,16 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "games" }
+          "category": { "const": "books" }
         }
       },
       "then": {
         "properties": {
           "subCategory": {
             "enum": [
-              "action",
-              "adventure",
-              "puzzle",
-              "role-playing",
-              "strategy",
-              "sports",
-              "racing",
-              "board ",
-              "simulation",
-              "word"
+              "ebooks",
+              "audiobooks",
+              "document-readers"
             ]
           }
         }
@@ -414,13 +391,18 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "social networking" }
+          "category": { "const": "business" }
         }
       },
       "then": {
         "properties": {
           "subCategory": {
-            "enum": ["decentralized-social-networks", "messaging"]
+            "enum": [
+              "communication",
+              "project-management",
+              "human-resources",
+              "decentralized-business-tools"
+            ]
           }
         }
       }
@@ -428,17 +410,15 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "entertainment" }
+          "category": { "const": "developer tools" }
         }
       },
       "then": {
         "properties": {
           "subCategory": {
             "enum": [
-              "video-streaming",
-              "music-streaming",
-              "live-events",
-              "nft-marketplaces"
+              "discovery tool",
+              "developer infra"
             ]
           }
         }
@@ -453,7 +433,105 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": ["learning tools", "Reference", "language-learning", "stem"]
+            "enum": [
+              "learning tools",
+              "reference",
+              "language-learning",
+              "stem"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "entertainment" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "music",
+              "video",
+              "video-streaming",
+              "music-streaming",
+              "live-events",
+              "nft-marketplaces"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "defi" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "banking",
+              "personal-finance",
+              "exchanges",
+              "insurance",
+              "on-ramping",
+              "off-ramping",
+              "payments",
+              "finance",
+              "airdrop tool",
+              "others",
+              "tooling",
+              "prediction markets",
+              "lending-and-borrowing",
+              "infrastructure"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "food and drink" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "cooking",
+              "recipes",
+              "restaurant-finding"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "games" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "action",
+              "adventure",
+              "puzzle",
+              "role-playing",
+              "strategy",
+              "racing",
+              "board ",
+              "simulation",
+              "word",
+              "metaverse"
+            ]
           }
         }
       }
@@ -471,7 +549,64 @@
               "workout-apps",
               "meditation",
               "nutrition",
-              "sleep-trackers"
+              "sleep-trackers",
+              "medical"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "lifestyle" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "home-automation",
+              "fashion",
+              "dating"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "news" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "sports-news",
+              "magazines",
+              "decentralized-news-platforms",
+              "newspapers",
+              "live-news"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "photography" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "photo-editing",
+              "camera-apps",
+              "photo-sharing"
             ]
           }
         }
@@ -491,7 +626,8 @@
               "task-management",
               "time-management",
               "calendar",
-              "decentralized-collaboration-tools"
+              "decentralized-collaboration-tools",
+              "graphics and design"
             ]
           }
         }
@@ -500,17 +636,50 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "utilities" }
+          "category": { "const": "shopping" }
         }
       },
       "then": {
         "properties": {
           "subCategory": {
             "enum": [
-              "file-management",
-              "browsers",
-              "security-and-privacy",
-              "wallets"
+              "ecommerce",
+              "nft-marketplaces",
+              "price aggregator"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "social networking" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "decentralized-social-networks",
+              "messaging"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "sports" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "team-management",
+              "live-scores"
             ]
           }
         }
@@ -538,34 +707,18 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "shopping" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": ["ecommerce", "nft-marketplaces"]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "category": { "const": "finance" }
+          "category": { "const": "utilities" }
         }
       },
       "then": {
         "properties": {
           "subCategory": {
             "enum": [
-              "banking",
-              "personal-finance",
-              "exchanges",
-              "defi",
-              "insurance",
-              "on-ramping",
-              "off-ramping"
+              "file-management",
+              "browsers",
+              "security-and-privacy",
+              "wallets",
+              "weather"
             ]
           }
         }
@@ -574,102 +727,13 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "magazines and newspapers" }
+          "category": { "const": "social" }
         }
       },
       "then": {
         "properties": {
           "subCategory": {
-            "enum": ["decentralized-news-platforms"]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "category": { "const": "photography" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": ["photo-editing", "camera-apps", "photo-sharing"]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "category": { "const": "food and drink" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": ["cooking", "recipes", "restaurant-finding"]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "category": { "const": "lifestyle" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": ["home-automation", "fashion", "Dating"]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "category": { "const": "sports" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": ["sports-news", "team-management", "live-scores"]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "category": { "const": "business" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": [
-              "communication",
-              "project-management",
-              "human-resources",
-              "decentralized-business-tools"
-            ]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "category": { "const": "books" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": ["ebooks", "audiobooks", "document-readers"]
+            "enum": ["social media"]
           }
         }
       }
@@ -684,6 +748,24 @@
         "properties": {
           "subCategory": {
             "enum": ["themes", "wallpapers", "customization-tools"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "nft" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "art",
+              "pfps",
+              "domain names"
+            ]
           }
         }
       }

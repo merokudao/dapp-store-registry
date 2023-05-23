@@ -190,11 +190,11 @@ describe("DappStoreRegistry", () => {
     it("is able to filter results on specific developer", async () => {
       const registry_dapps_1 = await registry.dApps({
         developer: {
-          githubID: "bitpack1"
+          githubID: "bitpack4"
         }
       });
       const dapps_1 = fixtureRegistryJson.dapps.filter(
-        dapp => dapp.developer?.githubID === "bitpack1"
+        dapp => dapp.developer?.githubID === "bitpack4"
       );
       registry_dapps_1.should.deep.equal(dapps_1);
     });
@@ -264,7 +264,7 @@ describe("DappStoreRegistry", () => {
     });
 
     it("is able to filter results on blocked countries", async () => {
-      let invalidCountries = ["ja"];
+      let invalidCountries = ["in"];
       const registry_dapps_1 = await registry.dApps({
         blockedInCountries: invalidCountries
       });
@@ -304,7 +304,7 @@ describe("DappStoreRegistry", () => {
     });
 
     it("is able to filter results on or after certain list date", async () => {
-      const startDate = new Date(2022, 1, 1);
+      const startDate = new Date(2025, 1, 1);
       const registry_dapps_1 = await registry.dApps({
         listedOnOrAfter: startDate
       });
@@ -315,7 +315,7 @@ describe("DappStoreRegistry", () => {
     });
 
     it("is able to filter results on or before certain list date", async () => {
-      const endDate = new Date(2022, 1, 1);
+      const endDate = new Date(2020, 1, 1);
       const registry_dapps_1 = await registry.dApps({
         listedOnOrBefore: endDate
       });
