@@ -1,6 +1,6 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.1.49",
+  "version": "0.1.50",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
   "repository": {
     "type": "git",
