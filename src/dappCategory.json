@@ -58,8 +58,7 @@
             "others",
             "tooling",
             "prediction markets",
-            "lending_and_borrowing",
-            "nfts",
+            "lending-and-borrowing",
             "infrastructure"
         ]
     },
@@ -180,7 +179,11 @@
     },
     {
         "category": "nft",
-        "subCategory": []
+        "subCategory": [
+            "art",
+            "pfps",
+            "domain names"
+        ]
     },
     {
         "category": "gambling",

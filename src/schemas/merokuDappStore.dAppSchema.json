@@ -482,8 +482,7 @@
               "others",
               "tooling",
               "prediction markets",
-              "lending_and_borrowing",
-              "nfts",
+              "lending-and-borrowing",
               "infrastructure"
             ]
           }
@@ -748,6 +747,24 @@
               "themes",
               "wallpapers",
               "customization-tools"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "nft" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "art",
+              "pfps",
+              "domain names"
             ]
           }
         }
