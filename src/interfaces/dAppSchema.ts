@@ -43,6 +43,9 @@ export interface DAppSchema {
    */
   description: string;
 
+  external_url?: string;
+
+  image?: string;
   /**
    * The URL of the dApp. This is optional. If specified, the dApp will be shown as a
    * link on the dApp store

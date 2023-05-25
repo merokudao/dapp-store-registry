@@ -14,6 +14,20 @@
       "type": "string",
       "description": "A detailed description of the dApp"
     },
+    "external_url": {
+      "type": "string",
+      "description": "The URL of the dApp. This is used by OpenSea",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
+    },
+    "image": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1,
+      "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format. Used by OpenSea"
+    },
     "appUrl": {
       "type": "string",
       "description": "The URL of the dApp",
