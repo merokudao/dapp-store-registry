@@ -22,7 +22,7 @@ import categoryJson from "./../dappCategory.json";
 
 import { Octokit } from "octokit";
 import { createAppAuth } from "@octokit/auth-app";
-import { cloneable, getDappId } from "./utils";
+import { cloneable, getCatSubCatMapping, getDappId } from "./utils";
 
 Dotenv.config();
 
@@ -247,24 +247,6 @@ export class DappStoreRegistry {
     this.searchEngine?.addAll(docs);
   };
 
-  private getCatSubCatMapping(category: string[] = [], subCategory:string[] = []) {
-    const catSubcatMapp = categoryJson.reduce((aggs: any, value) => {
-      aggs[value.category] = value.subCategory;
-      return aggs;
-    }, {});
-
-    return category.map(cat => {
-      const allSubcat = catSubcatMapp[cat];
-      let catFilter = { category: cat, subCategory: [] as string [] };
-      subCategory.map((sc: string) => {
-        if (allSubcat.includes(sc)) {
-          catFilter.subCategory.push(sc)
-        }
-      });
-      return catFilter;
-    });
-  };
-
   private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
     let res = dapps;
 
@@ -341,7 +323,7 @@ export class DappStoreRegistry {
         });
       }
 
-      const catSubCatMapping = this.getCatSubCatMapping(filterOpts.categories, filterOpts.subCategory);
+      const catSubCatMapping = getCatSubCatMapping(filterOpts.categories, filterOpts.subCategory);
       
       if (filterOpts.categories) {
         const categories = filterOpts.categories;

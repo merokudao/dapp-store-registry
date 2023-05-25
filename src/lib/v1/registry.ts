@@ -46,6 +46,7 @@ export class DappStoreRegistryV1 {
       return {
         id: d.dappId,
         nameKeyword: d.name,
+        subCategoryKeyword: d.subCategory,
         ...d
       };
     });
@@ -141,6 +142,7 @@ export class DappStoreRegistryV1 {
     await this.opensearchApis.createDoc(searchRegistry.alias, {
       id: dapp.dappId,
       nameKeyword: dapp.name,
+      subCategoryKeyword: dapp.subCategory,
       ...dapp
     });
     return {
