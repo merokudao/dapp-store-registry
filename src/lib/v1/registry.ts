@@ -37,7 +37,7 @@ export class DappStoreRegistryV1 {
   ): Promise<any> => {
     if (!dapps.length) {
       const dappsResponse = await this.dappStoreRegistory.registry();
-      dapps = dappsResponse.dapps;
+      dapps = dappsResponse.dapps.map(x => { return {...x, minted: false} });
     }
 
     if (!dapps.length) return;

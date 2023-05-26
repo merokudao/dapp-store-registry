@@ -459,20 +459,6 @@ export const searchFilters = (
     query.bool.must.push({ bool: { should: categoryQuery }});
   }
 
-  // if (categories && categories.length)
-  //   query.bool.must.push({
-  //     terms: {
-  //       category: categories
-  //     }
-  //   });
-
-  // if (subCategories && subCategories.length)
-  //   query.bool.must.push({
-  //     terms: {
-  //       subCategory: subCategories
-  //     }
-  //   });
-
   if (dappId) query.bool.must.push({ term: { dappId: dappId.trim() } });
 
   // search on customer string
