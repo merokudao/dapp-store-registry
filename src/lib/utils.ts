@@ -482,7 +482,7 @@ export const searchFilters = (
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
 
-  if (isMinted) query.bool.must.push({ match: { minted : isMinted } });
+  if (isMinted) query.bool.must.push({ match: { minted : isMinted === 'true' ? true: false } });
 
   if (isListed && !searchById && !search && !ownerAddress)
     query.bool.must.push({
