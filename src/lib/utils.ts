@@ -497,7 +497,7 @@ export const searchFilters = (
     _source: autoComplete ? autocompleteFields : searchFields,
     query,
     from: (payload.page - 1) * limit,
-    size: payload.page * limit,
+    size: limit,
     sort: orderBy(payload.orderBy || {})
   };
 
