@@ -19,7 +19,7 @@ export const searchRegistry = {
   alias: `${process.env.ENVIRONMENT}_dapp_search_index`
 };
 
-export const  MAX_RESULT_WINDOW = 100000;
+export const  MAX_RESULT_WINDOW = 10000;
 
 export class DappStoreRegistryV1 {
   opensearchApis: OpensearchRequest;
