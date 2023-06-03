@@ -21268,7 +21268,7 @@
       "description": "Perpetual Protocol is a decentralized perpetual contract protocol for every asset, made possible by a Virtual Automated Market Maker (vAMM). Like Uniswap, traders can trade with our vAMMs directly without the need for counterparties. The vAMMs provide guaranteed on-chain liquidity with predictable pricing set by constant product curves. The vAMMs are also designed to be market neutral and fully collateralized.",
       "appUrl": "https://app.perp.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/5720/perpetualprotocol-dapp-exchanges-other-logo_56ade0e60f987a16f7521ddf685aa20a.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmWU2XF5pzbfgD1xbAd3BiEkEbVtBjZESpHUvKo17ichvV/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21304,7 +21304,7 @@
       "description": "The Orbs Network a public blockchain infrastructure with a focus of enriching the capabilities of EVM smart contracts (kind of like an L3 that can work in conjunction with L1 and L2 solutions as part of a tiered blockchain stack). The Orbs protocol is decentralized and executed by a public network of permissionless validators using Proof-of-Stake (PoS) consensus. The Orbs protocol relies on the ORBS token, which is used for the settlement of fees related to app execution and provides the system of incentives used to elect validators (who are referred to as “Guardians”) in a secure and decentralized manner. Tetra is the official staking wallet by the Orbs team, from which any ORBS holder can easily stake tokens with a Guardian of their choice. For the release of Orbs PoS V3: Multi-chain staking, Tetra has been updated to enable staking on Polygon with a simple and intuitive UI to switch between the Ethereum and Polygon networks.",
       "appUrl": "https://staking.orbs.network/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/14937/tetra-dapp-other-ethereum-logo_8fb6ca923e7cf61c4d8fe4524272ad4e.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVbAYgw9ev6nTVtCj6mtL5AhkkFbZysfTcqFKE68cQJCL/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21340,7 +21340,7 @@
       "description": "You can use Connext to send transactions of value or calldata across chains and/or rollups. Unlike most other interoperability systems, Connext enables this without introducing any new trust assumptions or external validators. Note that the current version of Connext cannot be used pass arbitrary event data between chains (i.e. prove to chain B that something occurred on chain A) as this cannot be done in a trust-minimized way in the evm except by incurring the 1-week exit window of existing rollup bridges. This means that cases like migrating a token from chain A to chain B are not supported - you can instead only swap/transact over liquidity that already exists on the chain.",
       "appUrl": "https://www.connext.network/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/14956/connext-dapp-defi-ethereum-logo_db8a4acda1d14d9964ddf52eb6f1ea23.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdDDViYQ3HbZDgaXv65Rz3TEGBFQEvYRHwYeHSuj5RW5Q/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21377,7 +21377,7 @@
       "description": "Instadapp Lite is the easiest way to deposit to earn interest from the most popular DeFi strategies on the market. Simple deposit funds into your desired Strategy Vault and thats it! Instadapp Lite maximizes your gains by reducing the number of transactions, saving on gas and automates fee collection, and simplifies the overall process of setting up and actively monitoring a DeFi strategy. Access the best yields with none of the work. Deposit asset and earn interest, withdraw anytime!",
       "appUrl": "https://lite.instadapp.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15041/instadapplite-dapp-defi-ethereum-logo_f239562436d1aeb7b8f36ed86f86fad9.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmUG7VYa818YFoGmMu2LqaPzuGRDXMViE2qbdWJd2pUB9h/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21413,7 +21413,7 @@
       "description": "SIX UNIQUE DNA'S Through the MURIVERSE we will deliver 6 unique DNA's + extra features and traits coming along those. Below are 3 highlighted MURI characters playing a role in the whole story.",
       "appUrl": "https://www.muri.soy/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15057/muribyhaus-dapp-collectibles-ethereum-logo_470fe9452bfb59190261b16ec39e35e0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmSkvMJMGfFCS3ak4rGk7qcvkLk3fXdHEMbQ3TT4nmMVq4/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21448,7 +21448,7 @@
       "description": "Kiwami is a collection of 10,000 avatars for a next-generation collective of artists, builders, and rule-breakers. Carefully designed in the metaverse & born in Japan, holders have access to exclusive Kiwami offerings and the opportunity to shape our collective future. Join us in Chasing the Tsunami.",
       "appUrl": "https://kiwami.app/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15059/kiwamigenesis-dapp-collectibles-ethereum-logo_4494da1664b875e3fd7f785ac7ad724d.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmRxF85Xys3WerYzgFBENZD9mhkXJGKAHdKybHKtnK7cbS/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21483,7 +21483,7 @@
       "description": "Quirkies are a collection of 5,000 unique characters minted on the Ethereum Blockchain. Quirkies are your personal companion and will become your metaverse persona, so make sure you get a hold of a Quirkie which you feel represents you. Quirkies are created by our team artist through several hundred traits of quirkiness.",
       "appUrl": "https://quirkies.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15060/quirkiesoriginals-dapp-collectibles-ethereum-logo_95d0a340764bfb4ab453f093dd6c9cbd.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmcU32FXhYrtf3vqq48fKKpk7YAupkhG4zJt8H5YmK7p2V/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21518,7 +21518,7 @@
       "description": "Arcade is an interoperable metaverse with fast action games for the entire NFT community. Lands come in different variations within Arcadeverse.",
       "appUrl": "https://arcade.inc/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15061/arcadeland-dapp-collectibles-ethereum-logo_ea20dcc191ff0f061c296f786417760c.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmXtRNQmbRMwuBwKcBbfXt6sFM3HeN666mtRjtTnHBQLEZ/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21553,7 +21553,7 @@
       "description": "Akuma Origins is a brand bridging the digital and physical world together. An army of 5555 Yokai will be set free on the blockchain, roaming the realm. Owning a Yokai gives you access to the realm through the portal. The realm is a place defying the rules and boundaries you know today, blurring the lines of reality and creating a phygital world.",
       "appUrl": "https://www.akumaorigins.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15062/akumaorigins-dapp-collectibles-ethereum-logo_01aaafd023a6a4eed7f10f3d69bf6675.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdbT1byh2XBCFsDe8Muwsn2E1jB6AYEBq4crNJZCEYFcD/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21588,7 +21588,7 @@
       "description": "Every ethlizard is unique, composed using over 100 hand-drawn traits. 8 custom-designed 1/1 lizards lurk inside... Half of the proceeds from the ethlizard sale (50%) will be used to fund our Lizard Treasury. This treasury will be used to invest in the ethlizard community, by organizing member-only competitions, creating deep dive reports, building out a lizard guild or any other activity voted on by lizard holders. The remaining 50% will be allocated to team and marketing. The Underground Lizard Lounge Each Ethlizard NFT allows the owner exclusive access to secret sections of the Underground Lizard Lounge. It is an accepted fact in the lounge that millionaires have been made from Lizard Alpha.",
       "appUrl": "https://ethlizards.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15063/ethlizards-dapp-collectibles-ethereum-logo_cfee649730b4ced29edca58ddff83052.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmUddg4DGuYsaGjKeLqyaAV9CxVkE3Efjzeq189PVJYK69/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21623,7 +21623,7 @@
       "description": "EightBit is a collection of 8,888 NFT’s that are generated by countless 8-bit themed traits. Within the collection, there are rare outfits, items, and more surprises. Each NFT contains a PFP and a full Digital EightBit Character which are stored on IPFS. All characters have their own page (see example) that will become more interactive in time. Back in 2010, we launched the original 8-bit avatar creator. Before a world of punks and apes, our app let you make a virtual 8-bit version of yourself. Check out it out in action here.",
       "appUrl": "https://www.eightbit.me/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15064/eightbitme-dapp-collectibles-ethereum-logo_34550746b4ed0882018470d3f8a957dd.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmaZYRqM4iG9qqN1Kq86DfaczVddJjbUna42wjjqqxRCxu/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21658,7 +21658,7 @@
       "description": "Celer cBridge is a multi-chain network that enables instant, low-cost and ANY-to-ANY value transfers within and across different blockchains, such as Ethereum and Polkadot, and different layer-2 scaling solutions on top, such as Optimistic Rollup, ZK Rollup and sidechains",
       "appUrl": "https://cbridge.celer.network",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15155/celernetwork-dapp-defi-ethereum-logo_dd8db97d1ebc88cdf9e458bedf4d0357.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmUQnZNuFRbo2PivKWyPbzt3EoP3QVZvQTZMSsYFjR9n8Q/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21696,7 +21696,7 @@
       "description": "DeFiner’s next-generation product, DeFiner2.0, successfully solves this lending problem by creating a 100% permissionless lending protocol. In DeFiner 2.0 anyone can create their own lending pool by using any token or digital assets they choose. Every pool will give someone complete control over it, with highly-customized configurations like risk control, interest rate, and choice of oracle. These customized configurations will help avoid isolation by keeping a reasonable degree of liquidity for each pool in order to improve capital utilization. Each lending pool will be connected to our money market main savings pool — which supports high-liquidity assets like stablecoins, BTC, ETH, and more. In DeFiner 2.0, we plan to introduce even more applications into our ecosystem over time, including Initial Loan Offerings (ILOs), non-collateralized loans, off-chain asset-backed loans, fixed-rate loans, term loans, and a variety of different offerings based on community feedback. DeFiner 2.0 represents a near-perfect solution for the current problems facing DeFi lending protocols today and is designed to bring a true form of decentralization to the global DeFi ecosystem.",
       "appUrl": "https://definer.org/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/10093/definer-dapp-defi-okexchain-logo_bc71ae29fb765b1e26efcea44741b67b.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmRnso9qrkEyWMPZnMaHoaWnV4VgSZUXyvEsYPBsHAXsQY/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21733,7 +21733,7 @@
       "description": "A Crucible is more than just a smart wallet, it's a vault in the form of  an NFT. It's designed to safeguard your investments, allowing you to  receive rewards from multiple staking programs without your tokens ever  leaving your possession. Reward programs designed with capital efficiency in mind. Imagine a  world where a token balance can be reutilised for multiple reward  programs to earn you even more rewards. Subscribe to multiple reward programs, store tokens securely, and easily  transfer your Crucible with its contents. A Crucible adds another layer  of protection over your standard wallet by giving you more control over  your assets.",
       "appUrl": "https://crucible.wtf",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15249/alchemistrewardprogram-dapp-defi-ethereum-logo_a2aa9e7662444a5dd625eaf7c1cb4027.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmY1u5jr2MoHgrUhp4KQKnTEvtU6wySPvJoZsNKP4VH5XD/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21770,7 +21770,7 @@
       "description": "CEXISWAP is a decentralized multi-chain exchange that offers users the best price by bridging liquidity across DEXs and CEXs through innovative Trade Pipe Technology (TPT). #What are the Advantages of CEXISWAP?  Better prices than DEX: competitive prices are sustained through a decentralized network; Better experience than CEX: no deposits are required, trading directly from a wallet; Zero slippage: the final price is available before trading via instant and reliable price quotes. CEXISWAP solves the price slippage by integrating the Reactive Market component, which comprises both CEXs and DEXs liquidity; Full protection: protection against MEV (Miner Extractable Value), including sandwiching, arbitrage, and front running; Lower-gas fees  #What’s the Future of CEXISWAP? At CEXISWAP, we want to create borderless liquidity in a multi-chain world.  Our first mission is to break the boundary between centralized and decentralized exchanges. Our second mission is to break the boundary between different blockchains by offering an integrated bridge and DEX that freely routes liquidity across chains. Our third mission is to break the boundaries to user adoption of crypto and Defi.",
       "appUrl": "https://www.cexiswap.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15290/cexiswap-dapp-exchanges-ethereum-logo_3f7efe12ec5f0a66951bc78e613e97b0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdfRJodEi5KsTPPL1Tz4EiV48bXoMH5BJJKRVAUmqZsvF/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21807,7 +21807,7 @@
       "description": "GAME STORY It is the year 11,752. The Metagalactic Collective rules most of the known systems. A benevolent but incomprehensible A.I known as The Onemind guides the Collective, ensuring peace and prosperity. The Onemind has revealed a revolutionary new technology: Terraforming Capsules. These capsules cause a planet to spontaneously undergo millions of years of evolution in seconds. Three planets in a sector called Dalarnia have been chosen to undergo the first wave of terraforming experiments. Peoples from across the Galaxy flocked to the newly terraformed planets, seeking their fortunes in a spacefaring goldrush. As one of these hopeful miners, you have spent your life savings to travel to a moon on the outskirts of the system. Are you prepared to make your fortune in the Mines of Dalarnia? INTO THE MINE Delve into the unknown, dark mine. Collect resources to improve your Equipment and Attributes so that you can face the dangers of the depth. ACTION AND ADVENTURE Blending combat and dungeon crawling, Mines of Dalarnia delivers a fresh new entry to the genre, utilizing the power of blockchain technologies. MANAGE AND EARN Dalarnia is abundant with resources for explorers and investors to discover, collect and trade. FEATURES GAME TRULY OWNED BY USERS All the items and actions are registered on the blockchain with decentralized governance. PLAY TO EARN Collect rare resources, upgrade your existing of craft new equipment, compete and win rewards. VIBRANT ECONOMIC INCENTIVES FOR GROWTH AND SUSTAINABILITY Open market to trade and exchange NFTs as well as lucrative rewards for land owners.",
       "appUrl": "https://www.minesofdalarnia.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15308/minesofdalarnia-dapp-games-ethereum-logo_e2c09bcabbe128bfa415d32197299df3.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmYhm3ABMp783c9P6arvdYBcWv6PpNrnuee1Jx6hmPQ8b9/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21842,7 +21842,7 @@
       "description": "Zunami is the DAO that works with stablecoins and solves the main issues of current yield-farming protocols by streamlining interaction with DeFi, making it easier and cheaper while increasing profitability by differentiating and rebalancing users’ funds.",
       "appUrl": "https://app.zunami.io",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15310/zunamiprotocol-dapp-defi-ethereum-logo_1df6f85abe93962173be3ee785671585.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmSrM8aykAggMxAS2zoyPgDHuqc4m4u4PU4kGCac7LGxq7/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21878,7 +21878,7 @@
       "description": "The Impostors Genesis Aliens represent the foundational NFT collection of the Impostors ecosystem, and serve as passes the Impostors Genesis Season which will play host to seven unique events. Only 10,420 of these intergalactic creatures will ever exist! Each Genesis Character has a combination of over 200 traits and will provide stat-based advantages in various metaverse game modes. Impostors is a social gaming metaverse that bridges the gap between today’s Twitch culture and the future of immersive metaverses. The game is built in Unreal Engine and the team consists of over 30 world-class engineers and builders with experience working at AAA studios including Epic Games, Roblox, Pixar, and more. Impostors brings a breath of fresh air into the gaming and crypto world by creating a social gaming metaverse that is truly player-owned and powered.",
       "appUrl": "https://impostors.gg/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15335/impostorsgenesisaliens-dapp-collectibles-ethereum-logo_070281009ea79e0d93532cc709f89867.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmQfAJTaFrzqFAFh2iGwMCJBXckoRwDcHsqBmg7sincVkS/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21913,7 +21913,7 @@
       "description": "PREMINT makes it incredibly easy to collect a ton of wallet addresses to use for a presale, access list, giveaway, and more.",
       "appUrl": "https://collectors.premint.xyz/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15336/premintcollectorpass-dapp-collectibles-ethereum-logo_254e81e7a7695aab697684861cfb302b.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmY4W65MbLgjNjeFbQotbM45v2KPEqkf9BVWeViD7bmvyc/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21948,7 +21948,7 @@
       "description": "Clipper is a decentralized exchange (DEX) built for self-made traders, rather than hedge funds and whales. Clipper is designed to have the lowest per-transaction costs for small-to-medium-sized trades",
       "appUrl": "https://clipper.exchange/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15361/clipperdex-dapp-defi-ethereum-logo_e4aba33893f2afc88f709def52bb5985.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdkFwtZfNoJRvF3Wa3GSbyfYpYSTx6YTMLqgLsxSmntW3/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -21985,7 +21985,7 @@
       "description": "Moonbirds are more than just an avatar A collection of 10,000 utility-enabled PFPs that feature a richly diverse and unique pool of rarity-powered traits. What's more, each Moonbird unlocks private club membership and additional benefits the longer you hold them. We call it nesting – because, obviously.",
       "appUrl": "https://moonbirds.xyz/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15437/moonbirds-dapp-collectibles-ethereum-logo_249c7cdd7bd281715e60681eb3918cd5.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmWxx4F5ssVcH9PUA7yLGhuVNzmxh36YUCQZSLpRArNzH5/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22020,7 +22020,7 @@
       "description": "Rove is your address on the 3D web. We’re building 3D environments for every kind of web presence: 3D homes, stores, galleries, offices, community spaces, fully customizable to bring your best you to the metaverse. Jump into your virtual body, invite friends and connect seamlessly on the 3D/VR web for work, play, networking, and more. Get in on the action! Visit rove. to in your web browser.",
       "appUrl": "https://rove.to",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15464/rove-dapp-other-matic-logo_d4f0f62f131e876b83774692e8e5463d.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmejrDS9fqnSWb69yj4VtoeiC6FX9ApDUhKp5p3PASnsce/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22056,7 +22056,7 @@
       "description": "WAX was purposefully built to be the most complete, climate friendly NFT ecosystem in the industry for leading brands, artists, creators and developers looking to leverage the power of the blockchain. Top brands (including Topps, Capcom, Atari, Funko, Lionsgate and more) depend on WAX to launch their NFT collections, while the most prolific creators and developers use WAX’s powerful suite of tools to create award-winning video games and dApps. Since its inception in 2017, WAX has been coined “The King of NFTs”, but it’s so much more — WAX vIRL® technology is literally the future of digital commerce.",
       "appUrl": "https://on.wax.io/wax-io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15529/waxethereumbridge-dapp-defi-ethereum-logo_a3deaa883d1170e71c11f948eed2adb8.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmP7zFpskz51pf9eQV65PWWnsPEwU9PgdtA4oe4eAqxRqf/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22092,7 +22092,7 @@
       "description": "Akutars are a collection of 15,000 unique, 3D Aku avatars with partnerships from; Puma, Planes, Vandal, Who Decides War, BBC and, Ice Cream. Each Akutar grants you entry into the ever-expanding Akuverse, where lines are blurred between the digital and physical worlds and owners gain exclusive access to culture-defining experiences, products, and collaborations.",
       "appUrl": "https://www.aku.world/akuverse.html",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15782/akutars-dapp-collectibles-ethereum-logo_8edb864bea55aec10371790ba1e4b52d.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmNSx47irfFhU5twiX8z1zVuA6uWY3EhJfgWsSgCWUuESG/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22127,7 +22127,7 @@
       "description": "Created by RTFKT MNTLH Quest will continue... ?⚔️ an experience powered by DART X.",
       "appUrl": "https://mnlth.rtfkt.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15786/rtfktxnikemonolith-dapp-collectibles-ethereum-logo_9a5bec4ac0169281fc3926f86301711b.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmaPtXRmuZnEs4S8KmVK5D673CyRpvSbZXogyePbdZ94Bt/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22162,7 +22162,7 @@
       "description": "Satoshibles are the NFT for Bitcoin Enthusiasts. A collection of 5000 algorithmically generated crypto collectible NFTs that have been generated using 192 hand illustrated attributes, spread over 9 traits. Each one unique all ranging in rarity. Satoshibles are the first NFT project to build a bridge from Ethereum to Bitcoin via Stacks.",
       "appUrl": "https://satoshibles.com",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15795/satoshibles-dapp-collectibles-stacks-logo_665488d08abfc7c60815afb7fdf44f56.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVrU67WJtUJusMkSViGjPoKMq8VTCL8z18vUKHa3unhuc/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22197,7 +22197,7 @@
       "description": "ApolloX is the leading decentralized solution shaping Web3 trading for retail and institutional traders. Its product suite consists of ApolloX DEX, the biggest decentralized crypto derivatives exchange on BNB Chain, and ApolloX DEX Engine, a ready-to-go solution for partners looking to launch their own derivatives trading platform. For more information, visit ApolloX DEX: www.apollox.finance",
       "appUrl": "https://www.apollox.finance/en",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/12676/apollox-dapp-defi-bsc-logo_f9e9ac44376982746a23fd369e4a62b7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmV9HoyjCVSoLyx3muyoDvfQL9LwqH3agX56Ev6Lo3HApa/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22233,7 +22233,7 @@
       "description": "Accessible to all on browser, Ragnarök is fun and hyper social. A blend of Lore, Web3, Metaverse, and a Role Playing Game.  A collection of 7,777 Ronin Zero NFTs. The Ronin are your exclusive access to the RPG. Becoming your profile picture, your in-game character. Slay Monsters, Loot Objects and Craft NFTs. Gain XP, Level Up and Change Classes. Trade, Earn, and Own Real Estate.  The line between the physical and digital world is blurring. The rules are being rewritten. The Pixels are coming.",
       "appUrl": "https://ragnarok.xyz/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15810/ragnarok-dapp-games-ethereum-logo_9772e450f18c1bad5e0e42cfade0f364.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmUvtey3idT3PPBVpWEEysXxwasbpK1fk7ZqyaWZh9zhGy/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22268,7 +22268,7 @@
       "description": "OwlDAO is a Multi-Chain DAO that joined the crypto scene in 2021 to become the Leading iGaming solution for Web 3.0. The DAO helps other projects build their own Defi gaming suite with over 3000+ licensed casino games. The DAO accomplishes this by innovating traditional online casinos and integrating them with the new Defi World, combining over 30+ of the world’s most renowned Game Providers inside a complete blockchain-based engine, allowing participants to play thousands of games by simply connecting with their wallets. Solutions can be provided across all EVM compatible networks, WAX, EOS, Near etc. About Owl.Games Owl.Games is the DAO's signature platform and is operated by CyberGalaxy B.V., a company registered and established under the laws of Curacao. CyberGalaxy B.V. is licensed and regulated by Antillephone N.V.",
       "appUrl": "https://owldao.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15720/owldao-dapp-gambling-matic-logo_b85049d2f8c14c45bd2af099b129dcc7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmQ5o9f4g5sARqFPhrAtMbsGJne9vzJSkH1w6wVgrnyny4/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22304,7 +22304,7 @@
       "description": "Imaginary Ones is a delightful 3D animated art with a collection of 8888 unique NFTs. Imaginary Ones wish to re-ignite your spark to embrace creativity and work on your dreams. Welcome to the Imaginary World, where no ideas too crazy nor dreams too foolish. Let's imagine. Together.",
       "appUrl": "https://imaginaryones.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15856/ioimaginaryones-dapp-collectibles-ethereum-logo_4fdb98483357141af07faef5afe5d5f1.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdoZVXAyTvuP5aMokrCcb6JFU7wxgaRWfXSKErYrrSywh/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22339,7 +22339,7 @@
       "description": "To mint any of the 15 new Series 2 characters, you will need to meet specific BOOK GAMES token requirements and enter a raffle. Each character will have its own daily raffle between April 27 and May 12. All VeeFriends Series 2 artwork and metadata will be revealed after the public mint ends. While we all wait, we can play our token pre-reveal game and strive to set new records! Don't forget to share your score if you and GaryBee journeyed far! Each VeeFriends Series 2 NFT you mint includes exclusive access to redeem a box of 52 VeeFriends Collectible Trading Cards for free! Delivery Starts the week of 05/16/2022",
       "appUrl": "https://series2.veefriends.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15857/veefriendsseries2-dapp-collectibles-ethereum-logo_f140b880e4a9d7dfc227b16a116092aa.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmenXDKG8qEmbbGcnvPatSSpCw1kGxoJLWbpuHB7K6fjfQ/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22374,7 +22374,7 @@
       "description": "BFF's inaugural NFT collection, You, celebrates the uniqueness of women and non-binary friends across our community and the world. In her renowned style, artist Jade Purple Brown brings vibrant color and dynamic expression to 10,000 unique pieces in the collection. Every NFT has unique perks built in, plus utility within the BFF universe.",
       "appUrl": "https://www.mybff.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15858/youbybff-dapp-collectibles-ethereum-logo_7bb841ca5c6a914e33406729a2968c2c.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVEjhj9HQoYLwaX6Gcem5chVxtWY4ZMw5GV2PajhtV6mh/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22409,7 +22409,7 @@
       "description": "Lunartics is a fantastically playful launch of 10,000 NFTs destined to become the next great animated series created by Animation legend Julius Preite (Simpsons, Family Guy) and notorious Writer/Producer Dan E. Fesman (King of Queens, NCIS). Armed with tiny bodies and even tinier minds, Lunartics have been making desperate attempts to Moon It since 1969 when Neil Armstrong unwittingly ripped them away from their home. Each season launches new animations of the Lunartics' most futile and embarrassing moon missions over the past 50 years. Lunartics holders can vote on upcoming missions and help shape the series! Their character may even pop up in a future episode. Go behind the scenes with 2 industry insiders, rub shoulders with an exclusive community of creators and animators, and be a part of the next big bang when blockchain technology converges with the world of entertainment!",
       "appUrl": "https://thelunartics.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15859/thelunartics-dapp-collectibles-ethereum-logo_4a3023b0a140cef0bbbf1d1e401632e7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmbyicRc8qP5xHX5Bo1bUMd2HKaHCYWRn5augFbSugvbzF/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22444,7 +22444,7 @@
       "description": "DGFamily Glass Boxes are redeemed for a tiered DGFamily Box during an on-chain reveal accessible in the coming weeks on UNXD. DGFamily Boxes are the key to unlock access to the Dolce&Gabbana NFT universe – a world of digital, physical, and experiential benefits straight from the quintessentially Italian luxury brand, exclusively in partnership with UNXD.",
       "appUrl": "https://drops.unxd.com/dgfamily/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15860/dolcegabbanadgfamilyglassbox-dapp-collectibles-ethereum-logo_5dfe003e663c0a41263f2bdefd011efd.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdhX3H6wM48U7utDME9UivsRVuQ8o8Wc69ydoSRfunfzr/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22479,7 +22479,7 @@
       "description": "Multidisciplinary visual artist James Jean presents Fragments (2022), a new series of hand-drawn digital artworks commissioned by the digital art platform Outland. The new and ambitious series is inspired by a forthcoming large-scale, luminous architectural pavilion by the artist, titled Pagoda, that will be composed of 7,000 stained glass pieces. Fragments will be minted as an edition size of 7,000 NFTs to reflect the physical sculpture that will be unveiled in 2023. Fragments is entirely hand-drawn and presents a series of fantastical characters that are distilled from the artist’s imagination. Jean describes these as “mythic beings” and each character bears a unique persona on a pentagonal frame, echoing the petal-like shape of the Pagoda’s glass panels, in his signature psychedelic colour palette. Fragments features visual elements that have appeared within Jean’s works throughout his career.",
       "appUrl": "https://jamesjean.outland.art/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15861/fragmentsbyjamesjean-dapp-collectibles-ethereum-logo_a6ef9656b022bf30825f1e82a1397836.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmQxMiKNHxHizfe3Fx4BerBawr6EhF22qrUTwu9CDTWvSi/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22514,7 +22514,7 @@
       "description": "Otherdeed is the key to claiming land in Otherside. Each have a unique blend of environment and sediment — some with resources, some home to powerful artifacts. And on a very few, a Koda roams. Otherside is a gamified, interoperable metaverse currently under development. The game blends mechanics from massively multiplayer online role playing games (MMORPGs) and web3-enabled virtual worlds. Think of it as a metaRPG where the players own the world, your NFTs can become playable characters, and thousands can play together in real time.",
       "appUrl": "https://otherside.xyz/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15910/otherdeedforotherside-dapp-collectibles-ethereum-logo_f44f9da43206843fae3fee1149290537.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmaRBor7E6Bmh6ZwpFXBC8Dnymcofw8HzfqWbzYFvdF6bh/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22549,7 +22549,7 @@
       "description": "Conic Finance is an easy-to-use platform that enables liquidity providers to diversify their exposure to multiple Curve pools. Conic is facilitated by Omnipools that allocate liquidity to one asset across multiple Curve pools. The main purpose of Conic is to create efficient rebalancing of Curve liquidity. Where normally users have to manually shift funds between pools (while incurring high gas fees in the process), Conic automates this and enables the community to decide how liquidity should be allocated. The Conic governance token (CNC) can be used to vote on protocol parameters and can be earned by providing liquidity on the platform. Through governance, CNC holders can control pool weights and add new pools, control liquidity distribution on Curve Finance, and propose protocol changes.",
       "appUrl": "https://conic.finance/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15915/conic-dapp-defi-ethereum-logo_5af70620d33d46ff0b306208f7be80b2.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmaqFWnA1djNAXS7Q7tAbTvEPkoZxb62z5KWg7gLMUoSjn/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22585,7 +22585,7 @@
       "description": "Join #TheWeb3Revolution with a decentralized username, website and email domain. Your Web3 username allows you to map your ethereum address to blockchain and non-blockchain resources, connecting various spheres of your Web3 world together. You can send and receive payments, host a website and showcase your NFT collection through your username. Your community, your username Own the username that you feel part of. If you belong to an NFT community, register your username under your community's extension. Send and receive payments Use your Web3 username to store all of your addresses and receive any cryptocurrency, token, or NFT. Build decentralised websites Launch censorship-resistant decentralised websites with your WNS name. Upload your website to IPFS, or link your existing DNS to WNS. Securely privatise your emails Join W3Mail: most secure, private and easy-to-use email built on the security of the Blockchain technology.",
       "appUrl": "https://wnsdomains.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/15996/web3nameservice-dapp-collectibles-ethereum-logo_30d3b9de497de36447d4ab048e358e42.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmU4QeENjXfBkDTv6xUzbp7jF9PoKEqnFrLymkgVbUVrTp/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22620,7 +22620,7 @@
       "description": "Double Protocol is an NFT rental platform primarily for GameFi and metaverse assets. Utilizing the Dual Role NFT standard EIP-4907 proposed by Double enables the separation of ownership and use rights easily, which greatly expands the user's base of GameFi and metaverse.",
       "appUrl": "https://double.one/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16022/doubleprotocol-dapp-marketplaces-bsc-logo_fc062578a3f39fb8a39083129a1a36f3.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmeL1Xq5hQGgHTLb4D9QPUueftrkpy6WNm7aiDYmxdPDAE/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22656,7 +22656,7 @@
       "description": "COLLARQUEST is a fun and engaging GameFi with Play To Earn, Play To Own, and FREE To Play entry that can be enjoyed on any desktop, or mobile device. The Public Mint is Now Open! Buy now and start Breeding your SPARC-Es from Day 1! -------------- COLLARQUEST is the first fully bootstrapped, community owned & directed GameFi Platform. It is an asset of legally registered TAG DAO LLC along with Native Tokens ( $COLLAR, $TAG, $GeM), an NFT Marketplace, & a DeFi Swap ---------- The Focal Point of Everything in th Collar Ecosystem revolves around UTILITY -------------- COLLARQUEST NFTs ( called SPARC-Es) exemplify this UTILITY: - PLAY & EARN EARN tokens and other rewards through your in-game actvities - LOAN or BORROW ~OWNERS - LOAN your extra SPARC-Es to ANY OF OUR THOUSANDS OF SCHOLARS to enjoy passive earnings. ~SCHOLARS- BORROW SPARC-Es at an an agreed upon split for Free-To-Play Entry - BREED BREED your SPARC-Es and receive ROYALTIES on secondary sales I N PERPETUITY. Breed from Day 1 ------------------ COLLARQUEST V2, with LAND Play, a full SDK & built in Unity enables players to create their own businesses, mini-games, and other unique experiences, affording endless gaming opportunities. In V2, players will be able to create their own Avatars and engage in experiences not related to SPARC-E battles",
       "appUrl": "https://www.collarquest.com",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16065/collarquest-dapp-games-ethereum-logo_cc3e895f1adcc54051a318c29686dc8c.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVTQGpMLZjeCqnbPiUkrZBbhkE96rRc2ggs1UZJtGkv31/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22692,7 +22692,7 @@
       "description": "Hyundai Metamobility universe is a world where the boundaries between virtual and reality, time and space have disappeared. It is the universe of Hyundai brand NFT, a world where you can freely move beyond time and space with  Hyundai Motor Company’s Metamobility. At CES 2022, Hyundai Motor Company has introduced the concept of ‘Metamobility,’ which will expand human reach to ultimate freedom of mobility. We aim to bring that vision to life through the new world of ‘Hyundai Metamobility universe’. Starting with the official NFT launch on May 9th, 2022,  Hyundai NFT project will provide the Hyundai brand experience in the metaverse.",
       "appUrl": "https://hyundai-nft.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16096/hyundaimetamobilityshootingstar-dapp-collectibles-ethereum-logo_91b47bb8695cd951e1b9a33a01b3a58b.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmYc75BmNAV9wtT5fAcsRqgwe3skgT8QiWoRKKnTmDxL5B/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22727,7 +22727,7 @@
       "description": "The first cross-chain NFT marketplace. Sell, Discover, Create and Buy Phantasma & NEO & BSC & Polygon & Avalanche  & Ethereum Collectibles. Featuring ERC721/ERC1155 NFT, on-chain royalties, on-chain lock content, shopping/selling cart experiences and much more!",
       "appUrl": "https://ghostmarket.io",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/7643/ghostmarketbsc-dapp-marketplaces-bsc-logo_c935c00656d9de7d66519e2ac96598e6.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmWmJZpktDSmpumpxRw5sPMSqCroL1TdBxiqSwJj9qBMBX/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22763,7 +22763,7 @@
       "description": "The Most Cost-Effective Tool For Airdrops, Bulk Token Distributions & DAOs Features - Gas fee savings - Gas FREE transactions - Saves massive amounts of time - No tech skills required - No development needed AirdropMe is a game-changing new web3 dApp, powered by Etherspot.io, that is making airdrops on Ethereum popular again — on many networks for that matter. It dramatically reduces the lower (but still high) costs of airdrops on other blockchains too.",
       "appUrl": "https://airdropme.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16325/airdropmeappforbatchtokenairdropping-dapp-other-ethereum-logo_ea04ef3b8e3e94981208f3f145e14c87.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmcvAuiUw544Ygiuzci4nAgcT8ibyCtqac2v4L32u3419R/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22799,7 +22799,7 @@
       "description": "Etherspot is a smart-contract SDK that gives projects access to multi-chain, non-custodial, Smart Wallet framework. It allows projects to access the best features ( batched transactions, NFTs, ENS, Payment Channels) of the Ethereum blockchain and EVM compatible chains e.g  Polygon, Binance Smart Chain, Gnosis Chain, Fantom, Avalanche, Arbitrum, Optimism, Celo and more.",
       "appUrl": "https://etherspot.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16338/etherspot-dapp-other-ethereum-logo_37db85d29cfb35cf4d64f36cf5ccacd4.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/Qmf2zHHfvEnGzfV8FJsjgGneGXPWU4BWmXgkFR8oGtJ8aS/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22836,7 +22836,7 @@
       "description": "Bears on eth because we’re not okay on solana. Supporting mental health during a down market, wishing you the best.",
       "appUrl": "https://notokaybears.art/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16353/notokaybears-dapp-collectibles-ethereum-logo_cbdb7964d1065da1d432d37eddf4e3f0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmRa4eaugj6QmGjbdEFYBm9WLkTZnPfpdjFmk4NU34nDBX/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22871,7 +22871,7 @@
       "description": "In a utopian future where technology is advanced enough to achieve all of humanity‘s dreams, it finally happened. By combining the power of science and anime cliches, Catgirls are finally out of the bag! 6969 Dreamy catgirls of all types are waiting for YOU to own them. As virtual space becomes the reality, this unmissable opportunity becomes even more valuable!",
       "appUrl": "https://catgirlacademia.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16409/catgirlacademia-dapp-collectibles-ethereum-logo_f12a5648820748133c6a33581fb0e6fd.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/Qmd5YFf7EPkEXzYi4nYKkKTD8iJtgPJDLGm1GQnT2dtXAx/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22906,7 +22906,7 @@
       "description": "7,800 nfts collection down down to goblin",
       "appUrl": "https://goblintown.wtf/mcgoblin/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16886/mcgoblinwtf-dapp-collectibles-ethereum-logo_3bbe7d5aabe5aa4f8be0976b91f7514f.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmQCkmQfoanbqFydGFyp5MC1J9rnPA9vGmvDKmmo7KYsRf/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22941,7 +22941,7 @@
       "description": "The Boring Ape Chronicles is a derivative collection that spawned out of the BAYC ecosystem in early July. The collection comprises 6 interconnected artworks that depict  apes on the quest for the Diamond Fleece, the sacred artifact that holds all power and wisdom. There are 100 editions per artwork and the collection also includes NFTs such as an interactive eBook, an animated production as well as the Diamond Fleece mint pass. Chimpers The Chimpers genesis 100 is the extension of the TBAC collection. The Chimpers hail from a distant galaxy, each with their own unique name and backstory. To generate a Chimpers, holders must burn their Diamond Fleece mint pass. Timpers has handcrafted each individual design and they serve as the foundations for a larger generative Chimpers collection launching in May.",
       "appUrl": "https://www.chimpers.xyz/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16432/chimpers-dapp-collectibles-ethereum-logo_8f115ce3f1e655a424c56c5b62b920a5.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmW2ZmNW9raTnK1jxeKE8MgLd2xdWnDm6grkBFvALNSeZ1/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -22976,7 +22976,7 @@
       "description": "5,000 Curiosities living in the Metaverse on the Ethereum blockchain. Our mission is to create a home for the curious and provide true value to all holders by building out the Curiosities ecosystem and brand. With all of the hand drawn traits that are offered, you're sure to find one that fits you.",
       "appUrl": "https://www.curiositiesnft.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16433/curiositiesnft-dapp-collectibles-ethereum-logo_84b9a987520ae3b20782993005b7c88e.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmYXg4WaVivMcfuExxPKeuGPvUEDAutAvgHz8d8vL71Mji/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23011,7 +23011,7 @@
       "description": "First and foremost, our mission is to build a strong community for which we are able to deliver immediate value to while establishing a unique brand to launch new initiatives. We’ve seen inflated collections come and go, leaving their members with nothing. Therefore, to build a sustained brand and business, our mantra is to deliver, period.",
       "appUrl": "https://www.theuncanny.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16436/theuncannycountryclub-dapp-collectibles-ethereum-logo_15a63a4e9eaf22477cb5fcdd1455d105.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmZCZ14PYspZ9cWzqafsix7QD4PqveXjyhGvJgNTzpeqAC/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23046,7 +23046,7 @@
       "description": "With our pixel art collection, we hope to create a community of apes who may have been left abandoned into a host of fragmented areas of web3 and deserted projects. Reuniting those who were mistreated and early in their experience is just one core mission of Ape Reunion. Many of us have overpaid for a mint that fizzled out or joined a project that had many holes in it and were left stranded. We didn’t even mention the hours spent grinding to get pre-sale access only to be let down or overlooked. We will change that. We are not about that grind. Ape Reunion gives us a chance to reunite Apes who were brushed aside with future collectors that bring new perspectives into the web3 culture.",
       "appUrl": "https://www.apereunion.xyz/#/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16438/apereunion-dapp-collectibles-ethereum-logo_b968427354a5d64f40127986c20477b0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/Qmee48s7P8msoCKwhN3XdTbaHDaG18DhiVt3pSc3Bui857/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23081,7 +23081,7 @@
       "description": "Probably Nothing creates engaging yet easily-digestible content, illustrating concepts in layman’s terms to help people better understand the concept and power of crypto and NFTs. This leading Web3 educational media brand currently produces educational content with celebrities, Web3 authorities, tech innovators, and artists of all stripes. The brand has already produced an upcoming digital series featuring celebrities from different industries and Web3 experts that revolves around group cultural conversations. Probably Nothing also launched a campaign with Triller earlier this year to celebrate International Women’s Day.",
       "appUrl": "https://probablynothing.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16440/probablynothinggenesis-dapp-collectibles-ethereum-logo_a690b35b790ba3c223c2016475a70c47.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmfUenastHZwinSXuh1NAUQGiEPyBR9yfMkYwMumvdg46P/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23116,7 +23116,7 @@
       "description": "After spending almost 10 years trading credit & credit derivatives at Barclays I took the leap to \"do\" web3 full time, with a focus on NFTs.",
       "appUrl": "https://www.osf.art/rektguy",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16441/rektguy-dapp-collectibles-ethereum-logo_58ea05c13c40cdef63c7440e3dc0a8a5.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmNT4HuHcz2eqFCruXZm7BArT8kXVgPtuDv9eC8MGEaGym/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23151,7 +23151,7 @@
       "description": "Multichain was born as Anyswap on the 20th July 2020 to service the clear needs of different and diverse blockchains to communicate with each other. Each blockchain has its own unique services that it provides, its own community and its own development ecosystem. For our industry to reach the next level for consumers, we need a fast, secure, inexpensive and reliable way to exchange value, data and exercise control between the chains. The solutions developed by Multichain allow almost all blockchains to inter-operate. There is no restriction to Ethereum like chains (e.g. Binance Smart Chain), or different Layer 2 chains requiring finality to Ethereum (e.g. Polygon), or a network of Parachains (e.g. Moonbeam in the PolkaDot system), or Bitcoin types of chain (e.g. Litecoin), or COSMOS chains (e.g. Terra). These are either now all integrated, or on course for integration. With support for all ECDSA and EdDSA encrypted chains, Multichain is almost universally applicable as an interoperable layer. Multichain is now the leader in the cross-chain field, with a rapidly expanding family of chains (currently 26) and daily volumes well in excess of $100 million. Its sustained daily volume of more than $100 million, its Total Value Locked in excess of $5 billion and its thousands of daily users are testament to its popularity and security. We take pride that we are an open source protocol. Indeed to be properly described as decentralized as we are, it is essential to be open source, since otherwise how would anyone know that this was the case? We also have a strong belief in the principle of trustlessness. Anyone can use our crosschain services. They are controlled by code and there are no Externally Owned Addresses acting as a weak link.",
       "appUrl": "https://multichain.org/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16443/multichain-dapp-defi-ethereum-logo_3e0a24bd056010cd2aeb1e48afda592a.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmTNZxzLqLbGkFMK7uzYPfvNWZ3PUWdAhGRJf7WkgNDyrp/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23189,7 +23189,7 @@
       "description": "Track fitness activity, earn crypto, and be the best version of you. Same effort, more results. - Whitelist Sale Filled Under 10 Seconds - Audit Completed by Certik Before Launch - Listed on Bank and Bitmart - Two Top 5 Exchange Listings Coming Soon - Staking with Earnhub Starting in 2 days - Liquidity Locked for 10 Years We built Step with a single mission in MIND - To Bring Fitness and Crypto to the masses whilst rewarding PHYSICAL EXERCISE with Passive Income in $STEP. ✅ 8% $STEP Rewards For Fitness - Weekly on Mondays ? ✅ 2% Marketing ✅ Major Marketing Ongoing ?? ✅ Active Developer Team ???",
       "appUrl": "https://walkwithstep.io",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/13429/step-dapp-defi-bsc-logo_419c3dbd8d6a5d707d4c85159a270ec9.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmcAHqwTjieKm2h4M7QXWRfBN9ixU4MucByrA7h9j2Wk9a/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23224,7 +23224,7 @@
       "description": "One might not have realized yet... But we are all warriors _ SENSHIs fighting our own battles. Web 3.0, the metaverse, blockchain... call it however you want Technology is merely a tool to connect us all. Call to all SENSHIs _ regardless of whom you might be, where you might live, and what you might love, Join us.",
       "appUrl": "https://tgoagenesis.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16525/genesis-dapp-collectibles-ethereum-logo_9f442620f634edcd7109a1ce7a5f82a7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmasLVfhA27EaYUJifDugAqLvDc4F4sJfboM8kN11A72tC/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23259,7 +23259,7 @@
       "description": "Prices may be down, but I believe the fundamental thesis behind NFTs is stronger than ever. Digital asset ownership rights are fundamental to freedom in an increasingly digital world and they must be protected through distributed, immutable ledgers not controlled by any one person or group. My goal for Admit One is to be a community of like-minded people who understand how critical it is to disrupt traditional industries and increase adoption of cryptographic technologies. This community will be a center for participation in all things that I work on going forward. I ask that you participate in this community, not because you think you'll make money right away, but because you believe in my vision and want to join me to see what the future brings.",
       "appUrl": "https://g.money/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16526/admitone-dapp-collectibles-ethereum-logo_aef57ffc3e124fe98dd0a9d8d4f8f1d7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVAzYaT7YsBMXRLNzAMJ7d9vpnw1gnqAfDTP6FqhNwLNX/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23294,7 +23294,7 @@
       "description": "BREAKING NEWS: The BOBO DEGEN APOCALYPSE has begun. 10,000 Bears to keep you company until the end",
       "appUrl": "https://www.bobodegenapocalypse.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16528/bobodegenapocalypse-dapp-collectibles-ethereum-logo_7151f561e6e12605680db4c6bb4729b0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/Qmcz33bd76ireNyW18uHzaLxhizyt5f2aBCYihbXcfXZbr/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23329,7 +23329,7 @@
       "description": "Welcome to our World, where child-like imagination runs free and fantasy is celebrated. Boki is a collection of 7,777 unique characters who live in the World of Boki. Boki is a community-focused project centered around collaboration and connection. Our goal is to attract imaginative Dreamers and Adventurers who are passionate about learning and growing in Web3. Each Boki grants you access to Boki's holder-only Discord channels, digital and IRL events, exclusive merch, and more. To those who live with their heads in the clouds: welcome home. The World of Boki is home to anyone and everyone.",
       "appUrl": "https://www.boki.art/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16529/bokinft-dapp-collectibles-ethereum-logo_72745ff53c1e24fcd49789eddba83149.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmeMRdfsyQtteGbfv9oQbRxikBAVwJyps58aZPJz84ZMAd/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23364,7 +23364,7 @@
       "description": "7,777 Misfits roaming in the Ethereum blockchain, created by artist/musician Ahal Eden and Author Magi Otsri. In collab with Etoro.",
       "appUrl": "https://www.strangetimesnft.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16530/strangetimesnft-dapp-collectibles-ethereum-logo_3a76b1899c688572910ada8e95d086b7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmUjDApBmMiDMmKSsW7JxVbomhYD9WbCeRRHLEcVKvR83D/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23399,7 +23399,7 @@
       "description": "A better future for everyone, inspired by advanced technology: OMR & Audi are raising funds for UN Refugee Aid Germany with an NFT drop of the AI sculpture by Eylul Alici and Ferdi Alici from Studio OUCHHH.",
       "appUrl": "https://the-art-of-progress.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16532/unseenuniverse-dapp-collectibles-ethereum-logo_319f76a6992855d6eee5e9914c034895.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmNtVJdFqrQbzkCZu7p54gsv1FjJNyhoie4bnt1wNKD3c2/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23434,7 +23434,7 @@
       "description": "An aggregated NFT market, BitKeep NFT Market supports listing third-party pending orders without locking the NFT in question. Currently, NFTs on ETH, BSC, HECO, and Polygon are all supported. No plug-ins needed; BitKeep NFT Market is the one-stop shop to complete all transactions. Founded in Singapore in May 2018, BitKeep Global Inc. now serves nearly 6 million global users worldwide, covering nearly 168 countries in North America, Europe, and Asia. We focus on emerging markets. As of now, BitKeep has established more than 15 local teams in Southeast Asia, South America and Africa to get on the track of high speed growth. The latest funding round of BitKeep was led by Dragonfly, followed by Gaorong Capital, Foresight Venture, Sincere Truth, Bixin Capital, SevenX Ventures, etc.",
       "appUrl": "https://bitkeep.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16628/bitkeepnftmarketplace-dapp-marketplaces-ethereum-logo_1efc93319fc1e65f848f5bbdea2febd9.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmTx8hEBEbJwSTPxwJeaQGK6Bad7yGwqarK4P4Gpg8GhTW/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23470,7 +23470,7 @@
       "description": "Insidoors, outsidoors, have a seat by the fire and enjoy a cup of fresh BOKU. Pull up a chair, there’s always room for another at the table. The world outside is a sea of faces, strangers passing by. But here you can find your tribe...",
       "appUrl": "https://akumudragonz.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16667/akumudragonz-dapp-collectibles-ethereum-logo_180ab1bf77d1b466271ba06908585139.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmaCVis6XXQsLUFM1CzsJoW2CqnH4sWVu9ewvSKyJZtUXs/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23505,7 +23505,7 @@
       "description": "NFT should not just be a JPEG. Get one Rare Land NFT and join us to dance in Rare Land!",
       "appUrl": "https://mlabs.land/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16668/rarelandnft-dapp-collectibles-ethereum-logo_ebda6711f906fd8d2565bd13deeb8c3b.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmWRvTHfosnZns5egJTNANd4ZbHjE1ssgCXTtT4NCLyVHQ/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23540,7 +23540,7 @@
       "description": "A private digital and physical mastermind for those fighting for the real world. Gain priceless insights and opportunities in the realms of business, income generation, wealth creation, social life, and more. Surround yourself with a circle of winners, pushing each other to be more",
       "appUrl": "http://gentscroquetclub.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16671/gentscroquetclub-dapp-collectibles-ethereum-logo_2458533de1ed9daed4719f7a83bce74f.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/Qmc8gowNKJaq7sM9gbDjFKuT3bBU3EK4nfHwaxtiqEMckc/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23575,7 +23575,7 @@
       "description": "The Dark Elves and High Elves, the two ancient races of Kharis, have put aside their differences to conquer the greatest evil our land has ever faced",
       "appUrl": "https://elftown.wtf/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16672/elftownwtf-dapp-collectibles-ethereum-logo_3892de41132edd15e3162dc74c6453c7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmT8tQT3wyu4Zb8HcMKNAB5mkXFtCWFX2mEifdxzfXtWF5/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23610,7 +23610,7 @@
       "description": "Plenty is a decentralized exchange on Tezos that offers a seamless trading experience. Users can trade, earn, govern and build on the platform. Plenty features both stable and volatile liquidity pools, enables near-zero slippage trades and easy bridging from Ethereum and Polygon. Plenty's ve (vote-escrow) system deviates from the standard vote escrow rules of Curve by implementing three modified economic principles. Firstly, the math of the original two principles of ve(3,3) has been modified to allow for decent incentives for protocols that join the Tezos DeFi ecosystem at a later moment. Secondly, weekly emissions are adjusted as a percentage of the circulating supply, and the real emission that users receive is mathematically related to a base emission. Lastly, the locked PLY supply is tokenized as vePLY NFTs, which are transferable and can be traded on secondary markets. This allows for more efficient use of capital, and solves the capital inefficiency problem of ve assets in other DeFi protocols like Curve.",
       "appUrl": "https://www.plenty.network/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/7443/plenty-dapp-defi-tezos-logo_9cd7825580b8f766d87b52e6d8ecee43.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmPtpcAhxcmRAeGopdS4shHyEFrSvt6eqZuv5oKsYM7axq/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23647,7 +23647,7 @@
       "description": "Angry Dynomites Lab is the world's first massive co-op multiplayer game on the blockchain. Players need to unite to build artifacts to help the poor Dynomites survive. Many materials are required to create these so-called Masterpieces, making it impossible to build them up for a single player alone. Therefore, the community needs to collaborate to establish a flourishing, decentralized economy powered by tokens living on the blockchain. Players need to craft materials, set up production lines, trade with each other, and optimize their production empire to keep our clumsy Dynomites alive. With the integration of tokens from other NFT projects (like $banana, $honeyd), we are breaking up boundaries and creating win-win situations for everyone. As experienced game developers, we will package this into a crazy and playful world - creating a fun game for everyone, forever. ??",
       "appUrl": "https://www.angrydynomiteslab.com",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16748/angrydynomiteslab-dapp-games-ethereum-logo_0ef4708eece679604454967f6bbc2e44.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdN6YpUmHJDUmfV7Q3DeWZB41rT7PUue6AQXyLxMsRMgh/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23683,7 +23683,7 @@
       "description": "Liquidifty provides different tools for NFT collectors. Every user of the platform will be able to use cross-chain NFT oracles, take loans under the NFT collateral, earn with NFT vaults and more. There are a lot of different and unique NFTs, all of them are made on different blockchains. But there’s one thing that unites them — value. Liquidifty helps users to use this value. Liquidifty will provide different tools for NFT collectors. Every user will be able to use cross-chain NFT oracles, take out loans using NFTs as collateral, earn with NFT vaults, trade tokens on a convenient cross-chain marketplace or join the multi-ownership feature. More exciting products to come in the future. Liquidifty aims to be the most user-friendly, cross-chain NFT marketplace for everyone, integrating Flow, Binance Chain, Polkadot and Ethereum. Liquidifty’s marketplace v0.1 is built on Binance Smart Chain and is already live with traction from both NFT artists and collectors.",
       "appUrl": "https://app.liquidifty.io",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/7659/liquidifty-dapp-marketplaces-bsc-logo_013ab67d6db351202069391b66ce949d.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmY388bzWgEeTRhWGLKw2KgyuHuCzQcGMth4eWc7kiG7fK/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23719,7 +23719,7 @@
       "description": "An open-world RPG adventure game built on the Ethereum Blockchain. Journey across a vast and varied landscape on your quest to hunt and capture deity-like creatures called Illuvials. Discover the cause of the cataclysm that shattered this land. Draft your starters. Challenge to be the best. Outsmart and counter your opponents strategically to place rank in competition. Earn $ILV through play, and become part of our community-based governance. 100+ Illuvials populate this alien world. Each possess different affinities, classes, and abilities. Capture them. Fuse them. Upgrade your Illuvials and discover more powerful forms. Store your Illuvials on Shards. Sleek crystal slivers that hold the essence of the creature inside. Compare stats with your friends and flaunt your rare shiny, cosmic, and holo collectibles. Enjoy a new era of NFTs thanks to integration with Immutable X. Zero gas fees for peer-to-peer trading with instant transactions, all while you securely maintain custody of your assets.",
       "appUrl": "https://www.illuvium.io",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16762/illuvium-dapp-games-ethereum-logo_ddb59801bf6108f09687952bdbed498a.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmfDBWkiDEeosVLEhMMRGBarD1KgZfqerbqQdTN3w4RB46/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23754,7 +23754,7 @@
       "description": "No roadmap, just for the culture First time in history free mint + paid 0.01 ETH to the minters",
       "appUrl": "https://nftftc.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16775/ftcofficial-dapp-collectibles-ethereum-logo_60eac49eee65137c1dd78beea8b002c0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmUcGN1pLafcpNw4P26UYvz3iPATAn4orABqPefcZwCodW/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23789,7 +23789,7 @@
       "description": "HALO NFTs, presented in high-definition 3D avatars, are created by the HALO label with the Decentralized 3D Artist Community. HALO NFT owners can easily control the avatar's movements and expressions on social platforms like Discord, YouTube and TikTok, or online meetings.",
       "appUrl": "https://halonft.art/#/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16776/haloofficial-dapp-collectibles-ethereum-logo_d7bf843d1dc0e44d75cc8449f6e72d28.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmddY8VRHoPxZrw7VSo9GJuAD9R3Q5vf6CowDJjFKuUapD/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23824,7 +23824,7 @@
       "description": "CryptoBots is the first economic-centered p2e game merging two genres — collectible RPG and space grand strategy. Based on disruptive innovations in token utility, staking, burn, and earnings. Gameplay: 3x3 PVP Arena Battles Bot Manufacturing Spaceship Battles Spaceship Manufacturing Search and Exploration Missions NFT Lands Alliances Marketplace Renting and Scholarships Project Background: From the founders of Playneta — a game studio with over 100 Mil installs A very deep game economy Presale finished, 90%+ of Bots are currently staked Fully doxxed team",
       "appUrl": "https://cryptobots.me/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16790/cryptobots-dapp-games-ethereum-logo_e78ac92a5528f0af7e846c2166dc43d3.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmXz6vqoEovJb54CoK9DJRtc48dUj5bAfBJh3bMHcX4K5x/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23859,7 +23859,7 @@
       "description": "In Decentralized Finance (DeFi), social good can be baked into the very foundation of a protocol without introducing any additional friction or extraordinary cost to the end user. At Popcorn, we do this by drawing a fee from the yield on our DeFi products; this yield is then funnelled to beneficiaries (chosen by the PopcornDAO community members) in the form of grants. The current blockchain (crypto) ecosystem is not ESG friendly. The future belongs to organizations that can achieve competitive returns while also prioritizing environmental, social, and governance issues. We believe investors are increasingly looking for investments that are ESG positive, and crypto is ideally positioned to provide high returns while making a positive impact. Our vision is to become the leader of ESG-friendly DeFi solutions by offering easy-to-use, high-yield investment products while being carbon neutral and committing our earnings to social impact and non-profit organizations.",
       "appUrl": "https://popcorn.network/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16793/popcorn-dapp-defi-ethereum-logo_dc5447e9da6ffebef0f2ef721cfa4260.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVZ1moDe2CAoCkGKuo6CGTdtNkYJaAUhSUvDushWoTNcg/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23896,7 +23896,7 @@
       "description": "RadioShack is a 100 year old brand embedded into the global consciousness, now on a mission to be the first protocol to bridge the gap to mainstream usage of blockchain and cryptocurrencies. As a first step, RadioShack is fixing the chaotic and dispersed nature of liquidity addition on today's AMMs. To solve this problem, RadioShack aims to significantly reduce the diameter of the graph of swappable tokens, and increase liquidity per pair. This will be achieved by using a single large-degree node (the RADIO node) to create what they refer to as The Starfish Topology: a pairing of the single large node with all swappable pairs.",
       "appUrl": "https://app.radioshack.org",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16802/radioshack-dapp-defi-ethereum-logo_43f9f04d7ec487d6049eb2a81f04a1b2.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVcFZatca6wGXwkgBgA9xtEZWG7MjmZW3Yz8KYwFzUMJ1/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23933,7 +23933,7 @@
       "description": "NFTmall - A multi-chain NFT marketplace & launchpad with NFT materialisation service. A robust multi-chain NFT platform that empowers creativity. It allows NFT creators to have fun while earning. NFTmall is not just a marketplace but a community governed by its utility & governance token GEM. Our mission includes bridging the gap between digitised and real-world while allowing real-world use cases for NFTs by introducing revolutionary features like the NFT Materialisation service. Using NFTmall, anyone can mint, list & trade NFTs in a simple & cost-efficient manner. Thanks to its super-efficient smart contracts. We are a next-gen NFT marketplace & Launchpad for NFT creators, traders and enthusiasts. Our platform is synergizing DeFi and e-commerce to achieve a fully autonomous and royalty driven marketplace. NFTmall = Multichain NFT infrastructure provider + Powerful NFT API + NFT materialisation service + Launchpad.",
       "appUrl": "https://nftmall.io",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16826/nftmall-dapp-marketplaces-bsc-logo_6d0510e40b11765e38c9a0d225160261.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmPFA9UJwD2TqhF7h8iQM1m4WLgBZYAGWC8nhHo5JTR676/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -23969,7 +23969,7 @@
       "description": "The work is being developed with the number 108 as the keyword; a combination of 108 backgrounds and flower colors make up a field, and there are 108 fields. Each field has 108 flower images, resulting in 11,664 flower images in total. The number 108 is a reference to bonnō, or earthly temptations.",
       "appUrl": "https://murakamiflowers.kaikaikiki.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/16884/murakamiflowersofficial-dapp-collectibles-ethereum-logo_4f18c70b79704f6804a204e0e8b5fcee.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmSUyhxBHM5dwJV8VrjG2ZvwcbchxJitqL1v6FARs9LqzC/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24004,7 +24004,7 @@
       "description": "XP Network's NFT Bridge is unique in many ways, leaving alone that it connects more blockchains than any other NFT bridge. The shortlist of the bridge advantages boils down but is not limited to:  Cheap transactions even when transferring NFTs to or from Ethereum. Validators scalable to any number without impacting the transaction price. Optional royalties and other smart contract logic and NFT collection name transfer to the target chain. Support of 10+ NFT standards. The bridge explorer for tracking cross-chain NFT transactions that were previously only available to blockchains. An intuitive JavaScript library allowing for integration of the bridge into any cross-chain game, marketplace, metaverse, or DEFI project in a matter of hours. A widget that can be set up and added to a user UI in minutes with zero coding.",
       "appUrl": "https://xp.network",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17122/xpnetworkmultichainnftbridge-dapp-other-ethereum-logo_d8aae3f2142e412fd887630795c737f0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmPj2AH2amLX8SEoDH9j7kfYdXSe1rm1ZutGNvFiCjQ5Yd/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24040,7 +24040,7 @@
       "description": "Nested is a social trading platform aimed at socializing DeFi. At the crossroads of social media and DeFi trading, Nested is multi-chain, built to scale and allows users to create, copy, manage, update, send and share crypto strategies — the ‘Nested portfolios’. These financial portfolios are represented as non-fungible tokens (NFTs) reflecting sets of tokens. Nested makes it possible for crypto newcomers and experienced traders to benefit from each other. The first one may look for performing strategies and portfolios to copy while the second can monetize his/her knowledge by earning royalties everytime followers do indeed replicate their portfolios. In the coming months, Nested will also allow users to replicate farming and staking strategies. Nested’s team has focused on building a user-focused app while preserving the highest level of decentralization and security.",
       "appUrl": "https://nested.fi",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17159/nested-dapp-defi-ethereum-logo_8d634fb006fb37ca0d5231519a6d8349.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmT4wxMiWNtZX4MMfLsBGY5VJSBpkEh8rAHQbFChvPedG6/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24077,7 +24077,7 @@
       "description": "Hop is a scalable rollup-to-rollup general token bridge. It allows users to send tokens from one rollup to another almost immediately without having to wait for the rollup’s challenge period.",
       "appUrl": "https://app.hop.exchange",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17238/hopprotocol-dapp-exchanges-ethereum-logo_11fb4ea11c9eb78b25f2948c53e97d4e.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmbE2xcvCTFzE4HeW5zH1webMF4vCCiPBTmAWTeB9HADk2/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24115,7 +24115,7 @@
       "description": "Sneakerheads is a collection of 5000 unique NFTs designed by legendary artist and founder Ali Dawood. Over 40 meticulously designed 3D, hand-drawn base models with unrivaled levels of detail - capturing the look, feel, and style of a sneaker like never before.",
       "appUrl": "https://www.sneakerheads.xyz/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17244/sneakerheadsofficial-dapp-collectibles-ethereum-logo_e5043ebd46c6606cc587505f91d3cc9a.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmPKpYHGm1kbUkf1i11AsMbczPU9XTYRBi9LYqzhskBm1Y/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24150,7 +24150,7 @@
       "description": "Impossible Finance is a multi-chain incubator, launchpad, and swap platform led by Ex-Binance & DeFi veterans. It offers a robust product-first ecosystem that supports top-tier blockchain projects to targeted user audiences. With extensive support from key leaders in the crypto industry, Impossible Finance simplifies DeFi for users to enjoy fairer investing, cheaper trading and better yields.",
       "appUrl": "https://impossible.finance/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/13564/impossiblefinance-dapp-defi-bsc-logo_815a32930e35ff80f0a59755d42646b5.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdZ5UCjTsSswJP1Hfovb2jDRNUT6LDpA2vfVr7mFzmCxz/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24186,7 +24186,7 @@
       "description": "XCarnival is a stable and secure financial infrastructure protocol in a multi-chain environment, providing a market-optimized liquidity solution for NFT assets in Web3.0, supporting both P2P (Person-to-Person) and P2C (Instant Lending Pool) models of asset-backed lending. XCarnival Solution 1.0——XBroker XBroker is a platform for NFT pledge and loan, which provides liquidity for the NFT market. Participants are divided into three roles: mortgagor, lender, and liquidator. The mortgagor is to provide NFT to pledge and borrow money, the lender obtains interest by lending USDxc, and the liquidator participates in the liquidation through auction bidding, that is, paying the auction price to obtain NFT. XCarnival Solution 2.0——XPawn XPawn is a platform based on NFT assets issued on the  Ethereum mainnet, innovative use of the pool model, and lending of value coins, in which users can participate as depositors or borrowers. Depositors provide liquidity such as ETH to the lending pool to earn interest and rewards, and receive liquidity incentives. Borrowers can use their NFT holdings as collateral to lend ETH, etc. to the lending pool.",
       "appUrl": "https://xcarnival.fi/Home",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17265/xcarnival-dapp-defi-ethereum-logo_c86d7b410d3b004a8d20fb10d017bc02.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVQcLBbxgHkZCnTsfoai2QwkYgxN3PrtSN9ptxVm1UzqA/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24222,7 +24222,7 @@
       "description": "Leonicorn is one of the first GameFi Multi-chain Decentralized exchanges and Dex Aggregator with 22 EVM Blockchains on the BSC  blockchain. We have been operating in the Mainnet environment for the last year and are ready to start GameFi Section in October 2022.",
       "appUrl": "https://dex.leonicornswap.com/home",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/8905/leonicornswap-dapp-defi-bsc-logo_aa59a690b97b18c182b3ba3e9b9805c7.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmYQ2FgLMBZXheoZztna7nc7PM3MagHxxtdCBCuz4aAxkj/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24259,7 +24259,7 @@
       "description": "Bullieverse is an Open Metaverse developed for the community of players and creators. It offers users/players a truly immersive environment and opportunities to monetize their time and loyalty in Bullieverse with its unique NFTs. Users can own NFTs, use them to play games, asset owners can rent and lease their assets to others in the community, and more. Built for the Web 3.0 citizens, this unique gaming ecosystem will be owned by the Web 3.0 citizens as players start owning the $BULL tokens.",
       "appUrl": "https://bullieverse.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17363/bullieverse-dapp-games-ethereum-logo_6018fb4ee207b2ca7d9e79d33d4c9ccb.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmZi8TNu4Mj4rHVrE5reahPZmWNyacChkc8VJZ1s3k3QD5/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24295,7 +24295,7 @@
       "description": "Ferrum Network is a pioneer in ushering in the era of Interoperability 2.0. Powered by the Quantum Portal, Ferrum Network’s mainnet nodes and related infrastructure will bring value, data, and functional interoperability to every chain in the industry. Utilizing the Ferrum Network, anyone can build and deploy solutions on one network and instantly enable multi-chain functionality without the burden or technical debt that comes with managing a multi-chain infrastructure for their dApps, and projects. Ferrum also specializes as a multi-chain Blockchain as a Service DeFi solutions provider, adding deflationary mechanisms, token utility and Web3 technology products to projects across the crypto space. With the mission of breaking down barriers to mass adoption in mind, Ferrum empowers the industry by reducing friction and bringing startups and established networks closer together.",
       "appUrl": "https://ferrum.network/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17383/ferrumnetwork-dapp-defi-ethereum-logo_7f6794507275a1a1ba0c4a046fe4ec44.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmR4qoZaG7hKvQcjKMqQj3uEgXZB5Btdv9rPY5Zxy5QoJd/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24332,7 +24332,7 @@
       "description": "???’? ??? ???? ??? ?? ??? ????, ℙ?????? ??? ??????????? ?? ??? ?????. ???? ????. ℕ? ???????. ℕ? ???????. ℂℂ?.",
       "appUrl": "https://moonrunners.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17427/moonrunnersofficial-dapp-collectibles-ethereum-logo_6a4d2dd978c946d7834ec95e9eb5dace.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVReRfgBFDz8iutzRAywGNsJGzrgpp2AxtgVkhDRPtLH3/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24367,7 +24367,7 @@
       "description": "Surprise, adventure, and access to a new world await the holder. Keep your firefly close, and it will evolve. . .",
       "appUrl": "https://gossamer.world/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17429/gossamerseed-dapp-collectibles-ethereum-logo_d24ae5d1444c6629dd7f6d2f20a707c8.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmSnREVkQRvLneLunjf6BjTY8gn6Rh45jvaPJwRHWmtfi9/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24402,7 +24402,7 @@
       "description": "OpenLeverage is permissionless lending and margin trading protocol with aggregated DEX liquidity, enabling retail and institutional clients to long or short any trading pair on DEXs efficiently and securely. It means anyone can create lending pools to support margin trading for specific token pairs along with liquidity pools created on the DEX. It uses real-time price AMM to calculate risk, provides risk isolated pools, and introduces OnDemand Oracle which updates and refers to TWAP to protect the system from price manipulation. It aims to serve as an important component for leverage trading in a decentralized environment. OpenLeverage launched the Ethereum mainnet on 20 Dec 2021, the BNB chain mainnet on 22 Feb 2022, and the Kucoin Community Chain mainnet on 12 Apr 2022. Important milestones include crossing $660 million in trading volume and $12 million in TVL. It will be deployed to more EVM-compatible chains and Ethereum Layer-2, connecting to top DEXs, to support lending and margin trading for hundreds if not thousands of pairs natively traded on DEXs. OpenLeverage is incubated and invested by Binance Labs. It was also admitted into Creative Destruction Lab, advised by Mike Bucella from BlockTower, Josh Felker from Nascent, and Ash Fontana from Zatta Ventures. Other investors include Crypto.com Capital, Unanimous Capital, Signum Capital, Richard Ma from Quantstamp, LD Capital, Gate Labs, FBG Capital, Continue Capital, YBB Foundation, MDEX, AKG Ventures, Mr. Block, Kangaroo Capital, Kirin Funds, DCI Capital, ICO Analytics, GTA Ventures, ChainVC, CryptoRank, and 10+ community-based funds. In the past months, OpenLeverage has grown our social community to 100k+ on Twitter, Discord, and Telegram. OpenLeverage participated in the KCC Unicorn Contest and ranked second place. OpenLeverage has received security audits from PeckShield, Code4Rena and CertiK.",
       "appUrl": "https://openleverage.finance",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17454/openleverage-dapp-defi-ethereum-logo_da090afa3a7d0ef16a94cad84e5b76b1.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdSQfnvS43WjooWL2VMtwdMFgwtZGbT9fbHCYHEg177Tc/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24438,7 +24438,7 @@
       "description": "RADAR is the governance and utility token for the DappRadar ecosystem. The token gives holders influence on the future of the DappRadar platform through Governance, token staking options and early access to content and exclusive features through DappRadar PRO. Furthermore, RADAR empowers the community to contribute and then earn, all thanks to the innovative Contribute2Earn. The RADAR token empowers the DappRadar community and makes them participants in the future of the world’s dapp store. Visitors to DappRadar have become accustomed to accurate on-chain data about their favorite dapps across the entire blockchain ecosystem. By the end of 2021 DappRadar had 1 million people using our tools, services and rankings every month, while DappRadar tracks nearly 30 protocols and close to 10,000 dapps. This growth would not be possible without the help of our community, the developers in the ecosystem, and visitors valuing our data. With the help of this community we will grow DappRadar further, the RADAR token is the reward people can earn for their contributions to the ecosystem.",
       "appUrl": "https://dappradar.com/token/staking",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17501/radartoken-dapp-defi-ethereum-logo_5d7cbd90ba1de8c26358f50ec0e2fcce.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/Qmf4P49RgngYdQ7KjwfTFHfAEFLujqNXbuAYf8D5yucsy3/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24474,7 +24474,7 @@
       "description": "The team behind Undra (known as Studio Decent) are working under a singular goal: reimagine Web3 technologies for adoption into mainstream gaming. Undra is the name of our game. It is also a fictional setting, a newly discovered island in the year 1898. This setting is designed to be the perfect place to experiment with Web3 principles in the context of gaming, without being tied to the existing approaches being used in Web3 or DeFi spaces. We are carving out a new category of Web3 gaming, and it will be completely different to the current studio attempts to integrate Web3 technologies. We are calling it Game3! The world of Undra is dangerous, with risks around every corner and odds that are stacked against you. Working alongside your fellow citizens, it's time to forge a new society on this desolate island and work to uncover the secrets of the mines below. Undra starts as a simulation of an early industrial empire, expanding into a rich strategy game centered around politics and industry. Undra won't look like many typical games, it aims to be a setting where alternative gameplay can thrive. Here you will find forms of gameplay that resemble Simulation, Strategy and Roguelike gaming, centered around the fictional goal of rebuilding a new society and economy together.",
       "appUrl": "https://undra.game",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17506/undra-dapp-games-ethereum-logo_4d31890ea6f86a67c6145889dcb0840c.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmdodW2hZBQHd4d6Y8GVMyqNvDstWWo5FNuLdrqHjLnYfs/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24509,7 +24509,7 @@
       "description": "WardenSwap is the first Decentralized Exchange Aggregator with built-in Machine Learning. Our Best-Rate Query Engine will walk through all possible paths and return the best one for you! It is done within a second ?",
       "appUrl": "https://www.wardenswap.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/6270/wardenswap-dapp-defi-bsc-logo_770900e57ffb1051430c621c91dd1913.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmT2GDiL5bSzbe4nvd64g2XcmkU7j6djEckovfLWGHX7rW/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24546,7 +24546,7 @@
       "description": "Helix is an automated market maker (AMM) decentralized exchange, and yield swap protocol  deployed on the Ethereum blockchain. Launching in July 2022, Helix connects users with a range of decentralized financial tools, such as non-custodial trading, staking, and farming, and has introduced cross-chain NFT staking with the Geobot collection and Nexus cross-chain bridge. HELIX is the native ERC20 of the Helix automated market maker (AMM) and they can be used to interact with the platform in various ways that relate to financial activities and governance. There are several forms of utility for the HELIX token from day zero, with additional utility mechanisms being added in future releases. The initial ways to use HELIX include:  Yield farming Staking Pools Long Term Vaults Governance and Voting Yield Swaps",
       "appUrl": "https://helix.finance/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17542/helixfinance-dapp-defi-ethereum-logo_9c48f20cd3bdad2d5619246b884b3487.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmZa54qXSShUYkVfmMGmTYEDvs6hqfjCAsyvw9vz93Cbtk/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24582,7 +24582,7 @@
       "description": "The year is 2777 and the Cybonix Cyborgs have been forced off their home planet Cygonia by the Eldor Mystics. With only 1500 of the most elite Cybonix surviving the initial attack they have retreated to their top secret space facility on the dark side of Wordon's moon. Here the Cyborgs are building and training back up to seek revenge on the mystical warlords who savagely pillaged their world. Cybonix Drones",
       "appUrl": "https://cybonix.io/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17594/cybonixgenesis-dapp-collectibles-ethereum-logo_cf5c188a5a02289da15d71a5ecd11bd6.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmVBceXfw3KHLD2qqi9wGEfcbZX1abDAs6pLNZD9Bn4WxV/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24617,7 +24617,7 @@
       "description": "Aura Finance is a protocol built on top of the Balancer system to provide maximum incentives to Balancer liquidity providers and BAL stakers (into veBAL) through social aggregation of BAL deposits and Aura’s native token. For BAL stakers, Aura provides a seamless onboarding process to veBAL, by creating a tokenised wrapper token called auraBAL that represents the 80/20 BPT locked up for the maximum time in VotingEscrow (read more about what this means). This can be staked to receive existing rewards (BAL and bbaUSD revenue) from Balancer, in addition to Aura system revenue in the form of BAL(read more about the fees), and additional AURA. Users can trade their auraBAL back to BAL at any time. For Liquidity providers, Aura abstracts complexity of depositing into the Balancer gauge system, providing a smooth onboarding process to all Balancer gauge deposits. Aura allows depositors to achieve a high boost through the protocol owned veBAL while also accumulating additional AURA rewards. The AURA token acts as a governance and incentivisation tool within the ecosystem. Locked AURA tokens will have governance rights in the system and will be able to vote using the protocol owned veBAL voting power as well as on internal proposals.",
       "appUrl": "https://aura.finance/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17607/aurafinance-dapp-defi-ethereum-logo_f4e43df5987e5310a184e455eac35a44.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmWwKT9ij3SFcH9CJwCyGY65XzvReQu5VVrzrVQFonP71E/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24653,7 +24653,7 @@
       "description": "Lifestory is a web3 project. It starts with a mobile app where you can upload life moments in timelines & make NFTs of them! Additionally, we have a VR immersive metaverse (The Lifeverse) where you can visit your customized timelines, alone or not, and relive these moments in the most realistic way. We are releasing 5555 planets NFT collection, which allows you to have a fully customizable world in the Lifeverse. + the possibility to unblock plots of land and rent/sell them. All this ecosystem will have its own cryptocurrency $LIFC",
       "appUrl": "https://www.lifestoryapp.com/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17642/lifestoryapp-dapp-collectibles-ethereum-logo_68bd3982d1ac46f2d8afb53d8ed50c7b.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmUdvdRmpJDLov9Uzzo181L1yYiSxCNCvAMaYSP55WG1cb/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24688,7 +24688,7 @@
       "description": "The Rarity Garden real-time snipe & sweep tool helps you to rapidly buy NFTs before others can do. This is especially important if there is a lot of trading going on in the collection of interest. You can create gas presets to outcompete other buyers as well as setting up filter criteria to buy in a semi-automated fashion. Additionally the tool supports rarities, so you are able to snipe rare items, having access to information others don't have. There is a lot more. Best is you try out all the different features and benefit from innovative updates that we offer.",
       "appUrl": "https://rarity.garden",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17831/realtimenftsnipersweeper-dapp-marketplaces-ethereum-logo_7cc7e0d538ca389c2c23d1978869c2e0.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/Qmb7aw2Anbb7E6gaVFEoWKw62eModQLxP8wWPddHuKMRpa/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24723,7 +24723,7 @@
       "description": "What's X Routing? How does it work? Why OKX DEX? OKX's X  Routing algorithm finds the best price across every DEX. We compare  prices from Liquidity Providers (LPs) with the best liquidity pools,  split orders, and take into consideration prices, slippage, and network  gas fees. We  connect over 10 blockchains, 100 decentralized exchanges, and offer  over 100,000 crypto assets in one place. This allows us to offer the  largest variety of quotes on the market. Trade a variety of crypto assets across numerous blockchains in one click with minimal slippage and the best trading prices.",
       "appUrl": "https://www.okx.com/web3/dex?inputChain=1&inputCurrency=ETH&outputChain=1&outputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/23657/okxdex-dapp-exchanges-ethereum-logo_5cd32f9b140ffc6957c27fae4f3dcd85.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmaT8hgp1TEbQ7TvNMq8w5cFvVq21DcYP1JJxBmdNKRNhX/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24760,7 +24760,7 @@
       "description": "Supremacy is a revolutionary sustainable metaverse game, where AI-controlled War Machines destroy each other in a 24/7 Battle Arena. In the year 2149, governments have fallen and the world is a battleground for the AI-run factions. Pledge your allegiance to your faction, influence their battles and earn. SUPS tokens are your economic power in the Supremacy game, from voting and influencing the war through in-game purchases in the Battle Arena to buying War Machine NFTS and in later phases supporting the entire in-game economy as goods, services and progress is sold for SUPS tokens. War Machines (Mechs) These are the giant armored robots, built to navigate any terrain and designed for nothing more then to destory their enemies. In Supremacy, players can own War Machines (Mechs), represented as NFTs. They can earn in-game currencies, powerups and advancement by enlisting their mechs in the factional wars. They can also enter them in exhibition battles against their fellow players. In this world, the lines between war and entertainment are blurred. Mech Battle Royales are used to settle disputes, raid resources, destroy facilities and ultimately, to entertain and distract the citizens of Supremacy. Journey into the heart of the Supremacy world and if you can survive, the game rewards will bring glory to your fight. To beat them, you must first join them.",
       "appUrl": "https://supremacy.game/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/17979/supremacy-dapp-games-ethereum-logo_950e0dc09cc1bb6b1318b2a20bc34604.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmecChuwtvUV8Pmgs9hVtHK5BhxjVygvAUsk8tB474fpwx/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
@@ -24795,7 +24795,7 @@
       "description": "SWFT AllChain Bridge (www.allchainbridge.com), H5 Version One-Stop Cross-chain Swap: It can be directly connected to the user's wallet (no registration or login required) and swap can be accomplished simply with one click. Recently, we launched the NFT swap section on the platform. Users now have access to leading NFT trading platforms such as OpenSea, LooksRare, Rarible, Treasureland, Bakeryswap, as well as leading NFT projects such as Bored Ape Yacht Club. Users can also use any token on any chain supported by SWFT to swap for top NFTs with one click, which greatly facilitates the smooth multi-chain flow of blockchain assets for DeFi and NFT users.",
       "appUrl": "https://www.bridgers.xyz/#/",
       "images": {
-        "logo": "https://dashboard-assets.dappradar.com/document/18159/bridgers-dapp-exchanges-ethereum-logo_26a09edf0507a4f04c285a64ecaec810.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmZDe1ZjwMhNrgARcbCYaAQ6ZB8US9so4Ym5kbiu2Bougp/0",
         "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
