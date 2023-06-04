@@ -346,7 +346,8 @@ export class DappStoreRegistryV1 {
     else {
       const { finalQuery } = searchFilters("", filterOpts) as any;
       delete finalQuery.from;
-      Object.assign(finalQuery, { size: 200 });
+      Object.assign(finalQuery, { size: filterOpts.size || 200 });
+      Object.assign(finalQuery, { _source: filterOpts._source || finalQuery._source });
       result = await this.opensearchApis.initiateScrollSearch(searchRegistry.alias, finalQuery);
     }
     const { body: { hits: { hits: res }, _scroll_id } } = result ||
