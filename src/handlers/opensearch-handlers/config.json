@@ -217,6 +217,9 @@
             },
             "ownerAddress": {
                 "type": "keyword"
+            },
+            "tokenId": {
+                "type": "keyword"
             }
         }
     },
