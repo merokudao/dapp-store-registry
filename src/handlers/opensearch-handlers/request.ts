@@ -123,4 +123,44 @@ export class OpensearchRequest {
       refresh: true
     });
   }
+
+  /**
+   * search for given query and return a scroll id
+   * this scroll id context will be remebered for q minutes
+   * after if call made again with the same scroll id
+   * then the context will be renewed for another 1m
+   * @param index index name
+   * @param body query
+   * @returns response
+   */
+  public async initiateScrollSearch(index: string, body: any): Promise<any> {
+    return this.opensearchClient.search({
+      index,
+      body,
+      scroll: '30s'
+    });
+  }
+  /**
+   * on each call return next page of scroll_id
+   * @param scrollId get next page result
+   * @returns 
+   */
+  public async scrollDocs(scrollId: any): Promise<any> {
+    return this.opensearchClient.scroll({
+      scroll: "1m",
+      scroll_id: scrollId
+    });
+  }
+
+  /**
+   * delete snapshot of scroll
+   * @param scrollIds scroll ids
+   * @returns acknowledge
+   */
+  public async deleteScrollIds(scrollIds: string[]): Promise<any> {
+    return this.opensearchClient.clearScroll({
+      scroll_id: scrollIds
+    })
+  }
+
 }
