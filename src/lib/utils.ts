@@ -401,7 +401,8 @@ export const searchFilters = (
     dappId = null,
     searchById = false,
     ownerAddress = null,
-    isMinted = null
+    isMinted = null,
+    tokenIds = [],
   } = payload;
   let { limit = recordsPerPage } = payload;
 
@@ -459,7 +460,8 @@ export const searchFilters = (
     query.bool.must.push({ bool: { should: categoryQuery }});
   }
 
-  if (dappId) query.bool.must.push({ term: { dappId: dappId.trim() } });
+  if (dappId) query.bool.must.push({ terms: { dappId: dappId } });
+  if (tokenIds.length) query.bool.must.push({ terms: { tokenId: tokenIds } });
 
   // search on customer string
   if (!!search && search.length) {
