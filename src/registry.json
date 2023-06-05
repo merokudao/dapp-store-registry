@@ -40949,55 +40949,6 @@
       ]
     },
     {
-      "name": "NFTScan",
-      "description": "The NFT Explorer of Polygon made by NFTScan. NFTScan provides professional NFT data services for Web3 developers.",
-      "dappId": "amazonaws.app",
-      "minAge": 18,
-      "appUrl": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/polygon.nftscan.dapp/build.zip",
-      "isForMatureAudience": false,
-      "isSelfModerated": false,
-      "language": [
-        "en"
-      ],
-      "images": {
-        "logo": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/polygon.nftscan.dapp/logo.png",
-        "banner": "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/polygon.nftscan.dapp/banner.png",
-        "screenshots": [
-          "https://meroku-app-images-dev.s3.ap-south-1.amazonaws.com/polygon.nftscan.dapp/screenshots-0.png"
-        ]
-      },
-      "isListed": true,
-      "repoUrl": "https://github.com/meroku-dao/",
-      "listDate": "2023-03-20",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "developer": {
-        "legalName": "zhwindy",
-        "logo": "https://avatars.githubusercontent.com/u/10633936?v=4",
-        "website": "https://meroku.store",
-        "githubID": "zhwindy"
-      },
-      "support": {
-        "url": "https://discord.com/invite/8c87fS2HHF"
-      },
-      "privacyPolicyUrl": "https://www.nftscan.com/SERVICE_AGREEMENT.pdf",
-      "tags": [
-        "NFT"
-      ],
-      "chains": [
-        137
-      ],
-      "category": "social networking",
-      "downloadBaseUrls": [
-        {
-          "url": "https://meroku-build-dev.s3.ap-south-1.amazonaws.com/polygon.nftscan.dapp/build.zip",
-          "version": "1.0",
-          "platform": "web"
-        }
-      ]
-    },
-    {
       "name": "0vix",
       "description": "0VIX, the core Polygon Money Market Protocol.",
       "appUrl": "https://www.0vix.com/",
