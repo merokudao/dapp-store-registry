@@ -46,6 +46,13 @@ export interface DAppSchema {
   external_url?: string;
 
   image?: string;
+
+  attributes?: {
+    trait_type: string;
+    value: string;
+    display_type: string;
+  }[];
+
   /**
    * The URL of the dApp. This is optional. If specified, the dApp will be shown as a
    * link on the dApp store
