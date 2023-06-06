@@ -398,14 +398,14 @@ export const searchFilters = (
     isListed = "true",
     developer = null,
     page = 1,
-    dappId = null,
     searchById = false,
     ownerAddress = null,
     isMinted = null,
     tokenIds = [],
   } = payload;
-  let { limit = recordsPerPage } = payload;
+  let { limit = recordsPerPage, dappId = null, } = payload;
 
+  if (dappId.length) dappId = dappId.split(",").map((di:string) => di.trim());
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!isForMatureAudience)
     query.bool.must.push({
@@ -460,7 +460,7 @@ export const searchFilters = (
     query.bool.must.push({ bool: { should: categoryQuery }});
   }
 
-  if (dappId) query.bool.must.push({ terms: { dappId: dappId } });
+  if (dappId.length) query.bool.must.push({ terms: { dappId } });
   if (tokenIds.length) query.bool.must.push({ terms: { tokenId: tokenIds } });
 
   // search on customer string
