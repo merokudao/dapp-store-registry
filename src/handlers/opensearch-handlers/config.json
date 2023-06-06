@@ -60,7 +60,7 @@
                 "search_analyzer": "autocomplete_search"
             },
             "appUrl": {
-                "type": "keyword"
+                "type": "text"
             },
             "downloadBaseUrls": {
                 "type": "nested",
@@ -176,6 +176,9 @@
             "subCategory": {
                 "type": "text"
             },
+            "subCategoryKeyword": {
+                "type": "keyword"
+            },
             "minted": {
                 "type": "boolean"
             },
@@ -213,6 +216,9 @@
                 }
             },
             "ownerAddress": {
+                "type": "keyword"
+            },
+            "tokenId": {
                 "type": "keyword"
             }
         }
@@ -254,7 +260,8 @@
             "metrics",
             "ownerAddress",
             "referredBy",
-            "minted"
+            "minted",
+            "subCategory"
         ]
     }  
 }

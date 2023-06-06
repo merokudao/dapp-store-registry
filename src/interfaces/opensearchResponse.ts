@@ -45,6 +45,7 @@ export interface SearchResult {
     took: number;
     timed_out: boolean;
     _shards: object;
+    _scroll_id?: string;
     hits: {
       total: {
         value: number;
@@ -71,6 +72,7 @@ export interface StandardResponse {
   message?: string[];
   data?: object[];
   pagination?: Pagination;
+  scrollId?: string;
 }
 
 export interface AddDappPayload {
