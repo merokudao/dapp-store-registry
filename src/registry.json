@@ -106352,6 +106352,23 @@
       ],
       "description": "A curated list of dapps that we think you will love.",
       "key": "curated-list"
+    },
+    {
+      "title": "Meroku Explorer Featured",
+      "dappIds": [
+        "push.app",
+        "1inch.app",
+        "rarible.app",
+        "mintify.app",
+        "sending.app",
+        "dmail.app",
+        "coingecko.app",
+        "surfaceboard.app",
+        "milliononmars.app",
+        "reap.app"
+      ],
+      "description": "A curated list of dapps to feature on meroku explorer page.",
+      "key": "meroku-explorer-featured"
     }
   ]
 }
