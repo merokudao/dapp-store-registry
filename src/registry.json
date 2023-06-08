@@ -3712,7 +3712,7 @@
       "chains": [
         1
       ],
-      "dappId": "bifi-app.app",
+      "dappId": "bifi.app",
       "downloadBaseUrls": [
         {
           "url": "https://app.bifi.finance/",
