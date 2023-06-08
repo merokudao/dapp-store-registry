@@ -1275,7 +1275,7 @@
       "chains": [
         1
       ],
-      "dappId": "cryptospells-en.app",
+      "dappId": "cryptospells.app",
       "downloadBaseUrls": [
         {
           "url": "https://en.cryptospells.jp/",
@@ -16977,42 +16977,6 @@
       ]
     },
     {
-      "name": "BiFi",
-      "description": "BiFi is the first multichain DeFi platform built on BIFROST, the Universal Multichain Middleware. Powered by the multichain technology of BIFROST, BiFi connects to Ethereum, Binance Smart Chain (BSC), Avalanche, Klaytn, Bitcoin, and to an infinite number of networks. BiFi aims to create a decentralized financial infrastructure that connects all the capital markets currently isolated on each blockchain, and creates new products and services that interoperate across multiple blockchains.",
-      "appUrl": "https://bifi.finance",
-      "images": {
-        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmcVFfv8naH6Umj3UH9YJQFf1BNFTRg4QeXC4upTjU4buo/0",
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ]
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "defi",
-      "subCategory": "finance",
-      "chains": [
-        1
-      ],
-      "dappId": "bifi.app",
-      "downloadBaseUrls": [
-        {
-          "url": "https://bifi.finance",
-          "version": "unknown",
-          "platform": "web"
-        }
-      ]
-    },
-    {
       "name": "COOL DOGS NFT",
       "description": "This is a community-focused project with cool and surprising elements  like cute breeding, virtual dog food, and pet gifting. By getting a Cool  Dog you will have a vote in future developments of the project like a  Cool Dog game, Donations, Derivatives, and much more!                Cool Dogs are a limited number of virtual pet NFTs on  the Ethereum blockchain. There are only 5000 Cool Dogs generated from  150+ elements. Each Cool Dog is different from the others — the outfit,  body, hat, and face are all unique.",
       "appUrl": "https://cooldogs.io/",
@@ -29989,41 +29953,6 @@
       ]
     },
     {
-      "name": "TPL Mecha Part",
-      "description": "Welcome to the home of TPL Mecha Part on OpenSea. Discover the best items in this collection.",
-      "appUrl": "https://cyberbrokers.io/",
-      "images": {
-        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmXZQ4oEejXq6SUsvnKKAr9DhEX7MabApSBi6Zma9yzkdi/0",
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ]
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "lifestyle",
-      "chains": [
-        1
-      ],
-      "dappId": "cyberbrokers-io.app",
-      "downloadBaseUrls": [
-        {
-          "url": "https://cyberbrokers.io/",
-          "version": "unknown",
-          "platform": "web"
-        }
-      ]
-    },
-    {
       "name": "Project Fox",
       "description": "Project  Fox is an NFT collectible featuring 4,420 foxes with gender-neutral  pronouns that live, breathe and shit on the eco-friendly blockchain  known as Ethereum.",
       "appUrl": "http://projectfox.app/",
@@ -32919,42 +32848,6 @@
       ]
     },
     {
-      "name": "PolyDEX",
-      "description": "PolyDEX is the latest AMM on Polygon Network. It aims to be the preferred platform that supports multi-chain IDO & IFO. Projects launching on PolyDEX will benefit from wide ranges of services, including Staking Pools, Trading Battle, NFT marketplace and more. It also offers yield farming on Polygon with innovative gamified farming mechanics and extensive investment range. PolyDex allows users to exchange tokens, provide liquidity via farming & earn fees and referral, all on Polygon Network.",
-      "appUrl": "https://polydex.fi",
-      "images": {
-        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmckewZaijWbaFjqeRW2PHN7unGK2o5bP6vHmq9hE3qdai/0",
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ]
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "defi",
-      "subCategory": "finance",
-      "chains": [
-        137
-      ],
-      "dappId": "polydex-fi.app",
-      "downloadBaseUrls": [
-        {
-          "url": "https://polydex.fi",
-          "version": "unknown",
-          "platform": "web"
-        }
-      ]
-    },
-    {
       "name": "Cometh",
       "description": "The conquest of the Blockchain space Cometh innovates by leveraging the unique features of the blockchain to foster entertainment and to propose the best gateway to Web3. With a first version of the game deployed in February 2021,Cometh rapidly became the most active blockchain game. Cometh Battle Cometh Battle is a next generation blockchain game with fair player centric economics. The game is free to play and play to own. Players engage in galactic battles with strategies based on their deck of cards. The cards are not sold by Cometh but crafted by the players using the resources they hoard from winning battles as well as tokens available in DeFi protocols. Cometh organizes tournaments and championships to bolster the community and to support the eSport activities",
       "appUrl": "https://cometh.io",
@@ -34127,41 +34020,6 @@
       "downloadBaseUrls": [
         {
           "url": "https://www.polygonpenguins.com/",
-          "version": "unknown",
-          "platform": "web"
-        }
-      ]
-    },
-    {
-      "name": "CryptoSpells",
-      "description": "\"CryptoSpells\" is a web game in Japan, using block chain technology. By recording the card issued by ERC 721 on the block chain, the ownership of the user is proved. Users can freely buy and sell cards through the marketplace.",
-      "appUrl": "https://cryptospells.jp/",
-      "images": {
-        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmcMAJxeZr26s6suSKxN6U4tGv3kPyPpY5FGGmgYcoWJbT/0",
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ]
-      },
-      "minAge": 13,
-      "isForMatureAudience": false,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "isListed": true,
-      "listDate": "2023-01-30",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "category": "games",
-      "chains": [
-        137
-      ],
-      "dappId": "cryptospells.app",
-      "downloadBaseUrls": [
-        {
-          "url": "https://cryptospells.jp/",
           "version": "unknown",
           "platform": "web"
         }
@@ -44536,137 +44394,6 @@
       ]
     },
     {
-      "name": "FATExFi",
-      "description": "FATExDAO: A ESG/CSR fintech DAO formed under the governance token FATE & FATExFi, the baselayer dApp to build FxD: a fiat/FX payments denomination & stable, store of value token platform designed to finish what Bitcoin started.",
-      "category": "business",
-      "appUrl": "http://app.FATExFi.io",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "contracts": [
-        {
-          "address": "0x7a8B2780189fa8758bf212321DabDbd3856D1155",
-          "chainId": "137"
-        },
-        {
-          "address": "0x4853365bC81f8270D902076892e13F27c27e7266",
-          "chainId": "137"
-        },
-        {
-          "address": "0x56BE76031A4614370fA1f188e01e18a1CF16E642",
-          "chainId": "137"
-        },
-        {
-          "address": "0x937e0c67d21Df99eaEa0e6a1055A5b783291DC8f",
-          "chainId": "137"
-        }
-      ],
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "fatexfi-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "http://app.FATExFi.io",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/FATEx-DAO/fatex-dex-protocol/",
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "LoserChick",
-      "description": "LoserChick is the first global 3D ‚ÄúClaw Crane‚Äù on-chain game, which integrates NFT and GameFi financial gameplay on the basis of the game, such as liquidity mining, NFT minting, NFT stake mining, asset trading, etc.\n\nIn LoserChick, players can not only play games freely but also continuously enjoy various financial services to earn while playing.",
-      "category": "nft",
-      "appUrl": "http://app.loserchick.fi",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "loserchick-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "http://app.loserchick.fi",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "rhino.fi",
-      "description": "rhino.fi is your layer 2 gateway to Multi-chain DeFi. Buy, trade and invest across all of your favourite blockchains from a single layer 2 wallet. Access hundreds of tokens effortlessly, and save gas on every single transaction.\nThis is the future of DeFi – let’s grab it by the horns.",
-      "category": "defi",
-      "appUrl": "http://app.rhino.fi",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "contracts": [
-        {
-          "address": "0xda7eeb4049da84596937127855b50271ad1687e7",
-          "chainId": "137"
-        }
-      ],
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "rhino-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "http://app.rhino.fi",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/rhinofi",
-      "chains": [
-        137
-      ]
-    },
-    {
       "name": "Arianee",
       "description": "Arianee is an NFT protocol to create digital identities for valuable products both physical and digital.",
       "category": "nft",
@@ -48337,76 +48064,6 @@
       ]
     },
     {
-      "name": "1inch",
-      "description": "DeFi / DEX aggregator with the most liquidity and the best rates on Ethereum, Binance Smart Chain, Optimism, Polygon, 1inch dApp is an entry point to the 1inch Network's tech.",
-      "category": "defi",
-      "appUrl": "https://app.1inch.io/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "1inch-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.1inch.io/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "BadgerDAO",
-      "description": "Badger DAO is an open-source, decentralized automated organization that is dedicated to building products and infrastructure of simplifying the use of Bitcoin (BTC) as collateral across many smart contract platforms.",
-      "category": "defi",
-      "appUrl": "https://app.badger.finance",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "badger-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.badger.finance",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
       "name": "Bhavish finance",
       "description": "Bhavish offers predictions for crypto, commodity, stock (equity) and information markets along with providing advanced features like user defined strategies, lossless prediction markets, prediction vaults, and gamification.",
       "category": "defi",
@@ -48572,170 +48229,6 @@
       ]
     },
     {
-      "name": "Debets",
-      "description": "A fully Decentralized & AMM & Permissionless Web3 iGaming Platform.",
-      "category": "games",
-      "appUrl": "https://app.debets.org/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "contracts": [
-        {
-          "address": "0x02aA40D3D916f3847fc3e0e1d289d910066e577C",
-          "chainId": "137"
-        },
-        {
-          "address": "0x93984b823794b9D4Fd0B6FAc8847BE53C49a8092",
-          "chainId": "137"
-        },
-        {
-          "address": "0xcE214f6a877747495106B5e55533f3e23D290DBd",
-          "chainId": "137"
-        },
-        {
-          "address": "0xd62F4F17866dbC5D23F5aeD8324409b82D7D4462",
-          "chainId": "137"
-        },
-        {
-          "address": "0x73C05dcad226cc491679052031c847f35e2a4034",
-          "chainId": "137"
-        },
-        {
-          "address": "0x2a96365c5dc9742E992942459Ab9e18581a0c884",
-          "chainId": "137"
-        },
-        {
-          "address": "0x80b27Fe5b811fFCFf4a308e0E72E545F6E258704",
-          "chainId": "137"
-        },
-        {
-          "address": "0x47DEB407DCB005677bbC939c0Dad16fF8249c766",
-          "chainId": "137"
-        }
-      ],
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "debets-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.debets.org/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/Debetsorg/DebetProtocol",
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "Elk Finance",
-      "description": "Cross-chain bridging and infrastructure.",
-      "category": "utilities",
-      "appUrl": "https://app.elk.finance/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "contracts": [
-        {
-          "address": "0xeEeEEb57642040bE42185f49C52F7E9B38f8eeeE",
-          "chainId": "137"
-        },
-        {
-          "address": "0xb1F120578A7589FD9336315C4dF7d5A5d90173A8",
-          "chainId": "137"
-        },
-        {
-          "address": "0xf38a7A7Ac2D745E2204c13F824c00139DF831FFf",
-          "chainId": "137"
-        },
-        {
-          "address": "0xE3BD06c7ac7E1CeB17BdD2E5BA83E40D1515AF2a",
-          "chainId": "137"
-        },
-        {
-          "address": "0x42424242B0c0d8A19dCD0dF362815E242586354A",
-          "chainId": "137"
-        },
-        {
-          "address": "0x57A1CE7686F3B2AB61F5191c76361F985b57E0fa",
-          "chainId": "137"
-        },
-        {
-          "address": "0xDe3f38FD15f566416Fe3941b57e1b0A50a9487e1",
-          "chainId": "137"
-        },
-        {
-          "address": "0xd7D71e4BC981B50696fa536D330bf745aE563E25",
-          "chainId": "137"
-        },
-        {
-          "address": "0xDb59EF120FF1FA5013Bb5047e513162003034723",
-          "chainId": "137"
-        },
-        {
-          "address": "0xD0595Ff44638182E6B54051493ec0f045D04335f",
-          "chainId": "137"
-        },
-        {
-          "address": "0xf99c496C4bc62D4ce47f79bc7D367Af4FFab105B",
-          "chainId": "137"
-        },
-        {
-          "address": "0xC43F4D970cc759b78bD21f9414f1984CA80E5Ea6",
-          "chainId": "137"
-        },
-        {
-          "address": "0xbAE1638dC1bC5392d26B8fa03b34b59c6b65b352",
-          "chainId": "137"
-        },
-        {
-          "address": "0x5Ae1F972Cbe3f52E1DED29b03bE82Ab0Cbfa7c12",
-          "chainId": "137"
-        }
-      ],
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "elk-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.elk.finance/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/elkfinance",
-      "chains": [
-        137
-      ]
-    },
-    {
       "name": "GiveStation",
       "description": "GiveStation is a multichain Give-To-Earn decentralized crowdfunding platform that rewards you for funding ideas and projects in web3.",
       "category": "utilities",
@@ -48807,41 +48300,6 @@
       ]
     },
     {
-      "name": "QiDao Protocol",
-      "description": "Polygon's official stablecoin. Borrow stablecoins against your crypto portfolio at 0% interest.",
-      "category": "defi",
-      "appUrl": "https://app.mai.finance/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "mai-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.mai.finance/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
       "name": "Pickle Finance",
       "description": "Yield farming is hard. There are many projects offering high returns, but it's tough to know if they're sustainable or if they are projects that you can trust. Pickle Finance makes it easy for you to earn great compounding yields on your deposits.",
       "category": "productivity",
@@ -48867,76 +48325,6 @@
       "downloadBaseUrls": [
         {
           "url": "https://app.pickle.finance/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "POLYDEX",
-      "description": "POLYDEX - A Gasless, Instant, Cross-Chain AMM DEX with Yield Farming.\n",
-      "category": "defi",
-      "appUrl": "https://app.polydex.org/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "polydex-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.polydex.org/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "PolyQuity",
-      "description": "PolyQuity is a decentralized borrowing protocol that allows you to draw interest-free loans against Matic used as collateral. Loans are paid out in PUSD (a USD pegged stablecoin) and need to maintain a minimum collateral ratio of 110%. In addition to the collateral, the loans are secured by a Stability Pool containing PUSD and by fellow borrowers collectively acting as guarantors of last resort. Learn more about these mechanisms in our documentation.",
-      "category": "defi",
-      "appUrl": "https://app.polyquity.org/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "polyquity-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.polyquity.org/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -49118,41 +48506,6 @@
         137
       ],
       "subCategory": "developer infra"
-    },
-    {
-      "name": "Zesty Market",
-      "description": "Zesty Market is a NFT rental marketplace for banner spaces in the metaverse.",
-      "category": "nft",
-      "appUrl": "https://app.zesty.market/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "zesty-app.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://app.zesty.market/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
     },
     {
       "name": "APY.Vision",
@@ -55495,43 +54848,6 @@
       "subCategory": "developer infra"
     },
     {
-      "name": "DEESSE",
-      "description": "Deesse is an idle role-playing (RPG) & card placement (CPG) P2E play-and-earn game.",
-      "category": "games",
-      "appUrl": "https://deesse.art/home",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "deesse-home.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://deesse.art/home",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/DeesseGame/dee_contracts",
-      "chains": [
-        137
-      ],
-      "subCategory": "metaverse"
-    },
-    {
       "name": "DeFi Watch",
       "description": "DeFi portfolio tracker with detailed breakdowns and multichain pool search aggregator.",
       "category": "developer tools",
@@ -58440,41 +57756,6 @@
       "downloadBaseUrls": [
         {
           "url": "https://exchange.cptpoint.global/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "IdaMurni",
-      "description": "the Scenario of IdaMurni comes up like the existing market system of our land. buyer suppose to pay a tax. We aim not to change any rules in traditional way market does today, but to providing own ecosystem in a multi-blockchain future will giving people more possibilities, flexibilities, opportunity and new experience in ownership with DeFi world.\n\nGovernance:\nThe holders of the IDA token will be able to use their tokens to take part in IDA's governance* by voting on IDA's proposals concerning protocol amendments and upgrades. Although the specifics in regard to the voting mechanism have not yet been finalized, it is expected that each holder's votes will be weighed against the amount of IDA tokens held by them.\n\nEcosystem:\nconsidering the NFT market right now, IdaMurni going to serve NFT marketplace** that only accepted IDA's as a payment method. with IDA's token user will able to get NFT card and streaming/buy music directly from the Artist.\n\n*= the implementation of Governance will goes in Q1-2022\n**= the Implementation of NFT Marketplace will goes on Q3-2022",
-      "category": "defi",
-      "appUrl": "https://exchange.idamurni.de/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "idamurni-exchange.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://exchange.idamurni.de/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -65082,41 +64363,6 @@
       ]
     },
     {
-      "name": "LaserPunks",
-      "description": "LaserPunks is a collection of 12,000 punk-inspired NFT Art — each LaserPunk is a pixelated super hero with laser eyes, unique traits, and rarity",
-      "category": "nft",
-      "appUrl": "https://mata.metanft.co",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "metanft.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://mata.metanft.co",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
       "name": "MetaNFT",
       "description": "MetaNFT is a digital design studio that is specialized in creating generative art, NFT collectibles, and virtual reality experiences.",
       "category": "nft",
@@ -65134,7 +64380,7 @@
       "language": [
         "en"
       ],
-      "dappId": "metanft-mata.app",
+      "dappId": "metanft.app",
       "availableOnPlatform": [
         "web"
       ],
@@ -72053,52 +71299,6 @@
         "en"
       ],
       "dappId": "padiswap.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://polygon.padiswap.com",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/padiswap",
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "PadiSwap",
-      "description": "Multi-Chain AMM and Yield Farm With Innovative Features.",
-      "category": "defi",
-      "appUrl": "https://polygon.padiswap.com",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "contracts": [
-        {
-          "address": "0x1Ba4a2cde2C487b3E41019731907BE964F296b06",
-          "chainId": "137"
-        },
-        {
-          "address": "0x0B8F1688C2882Dd3226ccCAc82F0a7afF8F535e4",
-          "chainId": "137"
-        }
-      ],
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "padiswap-polygon.app",
       "availableOnPlatform": [
         "web"
       ],
@@ -79415,43 +78615,6 @@
       "chains": [
         137
       ]
-    },
-    {
-      "name": "Bitbond Token Tool",
-      "description": "Bitbond Token Tool is a web3 app that enables users to effortlessly create, manage and multisend ERC20 / ERC1400 tokens and NFTs across leading EVM chains. Users can rely on Token Tool’s configurable smart contract templates that have been audited by CertiK instead of having to program their own smart contracts. Token Tool offers a convenient user interface as well as an API in its enterprise version. Banks, corporations, as well as tech companies and content creators alike use Token Tool to kick-start their tokenization projects.",
-      "category": "developer tools",
-      "appUrl": "https://tokentool.bitbond.com/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "bitbond-tokentool.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://tokentool.bitbond.com/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/bitbond",
-      "chains": [
-        137
-      ],
-      "subCategory": "developer infra"
     },
     {
       "name": "Tokeny Solutions",
@@ -88222,42 +87385,6 @@
       ]
     },
     {
-      "name": "Huobi (Global)",
-      "description": "Huobi Global is a centralized cryptocurrency exchange located in Seychelles. There are 426 coins and 946 trading pairs on the exchange. Huobi Global volume in the last 24 hours is reported to be at ₿33,384.19. The most active trading pair on Huobi Global exchange is BTC/USDT.",
-      "category": "defi",
-      "subCategory": "finance",
-      "appUrl": "https://www.huobi.com/en-in/",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "huobi-en-in.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://www.huobi.com/en-in/",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
       "name": "Huobi Wallet",
       "description": "Huobi Wallet is a professional multi-chain light wallet that supports 20 types of digital assets and thousands of tokens. By integrating a variety of DApp interfaces, Huobi Wallet helps users easily manage multi-chain assets and track their DeFi mining income, as well as allows users to manage their private keys independently.",
       "category": "utilities",
@@ -90749,41 +89876,6 @@
         "en"
       ],
       "dappId": "opera.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://www.opera.com/crypto/next",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "Opera Wallet",
-      "description": "Access your cryptocurrencies and sign into DApps without installing any extensions. Opera’s built-in Crypto Wallet supports ETH, ERC-20 and ERC-721 tokens, as well as multiple blockchains including Bitcoin, Ethereum, EVM compatible chains and Layer 2 solutions. You can also add your Metamask, Coinbase or Binance wallet to the browser.",
-      "category": "utilities",
-      "appUrl": "https://www.opera.com/crypto/next",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "opera-crypto-next.app",
       "availableOnPlatform": [
         "web"
       ],
@@ -95239,48 +94331,6 @@
       ],
       "listDate": "2023-05-12",
       "isListed": true,
-      "chains": [
-        137
-      ]
-    },
-    {
-      "name": "Ylide Social Hub",
-      "description": "Ylide Social Hub is a one-stop app to browse through the relevant crypto newsfeed and communicate with other users via on-chain messages.",
-      "category": "social",
-      "appUrl": "https://ylide.io/hub",
-      "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
-      },
-      "contracts": [
-        {
-          "address": "0x7a68e6ddc82ee745cebac93aece15af57e5931e5",
-          "chainId": "137"
-        }
-      ],
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "dappId": "ylide-hub.app",
-      "availableOnPlatform": [
-        "web"
-      ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://ylide.io/hub",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
-      "repoUrl": "https://github.com/ylide-io",
       "chains": [
         137
       ]
@@ -104687,45 +103737,6 @@
       "listDate": "2023-05-13"
     },
     {
-      "name": "Via Protocol",
-      "description": "Advanced cross-chain liquidity aggregation protocol",
-      "appUrl": "https://router.via.exchange/",
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "isListed": true,
-      "availableOnPlatform": [
-        "web"
-      ],
-      "chains": [
-        137
-      ],
-      "category": "defi",
-      "images": {
-        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmZWhCGSCyFiTbRph2Ks7PZvmGsKBhWZkZazDwrdUp919S/0",
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ]
-      },
-      "downloadBaseUrls": [
-        {
-          "url": "https://router.via.exchange/",
-          "version": "1.0.0",
-          "platform": "web"
-        }
-      ],
-      "dappId": "via-router.app",
-      "referredBy": {
-        "name": "The Dapp List",
-        "url": "https://thedapplist.com/"
-      },
-      "listDate": "2023-05-13"
-    },
-    {
       "name": "Capx",
       "description": "Capx is a non-custodial, decentralized, community-governed infrastructure that allows new and upcoming tokens to achieve decentralization by accelerating token distribution. Capx focuses on facilitating curated distributions for project communities, token streaming for investor distributions, and a liquid secondary market for tokens.\n\n",
       "appUrl": "https://capx.fi",
@@ -105904,45 +104915,6 @@
         }
       ],
       "dappId": "mean.app",
-      "referredBy": {
-        "name": "The Dapp List",
-        "url": "https://thedapplist.com/"
-      },
-      "listDate": "2023-05-13"
-    },
-    {
-      "name": "Arken Finance",
-      "description": "The best-in-class trading view to help you discover treasures from various decentralized exchanges.",
-      "appUrl": "https://swap.arken.finance",
-      "minAge": 18,
-      "isForMatureAudience": true,
-      "isSelfModerated": true,
-      "language": [
-        "en"
-      ],
-      "isListed": true,
-      "availableOnPlatform": [
-        "web"
-      ],
-      "chains": [
-        137
-      ],
-      "category": "defi",
-      "images": {
-        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmaP445e7CNREXmLEkmh5hC2gqdVapHNSbVTVU3WE7bNXg/0",
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ]
-      },
-      "downloadBaseUrls": [
-        {
-          "url": "https://swap.arken.finance",
-          "version": "1.0.0",
-          "platform": "web"
-        }
-      ],
-      "dappId": "arken-swap.app",
       "referredBy": {
         "name": "The Dapp List",
         "url": "https://thedapplist.com/"
