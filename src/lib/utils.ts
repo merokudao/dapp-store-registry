@@ -460,7 +460,7 @@ export const searchFilters = (
     query.bool.must.push({ bool: { should: categoryQuery }});
   }
 
-  if (dappId.length) query.bool.must.push({ terms: { dappId } });
+  if (dappId.length) query.bool.must.push({ terms: { dappIdKeyword: dappId } });
   if (tokenIds.length) query.bool.must.push({ terms: { tokenId: tokenIds } });
 
   // search on customer string
