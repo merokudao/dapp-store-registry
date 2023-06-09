@@ -403,7 +403,7 @@ export const searchFilters = (
     isMinted = null,
     tokenIds = [],
   } = payload;
-  let { limit = recordsPerPage, dappId = null, } = payload;
+  let { limit = recordsPerPage, dappId = '', } = payload;
 
   if (dappId.length) dappId = dappId.split(",").map((di:string) => di.trim());
   // eslint-disable-next-line no-extra-boolean-cast
