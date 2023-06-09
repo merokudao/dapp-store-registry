@@ -103,6 +103,9 @@
                 "analyzer": "autocomplete",
                 "search_analyzer": "autocomplete_search"
             },
+            "dappIdKeyword": {
+                "type": "keyword"
+            },
             "minAge": {
                 "type": "integer"
             },
@@ -220,6 +223,15 @@
             },
             "tokenId": {
                 "type": "keyword"
+            },
+            "qualityMetrics":{
+                "properties": {
+                    "isVerified": { "type": "boolean" },
+                    "isSpam": { "type": "boolean" },
+                    "isContentSpam": { "type": "boolean" },
+                    "contentSimilirtyScore": { "type": "float" },
+                    "dataQuality": { "type": "text" }
+                }
             }
         }
     },
@@ -231,7 +243,10 @@
             "category",
             "minAge",
             "isForMatureAudience",
-            "ownerAddress"
+            "ownerAddress",
+            "qualityMetrics.isVerified",
+            "qualityMetrics.isSpam",
+            "qualityMetrics.dataQuality"
         ],
         "searchFields": [
             "name",
@@ -261,7 +276,10 @@
             "ownerAddress",
             "referredBy",
             "minted",
-            "subCategory"
+            "subCategory",
+            "qualityMetrics.isVerified",
+            "qualityMetrics.isSpam",
+            "qualityMetrics.dataQuality"
         ]
     }  
 }
