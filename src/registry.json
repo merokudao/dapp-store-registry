@@ -103825,43 +103825,39 @@
     },
     {
       "name": "Superfluid",
-      "description": "Superfluid is a smart contract framework on EVM networks, enabling you to move assets on-chain following predefined rules called agreements. With a single on-chain transaction, the money will flow from your wallet to the receiver in real time! No further transactions required- it works like magic ",
-      "appUrl": "https://www.superfluid.finance/home",
+      "description": "Discover Programmable Cashflows. It handle subscriptions, salaries, rewards and any composable stream of value, with continuous settlement and per-second netting for extreme capital efficiency.",
+      "category": "defi",
+      "appUrl": "https://www.superfluid.finance",
+      "images": {
+        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
+        "screenshots": [
+          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
+        ],
+        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
+      },
       "minAge": 18,
       "isForMatureAudience": true,
       "isSelfModerated": true,
       "language": [
         "en"
       ],
-      "isListed": true,
+      "dappId": "superfluid.app",
       "availableOnPlatform": [
         "web"
       ],
-      "chains": [
-        137
-      ],
-      "category": "defi",
-      "subCategory": "tooling",
-      "images": {
-        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmTErZZ2w3HKfan5dF4LdD9LNdyEm6m1aPni1RZHRpzqtJ/0",
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
-        "screenshots": [
-          "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ]
-      },
       "downloadBaseUrls": [
         {
-          "url": "https://www.superfluid.finance/home",
-          "version": "1.0.0",
-          "platform": "web"
+          "url": "https://www.superfluid.finance",
+          "platform": "web",
+          "version": "1.0.0"
         }
       ],
-      "dappId": "superfluid-home.app",
-      "referredBy": {
-        "name": "The Dapp List",
-        "url": "https://thedapplist.com/"
-      },
-      "listDate": "2023-05-13"
+      "listDate": "2023-05-12",
+      "isListed": true,
+      "chains": [
+        137,
+        1101
+      ]
     },
     {
       "name": "Mirror Protocol",
