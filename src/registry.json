@@ -80743,38 +80743,39 @@
       ]
     },
     {
-      "name": "WOWSwap",
-      "description": "WowSwap is a decentralized AMM platform, build on top of binance smart chain. Its a BEP20 token swap exchange. It has HybridStaking features which returns up to daily 2.5%.",
-      "category": "defi",
-      "appUrl": "https://wowswap.io/swap",
+      "name": "WOWswap",
+      "description": "WOWswap is a decentralized leveraged trading protocol that runs on Ethereum, Binance Smart Chain, Solana, Avalanche, IoTeX and Polygon Network. Traders can buy and sell their favorite tokens with up to 5X leverage. WOWswap is a fully community-owned protocol based on a simple idea: liquidity providers can create a liquidity pool , and traders can borrow these funds to buy up to 5 times more tokens. Protocol fees, interest rates for lenders and borrowers, liquidation ratios and other settings are decided by holders of WOW tokens — our governance token. Making a WOW swap is as easy as making a regular swap on Uniswap or Pancakeswap — extra capital will be automatically borrowed from the liquidity pool.",
+      "appUrl": "https://wowswap.io/",
       "images": {
-        "logo": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/icon.png",
+        "logo": "https://ipfs.thirdwebcdn.com/ipfs/QmW3ck4jQ4tDhv9SNctnJzKLPLgB8tTQfWU6NWDcXSxiHX/0",
+        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png",
         "screenshots": [
           "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/screenshots.png"
-        ],
-        "banner": "https://bafybeie4nxjjsjsuxsvf7epxwa6i7fckbudrqgy6e6iomlhisehpnor4iq.ipfs.dweb.link/Banner.png"
+        ]
       },
-      "minAge": 18,
-      "isForMatureAudience": true,
+      "minAge": 13,
+      "isForMatureAudience": false,
       "isSelfModerated": true,
       "language": [
         "en"
       ],
-      "dappId": "wowswap-swap.app",
+      "isListed": true,
+      "listDate": "2023-01-30",
       "availableOnPlatform": [
         "web"
       ],
-      "downloadBaseUrls": [
-        {
-          "url": "https://wowswap.io/swap",
-          "platform": "web",
-          "version": "1.0.0"
-        }
-      ],
-      "listDate": "2023-05-12",
-      "isListed": true,
+      "category": "defi",
+      "subCategory": "finance",
       "chains": [
         137
+      ],
+      "dappId": "wowswap.app",
+      "downloadBaseUrls": [
+        {
+          "url": "https://wowswap.io/",
+          "version": "unknown",
+          "platform": "web"
+        }
       ]
     },
     {
