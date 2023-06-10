@@ -520,7 +520,7 @@
               "others",
               "payments",
               "prediction-markets",
-              "product-markets",
+              "price-aggregator",
               "ramp",
               "stablecoins",
               "tooling",
@@ -672,7 +672,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": ["ecommerce", "nft-marketplaces", "price-aggregator"]
+            "enum": ["ecommerce"]
           }
         }
       }
@@ -680,13 +680,17 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "social networking" }
+          "category": { "const": "social-networking" }
         }
       },
       "then": {
         "properties": {
           "subCategory": {
-            "enum": ["decentralized-social-networks", "messaging"]
+            "enum": [
+              "decentralized-social-networks",
+              "messaging",
+              "social-media"
+            ]
           }
         }
       }
@@ -747,20 +751,6 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "social" }
-        }
-      },
-      "then": {
-        "properties": {
-          "subCategory": {
-            "enum": ["social-media"]
-          }
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
           "category": { "const": "personalization" }
         }
       },
@@ -781,7 +771,13 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": ["art", "domain-names", "pfps", "tooling"]
+            "enum": [
+              "art",
+              "domain-names",
+              "nft-marketplaces",
+              "pfps",
+              "tooling"
+            ]
           }
         }
       }

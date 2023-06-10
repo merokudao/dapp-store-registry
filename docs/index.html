@@ -154,7 +154,10 @@
           <pre><code class="language-typescript"><span class="hl-0">// Import</span><br/><span class="hl-1">import</span><span class="hl-2"> { </span><span class="hl-3">DappStoreRegistry</span><span class="hl-2"> } </span><span class="hl-1">from</span><span class="hl-2"> </span><span class="hl-4">&quot;@merokudao/dapp-store-registry&quot;</span><span class="hl-2">;</span><br/><br/><span class="hl-0">// Instantiate a registry.</span><br/><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">registry</span><span class="hl-2"> = </span><span class="hl-5">new</span><span class="hl-2"> </span><span class="hl-7">DappStoreRegistry</span><span class="hl-2">();</span><br/><span class="hl-1">await</span><span class="hl-2"> </span><span class="hl-3">registry</span><span class="hl-2">.</span><span class="hl-7">init</span><span class="hl-2">();</span><br/><br/><span class="hl-0">// Find all the dApps</span><br/><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">dApps</span><span class="hl-2"> = </span><span class="hl-1">await</span><span class="hl-2"> </span><span class="hl-3">registry</span><span class="hl-2">.</span><span class="hl-7">dApps</span><span class="hl-2">();</span><br/><br/><span class="hl-0">// Search dApps with query string &quot;nft&quot;</span><br/><span class="hl-5">const</span><span class="hl-2"> </span><span class="hl-6">dAppsResult</span><span class="hl-2"> = </span><span class="hl-3">registry</span><span class="hl-2">.</span><span class="hl-7">search</span><span class="hl-2">(</span><span class="hl-4">&quot;nft&quot;</span><span class="hl-2">);</span>
 </code></pre>
           <p>
-            Detailed docs can be viewed at <a href="/docs/index.html">docs</a>.
+            Detailed docs can be viewed at
+            <a href="https://merokudao.github.io/dapp-store-registry/"
+              >https://merokudao.github.io/dapp-store-registry/</a
+            >.
           </p>
         </div>
       </div>
@@ -401,8 +404,34 @@
                 >Dapp<wbr />Store<wbr />Registry</a
               >
             </li>
+            <li class="tsd-kind-class">
+              <a href="classes/DappStoreRegistryV1.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-128-path"></use>
+                  <use href="#icon-128-text"></use></svg
+                >Dapp<wbr />Store<wbr />Registry<wbr />V1</a
+              >
+            </li>
+            <li class="tsd-kind-class">
+              <a href="classes/DappStores.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-128-path"></use>
+                  <use href="#icon-128-text"></use></svg
+                >Dapp<wbr />Stores</a
+              >
+            </li>
             <li class="tsd-kind-interface">
-              <a href="interfaces/DAppSchema.html" class="tsd-index-link"
+              <a href="interfaces/AddDappPayload.html" class="tsd-index-link"
                 ><svg
                   class="tsd-kind-icon"
                   width="24"
@@ -425,7 +454,59 @@
                     fill="var(--color-text)"
                     id="icon-256-text"
                   ></path></svg
+                >Add<wbr />Dapp<wbr />Payload</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/BulkInsertRes.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Bulk<wbr />Insert<wbr />Res</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/CreateIndexRes.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Create<wbr />Index<wbr />Res</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/DAppSchema.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
                 >DApp<wbr />Schema</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/DAppSchemaSearch.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >DApp<wbr />Schema<wbr />Search</a
               >
             </li>
             <li class="tsd-kind-interface">
@@ -439,6 +520,58 @@
                   <use href="#icon-256-path"></use>
                   <use href="#icon-256-text"></use></svg
                 >DApp<wbr />Store<wbr />Schema</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/DappEnrichPayload.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Dapp<wbr />Enrich<wbr />Payload</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/DeleteDappPayload.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Delete<wbr />Dapp<wbr />Payload</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/EnrichFieldSchema.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Enrich<wbr />Field<wbr />Schema</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/EnrichSchema.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Enrich<wbr />Schema</a
               >
             </li>
             <li class="tsd-kind-interface">
@@ -465,6 +598,127 @@
                   <use href="#icon-256-path"></use>
                   <use href="#icon-256-text"></use></svg
                 >Filter<wbr />Options</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a
+                href="interfaces/OpenSearchCompositeQuery.html"
+                class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Open<wbr />Search<wbr />Composite<wbr />Query</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a
+                href="interfaces/OpenSearchConnectionOptions.html"
+                class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Open<wbr />Search<wbr />Connection<wbr />Options</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/Pagination.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Pagination</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/PaginationQuery.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Pagination<wbr />Query</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/ScreenShotSchema.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Screen<wbr />Shot<wbr />Schema</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/SearchResult.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Search<wbr />Result</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/StandardResponse.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Standard<wbr />Response</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/StoreSchema.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Store<wbr />Schema</a
+              >
+            </li>
+            <li class="tsd-kind-interface">
+              <a href="interfaces/StoresSchema.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-256-path"></use>
+                  <use href="#icon-256-text"></use></svg
+                >Stores<wbr />Schema</a
               >
             </li>
             <li class="tsd-kind-type-alias">
@@ -508,7 +762,7 @@
               >
             </li>
             <li class="tsd-kind-variable">
-              <a href="variables/dAppCategory-1.html" class="tsd-index-link"
+              <a href="variables/MAX_RESULT_WINDOW.html" class="tsd-index-link"
                 ><svg
                   class="tsd-kind-icon"
                   width="24"
@@ -531,6 +785,19 @@
                     fill="var(--color-text)"
                     id="icon-32-text"
                   ></path></svg
+                >MAX_<wbr />RESULT_<wbr />WINDOW</a
+              >
+            </li>
+            <li class="tsd-kind-variable">
+              <a href="variables/dAppCategory-1.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-32-path"></use>
+                  <use href="#icon-32-text"></use></svg
                 >d<wbr />App<wbr />Category</a
               >
             </li>
@@ -547,6 +814,19 @@
                   <use href="#icon-32-path"></use>
                   <use href="#icon-32-text"></use></svg
                 >d<wbr />App<wbr />Deployment<wbr />Platforms</a
+              >
+            </li>
+            <li class="tsd-kind-variable">
+              <a href="variables/searchRegistry.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="#icon-32-path"></use>
+                  <use href="#icon-32-text"></use></svg
+                >search<wbr />Registry</a
               >
             </li>
           </ul>

@@ -27,7 +27,6 @@
       "payments",
       "prediction-markets",
       "price-aggregator",
-      "product-markets",
       "ramp",
       "stablecoins",
       "tooling",
@@ -160,6 +159,7 @@
     "subCategory": [
       "decentralized-social-networks",
       "messaging",
+      "social-graph",
       "social-media"
     ]
   },
