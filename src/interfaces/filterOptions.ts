@@ -43,4 +43,6 @@ export interface FilterOptions {
 
   subCategory?: string[];
   limit?: number;
+
+  isMinted?: boolean;
 }

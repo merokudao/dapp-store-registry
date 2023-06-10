@@ -15,6 +15,7 @@ import {
 } from "../interfaces";
 import storesJson from "../dappStore.json";
 import registryJson from "./../registry.json";
+import categoryJson from "./../dappCategory.json";
 import Debug from "debug";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
@@ -343,6 +344,34 @@ export const dappMustExistInRegistry = async (
   return;
 };
 
+/**
+ * Prepaire category and subCategory mapping
+ * @param category 
+ * @param subCategory 
+ * @returns 
+ */
+export const getCatSubCatMapping = (
+  category: string[] = [],
+  subCategory:string[] = []
+) => {
+  const catSubcatMapp = categoryJson.reduce((aggs: any, value) => {
+    aggs[value.category] = value.subCategory;
+    return aggs;
+  }, {});
+
+  return category.map(cat => {
+    const allSubcat = catSubcatMapp[cat];
+    let catFilter = { category: cat, subCategory: [] as string [] };
+    subCategory.map((sc: string) => {
+      if (allSubcat.includes(sc)) {
+        catFilter.subCategory.push(sc)
+      }
+    });
+    return catFilter;
+  });
+};
+
+
 export const searchFilters = (
   search: string,
   payload: any,
@@ -366,17 +395,19 @@ export const searchFilters = (
     listedOnOrBefore = null,
     allowedInCountries = null,
     blockedInCountries = null,
-    categories = null,
-    subCategories = null,
+    categories = [],
+    subCategories = [],
     isListed = "true",
     developer = null,
     page = 1,
-    dappId = null,
     searchById = false,
-    ownerAddress = null
+    ownerAddress = null,
+    isMinted = null,
+    tokenIds = [],
   } = payload;
-  let { limit = recordsPerPage } = payload;
+  let { limit = recordsPerPage, dappId = '', } = payload;
 
+  if (dappId.length) dappId = dappId.split(",").map((di:string) => di.trim());
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!isForMatureAudience)
     query.bool.must.push({
@@ -417,21 +448,22 @@ export const searchFilters = (
     query.bool.must.push({
       match: { "developer.githubID": developer.githubID.trim() }
     });
-  if (categories && categories.length)
-    query.bool.must.push({
-      terms: {
-        category: categories
-      }
-    });
 
-  if (subCategories && subCategories.length)
-    query.bool.must.push({
-      terms: {
-        subCategory: subCategories
-      }
+  // create a category query with or between each category + apply subCategory filter
+  // category filter is must match but in case of multiple categories a doc atleast match to one category
+  // once a doc matched to one category it should match for subcategory if any values passed for sub category
+  const catSubCatMapping = getCatSubCatMapping(categories, subCategories);
+  if (catSubCatMapping.length) {
+    const categoryQuery = catSubCatMapping.map((catMapp) => {
+      const { category, subCategory } = catMapp;
+      if (!subCategory.length) return { match: { category } }
+      return { bool: { must: [ { match: { category } }, { terms: { subCategoryKeyword: subCategory } } ] } };
     });
+    query.bool.must.push({ bool: { should: categoryQuery }});
+  }
 
-  if (dappId) query.bool.must.push({ term: { dappId: dappId.trim() } });
+  if (dappId.length) query.bool.must.push({ terms: { dappId } });
+  if (tokenIds.length) query.bool.must.push({ terms: { tokenId: tokenIds } });
 
   // search on customer string
   if (!!search && search.length) {
@@ -454,6 +486,8 @@ export const searchFilters = (
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
 
+  if (isMinted) query.bool.must.push({ match: { minted : isMinted === 'true' ? true: false } });
+
   if (isListed && !searchById && !search && !ownerAddress)
     query.bool.must.push({
       match: { isListed: isListed === "true" ? true : false }
@@ -467,7 +501,7 @@ export const searchFilters = (
     _source: autoComplete ? autocompleteFields : searchFields,
     query,
     from: (payload.page - 1) * limit,
-    size: payload.page * limit,
+    size: limit,
     sort: orderBy(payload.orderBy || {})
   };
 

@@ -18,6 +18,9 @@ export const searchRegistry = {
   indexPrefix: `${process.env.ENVIRONMENT}_dapp_registries`,
   alias: `${process.env.ENVIRONMENT}_dapp_search_index`
 };
+
+export const  MAX_RESULT_WINDOW = 10000;
+
 export class DappStoreRegistryV1 {
   opensearchApis: OpensearchRequest;
   dappStoreRegistory: DappStoreRegistry;
@@ -37,7 +40,7 @@ export class DappStoreRegistryV1 {
   ): Promise<any> => {
     if (!dapps.length) {
       const dappsResponse = await this.dappStoreRegistory.registry();
-      dapps = dappsResponse.dapps;
+      dapps = dappsResponse.dapps.map(x => { return {...x, minted: false} });
     }
 
     if (!dapps.length) return;
@@ -46,6 +49,7 @@ export class DappStoreRegistryV1 {
       return {
         id: d.dappId,
         nameKeyword: d.name,
+        subCategoryKeyword: d.subCategory,
         ...d
       };
     });
@@ -95,6 +99,9 @@ export class DappStoreRegistryV1 {
     filterOpts: FilterOptions = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters("", filterOpts);
+
+    if (finalQuery.from + finalQuery.size > MAX_RESULT_WINDOW) return this.maxWindowError(finalQuery, limit);
+
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
       finalQuery
@@ -141,6 +148,7 @@ export class DappStoreRegistryV1 {
     await this.opensearchApis.createDoc(searchRegistry.alias, {
       id: dapp.dappId,
       nameKeyword: dapp.name,
+      subCategoryKeyword: dapp.subCategory,
       ...dapp
     });
     return {
@@ -186,6 +194,9 @@ export class DappStoreRegistryV1 {
     filterOpts: FilterOptions = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters(queryTxt, filterOpts);
+    
+    if (finalQuery.from + finalQuery.size > MAX_RESULT_WINDOW) return this.maxWindowError(finalQuery, limit);
+
     const result: SearchResult = await this.opensearchApis.search(
       searchRegistry.alias,
       finalQuery
@@ -299,5 +310,59 @@ export class DappStoreRegistryV1 {
       status: 200,
       message: ["success"]
     };
+  }
+
+  /**
+   * retrun Error response if 
+   * @param finalQuery quey
+   * @param limit limit
+   * @returns response
+   */
+  private maxWindowError(finalQuery: any, limit: number): StandardResponse {
+    return {
+      status: 400,
+      message: ["Error: Reached max page allowed, use filters to search"],
+      data: [],
+      pagination: {
+        page: finalQuery.page,
+        limit,
+        pageCount: finalQuery.page -1
+      }
+    };
+  }
+
+  /**
+   * call scroll docs
+   * @param filterOpts payload fields
+   * @returns 
+   */
+  public async scrollDocs(filterOpts: any): Promise<StandardResponse> {
+    const { scrollId = null } = filterOpts;
+    let result: SearchResult;
+    if (scrollId) result = await this.opensearchApis.scrollDocs(scrollId);
+    else {
+      const { finalQuery } = searchFilters("", filterOpts) as any;
+      delete finalQuery.from;
+      Object.assign(finalQuery, { size: filterOpts.size || 200 });
+      Object.assign(finalQuery, { _source: filterOpts._source || finalQuery._source });
+      result = await this.opensearchApis.initiateScrollSearch(searchRegistry.alias, finalQuery);
+    }
+    const { body: { hits: { hits: res }, _scroll_id } } = result ||
+        { body: { hits: { hits: [] }, _scroll_id: null } };
+    return {
+      status: 200,
+      message: ["success"],
+      scrollId : _scroll_id,
+      data: res && res.map(rs => rs._source)
+    };
+  }
+
+  /**
+   * delete scroll snapshots
+   * @param ids scroll ids
+   * @returns 
+   */
+  public async deleteScroller(ids: string[]) {
+    return this.opensearchApis.deleteScrollIds(ids);
   }
 }
