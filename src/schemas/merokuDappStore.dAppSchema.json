@@ -63,7 +63,14 @@
           {
             "additionalProperties": false,
             "type": "object",
-            "required": ["url", "platform", "minVersion", "packageId", "version", "versionCode"],
+            "required": [
+              "url",
+              "platform",
+              "minVersion",
+              "packageId",
+              "version",
+              "versionCode"
+            ],
             "properties": {
               "url": {
                 "type": "string",
@@ -114,7 +121,7 @@
           {
             "additionalProperties": false,
             "type": "object",
-            "required":["url", "platform"],
+            "required": ["url", "platform"],
             "properties": {
               "url": {
                 "type": "string",
@@ -271,10 +278,7 @@
     },
     "developer": {
       "type": "object",
-      "required": [
-        "legalName",
-        "website"
-      ],
+      "required": ["legalName", "website"],
       "properties": {
         "legalName": {
           "type": "string",
@@ -317,32 +321,31 @@
       "enum": [
         "books",
         "business",
-        "developer tools",
+        "defi",
+        "developer-tools",
         "education",
         "entertainment",
-        "defi",
-        "food and drink",
+        "food-and-drink",
         "games",
-        "health and fitness",
-        "lifestyle",
+        "gambling",
+        "health-and-fitness",
         "kids",
+        "lifestyle",
         "news",
+        "nft",
+        "personalization",
         "photography",
         "productivity",
         "shopping",
-        "social networking",
+        "social-networking",
         "sports",
         "travel",
-        "utilities",
-        "nft",
-        "gambling",
-        "social",
-        "personalization"
+        "utilities"
       ]
     },
     "subCategory": {
       "type": "string",
-      "description": "The sub-category of the dapp. You can assign one sub-category to your dApp. The category you select is particularly important for your app’s discoverability on the dApp Store. This will be the category in which the app appears when users browse the dApp Store or filter search results, and it determines placement on the dApps tab or Games"
+      "description": "The sub-category of the dapp. You can assign one sub-category to your dApp. The category you select is particularly important for your app's discoverability on the dApp Store. This will be the category in which the app appears when users browse the dApp Store or filter search results, and it determines placement on the dApps tab or Games"
     },
     "packageId": {
       "type": "string",
@@ -364,12 +367,12 @@
       "description": "The minted status will be used to denote if a dapp is claimed by owner or not.",
       "default": false
     },
-    "referredBy":{
+    "referredBy": {
       "type": "object",
       "description": "The details of a vendor, who have referred this dapp to dapp registry",
       "properties": {
         "name": {
-          "type":"string",
+          "type": "string",
           "description": "The name of the vendor."
         },
         "url": {
@@ -410,11 +413,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "audiobooks",
-              "document-readers",
-              "ebooks"
-            ]
+            "enum": ["audiobooks", "document-readers", "ebooks"]
           }
         }
       }
@@ -475,12 +474,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "language-learning",
-              "learning-tools",
-              "reference",
-              "stem"
-            ]
+            "enum": ["language-learning", "learning-tools", "reference", "stem"]
           }
         }
       }
@@ -525,7 +519,7 @@
               "liquid-staking",
               "others",
               "payments",
-              "prediction markets",
+              "prediction-markets",
               "product-markets",
               "ramp",
               "stablecoins",
@@ -546,11 +540,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "cooking",
-              "recipes",
-              "restaurant-finding"
-            ]
+            "enum": ["cooking", "recipes", "restaurant-finding"]
           }
         }
       }
@@ -610,11 +600,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "dating",
-              "fashion",
-              "home-automation"
-            ]
+            "enum": ["dating", "fashion", "home-automation"]
           }
         }
       }
@@ -648,11 +634,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "camera-apps",
-              "photo-editing",
-              "photo-sharing"
-            ]
+            "enum": ["camera-apps", "photo-editing", "photo-sharing"]
           }
         }
       }
@@ -690,11 +672,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "ecommerce",
-              "nft-marketplaces",
-              "price-aggregator"
-            ]
+            "enum": ["ecommerce", "nft-marketplaces", "price-aggregator"]
           }
         }
       }
@@ -708,10 +686,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "decentralized-social-networks",
-              "messaging"
-            ]
+            "enum": ["decentralized-social-networks", "messaging"]
           }
         }
       }
@@ -725,10 +700,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "live-scores",
-              "team-management"
-            ]
+            "enum": ["live-scores", "team-management"]
           }
         }
       }
@@ -795,11 +767,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "customization-tools",
-              "themes",
-              "wallpapers"
-            ]
+            "enum": ["customization-tools", "themes", "wallpapers"]
           }
         }
       }
@@ -813,12 +781,7 @@
       "then": {
         "properties": {
           "subCategory": {
-            "enum": [
-              "art",
-              "domain-names",
-              "pfps",
-              "tooling"
-            ]
+            "enum": ["art", "domain-names", "pfps", "tooling"]
           }
         }
       }

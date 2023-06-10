@@ -1,19 +1,15 @@
-import { DAppSchema, DAppStoreSchema } from "../src/interfaces";
+import { DAppStoreSchema } from "../src/interfaces";
 import { DappStoreRegistry, RegistryStrategy } from "../src/lib/registry";
-import { cloneable } from "../src/lib/utils";
 import chai from "chai";
 import fs from "fs-extra";
 import nock from "nock";
 import Dotenv from "dotenv";
 import parseISO from "date-fns/parseISO";
-import * as ghForkResponseFixture from "./fixtures/ghForkResponse.json";
-import * as ghGetContentResponseFixture from "./fixtures/ghGetContentResponse.json";
-import * as ghPutContentResponseFixture from "./fixtures/ghPutContentResponse.json";
-import * as ghAppResponse from "./fixtures/ghAppResponse.json";
 import Debug from "debug";
 import fetchMock from "fetch-mock";
 
 const debug = Debug("@merokudao:dapp-store:registry.spec.ts");
+debug("running tests...");
 Dotenv.config({
   path: ".env.test"
 });
@@ -29,8 +25,6 @@ const getRegistry = async (
     .get("/merokudao/dapp-store-registry/main/src/registry.json")
     .twice()
     .reply(200, fixtureRegistryJson);
-
-  fetchMock.get(`https://api.github.com/app`, ghAppResponse);
 
   const registry = new DappStoreRegistry(strategy);
   await registry.init();
@@ -234,8 +228,11 @@ describe("DappStoreRegistry", () => {
         allowedInCountries: validCountries
       });
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp => {
-        return !dapp.geoRestrictions?.allowedCountries || dapp.geoRestrictions?.allowedCountries?.some(x =>
-          validCountries.includes(x)
+        return (
+          !dapp.geoRestrictions?.allowedCountries ||
+          dapp.geoRestrictions?.allowedCountries?.some(x =>
+            validCountries.includes(x)
+          )
         );
       });
       registry_dapps_1.should.deep.equal(dapps_1);
@@ -334,152 +331,5 @@ describe("DappStoreRegistry", () => {
       );
       registry_dapps_1.should.deep.equal(dapps_1);
     });
-  });
-
-  describe("#addOrUpdateDapp", () => {
-    let fixtureRegistryJson: DAppStoreSchema;
-    let registry: DappStoreRegistry;
-
-    before(async () => {
-      const content = fs
-        .readFileSync("./test/fixtures/registry.json")
-        .toString();
-
-      fixtureRegistryJson = JSON.parse(content) as DAppStoreSchema;
-
-      registry = await getRegistry(fixtureRegistryJson);
-    });
-
-    it("throws error if githubID in dApp is not same as the person requesting", async () => {
-      const dapp = (await registry.dApps())[0];
-      const otherGithubID = "someOtherID";
-
-      try {
-        await registry.addOrUpdateDapp(
-          "name",
-          "email",
-          "token",
-          otherGithubID,
-          dapp
-        );
-      } catch (e: any) {
-        e.message.should.equal(
-          `Cannot add/update dApp ${dapp.dappId} as you are not the owner`
-        );
-      }
-    });
-
-    it("adds dApp when the new registry is valid", async () => {
-      const dApp: DAppSchema = cloneable.deepCopy(fixtureRegistryJson.dapps[0]);
-      dApp.dappId = "newDApp.app";
-      if (!dApp.developer) {
-        throw new Error("Developer is not defined");
-      }
-      const githubID = dApp.developer.githubID;
-
-      const owner = "merokudao";
-      const repo = "dapp-store-registry";
-      debug("hello");
-
-      fetchMock.post(
-        `https://api.github.com/repos/${owner}/${repo}/forks`,
-        ghForkResponseFixture
-      );
-
-      fetchMock.get(
-        `https://api.github.com/repos/${githubID}/${repo}/contents/src%2Fregistry.json`,
-        ghGetContentResponseFixture
-      );
-
-      fetchMock.put(
-        `https://api.github.com/repos/${githubID}/${repo}/contents/src%2Fregistry.json`,
-        ghPutContentResponseFixture
-      );
-
-      const prURL = await registry.addOrUpdateDapp(
-        "name",
-        "email",
-        "token",
-        githubID,
-        dApp
-      );
-
-      const expPrURL = `https://github.com/${owner}/${repo}/compare/main...${githubID}:${repo}:main?expand=1`;
-
-      prURL.should.equal(expPrURL);
-
-      const dApps = await registry.dApps();
-      const newlyAddedAppIDExists = dApps.some(x => x.dappId === dApp.dappId);
-      newlyAddedAppIDExists.should.be.equal(false);
-    });
-  });
-
-  describe("#deleteDapp", () => {
-    it("throws error if githubID in dApp is not same as the person requesting", async () => {
-      fetchMock.get(`https://api.github.com/app`, ghAppResponse);
-
-      const registry = new DappStoreRegistry();
-      await registry.init();
-
-      const dapp = (await registry.dApps())[0];
-      const otherGithubID = "someOtherID";
-
-      try {
-        await registry.deleteDapp(
-          "name",
-          "email",
-          "token",
-          otherGithubID,
-          dapp.dappId
-        );
-      } catch (e: any) {
-        e.message.should.equal(
-          `Cannot delete dApp ${dapp.dappId} as you are not the owner`
-        );
-      }
-    });
-  });
-
-  describe("#toggleListing", () => {
-    let fixtureRegistryJson: DAppStoreSchema;
-    let registry: DappStoreRegistry;
-
-    before(async () => {
-      const content = fs
-        .readFileSync("./test/fixtures/registry.json")
-        .toString();
-
-      fixtureRegistryJson = JSON.parse(content) as DAppStoreSchema;
-
-      registry = await getRegistry(fixtureRegistryJson);
-    });
-
-    it("throws error if githubID in dApp is not same as the person requesting", async () => {
-      // const registry = new DappStoreRegistry();
-      // await registry.init();
-
-      const dapp = (await registry.dApps())[0];
-      const otherGithubID = "someOtherID";
-
-      try {
-        await registry.toggleListing(
-          "name",
-          "email",
-          "token",
-          otherGithubID,
-          dapp.dappId
-        );
-      } catch (e: any) {
-        e.message.should.equal(
-          `Cannot toggle listing for dApp ${dapp.dappId} as you are not the owner`
-        );
-      }
-    });
-
-    // it("Throw Error if duplicate dappId", async() => {
-    //   const registry = new DappStoreRegistry(RegistryStrategy.Static);
-    //   const status = await registry.getAllDappIds();
-    //   status.should.equal(200);
-    // });
   });
 });

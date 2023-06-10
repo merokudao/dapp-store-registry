@@ -134,17 +134,17 @@ export class DappStoreRegistry {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     // find duplicate dapp
     const counts: any = {};
-    const duplicaes: any = [];
+    const duplicates: any = [];
     dAppIDs.forEach(item => {
       counts[item] = counts[item] ? counts[item] : 0;
       counts[item] += 1;
       if (counts[item] >= 2) {
-        duplicaes.push(item);
+        duplicates.push(item);
       }
     });
 
-    if (duplicaes.length) {
-      debug(`duplicate dapp: ${JSON.stringify(duplicaes)}`);
+    if (duplicates.length) {
+      debug(`duplicate dapp: ${JSON.stringify(duplicates)}`);
       throw new Error(
         `@merokudao/dapp-store-registry: registry is invalid. dApp IDs must be unique.`
       );
@@ -344,6 +344,7 @@ export class DappStoreRegistry {
     if (!this.initialized) {
       await this.buildSearchIndex();
     }
+    this.initialized = true;
   }
 
   /**
@@ -430,7 +431,7 @@ export class DappStoreRegistry {
       debug(`allNewDappIds: ${JSON.stringify(allNewDappIds)}`);
       return 200;
     } catch (error) {
-      console.log(`Error occurred: ${error}`);
+      debug(`Error occurred: ${error}`);
       return 400;
     }
   };

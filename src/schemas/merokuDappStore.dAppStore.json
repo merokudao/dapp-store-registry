@@ -1,40 +1,40 @@
 {
-    "schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppStore.json",
-    "title": "dApp Store Schema",
-    "description": "A dApp store schema",
-    "type": "object",
-    "properties": {
-      "githubId": {
-        "description": "Who owns this dApp Store",
-        "type": "string"
-      },
-      "featuredSections": {
-        "type": "array",
-        "description": "List of featured sections",
-        "items": {
-          "$ref": "merokuDappStore.featuredSchema.json"
-        }
-      },
-      "key": {
-        "description": "Unique ID of this dApp Store",
-        "type": "string"
-      },
-      "bannedDAppIds": {
-        "type": "array",
-        "description": "List of dApp IDs that are banned in this store. The dApp IDs should be the same as the ones in the dApp Store's dApps list.",
-        "items": {
-          "type": "string"
-        }
-      },
-      "dappsEnrich": {
-        "type": "array",
-        "description": "List of a dapp with properties to change values for the dapp store",
-        "items": {
-            "$ref": "merokuDappStore.dAppEnrich.json"
-        }
+  "schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppStore.json",
+  "title": "dApp Store Schema",
+  "description": "A dApp store schema",
+  "type": "object",
+  "properties": {
+    "githubId": {
+      "description": "Who owns this dApp Store",
+      "type": "string"
+    },
+    "featuredSections": {
+      "type": "array",
+      "description": "List of featured sections",
+      "items": {
+        "$ref": "merokuDappStore.featuredSchema.json"
       }
     },
-    "required": ["githubId", "featuredSections", "key"],
-    "additionalProperties": false
+    "key": {
+      "description": "Unique ID of this dApp Store",
+      "type": "string"
+    },
+    "bannedDAppIds": {
+      "type": "array",
+      "description": "List of dApp IDs that are banned in this store. The dApp IDs should be the same as the ones in the dApp Store's dApps list.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dappsEnrich": {
+      "type": "array",
+      "description": "List of a dapp with properties to change values for the dapp store",
+      "items": {
+        "$ref": "merokuDappStore.dAppEnrich.json"
+      }
+    }
+  },
+  "required": ["githubId", "featuredSections", "key"],
+  "additionalProperties": false
 }
