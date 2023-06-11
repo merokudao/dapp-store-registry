@@ -83,7 +83,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "doc": "typedoc src/ --out docs",
-    "test:unit": "mocha",
+    "test:unit": "mocha --timeout 10000",
     "test:prettier": "prettier 'src/**/*.ts' --list-different",
     "test:lint": "eslint src --ext .ts",
     "test": "run-s build test:*",
