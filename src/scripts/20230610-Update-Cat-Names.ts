@@ -31,7 +31,8 @@ const subCategoryMapping = {
   "graphics and design": "graphics-and-design",
   "domain names": "domain-names",
   "social media": "social-media",
-  "price aggregator": "price-aggregator"
+  "price aggregator": "price-aggregator",
+  finance: "defi"
 } as { [key: string]: string };
 
 debug("Using categoryMapping", categoryMapping);
