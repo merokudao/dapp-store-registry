@@ -16,7 +16,8 @@ const categoryMapping = {
   "food and drink": "food-and-drink",
   "health and fitness": "health-and-fitness",
   "social networking": "social-networking",
-  social: "social-networking"
+  social: "social-networking",
+  defi: "finance"
 } as { [key: string]: string };
 
 const subCategoryMapping = {
@@ -54,15 +55,15 @@ for (const dApp of dApps) {
     dApp.subCategory = subCategoryMapping[dApp.subCategory] || dApp.subCategory;
   }
   // now check if there's any overwrite of categories and sub categories
-  if (dApp.category === "defi" && dApp.subCategory === "infrastructure") {
-    dApp.category = "defi";
+  if (dApp.category === "finance" && dApp.subCategory === "infrastructure") {
+    dApp.category = "finance";
     dApp.subCategory = "trading";
   }
 }
 
 // Write the new registry.json
 fs.writeFileSync(
-  "./src/registry_updated.json",
+  "./src/registry.json",
   JSON.stringify(localRegistryJson, null, 2)
 );
-debug("Updated registry written to ./src/registry_updated.json");
+debug("Updated registry written to ./src/registry.json");

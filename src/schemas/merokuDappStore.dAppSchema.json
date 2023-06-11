@@ -321,7 +321,7 @@
       "enum": [
         "books",
         "business",
-        "defi",
+        "finance",
         "developer-tools",
         "education",
         "entertainment",
@@ -502,7 +502,7 @@
     {
       "if": {
         "properties": {
-          "category": { "const": "defi" }
+          "category": { "const": "finance" }
         }
       },
       "then": {
