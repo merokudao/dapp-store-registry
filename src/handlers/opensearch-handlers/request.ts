@@ -137,13 +137,13 @@ export class OpensearchRequest {
     return this.opensearchClient.search({
       index,
       body,
-      scroll: '30s'
+      scroll: "30s"
     });
   }
   /**
    * on each call return next page of scroll_id
    * @param scrollId get next page result
-   * @returns 
+   * @returns
    */
   public async scrollDocs(scrollId: any): Promise<any> {
     return this.opensearchClient.scroll({
@@ -160,7 +160,6 @@ export class OpensearchRequest {
   public async deleteScrollIds(scrollIds: string[]): Promise<any> {
     return this.opensearchClient.clearScroll({
       scroll_id: scrollIds
-    })
+    });
   }
-
 }

@@ -1,98 +1,95 @@
 {
-    "schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppEnrich.json",
-    "title": "dApps Overridable schema for a dapp store",
-    "description": "A dApp overridable schema",
-    "type": "object",
-    "properties": {
-        "dappId": {
-            "type": "string",
-            "description": "The dappId for metioned properties will be replace for a dapp store"
-        },
-        "fields": {
-            "type": "object",
-            "properties": {
-                "images": {
-                    "type": "object",
-                    "properties": {
-                        "logo": {
-                            "type": "string",
-                            "format": "uri",
-                            "pattern": "^(https?|http?|ipfs?)://",
-                            "minLength": 1,
-                            "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
-                        },
-                        "banner": {
-                            "type": "string",
-                            "format": "uri",
-                            "pattern": "^(https?|http?|ipfs?)://",
-                            "minLength": 1,
-                            "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
-                        },
-                        "screenshots": {
-                            "type": "array",
-                            "properties": {
-                                "value": {
-                                    "type": "string",
-                                    "format": "uri",
-                                    "pattern": "^(https?|http?|ipfs?)://",
-                                    "minLength": 1
-                                },
-                                "index": {
-                                    "type": "number"
-                                }
-                            }
-                        }
-                    }
-                },
-                "description": {
-                    "type": "string",
-                    "description": "A detailed description of the dApp"
-                },
-                "minAge": {
-                    "type": "integer",
-                    "description": "The min age of user who should access this dApp",
-                    "exclusiveMinimum": 3
-                },
-                "isForMatureAudience": {
-                    "type": "boolean",
-                    "description": "Boolean to signify if the dApp is for mature audience"
-                },
-                "geoRestrictions": {
-                    "type": "object",
-                    "description": "A list of countries where the dApp is available or unavailable. If this is not present, the dApp is available everywhere. If this is present, then one of either allowedCountries or blockedCountries should be present. If both are present, then the dApp is available in allowedCountries and unavailable in blockedCountries. The name of countries should be in ISO-3661-1 Alpha-2 Code.",
-                    "properties": {
-                        "allowedCountries": {
-                            "type": "array",
-                            "description": "A list of countries where the dApp is available",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "blockedCountries": {
-                            "type": "array",
-                            "description": "A list of countries where the dApp is unavailable",
-                            "items": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                },
-                "tags": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "minItems": 1,
-                    "uniqueItems": true
-                }
-            },
-            "additionalProperties": false
-        }
+  "schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppEnrich.json",
+  "title": "dApps Overridable schema for a dapp store",
+  "description": "A dApp overridable schema",
+  "type": "object",
+  "properties": {
+    "dappId": {
+      "type": "string",
+      "description": "The dappId for metioned properties will be replace for a dapp store"
     },
-    "required": [
-        "dappId",
-        "fields"
-    ],
-    "additionalProperties": false
+    "fields": {
+      "type": "object",
+      "properties": {
+        "images": {
+          "type": "object",
+          "properties": {
+            "logo": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^(https?|http?|ipfs?)://",
+              "minLength": 1,
+              "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
+            },
+            "banner": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^(https?|http?|ipfs?)://",
+              "minLength": 1,
+              "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
+            },
+            "screenshots": {
+              "type": "array",
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^(https?|http?|ipfs?)://",
+                  "minLength": 1
+                },
+                "index": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the dApp"
+        },
+        "minAge": {
+          "type": "integer",
+          "description": "The min age of user who should access this dApp",
+          "exclusiveMinimum": 3
+        },
+        "isForMatureAudience": {
+          "type": "boolean",
+          "description": "Boolean to signify if the dApp is for mature audience"
+        },
+        "geoRestrictions": {
+          "type": "object",
+          "description": "A list of countries where the dApp is available or unavailable. If this is not present, the dApp is available everywhere. If this is present, then one of either allowedCountries or blockedCountries should be present. If both are present, then the dApp is available in allowedCountries and unavailable in blockedCountries. The name of countries should be in ISO-3661-1 Alpha-2 Code.",
+          "properties": {
+            "allowedCountries": {
+              "type": "array",
+              "description": "A list of countries where the dApp is available",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blockedCountries": {
+              "type": "array",
+              "description": "A list of countries where the dApp is unavailable",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["dappId", "fields"],
+  "additionalProperties": false
 }

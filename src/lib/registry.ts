@@ -1,11 +1,6 @@
 import Dotenv from "dotenv";
 import { fetch } from "cross-fetch";
-import {
-  DAppSchema,
-  DAppStoreSchema,
-  FeaturedSection,
-  FilterOptions
-} from "../interfaces";
+import { DAppSchema, DAppStoreSchema, FilterOptions } from "../interfaces";
 import MiniSearch from "minisearch";
 import parseISO from "date-fns/parseISO";
 import Ajv2019 from "ajv/dist/2019";
@@ -20,8 +15,6 @@ import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import registryJson from "./../registry.json";
 import categoryJson from "./../dappCategory.json";
 
-import { Octokit } from "octokit";
-import { createAppAuth } from "@octokit/auth-app";
 import { cloneable, getCatSubCatMapping, getDappId } from "./utils";
 
 Dotenv.config();
@@ -51,26 +44,8 @@ export class DappStoreRegistry {
 
   private cachedRegistry: DAppStoreSchema | undefined;
 
-  private appOctokit: Octokit | undefined = undefined;
-
   constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
     this.strategy = strategy;
-    if (
-      process.env.GITHUB_APP_ID &&
-      process.env.GITHUB_APP_PRIVATE_KEY &&
-      process.env.GITHUB_CLIENT_ID &&
-      process.env.GITHUB_CLIENT_SECRET
-    ) {
-      this.appOctokit = new Octokit({
-        authStrategy: createAppAuth,
-        auth: {
-          appId: process.env.GITHUB_APP_ID,
-          privateKey: process.env.GITHUB_APP_PRIVATE_KEY,
-          clientId: process.env.GITHUB_CLIENT_ID,
-          clientSecret: process.env.GITHUB_CLIENT_SECRET
-        }
-      });
-    }
 
     this.searchEngine = new MiniSearch({
       idField: "dappId",
@@ -159,17 +134,17 @@ export class DappStoreRegistry {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     // find duplicate dapp
     const counts: any = {};
-    const duplicaes: any = [];
+    const duplicates: any = [];
     dAppIDs.forEach(item => {
       counts[item] = counts[item] ? counts[item] : 0;
       counts[item] += 1;
       if (counts[item] >= 2) {
-        duplicaes.push(item);
+        duplicates.push(item);
       }
     });
 
-    if (duplicaes.length) {
-      debug(`duplicate dapp: ${JSON.stringify(duplicaes)}`);
+    if (duplicates.length) {
+      debug(`duplicate dapp: ${JSON.stringify(duplicates)}`);
       throw new Error(
         `@merokudao/dapp-store-registry: registry is invalid. dApp IDs must be unique.`
       );
@@ -323,8 +298,11 @@ export class DappStoreRegistry {
         });
       }
 
-      const catSubCatMapping = getCatSubCatMapping(filterOpts.categories, filterOpts.subCategory);
-      
+      const catSubCatMapping = getCatSubCatMapping(
+        filterOpts.categories,
+        filterOpts.subCategory
+      );
+
       if (filterOpts.categories) {
         const categories = filterOpts.categories;
         res = res.filter(d => categories.includes(d.category));
@@ -332,9 +310,13 @@ export class DappStoreRegistry {
       catSubCatMapping.forEach(catD => {
         const { category, subCategory } = catD;
         if (subCategory.length) {
-          res = res.filter(d => d.category !== category || (d.subCategory && subCategory.includes(d.subCategory)));
+          res = res.filter(
+            d =>
+              d.category !== category ||
+              (d.subCategory && subCategory.includes(d.subCategory))
+          );
         }
-      })
+      });
 
       if (filterOpts.developer) {
         const developerId = filterOpts.developer.githubID;
@@ -344,83 +326,6 @@ export class DappStoreRegistry {
 
     return res;
   }
-
-  private async updateRegistry(
-    name: string,
-    email: string,
-    githubId: string,
-    accessToken: string,
-    newRegistry: DAppStoreSchema,
-    commitMessage: string,
-    org: string | undefined = undefined
-  ) {
-    const registryFile = "src/registry.json";
-
-    // Fork repo from merokudao to the authenticated user
-    const octokit = new Octokit({
-      userAgent: "@merokudao/dAppStore/v1.2.3",
-      auth: accessToken
-    });
-
-    debug(
-      `forking ${this.githubOwner}/${this.githubRepo} to ${githubId}/${this.githubRepo}`
-    );
-    await octokit.request("POST /repos/{owner}/{repo}/forks", {
-      owner: this.githubOwner,
-      repo: this.githubRepo,
-      organization: org,
-      name: this.githubRepo,
-      default_branch_only: true
-    });
-    debug(`forked ${this.githubOwner}/${this.githubRepo} to ${githubId})`);
-
-    // Get the SHA of the registry file
-    debug(
-      `getting sha of repos/${githubId}/${this.githubRepo}/contents/${registryFile}`
-    );
-    const {
-      data: { sha }
-    } = await octokit.request(
-      "GET /repos/{owner}/{repo}/contents/{file_path}",
-      {
-        owner: githubId,
-        repo: this.githubRepo,
-        file_path: registryFile
-      }
-    );
-
-    // Commit the changes
-    // Push the changes to the forked repo
-    debug(`pushing changes to ${githubId}/${this.githubRepo}`);
-    await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-      owner: githubId,
-      repo: this.githubRepo,
-      path: registryFile,
-      message: commitMessage,
-      committer: {
-        name: name,
-        email: email
-      },
-      content: Buffer.from(JSON.stringify(newRegistry, null, 2)).toString(
-        "base64"
-      ),
-      sha: sha
-    });
-
-    // Open a PR against the main branch of the merokudao repo
-    // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
-    // Since it's not possible to create a PR from one repo to another, we'll have to
-    // resort to returning a URL that, when the user goes to, prompts to create a PR
-    const prURL = `https://github.com/${this.githubOwner}/${this.githubRepo}/compare/main...${githubId}:${this.githubRepo}:main?expand=1`;
-
-    debug(`PR URL: ${prURL}`);
-    return prURL;
-  }
-
-  // private githubContributors = async () => {
-  //   const contributors = await this.appOctokit.rest.repos.listContributors();
-  //   return contributors.data.map(c => c.login).filter((c): c is string => !!c);
-  // };
 
   /**
    * Initializes the registry. This is required before you can use the registry.
@@ -438,37 +343,9 @@ export class DappStoreRegistry {
   public async init() {
     if (!this.initialized) {
       await this.buildSearchIndex();
-
-      if (this.appOctokit) {
-        await this.appOctokit.rest.apps.getAuthenticated();
-      }
-      this.initialized = true;
     }
+    this.initialized = true;
   }
-
-  public isGHAppInstalled = async (username: string): Promise<boolean> => {
-    if (!this.appOctokit) {
-      return false;
-    }
-    const { data: installations } =
-      await this.appOctokit.rest.apps.listInstallations();
-    return installations.some(i =>
-      i.account ? i.account.login === username : false
-    );
-  };
-
-  /**
-   * Get the URL where the user can install the GitHub App
-   * @returns
-   */
-  public ghAppInstallURL = async () => {
-    if (this.appOctokit) {
-      const { data: app } = await this.appOctokit.rest.apps.getAuthenticated();
-      return `${app.html_url}/installations/new`;
-    } else {
-      return "";
-    }
-  };
 
   /**
    *
@@ -495,214 +372,6 @@ export class DappStoreRegistry {
 
     return res;
   };
-
-  /**
-   * Adds or updates the dApp in the registry. If the dApp already exists, it
-   * updates the dApp. If the dApp doesn't exist, it adds the dApp.
-   *
-   * Only the developer of the dApp can add or update the dApp.
-   * @param name The name of the developer (from GitHub)
-   * @param email The email of the developer (from Github)
-   * @param accessToken The JWT access token of the developer (from Github) for user to server
-   * API Calls
-   * @param githubID The GitHub ID of the developer
-   * @param dapp The dApp to add or update
-   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
-   * @returns A promise that resolves to PR URL when the dApp is added or updated. This should
-   * be shown to the user on UI, so that they can visit this URL and create a PR.
-   */
-  public async addOrUpdateDapp(
-    name: string,
-    email: string,
-    accessToken: string,
-    githubID: string,
-    dapp: DAppSchema,
-    org: string | undefined = undefined
-  ): Promise<string> {
-    if (!dapp.developer) {
-      throw new Error(`Developer is unknown in dApp ${dapp.dappId}.`);
-    }
-    if (dapp.developer.githubID !== githubID) {
-      throw new Error(
-        `Cannot add/update dApp ${dapp.dappId} as you are not the owner`
-      );
-    }
-
-    if (!dapp.dappId.endsWith(".app")) {
-      throw new Error(
-        `dApp ID ${dapp.dappId} is invalid. It must end with .app`
-      );
-    }
-
-    const currRegistry = await this.registry();
-    const dappExists = currRegistry.dapps.filter(x => x.dappId === dapp.dappId);
-
-    if (dappExists.length === 0) {
-      currRegistry.dapps.push(dapp);
-    } else if (dappExists.length === 1) {
-      if (!dappExists[0].developer) {
-        throw new Error(`Developer is unknown in dApp ${dapp.dappId}.`);
-      }
-      if (dapp.developer.githubID !== dappExists[0].developer.githubID) {
-        throw new Error(
-          `Cannot update dApp ${dapp.dappId} as you are not the owner`
-        );
-      }
-      const idx = currRegistry.dapps.findIndex(x => x.dappId === dapp.dappId);
-      currRegistry.dapps[idx] = dapp;
-    } else {
-      throw new Error(`Multiple dApps with the same ID ${dapp.dappId} found`);
-    }
-
-    // Validate the registry
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
-    if (!valid) {
-      throw new Error(`This update leads to Invalid registry.json: ${errors}`);
-    }
-
-    return await this.updateRegistry(
-      name,
-      email,
-      githubID,
-      accessToken,
-      currRegistry,
-      `add-${dapp.dappId}`,
-      org
-    );
-  }
-
-  /**
-   * Deletes the dApp from registry. Only the developer who added this dApp can
-   * delete it.
-   * @param name The name of the developer (from GitHub)
-   * @param email The email of the developer (from Github)
-   * @param accessToken The JWT access token of the developer (from Github) for user to server
-   * API Calls
-   * @param githubID The GitHub ID of the developer
-   * @param dappId The ID of the dApp to delete
-   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
-   * @returns A promise that resolves to PR URL when the dApp is deleted. This should
-   * be shown to the user on UI, so that they can visit this URL and create a PR.
-   */
-  public deleteDapp = async (
-    name: string,
-    email: string,
-    accessToken: string,
-    githubID: string,
-    dappId: string,
-    org: string | undefined = undefined
-  ): Promise<string> => {
-    const currRegistry = await this.registry();
-    const dappExists = currRegistry.dapps.filter(x => x.dappId === dappId);
-
-    if (dappExists.length === 0) {
-      throw new Error(`No dApp with the ID ${dappId} found`);
-    } else if (dappExists.length === 1) {
-      if (!dappExists[0].developer) {
-        throw new Error(`Developer is unknown in dApp ${dappId}.`);
-      }
-      if (dappExists[0].developer.githubID !== githubID) {
-        throw new Error(
-          `Cannot delete dApp ${dappId} as you are not the owner`
-        );
-      }
-      const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
-      currRegistry.dapps.splice(idx, 1);
-    } else {
-      throw new Error(`Multiple dApps with the same ID ${dappId} found`);
-    }
-
-    // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
-    if (!valid) {
-      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
-    }
-
-    return await this.updateRegistry(
-      name,
-      email,
-      githubID,
-      accessToken,
-      currRegistry,
-      `delete-${dappId}`,
-      org
-    );
-  };
-
-  /**
-   * Toggle the listing of the dApp. Only the developer who added this dApp can
-   * toggle the listing.
-   * @param name The name of the developer (from GitHub)
-   * @param email The email of the developer (from Github)
-   * @param accessToken The JWT access token of the developer (from Github) for user to server
-   * API Calls
-   * @param githubID The GitHub ID of the developer
-   * @param dappId The ID of the dApp to toggle listing
-   * @param org The GitHub organization to fork the repo to. Defaults to undefined.
-   * @returns A promise that resolves to PR URL when the dApp is deleted. This should
-   * be shown to the user on UI, so that they can visit this URL and create a PR.
-   */
-  public async toggleListing(
-    name: string,
-    email: string,
-    accessToken: string,
-    githubID: string,
-    dappId: string,
-    org: string | undefined = undefined
-  ) {
-    const currRegistry = await this.registry();
-    const dappExists = currRegistry.dapps.filter(x => x.dappId === dappId);
-    let isListed: boolean;
-
-    if (dappExists.length === 0) {
-      throw new Error(`No dApp with the ID ${dappId} found`);
-    } else if (dappExists.length === 1) {
-      if (!dappExists[0].developer) {
-        throw new Error(`Developer is unknown in dApp ${dappId}.`);
-      }
-      if (dappExists[0].developer.githubID !== githubID) {
-        throw new Error(
-          `Cannot toggle listing for dApp ${dappId} as you are not the owner`
-        );
-      }
-      const idx = currRegistry.dapps.findIndex(x => x.dappId === dappId);
-      currRegistry.dapps[idx].isListed = !currRegistry.dapps[idx].isListed;
-      isListed = currRegistry.dapps[idx].isListed;
-    } else {
-      throw new Error(`Multiple dApps with the same ID ${dappId} found`);
-    }
-
-    if (!isListed) {
-      // Remove the dApp from the search index
-      // Remove the dapp from any featured section
-      const currFeaturedSections = currRegistry.featuredSections;
-      if (currFeaturedSections) {
-        for (const section of currFeaturedSections) {
-          const idx = section.dappIds.findIndex(x => x === dappId);
-          if (idx !== -1) {
-            section.dappIds.splice(idx, 1);
-            debug(`Removed ${dappId} from featured section ${section.key}`);
-          }
-        }
-      }
-    }
-
-    // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
-    if (!valid) {
-      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
-    }
-
-    return await this.updateRegistry(
-      name,
-      email,
-      githubID,
-      accessToken,
-      currRegistry,
-      `toggle-listing-${dappId}`,
-      org
-    );
-  }
 
   /**
    * Performs search & filter on the dApps in the registry. This always returns the dApps
@@ -737,199 +406,6 @@ export class DappStoreRegistry {
     return res;
   };
 
-  public addFeaturedSection = async (
-    name: string,
-    email: string,
-    accessToken: string,
-    githubID: string,
-    section: FeaturedSection
-  ) => {
-    // const contributors = await this.githubContributors();
-    // if (!contributors.includes(githubID)) {
-    //   throw new Error(
-    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
-    //   );
-    // }
-    const currFeaturedSections = await this.getFeaturedDapps();
-
-    // Ensure that a section with same name doesn't already exists
-    if (
-      currFeaturedSections &&
-      currFeaturedSections.filter(x => x.title === section.title).length > 0
-    ) {
-      throw new Error(`A section with name ${section.title} already exists`);
-    }
-
-    if (section.dappIds.length === 0) {
-      throw new Error(`A section must have at least one dApp`);
-    }
-
-    const currRegistry = await this.registry();
-    // Make sure the dapp ids exist in the registry
-    section.dappIds.forEach(dappId => {
-      if (
-        currRegistry.dapps.filter(x => x.dappId === dappId && x.isListed)
-          .length === 0
-      ) {
-        throw new Error(
-          `dApp ID ${dappId} not found or not listed in registry`
-        );
-      }
-    });
-
-    if (currRegistry.featuredSections) {
-      currRegistry.featuredSections.push(section);
-    } else {
-      currRegistry.featuredSections = [section];
-    }
-
-    // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
-    if (!valid) {
-      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
-    }
-
-    return await this.updateRegistry(
-      name,
-      email,
-      githubID,
-      accessToken,
-      currRegistry,
-      `add-featured-section-${section.title}`,
-      undefined
-    );
-  };
-
-  public removeFeaturedSection = async (
-    name: string,
-    email: string,
-    accessToken: string,
-    githubID: string,
-    sectionKey: string
-  ) => {
-    // const contributors = await this.githubContributors();
-    // if (!contributors.includes(githubID)) {
-    //   throw new Error(
-    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
-    //   );
-    // }
-
-    const currRegistry = await this.registry();
-    if (!currRegistry.featuredSections) {
-      throw new Error(`No featured sections found`);
-    }
-
-    const idx = currRegistry.featuredSections.findIndex(
-      x => x.key === sectionKey
-    );
-    if (idx === -1) {
-      throw new Error(`No featured section with key ${sectionKey} found`);
-    }
-
-    currRegistry.featuredSections.splice(idx, 1);
-
-    // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
-    if (!valid) {
-      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
-    }
-
-    return await this.updateRegistry(
-      name,
-      email,
-      githubID,
-      accessToken,
-      currRegistry,
-      `remove-featured-section-${sectionKey}`,
-      undefined
-    );
-  };
-
-  /**
-   * Toggles the dApp in the featured section. If the dApp is already in the section,
-   * it is removed. If it is not in the section, it is added.
-   * @param name
-   * @param email
-   * @param accessToken
-   * @param githubID
-   * @param sectionKey
-   * @param dappIds
-   * @returns
-   */
-  public toggleDappInFeaturedSection = async (
-    name: string,
-    email: string,
-    accessToken: string,
-    githubID: string,
-    sectionKey: string,
-    dappIds: string[]
-  ) => {
-    // const contributors = await this.githubContributors();
-    // if (!contributors.includes(githubID)) {
-    //   throw new Error(
-    //     `You are not a contributor to the registry. Please contact the registry maintainers to add you as a contributor`
-    //   );
-    // }
-
-    const currRegistry = await this.registry();
-    const currFeaturedSections = currRegistry.featuredSections;
-    if (!currFeaturedSections) {
-      throw new Error(`No featured sections defined in the registry`);
-    }
-    const sectionIndex = currFeaturedSections.findIndex(
-      x => x.key === sectionKey
-    );
-    if (sectionIndex < 0) {
-      throw new Error(`No section with key ${sectionKey} found`);
-    }
-    // Make sure the dappIds exist in the registry
-
-    const dappIdsToRemove = dappIds.filter(dappId =>
-      currFeaturedSections[sectionIndex].dappIds.includes(dappId)
-    );
-    const dappIdsToAdd = dappIds.filter(
-      dappId => !currFeaturedSections[sectionIndex].dappIds.includes(dappId)
-    );
-    dappIdsToAdd.map(x => {
-      const exist = currRegistry.dapps.filter(
-        y => y.dappId === x && y.isListed
-      );
-      if (exist.length === 0) {
-        throw new Error(`dApp ID ${x} not found or not listed in registry`);
-      }
-      if (exist.length > 1) {
-        throw new Error(`Multiple dApps with the same ID ${x} found`);
-      }
-    });
-    debug(`Removing ${dappIdsToRemove} from featured section ${sectionKey}`);
-    debug(`Adding ${dappIdsToAdd} to featured section ${sectionKey}`);
-
-    currFeaturedSections[sectionIndex].dappIds =
-      currFeaturedSections[sectionIndex].dappIds.concat(dappIdsToAdd);
-
-    currFeaturedSections[sectionIndex].dappIds = currFeaturedSections[
-      sectionIndex
-    ].dappIds.filter(x => !dappIdsToRemove.includes(x));
-
-    currRegistry.featuredSections = currFeaturedSections;
-
-    // Validate the registry.json
-    const [valid, errors] = this.validateRegistryJson(currRegistry);
-    if (!valid) {
-      throw new Error(`This update leads to Invalid registry.json.: ${errors}`);
-    }
-
-    return await this.updateRegistry(
-      name,
-      email,
-      githubID,
-      accessToken,
-      currRegistry,
-      `add-dapp-to-featured-section-${sectionKey}-${dappIds.join("-")}`,
-      undefined
-    );
-  };
-
   /**
    * Gets all the featured sections defined in the registry. Along with the dApps.
    * If no featured section is defined, returns `undefined`
@@ -943,11 +419,11 @@ export class DappStoreRegistry {
     return categoryJson;
   };
 
-  public getAllDappIds  = async (): Promise<number> => {
+  public getAllDappIds = async (): Promise<number> => {
     const dapps = (await this.registry()).dapps;
-    const newUrls: string[] = []
+    const newUrls: string[] = [];
     try {
-      const allNewDappIds = dapps.map((dapp) => {
+      const allNewDappIds = dapps.map(dapp => {
         const dappId = getDappId(dapp.appUrl, [], newUrls);
         newUrls.push(dappId);
         return dappId;
@@ -955,7 +431,7 @@ export class DappStoreRegistry {
       debug(`allNewDappIds: ${JSON.stringify(allNewDappIds)}`);
       return 200;
     } catch (error) {
-      console.log(`Error occured: ${(error)}`)
+      debug(`Error occurred: ${error}`);
       return 400;
     }
   };

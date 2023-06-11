@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
-    <title>RegistryStrategy | @merokudao/dapp-store-registry</title>
+    <title>OpenSearchCompositeQuery | @merokudao/dapp-store-registry</title>
     <meta
       name="description"
       content="Documentation for @merokudao/dapp-store-registry"
@@ -82,13 +82,23 @@
             <li>
               <a href="../modules.html">@merokudao/dapp-store-registry</a>
             </li>
-            <li><a href="RegistryStrategy.html">RegistryStrategy</a></li>
+            <li>
+              <a href="OpenSearchCompositeQuery.html"
+                >OpenSearchCompositeQuery</a
+              >
+            </li>
           </ul>
-          <h1>Enumeration RegistryStrategy</h1>
+          <h1>Interface OpenSearchCompositeQuery</h1>
         </div>
+        <section class="tsd-panel tsd-hierarchy">
+          <h4>Hierarchy</h4>
+          <ul class="tsd-hierarchy">
+            <li><span class="target">OpenSearchCompositeQuery</span></li>
+          </ul>
+        </section>
         <aside class="tsd-sources">
           <ul>
-            <li>Defined in lib/registry.ts:24</li>
+            <li>Defined in interfaces/opensearchResponse.ts:20</li>
           </ul>
         </aside>
         <section class="tsd-panel-group tsd-index-group">
@@ -112,11 +122,11 @@
               </summary>
               <div class="tsd-accordion-details">
                 <section class="tsd-index-section">
-                  <h3 class="tsd-index-heading">Enumeration Members</h3>
+                  <h3 class="tsd-index-heading">Properties</h3>
                   <div class="tsd-index-list">
                     <a
-                      href="RegistryStrategy.html#GitHub"
-                      class="tsd-index-link tsd-kind-enum-member tsd-parent-kind-enum"
+                      href="OpenSearchCompositeQuery.html#bool"
+                      class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"
                       ><svg
                         class="tsd-kind-icon"
                         width="24"
@@ -139,20 +149,7 @@
                           fill="var(--color-text)"
                           id="icon-1024-text"
                         ></path></svg
-                      ><span>Git<wbr />Hub</span></a
-                    >
-                    <a
-                      href="RegistryStrategy.html#Static"
-                      class="tsd-index-link tsd-kind-enum-member tsd-parent-kind-enum"
-                      ><svg
-                        class="tsd-kind-icon"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <use href="#icon-1024-path"></use>
-                        <use href="#icon-1024-text"></use></svg
-                      ><span>Static</span></a
+                      ><span>bool</span></a
                     >
                   </div>
                 </section>
@@ -161,14 +158,14 @@
           </section>
         </section>
         <section class="tsd-panel-group tsd-member-group">
-          <h2>Enumeration Members</h2>
+          <h2>Properties</h2>
           <section
-            class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum"
+            class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
           >
-            <a id="GitHub" class="tsd-anchor"></a>
+            <a id="bool" class="tsd-anchor"></a>
             <h3 class="tsd-anchor-link">
-              <span>Git<wbr />Hub</span
-              ><a href="#GitHub" aria-label="Permalink" class="tsd-anchor-icon"
+              <span>bool</span
+              ><a href="#bool" aria-label="Permalink" class="tsd-anchor-icon"
                 ><svg
                   class="icon icon-tabler icon-tabler-link"
                   viewBox="0 0 24 24"
@@ -195,43 +192,67 @@
               ></a>
             </h3>
             <div class="tsd-signature">
-              Git<wbr />Hub<span class="tsd-signature-symbol">:</span>
-              <span class="tsd-signature-type">&quot;GitHub&quot;</span>
+              bool<span class="tsd-signature-symbol">:</span>
+              <span class="tsd-signature-symbol">{ </span><br /><span>    </span
+              >filter<span class="tsd-signature-symbol">: </span
+              ><span class="tsd-signature-type">object</span
+              ><span class="tsd-signature-symbol">[]</span
+              ><span class="tsd-signature-symbol">; </span><br /><span
+                >    </span
+              >must<span class="tsd-signature-symbol">: </span
+              ><span class="tsd-signature-type">object</span
+              ><span class="tsd-signature-symbol">[]</span
+              ><span class="tsd-signature-symbol">; </span><br /><span
+                >    </span
+              >must_not<span class="tsd-signature-symbol">: </span
+              ><span class="tsd-signature-type">object</span
+              ><span class="tsd-signature-symbol">[]</span
+              ><span class="tsd-signature-symbol">; </span><br /><span
+                >    </span
+              >should<span class="tsd-signature-symbol">: </span
+              ><span class="tsd-signature-type">object</span
+              ><span class="tsd-signature-symbol">[]</span
+              ><span class="tsd-signature-symbol">; </span><br /><span
+                class="tsd-signature-symbol"
+                >}</span
+              >
             </div>
-            <aside class="tsd-sources">
-              <ul>
-                <li>Defined in lib/registry.ts:25</li>
+            <div class="tsd-type-declaration">
+              <h4>Type declaration</h4>
+              <ul class="tsd-parameters">
+                <li class="tsd-parameter">
+                  <h5>
+                    filter<span class="tsd-signature-symbol">: </span
+                    ><span class="tsd-signature-type">object</span
+                    ><span class="tsd-signature-symbol">[]</span>
+                  </h5>
+                </li>
+                <li class="tsd-parameter">
+                  <h5>
+                    must<span class="tsd-signature-symbol">: </span
+                    ><span class="tsd-signature-type">object</span
+                    ><span class="tsd-signature-symbol">[]</span>
+                  </h5>
+                </li>
+                <li class="tsd-parameter">
+                  <h5>
+                    must_<wbr />not<span class="tsd-signature-symbol">: </span
+                    ><span class="tsd-signature-type">object</span
+                    ><span class="tsd-signature-symbol">[]</span>
+                  </h5>
+                </li>
+                <li class="tsd-parameter">
+                  <h5>
+                    should<span class="tsd-signature-symbol">: </span
+                    ><span class="tsd-signature-type">object</span
+                    ><span class="tsd-signature-symbol">[]</span>
+                  </h5>
+                </li>
               </ul>
-            </aside>
-          </section>
-          <section
-            class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum"
-          >
-            <a id="Static" class="tsd-anchor"></a>
-            <h3 class="tsd-anchor-link">
-              <span>Static</span
-              ><a href="#Static" aria-label="Permalink" class="tsd-anchor-icon"
-                ><svg
-                  class="icon icon-tabler icon-tabler-link"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <use href="#icon-anchor-a"></use>
-                  <use href="#icon-anchor-b"></use>
-                  <use href="#icon-anchor-c"></use></svg
-              ></a>
-            </h3>
-            <div class="tsd-signature">
-              Static<span class="tsd-signature-symbol">:</span>
-              <span class="tsd-signature-type">&quot;Static&quot;</span>
             </div>
             <aside class="tsd-sources">
               <ul>
-                <li>Defined in lib/registry.ts:26</li>
+                <li>Defined in interfaces/opensearchResponse.ts:21</li>
               </ul>
             </aside>
           </section>
@@ -426,8 +447,8 @@
         </nav>
         <nav class="tsd-navigation secondary menu-sticky">
           <ul>
-            <li class="current tsd-kind-enum">
-              <a href="RegistryStrategy.html" class="tsd-index-link"
+            <li class="current tsd-kind-interface">
+              <a href="OpenSearchCompositeQuery.html" class="tsd-index-link"
                 ><svg
                   class="tsd-kind-icon"
                   width="24"
@@ -436,25 +457,27 @@
                 >
                   <rect
                     fill="var(--color-icon-background)"
-                    stroke="var(--color-ts-enum)"
+                    stroke="var(--color-ts-interface)"
                     stroke-width="1.5"
                     x="1"
                     y="1"
                     width="22"
                     height="22"
                     rx="6"
-                    id="icon-8-path"
+                    id="icon-256-path"
                   ></rect>
                   <path
-                    d="M9.45 16V7.24H14.49V8.224H10.518V10.936H14.07V11.908H10.518V15.016H14.49V16H9.45Z"
+                    d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z"
                     fill="var(--color-text)"
-                    id="icon-8-text"
+                    id="icon-256-text"
                   ></path></svg
-                ><span>Registry<wbr />Strategy</span></a
+                ><span>Open<wbr />Search<wbr />Composite<wbr />Query</span></a
               >
               <ul>
-                <li class="tsd-kind-enum-member tsd-parent-kind-enum">
-                  <a href="RegistryStrategy.html#GitHub" class="tsd-index-link"
+                <li class="tsd-kind-property tsd-parent-kind-interface">
+                  <a
+                    href="OpenSearchCompositeQuery.html#bool"
+                    class="tsd-index-link"
                     ><svg
                       class="tsd-kind-icon"
                       width="24"
@@ -463,20 +486,7 @@
                     >
                       <use href="#icon-1024-path"></use>
                       <use href="#icon-1024-text"></use></svg
-                    >Git<wbr />Hub</a
-                  >
-                </li>
-                <li class="tsd-kind-enum-member tsd-parent-kind-enum">
-                  <a href="RegistryStrategy.html#Static" class="tsd-index-link"
-                    ><svg
-                      class="tsd-kind-icon"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <use href="#icon-1024-path"></use>
-                      <use href="#icon-1024-text"></use></svg
-                    >Static</a
+                    >bool</a
                   >
                 </li>
               </ul>
