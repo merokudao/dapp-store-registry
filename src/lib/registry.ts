@@ -85,7 +85,7 @@ export class DappStoreRegistry {
 
   private localRegistry = (): DAppStoreSchema => {
     const res = registryJson as DAppStoreSchema;
-    const [valid, errors] = this.validateRegistryJson(res);
+    const [valid, errors] = DappStoreRegistry.validateRegistryJson(res);
     if (valid) {
       return res;
     } else {
@@ -113,7 +113,7 @@ export class DappStoreRegistry {
         `remote registry fetched. status: ${response.status} ${response.statusText}`
       );
       const json = (await response.json()) as DAppStoreSchema;
-      const [valid, errors] = this.validateRegistryJson(json);
+      const [valid, errors] = DappStoreRegistry.validateRegistryJson(json);
       if (valid) {
         registry = json as DAppStoreSchema;
       } else {
@@ -130,7 +130,7 @@ export class DappStoreRegistry {
     return registry;
   };
 
-  public validateRegistryJson = (json: DAppStoreSchema) => {
+  public static validateRegistryJson = (json: DAppStoreSchema) => {
     const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     // find duplicate dapp
     const counts: any = {};
