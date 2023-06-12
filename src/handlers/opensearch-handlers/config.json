@@ -91,6 +91,9 @@
         "analyzer": "autocomplete",
         "search_analyzer": "autocomplete_search"
       },
+      "dappIdKeyword": {
+        "type": "keyword"
+      },
       "minAge": {
         "type": "integer"
       },

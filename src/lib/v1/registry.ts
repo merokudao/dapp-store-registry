@@ -52,6 +52,7 @@ export class DappStoreRegistryV1 {
         id: d.dappId,
         nameKeyword: d.name,
         subCategoryKeyword: d.subCategory,
+        dappIdKeyword: d.dappId,
         ...d
       };
     });
@@ -152,6 +153,7 @@ export class DappStoreRegistryV1 {
       id: dapp.dappId,
       nameKeyword: dapp.name,
       subCategoryKeyword: dapp.subCategory,
+      dappIdKeyword: dapp.dappId,
       ...dapp
     });
     return {

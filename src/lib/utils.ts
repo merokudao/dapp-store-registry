@@ -29,6 +29,13 @@ import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
 
 const debug = Debug("@merokudao:dapp-store-registry:utils");
+const defaultBoost = process.env.DEFAULT_BOOST || "1";
+const boostScore = {
+  name: parseInt(process.env.BOOST_NAME || defaultBoost),
+  description: parseInt(process.env.BOOST_DESCRIPTION || defaultBoost),
+  dappId: parseInt(process.env.BOOST_DAPPID || defaultBoost),
+  category: parseInt(process.env.BOOST_CATEGORY || defaultBoost)
+};
 
 export class cloneable {
   public static deepCopy<T>(source: T): T {
@@ -405,16 +412,16 @@ export const searchFilters = (
   // search on customer string
   if (!!search && search.length) {
     query.bool.should.push({
-      match: { name: { query: search, operator: "and" } }
+      match: { name: { query: search, boost: boostScore.name } }
     });
     query.bool.should.push({
-      match: { description: { query: search, operator: "and" } }
+      match: { description: { query: search, boost: boostScore.description } }
     });
     query.bool.should.push({
-      match: { daapId: { query: search, operator: "and" } }
+      match: { daapId: { query: search, boost: boostScore.dappId } }
     });
     query.bool.should.push({
-      match: { category: { query: search, operator: "and" } }
+      match: { category: { query: search, boost: boostScore.category } }
     });
     query.bool.filter.push({
       term: { isListed: isListed === "true" ? true : false }
