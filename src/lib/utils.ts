@@ -405,16 +405,16 @@ export const searchFilters = (
   // search on customer string
   if (!!search && search.length) {
     query.bool.should.push({
-      match: { name: { query: search, operator: "and" } }
+      match: { name: { query: search, boost: 10 } }
     });
     query.bool.should.push({
-      match: { description: { query: search, operator: "and" } }
+      match: { description: { query: search } }
     });
     query.bool.should.push({
-      match: { daapId: { query: search, operator: "and" } }
+      match: { daapId: { query: search } }
     });
     query.bool.should.push({
-      match: { category: { query: search, operator: "and" } }
+      match: { category: { query: search } }
     });
     query.bool.filter.push({
       term: { isListed: isListed === "true" ? true : false }
