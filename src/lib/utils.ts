@@ -34,8 +34,8 @@ const boostScore = {
   name: parseInt(process.env.BOOST_NAME || defaultBoost),
   description: parseInt(process.env.BOOST_DESCRIPTION || defaultBoost),
   dappId: parseInt(process.env.BOOST_DAPPID || defaultBoost),
-  category: parseInt(process.env.BOOST_CATEGORY || defaultBoost),
-}
+  category: parseInt(process.env.BOOST_CATEGORY || defaultBoost)
+};
 
 export class cloneable {
   public static deepCopy<T>(source: T): T {
