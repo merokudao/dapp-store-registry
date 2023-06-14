@@ -581,13 +581,47 @@ export const checkIfdappExistsInNew = (dappId: string, newUrls: string[]) => {
   return idx >= 0 ? false: true;
 }
 
-export const getDappId = (appUrl: string | undefined, dapps: DAppSchema[], newUrls:string[]) => {
+export const getPlainAppUrl = (appUrl: string | undefined) => {
   if (!appUrl) return '';
   appUrl = appUrl.split('?')[0];
   appUrl = appUrl.split('#')[0];
   appUrl = appUrl.replace("https://", "");
   appUrl = appUrl.replace("http://", "");
   appUrl = appUrl.replace("www.", "");
+  appUrl = appUrl[appUrl.length-1] === '/' ? appUrl.substring(0, appUrl.length - 1) : appUrl;
+  return appUrl.toLowerCase();
+}
+
+export const getName = (name: string) => name.toLowerCase();
+
+/**
+ * return a unique dappId
+ * @param name name of the dapp
+ * @param appUrl url of the dapp
+ * @param dapps list of all dapps
+ * @param newUrls 
+ * @param newName 
+ * @returns 
+ */
+export const getDappId = (
+  name:string,
+  appUrl: string | undefined,
+  dapps: DAppSchema[],
+  newUrls:string[],
+  newNames : string[]
+) => {
+  // validate if dapp already exists
+  appUrl = getPlainAppUrl(appUrl);
+  const existingPlainUrls = dapps.map(dapp => getPlainAppUrl(dapp.appUrl));
+  const existingAllName = dapps.map(dapp => getName(dapp.name));
+  if (
+    existingPlainUrls.includes(appUrl)
+    || existingAllName.includes(getName(name))
+    || newNames.includes(name)
+    || newUrls.includes(appUrl)
+  ) throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
+
+  // generate a unique dappId
   const parts = appUrl.split('/');
   let urlSuffix = parts.splice(1, parts.length-1).join('-');
   
@@ -597,13 +631,13 @@ export const getDappId = (appUrl: string | undefined, dapps: DAppSchema[], newUr
   const [first, start, ...others] = parts[0].split('.').reverse();
   // only for domain providers
   if (domainProviders.includes(start)) {
-    let dappId = `${others}.app`.toLocaleLowerCase();
+    let dappId = `${others}.app`.toLowerCase();
     if (others.length > 0) {
-      if(typeof others !== 'string')  dappId = `${others.join('-')}.app`.toLocaleLowerCase();
+      if(typeof others !== 'string')  dappId = `${others.join('-')}.app`.toLowerCase();
       if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
     }
     dappId = `${dappId.split('.app')[0]}`;
-    dappId = `${dappId.length > 0 ? dappId+'-'+urlSuffix: urlSuffix}.app`.toLocaleLowerCase();
+    dappId = `${dappId.length > 0 ? dappId+'-'+urlSuffix: urlSuffix}.app`.toLowerCase();
     if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
     // return dappId;
     throw new Error(`dapp Id already exists, dappId: ${dappId}`);
@@ -612,17 +646,17 @@ export const getDappId = (appUrl: string | undefined, dapps: DAppSchema[], newUr
   // check if {domain}.app is available
   let dappId = `${start}.app`.toLocaleLowerCase();
   if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
-  debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
+  // debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
   
   // check if {domain}-{subdomain}.app
   dappId = `${start}${others.length > 0 ? '-'+others.join('-'): ''}.app`.toLocaleLowerCase();
   if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
-  debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
+  // debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
   
   // check if {domain}-{url-path}.app
   dappId = `${start}${urlSuffix.length > 0 ? '-'+urlSuffix: ''}.app`.toLocaleLowerCase();
   if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
-  debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
+  debug(`dappId already Exists::: 3, dappId: ${dappId}, first: ${first}, others:${others}`);
   // return dappId;
   throw new Error(`dapp Id already exists, dappId: ${dappId}`);
 }

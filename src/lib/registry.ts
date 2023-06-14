@@ -944,12 +944,14 @@ export class DappStoreRegistry {
   };
 
   public getAllDappIds  = async (): Promise<number> => {
-    const dapps = (await this.registry()).dapps;
+    const dapps = (await this.registry()).dapps as DAppSchema[];
     const newUrls: string[] = []
+    const newNames: string[] = []
     try {
       const allNewDappIds = dapps.map((dapp) => {
-        const dappId = getDappId(dapp.appUrl, [], newUrls);
+        const dappId = getDappId(dapp.name, dapp.appUrl, [], newUrls, newNames);
         newUrls.push(dappId);
+        newNames.push(dapp.name);
         return dappId;
       });
       debug(`allNewDappIds: ${JSON.stringify(allNewDappIds)}`);
