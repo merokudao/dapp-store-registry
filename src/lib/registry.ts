@@ -951,7 +951,7 @@ export class DappStoreRegistry {
       const allNewDappIds = dapps.map((dapp) => {
         const dappId = getDappId(dapp.name, dapp.appUrl, [], newUrls, newNames);
         newUrls.push(dappId);
-        newNames.push(dapp.name);
+        newNames.push(dapp.name.toLowerCase());
         return dappId;
       });
       debug(`allNewDappIds: ${JSON.stringify(allNewDappIds)}`);

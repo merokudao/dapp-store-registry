@@ -614,10 +614,11 @@ export const getDappId = (
   appUrl = getPlainAppUrl(appUrl);
   const existingPlainUrls = dapps.map(dapp => getPlainAppUrl(dapp.appUrl));
   const existingAllName = dapps.map(dapp => getName(dapp.name));
+  const plainName = getName(name);
   if (
     existingPlainUrls.includes(appUrl)
-    || existingAllName.includes(getName(name))
-    || newNames.includes(name)
+    || existingAllName.includes(plainName)
+    || newNames.includes(plainName)
     || newUrls.includes(appUrl)
   ) throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
 
