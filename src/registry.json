@@ -88900,7 +88900,7 @@
       "name": "Upland",
       "availableOnPlatform": ["web"],
       "chains": [17777],
-      "appUrl": "https://dappradar.com/deeplink/3388",
+      "appUrl": "https://www.upland.me/",
       "dappId": "upland.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -88908,7 +88908,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/3388",
+          "url": "https://www.upland.me/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -88930,7 +88930,7 @@
       "name": "Wombat Dungeon Master",
       "availableOnPlatform": ["web"],
       "chains": [17777],
-      "appUrl": "https://dappradar.com/deeplink/12162",
+      "appUrl": "https://dungeon.wombat.app/",
       "dappId": "wombatdungeonmaster.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -88938,7 +88938,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/12162",
+          "url": "https://dungeon.wombat.app/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -88960,7 +88960,7 @@
       "name": "Defi Kingdoms",
       "availableOnPlatform": ["web"],
       "chains": [1666600000, 43114, 8217],
-      "appUrl": "https://dappradar.com/deeplink/8948",
+      "appUrl": "https://defikingdoms.com/",
       "dappId": "defikingdoms.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -88968,7 +88968,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/8948",
+          "url": "https://defikingdoms.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -88989,7 +88989,7 @@
       "name": "Prospectors",
       "availableOnPlatform": ["web"],
       "chains": [17777],
-      "appUrl": "https://dappradar.com/deeplink/3029",
+      "appUrl": "https://prospectors.io/",
       "dappId": "prospectors.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -88997,7 +88997,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/3029",
+          "url": "https://prospectors.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89019,7 +89019,7 @@
       "name": "Thetan Arena",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/10219",
+      "appUrl": "https://marketplace.thetanarena.com/",
       "dappId": "thetanarena.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89027,7 +89027,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/10219",
+          "url": "https://marketplace.thetanarena.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89048,7 +89048,7 @@
       "name": "Age of Tanks",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/10593",
+      "appUrl": "https://ageoftanks.io/",
       "dappId": "ageoftanks.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89056,7 +89056,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/10593",
+          "url": "https://ageoftanks.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89078,7 +89078,7 @@
       "name": "Crabada",
       "availableOnPlatform": ["web"],
       "chains": [43114],
-      "appUrl": "https://dappradar.com/deeplink/12507",
+      "appUrl": "https://www.crabada.com/",
       "dappId": "crabada.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89086,7 +89086,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/12507",
+          "url": "https://www.crabada.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89107,7 +89107,7 @@
       "name": "CryptantCrab",
       "availableOnPlatform": ["web"],
       "chains": [1],
-      "appUrl": "https://dappradar.com/deeplink/1146",
+      "appUrl": "https://www.cryptantcrab.io/",
       "dappId": "cryptantcrab.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89115,7 +89115,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/1146",
+          "url": "https://www.cryptantcrab.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89136,7 +89136,7 @@
       "name": "Kawaii Islands",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/9928",
+      "appUrl": "https://kawaii.global/",
       "dappId": "kawaiiislands.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89144,7 +89144,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/9928",
+          "url": "https://kawaii.global/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89165,7 +89165,7 @@
       "name": "Titan Hunters",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/11242",
+      "appUrl": "https://www.titanhunters.io/",
       "dappId": "titanhunters.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89173,7 +89173,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/11242",
+          "url": "https://www.titanhunters.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89194,7 +89194,7 @@
       "name": "9Tales",
       "availableOnPlatform": ["web"],
       "chains": [1],
-      "appUrl": "https://dappradar.com/deeplink/11558",
+      "appUrl": "https://9tales.io/",
       "dappId": "9tales.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89202,7 +89202,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/11558",
+          "url": "https://9tales.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89223,7 +89223,7 @@
       "name": "Abeats Hero",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/17891",
+      "appUrl": "https://www.abeats.com/hero",
       "dappId": "abeatshero.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89231,7 +89231,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/17891",
+          "url": "https://www.abeats.com/hero",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89252,7 +89252,7 @@
       "name": "Baby Shark Bubblefong Friends",
       "availableOnPlatform": ["web"],
       "chains": [1],
-      "appUrl": "https://dappradar.com/deeplink/27113",
+      "appUrl": "https://bubblefong.io/",
       "dappId": "babysharkbubblefongfriends.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89260,7 +89260,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/27113",
+          "url": "https://bubblefong.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89281,7 +89281,7 @@
       "name": "Battle of Guardians",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/17200",
+      "appUrl": "https://battleofguardians.com/",
       "dappId": "battleofguardians.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89289,7 +89289,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/17200",
+          "url": "https://battleofguardians.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89310,7 +89310,7 @@
       "name": "Blocklete Golf",
       "availableOnPlatform": ["web"],
       "chains": [1],
-      "appUrl": "https://dappradar.com/deeplink/3273",
+      "appUrl": "https://www.blockletegames.com/",
       "dappId": "blockletegolf.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89318,7 +89318,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/3273",
+          "url": "https://www.blockletegames.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89339,7 +89339,7 @@
       "name": "CryptoFights",
       "availableOnPlatform": ["web"],
       "chains": [1],
-      "appUrl": "https://dappradar.com/deeplink/872",
+      "appUrl": "https://www.cryptofights.io/",
       "dappId": "cryptofights.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89347,7 +89347,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/872",
+          "url": "https://www.cryptofights.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89369,7 +89369,7 @@
       "name": "GunStar Metaverse",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/12167",
+      "appUrl": "https://gunstar.io/",
       "dappId": "gunstarmetaverse.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89377,7 +89377,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/12167",
+          "url": "https://gunstar.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89398,7 +89398,7 @@
       "name": "Magic of Universe",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/12482",
+      "appUrl": "https://www.magicofuniverse.games/",
       "dappId": "magicofuniverse.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89406,7 +89406,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/12482",
+          "url": "https://www.magicofuniverse.games/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89428,7 +89428,7 @@
       "name": "Meda Shooter",
       "availableOnPlatform": ["web"],
       "chains": [137],
-      "appUrl": "https://dappradar.com/deeplink/15971",
+      "appUrl": "https://cryptomeda.tech/games/meda-shooter",
       "dappId": "medashooter.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89436,7 +89436,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/15971",
+          "url": "https://cryptomeda.tech/games/meda-shooter",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89478,7 +89478,7 @@
       "name": "SecondLive",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/9001",
+      "appUrl": "https://secondlive.world/",
       "dappId": "secondlive.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89486,7 +89486,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/9001",
+          "url": "https://secondlive.world/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89507,7 +89507,7 @@
       "name": "Era7: Game of Truth",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/15631",
+      "appUrl": "https://www.era7.io/",
       "dappId": "era7-gameoftruth.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89515,7 +89515,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/15631",
+          "url": "https://www.era7.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89536,7 +89536,7 @@
       "name": "Meta Apes",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/18111",
+      "appUrl": "https://metaapesgame.com/",
       "dappId": "metaapes.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89544,7 +89544,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/18111",
+          "url": "https://metaapesgame.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89565,7 +89565,7 @@
       "name": "Tap Fantasy",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/14696",
+      "appUrl": "https://tapfantasy.io/",
       "dappId": "tapfantasy.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89573,7 +89573,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/14696",
+          "url": "https://tapfantasy.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89594,7 +89594,7 @@
       "name": "X World Games",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/7071",
+      "appUrl": "https://xwg.games/",
       "dappId": "xworldgames.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89602,7 +89602,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/7071",
+          "url": "https://xwg.games/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89623,7 +89623,7 @@
       "name": "Tiny World",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/14038",
+      "appUrl": "https://app.tinyworlds.io/",
       "dappId": "tinyworld.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89631,7 +89631,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/14038",
+          "url": "https://app.tinyworlds.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89652,7 +89652,7 @@
       "name": "Monsterra",
       "availableOnPlatform": ["web"],
       "chains": [56, 43114],
-      "appUrl": "https://dappradar.com/deeplink/18569",
+      "appUrl": "https://play.monsterra.io/#/",
       "dappId": "monsterra.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89660,7 +89660,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/18569",
+          "url": "https://play.monsterra.io/#/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89681,7 +89681,7 @@
       "name": "Xpansion",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/11520",
+      "appUrl": "https://xpsgame.io/",
       "dappId": "xpansion.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89689,7 +89689,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/11520",
+          "url": "https://xpsgame.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89710,7 +89710,7 @@
       "name": "BurgerCities",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/21739",
+      "appUrl": "https://burgercities.org/",
       "dappId": "burgercities.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89718,7 +89718,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/21739",
+          "url": "https://burgercities.org/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89739,7 +89739,7 @@
       "name": "PLAYZAP GAMES",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/23389",
+      "appUrl": "https://www.playzap.games/",
       "dappId": "playzapgames.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89747,7 +89747,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/23389",
+          "url": "https://www.playzap.games/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89768,7 +89768,7 @@
       "name": "MEEET",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/20726",
+      "appUrl": "https://www.meeet.xyz/",
       "dappId": "meeet.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89776,7 +89776,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/20726",
+          "url": "https://www.meeet.xyz/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89797,7 +89797,7 @@
       "name": "Momoguro: Holoself",
       "availableOnPlatform": ["web"],
       "chains": [1],
-      "appUrl": "https://dappradar.com/deeplink/30246",
+      "appUrl": "https://momoguro.com/",
       "dappId": "momoguro-holoself.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89805,7 +89805,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/30246",
+          "url": "https://momoguro.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89826,7 +89826,7 @@
       "name": "TreasureDAO",
       "availableOnPlatform": ["web"],
       "chains": [42161],
-      "appUrl": "https://dappradar.com/deeplink/19595",
+      "appUrl": "https://treasure.lol/",
       "dappId": "treasuredao.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89834,7 +89834,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/19595",
+          "url": "https://treasure.lol/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89855,7 +89855,7 @@
       "name": "Jelly Squish",
       "availableOnPlatform": ["web"],
       "chains": [108],
-      "appUrl": "https://dappradar.com/deeplink/3396",
+      "appUrl": "https://esports.win4.fun/g/jelly-squish",
       "dappId": "jellysquish.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89863,7 +89863,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/3396",
+          "url": "https://esports.win4.fun/g/jelly-squish",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89884,7 +89884,7 @@
       "name": "Midas Miner",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/18983",
+      "appUrl": "https://www.midasminer.io/",
       "dappId": "midasminer.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89892,7 +89892,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/18983",
+          "url": "https://www.midasminer.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89913,7 +89913,7 @@
       "name": "Math War",
       "availableOnPlatform": ["web"],
       "chains": [108],
-      "appUrl": "https://dappradar.com/deeplink/3391",
+      "appUrl": "https://esports.win4.fun/g/math-race",
       "dappId": "mathwar.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89921,7 +89921,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/3391",
+          "url": "https://esports.win4.fun/g/math-race",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89942,7 +89942,7 @@
       "name": "Outer Ring MMO",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/19017",
+      "appUrl": "https://outerringmmo.com/download-tech-demo/",
       "dappId": "outerringmmo.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89950,7 +89950,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/19017",
+          "url": "https://outerringmmo.com/download-tech-demo/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -89971,7 +89971,7 @@
       "name": "Word Search Blitz",
       "availableOnPlatform": ["web"],
       "chains": [108],
-      "appUrl": "https://dappradar.com/deeplink/3392",
+      "appUrl": "https://esports.win4.fun/g/word-race",
       "dappId": "wordsearchblitz.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -89979,7 +89979,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/3392",
+          "url": "https://esports.win4.fun/g/word-race",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -90000,7 +90000,7 @@
       "name": "Ninneko",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/10545",
+      "appUrl": "https://ninneko.com/",
       "dappId": "ninneko.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -90008,7 +90008,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/10545",
+          "url": "https://ninneko.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -90029,7 +90029,7 @@
       "name": "Honor World",
       "availableOnPlatform": ["web"],
       "chains": [42161],
-      "appUrl": "https://dappradar.com/deeplink/23111",
+      "appUrl": "https://app.honorworld.io/",
       "dappId": "honorworld.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -90037,7 +90037,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/23111",
+          "url": "https://app.honorworld.io/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -90058,7 +90058,7 @@
       "name": "Brain Warp",
       "availableOnPlatform": ["web"],
       "chains": [108],
-      "appUrl": "https://dappradar.com/deeplink/3394",
+      "appUrl": "https://esports.win4.fun/g/brain-warp",
       "dappId": "brainwarp.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -90066,7 +90066,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/3394",
+          "url": "https://esports.win4.fun/g/brain-warp",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -90087,7 +90087,7 @@
       "name": "Defira",
       "availableOnPlatform": ["web"],
       "chains": [1666600000, 25],
-      "appUrl": "https://dappradar.com/deeplink/18657",
+      "appUrl": "https://defira.com/",
       "dappId": "defira.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -90095,7 +90095,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/18657",
+          "url": "https://defira.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -90116,7 +90116,7 @@
       "name": "Reta Wars",
       "availableOnPlatform": ["web"],
       "chains": [56],
-      "appUrl": "https://dappradar.com/deeplink/12247",
+      "appUrl": "https://retawars.com/",
       "dappId": "retawars.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -90124,7 +90124,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/12247",
+          "url": "https://retawars.com/",
           "platform": "web",
           "version": "1.0.0"
         }
@@ -90145,7 +90145,7 @@
       "name": "Snail Trail Game",
       "availableOnPlatform": ["web"],
       "chains": [43114],
-      "appUrl": "https://dappradar.com/deeplink/16822",
+      "appUrl": "https://www.snailtrail.art/",
       "dappId": "snailtrailgame.app",
       "minAge": 18,
       "isForMatureAudience": true,
@@ -90153,7 +90153,7 @@
       "language": ["en"],
       "downloadBaseUrls": [
         {
-          "url": "https://dappradar.com/deeplink/16822",
+          "url": "https://www.snailtrail.art/",
           "platform": "web",
           "version": "1.0.0"
         }
