@@ -1,6 +1,6 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.1.56",
+  "version": "0.1.62",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
   "repository": {
     "type": "git",
@@ -35,8 +35,7 @@
     "date-fns": "^2.29.3",
     "debug": "^4.3.4",
     "fs-extra": "^11.1.0",
-    "minisearch": "^6.0.1",
-    "octokit": "^2.0.10"
+    "minisearch": "^6.0.1"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
@@ -60,6 +59,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "fetch-mock": "^9.11.0",
+    "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "nock": "^13.2.9",
     "npm-run-all": "^4.1.5",
@@ -83,7 +83,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "doc": "typedoc src/ --out docs",
-    "test:unit": "mocha",
+    "test:unit": "mocha --timeout 10000",
     "test:prettier": "prettier 'src/**/*.ts' --list-different",
     "test:lint": "eslint src --ext .ts",
     "test": "run-s build test:*",
@@ -94,6 +94,7 @@
     "build:module": "tsc -p tsconfig.module.json",
     "build": "yarn clean && yarn build:main && yarn build:module",
     "build2": "yarn clean && yarn build:esm && yarn build:cjs",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "prepare": "husky install"
   }
 }

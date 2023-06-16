@@ -27,9 +27,15 @@ import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
-import { Octokit } from "octokit";
 
 const debug = Debug("@merokudao:dapp-store-registry:utils");
+const defaultBoost = process.env.DEFAULT_BOOST || "1";
+const boostScore = {
+  name: parseInt(process.env.BOOST_NAME || defaultBoost),
+  description: parseInt(process.env.BOOST_DESCRIPTION || defaultBoost),
+  dappId: parseInt(process.env.BOOST_DAPPID || defaultBoost),
+  category: parseInt(process.env.BOOST_CATEGORY || defaultBoost)
+};
 
 export class cloneable {
   public static deepCopy<T>(source: T): T {
@@ -65,7 +71,9 @@ export const orderBy = (params: any) => {
   const order: any = [{ _score: { order: "desc" } }];
   try {
     params = JSON.parse(params);
-  } catch (error) {}
+  } catch (error) {
+    //
+  }
   const {
     rating = null,
     visits = null,
@@ -238,74 +246,6 @@ export const cacheStoreOrRegistry = async (
   return [cloneable.deepCopy(cached), lastCheckedAt];
 };
 
-export const updateRegistryOrStores = async (
-  name: string,
-  email: string,
-  githubId: string,
-  accessToken: string,
-  newRegistry: DAppStoreSchema | StoresSchema,
-  commitMessage: string,
-  org: string | undefined = undefined,
-  githubOwner: string,
-  githubRepo: string,
-  schema: string
-) => {
-  const filePath =
-    schema === "registry" ? "src/registry.json" : "src/dappStore.json";
-  // Fork repo from merokudao to the authenticated user
-  const octokit = new Octokit({
-    userAgent: "@merokudao/dAppStore/v1.2.3",
-    auth: accessToken
-  });
-
-  debug(`forking ${githubOwner}/${githubRepo} to ${githubId}/${githubRepo}`);
-  await octokit.request("POST /repos/{owner}/{repo}/forks", {
-    owner: githubOwner,
-    repo: githubRepo,
-    organization: org,
-    name: githubRepo,
-    default_branch_only: true
-  });
-  debug(`forked ${githubOwner}/${githubRepo} to ${githubId})`);
-
-  // Get the SHA of the registry file
-  debug(`getting sha of repos/${githubId}/${githubRepo}/contents/${filePath}`);
-  const {
-    data: { sha }
-  } = await octokit.request("GET /repos/{owner}/{repo}/contents/{file_path}", {
-    owner: githubId,
-    repo: githubRepo,
-    file_path: filePath
-  });
-
-  // Commit the changes
-  // Push the changes to the forked repo
-  debug(`pushing changes to ${githubId}/${githubRepo}`);
-  await octokit.request("PUT /repos/{owner}/{repo}/contents/{path}", {
-    owner: githubId,
-    repo: githubRepo,
-    path: filePath,
-    message: commitMessage,
-    committer: {
-      name: name,
-      email: email
-    },
-    content: Buffer.from(JSON.stringify(newRegistry, null, 2)).toString(
-      "base64"
-    ),
-    sha: sha
-  });
-
-  // Open a PR against the main branch of the merokudao repo
-  // https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#create-a-pull-request
-  // Since it's not possible to create a PR from one repo to another, we'll have to
-  // resort to returning a URL that, when the user goes to, prompts to create a PR
-  const prURL = `https://github.com/${githubOwner}/${githubRepo}/compare/main...${githubId}:${githubRepo}:main?expand=1`;
-
-  debug(`PR URL: ${prURL}`);
-  return prURL;
-};
-
 /**
  * It will check that dapps exist in registry or not.
  */
@@ -343,32 +283,31 @@ export const dappMustExistInRegistry = async (
 };
 
 /**
- * Prepaire category and subCategory mapping
- * @param category 
- * @param subCategory 
- * @returns 
+ * Prepare category and subCategory mapping
+ * @param category
+ * @param subCategory
+ * @returns
  */
 export const getCatSubCatMapping = (
   category: string[] = [],
-  subCategory:string[] = []
+  subCategory: string[] = []
 ) => {
-  const catSubcatMapp = categoryJson.reduce((aggs: any, value) => {
+  const catSubCatMap = categoryJson.reduce((aggs: any, value) => {
     aggs[value.category] = value.subCategory;
     return aggs;
   }, {});
 
   return category.map(cat => {
-    const allSubcat = catSubcatMapp[cat];
-    let catFilter = { category: cat, subCategory: [] as string [] };
+    const allSubCat = catSubCatMap[cat];
+    const catFilter = { category: cat, subCategory: [] as string[] };
     subCategory.map((sc: string) => {
-      if (allSubcat.includes(sc)) {
-        catFilter.subCategory.push(sc)
+      if (allSubCat.includes(sc)) {
+        catFilter.subCategory.push(sc);
       }
     });
     return catFilter;
   });
 };
-
 
 export const searchFilters = (
   search: string,
@@ -401,11 +340,11 @@ export const searchFilters = (
     searchById = false,
     ownerAddress = null,
     isMinted = null,
-    tokenIds = [],
+    tokenIds = []
   } = payload;
-  let { limit = recordsPerPage, dappId = null, } = payload;
+  let { limit = recordsPerPage, dappId = "" } = payload;
 
-  if (dappId.length) dappId = dappId.split(",").map((di:string) => di.trim());
+  if (dappId.length) dappId = dappId.split(",").map((di: string) => di.trim());
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!isForMatureAudience)
     query.bool.must.push({
@@ -452,30 +391,37 @@ export const searchFilters = (
   // once a doc matched to one category it should match for subcategory if any values passed for sub category
   const catSubCatMapping = getCatSubCatMapping(categories, subCategories);
   if (catSubCatMapping.length) {
-    const categoryQuery = catSubCatMapping.map((catMapp) => {
+    const categoryQuery = catSubCatMapping.map(catMapp => {
       const { category, subCategory } = catMapp;
-      if (!subCategory.length) return { match: { category } }
-      return { bool: { must: [ { match: { category } }, { terms: { subCategoryKeyword: subCategory } } ] } };
+      if (!subCategory.length) return { match: { category } };
+      return {
+        bool: {
+          must: [
+            { match: { category } },
+            { terms: { subCategoryKeyword: subCategory } }
+          ]
+        }
+      };
     });
-    query.bool.must.push({ bool: { should: categoryQuery }});
+    query.bool.must.push({ bool: { should: categoryQuery } });
   }
 
-  if (dappId.length) query.bool.must.push({ terms: { dappId } });
+  if (dappId.length) query.bool.must.push({ terms: { dappIdKeyword: dappId } });
   if (tokenIds.length) query.bool.must.push({ terms: { tokenId: tokenIds } });
 
   // search on customer string
   if (!!search && search.length) {
     query.bool.should.push({
-      match: { name: { query: search, operator: "and" } }
+      match: { name: { query: search, boost: boostScore.name } }
     });
     query.bool.should.push({
-      match: { description: { query: search, operator: "and" } }
+      match: { description: { query: search, boost: boostScore.description } }
     });
     query.bool.should.push({
-      match: { daapId: { query: search, operator: "and" } }
+      match: { daapId: { query: search, boost: boostScore.dappId } }
     });
     query.bool.should.push({
-      match: { category: { query: search, operator: "and" } }
+      match: { category: { query: search, boost: boostScore.category } }
     });
     query.bool.filter.push({
       term: { isListed: isListed === "true" ? true : false }
@@ -484,7 +430,10 @@ export const searchFilters = (
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
 
-  if (isMinted) query.bool.must.push({ match: { minted : isMinted === 'true' ? true: false } });
+  if (isMinted)
+    query.bool.must.push({
+      match: { minted: isMinted === "true" ? true : false }
+    });
 
   if (isListed && !searchById && !search && !ownerAddress)
     query.bool.must.push({
@@ -569,28 +518,34 @@ export const updateDappEnrichDataForStore = (
   return;
 };
 
-export const checkIfExists = (dappId: string, dapps: DAppSchema[], newUrls: string[]) => {
-  const idx = dapps.findIndex(x => x.dappId === dappId)
+export const checkIfExists = (
+  dappId: string,
+  dapps: DAppSchema[],
+  newUrls: string[]
+) => {
+  const idx = dapps.findIndex(x => x.dappId === dappId);
   const idx1 = newUrls.indexOf(dappId);
-  return idx >= 0 || idx1 >= 0 ? true: false;
-}
-
+  return idx >= 0 || idx1 >= 0 ? true : false;
+};
 
 export const checkIfdappExistsInNew = (dappId: string, newUrls: string[]) => {
-  const idx = newUrls.indexOf(dappId)
-  return idx >= 0 ? false: true;
-}
+  const idx = newUrls.indexOf(dappId);
+  return idx >= 0 ? false : true;
+};
 
 export const getPlainAppUrl = (appUrl: string | undefined) => {
-  if (!appUrl) return '';
-  appUrl = appUrl.split('?')[0];
-  appUrl = appUrl.split('#')[0];
+  if (!appUrl) return "";
+  appUrl = appUrl.split("?")[0];
+  appUrl = appUrl.split("#")[0];
   appUrl = appUrl.replace("https://", "");
   appUrl = appUrl.replace("http://", "");
   appUrl = appUrl.replace("www.", "");
-  appUrl = appUrl[appUrl.length-1] === '/' ? appUrl.substring(0, appUrl.length - 1) : appUrl;
+  appUrl =
+    appUrl[appUrl.length - 1] === "/"
+      ? appUrl.substring(0, appUrl.length - 1)
+      : appUrl;
   return appUrl.toLowerCase();
-}
+};
 
 export const getName = (name: string) => name.toLowerCase();
 
@@ -599,16 +554,16 @@ export const getName = (name: string) => name.toLowerCase();
  * @param name name of the dapp
  * @param appUrl url of the dapp
  * @param dapps list of all dapps
- * @param newUrls 
- * @param newName 
- * @returns 
+ * @param newUrls
+ * @param newName
+ * @returns
  */
 export const getDappId = (
-  name:string,
+  name: string,
   appUrl: string | undefined,
   dapps: DAppSchema[],
-  newUrls:string[],
-  newNames : string[]
+  newUrls: string[],
+  newNames: string[]
 ) => {
   // validate if dapp already exists
   appUrl = getPlainAppUrl(appUrl);
@@ -616,48 +571,68 @@ export const getDappId = (
   const existingAllName = dapps.map(dapp => getName(dapp.name));
   const plainName = getName(name);
   if (
-    existingPlainUrls.includes(appUrl)
-    || existingAllName.includes(plainName)
-    || newNames.includes(plainName)
-    || newUrls.includes(appUrl)
-  ) throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
+    existingPlainUrls.includes(appUrl) ||
+    existingAllName.includes(plainName) ||
+    newNames.includes(plainName) ||
+    newUrls.includes(appUrl)
+  )
+    throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
 
   // generate a unique dappId
-  const parts = appUrl.split('/');
-  let urlSuffix = parts.splice(1, parts.length-1).join('-');
-  
-  if (urlSuffix[urlSuffix.length-1] === '-') urlSuffix = urlSuffix.split('').splice(0, urlSuffix.length-1).join('');
+  const parts = appUrl.split("/");
+  let urlSuffix = parts.splice(1, parts.length - 1).join("-");
 
-  const domainProviders = ['vercel', 'twitter', 'instagram', 'bit', 'netlify'];
-  const [first, start, ...others] = parts[0].split('.').reverse();
+  if (urlSuffix[urlSuffix.length - 1] === "-")
+    urlSuffix = urlSuffix
+      .split("")
+      .splice(0, urlSuffix.length - 1)
+      .join("");
+
+  if (urlSuffix[urlSuffix.length - 1] === "-")
+    urlSuffix = urlSuffix
+      .split("")
+      .splice(0, urlSuffix.length - 1)
+      .join("");
+
+  const domainProviders = ["vercel", "twitter", "instagram", "bit", "netlify"];
+  const [first, start, ...others] = parts[0].split(".").reverse();
   // only for domain providers
   if (domainProviders.includes(start)) {
     let dappId = `${others}.app`.toLowerCase();
     if (others.length > 0) {
-      if(typeof others !== 'string')  dappId = `${others.join('-')}.app`.toLowerCase();
-      if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+      if (typeof others !== "string")
+        dappId = `${others.join("-")}.app`.toLocaleLowerCase();
+      if (!checkIfExists(dappId, dapps, newUrls)) return dappId;
     }
-    dappId = `${dappId.split('.app')[0]}`;
-    dappId = `${dappId.length > 0 ? dappId+'-'+urlSuffix: urlSuffix}.app`.toLowerCase();
-    if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+    dappId = `${dappId.split(".app")[0]}`;
+    dappId = `${
+      dappId.length > 0 ? dappId + "-" + urlSuffix : urlSuffix
+    }.app`.toLocaleLowerCase();
+    if (!checkIfExists(dappId, dapps, newUrls)) return dappId;
     // return dappId;
     throw new Error(`dapp Id already exists, dappId: ${dappId}`);
   }
 
   // check if {domain}.app is available
   let dappId = `${start}.app`.toLocaleLowerCase();
-  if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+  if (!checkIfExists(dappId, dapps, newUrls)) return dappId;
   // debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
-  
+
   // check if {domain}-{subdomain}.app
-  dappId = `${start}${others.length > 0 ? '-'+others.join('-'): ''}.app`.toLocaleLowerCase();
-  if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
+  dappId = `${start}${
+    others.length > 0 ? "-" + others.join("-") : ""
+  }.app`.toLocaleLowerCase();
+  if (!checkIfExists(dappId, dapps, newUrls)) return dappId;
   // debug(`dappId already Exists:::, dappId: ${dappId}, first: ${first}, others:${others}`);
-  
+
   // check if {domain}-{url-path}.app
-  dappId = `${start}${urlSuffix.length > 0 ? '-'+urlSuffix: ''}.app`.toLocaleLowerCase();
-  if(!checkIfExists(dappId, dapps, newUrls)) return dappId;
-  debug(`dappId already Exists::: 3, dappId: ${dappId}, first: ${first}, others:${others}`);
+  dappId = `${start}${
+    urlSuffix.length > 0 ? "-" + urlSuffix : ""
+  }.app`.toLocaleLowerCase();
+  if (!checkIfExists(dappId, dapps, newUrls)) return dappId;
+  debug(
+    `dappId already Exists::: 3, dappId: ${dappId}, first: ${first}, others:${others}`
+  );
   // return dappId;
   throw new Error(`dapp Id already exists, dappId: ${dappId}`);
-}
+};

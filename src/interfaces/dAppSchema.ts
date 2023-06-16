@@ -5,27 +5,26 @@ export type DAppDeploymentPlatform = (typeof dAppDeploymentPlatforms)[number];
 export const dAppCategory = [
   "books",
   "business",
-  "developer tools",
+  "developer-tools",
   "education",
   "entertainment",
-  "defi",
-  "food and drink",
+  "finance",
+  "food-and-drink",
   "games",
-  "health and fitness",
-  "lifestyle",
+  "gambling",
+  "health-and-fitness",
   "kids",
+  "lifestyle",
   "news",
+  "nft",
+  "personalization",
   "photography",
   "productivity",
   "shopping",
-  "social networking",
+  "social-networking",
   "sports",
   "travel",
-  "utilities",
-  "nft",
-  "gambling",
-  "social",
-  "personalization"
+  "utilities"
 ] as const;
 
 export type DAppCategory = (typeof dAppCategory)[number];
