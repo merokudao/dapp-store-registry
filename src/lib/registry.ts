@@ -131,15 +131,20 @@ export class DappStoreRegistry {
   };
 
   public static validateRegistryJson = (json: DAppStoreSchema) => {
-    const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     // find duplicate dapp
-    const counts: any = {};
+    const counts: any = { dappIds: {}, names: {} };
     const duplicates: any = [];
-    dAppIDs.forEach(item => {
-      counts[item] = counts[item] ? counts[item] : 0;
-      counts[item] += 1;
-      if (counts[item] >= 2) {
-        duplicates.push(item);
+    json.dapps.forEach(dapp => {
+      const name = dapp.name.toLowerCase();
+      const dappId = dapp.dappId;
+      counts.dappIds[dappId] = counts.dappIds[dappId]
+        ? counts.dappIds[dappId]
+        : 0;
+      counts.names[name] = counts.names[name] ? counts.names[name] : 0;
+      counts.dappIds[dappId] += 1;
+      counts.names[name] += 1;
+      if (counts.dappIds[dappId] >= 2 || counts.names[name] >= 2) {
+        duplicates.push(dapp.dappId);
       }
     });
 
