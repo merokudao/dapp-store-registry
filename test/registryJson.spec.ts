@@ -8,6 +8,8 @@ import chai from "chai";
 import dAppRegistrySchema from "../src/schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../src/schemas/merokuDappStore.featuredSchema.json";
 import dAppSchema from "../src/schemas/merokuDappStore.dAppSchema.json";
+import dAppDownloadBaseUrlsSchema from "../src/schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json";
+import dAppImagesSchema from "../src/schemas/merokuDappStore.dAppImagesSchema.json";
 
 Dotenv.config({
   path: ".env.test"
@@ -49,6 +51,8 @@ describe("registry.json & Schema Validations", () => {
     });
     addFormats(ajv);
     ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
+    ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
     const validate = ajv.compile(dAppRegistrySchema);
 
@@ -67,6 +71,8 @@ describe("registry.json & Schema Validations", () => {
     });
     addFormats(ajv);
     ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
+    ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
     const validate = ajv.compile(dAppRegistrySchema);
 
@@ -87,6 +93,8 @@ describe("registry.json & Schema Validations", () => {
     });
     addFormats(ajv);
     ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
+    ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
     const validate = ajv.compile(dAppRegistrySchema);
 

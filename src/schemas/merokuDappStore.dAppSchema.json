@@ -57,100 +57,7 @@
       "minLength": 1
     },
     "downloadBaseUrls": {
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "additionalProperties": false,
-            "type": "object",
-            "required": [
-              "url",
-              "platform",
-              "minVersion",
-              "packageId",
-              "version",
-              "versionCode"
-            ],
-            "properties": {
-              "url": {
-                "type": "string",
-                "description": "The base URL of the dApp. This is used to download the dApp. Note that the actual URL will consist of security tokens and will be generated on the fly by the server.",
-                "format": "uri",
-                "pattern": "^(https?|http?|ipfs?)://",
-                "minLength": 1
-              },
-              "urlIpfs": {
-                "type": "string",
-                "description": "The base URL of the dApp. This is used to download the dApp. Note that the actual URL will consist of security tokens and will be generated on the fly by the server.",
-                "format": "uri",
-                "pattern": "^(https?|http?|ipfs?)://",
-                "minLength": 1
-              },
-              "platform": {
-                "type": "string",
-                "description": "The platform on which the dApp is available",
-                "enum": ["ios", "android"]
-              },
-              "architecture": {
-                "type": "string",
-                "description": "The architecture of the dApp"
-              },
-              "minVersion": {
-                "type": "string",
-                "description": "The minimum version of the dApp that is required to run this dApp"
-              },
-              "maxVersion": {
-                "type": "string",
-                "description": "The maximum version of the dApp that is required to run this dApp"
-              },
-              "screenDPI": {
-                "type": "string",
-                "description": "The screen DPI for which the dApp is optimised. If it is not specified, it's assumed to be optimised for all resolutions."
-              },
-              "packageId": {
-                "type": "string",
-                "description": "The package id of the dapp",
-                "minLength": 3,
-                "maxLength": 100
-              },
-              "version": {
-                "type": "string",
-                "description": "The version of the dapp that is available on dApp store",
-                "minLength": 1
-              },
-              "versionCode": {
-                "type": "string",
-                "description": "The version code of the dapp that is available on dApp store",
-                "minLength": 1
-              }
-            }
-          },
-          {
-            "additionalProperties": false,
-            "type": "object",
-            "required": ["url", "platform"],
-            "properties": {
-              "url": {
-                "type": "string",
-                "description": "The base URL of the dApp. This is used to download the dApp. Note that the actual URL will consist of security tokens and will be generated on the fly by the server.",
-                "format": "uri",
-                "pattern": "^(https?|http?|ipfs?)://",
-                "minLength": 1
-              },
-              "platform": {
-                "type": "string",
-                "description": "The platform on which the dApp is available",
-                "enum": ["web"]
-              },
-              "version": {
-                "type": "string",
-                "description": "TThe version of the dapp that is available on dApp store",
-                "minLength": 1
-              }
-            }
-          }
-        ]
-      }
+      "$ref": "merokuDappStore.dAppDownloadBaseUrlsSchema.json"
     },
     "contracts": {
       "type": "array",
@@ -169,61 +76,7 @@
         }
       }
     },
-    "images": {
-      "type": "object",
-      "properties": {
-        "logo": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^(https?|http?|ipfs?)://",
-          "minLength": 1,
-          "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
-        },
-        "banner": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^(https?|http?|ipfs?)://",
-          "minLength": 1,
-          "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
-        },
-        "screenshots": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uri",
-            "pattern": "^(https?|http?|ipfs?)://",
-            "minLength": 1
-          },
-          "minItems": 1,
-          "description": "A list of URLs to the screenshots of the dApp. Should be 1284 x 2778 and in PNG format"
-        },
-        "logoIpfs": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^(https?|http?|ipfs?)://",
-          "minLength": 1,
-          "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
-        },
-        "bannerIpfs": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^(https?|http?|ipfs?)://",
-          "minLength": 1,
-          "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
-        },
-        "screenshotsIpfs": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uri",
-            "pattern": "^(https?|http?|ipfs?)://",
-            "minLength": 1
-          },
-          "minItems": 1,
-          "description": "A list of URLs to the screenshots of the dApp. Should be 1284 x 2778 and in PNG format"
-        }
-      }
-    },
+    "images": { "$ref": "merokuDappStore.dAppImagesSchema.json" },
     "repoUrl": {
       "type": "string",
       "description": "If this is in OpenSource, the URL of the repository",
@@ -432,6 +285,12 @@
           "type": "string",
           "format": "email"
         }
+      }
+    },
+    "cdn": {
+      "image": { "$ref": "merokuDappStore.dAppImagesSchema.json" },
+      "downloadBaseUrls": {
+        "$ref": "merokuDappStore.dAppDownloadBaseUrlsSchema.json"
       }
     }
   },

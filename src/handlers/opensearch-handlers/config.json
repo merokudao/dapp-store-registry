@@ -54,7 +54,6 @@
         "type": "nested",
         "properties": {
           "url": { "type": "keyword" },
-          "urlIpfs": { "type": "keyword" },
           "platform": { "type": "keyword" },
           "minVersion": { "type": "keyword" },
           "maxVersion": { "type": "keyword" },
@@ -80,15 +79,6 @@
             "type": "keyword"
           },
           "screenshots": {
-            "type": "text"
-          },
-          "logoIpfs": {
-            "typeIpfs": "keyword"
-          },
-          "bannerIpfs": {
-            "type": "keyword"
-          },
-          "screenshotsIpfs": {
             "type": "text"
           }
         }
