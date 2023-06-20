@@ -62,6 +62,7 @@ export interface DAppSchema {
 
   downloadBaseUrls?: {
     url: string;
+    urlIpfs?: string;
     platform: DAppDeploymentPlatform;
     architecture: string;
     minVersion: string;
@@ -81,6 +82,9 @@ export interface DAppSchema {
     logo?: string;
     banner?: string;
     screenshots?: string[];
+    logoIpfs?: string;
+    bannerIpfs?: string;
+    screenshotsIpfs?: string[];
   };
   /**
    * If this is in OpenSource, the URL of the repository

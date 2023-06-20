@@ -79,6 +79,13 @@
                 "pattern": "^(https?|http?|ipfs?)://",
                 "minLength": 1
               },
+              "urlIpfs": {
+                "type": "string",
+                "description": "The base URL of the dApp. This is used to download the dApp. Note that the actual URL will consist of security tokens and will be generated on the fly by the server.",
+                "format": "uri",
+                "pattern": "^(https?|http?|ipfs?)://",
+                "minLength": 1
+              },
               "platform": {
                 "type": "string",
                 "description": "The platform on which the dApp is available",
@@ -180,6 +187,31 @@
           "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
         },
         "screenshots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^(https?|http?|ipfs?)://",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "description": "A list of URLs to the screenshots of the dApp. Should be 1284 x 2778 and in PNG format"
+        },
+        "logoIpfs": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1,
+          "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
+        },
+        "bannerIpfs": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1,
+          "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
+        },
+        "screenshotsIpfs": {
           "type": "array",
           "items": {
             "type": "string",
