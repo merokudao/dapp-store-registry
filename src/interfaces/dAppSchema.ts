@@ -44,12 +44,12 @@ export interface Images {
 export interface DownloadBaseUrls {
   url: string;
   platform: DAppDeploymentPlatform;
-  architecture: string;
-  minVersion: string;
+  architecture?: string;
+  minVersion?: string;
   maxVersion?: string;
   screenDPI?: string;
   packageId?: string;
-  version?: string;
+  version: string;
   versionCode?: string;
 }
 
@@ -119,8 +119,6 @@ export interface DAppSchema {
   /**
    * The version of the dApp that is available on the dApp store
    */
-  version: string;
-  versionCode?: string;
   isListed: boolean;
   /**
    * The date on which this dApp is listed on dApp store. This date can be a future date as well. This can not be in past.
@@ -145,7 +143,7 @@ export interface DAppSchema {
     legalName: string;
     logo?: string;
     website: string;
-    githubID: string;
+    githubID?: string;
   };
   /**
    * @minItems 1
@@ -159,8 +157,6 @@ export interface DAppSchema {
   category: DAppCategory;
 
   subCategory?: string;
-
-  packageId?: string;
 
   walletApiVersion?: string[];
 
