@@ -172,7 +172,7 @@ export interface DAppSchema {
     url?: string;
     email?: string;
   };
-  dns?: {
+  cdn?: {
     images?: Images;
     downloadBaseUrls?: DownloadBaseUrls[];
   };
