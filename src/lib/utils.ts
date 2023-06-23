@@ -340,7 +340,8 @@ export const searchFilters = (
     searchById = false,
     ownerAddress = null,
     isMinted = null,
-    tokenIds = []
+    tokenIds = [],
+    storeKey = ""
   } = payload;
   let { limit = recordsPerPage, dappId = "" } = payload;
 
@@ -352,6 +353,9 @@ export const searchFilters = (
         isForMatureAudience: isForMatureAudience === "true" ? true : false
       }
     });
+
+  if (storeKey.length)
+    query.bool.must.push({ match: { whitelistedForStores: storeKey } });
   if (minAge) query.bool.must.push({ range: { minAge: { gte: minAge } } });
   if (chainId) query.bool.must.push({ match: { chains: chainId } });
   if (language) query.bool.must.push({ match: { language } });
