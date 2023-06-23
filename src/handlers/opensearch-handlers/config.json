@@ -239,6 +239,9 @@
             "screenDPI": { "type": "keyword" }
           }
         }
+      },
+      "whitelistedForStores": {
+        "type": "text"
       }
     }
   },

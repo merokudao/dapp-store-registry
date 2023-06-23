@@ -176,4 +176,5 @@ export interface DAppSchema {
     images?: Images;
     downloadBaseUrls?: DownloadBaseUrls[];
   };
+  whitelistedForStores?: string[];
 }

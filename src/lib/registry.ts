@@ -79,7 +79,8 @@ export class DappStoreRegistry {
         "walletApiVersion",
         "subCategory",
         "expiryDate",
-        "referredBy"
+        "referredBy",
+        "whitelistedForStores"
       ],
       searchOptions: { prefix: true }
     });
@@ -325,6 +326,14 @@ export class DappStoreRegistry {
       if (filterOpts.developer) {
         const developerId = filterOpts.developer.githubID;
         res = res.filter(d => d.developer?.githubID === developerId);
+      }
+
+      if (filterOpts.storeKey) {
+        const storeKey = filterOpts.storeKey;
+        res = res.filter(
+          d =>
+            d.whitelistedForStores && d.whitelistedForStores.includes(storeKey)
+        );
       }
     }
 
