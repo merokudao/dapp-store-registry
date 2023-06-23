@@ -45,4 +45,5 @@ export interface FilterOptions {
   limit?: number;
 
   isMinted?: boolean;
+  storeKey?: string;
 }

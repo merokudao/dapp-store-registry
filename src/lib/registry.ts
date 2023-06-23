@@ -77,7 +77,8 @@ export class DappStoreRegistry {
         "walletApiVersion",
         "subCategory",
         "expiryDate",
-        "referredBy"
+        "referredBy",
+        "whitelistedForStores"
       ],
       searchOptions: { prefix: true }
     });
@@ -327,6 +328,14 @@ export class DappStoreRegistry {
         const developerId = filterOpts.developer.githubID;
         res = res.filter(d => d.developer?.githubID === developerId);
       }
+
+      if (filterOpts.storeKey) {
+        const storeKey = filterOpts.storeKey;
+        res = res.filter(
+          d =>
+            d.whitelistedForStores && d.whitelistedForStores.includes(storeKey)
+        );
+      }
     }
 
     return res;
@@ -429,13 +438,12 @@ export class DappStoreRegistry {
     const newUrls: string[] = [];
     const newNames: string[] = [];
     try {
-      const allNewDappIds = dapps.map(dapp => {
+      dapps.map(dapp => {
         const dappId = getDappId(dapp.name, dapp.appUrl, [], newUrls, newNames);
-        newUrls.push(dappId);
+        newUrls.push(dapp.appUrl as any);
         newNames.push(dapp.name.toLowerCase());
         return dappId;
       });
-      debug(`allNewDappIds: ${JSON.stringify(allNewDappIds)}`);
       return 200;
     } catch (error) {
       debug(`Error occurred: ${error}`);

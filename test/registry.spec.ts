@@ -331,5 +331,11 @@ describe("DappStoreRegistry", () => {
       );
       registry_dapps_1.should.deep.equal(dapps_1);
     });
+
+    it("Throw Error if duplicate dappId", async () => {
+      const registry = new DappStoreRegistry(RegistryStrategy.Static);
+      const status = await registry.getAllDappIds();
+      status.should.equal(200);
+    });
   });
 });

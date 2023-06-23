@@ -340,7 +340,8 @@ export const searchFilters = (
     searchById = false,
     ownerAddress = null,
     isMinted = null,
-    tokenIds = []
+    tokenIds = [],
+    storeKey = ""
   } = payload;
   let { limit = recordsPerPage, dappId = "" } = payload;
 
@@ -352,6 +353,9 @@ export const searchFilters = (
         isForMatureAudience: isForMatureAudience === "true" ? true : false
       }
     });
+
+  if (storeKey.length)
+    query.bool.must.push({ match: { whitelistedForStores: storeKey } });
   if (minAge) query.bool.must.push({ range: { minAge: { gte: minAge } } });
   if (chainId) query.bool.must.push({ match: { chains: chainId } });
   if (language) query.bool.must.push({ match: { language } });
@@ -569,14 +573,18 @@ export const getDappId = (
   appUrl = getPlainAppUrl(appUrl);
   const existingPlainUrls = dapps.map(dapp => getPlainAppUrl(dapp.appUrl));
   const existingAllName = dapps.map(dapp => getName(dapp.name));
+  newUrls = newUrls.map(nu => getPlainAppUrl(nu));
   const plainName = getName(name);
   if (
     existingPlainUrls.includes(appUrl) ||
     existingAllName.includes(plainName) ||
     newNames.includes(plainName) ||
     newUrls.includes(appUrl)
-  )
-    throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
+  ) {
+    debug(`duplicate::: ${appUrl}`);
+    if (appUrl !== "opera.com/crypto/next")
+      throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
+  }
 
   // generate a unique dappId
   const parts = appUrl.split("/");

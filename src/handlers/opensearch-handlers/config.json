@@ -211,6 +211,9 @@
       },
       "tokenId": {
         "type": "keyword"
+      },
+      "whitelistedForStores": {
+        "type": "text"
       }
     }
   },

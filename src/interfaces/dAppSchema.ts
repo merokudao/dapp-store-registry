@@ -166,4 +166,5 @@ export interface DAppSchema {
     url?: string;
     email?: string;
   };
+  whitelistedForStores?: string[];
 }
