@@ -288,7 +288,7 @@
       }
     },
     "cdn": {
-      "image": { "$ref": "merokuDappStore.dAppImagesSchema.json" },
+      "images": { "$ref": "merokuDappStore.dAppImagesSchema.json" },
       "downloadBaseUrls": {
         "$ref": "merokuDappStore.dAppDownloadBaseUrlsSchema.json"
       }
