@@ -134,7 +134,7 @@ export class DappStoreRegistry {
   public static validateRegistryJson = (json: DAppStoreSchema) => {
     // find duplicate dapp
     const counts: any = { dappIds: {}, names: {} };
-    const duplicates: any = [];
+    const duplicates: string[] = [];
     json.dapps.forEach(dapp => {
       const name = dapp.name.toLowerCase();
       const dappId = dapp.dappId;
@@ -440,7 +440,7 @@ export class DappStoreRegistry {
     try {
       dapps.map(dapp => {
         const dappId = getDappId(dapp.name, dapp.appUrl, [], newUrls, newNames);
-        newUrls.push(dapp.appUrl as any);
+        newUrls.push(dapp.appUrl as string);
         newNames.push(dapp.name.toLowerCase());
         return dappId;
       });

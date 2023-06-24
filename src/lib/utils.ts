@@ -582,8 +582,7 @@ export const getDappId = (
     newUrls.includes(appUrl)
   ) {
     debug(`duplicate::: ${appUrl}`);
-    if (appUrl !== "opera.com/crypto/next")
-      throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
+    throw new Error(`dapp Id already exists, appUrl: ${appUrl}`);
   }
 
   // generate a unique dappId
