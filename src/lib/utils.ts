@@ -430,6 +430,7 @@ export const searchFilters = (
     query.bool.filter.push({
       term: { isListed: isListed === "true" ? true : false }
     });
+    // query.bool.filter.push({ term: { isVerified: true} });
   }
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
@@ -443,6 +444,9 @@ export const searchFilters = (
     query.bool.must.push({
       match: { isListed: isListed === "true" ? true : false }
     });
+
+  // if (!ownerAddress)
+  //   query.bool.filter.push({ term: { isVerified: true} });
 
   payload.page = parseInt(page);
   payload.page = payload.page > 0 ? payload.page : 1;

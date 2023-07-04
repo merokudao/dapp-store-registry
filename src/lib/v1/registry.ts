@@ -380,4 +380,20 @@ export class DappStoreRegistryV1 {
   public async deleteScroller(ids: string[]) {
     return this.openSearchApis.deleteScrollIds(ids);
   }
+
+  /**
+   * update multiple docs
+   * @param index string
+   * @param body { isVerfied: true, dappId }
+   * @returns
+   */
+  public async updateDocs(index: string, body: any[]) {
+    const chunks = [];
+    while (body.length > 0) {
+      chunks.push(body.splice(0, 100000));
+    }
+    return Promise.allSettled(
+      chunks.map(chunk => this.openSearchApis.updateDocs(index, chunk))
+    );
+  }
 }

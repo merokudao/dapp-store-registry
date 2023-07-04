@@ -162,4 +162,25 @@ export class OpensearchRequest {
       scroll_id: scrollIds
     });
   }
+
+  /**
+   * update multiple docs in a single request
+   * @param index string
+   * @param body doc[]
+   * @returns
+   */
+  public async updateDocs(index: string, body: any[]): Promise<any> {
+    body = body.reduce((aggs: any[], doc: any) => {
+      aggs = aggs.concat([
+        { update: { _index: index, _id: doc.dappId } },
+        { doc }
+      ]);
+      return aggs;
+    }, []);
+    return this.opensearchClient.bulk({
+      index,
+      refresh: true,
+      body
+    });
+  }
 }

@@ -214,6 +214,9 @@
       },
       "whitelistedForStores": {
         "type": "text"
+      },
+      "isVerified": {
+        "type": "boolean"
       }
     }
   },
