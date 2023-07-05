@@ -1,0 +1,15 @@
+{
+  "schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.reviewSchema.json",
+  "title": "dApps Review Schema",
+  "description": "Schema for reviews of dApps added by users",
+  "type": "object",
+  "properties": {
+    "review": {
+      "description": "Review of the app",
+      "type": "string"
+    }
+  },
+  "required": ["review"],
+  "additionalProperties": false
+}
