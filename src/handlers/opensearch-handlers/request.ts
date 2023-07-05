@@ -1,7 +1,7 @@
 import { OpensearchClient } from "./connection";
 import * as opensearchConfig from "./config.json";
 import { Client } from "@opensearch-project/opensearch";
-import { OpenSearchConnectionOptions } from "../../interfaces";
+import { DAppSchema, OpenSearchConnectionOptions } from "../../interfaces";
 
 export const methods = {
   PUT: "PUT",
@@ -145,7 +145,7 @@ export class OpensearchRequest {
    * @param scrollId get next page result
    * @returns
    */
-  public async scrollDocs(scrollId: any): Promise<any> {
+  public async scrollDocs(scrollId: string): Promise<any> {
     return this.opensearchClient.scroll({
       scroll: "1m",
       scroll_id: scrollId
@@ -169,7 +169,7 @@ export class OpensearchRequest {
    * @param body doc[]
    * @returns
    */
-  public async updateDocs(index: string, body: any[]): Promise<any> {
+  public async updateDocs(index: string, body: DAppSchema[]): Promise<any> {
     body = body.reduce((aggs: any[], doc: any) => {
       aggs = aggs.concat([
         { update: { _index: index, _id: doc.dappId } },

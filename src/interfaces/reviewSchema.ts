@@ -24,4 +24,3 @@ export interface ReviewSchema {
    */
   dappId: string;
 }
-

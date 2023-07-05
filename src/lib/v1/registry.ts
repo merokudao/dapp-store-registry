@@ -387,7 +387,7 @@ export class DappStoreRegistryV1 {
    * @param body { isVerfied: true, dappId }
    * @returns
    */
-  public async updateDocs(index: string, body: any[]) {
+  public async updateDocs(index: string, body: DAppSchema[]) {
     const chunks = [];
     while (body.length > 0) {
       chunks.push(body.splice(0, 100000));
