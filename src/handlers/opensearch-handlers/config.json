@@ -213,30 +213,32 @@
         "type": "keyword"
       },
       "cdn": {
-        "images": {
-          "properties": {
-            "logo": {
-              "type": "keyword"
-            },
-            "banner": {
-              "type": "keyword"
-            },
-            "screenshots": {
-              "type": "text"
+        "properties": {
+          "images": {
+            "properties": {
+              "logo": {
+                "type": "keyword"
+              },
+              "banner": {
+                "type": "keyword"
+              },
+              "screenshots": {
+                "type": "text"
+              }
             }
-          }
-        },
-        "downloadBaseUrls": {
-          "type": "nested",
-          "properties": {
-            "url": { "type": "keyword" },
-            "platform": { "type": "keyword" },
-            "minVersion": { "type": "keyword" },
-            "maxVersion": { "type": "keyword" },
-            "packageId": { "type": "keyword" },
-            "version": { "type": "keyword" },
-            "versionCode": { "type": "keyword" },
-            "screenDPI": { "type": "keyword" }
+          },
+          "downloadBaseUrls": {
+            "type": "nested",
+            "properties": {
+              "url": { "type": "keyword" },
+              "platform": { "type": "keyword" },
+              "minVersion": { "type": "keyword" },
+              "maxVersion": { "type": "keyword" },
+              "packageId": { "type": "keyword" },
+              "version": { "type": "keyword" },
+              "versionCode": { "type": "keyword" },
+              "screenDPI": { "type": "keyword" }
+            }
           }
         }
       },
