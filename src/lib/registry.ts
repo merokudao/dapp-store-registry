@@ -80,7 +80,8 @@ export class DappStoreRegistry {
         "subCategory",
         "expiryDate",
         "referredBy",
-        "whitelistedForStores"
+        "whitelistedForStores",
+        "cdn"
       ],
       searchOptions: { prefix: true }
     });

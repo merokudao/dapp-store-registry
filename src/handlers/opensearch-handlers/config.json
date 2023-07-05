@@ -283,7 +283,8 @@
       "ownerAddress",
       "referredBy",
       "minted",
-      "subCategory"
+      "subCategory",
+      "cdn"
     ]
   }
 }
