@@ -134,15 +134,20 @@ export class DappStoreRegistry {
   };
 
   public static validateRegistryJson = (json: DAppStoreSchema) => {
-    const dAppIDs = json.dapps.map(dapp => dapp.dappId);
     // find duplicate dapp
-    const counts: any = {};
-    const duplicates: any = [];
-    dAppIDs.forEach(item => {
-      counts[item] = counts[item] ? counts[item] : 0;
-      counts[item] += 1;
-      if (counts[item] >= 2) {
-        duplicates.push(item);
+    const counts: any = { dappIds: {}, names: {} };
+    const duplicates: string[] = [];
+    json.dapps.forEach(dapp => {
+      const name = dapp.name.toLowerCase();
+      const dappId = dapp.dappId;
+      counts.dappIds[dappId] = counts.dappIds[dappId]
+        ? counts.dappIds[dappId]
+        : 0;
+      counts.names[name] = counts.names[name] ? counts.names[name] : 0;
+      counts.dappIds[dappId] += 1;
+      counts.names[name] += 1;
+      if (counts.dappIds[dappId] >= 2 || counts.names[name] >= 2) {
+        duplicates.push(dapp.dappId);
       }
     });
 
@@ -433,15 +438,16 @@ export class DappStoreRegistry {
   };
 
   public getAllDappIds = async (): Promise<number> => {
-    const dapps = (await this.registry()).dapps;
+    const dapps = (await this.registry()).dapps as DAppSchema[];
     const newUrls: string[] = [];
+    const newNames: string[] = [];
     try {
-      const allNewDappIds = dapps.map(dapp => {
-        const dappId = getDappId(dapp.appUrl, [], newUrls);
-        newUrls.push(dappId);
+      dapps.map(dapp => {
+        const dappId = getDappId(dapp.name, dapp.appUrl, [], newUrls, newNames);
+        newUrls.push(dapp.appUrl as string);
+        newNames.push(dapp.name.toLowerCase());
         return dappId;
       });
-      debug(`allNewDappIds: ${JSON.stringify(allNewDappIds)}`);
       return 200;
     } catch (error) {
       debug(`Error occurred: ${error}`);
