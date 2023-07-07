@@ -1,7 +1,7 @@
 import { OpensearchClient } from "./connection";
 import * as opensearchConfig from "./config.json";
 import { Client } from "@opensearch-project/opensearch";
-import { OpenSearchConnectionOptions } from "../../interfaces";
+import { OpenSearchConnectionOptions, PaginationQuery } from "../../interfaces";
 
 export const methods = {
   PUT: "PUT",
@@ -68,7 +68,7 @@ export class OpensearchRequest {
    * @param body query
    * @returns list of docs
    */
-  public async search(index: string, body: any): Promise<any> {
+  public async search(index: string, body: PaginationQuery): Promise<any> {
     return this.opensearchClient.search({
       index,
       body
@@ -133,7 +133,10 @@ export class OpensearchRequest {
    * @param body query
    * @returns response
    */
-  public async initiateScrollSearch(index: string, body: any): Promise<any> {
+  public async initiateScrollSearch(
+    index: string,
+    body: PaginationQuery
+  ): Promise<any> {
     return this.opensearchClient.search({
       index,
       body,
@@ -160,6 +163,22 @@ export class OpensearchRequest {
   public async deleteScrollIds(scrollIds: string[]): Promise<any> {
     return this.opensearchClient.clearScroll({
       scroll_id: scrollIds
+    });
+  }
+
+  /**
+   * get all documents based on filters
+   * @param index
+   * @param body
+   * @returns
+   */
+  public async getTotalDocsCount(
+    index: string,
+    body: PaginationQuery
+  ): Promise<any> {
+    return this.opensearchClient.count({
+      index,
+      body
     });
   }
 }

@@ -5,6 +5,7 @@ import {
   AddDappPayload,
   DAppSchema,
   DeleteDappPayload,
+  DocsCountResponse,
   FilterOptions,
   OpenSearchConnectionOptions,
   SearchResult,
@@ -103,7 +104,7 @@ export class DappStoreRegistryV1 {
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters("", filterOpts);
 
-    if (finalQuery.from + finalQuery.size > MAX_RESULT_WINDOW)
+    if ((finalQuery.from || 0) + (finalQuery.size || 0) > MAX_RESULT_WINDOW)
       return this.maxWindowError(finalQuery, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
@@ -199,8 +200,7 @@ export class DappStoreRegistryV1 {
     filterOpts: FilterOptions = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters(queryTxt, filterOpts);
-
-    if (finalQuery.from + finalQuery.size > MAX_RESULT_WINDOW)
+    if ((finalQuery.from || 0) + (finalQuery.size || 0) > MAX_RESULT_WINDOW)
       return this.maxWindowError(finalQuery, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
@@ -347,7 +347,7 @@ export class DappStoreRegistryV1 {
     let result: SearchResult;
     if (scrollId) result = await this.openSearchApis.scrollDocs(scrollId);
     else {
-      const { finalQuery } = searchFilters("", filterOpts) as any;
+      const { finalQuery } = searchFilters("", filterOpts);
       delete finalQuery.from;
       Object.assign(finalQuery, { size: filterOpts.size || 200 });
       Object.assign(finalQuery, {
@@ -379,5 +379,19 @@ export class DappStoreRegistryV1 {
    */
   public async deleteScroller(ids: string[]) {
     return this.openSearchApis.deleteScrollIds(ids);
+  }
+
+  public async getTotalDocsCount(
+    filterOpts: FilterOptions = { isListed: "true" }
+  ) {
+    const { finalQuery } = searchFilters("", filterOpts);
+    delete finalQuery._source;
+    delete finalQuery.from;
+    delete finalQuery.size;
+    delete finalQuery.sort;
+    return this.openSearchApis.getTotalDocsCount(
+      searchRegistry.alias,
+      finalQuery
+    ) as Promise<DocsCountResponse>;
   }
 }

@@ -27,11 +27,11 @@ export interface OpenSearchCompositeQuery {
 }
 
 export interface PaginationQuery {
-  _source: string[];
+  _source?: string[];
   query: OpenSearchCompositeQuery;
-  from: number;
-  size: number;
-  sort: object[];
+  from?: number;
+  size?: number;
+  sort?: object[];
 }
 
 export interface DAppSchemaSearch {
@@ -91,4 +91,11 @@ export interface DeleteDappPayload {
   githubID: string;
   dappId: string;
   org: string | undefined;
+}
+
+export interface DocsCountResponse {
+  count: number;
+  _shard: {
+    total: number;
+  };
 }
