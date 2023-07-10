@@ -24,6 +24,8 @@ import dAppEnrichSchema from "../schemas/merokuDappStore.dAppEnrich.json";
 import dAppStoresSchema from "../schemas/merokuDappStore.dAppStores.json";
 import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
+import dAppDownloadBaseUrlsSchema from "../schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json";
+import dAppImagesSchema from "../schemas/merokuDappStore.dAppImagesSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
@@ -123,6 +125,8 @@ export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
   if ("title" in json) {
     // registry
     ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
+    ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
     ajv.addFormat("url", /^https?:\/\/.+/);
     validate = ajv.compile(dAppRegistrySchema);
