@@ -1,0 +1,94 @@
+{
+  "schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json",
+  "title": "dApp CDN schema",
+  "description": "A schema for dapp CDN for dApp registry",
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "url",
+          "platform",
+          "minVersion",
+          "packageId",
+          "version",
+          "versionCode"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The base URL of the dApp. This is used to download the dApp. Note that the actual URL will consist of security tokens and will be generated on the fly by the server.",
+            "format": "uri",
+            "pattern": "^(https?|http?|ipfs?)://",
+            "minLength": 1
+          },
+          "platform": {
+            "type": "string",
+            "description": "The platform on which the dApp is available",
+            "enum": ["ios", "android"]
+          },
+          "architecture": {
+            "type": "string",
+            "description": "The architecture of the dApp"
+          },
+          "minVersion": {
+            "type": "string",
+            "description": "The minimum version of the dApp that is required to run this dApp"
+          },
+          "maxVersion": {
+            "type": "string",
+            "description": "The maximum version of the dApp that is required to run this dApp"
+          },
+          "screenDPI": {
+            "type": "string",
+            "description": "The screen DPI for which the dApp is optimised. If it is not specified, it's assumed to be optimised for all resolutions."
+          },
+          "packageId": {
+            "type": "string",
+            "description": "The package id of the dapp",
+            "minLength": 3,
+            "maxLength": 100
+          },
+          "version": {
+            "type": "string",
+            "description": "The version of the dapp that is available on dApp store",
+            "minLength": 1
+          },
+          "versionCode": {
+            "type": "string",
+            "description": "The version code of the dapp that is available on dApp store",
+            "minLength": 1
+          }
+        }
+      },
+      {
+        "additionalProperties": false,
+        "type": "object",
+        "required": ["url", "platform"],
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The base URL of the dApp. This is used to download the dApp. Note that the actual URL will consist of security tokens and will be generated on the fly by the server.",
+            "format": "uri",
+            "pattern": "^(https?|http?|ipfs?)://",
+            "minLength": 1
+          },
+          "platform": {
+            "type": "string",
+            "description": "The platform on which the dApp is available",
+            "enum": ["web"]
+          },
+          "version": {
+            "type": "string",
+            "description": "TThe version of the dapp that is available on dApp store",
+            "minLength": 1
+          }
+        }
+      }
+    ]
+  },
+  "additionalProperties": false
+}

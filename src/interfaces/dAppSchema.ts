@@ -30,6 +30,30 @@ export const dAppCategory = [
 export type DAppCategory = (typeof dAppCategory)[number];
 
 /**
+ * images of dapp
+ */
+export interface Images {
+  logo?: string;
+  banner?: string;
+  screenshots?: string[];
+}
+
+/**
+ * Downloadable assets
+ */
+export interface DownloadBaseUrls {
+  url: string;
+  platform: DAppDeploymentPlatform;
+  architecture?: string;
+  minVersion?: string;
+  maxVersion?: string;
+  screenDPI?: string;
+  packageId?: string;
+  version: string;
+  versionCode?: string;
+}
+
+/**
  * A schema for dapps for dApp Registry
  */
 export interface DAppSchema {
@@ -60,28 +84,14 @@ export interface DAppSchema {
    */
   appUrl?: string;
 
-  downloadBaseUrls?: {
-    url: string;
-    platform: DAppDeploymentPlatform;
-    architecture: string;
-    minVersion: string;
-    maxVersion?: string;
-    screenDPI?: string;
-    packageId?: string;
-    version?: string;
-    versionCode?: string;
-  }[];
+  downloadBaseUrls?: DownloadBaseUrls[];
 
   contracts?: {
     address: string;
     chainId: string;
   }[];
 
-  images?: {
-    logo?: string;
-    banner?: string;
-    screenshots?: string[];
-  };
+  images?: Images;
   /**
    * If this is in OpenSource, the URL of the repository
    */
@@ -109,8 +119,6 @@ export interface DAppSchema {
   /**
    * The version of the dApp that is available on the dApp store
    */
-  version: string;
-  versionCode?: string;
   isListed: boolean;
   /**
    * The date on which this dApp is listed on dApp store. This date can be a future date as well. This can not be in past.
@@ -135,7 +143,7 @@ export interface DAppSchema {
     legalName: string;
     logo?: string;
     website: string;
-    githubID: string;
+    githubID?: string;
   };
   /**
    * @minItems 1
@@ -150,8 +158,6 @@ export interface DAppSchema {
 
   subCategory?: string;
 
-  packageId?: string;
-
   walletApiVersion?: string[];
 
   minted?: boolean;
@@ -165,6 +171,10 @@ export interface DAppSchema {
   support?: {
     url?: string;
     email?: string;
+  };
+  cdn?: {
+    images?: Images;
+    downloadBaseUrls?: DownloadBaseUrls[];
   };
   whitelistedForStores?: string[];
 }

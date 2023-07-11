@@ -11,7 +11,8 @@ import {
   DappEnrichPayload,
   EnrichSchema,
   ScreenShotSchema,
-  DAppSchema
+  DAppSchema,
+  FinalQuery
 } from "../interfaces";
 import storesJson from "../dappStore.json";
 import registryJson from "./../registry.json";
@@ -24,9 +25,18 @@ import dAppEnrichSchema from "../schemas/merokuDappStore.dAppEnrich.json";
 import dAppStoresSchema from "../schemas/merokuDappStore.dAppStores.json";
 import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
+import dAppDownloadBaseUrlsSchema from "../schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json";
+import dAppImagesSchema from "../schemas/merokuDappStore.dAppImagesSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
+import {
+  CategoryObject,
+  FilterOptionsSearch,
+  ObjectStringValueType,
+  OrderParams,
+  SortByOrderQuery
+} from "../interfaces/searchOptions";
 
 const debug = Debug("@merokudao:dapp-store-registry:utils");
 const defaultBoost = process.env.DEFAULT_BOOST || "1";
@@ -67,10 +77,10 @@ export const recordsPerPageAutoComplete = 7;
  * @param params
  * @returns
  */
-export const orderBy = (params: any) => {
-  const order: any = [{ _score: { order: "desc" } }];
+export const orderBy = (params: OrderParams) => {
+  const order: SortByOrderQuery[] = [{ _score: { order: "desc" } }];
   try {
-    params = JSON.parse(params);
+    params = JSON.parse(params as string);
   } catch (error) {
     //
   }
@@ -123,6 +133,8 @@ export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
   if ("title" in json) {
     // registry
     ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
+    ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
     ajv.addFormat("url", /^https?:\/\/.+/);
     validate = ajv.compile(dAppRegistrySchema);
@@ -292,10 +304,13 @@ export const getCatSubCatMapping = (
   category: string[] = [],
   subCategory: string[] = []
 ) => {
-  const catSubCatMap = categoryJson.reduce((aggs: any, value) => {
-    aggs[value.category] = value.subCategory;
-    return aggs;
-  }, {});
+  const catSubCatMap = categoryJson.reduce(
+    (aggs: ObjectStringValueType, value: CategoryObject) => {
+      aggs[value.category] = value.subCategory;
+      return aggs;
+    },
+    {}
+  );
 
   return category.map(cat => {
     const allSubCat = catSubCatMap[cat];
@@ -311,9 +326,9 @@ export const getCatSubCatMapping = (
 
 export const searchFilters = (
   search: string,
-  payload: any,
+  payload: FilterOptionsSearch,
   autoComplete = false
-): { finalQuery: PaginationQuery; limit: number } => {
+): FinalQuery => {
   const query: OpenSearchCompositeQuery = {
     bool: {
       must: [],
@@ -345,7 +360,8 @@ export const searchFilters = (
   } = payload;
   let { limit = recordsPerPage, dappId = "" } = payload;
 
-  if (dappId.length) dappId = dappId.split(",").map((di: string) => di.trim());
+  if (dappId.length && typeof dappId === "string")
+    dappId = dappId.split(",").map((di: string) => di.trim());
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!isForMatureAudience)
     query.bool.must.push({
@@ -448,7 +464,7 @@ export const searchFilters = (
   // if (!ownerAddress)
   //   query.bool.filter.push({ term: { isVerified: true} });
 
-  payload.page = parseInt(page);
+  payload.page = parseInt(page as string);
   payload.page = payload.page > 0 ? payload.page : 1;
   const limitV1 = autoComplete ? recordsPerPageAutoComplete : recordsPerPage;
   if (limit > limitV1) limit = limitV1;
@@ -457,7 +473,7 @@ export const searchFilters = (
     query,
     from: (payload.page - 1) * limit,
     size: limit,
-    sort: orderBy(payload.orderBy || {})
+    sort: orderBy((payload.orderBy || {}) as OrderParams)
   };
 
   return { finalQuery, limit };
