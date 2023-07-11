@@ -12,38 +12,9 @@
     "fields": {
       "type": "object",
       "properties": {
-        "images": {
-          "type": "object",
-          "properties": {
-            "logo": {
-              "type": "string",
-              "format": "uri",
-              "pattern": "^(https?|http?|ipfs?)://",
-              "minLength": 1,
-              "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
-            },
-            "banner": {
-              "type": "string",
-              "format": "uri",
-              "pattern": "^(https?|http?|ipfs?)://",
-              "minLength": 1,
-              "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
-            },
-            "screenshots": {
-              "type": "array",
-              "properties": {
-                "value": {
-                  "type": "string",
-                  "format": "uri",
-                  "pattern": "^(https?|http?|ipfs?)://",
-                  "minLength": 1
-                },
-                "index": {
-                  "type": "number"
-                }
-              }
-            }
-          }
+        "images": { "$ref": "merokuDappStore.dAppEnrichImagesSchema.json" },
+        "cdn": {
+          "images": { "$ref": "merokuDappStore.dAppEnrichImagesSchema.json" }
         },
         "description": {
           "type": "string",

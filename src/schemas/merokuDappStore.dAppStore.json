@@ -20,6 +20,65 @@
       "description": "Unique ID of this dApp Store",
       "type": "string"
     },
+    "name": {
+      "description": "name of the dApp Store",
+      "type": "string",
+      "maxLength": 100
+    },
+    "description": {
+      "description": "description of the dApp Store",
+      "type": "string"
+    },
+    "minAge": {
+      "type": "integer",
+      "description": "The min age of user who should access this dApp Store",
+      "exclusiveMinimum": 3
+    },
+    "isForMatureAudience": {
+      "type": "boolean",
+      "description": "Boolean to signify if the dApp Store is for mature audience"
+    },
+    "images": { "$ref": "merokuDappStore.dAppImagesSchema.json" },
+    "cdn": {
+      "images": { "$ref": "merokuDappStore.dAppImagesSchema.json" }
+    },
+    "geoRestrictions": {
+      "type": "object",
+      "description": "A list of countries where the dApp Store is available or unavailable. If this is not present, the dApp is available everywhere. If this is present, then one of either allowedCountries or blockedCountries should be present. If both are present, then the dApp is available in allowedCountries and unavailable in blockedCountries. The name of countries should be in ISO-3661-1 Alpha-2 Code.",
+      "properties": {
+        "blockedCountries": {
+          "type": "array",
+          "description": "A list of countries where the dApp Store is unavailable",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["blockedCountries"]
+    },
+    "url": {
+      "type": "string",
+      "description": "The URL of the dApp Store",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
+    },
+    "language": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "A string in ISO-639-1 which signifies the language of the dApp Store"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "bannedDAppIds": {
       "type": "array",
       "description": "List of dApp IDs that are banned in this store. The dApp IDs should be the same as the ones in the dApp Store's dApps list.",
@@ -33,8 +92,51 @@
       "items": {
         "$ref": "merokuDappStore.dAppEnrich.json"
       }
+    },
+    "external_url": {
+      "type": "string",
+      "description": "The URL of the dApp. This is used by OpenSea. This should be set to Meroku Protocol Explorer.",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
+    },
+    "image": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1,
+      "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format. Used by OpenSea. This should automatically be set to the app logo from images field."
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["trait_type", "value"],
+        "properties": {
+          "display_type": {
+            "type": "string",
+            "description": "The display type of the trait"
+          },
+          "trait_type": {
+            "type": "string",
+            "description": "The trait type of the trait"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the trait type"
+          }
+        }
+      }
     }
   },
-  "required": ["githubId", "featuredSections", "key"],
+  "required": [
+    "key",
+    "name",
+    "description",
+    "url",
+    "language",
+    "minAge",
+    "isForMatureAudience"
+  ],
   "additionalProperties": false
 }
