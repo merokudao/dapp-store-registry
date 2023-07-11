@@ -1,0 +1,27 @@
+{
+  "dappStores": [
+    {
+      "name": "goku",
+      "description": "yoyo",
+      "url": "https://goku.app",
+      "key": "goku.appStore",
+      "geoRestrictions": {
+        "blockedCountries": ["AF"]
+      },
+      "language": ["en"],
+      "minAge": 5,
+      "isForMatureAudience": false,
+      "tags": ["hello", "dj"],
+      "images": {
+        "logo": "https://ipfs-3.thirdwebcdn.com/ipfs/Qmaqim6PYgL4hey5sRhGSnUg7z7wYUCZhVmt2VJvtzawfQ/image0%20(1).jpg",
+        "banner": "https://ipfs-3.thirdwebcdn.com/ipfs/QmVtQFcw3LpLVqUMkTSdb3TWVxv6fxUbffgt5o8gugmSNw/otter.jpeg",
+        "screenshots": [
+          "https://ipfs-3.thirdwebcdn.com/ipfs/QmQFDt3JmGAKQbkEgGHCm6FK5Wd5YaPkkj6HCy62acT5f8/IMG_0515.PNG",
+          "https://ipfs-3.thirdwebcdn.com/ipfs/Qmab3wycaJKnze3uJpdaSKyHWP8f2Gt5KhfesdyWkfEZS4/IMG_0516.PNG",
+          "https://ipfs-3.thirdwebcdn.com/ipfs/QmZaFGQFCL3sb9okuYRsP39TrmnBGmTDV21U4xiCv5SGKd/IMG_0517.PNG"
+        ]
+      },
+      "image": "https://ipfs-3.thirdwebcdn.com/ipfs/Qmaqim6PYgL4hey5sRhGSnUg7z7wYUCZhVmt2VJvtzawfQ/image0%20(1).jpg"
+    }
+  ]
+}
