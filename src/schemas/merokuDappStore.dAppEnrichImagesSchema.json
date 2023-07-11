@@ -1,0 +1,39 @@
+{
+    "schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppImagesSchema.json",
+    "title": "dApp Enrich CDN schema",
+    "description": "A schema for dapp enrich CDN for dApp Store",
+    "type": "object",
+    "properties": {
+        "logo": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^(https?|http?|ipfs?)://",
+            "minLength": 1,
+            "description": "A URL to the logo of the dApp. Should be square and 512x512 in PNG format"
+        },
+        "banner": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^(https?|http?|ipfs?)://",
+            "minLength": 1,
+            "description": "A URL to the banner of the dApp. Should be 1920x1080 and in PNG format"
+        },
+        "screenshots": {
+            "type": "array",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^(https?|http?|ipfs?)://",
+                    "minLength": 1
+                },
+                "index": {
+                    "type": "number"
+                }
+            }
+        }
+    },
+    "additionalProperties": false
+}
+
