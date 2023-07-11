@@ -32,6 +32,13 @@ export interface StoreSchema {
   bannedDAppIds?: string[];
 
   dappsEnrich?: EnrichSchema[];
+  external_url?: string;
+  image?: string;
+  attributes?: {
+    trait_type: string;
+    value: string;
+    display_type: string;
+  }[];
 }
 
 export interface EnrichSchema {
