@@ -1,8 +1,8 @@
 {
   "schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppImagesSchema.json",
-  "title": "dApp Enrich CDN schema",
-  "description": "A schema for dapp enrich CDN for dApp Store",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.dAppEnrichImagesSchema.json",
+  "title": "dApp Enrich images schema",
+  "description": "A schema for dapp enrich images for dApp Store",
   "type": "object",
   "properties": {
     "logo": {
