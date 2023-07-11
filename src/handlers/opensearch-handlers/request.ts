@@ -1,7 +1,8 @@
 import { OpensearchClient } from "./connection";
 import * as opensearchConfig from "./config.json";
 import { Client } from "@opensearch-project/opensearch";
-import { OpenSearchConnectionOptions } from "../../interfaces";
+import { DAppSchemaDoc, OpenSearchConnectionOptions, PaginationQuery } from "../../interfaces";
+import { IndicesCreateResponse } from "@opensearch-project/opensearch/api/types";
 
 export const methods = {
   PUT: "PUT",
@@ -23,14 +24,14 @@ export class OpensearchRequest {
    * @param index name of the index
    * @returns index name
    */
-  public async createIndex(index: string): Promise<any> {
+  public async createIndex(index: string): Promise<IndicesCreateResponse> {
     return this.opensearchClient.indices.create({
       index,
       body: {
         settings: this.opensearchConfig.settings,
         mappings: this.opensearchConfig.mappings
       }
-    });
+    }) as Promise<any>;
   }
 
   /**
@@ -39,7 +40,7 @@ export class OpensearchRequest {
    * @param body doc
    * @returns response
    */
-  public async createDoc(index: string, body: any): Promise<any> {
+  public async createDoc(index: string, body: DAppSchemaDoc): Promise<any> {
     return this.opensearchClient.index({
       index,
       body,
@@ -53,10 +54,10 @@ export class OpensearchRequest {
    * @param index index name
    * @param body array of docs
    */
-  public async createBulkDoc(index: string, body: any[]): Promise<any> {
+  public async createBulkDoc(index: string, body: DAppSchemaDoc[]): Promise<any> {
     return this.opensearchClient.helpers.bulk({
       datasource: body,
-      onDocument(doc: any) {
+      onDocument(doc: DAppSchemaDoc) {
         return { index: { _index: index, _id: doc.id } };
       }
     });
@@ -68,7 +69,7 @@ export class OpensearchRequest {
    * @param body query
    * @returns list of docs
    */
-  public async search(index: string, body: any): Promise<any> {
+  public async search(index: string, body: PaginationQuery): Promise<any> {
     return this.opensearchClient.search({
       index,
       body
@@ -113,7 +114,7 @@ export class OpensearchRequest {
    * @param body doc
    * @returns response
    */
-  public async updateDoc(index: string, body: any): Promise<any> {
+  public async updateDoc(index: string, body: DAppSchemaDoc): Promise<any> {
     const id = body.id;
     delete body.id;
     return this.opensearchClient.update({
@@ -121,7 +122,7 @@ export class OpensearchRequest {
       id,
       body: { doc: body },
       refresh: true
-    });
+    } as any);
   }
 
   /**
@@ -133,7 +134,7 @@ export class OpensearchRequest {
    * @param body query
    * @returns response
    */
-  public async initiateScrollSearch(index: string, body: any): Promise<any> {
+  public async initiateScrollSearch(index: string, body: PaginationQuery): Promise<any> {
     return this.opensearchClient.search({
       index,
       body,
@@ -145,7 +146,7 @@ export class OpensearchRequest {
    * @param scrollId get next page result
    * @returns
    */
-  public async scrollDocs(scrollId: any): Promise<any> {
+  public async scrollDocs(scrollId: string): Promise<any> {
     return this.opensearchClient.scroll({
       scroll: "1m",
       scroll_id: scrollId

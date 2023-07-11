@@ -18,6 +18,7 @@ import registryJson from "./../registry.json";
 import categoryJson from "./../dappCategory.json";
 
 import { cloneable, getCatSubCatMapping, getDappId } from "./utils";
+import { ObjectNumberValueType } from "../interfaces/searchOptions";
 
 Dotenv.config();
 
@@ -136,7 +137,7 @@ export class DappStoreRegistry {
 
   public static validateRegistryJson = (json: DAppStoreSchema) => {
     // find duplicate dapp
-    const counts: any = { dappIds: {}, names: {} };
+    const counts: { dappIds: ObjectNumberValueType, names: ObjectNumberValueType } = { dappIds: {}, names: {} };
     const duplicates: string[] = [];
     json.dapps.forEach(dapp => {
       const name = dapp.name.toLowerCase();

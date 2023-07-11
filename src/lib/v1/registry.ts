@@ -4,6 +4,7 @@ import { OpensearchRequest } from "../../handlers";
 import {
   AddDappPayload,
   DAppSchema,
+  DAppSchemaDoc,
   DeleteDappPayload,
   FilterOptions,
   OpenSearchConnectionOptions,
@@ -13,6 +14,7 @@ import {
 import { DappStoreRegistry } from "../";
 import { searchFilters } from "../utils";
 import debug from "debug";
+import { FilterOptionsSearch } from "../../interfaces/searchOptions";
 
 export const searchRegistry = {
   indexPrefix: `${process.env.ENVIRONMENT}_dapp_registries`,
@@ -37,7 +39,7 @@ export class DappStoreRegistryV1 {
   public addBulkDocsToIndex = async (
     index: string,
     dapps: DAppSchema[] = []
-  ): Promise<any> => {
+  ) => {
     if (!dapps.length) {
       const dappsResponse = await this.dappStoreRegistry.registry();
       dapps = dappsResponse.dapps.map(x => {
@@ -54,7 +56,7 @@ export class DappStoreRegistryV1 {
         subCategoryKeyword: d.subCategory,
         dappIdKeyword: d.dappId,
         ...d
-      };
+      } as DAppSchemaDoc;
     });
     return this.openSearchApis.createBulkDoc(index, dappDocs);
   };
@@ -103,8 +105,8 @@ export class DappStoreRegistryV1 {
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters("", filterOpts);
 
-    if (finalQuery.from + finalQuery.size > MAX_RESULT_WINDOW)
-      return this.maxWindowError(finalQuery, limit);
+    if ((finalQuery.from || 0)+ finalQuery.size > MAX_RESULT_WINDOW)
+      return this.maxWindowError(filterOpts, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
       searchRegistry.alias,
@@ -152,7 +154,7 @@ export class DappStoreRegistryV1 {
     await this.openSearchApis.createDoc(searchRegistry.alias, {
       id: dapp.dappId,
       nameKeyword: dapp.name,
-      subCategoryKeyword: dapp.subCategory,
+      subCategoryKeyword: dapp.subCategory as string,
       dappIdKeyword: dapp.dappId,
       ...dapp
     });
@@ -196,12 +198,12 @@ export class DappStoreRegistryV1 {
    */
   public search = async (
     queryTxt: string,
-    filterOpts: FilterOptions = { isListed: "true" }
+    filterOpts: FilterOptionsSearch = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters(queryTxt, filterOpts);
 
-    if (finalQuery.from + finalQuery.size > MAX_RESULT_WINDOW)
-      return this.maxWindowError(finalQuery, limit);
+    if ((finalQuery.from || 0) + finalQuery.size > MAX_RESULT_WINDOW)
+      return this.maxWindowError(filterOpts, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
       searchRegistry.alias,
@@ -219,7 +221,7 @@ export class DappStoreRegistryV1 {
       message: ["success"],
       data: response.map(rs => rs._source),
       pagination: {
-        page: filterOpts.page,
+        page: filterOpts.page as string,
         limit,
         pageCount
       }
@@ -310,6 +312,9 @@ export class DappStoreRegistryV1 {
      */
     await this.openSearchApis.updateDoc(searchRegistry.alias, {
       id: dapp.dappId,
+      nameKeyword: dapp.name,
+      subCategoryKeyword: dapp.subCategory,
+      dappIdKeyword: dapp.dappId,
       ...dapp
     });
     return {
@@ -324,15 +329,15 @@ export class DappStoreRegistryV1 {
    * @param limit limit
    * @returns response
    */
-  private maxWindowError(finalQuery: any, limit: number): StandardResponse {
+  private maxWindowError(finalQuery: FilterOptionsSearch, limit: number): StandardResponse {
     return {
       status: 400,
       message: ["Error: Reached max page allowed, use filters to search"],
       data: [],
       pagination: {
-        page: finalQuery.page,
+        page: finalQuery.page as string,
         limit,
-        pageCount: finalQuery.page - 1
+        pageCount: finalQuery.page as number - 1
       }
     };
   }
@@ -342,12 +347,12 @@ export class DappStoreRegistryV1 {
    * @param filterOpts payload fields
    * @returns
    */
-  public async scrollDocs(filterOpts: any): Promise<StandardResponse> {
+  public async scrollDocs(filterOpts: FilterOptionsSearch): Promise<StandardResponse> {
     const { scrollId = null } = filterOpts;
     let result: SearchResult;
     if (scrollId) result = await this.openSearchApis.scrollDocs(scrollId);
     else {
-      const { finalQuery } = searchFilters("", filterOpts) as any;
+      const { finalQuery } = searchFilters("", filterOpts);
       delete finalQuery.from;
       Object.assign(finalQuery, { size: filterOpts.size || 200 });
       Object.assign(finalQuery, {
