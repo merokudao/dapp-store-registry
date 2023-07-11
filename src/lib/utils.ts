@@ -30,7 +30,13 @@ import dAppImagesSchema from "../schemas/merokuDappStore.dAppImagesSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
-import { CategoryObject, FilterOptionsSearch, ObjectStringValueType, OrderParams, SortByOrderQuery } from "../interfaces/searchOptions";
+import {
+  CategoryObject,
+  FilterOptionsSearch,
+  ObjectStringValueType,
+  OrderParams,
+  SortByOrderQuery
+} from "../interfaces/searchOptions";
 
 const debug = Debug("@merokudao:dapp-store-registry:utils");
 const defaultBoost = process.env.DEFAULT_BOOST || "1";
@@ -298,10 +304,13 @@ export const getCatSubCatMapping = (
   category: string[] = [],
   subCategory: string[] = []
 ) => {
-  const catSubCatMap = categoryJson.reduce((aggs: ObjectStringValueType, value: CategoryObject) => {
-    aggs[value.category] = value.subCategory;
-    return aggs;
-  }, {});
+  const catSubCatMap = categoryJson.reduce(
+    (aggs: ObjectStringValueType, value: CategoryObject) => {
+      aggs[value.category] = value.subCategory;
+      return aggs;
+    },
+    {}
+  );
 
   return category.map(cat => {
     const allSubCat = catSubCatMap[cat];
@@ -351,7 +360,8 @@ export const searchFilters = (
   } = payload;
   let { limit = recordsPerPage, dappId = "" } = payload;
 
-  if (dappId.length && typeof dappId === 'string') dappId = dappId.split(",").map((di: string) => di.trim());
+  if (dappId.length && typeof dappId === "string")
+    dappId = dappId.split(",").map((di: string) => di.trim());
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!isForMatureAudience)
     query.bool.must.push({

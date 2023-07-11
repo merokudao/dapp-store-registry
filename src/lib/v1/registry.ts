@@ -105,7 +105,7 @@ export class DappStoreRegistryV1 {
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters("", filterOpts);
 
-    if ((finalQuery.from || 0)+ finalQuery.size > MAX_RESULT_WINDOW)
+    if ((finalQuery.from || 0) + finalQuery.size > MAX_RESULT_WINDOW)
       return this.maxWindowError(filterOpts, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
@@ -329,7 +329,10 @@ export class DappStoreRegistryV1 {
    * @param limit limit
    * @returns response
    */
-  private maxWindowError(finalQuery: FilterOptionsSearch, limit: number): StandardResponse {
+  private maxWindowError(
+    finalQuery: FilterOptionsSearch,
+    limit: number
+  ): StandardResponse {
     return {
       status: 400,
       message: ["Error: Reached max page allowed, use filters to search"],
@@ -337,7 +340,7 @@ export class DappStoreRegistryV1 {
       pagination: {
         page: finalQuery.page as string,
         limit,
-        pageCount: finalQuery.page as number - 1
+        pageCount: (finalQuery.page as number) - 1
       }
     };
   }
@@ -347,7 +350,9 @@ export class DappStoreRegistryV1 {
    * @param filterOpts payload fields
    * @returns
    */
-  public async scrollDocs(filterOpts: FilterOptionsSearch): Promise<StandardResponse> {
+  public async scrollDocs(
+    filterOpts: FilterOptionsSearch
+  ): Promise<StandardResponse> {
     const { scrollId = null } = filterOpts;
     let result: SearchResult;
     if (scrollId) result = await this.openSearchApis.scrollDocs(scrollId);

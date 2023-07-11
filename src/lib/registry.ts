@@ -137,7 +137,10 @@ export class DappStoreRegistry {
 
   public static validateRegistryJson = (json: DAppStoreSchema) => {
     // find duplicate dapp
-    const counts: { dappIds: ObjectNumberValueType, names: ObjectNumberValueType } = { dappIds: {}, names: {} };
+    const counts: {
+      dappIds: ObjectNumberValueType;
+      names: ObjectNumberValueType;
+    } = { dappIds: {}, names: {} };
     const duplicates: string[] = [];
     json.dapps.forEach(dapp => {
       const name = dapp.name.toLowerCase();

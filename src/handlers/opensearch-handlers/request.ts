@@ -1,7 +1,11 @@
 import { OpensearchClient } from "./connection";
 import * as opensearchConfig from "./config.json";
 import { Client } from "@opensearch-project/opensearch";
-import { DAppSchemaDoc, OpenSearchConnectionOptions, PaginationQuery } from "../../interfaces";
+import {
+  DAppSchemaDoc,
+  OpenSearchConnectionOptions,
+  PaginationQuery
+} from "../../interfaces";
 import { IndicesCreateResponse } from "@opensearch-project/opensearch/api/types";
 
 export const methods = {
@@ -54,7 +58,10 @@ export class OpensearchRequest {
    * @param index index name
    * @param body array of docs
    */
-  public async createBulkDoc(index: string, body: DAppSchemaDoc[]): Promise<any> {
+  public async createBulkDoc(
+    index: string,
+    body: DAppSchemaDoc[]
+  ): Promise<any> {
     return this.opensearchClient.helpers.bulk({
       datasource: body,
       onDocument(doc: DAppSchemaDoc) {
@@ -134,7 +141,10 @@ export class OpensearchRequest {
    * @param body query
    * @returns response
    */
-  public async initiateScrollSearch(index: string, body: PaginationQuery): Promise<any> {
+  public async initiateScrollSearch(
+    index: string,
+    body: PaginationQuery
+  ): Promise<any> {
     return this.opensearchClient.search({
       index,
       body,

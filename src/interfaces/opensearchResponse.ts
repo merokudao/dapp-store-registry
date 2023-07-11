@@ -94,8 +94,8 @@ export interface DeleteDappPayload {
 }
 
 export interface FinalQuery {
-  finalQuery : PaginationQuery,
-  limit: number
+  finalQuery: PaginationQuery;
+  limit: number;
 }
 
 export interface DAppSchemaDoc extends DAppSchema {

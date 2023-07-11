@@ -13,7 +13,7 @@ export interface FilterOptionsSearch {
   limit?: number;
   isListed?: boolean | string;
   page?: string | number;
-  dappId?: string | string [];
+  dappId?: string | string[];
   developer?: { githubID: string };
   isMinted?: boolean | string;
   searchById?: boolean;
@@ -27,11 +27,11 @@ export interface FilterOptionsSearch {
 }
 
 export interface OrderParams {
-  rating?: string
-  visits?: string,
-  installs?: string,
-  listDate?: string,
-  name?: string
+  rating?: string;
+  visits?: string;
+  installs?: string;
+  listDate?: string;
+  name?: string;
 }
 
 export interface SortByOrderQuery {
@@ -40,7 +40,7 @@ export interface SortByOrderQuery {
   "metrics.rating"?: { order: string };
   "metrics.visits"?: { order: string };
   "metrics.installs"?: { order: string };
-  nameKeyword?: {order: string };
+  nameKeyword?: { order: string };
 }
 
 export interface ObjectStringValueType {
