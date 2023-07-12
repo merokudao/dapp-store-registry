@@ -286,7 +286,8 @@
       "referredBy",
       "minted",
       "subCategory",
-      "cdn"
+      "cdn",
+      "whitelistedForStores"
     ]
   }
 }

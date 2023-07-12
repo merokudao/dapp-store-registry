@@ -235,7 +235,7 @@ export class DappStoreRegistry {
     this.searchEngine?.addAll(docs);
   };
 
-  private enrichMetadataForDappStore(storeKey: string, res: DAppSchema[]) {
+  public enrichMetadataForDappStore(storeKey: string, res: DAppSchema[]) {
     const dappStoreEnrichData = dappEnrichCustomDetails.dappStores.find(
       dStores => dStores.key === storeKey
     );
