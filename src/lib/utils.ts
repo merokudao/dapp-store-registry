@@ -608,7 +608,15 @@ export const getDappId = (
       .splice(0, urlSuffix.length - 1)
       .join("");
 
-  const domainProviders = ["vercel", "twitter", "instagram", "bit", "netlify"];
+  const domainProviders = [
+    "vercel",
+    "twitter",
+    "instagram",
+    "bit",
+    "netlify",
+    "ipns.dweb.link",
+    "ipfs.dweb.link"
+  ];
   const [first, start, ...others] = parts[0].split(".").reverse();
   // only for domain providers
   if (domainProviders.includes(start)) {
