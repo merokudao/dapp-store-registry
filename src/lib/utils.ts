@@ -615,7 +615,9 @@ export const getDappId = (
     "bit",
     "netlify",
     "ipns.dweb.link",
-    "ipfs.dweb.link"
+    "ipfs.dweb.link",
+    "github",
+    "gitlab"
   ];
   const [first, start, ...others] = parts[0].split(".").reverse();
   // only for domain providers
