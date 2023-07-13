@@ -287,7 +287,8 @@
       "minted",
       "subCategory",
       "cdn",
-      "whitelistedForStores"
+      "whitelistedForStores",
+      "tokenId"
     ]
   }
 }
