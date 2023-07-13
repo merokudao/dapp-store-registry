@@ -14,7 +14,8 @@
             "isSelfModerated": true,
             "language": ["en"],
             "chains": [137],
-            "category": "infrastructure",
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/QmcwGwXYCNcqjm5nk7QcnmX7JvYZk4ipC54cxKCrXgE6ap/0"
             },
@@ -36,7 +37,8 @@
             "isSelfModerated": true,
             "language": ["en"],
             "chains": [137],
-            "category": "infrastructure",
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
             "images": {
               "logo": "https://gateway.ipfscdn.io/ipfs/QmVYr81A5z6Y9r2eNfVcpyNQQe4KUYARMi5HKPnBnckx9b/0",
               "banner": "https://gateway.ipfscdn.io/ipfs/QmdhgkrQdiv7sAZe3jXQeichgdbGTSkGEkPkGyTqZscCNH/0"
@@ -60,7 +62,8 @@
             "isSelfModerated": true,
             "language": ["en"],
             "chains": [137],
-            "category": "exchange",
+            "category": "finance",
+            "subCategory": "exchanges",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/QmdscBgVV2HZydcfZ1fhBiJRuxEJqfFw23LtzDgKtb4G88/0"
             },
@@ -82,7 +85,8 @@
             "isSelfModerated": true,
             "language": ["en"],
             "chains": [137],
-            "category": "infrastructure",
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
             "images": {
               "logo": "https://gateway.ipfscdn.io/ipfs/QmYPgUHw4XoD6eM6uW3gEALCVGnEuARNaATn9SBP7ivmJn/0",
               "banner": "https://gateway.ipfscdn.io/ipfs/QmdRB7LhnX23QDNmtyUyT3RGhrheHEThqg48g9RTS2VNyP/0"
@@ -106,7 +110,8 @@
             "isSelfModerated": true,
             "language": ["en"],
             "chains": [137],
-            "category": "wallet",
+            "category": "utilities",
+            "subCategory": "wallets",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/Qmd72kxw1M4GNcMGxQPH61yp8mGv43JTPuyqLsxZGEdWvf/0"
             },
@@ -128,13 +133,40 @@
             "isSelfModerated": true,
             "language": ["en"],
             "chains": [137],
-            "category": "wallet",
+            "category": "utilities",
+            "subCategory": "wallets",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/QmbUyB3PiEctJjk5rZx9fvwktBrkEhbPCPX9P3Enngg62d/0"
             },
             "cdn": {
               "images": {
                 "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/opera.app/images/banner.jpeg"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "thegraph.app",
+          "fields": {
+            "name": "The Graph",
+            "description": "The Graph is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.",
+            "appUrl": "https://thegraph.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "isListed": true,
+            "chains": [137],
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmWAPMLiTCVBi3K1BqPEUBgcKoH22kbQ52s5AVQ6guwzZf/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmRz83XfZ8YeVKtE6GaDewTPkhRtfTNRAcdAHmZsvgGSc5/0"
+            },
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/thegraph.app/images/logo.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/thegraph.app/images/banner.png"
               }
             }
           }
