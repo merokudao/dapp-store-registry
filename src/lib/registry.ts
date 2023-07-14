@@ -19,6 +19,7 @@ import categoryJson from "./../dappCategory.json";
 import dappEnrichCustomDetails from "./../dappEnrichCustom.json";
 
 import { cloneable, getCatSubCatMapping, getDappId } from "./utils";
+import { ObjectNumberValueType } from "../interfaces/searchOptions";
 import _ from "lodash";
 
 Dotenv.config();
@@ -138,7 +139,10 @@ export class DappStoreRegistry {
 
   public static validateRegistryJson = (json: DAppStoreSchema) => {
     // find duplicate dapp
-    const counts: any = { dappIds: {}, names: {} };
+    const counts: {
+      dappIds: ObjectNumberValueType;
+      names: ObjectNumberValueType;
+    } = { dappIds: {}, names: {} };
     const duplicates: string[] = [];
     json.dapps.forEach(dapp => {
       const name = dapp.name.toLowerCase();

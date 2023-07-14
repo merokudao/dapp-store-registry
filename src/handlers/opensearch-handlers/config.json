@@ -244,6 +244,9 @@
       },
       "whitelistedForStores": {
         "type": "text"
+      },
+      "isVerified": {
+        "type": "boolean"
       }
     }
   },
@@ -287,7 +290,8 @@
       "minted",
       "subCategory",
       "cdn",
-      "whitelistedForStores"
+      "whitelistedForStores",
+      "tokenId"
     ]
   }
 }

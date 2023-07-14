@@ -11,7 +11,8 @@ import {
   DappEnrichPayload,
   EnrichSchema,
   ScreenShotSchema,
-  DAppSchema
+  DAppSchema,
+  FinalQuery
 } from "../interfaces";
 import storesJson from "../dappStore.json";
 import registryJson from "./../registry.json";
@@ -30,6 +31,13 @@ import dAppEnrichImagesSchema from "../schemas/merokuDappStore.dAppEnrichImagesS
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
+import {
+  CategoryObject,
+  FilterOptionsSearch,
+  ObjectStringValueType,
+  OrderParams,
+  SortByOrderQuery
+} from "../interfaces/searchOptions";
 
 const debug = Debug("@merokudao:dapp-store-registry:utils");
 const defaultBoost = process.env.DEFAULT_BOOST || "1";
@@ -70,10 +78,10 @@ export const recordsPerPageAutoComplete = 7;
  * @param params
  * @returns
  */
-export const orderBy = (params: any) => {
-  const order: any = [{ _score: { order: "desc" } }];
+export const orderBy = (params: OrderParams) => {
+  const order: SortByOrderQuery[] = [{ _score: { order: "desc" } }];
   try {
-    params = JSON.parse(params);
+    params = JSON.parse(params as string);
   } catch (error) {
     //
   }
@@ -299,10 +307,13 @@ export const getCatSubCatMapping = (
   category: string[] = [],
   subCategory: string[] = []
 ) => {
-  const catSubCatMap = categoryJson.reduce((aggs: any, value) => {
-    aggs[value.category] = value.subCategory;
-    return aggs;
-  }, {});
+  const catSubCatMap = categoryJson.reduce(
+    (aggs: ObjectStringValueType, value: CategoryObject) => {
+      aggs[value.category] = value.subCategory;
+      return aggs;
+    },
+    {}
+  );
 
   return category.map(cat => {
     const allSubCat = catSubCatMap[cat];
@@ -318,9 +329,9 @@ export const getCatSubCatMapping = (
 
 export const searchFilters = (
   search: string,
-  payload: any,
+  payload: FilterOptionsSearch,
   autoComplete = false
-): { finalQuery: PaginationQuery; limit: number } => {
+): FinalQuery => {
   const query: OpenSearchCompositeQuery = {
     bool: {
       must: [],
@@ -352,7 +363,8 @@ export const searchFilters = (
   } = payload;
   let { limit = recordsPerPage, dappId = "" } = payload;
 
-  if (dappId.length) dappId = dappId.split(",").map((di: string) => di.trim());
+  if (dappId.length && typeof dappId === "string")
+    dappId = dappId.split(",").map((di: string) => di.trim());
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!isForMatureAudience)
     query.bool.must.push({
@@ -437,6 +449,7 @@ export const searchFilters = (
     query.bool.filter.push({
       term: { isListed: isListed === "true" ? true : false }
     });
+    // query.bool.filter.push({ term: { isVerified: true} });
   }
 
   if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
@@ -451,7 +464,10 @@ export const searchFilters = (
       match: { isListed: isListed === "true" ? true : false }
     });
 
-  payload.page = parseInt(page);
+  // if (!ownerAddress)
+  //   query.bool.filter.push({ term: { isVerified: true} });
+
+  payload.page = parseInt(page as string);
   payload.page = payload.page > 0 ? payload.page : 1;
   const limitV1 = autoComplete ? recordsPerPageAutoComplete : recordsPerPage;
   if (limit > limitV1) limit = limitV1;
@@ -460,7 +476,7 @@ export const searchFilters = (
     query,
     from: (payload.page - 1) * limit,
     size: limit,
-    sort: orderBy(payload.orderBy || {})
+    sort: orderBy((payload.orderBy || {}) as OrderParams)
   };
 
   return { finalQuery, limit };
