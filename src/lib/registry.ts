@@ -16,9 +16,11 @@ import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
 import categoryJson from "./../dappCategory.json";
+import dappEnrichCustomDetails from "./../dappEnrichCustom.json";
 
 import { cloneable, getCatSubCatMapping, getDappId } from "./utils";
 import { ObjectNumberValueType } from "../interfaces/searchOptions";
+import _ from "lodash";
 
 Dotenv.config();
 
@@ -237,6 +239,18 @@ export class DappStoreRegistry {
     this.searchEngine?.addAll(docs);
   };
 
+  public enrichMetadataForDappStore(storeKey: string, res: DAppSchema[]) {
+    const dappStoreEnrichData = dappEnrichCustomDetails.dappStores.find(
+      dStores => dStores.key === storeKey
+    );
+    if (!dappStoreEnrichData) return res;
+    dappStoreEnrichData.dappEnrich.forEach(dappEnrichData => {
+      const idx = res.findIndex(r => r.dappId === dappEnrichData.dappId);
+      if (idx !== -1) res[idx] = _.merge(res[idx], dappEnrichData.fields);
+    });
+    return res;
+  }
+
   private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
     let res = dapps;
 
@@ -344,6 +358,7 @@ export class DappStoreRegistry {
           d =>
             d.whitelistedForStores && d.whitelistedForStores.includes(storeKey)
         );
+        res = this.enrichMetadataForDappStore(storeKey, res);
       }
     }
 

@@ -34,10 +34,16 @@ export interface PaginationQuery {
   sort: object[];
 }
 
+export interface DAppSearchDataSchema extends DAppSchema {
+  tokenId?: string;
+  ownerAddress?: string;
+  metrics?: object;
+}
+
 export interface DAppSchemaSearch {
   id: string;
   index: string;
-  _source: DAppSchema;
+  _source: DAppSearchDataSchema;
 }
 
 export interface SearchResult {

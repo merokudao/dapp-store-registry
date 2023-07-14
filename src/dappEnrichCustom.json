@@ -1,0 +1,177 @@
+{
+  "dappStores": [
+    {
+      "key": "unstoppable-domains-apps-store",
+      "dappEnrich": [
+        {
+          "dappId": "polygon.app",
+          "fields": {
+            "name": "Polygon",
+            "description": "Polygon is the most proven way to build and scale your projects on Ethereum, the world's largest blockchain ecosystem.",
+            "appUrl": "https://polygon.technology/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "chains": [137],
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
+            "images": {
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmcwGwXYCNcqjm5nk7QcnmX7JvYZk4ipC54cxKCrXgE6ap/0"
+            },
+            "cdn": {
+              "images": {
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/polygon.app/images/banner.jpeg"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "alchemy.app",
+          "fields": {
+            "name": "Alchemy",
+            "description": "Blockchain API and Node service. Alchemy combines the most powerful developer tools in blockchain with helpful resources, talented community, and legendary support.",
+            "appUrl": "https://www.alchemy.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "chains": [137],
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmVYr81A5z6Y9r2eNfVcpyNQQe4KUYARMi5HKPnBnckx9b/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmdhgkrQdiv7sAZe3jXQeichgdbGTSkGEkPkGyTqZscCNH/0"
+            },
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/alchemy.app/images/logo.jpeg",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/alchemy.app/images/banner.svg"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "blockchain.app",
+          "fields": {
+            "name": "Blockchain.com",
+            "description": "The world’s most popular way to buy, sell, and trade crypto. Trusted by 31 million verified users.",
+            "appUrl": "https://www.blockchain.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "chains": [137],
+            "category": "finance",
+            "subCategory": "exchanges",
+            "images": {
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmdscBgVV2HZydcfZ1fhBiJRuxEJqfFw23LtzDgKtb4G88/0"
+            },
+            "cdn": {
+              "images": {
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/blockchain.app/images/banner.png"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "chain.app",
+          "fields": {
+            "name": "Chainlink",
+            "description": "Connect an Unstoppable Domain to your online identity.",
+            "appUrl": "https://chain.link/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "chains": [137],
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmYPgUHw4XoD6eM6uW3gEALCVGnEuARNaATn9SBP7ivmJn/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmdRB7LhnX23QDNmtyUyT3RGhrheHEThqg48g9RTS2VNyP/0"
+            },
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/chain.app/images/logo.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/chain.app/images/banner.png"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "crypto.app",
+          "fields": {
+            "name": "Crypto.com DeFi Wallet",
+            "description": "Your Crypto. A non-custodial wallet that gives you access to a full suite of DeFi services in one place.",
+            "appUrl": "https://crypto.com/defi-wallet?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "chains": [137],
+            "category": "utilities",
+            "subCategory": "wallets",
+            "images": {
+              "banner": "https://gateway.ipfscdn.io/ipfs/Qmd72kxw1M4GNcMGxQPH61yp8mGv43JTPuyqLsxZGEdWvf/0"
+            },
+            "cdn": {
+              "images": {
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/crypto.app/images/banner.png"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "opera.app",
+          "fields": {
+            "name": "Opera Wallet",
+            "description": "View decentralized websites natively - no plug ins",
+            "appUrl": "https://www.opera.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "chains": [137],
+            "category": "utilities",
+            "subCategory": "wallets",
+            "images": {
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmbUyB3PiEctJjk5rZx9fvwktBrkEhbPCPX9P3Enngg62d/0"
+            },
+            "cdn": {
+              "images": {
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/opera.app/images/banner.jpeg"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "thegraph.app",
+          "fields": {
+            "name": "The Graph",
+            "description": "The Graph is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.",
+            "appUrl": "https://thegraph.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "isListed": true,
+            "chains": [137],
+            "category": "developer-tools",
+            "subCategory": "developer-infra",
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmWAPMLiTCVBi3K1BqPEUBgcKoH22kbQ52s5AVQ6guwzZf/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmRz83XfZ8YeVKtE6GaDewTPkhRtfTNRAcdAHmZsvgGSc5/0"
+            },
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/thegraph.app/images/logo.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/thegraph.app/images/banner.png"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -27,6 +27,7 @@ import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppDownloadBaseUrlsSchema from "../schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json";
 import dAppImagesSchema from "../schemas/merokuDappStore.dAppImagesSchema.json";
+import dAppEnrichImagesSchema from "../schemas/merokuDappStore.dAppEnrichImagesSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
@@ -141,7 +142,9 @@ export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
   } else {
     // dAppStores
     ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppStoreSchema, "dAppStoreSchema");
+    ajv.addSchema(dAppEnrichImagesSchema, "dAppEnrichImagesSchema");
     ajv.addSchema(dAppEnrichSchema, "dappsEnrich");
     validate = ajv.compile(dAppStoresSchema);
   }
@@ -621,7 +624,17 @@ export const getDappId = (
       .splice(0, urlSuffix.length - 1)
       .join("");
 
-  const domainProviders = ["vercel", "twitter", "instagram", "bit", "netlify"];
+  const domainProviders = [
+    "vercel",
+    "twitter",
+    "instagram",
+    "bit",
+    "netlify",
+    "ipns.dweb.link",
+    "ipfs.dweb.link",
+    "github",
+    "gitlab"
+  ];
   const [first, start, ...others] = parts[0].split(".").reverse();
   // only for domain providers
   if (domainProviders.includes(start)) {
