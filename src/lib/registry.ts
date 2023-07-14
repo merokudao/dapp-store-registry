@@ -40,7 +40,7 @@ export class DappStoreRegistry {
 
   // private lastRegistryCheckedAt: Date | undefined;
 
-  private initialized = false;
+  // private initialized = false;
 
   private readonly githubOwner = "merokudao";
   private readonly githubRepo = "dapp-store-registry";
@@ -179,7 +179,9 @@ export class DappStoreRegistry {
     return [valid, JSON.stringify(validate.errors)];
   };
 
-  public registry = async (): Promise<DAppStoreSchema> => {
+  public registry = async (
+    isBuildingSearchIndex = false
+  ): Promise<DAppStoreSchema> => {
     const cachedRegistry = await redisClient.get(DAPP_REGISTRY_CACHE);
     if (cachedRegistry.length) {
       const parsedRegistry = JSON.parse(cachedRegistry) as DAppStoreSchema;
@@ -199,6 +201,7 @@ export class DappStoreRegistry {
         JSON.stringify(cachedRegistryRemote),
         DappStoreRegistry.TTL
       );
+      !isBuildingSearchIndex && this.buildSearchIndex(cachedRegistryRemote);
       return cachedRegistryRemote as DAppStoreSchema;
     } else if (this.strategy === RegistryStrategy.Static) {
       const cachedRegistry = this.localRegistry();
@@ -207,6 +210,7 @@ export class DappStoreRegistry {
         JSON.stringify(cachedRegistry),
         DappStoreRegistry.TTL
       );
+      !isBuildingSearchIndex && this.buildSearchIndex(cachedRegistry);
       return cachedRegistry as DAppStoreSchema;
     }
     throw new Error(
@@ -246,8 +250,12 @@ export class DappStoreRegistry {
     // return cloneable.deepCopy(this.cachedRegistry);
   };
 
-  private buildSearchIndex = async (): Promise<void> => {
-    const docs = (await this.registry()).dapps;
+  private buildSearchIndex = async (
+    cachedRegistry: DAppStoreSchema | null
+  ): Promise<void> => {
+    const docs =
+      (cachedRegistry && cachedRegistry.dapps) ||
+      (await this.registry(true)).dapps;
     this.searchEngine?.addAll(docs);
   };
 
@@ -391,10 +399,10 @@ export class DappStoreRegistry {
    * @returns A promise that resolves when the registry is initialized
    */
   public async init() {
-    if (!this.initialized) {
-      await this.buildSearchIndex();
-    }
-    this.initialized = true;
+    const docIndexed = this.searchEngine?.documentCount;
+    if (docIndexed && docIndexed > 0) return;
+    await this.buildSearchIndex(null);
+    // this.initialized = true;
   }
 
   /**
