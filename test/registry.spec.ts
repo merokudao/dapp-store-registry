@@ -2,11 +2,13 @@ import { DAppStoreSchema } from "../src/interfaces";
 import { DappStoreRegistry, RegistryStrategy } from "../src/lib/registry";
 import chai from "chai";
 import fs from "fs-extra";
-import nock from "nock";
+// import nock from "nock";
 import Dotenv from "dotenv";
 import parseISO from "date-fns/parseISO";
 import Debug from "debug";
 import fetchMock from "fetch-mock";
+import { redisClient } from "../src/handlers/database/redis";
+import * as sinon from "sinon";
 
 const debug = Debug("@merokudao:dapp-store:registry.spec.ts");
 debug("running tests...");
@@ -21,11 +23,14 @@ const getRegistry = async (
   fixtureRegistryJson: DAppStoreSchema,
   strategy = RegistryStrategy.GitHub
 ) => {
-  nock("https://raw.githubusercontent.com")
-    .get("/merokudao/dapp-store-registry/main/src/registry.json")
-    .twice()
-    .reply(200, fixtureRegistryJson);
+  // nock("https://raw.githubusercontent.com")
+  //   .get("/merokudao/dapp-store-registry/main/src/registry.json")
+  //   .twice()
+  //   .reply(200, fixtureRegistryJson);
 
+  sinon
+    .stub(redisClient, "get")
+    .returns((async () => JSON.stringify(fixtureRegistryJson))());
   const registry = new DappStoreRegistry(strategy);
   await registry.init();
   return registry;
@@ -39,6 +44,9 @@ describe("DappStoreRegistry", () => {
       localRegistryJson = JSON.parse(
         fs.readFileSync("./src/registry.json").toString()
       );
+    });
+    afterEach(() => {
+      sinon.restore();
     });
 
     /**
@@ -72,10 +80,13 @@ describe("DappStoreRegistry", () => {
     });
 
     it("uses the remote registry file upon GitHub RegistryStrategy", async () => {
-      nock("https://raw.githubusercontent.com")
-        .get("/merokudao/dapp-store-registry/main/src/registry.json")
-        .reply(200, localRegistryJson);
+      // nock("https://raw.githubusercontent.com")
+      //   .get("/merokudao/dapp-store-registry/main/src/registry.json")
+      //   .reply(200, localRegistryJson);
 
+      sinon
+        .stub(redisClient, "get")
+        .returns((async () => JSON.stringify(localRegistryJson))());
       const registry = new DappStoreRegistry(RegistryStrategy.GitHub);
       await registry.init();
 
@@ -88,14 +99,18 @@ describe("DappStoreRegistry", () => {
       if (featuredDapps) {
         featuredDapps.should.deep.equal(localRegistryJson.featuredSections);
       }
-
-      nock.cleanAll();
+      sinon.restore();
+      // nock.cleanAll();
     });
 
     it("uses local registry if remote can't be loaded", async () => {
-      nock("https://raw.githubusercontent.com")
-        .get("/merokudao/dapp-store-registry/main/src/registry.json")
-        .reply(404);
+      // nock("https://raw.githubusercontent.com")
+      //   .get("/merokudao/dapp-store-registry/main/src/registry.json")
+      //   .reply(404);
+
+      sinon
+        .stub(redisClient, "get")
+        .returns((async () => JSON.stringify(localRegistryJson))());
       const registry = new DappStoreRegistry(RegistryStrategy.GitHub);
       await registry.init();
 
@@ -107,22 +122,29 @@ describe("DappStoreRegistry", () => {
       }
 
       (await registry.getRegistryTitle()).should.equal(localRegistryJson.title);
-
-      nock.cleanAll();
+      sinon.restore();
+      // nock.cleanAll();
     });
   });
 
   describe("#dApps", () => {
     let registry: DappStoreRegistry;
     let fixtureRegistryJson: DAppStoreSchema;
+    let localRegistryJson: DAppStoreSchema;
 
     before(async () => {
+      localRegistryJson = JSON.parse(
+        fs.readFileSync("./src/registry.json").toString()
+      );
       const content = fs
         .readFileSync("./test/fixtures/registry.json")
         .toString();
 
       fixtureRegistryJson = JSON.parse(content) as DAppStoreSchema;
       registry = await getRegistry(fixtureRegistryJson);
+    });
+    after(() => {
+      sinon.restore();
     });
 
     it("is able to filter results on chainId", async () => {
@@ -333,9 +355,14 @@ describe("DappStoreRegistry", () => {
     });
 
     it("Throw Error if duplicate dappId", async () => {
+      sinon.restore();
+      sinon
+        .stub(redisClient, "get")
+        .returns((async () => JSON.stringify(localRegistryJson))());
       const registry = new DappStoreRegistry(RegistryStrategy.Static);
       const status = await registry.getAllDappIds();
       status.should.equal(200);
+      sinon.restore();
     });
   });
 });

@@ -5,7 +5,7 @@ import MiniSearch from "minisearch";
 import parseISO from "date-fns/parseISO";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
-import crypto from "crypto";
+// import crypto from "crypto";
 import Debug from "debug";
 
 import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
@@ -18,8 +18,11 @@ import registryJson from "./../registry.json";
 import categoryJson from "./../dappCategory.json";
 import dappEnrichCustomDetails from "./../dappEnrichCustom.json";
 
-import { cloneable, getCatSubCatMapping, getDappId } from "./utils";
+import { getCatSubCatMapping, getDappId } from "./utils";
 import _ from "lodash";
+import { redisClient } from "../handlers/database/redis";
+
+const DAPP_REGISTRY_CACHE = "DAPP_REGISTRY_CACHE";
 
 Dotenv.config();
 
@@ -33,9 +36,9 @@ export enum RegistryStrategy {
 export class DappStoreRegistry {
   strategy: RegistryStrategy;
 
-  private static TTL = 10 * 60 * 1000; // 10 minutes
+  private static TTL = 12 * 60 * 60 * 1000; // 12 hours
 
-  private lastRegistryCheckedAt: Date | undefined;
+  // private lastRegistryCheckedAt: Date | undefined;
 
   private initialized = false;
 
@@ -46,7 +49,7 @@ export class DappStoreRegistry {
 
   private searchEngine: MiniSearch<any> | undefined;
 
-  private cachedRegistry: DAppStoreSchema | undefined;
+  // private cachedRegistry: DAppStoreSchema | undefined;
 
   constructor(strategy: RegistryStrategy = RegistryStrategy.GitHub) {
     this.strategy = strategy;
@@ -177,57 +180,70 @@ export class DappStoreRegistry {
   };
 
   public registry = async (): Promise<DAppStoreSchema> => {
-    if (!this.cachedRegistry) {
-      debug(
-        "registry not cached. fetching with strategy " + this.strategy + "..."
-      );
-      switch (this.strategy) {
-        case RegistryStrategy.GitHub:
-          this.cachedRegistry = await this.queryRemoteRegistry(
-            this.registryRemoteUrl
-          );
-          this.lastRegistryCheckedAt = new Date();
-          break;
-        case RegistryStrategy.Static:
-          this.cachedRegistry = this.localRegistry();
-          break;
-        default:
-          throw new Error(
-            `@merokudao/dapp-store-registry: invalid registry strategy ${this.strategy}`
-          );
-          break;
-      }
-      // this.searchEngine?.addAll(this.cachedRegistry.dapps);
-    } else {
-      if (
-        this.lastRegistryCheckedAt &&
-        new Date().getTime() - this.lastRegistryCheckedAt.getTime() <
-          DappStoreRegistry.TTL
-      ) {
-        debug("registry cached. returning...");
-        return cloneable.deepCopy(this.cachedRegistry);
-      }
+    const cachedRegistry = await redisClient.get(DAPP_REGISTRY_CACHE);
+    if (cachedRegistry.length) {
+      const parsedRegistry = JSON.parse(cachedRegistry) as DAppStoreSchema;
+      debug(`registry cached.,${parsedRegistry.dapps.length}`);
+      return parsedRegistry;
+    }
+    debug(
+      "registry not cached. fetching with strategy " + this.strategy + "..."
+    );
 
-      const remoteRegistry = await this.queryRemoteRegistry(
+    if (this.strategy === RegistryStrategy.GitHub) {
+      const cachedRegistryRemote = await this.queryRemoteRegistry(
         this.registryRemoteUrl
       );
-      const checksumCached = crypto
-        .createHash("md5")
-        .update(JSON.stringify(this.cachedRegistry))
-        .digest("hex");
-      const checksumRemote = crypto
-        .createHash("md5")
-        .update(JSON.stringify(remoteRegistry))
-        .digest("hex");
-      if (checksumCached !== checksumRemote) {
-        debug("registry changed. updating...");
-        this.cachedRegistry = remoteRegistry;
-        this.lastRegistryCheckedAt = new Date();
-        // this.searchEngine?.addAll(this.cachedRegistry.dapps);
-      }
+      redisClient.set(
+        DAPP_REGISTRY_CACHE,
+        JSON.stringify(cachedRegistryRemote),
+        DappStoreRegistry.TTL
+      );
+      return cachedRegistryRemote as DAppStoreSchema;
+    } else if (this.strategy === RegistryStrategy.Static) {
+      const cachedRegistry = this.localRegistry();
+      redisClient.set(
+        DAPP_REGISTRY_CACHE,
+        JSON.stringify(cachedRegistry),
+        DappStoreRegistry.TTL
+      );
+      return cachedRegistry as DAppStoreSchema;
     }
+    throw new Error(
+      `@merokudao/dapp-store-registry: invalid registry strategy ${this.strategy}`
+    );
+    // }
+    // this.searchEngine?.addAll(this.cachedRegistry.dapps);
+    // } else {
+    // if (
+    //   this.lastRegistryCheckedAt &&
+    //   new Date().getTime() - this.lastRegistryCheckedAt.getTime() <
+    //     DappStoreRegistry.TTL
+    // ) {
+    //   debug("registry cached. returning...");
+    //   return cloneable.deepCopy(this.cachedRegistry);
+    // }
 
-    return cloneable.deepCopy(this.cachedRegistry);
+    // const remoteRegistry = await this.queryRemoteRegistry(
+    //   this.registryRemoteUrl
+    // );
+    // const checksumCached = crypto
+    //   .createHash("md5")
+    //   .update(JSON.stringify(this.cachedRegistry))
+    //   .digest("hex");
+    // const checksumRemote = crypto
+    //   .createHash("md5")
+    //   .update(JSON.stringify(remoteRegistry))
+    //   .digest("hex");
+    // if (checksumCached !== checksumRemote) {
+    //   debug("registry changed. updating...");
+    //   this.cachedRegistry = remoteRegistry;
+    //   this.lastRegistryCheckedAt = new Date();
+    //   // this.searchEngine?.addAll(this.cachedRegistry.dapps);
+    // }
+    // }
+
+    // return cloneable.deepCopy(this.cachedRegistry);
   };
 
   private buildSearchIndex = async (): Promise<void> => {
@@ -468,6 +484,19 @@ export class DappStoreRegistry {
     } catch (error) {
       debug(`Error occurred: ${error}`);
       return 400;
+    }
+  };
+
+  public dropRedisCache = async (key: string) => {
+    try {
+      await redisClient.delete(key);
+      return {
+        status: 200
+      };
+    } catch (error) {
+      return {
+        status: 400
+      };
     }
   };
 }
