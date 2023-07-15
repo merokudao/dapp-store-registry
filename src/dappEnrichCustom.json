@@ -170,6 +170,91 @@
               }
             }
           }
+        },
+        {
+          "dappId": "earni.app",
+          "fields": {
+            "name": "Earnifi",
+            "description": "Find airdrops, token mints and more. Notified folks over $150 million of zero-spam airdrops. Ran by Bankless.",
+            "appUrl": "https://earni.fi?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "images": {
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmQxmgtFMrtLM9XT3LudrcC754dCh69DVDqLRw3FMCanaq/0"
+            },
+            "minAge": 18,
+            "isForMatureAudience": true,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "availableOnPlatform": ["web"],
+            "category": "finance",
+            "chains": [137],
+            "cdn": {
+              "images": {
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/earni.app/images/banner.jpeg"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "kazm.app",
+          "fields": {
+            "name": "Kazm",
+            "description": "Kazm drives customer engagement & brand loyalty with the power of web3. We make it easy to launch white-labelled loyalty & membership programs that drive a deeper customer relationship and higher LTVs - without writing code. We plug into every customer touchpoint - including smart contracts, web2 socials and 1st party apps - and make it easy to recognize, engage, and reward members everywhere with no-code gamification and the power of web3.",
+            "appUrl": "https://kazm.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmVgEVCHEXTsejfkHRzekZt625nbdu8QkX5o2RHaJVpENB/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmXAiruhkzehNa8hxpjqqiaAENcWephTFYkqdGCYL91jjc/0",
+              "screenshots": [
+                "https://gateway.ipfscdn.io/ipfs/QmZgejc2uUcf88iC1y8mLogC1Ab5Auny3AEejPxntZhBAG/0",
+                "https://gateway.ipfscdn.io/ipfs/QmYh2QH7qSNEkYPw2zZEd2qY52YAAcgKYjt411F7cUJAbW/0",
+                "https://gateway.ipfscdn.io/ipfs/QmVq8fTkFnTa4h87GtcoL9vpjLoxvPUZjgaxjGYfXc3Wpq/0",
+                "https://gateway.ipfscdn.io/ipfs/QmX76VuabBwbGUUzuMdi6WK3A3GbeakWr6tVh8KsfhNWqR/0",
+                "https://gateway.ipfscdn.io/ipfs/QmVyKpSdXzmszESiU1Ak2QDMtrRYXGsk3S7qM4NXqz1Pr6/0"
+              ]
+            },
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "availableOnPlatform": ["web"],
+            "category": "business",
+            "chains": [137],
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/kazm.app/images/logo.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/kazm.app/images/banner.png",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/kazm.app/images/screenshots-0.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/kazm.app/images/screenshots-1.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/kazm.app/images/screenshots-2.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/kazm.app/images/screenshots-3.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/kazm.app/images/screenshots-4.png"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "dappId": "charmverse.app",
+          "fields": {
+            "name": "Charmverse",
+            "description": "Charmverse is a Web3 Community Platform that allows you to manage members, coordinate tasks, facilitate decisions, and hold each other accountable. Login with Unstoppable to have your identity known within your DAO.",
+            "appUrl": "https://www.charmverse.io/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "images": {
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmcBzAaQt5jhqLSpFmrd6FPQBaAfnL1YTRHvx4AYDwuk7B/0"
+            },
+            "minAge": 6,
+            "isForMatureAudience": false,
+            "isSelfModerated": true,
+            "language": ["en"],
+            "availableOnPlatform": ["web"],
+            "category": "nft",
+            "chains": [137],
+            "cdn": {
+              "images": {
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/charmverse.app/images/banner.png"
+              }
+            }
+          }
         }
       ]
     }
