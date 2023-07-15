@@ -46,6 +46,13 @@
       "type": "object",
       "description": "A list of countries where the dApp Store is available or unavailable. If this is not present, the dApp is available everywhere. If this is present, then one of either allowedCountries or blockedCountries should be present. If both are present, then the dApp is available in allowedCountries and unavailable in blockedCountries. The name of countries should be in ISO-3661-1 Alpha-2 Code.",
       "properties": {
+        "allowedCountries": {
+          "type": "array",
+          "description": "A list of countries where the dApp Store is available",
+          "items": {
+            "type": "string"
+          }
+        },
         "blockedCountries": {
           "type": "array",
           "description": "A list of countries where the dApp Store is unavailable",
