@@ -216,7 +216,7 @@
             "isSelfModerated": true,
             "language": ["en"],
             "availableOnPlatform": ["web"],
-            "category": "b2b",
+            "category": "business",
             "chains": [137],
             "cdn": {
               "images": {
