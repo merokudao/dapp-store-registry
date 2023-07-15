@@ -20,6 +20,7 @@ export interface StoreSchema {
   language: string;
   tags?: string[];
   geoRestrictions?: {
+    allowedCountries: string[];
     blockedCountries: string[];
   };
   images?: {
