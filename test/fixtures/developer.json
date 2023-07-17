@@ -1,0 +1,24 @@
+{
+  "developers": [
+    {
+      "name": "kailash",
+      "legalName": "kailash",
+      "description": "this is reserved url",
+      "website": "https://meroku.org",
+      "devId": "kailash.dev",
+      "images": {
+        "logo": "https://ipfs-3.thirdwebcdn.com/ipfs/Qmaqim6PYgL4hey5sRhGSnUg7z7wYUCZhVmt2VJvtzawfQ/image0%20(1).jpg"
+      },
+      "credentials": {
+        "id": "1",
+        "type": "github"
+      },
+      "cdn": {
+        "images": {
+          "logo": "https://ipfs-3.thirdwebcdn.com/ipfs/Qmaqim6PYgL4hey5sRhGSnUg7z7wYUCZhVmt2VJvtzawfQ/image0%20(1).jpg"
+        }
+      },
+      "image": "https://ipfs-3.thirdwebcdn.com/ipfs/Qmaqim6PYgL4hey5sRhGSnUg7z7wYUCZhVmt2VJvtzawfQ/image0%20(1).jpg"
+    }
+  ]
+}

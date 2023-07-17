@@ -60,8 +60,7 @@
             "type": "string"
           }
         }
-      },
-      "required": ["blockedCountries"]
+      }
     },
     "url": {
       "type": "string",
