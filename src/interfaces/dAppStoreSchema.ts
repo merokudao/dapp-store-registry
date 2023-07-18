@@ -53,6 +53,13 @@ export interface EnrichFieldSchema {
     banner?: string;
     screenshots?: ScreenShotSchema[];
   };
+  cdn?: {
+    images?: {
+      logo?: string;
+      banner?: string;
+      screenshots?: ScreenShotSchema[];
+    };
+  };
   description?: string;
   minAge?: number;
   isForMatureAudience?: boolean;
