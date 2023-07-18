@@ -1,4 +1,4 @@
-export enum DeveloverVersionControllingTools {
+export enum DevIDPlatforms {
   "github",
   "gitlab",
   "bitbucket"
@@ -10,11 +10,18 @@ export interface DeveloperSchema {
    * Legal name of the developer or the company
    */
   legalName: string;
-  logo?: string;
+  images?: {
+    logo?: string;
+  };
+  cdn?: {
+    images?: {
+      logo?: string;
+    };
+  };
   website: string;
   credentils?: {
     id: string;
-    type: keyof typeof DeveloverVersionControllingTools;
+    type: keyof typeof DevIDPlatforms;
   };
   name?: string;
   description?: string;

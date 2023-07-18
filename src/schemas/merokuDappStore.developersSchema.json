@@ -1,8 +1,8 @@
 {
   "schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.developersSchema.json",
-  "title": "Developer Schema",
-  "description": "A Developer schema",
+  "title": "Developers Schema",
+  "description": "A developers schema",
   "type": "object",
   "properties": {
     "developers": {

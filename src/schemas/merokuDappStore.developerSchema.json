@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
   "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.developerSchema.json",
-  "title": "dApp Schema",
-  "description": "A schema for dapps for dApp Registry",
+  "title": "developer Schema",
+  "description": "A schema for developer for developer Registry",
   "type": "object",
   "properties": {
     "devId": {
       "type": "string",
-      "description": "A Unique ID for each dApp."
+      "description": "A Unique ID for each developer."
     },
     "legalName": {
       "type": "string",
