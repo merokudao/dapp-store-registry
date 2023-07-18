@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://raw.githubusercontent.com/merokudao/dapp-store-registry/main/src/schemas/merokuDappStore.developerSchema.json",
+  "title": "Developer Schema",
+  "description": "A schema for developer for developer Registry",
+  "type": "object",
+  "properties": {
+    "devId": {
+      "type": "string",
+      "description": "A Unique ID for each developer."
+    },
+    "legalName": {
+      "type": "string",
+      "description": "Legal name of the developer or the company"
+    },
+    "images": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "string",
+          "format": "uri",
+          "description": "A URL to the logo of the developer or the company. Should be square and 512x512 in PNG format"
+        }
+      }
+    },
+    "cdn": {
+      "type": "object",
+      "images": {
+        "type": "object",
+        "properties": {
+          "logo": {
+            "type": "string",
+            "format": "uri",
+            "description": "A URL to the logo of the developer or the company. Should be square and 512x512 in PNG format"
+          }
+        }
+      }
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "credentials": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "unique id of credentials"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["github", "gitlab", "bitbucket"],
+          "description": "credentials used of which platform"
+        }
+      }
+    },
+    "name": {
+      "description": "name of the developer. This is used by OpenSea.",
+      "type": "string",
+      "maxLength": 100
+    },
+    "description": {
+      "description": "description of the developer. This is used by OpenSea.",
+      "type": "string"
+    },
+    "external_url": {
+      "type": "string",
+      "description": "The URL of the developer. This is used by OpenSea. This should be set to Meroku Protocol Explorer.",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1
+    },
+    "image": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^(https?|http?|ipfs?)://",
+      "minLength": 1,
+      "description": "A URL to the logo of the developer. Should be square and 512x512 in PNG format. Used by OpenSea. This should automatically be set to the app logo from images field."
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["trait_type", "value"],
+        "properties": {
+          "display_type": {
+            "type": "string",
+            "description": "The display type of the trait"
+          },
+          "trait_type": {
+            "type": "string",
+            "description": "The trait type of the trait"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the trait type"
+          }
+        }
+      }
+    }
+  },
+  "required": ["legalName", "website", "devId"]
+}
