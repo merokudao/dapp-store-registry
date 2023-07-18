@@ -8,15 +8,38 @@ export interface StoresSchema {
  * Schema for dAppStore
  */
 export interface StoreSchema {
-  githubId: string;
+  githubId?: string;
 
   featuredSections: FeaturedSection[];
 
   key: string;
+  name: string;
+  description: string;
+  url: string;
+  minAge: number;
+  language: string;
+  tags?: string[];
+  geoRestrictions?: {
+    allowedCountries: string[];
+    blockedCountries: string[];
+  };
+  images?: {
+    logo?: string;
+    banner?: string;
+    screenshots?: string[];
+  };
+  isForMatureAudience: boolean;
 
-  bannedDAppIds: string[];
+  bannedDAppIds?: string[];
 
   dappsEnrich?: EnrichSchema[];
+  external_url?: string;
+  image?: string;
+  attributes?: {
+    trait_type: string;
+    value: string;
+    display_type: string;
+  }[];
 }
 
 export interface EnrichSchema {

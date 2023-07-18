@@ -10,12 +10,17 @@ import Debug from "debug";
 
 import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
+import dAppDownloadBaseUrlsSchema from "../schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json";
+import dAppImagesSchema from "../schemas/merokuDappStore.dAppImagesSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
 import categoryJson from "./../dappCategory.json";
+import dappEnrichCustomDetails from "./../dappEnrichCustom.json";
 
 import { cloneable, getCatSubCatMapping, getDappId } from "./utils";
+import { ObjectNumberValueType } from "../interfaces/searchOptions";
+import _ from "lodash";
 
 Dotenv.config();
 
@@ -78,7 +83,8 @@ export class DappStoreRegistry {
         "subCategory",
         "expiryDate",
         "referredBy",
-        "whitelistedForStores"
+        "whitelistedForStores",
+        "cdn"
       ],
       searchOptions: { prefix: true }
     });
@@ -133,7 +139,10 @@ export class DappStoreRegistry {
 
   public static validateRegistryJson = (json: DAppStoreSchema) => {
     // find duplicate dapp
-    const counts: any = { dappIds: {}, names: {} };
+    const counts: {
+      dappIds: ObjectNumberValueType;
+      names: ObjectNumberValueType;
+    } = { dappIds: {}, names: {} };
     const duplicates: string[] = [];
     json.dapps.forEach(dapp => {
       const name = dapp.name.toLowerCase();
@@ -161,6 +170,8 @@ export class DappStoreRegistry {
     });
     addFormats(ajv);
     ajv.addSchema(featuredSchema, "featuredSchema");
+    ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
+    ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
     ajv.addFormat("url", /^https?:\/\/.+/);
     const validate = ajv.compile(dAppRegistrySchema);
@@ -227,6 +238,18 @@ export class DappStoreRegistry {
     const docs = (await this.registry()).dapps;
     this.searchEngine?.addAll(docs);
   };
+
+  public enrichMetadataForDappStore(storeKey: string, res: DAppSchema[]) {
+    const dappStoreEnrichData = dappEnrichCustomDetails.dappStores.find(
+      dStores => dStores.key === storeKey
+    );
+    if (!dappStoreEnrichData) return res;
+    dappStoreEnrichData.dappEnrich.forEach(dappEnrichData => {
+      const idx = res.findIndex(r => r.dappId === dappEnrichData.dappId);
+      if (idx !== -1) res[idx] = _.merge(res[idx], dappEnrichData.fields);
+    });
+    return res;
+  }
 
   private filterDapps(dapps: DAppSchema[], filterOpts: FilterOptions) {
     let res = dapps;
@@ -335,6 +358,7 @@ export class DappStoreRegistry {
           d =>
             d.whitelistedForStores && d.whitelistedForStores.includes(storeKey)
         );
+        res = this.enrichMetadataForDappStore(storeKey, res);
       }
     }
 

@@ -1,8 +1,8 @@
-export interface FilterOptions {
+export interface FilterOptionsSearch {
   chainId?: number;
   language?: string;
   availableOnPlatform?: string[];
-  isForMatureAudience?: boolean;
+  isForMatureAudience?: boolean | string;
   minAge?: number;
   listedOnOrAfter?: Date;
   listedOnOrBefore?: Date;
@@ -11,9 +11,47 @@ export interface FilterOptions {
   categories?: string[];
   subCategories?: string[];
   limit?: number;
-  isListed?: boolean;
-  page?: string;
-  dappId?: string;
-  developer?: any;
-  isMinted?: boolean;
+  isListed?: boolean | string;
+  page?: string | number;
+  dappId?: string | string[];
+  developer?: { githubID: string };
+  isMinted?: boolean | string;
+  searchById?: boolean;
+  ownerAddress?: string;
+  tokenIds?: string[];
+  storeKey?: string;
+  orderBy?: string | OrderParams;
+  scrollId?: string;
+  size?: number;
+  _source?: string[];
+}
+
+export interface OrderParams {
+  rating?: string;
+  visits?: string;
+  installs?: string;
+  listDate?: string;
+  name?: string;
+}
+
+export interface SortByOrderQuery {
+  _score?: { order: string };
+  listDate?: { order: string };
+  "metrics.rating"?: { order: string };
+  "metrics.visits"?: { order: string };
+  "metrics.installs"?: { order: string };
+  nameKeyword?: { order: string };
+}
+
+export interface ObjectStringValueType {
+  [key: string]: string[] | string;
+}
+
+export interface CategoryObject {
+  category: string;
+  subCategory: string[];
+}
+
+export interface ObjectNumberValueType {
+  [key: string]: number;
 }
