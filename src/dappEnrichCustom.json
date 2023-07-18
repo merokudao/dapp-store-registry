@@ -10,9 +10,6 @@
             "description": "Polygon is the most proven way to build and scale your projects on Ethereum, the world's largest blockchain ecosystem.",
             "appUrl": "https://polygon.technology/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "minAge": 6,
-            "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
             "chains": [137],
             "category": "developer-tools",
             "subCategory": "developer-infra",
@@ -29,16 +26,10 @@
         {
           "dappId": "alchemy.app",
           "fields": {
-            "name": "Alchemy",
             "description": "Blockchain API and Node service. Alchemy combines the most powerful developer tools in blockchain with helpful resources, talented community, and legendary support.",
             "appUrl": "https://www.alchemy.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "minAge": 6,
             "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "chains": [137],
-            "category": "developer-tools",
-            "subCategory": "developer-infra",
             "images": {
               "logo": "https://gateway.ipfscdn.io/ipfs/QmVYr81A5z6Y9r2eNfVcpyNQQe4KUYARMi5HKPnBnckx9b/0",
               "banner": "https://gateway.ipfscdn.io/ipfs/QmdhgkrQdiv7sAZe3jXQeichgdbGTSkGEkPkGyTqZscCNH/0"
@@ -54,15 +45,10 @@
         {
           "dappId": "blockchain.app",
           "fields": {
-            "name": "Blockchain.com",
             "description": "The world’s most popular way to buy, sell, and trade crypto. Trusted by 31 million verified users.",
             "appUrl": "https://www.blockchain.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "minAge": 6,
             "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "chains": [137],
-            "category": "finance",
             "subCategory": "exchanges",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/QmdscBgVV2HZydcfZ1fhBiJRuxEJqfFw23LtzDgKtb4G88/0"
@@ -77,14 +63,10 @@
         {
           "dappId": "chain.app",
           "fields": {
-            "name": "Chainlink",
             "description": "Connect an Unstoppable Domain to your online identity.",
             "appUrl": "https://chain.link/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "minAge": 6,
             "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "chains": [137],
             "category": "developer-tools",
             "subCategory": "developer-infra",
             "images": {
@@ -106,9 +88,6 @@
             "description": "Your Crypto. A non-custodial wallet that gives you access to a full suite of DeFi services in one place.",
             "appUrl": "https://crypto.com/defi-wallet?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "minAge": 6,
-            "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
             "chains": [137],
             "category": "utilities",
             "subCategory": "wallets",
@@ -125,15 +104,10 @@
         {
           "dappId": "opera.app",
           "fields": {
-            "name": "Opera Wallet",
             "description": "View decentralized websites natively - no plug ins",
             "appUrl": "https://www.opera.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "minAge": 6,
             "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "chains": [137],
-            "category": "utilities",
             "subCategory": "wallets",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/QmbUyB3PiEctJjk5rZx9fvwktBrkEhbPCPX9P3Enngg62d/0"
@@ -148,15 +122,8 @@
         {
           "dappId": "thegraph.app",
           "fields": {
-            "name": "The Graph",
-            "description": "The Graph is an indexing protocol for querying networks like Ethereum and IPFS. Anyone can build and publish open APIs, called subgraphs, making data easily accessible.",
-            "appUrl": "https://thegraph.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "minAge": 6,
             "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "isListed": true,
-            "chains": [137],
             "category": "developer-tools",
             "subCategory": "developer-infra",
             "images": {
@@ -174,19 +141,10 @@
         {
           "dappId": "earni.app",
           "fields": {
-            "name": "Earnifi",
             "description": "Find airdrops, token mints and more. Notified folks over $150 million of zero-spam airdrops. Ran by Bankless.",
-            "appUrl": "https://earni.fi?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/QmQxmgtFMrtLM9XT3LudrcC754dCh69DVDqLRw3FMCanaq/0"
             },
-            "minAge": 18,
-            "isForMatureAudience": true,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "availableOnPlatform": ["web"],
-            "category": "finance",
-            "chains": [137],
             "cdn": {
               "images": {
                 "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/earni.app/images/banner.jpeg"
@@ -197,7 +155,6 @@
         {
           "dappId": "kazm.app",
           "fields": {
-            "name": "Kazm",
             "description": "Kazm drives customer engagement & brand loyalty with the power of web3. We make it easy to launch white-labelled loyalty & membership programs that drive a deeper customer relationship and higher LTVs - without writing code. We plug into every customer touchpoint - including smart contracts, web2 socials and 1st party apps - and make it easy to recognize, engage, and reward members everywhere with no-code gamification and the power of web3.",
             "appUrl": "https://kazm.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "images": {
@@ -211,11 +168,6 @@
                 "https://gateway.ipfscdn.io/ipfs/QmVyKpSdXzmszESiU1Ak2QDMtrRYXGsk3S7qM4NXqz1Pr6/0"
               ]
             },
-            "minAge": 6,
-            "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "availableOnPlatform": ["web"],
             "category": "business",
             "chains": [137],
             "cdn": {
@@ -236,22 +188,41 @@
         {
           "dappId": "charmverse.app",
           "fields": {
-            "name": "Charmverse",
-            "description": "Charmverse is a Web3 Community Platform that allows you to manage members, coordinate tasks, facilitate decisions, and hold each other accountable. Login with Unstoppable to have your identity known within your DAO.",
-            "appUrl": "https://www.charmverse.io/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
             "images": {
               "banner": "https://gateway.ipfscdn.io/ipfs/QmcBzAaQt5jhqLSpFmrd6FPQBaAfnL1YTRHvx4AYDwuk7B/0"
             },
-            "minAge": 6,
-            "isForMatureAudience": false,
-            "isSelfModerated": true,
-            "language": ["en"],
-            "availableOnPlatform": ["web"],
-            "category": "nft",
-            "chains": [137],
             "cdn": {
               "images": {
                 "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/charmverse.app/images/banner.png"
+              }
+            }
+          }
+        },
+        {
+          "dappId": "isocks.app",
+          "fields": {
+            "name": "iSocks NFT"
+          }
+        },
+        {
+          "dappId": "rewardsbunny.app",
+          "fields": {
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmZSbXh8g4PbahnYHaxn7jAucJCPnnZGr2fKX7arL3iS2T/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmS2GhrHHv5UXC2Y52YUboaFNACA5dnKokiDZwnwMhcmyP/0",
+              "screenshots": [
+                "https://gateway.ipfscdn.io/ipfs/Qmc8DygN3KtX2rUzSRwWR8eqTCnp2nZRakRJbYiFmzm1N1/0",
+                "https://gateway.ipfscdn.io/ipfs/Qmcq4V9TmGsPAJGxx8g3GjjaQK9uGUbA42cfHsM2WNRhMC/0"
+              ]
+            },
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/rewardsbunny.app/images/logo.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/rewardsbunny.app/images/banner.png",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/rewardsbunny.app/images/screenshots-0.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/rewardsbunny.app/images/screenshots-1.png"
+                ]
               }
             }
           }
