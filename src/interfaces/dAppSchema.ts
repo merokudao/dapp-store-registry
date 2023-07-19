@@ -1,3 +1,5 @@
+import { DeveloperSchema } from "./developerSchema";
+
 export const dAppDeploymentPlatforms = ["ios", "web", "android"] as const;
 
 export type DAppDeploymentPlatform = (typeof dAppDeploymentPlatforms)[number];
@@ -136,15 +138,7 @@ export interface DAppSchema {
     blockedCountries?: string[];
   };
 
-  developer?: {
-    /**
-     * Legal name of the developer or the company
-     */
-    legalName: string;
-    logo?: string;
-    website: string;
-    githubID?: string;
-  };
+  developer?: DeveloperSchema;
   /**
    * @minItems 1
    */

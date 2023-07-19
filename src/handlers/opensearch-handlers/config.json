@@ -142,8 +142,15 @@
           "website": {
             "type": "keyword"
           },
-          "githubID": {
-            "type": "keyword"
+          "credentials": {
+            "properties": {
+              "id": {
+                "type": "keyword"
+              },
+              "type": {
+                "type": "keyword"
+              }
+            }
           }
         }
       },

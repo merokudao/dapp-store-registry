@@ -12,6 +12,7 @@ import dAppRegistrySchema from "../schemas/merokuDappStore.registrySchema.json";
 import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppDownloadBaseUrlsSchema from "../schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json";
 import dAppImagesSchema from "../schemas/merokuDappStore.dAppImagesSchema.json";
+import developerSchema from "../schemas/merokuDappStore.developerSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 
 import registryJson from "./../registry.json";
@@ -172,6 +173,7 @@ export class DappStoreRegistry {
     ajv.addSchema(featuredSchema, "featuredSchema");
     ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
     ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
+    ajv.addSchema(developerSchema, "developerSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
     ajv.addFormat("url", /^https?:\/\/.+/);
     const validate = ajv.compile(dAppRegistrySchema);
@@ -348,8 +350,8 @@ export class DappStoreRegistry {
       });
 
       if (filterOpts.developer) {
-        const developerId = filterOpts.developer.githubID;
-        res = res.filter(d => d.developer?.githubID === developerId);
+        const developerId = filterOpts.developer?.id;
+        res = res.filter(d => d.developer?.credentials?.id === developerId);
       }
 
       if (filterOpts.storeKey) {
