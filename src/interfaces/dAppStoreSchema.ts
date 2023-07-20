@@ -10,14 +10,14 @@ export interface StoresSchema {
 export interface StoreSchema {
   githubId?: string;
 
-  featuredSections: FeaturedSection[];
+  featuredSections?: FeaturedSection[];
 
   key: string;
   name: string;
   description: string;
   url: string;
   minAge: number;
-  language: string;
+  language: string[];
   tags?: string[];
   geoRestrictions?: {
     allowedCountries: string[];
@@ -27,6 +27,13 @@ export interface StoreSchema {
     logo?: string;
     banner?: string;
     screenshots?: string[];
+  };
+  cdn?: {
+    images?: {
+      logo?: string;
+      banner?: string;
+      screenshots?: string[];
+    };
   };
   isForMatureAudience: boolean;
 
@@ -52,6 +59,13 @@ export interface EnrichFieldSchema {
     logo?: string;
     banner?: string;
     screenshots?: ScreenShotSchema[];
+  };
+  cdn?: {
+    images?: {
+      logo?: string;
+      banner?: string;
+      screenshots?: ScreenShotSchema[];
+    };
   };
   description?: string;
   minAge?: number;

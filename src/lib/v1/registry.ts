@@ -6,6 +6,7 @@ import {
   DAppSchema,
   DAppSchemaDoc,
   DeleteDappPayload,
+  DocsCountResponse,
   OpenSearchConnectionOptions,
   SearchResult,
   StandardResponse
@@ -104,8 +105,8 @@ export class DappStoreRegistryV1 {
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters("", filterOpts);
 
-    if ((finalQuery.from || 0) + finalQuery.size > MAX_RESULT_WINDOW)
-      return this.maxWindowError(filterOpts, limit);
+    if ((finalQuery.from || 0) + (finalQuery.size || 0) > MAX_RESULT_WINDOW)
+      return this.maxWindowError(finalQuery, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
       searchRegistry.alias,
@@ -200,9 +201,8 @@ export class DappStoreRegistryV1 {
     filterOpts: FilterOptionsSearch = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters(queryTxt, filterOpts);
-
-    if ((finalQuery.from || 0) + finalQuery.size > MAX_RESULT_WINDOW)
-      return this.maxWindowError(filterOpts, limit);
+    if ((finalQuery.from || 0) + (finalQuery.size || 0) > MAX_RESULT_WINDOW)
+      return this.maxWindowError(finalQuery, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
       searchRegistry.alias,
@@ -388,6 +388,53 @@ export class DappStoreRegistryV1 {
    */
   public async deleteScroller(ids: string[]) {
     return this.openSearchApis.deleteScrollIds(ids);
+  }
+
+  public async getTotalDocsCount(
+    filterOpts: FilterOptionsSearch = { isListed: "true" }
+  ): Promise<DocsCountResponse> {
+    const { finalQuery } = searchFilters("", filterOpts);
+    delete finalQuery._source;
+    delete finalQuery.from;
+    delete finalQuery.size;
+    delete finalQuery.sort;
+    const res = await this.openSearchApis.getTotalDocsCount(
+      searchRegistry.alias,
+      finalQuery
+    );
+    return {
+      status: 200,
+      message: ["success"],
+      countRes: res.body
+    };
+  }
+
+  /**
+   * get all dapp Ids matched for query
+   * @param dappId
+   * @returns all Matched dappIds
+   */
+  public async getDappIDs(dappId: string): Promise<DocsCountResponse> {
+    const { finalQuery } = searchFilters("", {
+      dappId,
+      searchById: true
+    });
+    Object.assign(finalQuery, { _source: ["dappId"] });
+    const result: SearchResult = await this.openSearchApis.search(
+      searchRegistry.alias,
+      finalQuery
+    );
+    const {
+      hits: { hits: res }
+    } = result.body || { hits: { hits: [] } };
+    return {
+      status: 200,
+      message: ["success"],
+      countRes: {
+        count: res.length,
+        dappIds: res && res.map(rs => rs._source.dappId)
+      }
+    };
   }
 
   /**

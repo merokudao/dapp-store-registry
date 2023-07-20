@@ -175,6 +175,22 @@ export class OpensearchRequest {
   }
 
   /**
+   * get all documents based on filters
+   * @param index
+   * @param body
+   * @returns
+   */
+  public async getTotalDocsCount(
+    index: string,
+    body: PaginationQuery
+  ): Promise<any> {
+    return this.opensearchClient.count({
+      index,
+      body
+    });
+  }
+
+  /**
    * update multiple docs in a single request
    * @param index string
    * @param body doc[]
