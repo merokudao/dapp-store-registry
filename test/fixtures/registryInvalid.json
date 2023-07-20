@@ -19,6 +19,7 @@
       "availableOnPlatform": ["web"],
       "listDate": "2022-12-12",
       "developer": {
+        "devId": "bitpack.example.dev",
         "legalName": "Bitpack",
         "website": "https://something.com"
       },

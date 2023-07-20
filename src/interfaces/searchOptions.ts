@@ -14,7 +14,7 @@ export interface FilterOptionsSearch {
   isListed?: boolean | string;
   page?: string | number;
   dappId?: string | string[];
-  developer?: { githubID: string };
+  developer?: { id: string };
   isMinted?: boolean | string;
   searchById?: boolean;
   ownerAddress?: string;
