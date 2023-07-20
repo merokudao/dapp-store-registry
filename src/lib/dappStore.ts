@@ -3,6 +3,7 @@ import { RegistryStrategy } from "./registry";
 import { cacheStoreOrRegistry } from "./utils";
 import { EnrichSchema, StoresSchema } from "../interfaces/dAppStoreSchema";
 import { FeaturedSection } from "../interfaces";
+import dAppEnrichImagesSchema from "../schemas/merokuDappStore.dAppEnrichImagesSchema.json";
 import dAppEnrichSchema from "../schemas/merokuDappStore.dAppEnrich.json";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
@@ -88,23 +89,15 @@ export class DappStores {
    * @param json
    * @returns
    */
-  public validateDappEnrichSchema = (payload: EnrichSchema[]) => {
-    const uniqueIDs = payload.map(j => j.dappId);
-    const uniqueDappIDs = Array.from(new Set(uniqueIDs));
-    if (uniqueIDs.length !== uniqueDappIDs.length) {
-      throw new Error(
-        `@merokudao/dapp-store-registry: enrich dapps details is invalid.`
-      );
-    }
-
+  public validateDappEnrichSchema = (payload: EnrichSchema) => {
     const ajv = new Ajv2019({
       strict: false
     });
     addFormats(ajv);
+    ajv.addSchema(dAppEnrichImagesSchema, "dAppEnrichImagesSchema");
     ajv.addSchema(dAppEnrichSchema, "dAppEnrichSchema");
     ajv.addFormat("url", /^https?:\/\/.+/);
     const validate = ajv.compile(dAppEnrichSchema);
-
     const valid = validate(payload);
     debug(JSON.stringify(validate.errors));
     return [valid, JSON.stringify(validate.errors)];

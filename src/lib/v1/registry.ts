@@ -392,17 +392,50 @@ export class DappStoreRegistryV1 {
   }
 
   public async getTotalDocsCount(
-    filterOpts: FilterOptions = { isListed: "true" }
-  ) {
+    filterOpts: FilterOptionsSearch = { isListed: "true" }
+  ): Promise<DocsCountResponse> {
     const { finalQuery } = searchFilters("", filterOpts);
     delete finalQuery._source;
     delete finalQuery.from;
     delete finalQuery.size;
     delete finalQuery.sort;
-    return this.openSearchApis.getTotalDocsCount(
+    const res = await this.openSearchApis.getTotalDocsCount(
       searchRegistry.alias,
       finalQuery
-    ) as Promise<DocsCountResponse>;
+    );
+    return {
+      status: 200,
+      message: ["success"],
+      countRes: res.body
+    };
+  }
+
+  /**
+   * get all dapp Ids matched for query
+   * @param dappId
+   * @returns all Matched dappIds
+   */
+  public async getDappIDs(dappId: string): Promise<DocsCountResponse> {
+    const { finalQuery } = searchFilters("", {
+      dappId,
+      searchById: true
+    });
+    Object.assign(finalQuery, { _source: ["dappId"] });
+    const result: SearchResult = await this.openSearchApis.search(
+      searchRegistry.alias,
+      finalQuery
+    );
+    const {
+      hits: { hits: res }
+    } = result.body || { hits: { hits: [] } };
+    return {
+      status: 200,
+      message: ["success"],
+      countRes: {
+        count: res.length,
+        dappIds: res && res.map(rs => rs._source.dappId)
+      }
+    };
   }
 
   /**

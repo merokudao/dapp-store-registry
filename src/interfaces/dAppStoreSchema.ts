@@ -10,14 +10,14 @@ export interface StoresSchema {
 export interface StoreSchema {
   githubId?: string;
 
-  featuredSections: FeaturedSection[];
+  featuredSections?: FeaturedSection[];
 
   key: string;
   name: string;
   description: string;
   url: string;
   minAge: number;
-  language: string;
+  language: string[];
   tags?: string[];
   geoRestrictions?: {
     allowedCountries: string[];

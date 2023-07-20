@@ -99,10 +99,10 @@ export interface DeleteDappPayload {
   org: string | undefined;
 }
 
-export interface DocsCountResponse {
-  count: number;
-  _shard: {
-    total: number;
+export interface DocsCountResponse extends StandardResponse {
+  countRes: {
+    count: number;
+    dappIds: string[];
   };
 }
 
