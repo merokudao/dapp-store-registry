@@ -28,6 +28,13 @@ export interface StoreSchema {
     banner?: string;
     screenshots?: string[];
   };
+  cdn?: {
+    images?: {
+      logo?: string;
+      banner?: string;
+      screenshots?: string[];
+    };
+  };
   isForMatureAudience: boolean;
 
   bannedDAppIds?: string[];
