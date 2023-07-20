@@ -6,7 +6,6 @@ import {
   DAppSchema,
   DAppSchemaDoc,
   DeleteDappPayload,
-  FilterOptions,
   OpenSearchConnectionOptions,
   SearchResult,
   StandardResponse
@@ -101,7 +100,7 @@ export class DappStoreRegistryV1 {
    * @returns The list of dApps that are listed in the registry
    */
   public dApps = async (
-    filterOpts: FilterOptions = { isListed: "true" }
+    filterOpts: FilterOptionsSearch = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = searchFilters("", filterOpts);
 
@@ -124,7 +123,7 @@ export class DappStoreRegistryV1 {
       message: ["success"],
       data: response.map(rs => rs._source),
       pagination: {
-        page: filterOpts.page,
+        page: filterOpts.page as string,
         limit,
         pageCount
       }
@@ -256,7 +255,7 @@ export class DappStoreRegistryV1 {
 
   public autoComplete = async (
     queryTxt: string,
-    filterOpts: FilterOptions = { isListed: "true" }
+    filterOpts: FilterOptionsSearch = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery } = searchFilters(queryTxt, filterOpts, true);
     const result: SearchResult = await this.openSearchApis.search(

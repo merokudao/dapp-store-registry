@@ -161,29 +161,7 @@
         }
       }
     },
-    "developer": {
-      "type": "object",
-      "required": ["legalName", "website"],
-      "properties": {
-        "legalName": {
-          "type": "string",
-          "description": "Legal name of the developer or the company"
-        },
-        "logo": {
-          "type": "string",
-          "format": "uri",
-          "description": "A URL to the logo of the developer or the company. Should be square and 512x512 in PNG format"
-        },
-        "website": {
-          "type": "string",
-          "format": "uri"
-        },
-        "githubID": {
-          "type": "string",
-          "description": "The github ID of the developer"
-        }
-      }
-    },
+    "developer": { "$ref": "merokuDappStore.developerSchema.json" },
     "tags": {
       "type": "array",
       "items": {

@@ -23,10 +23,14 @@
       "isListed": true,
       "listDate": "2022-08-12",
       "developer": {
+        "devId": "bitpack.testSpec.dev",
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
-        "githubID": "bitpack1",
-        "website": "https://something.com"
+        "website": "https://something.com",
+        "credentials": {
+          "id": "bitpack1",
+          "type": "github"
+        }
       },
       "category": "finance",
       "privacyPolicyUrl": "https://somethingelse.com",
@@ -50,10 +54,14 @@
       "isListed": true,
       "listDate": "2022-01-12",
       "developer": {
+        "devId": "bitpack.testSpec2.dev",
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
-        "githubID": "bitpack1",
-        "website": "https://something.com"
+        "website": "https://something.com",
+        "credentials": {
+          "id": "bitpack1",
+          "type": "github"
+        }
       },
       "category": "entertainment",
       "privacyPolicyUrl": "https://somethingelse.com",
@@ -81,10 +89,14 @@
       },
       "listDate": "2021-01-01",
       "developer": {
+        "devId": "bitpack.testSpec3.dev",
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
-        "githubID": "bitpack2",
-        "website": "https://something.com"
+        "website": "https://something.com",
+        "credentials": {
+          "id": "bitpack2",
+          "type": "github"
+        }
       },
       "category": "lifestyle",
       "privacyPolicyUrl": "https://somethingelse.com",
@@ -108,10 +120,14 @@
       "isListed": false,
       "listDate": "2022-04-12",
       "developer": {
+        "devId": "bitpack.testSpec4.dev",
         "legalName": "Bitpack",
         "logo": "https://something.com/image.png",
-        "githubID": "bitpack3",
-        "website": "https://something.com"
+        "website": "https://something.com",
+        "credentials": {
+          "id": "bitpack3",
+          "type": "github"
+        }
       },
       "category": "games",
       "privacyPolicyUrl": "https://somethingelse.com",

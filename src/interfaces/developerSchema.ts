@@ -19,7 +19,7 @@ export interface DeveloperSchema {
     };
   };
   website: string;
-  credentils?: {
+  credentials?: {
     id: string;
     type: keyof typeof DevIDPlatforms;
   };

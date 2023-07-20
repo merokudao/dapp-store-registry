@@ -28,6 +28,7 @@ import featuredSchema from "../schemas/merokuDappStore.featuredSchema.json";
 import dAppDownloadBaseUrlsSchema from "../schemas/merokuDappStore.dAppDownloadBaseUrlsSchema.json";
 import dAppImagesSchema from "../schemas/merokuDappStore.dAppImagesSchema.json";
 import dAppEnrichImagesSchema from "../schemas/merokuDappStore.dAppEnrichImagesSchema.json";
+import developerSchema from "../schemas/merokuDappStore.developerSchema.json";
 import dAppSchema from "../schemas/merokuDappStore.dAppSchema.json";
 import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
@@ -137,6 +138,7 @@ export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
     ajv.addSchema(dAppDownloadBaseUrlsSchema, "dAppDownloadBaseUrlsSchema");
     ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppSchema, "dAppSchema");
+    ajv.addSchema(developerSchema, "developerSchema");
     ajv.addFormat("url", /^https?:\/\/.+/);
     validate = ajv.compile(dAppRegistrySchema);
   } else {
@@ -404,9 +406,9 @@ export const searchFilters = (
       terms: { "geoRestrictions.blockedCountries": blockedInCountries }
     });
 
-  if (developer && developer.githubID)
+  if (developer && developer.id)
     query.bool.must.push({
-      match: { "developer.githubID": developer.githubID.trim() }
+      match: { "developer.credentials.id": developer.id.trim() }
     });
 
   // create a category query with or between each category + apply subCategory filter

@@ -184,11 +184,11 @@ describe("DappStoreRegistry", () => {
     it("is able to filter results on specific developer", async () => {
       const registry_dapps_1 = await registry.dApps({
         developer: {
-          githubID: "bitpack4"
+          id: "bitpack4"
         }
       });
       const dapps_1 = fixtureRegistryJson.dapps.filter(
-        dapp => dapp.developer?.githubID === "bitpack4"
+        dapp => dapp.developer?.credentials?.id === "bitpack4"
       );
       registry_dapps_1.should.deep.equal(dapps_1);
     });
