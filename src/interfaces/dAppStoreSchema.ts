@@ -47,6 +47,8 @@ export interface StoreSchema {
     value: string;
     display_type: string;
   }[];
+  category?: string;
+  whitelistedDAppIds?: string[];
 }
 
 export interface EnrichSchema {
