@@ -1,3 +1,4 @@
+import { DeveloperSchema } from "./developerSchema";
 import { FeaturedSection } from "./featuredSections";
 
 export interface StoresSchema {
@@ -49,6 +50,7 @@ export interface StoreSchema {
   }[];
   category?: string;
   whitelistedDAppIds?: string[];
+  developer?: DeveloperSchema;
 }
 
 export interface EnrichSchema {

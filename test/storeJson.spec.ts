@@ -11,6 +11,7 @@ import dAppStoreSchema from "../src/schemas/merokuDappStore.dAppStore.json";
 import dAppEnrichImagesSchema from "../src/schemas/merokuDappStore.dAppEnrichImagesSchema.json";
 import dAppEnrich from "../src/schemas/merokuDappStore.dAppEnrich.json";
 import dAppImagesSchema from "../src/schemas/merokuDappStore.dAppImagesSchema.json";
+import developerSchema from "../src/schemas/merokuDappStore.developerSchema.json";
 
 Dotenv.config({
   path: ".env.test"
@@ -48,6 +49,7 @@ describe("dAppStore.json & Schema Validations", () => {
     ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppEnrichImagesSchema, "dAppEnrichImagesSchema");
     ajv.addSchema(dAppEnrich, "dAppEnrich");
+    ajv.addSchema(developerSchema, "developerSchema");
     ajv.addSchema(dAppStoreSchema, "dAppStoreSchema");
     const validate = ajv.compile(dAppStoresSchema);
 
@@ -69,6 +71,7 @@ describe("dAppStore.json & Schema Validations", () => {
     ajv.addSchema(dAppImagesSchema, "dAppImagesSchema");
     ajv.addSchema(dAppEnrichImagesSchema, "dAppEnrichImagesSchema");
     ajv.addSchema(dAppEnrich, "dAppEnrich");
+    ajv.addSchema(developerSchema, "developerSchema");
     ajv.addSchema(dAppStoreSchema, "dAppStoreSchema");
     const validate = ajv.compile(dAppStoresSchema);
 

@@ -144,7 +144,8 @@
           }
         }
       }
-    }
+    },
+    "developer": { "$ref": "merokuDappStore.developerSchema.json" }
   },
   "required": [
     "key",

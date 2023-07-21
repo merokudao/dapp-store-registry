@@ -148,6 +148,7 @@ export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
     ajv.addSchema(dAppStoreSchema, "dAppStoreSchema");
     ajv.addSchema(dAppEnrichImagesSchema, "dAppEnrichImagesSchema");
     ajv.addSchema(dAppEnrichSchema, "dappsEnrich");
+    ajv.addSchema(developerSchema, "developerSchema");
     validate = ajv.compile(dAppStoresSchema);
   }
   const valid = validate(json);
