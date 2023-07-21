@@ -55,3 +55,24 @@ export interface CategoryObject {
 export interface ObjectNumberValueType {
   [key: string]: number;
 }
+
+export interface AppStoreSearchPayload {
+  language?: string;
+  isForMatureAudience?: boolean | string;
+  minAge?: number;
+  allowedInCountries?: string[];
+  blockedInCountries?: string[];
+  categories?: string[];
+  limit?: number;
+  isListed?: boolean | string;
+  page?: string | number;
+  key?: string | string[];
+  developer?: { id: string };
+  searchById?: boolean;
+  ownerAddress?: string;
+  tokenIds?: string[];
+  orderBy?: string | OrderParams;
+  scrollId?: string;
+  size?: number;
+  _source?: string[];
+}

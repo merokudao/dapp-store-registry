@@ -1,4 +1,5 @@
 import { DAppSchema } from "./dAppSchema";
+import { StoreSchema } from "./dAppStoreSchema";
 
 export interface CreateIndexRes {
   acknowledged: boolean;
@@ -116,4 +117,9 @@ export interface DAppSchemaDoc extends DAppSchema {
   nameKeyword: string;
   subCategoryKeyword?: string;
   dappIdKeyword: string;
+}
+
+export interface AppStoreSchemaDoc extends StoreSchema {
+  id?: string;
+  keyKeyword: string;
 }
