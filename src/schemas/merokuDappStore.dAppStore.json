@@ -85,12 +85,23 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "whitelistedDAppIds": {
+      "type": "array",
+      "description": "List of dApp IDs that are listed in this store. The dApp IDs should be the same as the ones in the dApp Store's dApps list.",
+      "items": {
+        "type": "string"
+      }
+    },
     "bannedDAppIds": {
       "type": "array",
       "description": "List of dApp IDs that are banned in this store. The dApp IDs should be the same as the ones in the dApp Store's dApps list.",
       "items": {
         "type": "string"
       }
+    },
+    "category": {
+      "type": "string",
+      "description": "The category of the dApp store. You can assign one category to your dApp store. The category you select is particularly important for your dapp store's discoverability on the dApp Stores. This will be the category in which the dapp store appears when users browse the dApp Stores or filter search results, and it determines placement on the dApp stores tab or Games"
     },
     "dappsEnrich": {
       "type": "array",
@@ -133,6 +144,16 @@
           }
         }
       }
+    },
+    "developer": { "$ref": "merokuDappStore.developerSchema.json" },
+    "isListed": {
+      "type": "boolean",
+      "description": "Boolean to signify if the dApp store is listed on the dApp store"
+    },
+    "listDate": {
+      "type": "string",
+      "format": "date",
+      "description": "The date on which this dApp store is listed on dApp store. This date can be a future date as well. This can not be in past."
     }
   },
   "required": [
@@ -142,7 +163,9 @@
     "url",
     "language",
     "minAge",
-    "isForMatureAudience"
+    "isForMatureAudience",
+    "isListed",
+    "listDate"
   ],
   "additionalProperties": false
 }
