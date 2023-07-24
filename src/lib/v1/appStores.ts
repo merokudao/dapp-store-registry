@@ -1,21 +1,31 @@
 import { format } from "date-fns";
 
 import { OpensearchRequest } from "../../handlers";
+import { _source } from "../../handlers/opensearch-handlers/appStoresConfig.json";
 import {
   AppStoreSchemaDoc,
   DocsCountResponse,
   OpenSearchCompositeQuery,
   OpenSearchConnectionOptions,
+  PaginationQuery,
   SearchResult,
   StandardResponse,
   StoreSchema
 } from "../../interfaces";
-import { searchFilters } from "../utils";
+import { orderBy, recordsPerPage, recordsPerPageAutoComplete } from "../utils";
 import {
   AppStoreSearchPayload,
-  FilterOptionsSearch
+  FilterOptionsSearch,
+  OrderParams
 } from "../../interfaces/searchOptions";
 
+const defaultBoost = process.env.DEFAULT_BOOST || "1";
+const boostScore = {
+  name: parseInt(process.env.BOOST_NAME || defaultBoost),
+  description: parseInt(process.env.BOOST_DESCRIPTION || defaultBoost),
+  key: parseInt(process.env.BOOST_APP_STORE_KEY || defaultBoost),
+  category: parseInt(process.env.BOOST_CATEGORY || defaultBoost)
+};
 export const searchAppStore = {
   indexPrefix: `${process.env.ENVIRONMENT}_app_store`,
   alias: `${process.env.ENVIRONMENT}_app_store_search_index`
@@ -29,7 +39,13 @@ export class DappStoreRegistryV1 {
     this.openSearchApis = new OpensearchRequest(openSearchOptions);
   }
 
-  public searchQuery = (search: string, payload: AppStoreSearchPayload) => {
+  /**
+   * Prepaire query for search, filters, search by id, tokens, ownerAddress
+   * @param search
+   * @param payload
+   * @returns
+   */
+  private searchQuery = (search: string, payload: AppStoreSearchPayload) => {
     const query: OpenSearchCompositeQuery = {
       bool: {
         must: [],
@@ -38,11 +54,170 @@ export class DappStoreRegistryV1 {
         filter: []
       }
     };
-    return {
-      search,
-      payload,
-      query
+    const {
+      isForMatureAudience = null,
+      minAge = null,
+      language = null,
+      allowedInCountries = null,
+      blockedInCountries = null,
+      category = "",
+      isListed = "true",
+      developer = null,
+      page = 1,
+      searchById = false,
+      ownerAddress = null,
+      tokenIds = "",
+      listedOnOrAfter = null,
+      listedOnOrBefore = null
+    } = payload;
+    let { limit = recordsPerPage, key = "" } = payload;
+
+    if (key.length && typeof key === "string")
+      key = key.split(",").map((di: string) => di.trim());
+    // eslint-disable-next-line no-extra-boolean-cast
+    if (!!isForMatureAudience)
+      query.bool.must.push({
+        match: {
+          isForMatureAudience: isForMatureAudience === "true" ? true : false
+        }
+      });
+
+    if (minAge) query.bool.must.push({ range: { minAge: { gte: minAge } } });
+    if (language) query.bool.must.push({ match: { language } });
+    if (listedOnOrAfter)
+      query.bool.must.push({ range: { listDate: { gte: listedOnOrAfter } } });
+    if (listedOnOrBefore)
+      query.bool.must.push({ range: { listDate: { lte: listedOnOrBefore } } });
+
+    // it should be filter users location current not more then one country
+    if (allowedInCountries && allowedInCountries.length) {
+      query.bool.should.push({
+        terms: { "geoRestrictions.allowedCountries": allowedInCountries }
+      });
+      allowedInCountries.forEach((ac: string) => {
+        query.bool.must_not.push({
+          term: { "geoRestrictions.blockedCountries": ac }
+        });
+      });
+    }
+    // it should be filter users location current not more then one country
+    if (blockedInCountries && blockedInCountries.length)
+      query.bool.must.push({
+        terms: { "geoRestrictions.blockedCountries": blockedInCountries }
+      });
+
+    if (developer && developer.id)
+      query.bool.must.push({
+        match: { "developer.credentials.id": developer.id.trim() }
+      });
+
+    if (key.length) query.bool.must.push({ terms: { keyKeyword: key } });
+    if (tokenIds.length)
+      query.bool.must.push({
+        terms: {
+          tokenId: tokenIds
+            .split(",")
+            .map((c: string) => c.trim())
+            .filter((c: string) => c.length)
+        }
+      });
+
+    // search on customer string
+    if (!!search && search.length) {
+      query.bool.should.push({
+        match: { name: { query: search, boost: boostScore.name } }
+      });
+      query.bool.should.push({
+        match: { description: { query: search, boost: boostScore.description } }
+      });
+      query.bool.should.push({
+        match: { key: { query: search, boost: boostScore.key } }
+      });
+      query.bool.should.push({
+        match: { category: { query: search, boost: boostScore.category } }
+      });
+      query.bool.filter.push({
+        term: { isListed: isListed === "true" ? true : false }
+      });
+      // query.bool.filter.push({ term: { isVerified: true} });
+    }
+
+    if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
+
+    if (isListed && !searchById && !search && !ownerAddress)
+      query.bool.must.push({
+        match: { isListed: isListed === "true" ? true : false }
+      });
+    if (category.length)
+      query.bool.must.push({
+        terms: {
+          categoryKeyword: category
+            .split(",")
+            .map((c: string) => c.trim())
+            .filter((c: string) => c.length)
+        }
+      });
+
+    // if (!ownerAddress)
+    //   query.bool.filter.push({ term: { isVerified: true} });
+
+    payload.page = parseInt(page as string);
+    payload.page = payload.page > 0 ? payload.page : 1;
+    if (limit > recordsPerPage) limit = recordsPerPage;
+    const finalQuery: PaginationQuery = {
+      _source: _source.searchFields,
+      query,
+      from: (payload.page - 1) * limit,
+      size: limit,
+      sort: orderBy((payload.orderBy || {}) as OrderParams)
     };
+    return { finalQuery, limit };
+  };
+
+  /**
+   * Preppaire query for autocomplete search
+   * @param search
+   * @param payload
+   * @returns
+   */
+  private searchAutoComplete = (
+    search: string,
+    payload: AppStoreSearchPayload
+  ) => {
+    const query: OpenSearchCompositeQuery = {
+      bool: {
+        must: [],
+        must_not: [],
+        should: [],
+        filter: []
+      }
+    };
+
+    query.bool.should.push({
+      match: { name: { query: search, fuzziness: 6, boost: boostScore.name } }
+    });
+    query.bool.should.push({
+      match: { description: { query: search, boost: boostScore.description } }
+    });
+    query.bool.should.push({
+      match: {
+        key: { query: search, fuzziness: "AUTO", boost: boostScore.key }
+      }
+    });
+    query.bool.should.push({
+      match: { category: { query: search, boost: boostScore.category } }
+    });
+    query.bool.filter.push({ term: { isListed: true } });
+    // query.bool.filter.push({ term: { isVerified: true} });
+
+    const finalQuery: PaginationQuery = {
+      _source: _source.autocompleteFields,
+      query,
+      from: 0,
+      size: recordsPerPageAutoComplete,
+      sort: orderBy((payload.orderBy || {}) as OrderParams)
+    };
+    return { finalQuery };
   };
 
   /**
@@ -52,18 +227,25 @@ export class DappStoreRegistryV1 {
    */
   public addBulkDocsToIndex = async (
     index: string,
-    appStores: StoreSchema[] = []
+    appStores: StoreSchema[] | any[] = []
   ) => {
     if (!appStores.length) return;
 
-    const dappDocs = appStores.map(d => {
+    const appStoreDocs = appStores.map(d => {
       return {
         id: d.key,
         keyKeyword: d.key,
+        categoryKeyword: d.category,
         ...d
       };
     });
-    return this.openSearchApis.createBulkDoc(index, dappDocs as any);
+    const appStoreDocsBulk = {
+      datasource: appStoreDocs,
+      onDocument(doc: StoreSchema) {
+        return { index: { _index: index, _id: doc.key } };
+      }
+    };
+    return this.openSearchApis.createBulkDoc(appStoreDocsBulk);
   };
 
   /**
@@ -99,15 +281,18 @@ export class DappStoreRegistryV1 {
     };
   };
 
-  public async createDoc(appStore: StoreSchema): Promise<StandardResponse> {
+  public async createDoc(
+    appStore: StoreSchema | any
+  ): Promise<StandardResponse> {
     /**
      * have to add if any action have to do onchain
      */
     await this.openSearchApis.createDoc(searchAppStore.alias, {
       id: appStore.key,
       keyKeyword: appStore.key,
+      categoryKeyword: appStore.category,
       ...appStore
-    } as any);
+    });
     return {
       status: 200,
       message: ["success"]
@@ -131,9 +316,9 @@ export class DappStoreRegistryV1 {
    */
   public search = async (
     queryTxt: string,
-    filterOpts: FilterOptionsSearch = { isListed: "true" }
+    filterOpts: AppStoreSearchPayload = { isListed: "true" }
   ): Promise<StandardResponse> => {
-    const { finalQuery, limit } = searchFilters(queryTxt, filterOpts);
+    const { finalQuery, limit } = this.searchQuery(queryTxt, filterOpts);
     if ((finalQuery.from || 0) + (finalQuery.size || 0) > MAX_RESULT_WINDOW)
       return this.maxWindowError(finalQuery, limit);
 
@@ -166,8 +351,8 @@ export class DappStoreRegistryV1 {
    * @returns if matches return dappInfo
    */
   public searchById = async (id: string): Promise<StandardResponse> => {
-    const { finalQuery } = searchFilters("", {
-      dappId: id,
+    const { finalQuery } = this.searchQuery("", {
+      key: id,
       searchById: true
     });
     const result: SearchResult = await this.openSearchApis.search(
@@ -186,9 +371,9 @@ export class DappStoreRegistryV1 {
 
   public autoComplete = async (
     queryTxt: string,
-    filterOpts: FilterOptionsSearch = { isListed: "true" }
+    filterOpts: AppStoreSearchPayload = { isListed: "true" }
   ): Promise<StandardResponse> => {
-    const { finalQuery } = searchFilters(queryTxt, filterOpts, true);
+    const { finalQuery } = this.searchAutoComplete(queryTxt, filterOpts);
     const result: SearchResult = await this.openSearchApis.search(
       searchAppStore.alias,
       finalQuery
@@ -211,7 +396,7 @@ export class DappStoreRegistryV1 {
   public searchOwnerAddress = async (
     ownerAddress: string
   ): Promise<StandardResponse> => {
-    const { finalQuery } = searchFilters("", {
+    const { finalQuery } = this.searchQuery("", {
       ownerAddress
     });
     const result: SearchResult = await this.openSearchApis.search(
@@ -235,15 +420,18 @@ export class DappStoreRegistryV1 {
    * @param org
    * @returns acknowledge
    */
-  public async updateDoc(appStore: StoreSchema): Promise<StandardResponse> {
+  public async updateDoc(
+    appStore: StoreSchema | any
+  ): Promise<StandardResponse> {
     /**
      * have to add if any action have to do onchain
      */
     await this.openSearchApis.updateDoc(searchAppStore.alias, {
       id: appStore.key,
       keyKeyword: appStore.key,
+      categoryKeyword: appStore.category,
       ...appStore
-    } as any);
+    });
     return { status: 200, message: ["success"] };
   }
 
@@ -275,13 +463,13 @@ export class DappStoreRegistryV1 {
    * @returns
    */
   public async scrollDocs(
-    filterOpts: FilterOptionsSearch
+    filterOpts: AppStoreSearchPayload
   ): Promise<StandardResponse> {
     const { scrollId = null } = filterOpts;
     let result: SearchResult;
     if (scrollId) result = await this.openSearchApis.scrollDocs(scrollId);
     else {
-      const { finalQuery } = searchFilters("", filterOpts);
+      const { finalQuery } = this.searchQuery("", filterOpts);
       delete finalQuery.from;
       Object.assign(finalQuery, { size: filterOpts.size || 200 });
       Object.assign(finalQuery, {
@@ -316,9 +504,9 @@ export class DappStoreRegistryV1 {
   }
 
   public async getTotalDocsCount(
-    filterOpts: FilterOptionsSearch = { isListed: "true" }
+    filterOpts: AppStoreSearchPayload = { isListed: "true" }
   ): Promise<DocsCountResponse> {
-    const { finalQuery } = searchFilters("", filterOpts);
+    const { finalQuery } = this.searchQuery("", filterOpts);
     delete finalQuery._source;
     delete finalQuery.from;
     delete finalQuery.size;
@@ -343,10 +531,18 @@ export class DappStoreRegistryV1 {
   public async updateDocs(index: string, body: AppStoreSchemaDoc[]) {
     const chunks = [];
     while (body.length > 0) {
-      chunks.push(body.splice(0, 10000));
+      let chunk = body.splice(0, 10000);
+      chunk = chunk.reduce((aggs: any[], doc: AppStoreSchemaDoc) => {
+        aggs = aggs.concat([
+          { update: { _index: index, _id: doc.key } },
+          { doc }
+        ]);
+        return aggs;
+      }, []);
+      chunks.push(chunk);
     }
     return Promise.allSettled(
-      chunks.map(chunk => this.openSearchApis.updateDocs(index, chunk as any))
+      chunks.map(chunk => this.openSearchApis.updateDocs(index, chunk))
     );
   }
 }

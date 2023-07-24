@@ -122,4 +122,15 @@ export interface DAppSchemaDoc extends DAppSchema {
 export interface AppStoreSchemaDoc extends StoreSchema {
   id?: string;
   keyKeyword: string;
+  categoryKeyword: string;
+}
+
+export interface UpdateAppStoreBulkDocs {
+  doc: AppStoreSchemaDoc;
+  update: { _index: string; _id: string };
+}
+
+export interface UpdateDAppSchemaBulkDocs {
+  doc: DAppSchemaDoc;
+  update: { _index: string; _id: string };
 }

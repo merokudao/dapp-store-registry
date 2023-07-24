@@ -136,6 +136,9 @@
         "analyzer": "autocomplete",
         "search_analyzer": "autocomplete_search"
       },
+      "categoryKeyword": {
+        "type": "keyword"
+      },
       "minted": {
         "type": "boolean"
       },

@@ -2,6 +2,7 @@ import { OpensearchClient } from "./connection";
 import * as opensearchConfig from "./config.json";
 import { Client } from "@opensearch-project/opensearch";
 import {
+  AppStoreSchemaDoc,
   DAppSchemaDoc,
   OpenSearchConnectionOptions,
   PaginationQuery
@@ -44,7 +45,10 @@ export class OpensearchRequest {
    * @param body doc
    * @returns response
    */
-  public async createDoc(index: string, body: DAppSchemaDoc): Promise<any> {
+  public async createDoc(
+    index: string,
+    body: DAppSchemaDoc | AppStoreSchemaDoc
+  ): Promise<any> {
     return this.opensearchClient.index({
       index,
       body,
@@ -58,16 +62,8 @@ export class OpensearchRequest {
    * @param index index name
    * @param body array of docs
    */
-  public async createBulkDoc(
-    index: string,
-    body: DAppSchemaDoc[]
-  ): Promise<any> {
-    return this.opensearchClient.helpers.bulk({
-      datasource: body,
-      onDocument(doc: DAppSchemaDoc) {
-        return { index: { _index: index, _id: doc.id } };
-      }
-    });
+  public async createBulkDoc(body: any): Promise<any> {
+    return this.opensearchClient.helpers.bulk(body);
   }
 
   /**
@@ -121,7 +117,10 @@ export class OpensearchRequest {
    * @param body doc
    * @returns response
    */
-  public async updateDoc(index: string, body: DAppSchemaDoc): Promise<any> {
+  public async updateDoc(
+    index: string,
+    body: DAppSchemaDoc | AppStoreSchemaDoc
+  ): Promise<any> {
     const id = body.id;
     delete body.id;
     return this.opensearchClient.update({
@@ -196,14 +195,7 @@ export class OpensearchRequest {
    * @param body doc[]
    * @returns
    */
-  public async updateDocs(index: string, body: DAppSchemaDoc[]): Promise<any> {
-    body = body.reduce((aggs: any[], doc: any) => {
-      aggs = aggs.concat([
-        { update: { _index: index, _id: doc.dappId } },
-        { doc }
-      ]);
-      return aggs;
-    }, []);
+  public async updateDocs(index: string, body: any): Promise<any> {
     return this.opensearchClient.bulk({
       index,
       refresh: true,

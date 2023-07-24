@@ -62,7 +62,7 @@ export interface AppStoreSearchPayload {
   minAge?: number;
   allowedInCountries?: string[];
   blockedInCountries?: string[];
-  categories?: string[];
+  category?: string;
   limit?: number;
   isListed?: boolean | string;
   page?: string | number;
@@ -70,7 +70,9 @@ export interface AppStoreSearchPayload {
   developer?: { id: string };
   searchById?: boolean;
   ownerAddress?: string;
-  tokenIds?: string[];
+  tokenIds?: string;
+  listedOnOrAfter?: Date;
+  listedOnOrBefore?: Date;
   orderBy?: string | OrderParams;
   scrollId?: string;
   size?: number;
