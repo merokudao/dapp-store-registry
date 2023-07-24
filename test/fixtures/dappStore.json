@@ -14,6 +14,8 @@
       "tags": ["hello", "dj"],
       "category": "games",
       "whitelistedDAppIds": ["opensea.app", "floornfts.app"],
+      "isListed": true,
+      "listDate": "2023-07-24",
       "images": {
         "logo": "https://ipfs-3.thirdwebcdn.com/ipfs/Qmaqim6PYgL4hey5sRhGSnUg7z7wYUCZhVmt2VJvtzawfQ/image0%20(1).jpg",
         "banner": "https://ipfs-3.thirdwebcdn.com/ipfs/QmVtQFcw3LpLVqUMkTSdb3TWVxv6fxUbffgt5o8gugmSNw/otter.jpeg",

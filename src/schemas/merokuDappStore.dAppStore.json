@@ -163,7 +163,9 @@
     "url",
     "language",
     "minAge",
-    "isForMatureAudience"
+    "isForMatureAudience",
+    "isListed",
+    "listDate"
   ],
   "additionalProperties": false
 }
