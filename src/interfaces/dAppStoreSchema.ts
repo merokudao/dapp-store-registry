@@ -51,6 +51,8 @@ export interface StoreSchema {
   category?: string;
   whitelistedDAppIds?: string[];
   developer?: DeveloperSchema;
+  isListed: boolean;
+  listDate: string;
 }
 
 export interface EnrichSchema {

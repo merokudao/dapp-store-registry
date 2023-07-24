@@ -145,7 +145,16 @@
         }
       }
     },
-    "developer": { "$ref": "merokuDappStore.developerSchema.json" }
+    "developer": { "$ref": "merokuDappStore.developerSchema.json" },
+    "isListed": {
+      "type": "boolean",
+      "description": "Boolean to signify if the dApp store is listed on the dApp store"
+    },
+    "listDate": {
+      "type": "string",
+      "format": "date",
+      "description": "The date on which this dApp store is listed on dApp store. This date can be a future date as well. This can not be in past."
+    }
   },
   "required": [
     "key",
