@@ -2,6 +2,10 @@ import { format } from "date-fns";
 
 import { OpensearchRequest } from "../../handlers";
 import {
+  settings,
+  mappings
+} from "../../handlers/opensearch-handlers/config.json";
+import {
   AddDappPayload,
   DAppSchema,
   DAppSchemaDoc,
@@ -76,7 +80,7 @@ export class DappStoreRegistryV1 {
       new Date(),
       "yyyy-MM-dd-HH-mm-ss"
     )}`;
-    await this.openSearchApis.createIndex(indexName);
+    await this.openSearchApis.createIndex(indexName, settings, mappings);
     return {
       status: 200,
       message: ["success"],

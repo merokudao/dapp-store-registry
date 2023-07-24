@@ -252,6 +252,14 @@
       "whitelistedForStores": {
         "type": "text"
       },
+      "attributes": {
+        "type": "nested",
+        "properties": {
+          "display_type": { "type": "text" },
+          "trait_type": { "type": "text" },
+          "value": { "type": "text" }
+        }
+      },
       "isVerified": {
         "type": "boolean"
       }

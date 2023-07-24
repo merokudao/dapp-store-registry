@@ -1,5 +1,6 @@
 import { DAppSchema } from "./dAppSchema";
 import { StoreSchema } from "./dAppStoreSchema";
+import { DeveloperSchema } from "./developerSchema";
 
 export interface CreateIndexRes {
   acknowledged: boolean;
@@ -133,4 +134,9 @@ export interface UpdateAppStoreBulkDocs {
 export interface UpdateDAppSchemaBulkDocs {
   doc: DAppSchemaDoc;
   update: { _index: string; _id: string };
+}
+
+export interface DeveloperSchemaDoc extends DeveloperSchema {
+  id: string;
+  devIdKeyword: string;
 }

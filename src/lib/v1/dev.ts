@@ -3,22 +3,22 @@ import { format } from "date-fns";
 import { OpensearchRequest } from "../../handlers";
 import {
   _source,
-  mappings,
-  settings
+  settings,
+  mappings
 } from "../../handlers/opensearch-handlers/appStoresConfig.json";
 import {
-  AppStoreSchemaDoc,
+  DeveloperSchema,
+  DeveloperSchemaDoc,
   DocsCountResponse,
   OpenSearchCompositeQuery,
   OpenSearchConnectionOptions,
   PaginationQuery,
   SearchResult,
-  StandardResponse,
-  StoreSchema
+  StandardResponse
 } from "../../interfaces";
 import { orderBy, recordsPerPage, recordsPerPageAutoComplete } from "../utils";
 import {
-  AppStoreSearchPayload,
+  DeveloperSearchPayload,
   FilterOptionsSearch,
   OrderParams
 } from "../../interfaces/searchOptions";
@@ -27,12 +27,11 @@ const defaultBoost = process.env.DEFAULT_BOOST || "1";
 const boostScore = {
   name: parseInt(process.env.BOOST_NAME || defaultBoost),
   description: parseInt(process.env.BOOST_DESCRIPTION || defaultBoost),
-  key: parseInt(process.env.BOOST_APP_STORE_KEY || defaultBoost),
-  category: parseInt(process.env.BOOST_CATEGORY || defaultBoost)
+  devId: parseInt(process.env.BOOST_APP_STORE_KEY || defaultBoost)
 };
 export const searchAppStore = {
-  indexPrefix: `${process.env.ENVIRONMENT}_app_store`,
-  alias: `${process.env.ENVIRONMENT}_app_store_search_index`
+  indexPrefix: `${process.env.ENVIRONMENT}_dev_nfts`,
+  alias: `${process.env.ENVIRONMENT}_dev_nfts_search_index`
 };
 
 export const MAX_RESULT_WINDOW = 10000;
@@ -49,7 +48,7 @@ export class DappStoreRegistryV1 {
    * @param payload
    * @returns
    */
-  private searchQuery = (search: string, payload: AppStoreSearchPayload) => {
+  private searchQuery = (search: string, payload: DeveloperSearchPayload) => {
     const query: OpenSearchCompositeQuery = {
       bool: {
         must: [],
@@ -59,63 +58,26 @@ export class DappStoreRegistryV1 {
       }
     };
     const {
-      isForMatureAudience = null,
-      minAge = null,
-      language = null,
-      allowedInCountries = null,
-      blockedInCountries = null,
-      category = "",
-      isListed = "true",
-      developer = null,
       page = 1,
       searchById = false,
       ownerAddress = null,
       tokenIds = "",
       listedOnOrAfter = null,
-      listedOnOrBefore = null
+      listedOnOrBefore = null,
+      isListed = "true"
     } = payload;
-    let { limit = recordsPerPage, key = "" } = payload;
+    let { limit = recordsPerPage, devId = "" } = payload;
 
-    if (key.length && typeof key === "string")
-      key = key.split(",").map((di: string) => di.trim());
+    if (devId.length && typeof devId === "string")
+      devId = devId.split(",").map((di: string) => di.trim());
     // eslint-disable-next-line no-extra-boolean-cast
-    if (!!isForMatureAudience)
-      query.bool.must.push({
-        match: {
-          isForMatureAudience: isForMatureAudience === "true" ? true : false
-        }
-      });
 
-    if (minAge) query.bool.must.push({ range: { minAge: { gte: minAge } } });
-    if (language) query.bool.must.push({ match: { language } });
     if (listedOnOrAfter)
       query.bool.must.push({ range: { listDate: { gte: listedOnOrAfter } } });
     if (listedOnOrBefore)
       query.bool.must.push({ range: { listDate: { lte: listedOnOrBefore } } });
 
-    // it should be filter users location current not more then one country
-    if (allowedInCountries && allowedInCountries.length) {
-      query.bool.should.push({
-        terms: { "geoRestrictions.allowedCountries": allowedInCountries }
-      });
-      allowedInCountries.forEach((ac: string) => {
-        query.bool.must_not.push({
-          term: { "geoRestrictions.blockedCountries": ac }
-        });
-      });
-    }
-    // it should be filter users location current not more then one country
-    if (blockedInCountries && blockedInCountries.length)
-      query.bool.must.push({
-        terms: { "geoRestrictions.blockedCountries": blockedInCountries }
-      });
-
-    if (developer && developer.id)
-      query.bool.must.push({
-        match: { "developer.credentials.id": developer.id.trim() }
-      });
-
-    if (key.length) query.bool.must.push({ terms: { keyKeyword: key } });
+    if (devId.length) query.bool.must.push({ terms: { devIdKeyword: devId } });
     if (tokenIds.length)
       query.bool.must.push({
         terms: {
@@ -135,10 +97,7 @@ export class DappStoreRegistryV1 {
         match: { description: { query: search, boost: boostScore.description } }
       });
       query.bool.should.push({
-        match: { key: { query: search, boost: boostScore.key } }
-      });
-      query.bool.should.push({
-        match: { category: { query: search, boost: boostScore.category } }
+        match: { devId: { query: search, boost: boostScore.devId } }
       });
       query.bool.filter.push({
         term: { isListed: isListed === "true" ? true : false }
@@ -151,15 +110,6 @@ export class DappStoreRegistryV1 {
     if (isListed && !searchById && !search && !ownerAddress)
       query.bool.must.push({
         match: { isListed: isListed === "true" ? true : false }
-      });
-    if (category.length)
-      query.bool.must.push({
-        terms: {
-          categoryKeyword: category
-            .split(",")
-            .map((c: string) => c.trim())
-            .filter((c: string) => c.length)
-        }
       });
 
     // if (!ownerAddress)
@@ -186,7 +136,7 @@ export class DappStoreRegistryV1 {
    */
   private searchAutoComplete = (
     search: string,
-    payload: AppStoreSearchPayload
+    payload: DeveloperSearchPayload
   ) => {
     const query: OpenSearchCompositeQuery = {
       bool: {
@@ -198,18 +148,17 @@ export class DappStoreRegistryV1 {
     };
 
     query.bool.should.push({
-      match: { name: { query: search, fuzziness: 6, boost: boostScore.name } }
+      match: {
+        legalName: { query: search, fuzziness: 6, boost: boostScore.name }
+      }
     });
     query.bool.should.push({
       match: { description: { query: search, boost: boostScore.description } }
     });
     query.bool.should.push({
       match: {
-        key: { query: search, fuzziness: "AUTO", boost: boostScore.key }
+        devId: { query: search, fuzziness: "AUTO", boost: boostScore.devId }
       }
-    });
-    query.bool.should.push({
-      match: { category: { query: search, boost: boostScore.category } }
     });
     query.bool.filter.push({ term: { isListed: true } });
     // query.bool.filter.push({ term: { isVerified: true} });
@@ -231,22 +180,21 @@ export class DappStoreRegistryV1 {
    */
   public addBulkDocsToIndex = async (
     index: string,
-    appStores: StoreSchema[] | any[] = []
+    developers: DeveloperSchema[] = []
   ) => {
-    if (!appStores.length) return;
+    if (!developers.length) return;
 
-    const appStoreDocs = appStores.map(d => {
+    const appStoreDocs = developers.map(d => {
       return {
-        id: d.key,
-        keyKeyword: d.key,
-        categoryKeyword: d.category,
+        id: d.devId,
+        devIdKeyword: d.devId,
         ...d
       };
     });
     const appStoreDocsBulk = {
       datasource: appStoreDocs,
-      onDocument(doc: StoreSchema) {
-        return { index: { _index: index, _id: doc.key } };
+      onDocument(doc: DeveloperSchema) {
+        return { index: { _index: index, _id: doc.devId } };
       }
     };
     return this.openSearchApis.createBulkDoc(appStoreDocsBulk);
@@ -286,16 +234,15 @@ export class DappStoreRegistryV1 {
   };
 
   public async createDoc(
-    appStore: StoreSchema | any
+    developer: DeveloperSchema
   ): Promise<StandardResponse> {
     /**
      * have to add if any action have to do onchain
      */
     await this.openSearchApis.createDoc(searchAppStore.alias, {
-      id: appStore.key,
-      keyKeyword: appStore.key,
-      categoryKeyword: appStore.category,
-      ...appStore
+      id: developer.devId,
+      devIdKeyword: developer.devId,
+      ...developer
     });
     return {
       status: 200,
@@ -320,7 +267,7 @@ export class DappStoreRegistryV1 {
    */
   public search = async (
     queryTxt: string,
-    filterOpts: AppStoreSearchPayload = { isListed: "true" }
+    filterOpts: DeveloperSearchPayload = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = this.searchQuery(queryTxt, filterOpts);
     if ((finalQuery.from || 0) + (finalQuery.size || 0) > MAX_RESULT_WINDOW)
@@ -356,7 +303,7 @@ export class DappStoreRegistryV1 {
    */
   public searchById = async (id: string): Promise<StandardResponse> => {
     const { finalQuery } = this.searchQuery("", {
-      key: id,
+      devId: id,
       searchById: true
     });
     const result: SearchResult = await this.openSearchApis.search(
@@ -375,7 +322,7 @@ export class DappStoreRegistryV1 {
 
   public autoComplete = async (
     queryTxt: string,
-    filterOpts: AppStoreSearchPayload = { isListed: "true" }
+    filterOpts: DeveloperSearchPayload = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery } = this.searchAutoComplete(queryTxt, filterOpts);
     const result: SearchResult = await this.openSearchApis.search(
@@ -425,16 +372,15 @@ export class DappStoreRegistryV1 {
    * @returns acknowledge
    */
   public async updateDoc(
-    appStore: StoreSchema | any
+    developer: DeveloperSchema
   ): Promise<StandardResponse> {
     /**
      * have to add if any action have to do onchain
      */
     await this.openSearchApis.updateDoc(searchAppStore.alias, {
-      id: appStore.key,
-      keyKeyword: appStore.key,
-      categoryKeyword: appStore.category,
-      ...appStore
+      id: developer.devId,
+      devIdKeyword: developer.devId,
+      ...developer
     });
     return { status: 200, message: ["success"] };
   }
@@ -467,7 +413,7 @@ export class DappStoreRegistryV1 {
    * @returns
    */
   public async scrollDocs(
-    filterOpts: AppStoreSearchPayload
+    filterOpts: DeveloperSearchPayload
   ): Promise<StandardResponse> {
     const { scrollId = null } = filterOpts;
     let result: SearchResult;
@@ -508,7 +454,7 @@ export class DappStoreRegistryV1 {
   }
 
   public async getTotalDocsCount(
-    filterOpts: AppStoreSearchPayload = { isListed: "true" }
+    filterOpts: DeveloperSearchPayload = { isListed: "true" }
   ): Promise<DocsCountResponse> {
     const { finalQuery } = this.searchQuery("", filterOpts);
     delete finalQuery._source;
@@ -532,13 +478,13 @@ export class DappStoreRegistryV1 {
    * @param body { isVerfied: true, dappId }
    * @returns
    */
-  public async updateDocs(index: string, body: AppStoreSchemaDoc[]) {
+  public async updateDocs(index: string, body: DeveloperSchemaDoc[]) {
     const chunks = [];
     while (body.length > 0) {
       let chunk = body.splice(0, 10000);
-      chunk = chunk.reduce((aggs: any[], doc: AppStoreSchemaDoc) => {
+      chunk = chunk.reduce((aggs: any[], doc: DeveloperSchemaDoc) => {
         aggs = aggs.concat([
-          { update: { _index: index, _id: doc.key } },
+          { update: { _index: index, _id: doc.devId } },
           { doc }
         ]);
         return aggs;

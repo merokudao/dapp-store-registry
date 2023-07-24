@@ -1,9 +1,9 @@
 import { OpensearchClient } from "./connection";
-import * as opensearchConfig from "./config.json";
 import { Client } from "@opensearch-project/opensearch";
 import {
   AppStoreSchemaDoc,
   DAppSchemaDoc,
+  DeveloperSchemaDoc,
   OpenSearchConnectionOptions,
   PaginationQuery
 } from "../../interfaces";
@@ -16,7 +16,6 @@ export const methods = {
   DELETE: "DELETE"
 };
 export class OpensearchRequest {
-  private readonly opensearchConfig = opensearchConfig;
   opensearchClient: Client;
   constructor(options: OpenSearchConnectionOptions) {
     this.opensearchClient = new OpensearchClient(options).client();
@@ -29,12 +28,16 @@ export class OpensearchRequest {
    * @param index name of the index
    * @returns index name
    */
-  public async createIndex(index: string): Promise<IndicesCreateResponse> {
+  public async createIndex(
+    index: string,
+    settings: object,
+    mappings: object
+  ): Promise<IndicesCreateResponse> {
     return this.opensearchClient.indices.create({
       index,
       body: {
-        settings: this.opensearchConfig.settings,
-        mappings: this.opensearchConfig.mappings
+        settings,
+        mappings
       }
     }) as Promise<any>;
   }
@@ -47,7 +50,7 @@ export class OpensearchRequest {
    */
   public async createDoc(
     index: string,
-    body: DAppSchemaDoc | AppStoreSchemaDoc
+    body: DAppSchemaDoc | AppStoreSchemaDoc | DeveloperSchemaDoc
   ): Promise<any> {
     return this.opensearchClient.index({
       index,
@@ -119,7 +122,7 @@ export class OpensearchRequest {
    */
   public async updateDoc(
     index: string,
-    body: DAppSchemaDoc | AppStoreSchemaDoc
+    body: DAppSchemaDoc | AppStoreSchemaDoc | DeveloperSchemaDoc
   ): Promise<any> {
     const id = body.id;
     delete body.id;

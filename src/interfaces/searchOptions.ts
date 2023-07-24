@@ -78,3 +78,21 @@ export interface AppStoreSearchPayload {
   size?: number;
   _source?: string[];
 }
+
+export interface DeveloperSearchPayload {
+  limit?: number;
+  isListed?: boolean | string;
+  page?: string | number;
+  devId?: string | string[];
+  searchById?: boolean;
+  ownerAddress?: string;
+  tokenIds?: string;
+  listedOnOrAfter?: Date;
+  listedOnOrBefore?: Date;
+  orderBy?: string | OrderParams;
+  scrollId?: string;
+  size?: number;
+  _source?: string[];
+  credentialsId?: string;
+  credentialsType?: string;
+}
