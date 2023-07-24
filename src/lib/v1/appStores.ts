@@ -231,7 +231,7 @@ export class DappStoreRegistryV1 {
    */
   public addBulkDocsToIndex = async (
     index: string,
-    appStores: StoreSchema[] | any[] = []
+    appStores: StoreSchema[] = []
   ) => {
     if (!appStores.length) return;
 
@@ -285,9 +285,7 @@ export class DappStoreRegistryV1 {
     };
   };
 
-  public async createDoc(
-    appStore: StoreSchema | any
-  ): Promise<StandardResponse> {
+  public async createDoc(appStore: StoreSchema): Promise<StandardResponse> {
     /**
      * have to add if any action have to do onchain
      */
@@ -424,9 +422,7 @@ export class DappStoreRegistryV1 {
    * @param org
    * @returns acknowledge
    */
-  public async updateDoc(
-    appStore: StoreSchema | any
-  ): Promise<StandardResponse> {
+  public async updateDoc(appStore: StoreSchema): Promise<StandardResponse> {
     /**
      * have to add if any action have to do onchain
      */

@@ -123,7 +123,7 @@ export interface DAppSchemaDoc extends DAppSchema {
 export interface AppStoreSchemaDoc extends StoreSchema {
   id?: string;
   keyKeyword: string;
-  categoryKeyword: string;
+  categoryKeyword?: string;
 }
 
 export interface UpdateAppStoreBulkDocs {
