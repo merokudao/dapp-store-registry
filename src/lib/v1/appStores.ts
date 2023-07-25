@@ -35,9 +35,9 @@ export const searchAppStore = {
   alias: `${process.env.ENVIRONMENT}_app_store_search_index`
 };
 
-export const MAX_RESULT_WINDOW = 10000;
+export const MAX_RESULT_WINDOW_APP_STORE = 10000;
 
-export class DappStoreRegistryV1 {
+export class AppStoreRegistry {
   openSearchApis: OpensearchRequest;
   constructor(openSearchOptions: OpenSearchConnectionOptions) {
     this.openSearchApis = new OpensearchRequest(openSearchOptions);
@@ -301,7 +301,7 @@ export class DappStoreRegistryV1 {
     };
   }
 
-  public deleteDapp = async (dappId: string): Promise<StandardResponse> => {
+  public deleteDoc = async (dappId: string): Promise<StandardResponse> => {
     await this.openSearchApis.deleteDoc(searchAppStore.alias, dappId);
     return {
       status: 200,
@@ -321,7 +321,10 @@ export class DappStoreRegistryV1 {
     filterOpts: AppStoreSearchPayload = { isListed: "true" }
   ): Promise<StandardResponse> => {
     const { finalQuery, limit } = this.searchQuery(queryTxt, filterOpts);
-    if ((finalQuery.from || 0) + (finalQuery.size || 0) > MAX_RESULT_WINDOW)
+    if (
+      (finalQuery.from || 0) + (finalQuery.size || 0) >
+      MAX_RESULT_WINDOW_APP_STORE
+    )
       return this.maxWindowError(finalQuery, limit);
 
     const result: SearchResult = await this.openSearchApis.search(
