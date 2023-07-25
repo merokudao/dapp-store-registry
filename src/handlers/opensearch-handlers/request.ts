@@ -7,7 +7,6 @@ import {
   OpenSearchConnectionOptions,
   PaginationQuery
 } from "../../interfaces";
-import { IndicesCreateResponse } from "@opensearch-project/opensearch/api/types";
 
 export const methods = {
   PUT: "PUT",
@@ -28,18 +27,14 @@ export class OpensearchRequest {
    * @param index name of the index
    * @returns index name
    */
-  public async createIndex(
-    index: string,
-    settings: object,
-    mappings: object
-  ): Promise<IndicesCreateResponse> {
+  public async createIndex(index: string, settings: object, mappings: object) {
     return this.opensearchClient.indices.create({
       index,
       body: {
         settings,
         mappings
       }
-    }) as Promise<any>;
+    });
   }
 
   /**
@@ -51,7 +46,7 @@ export class OpensearchRequest {
   public async createDoc(
     index: string,
     body: DAppSchemaDoc | AppStoreSchemaDoc | DeveloperSchemaDoc
-  ): Promise<any> {
+  ) {
     return this.opensearchClient.index({
       index,
       body,
@@ -65,7 +60,7 @@ export class OpensearchRequest {
    * @param index index name
    * @param body array of docs
    */
-  public async createBulkDoc(body: any): Promise<any> {
+  public async createBulkDoc(body: any) {
     return this.opensearchClient.helpers.bulk(body);
   }
 
@@ -88,7 +83,7 @@ export class OpensearchRequest {
    * @param id id of doc
    * @returns response
    */
-  public async deleteDoc(index: string, id: string): Promise<any> {
+  public async deleteDoc(index: string, id: string) {
     return this.opensearchClient.delete({
       index,
       id
