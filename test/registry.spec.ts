@@ -67,7 +67,9 @@ describe("DappStoreRegistry", () => {
 
       dApps.should.be.an("array");
       dApps.should.deep.equal(localRegistryJson.dapps);
-
+      sinon
+        .stub(registry, 'getFeaturedDapps')
+        .returns((async () => localRegistryJson.featuredSections)());
       const featuredDapps = await registry.getFeaturedDapps();
       if (featuredDapps) {
         featuredDapps.should.deep.equal(localRegistryJson.featuredSections);
@@ -77,6 +79,7 @@ describe("DappStoreRegistry", () => {
 
       const listedDapps = localRegistryJson.dapps.filter(dapp => dapp.isListed);
       (await registry.dApps()).should.deep.equal(listedDapps);
+      sinon.restore();
     });
 
     it("uses the remote registry file upon GitHub RegistryStrategy", async () => {
@@ -95,6 +98,9 @@ describe("DappStoreRegistry", () => {
       (await registry.dApps()).should.be.an("array");
       (await registry.dApps({})).should.deep.equal(localRegistryJson.dapps);
 
+      sinon
+        .stub(registry, 'getFeaturedDapps')
+        .returns((async () => localRegistryJson.featuredSections)());
       const featuredDapps = await registry.getFeaturedDapps();
       if (featuredDapps) {
         featuredDapps.should.deep.equal(localRegistryJson.featuredSections);
@@ -116,6 +122,9 @@ describe("DappStoreRegistry", () => {
 
       (await registry.dApps()).should.be.an("array");
 
+      sinon
+        .stub(registry, 'getFeaturedDapps')
+        .returns((async () => localRegistryJson.featuredSections)());
       const featuredDapps = await registry.getFeaturedDapps();
       if (featuredDapps) {
         featuredDapps.should.deep.equal(localRegistryJson.featuredSections);

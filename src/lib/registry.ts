@@ -23,6 +23,7 @@ import _ from "lodash";
 import { redisClient } from "../handlers/database/redis";
 
 const DAPP_REGISTRY_CACHE = "DAPP_REGISTRY_CACHE";
+const DAPP_FEATURED_REGISTRY_CACHE = "DAPP_FEATURED_REGISTRY_CACHE";
 
 Dotenv.config();
 
@@ -201,6 +202,11 @@ export class DappStoreRegistry {
         JSON.stringify(cachedRegistryRemote),
         DappStoreRegistry.TTL
       );
+      redisClient.set(
+        DAPP_FEATURED_REGISTRY_CACHE,
+        JSON.stringify(cachedRegistryRemote.featuredSections),
+        DappStoreRegistry.TTL
+      );
       !isBuildingSearchIndex && this.buildSearchIndex(cachedRegistryRemote);
       return cachedRegistryRemote as DAppStoreSchema;
     } else if (this.strategy === RegistryStrategy.Static) {
@@ -208,6 +214,11 @@ export class DappStoreRegistry {
       redisClient.set(
         DAPP_REGISTRY_CACHE,
         JSON.stringify(cachedRegistry),
+        DappStoreRegistry.TTL
+      );
+      redisClient.set(
+        DAPP_FEATURED_REGISTRY_CACHE,
+        JSON.stringify(cachedRegistry.featuredSections),
         DappStoreRegistry.TTL
       );
       !isBuildingSearchIndex && this.buildSearchIndex(cachedRegistry);
@@ -470,6 +481,8 @@ export class DappStoreRegistry {
    * @returns The list of featured sections and the dApps in that section
    */
   public getFeaturedDapps = async () => {
+    const featuredSection = await redisClient.get(DAPP_FEATURED_REGISTRY_CACHE);
+    if (featuredSection) return JSON.parse(featuredSection);
     return (await this.registry()).featuredSections;
   };
 
