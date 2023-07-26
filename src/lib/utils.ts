@@ -377,7 +377,7 @@ export const searchFilters = (
     });
 
   if (storeKey.length)
-    query.bool.must.push({ match: { whitelistedForStores: storeKey } });
+    query.bool.must.push({ term: { whitelistedForStores: storeKey } });
   if (minAge) query.bool.must.push({ range: { minAge: { gte: minAge } } });
   if (chainId) query.bool.must.push({ match: { chains: chainId } });
   if (language) query.bool.must.push({ match: { language } });
