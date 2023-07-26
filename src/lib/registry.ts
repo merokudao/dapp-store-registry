@@ -508,3 +508,5 @@ export class DappStoreRegistry {
     }
   };
 }
+
+export const dappStoreRegistryObject = new DappStoreRegistry();
