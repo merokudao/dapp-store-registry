@@ -250,7 +250,7 @@
         }
       },
       "whitelistedForStores": {
-        "type": "text"
+        "type": "keyword"
       },
       "attributes": {
         "type": "nested",
