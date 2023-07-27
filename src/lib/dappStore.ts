@@ -7,6 +7,7 @@ import dAppEnrichImagesSchema from "../schemas/merokuDappStore.dAppEnrichImagesS
 import dAppEnrichSchema from "../schemas/merokuDappStore.dAppEnrich.json";
 import Ajv2019 from "ajv/dist/2019";
 import addFormats from "ajv-formats";
+import categoryJson from "../dappStoreCategory.json";
 
 const debug = Debug("@merokudao:dapp-store-registry:Stores");
 
@@ -101,5 +102,13 @@ export class DappStores {
     const valid = validate(payload);
     debug(JSON.stringify(validate.errors));
     return [valid, JSON.stringify(validate.errors)];
+  };
+
+  /**
+   * get all category for dappStore
+   * @returns
+   */
+  public getAllCategories = () => {
+    return categoryJson;
   };
 }
