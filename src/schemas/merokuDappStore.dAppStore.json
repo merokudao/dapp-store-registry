@@ -16,8 +16,12 @@
         "$ref": "merokuDappStore.featuredSchema.json"
       }
     },
-    "key": {
+    "storeKey": {
       "description": "Unique ID of this dApp Store",
+      "type": "string"
+    },
+    "key": {
+      "description": "NFT ID of this dApp Store",
       "type": "string"
     },
     "name": {
@@ -167,6 +171,7 @@
   },
   "required": [
     "key",
+    "storeKey",
     "name",
     "description",
     "url",
