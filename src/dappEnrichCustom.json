@@ -256,7 +256,7 @@
         {
           "dappId": "flooz.app",
           "fields": {
-            "name": "Flooz App",
+            "name": "Flooz",
             "description": "Flooz is a blockchain analytics platform that helps you invest with confidence (web & app). We empower you to discover opportunities, perform due diligence and instantly trade any digital asset, track any portfolio with real-time data and alerts.",
             "images": {
               "logo": "https://gateway.ipfscdn.io/ipfs/QmdUXYTNhoNgRipQwVzBkLVBMDctKCWKjMetn89mKb1JmQ/0",
@@ -273,7 +273,7 @@
               ]
             },
             "availableOnPlatform": ["web", "android", "ios"],
-            "category": "infrastructure",
+            "category": "defi",
             "cdn": {
               "images": {
                 "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/logo.png",
