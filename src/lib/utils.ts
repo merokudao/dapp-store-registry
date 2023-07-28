@@ -438,10 +438,23 @@ export const searchFilters = (
   // search on customer string
   if (!!search && search.length) {
     query.bool.should.push({
-      match: { name: { query: search, boost: boostScore.name } }
+      match: {
+        name: {
+          query: search,
+          boost: boostScore.name,
+          fuzziness: "6",
+          operator: "and"
+        }
+      }
     });
     query.bool.should.push({
-      match: { description: { query: search, boost: boostScore.description } }
+      match: {
+        description: {
+          query: search,
+          boost: boostScore.description,
+          fuzziness: "3"
+        }
+      }
     });
     query.bool.should.push({
       match: { daapId: { query: search, boost: boostScore.dappId } }
