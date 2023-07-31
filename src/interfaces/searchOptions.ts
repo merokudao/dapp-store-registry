@@ -67,6 +67,7 @@ export interface AppStoreSearchPayload {
   isListed?: boolean | string;
   page?: string | number;
   key?: string | string[];
+  storeId?: string | string[];
   developer?: { id: string };
   searchById?: boolean;
   ownerAddress?: string;

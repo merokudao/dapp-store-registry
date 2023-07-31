@@ -124,6 +124,7 @@ export interface AppStoreSchemaDoc extends StoreSchema {
   id?: string;
   keyKeyword: string;
   categoryKeyword?: string;
+  storeIdKeyword: string;
 }
 
 export interface UpdateAppStoreBulkDocs {

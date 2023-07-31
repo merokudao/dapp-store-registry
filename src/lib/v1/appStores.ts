@@ -27,7 +27,7 @@ const defaultBoost = process.env.DEFAULT_BOOST || "1";
 const boostScore = {
   name: parseInt(process.env.BOOST_NAME || defaultBoost),
   description: parseInt(process.env.BOOST_DESCRIPTION || defaultBoost),
-  key: parseInt(process.env.BOOST_APP_STORE_KEY || defaultBoost),
+  storeId: parseInt(process.env.BOOST_APP_STORE_KEY || defaultBoost),
   category: parseInt(process.env.BOOST_CATEGORY || defaultBoost)
 };
 export const searchAppStore = {
@@ -74,10 +74,13 @@ export class AppStoreRegistry {
       listedOnOrAfter = null,
       listedOnOrBefore = null
     } = payload;
-    let { limit = recordsPerPage, key = "" } = payload;
+    let { limit = recordsPerPage, key = "", storeId = "" } = payload;
 
     if (key.length && typeof key === "string")
       key = key.split(",").map((di: string) => di.trim());
+
+    if (storeId.length && typeof storeId === "string")
+      storeId = storeId.split(",").map((di: string) => di.trim());
     // eslint-disable-next-line no-extra-boolean-cast
     if (!!isForMatureAudience)
       query.bool.must.push({
@@ -116,6 +119,8 @@ export class AppStoreRegistry {
       });
 
     if (key.length) query.bool.must.push({ terms: { keyKeyword: key } });
+    if (storeId.length)
+      query.bool.must.push({ terms: { storeIdKeyword: key } });
     if (tokenIds.length)
       query.bool.must.push({
         terms: {
@@ -135,7 +140,7 @@ export class AppStoreRegistry {
         match: { description: { query: search, boost: boostScore.description } }
       });
       query.bool.should.push({
-        match: { key: { query: search, boost: boostScore.key } }
+        match: { storeId: { query: search, boost: boostScore.storeId } }
       });
       query.bool.should.push({
         match: { category: { query: search, boost: boostScore.category } }
@@ -205,7 +210,7 @@ export class AppStoreRegistry {
     });
     query.bool.should.push({
       match: {
-        key: { query: search, fuzziness: "AUTO", boost: boostScore.key }
+        storeId: { query: search, fuzziness: "AUTO", boost: boostScore.storeId }
       }
     });
     query.bool.should.push({
@@ -237,8 +242,9 @@ export class AppStoreRegistry {
 
     const appStoreDocs = appStores.map(d => {
       return {
-        id: d.key,
+        id: d.storeId,
         keyKeyword: d.key,
+        storeIdKeyword: d.storeId,
         categoryKeyword: d.category,
         ...d
       };
@@ -246,7 +252,7 @@ export class AppStoreRegistry {
     const appStoreDocsBulk = {
       datasource: appStoreDocs,
       onDocument(doc: StoreSchema) {
-        return { index: { _index: index, _id: doc.key } };
+        return { index: { _index: index, _id: doc.storeId } };
       }
     };
     return this.openSearchApis.createBulkDoc(appStoreDocsBulk);
@@ -290,8 +296,9 @@ export class AppStoreRegistry {
      * have to add if any action have to do onchain
      */
     await this.openSearchApis.createDoc(searchAppStore.alias, {
-      id: appStore.key,
+      id: appStore.storeId,
       keyKeyword: appStore.key,
+      storeIdKeyword: appStore.storeId,
       categoryKeyword: appStore.category,
       ...appStore
     });
@@ -357,7 +364,7 @@ export class AppStoreRegistry {
    */
   public searchById = async (id: string): Promise<StandardResponse> => {
     const { finalQuery } = this.searchQuery("", {
-      key: id,
+      storeId: id,
       searchById: true
     });
     const result: SearchResult = await this.openSearchApis.search(
@@ -430,8 +437,9 @@ export class AppStoreRegistry {
      * have to add if any action have to do onchain
      */
     await this.openSearchApis.updateDoc(searchAppStore.alias, {
-      id: appStore.key,
+      id: appStore.storeId,
       keyKeyword: appStore.key,
+      storeIdKeyword: appStore.storeId,
       categoryKeyword: appStore.category,
       ...appStore
     });
@@ -537,7 +545,7 @@ export class AppStoreRegistry {
       let chunk = body.splice(0, 10000);
       chunk = chunk.reduce((aggs: any[], doc: AppStoreSchemaDoc) => {
         aggs = aggs.concat([
-          { update: { _index: index, _id: doc.key } },
+          { update: { _index: index, _id: doc.storeId } },
           { doc }
         ]);
         return aggs;

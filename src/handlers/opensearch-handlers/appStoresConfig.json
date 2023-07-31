@@ -66,6 +66,14 @@
       "keyKeyword": {
         "type": "keyword"
       },
+      "storeId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "storeIdKeyword": {
+        "type": "keyword"
+      },
       "minAge": {
         "type": "integer"
       },
