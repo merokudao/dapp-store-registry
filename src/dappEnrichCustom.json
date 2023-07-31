@@ -226,6 +226,98 @@
               }
             }
           }
+        },
+        {
+          "dappId": "copperx-io.app",
+          "fields": {
+            "description": "Copperx is a blockchain payment gateway that is redefining the landscape of crypto transactions. This innovative platform provides user-friendly developer APIs, enabling seamless payments across multiple networks including Ethereum, Polygon, BSC, and Solana. These APIs are power-packed with features like currency conversion, invoicing, recurring billing, invoicing, payment links and many more",
+            "images": {
+              "banner": "https://gateway.ipfscdn.io/ipfs/Qmd3AxbZkxcy7MfWwBPnK35nE1dqN8uW2gA45zehZ3aF3g/0",
+              "screenshots": [
+                "https://gateway.ipfscdn.io/ipfs/QmaiTVYpVpog4NJ7SWvbTNLhS6sZiQ7yErTKJv5LAoKG2B/0",
+                "https://gateway.ipfscdn.io/ipfs/QmaGxxBtcZCwhbvAHEv3rQXhftEbSgyXBsKHYHBYK2TA6m/0",
+                "https://gateway.ipfscdn.io/ipfs/Qmf1V3KyobipMeNr85Qsm4WvNkxViVAEzbad7o95m2Fmkj/0",
+                "https://gateway.ipfscdn.io/ipfs/QmNW1aTsRLQ5KCjvttAb2D3tgfZB5MvKiyAzArcNcEsPm8/0"
+              ]
+            },
+            "cdn": {
+              "images": {
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/copperx-io.app/images/banner.png",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/copperx-io.app/images/screenshots-0.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/copperx-io.app/images/screenshots-1.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/copperx-io.app/images/screenshots-2.png",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/copperx-io.app/images/screenshots-3.png"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "dappId": "flooz.app",
+          "fields": {
+            "name": "Flooz",
+            "description": "Flooz is a blockchain analytics platform that helps you invest with confidence (web & app). We empower you to discover opportunities, perform due diligence and instantly trade any digital asset, track any portfolio with real-time data and alerts.",
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmdUXYTNhoNgRipQwVzBkLVBMDctKCWKjMetn89mKb1JmQ/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmRAZk7j6ZyGrGRaZcJZyUeiq6nKJCd6Q2r3MqqFE97obU/0",
+              "screenshots": [
+                "https://gateway.ipfscdn.io/ipfs/QmNwgQzeAtDWuTPYJ8ZHci1mkSxY1FHT21dmDDxtWB3BzT/0",
+                "https://gateway.ipfscdn.io/ipfs/QmaUg6oNa9eAY1X5iMebhb9zNwuKivFVBcHtkXsvJDR36n/0",
+                "https://gateway.ipfscdn.io/ipfs/QmUUxbLGrvjP37e8UjW74GCEw1b44h3vr71qCnn9uktYMk/0",
+                "https://gateway.ipfscdn.io/ipfs/QmXfw7iR28cKbA7faLVBzSMZSc1SUhbHK5wy3K71aPPoK4/0",
+                "https://gateway.ipfscdn.io/ipfs/QmdnqQ6Z4w7oZXJDMsHj2riGB96BxX3KJffQAsWktSrkvv/0",
+                "https://gateway.ipfscdn.io/ipfs/QmdizdJkMiBL6KaDjyZVRWgzYZX1LNnKbdx42Zw4K7ML3e/0",
+                "https://gateway.ipfscdn.io/ipfs/QmbmwFrsjHk9Cqx4U4ZUAB67XZToWAq1poimBH2x99Pm1M/0",
+                "https://gateway.ipfscdn.io/ipfs/QmPVZuMQapbndQASsCCgtYZq2HyYMvNFjBVAoHqGW2KnnK/0"
+              ]
+            },
+            "availableOnPlatform": ["web", "android", "ios"],
+            "category": "defi",
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/logo.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/banner.png",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-0.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-1.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-2.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-3.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-4.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-5.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-6.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/flooz.app/images/screenshots-7.jpeg"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "dappId": "alta.app",
+          "fields": {
+            "name": "ALTA Finance",
+            "description": "Our mission is to make real estate investing easy using Web3. We believe in the next decade, real estate investing will be decentralized, democratized, and easily accessible, so we are building the protocols, tools, and infrastructure for this future across the Internet at scale.",
+            "images": {
+              "logo": "https://gateway.ipfscdn.io/ipfs/QmdNzScpCuusnVzTHjdHwy1vtYeAUSXRRbxiL6WFmWzDeB/0",
+              "banner": "https://gateway.ipfscdn.io/ipfs/QmaJmnzpAbc5p1qktP2Z7eQJecrzcLGmVyTTUHZdtg5tnE/0",
+              "screenshots": [
+                "https://gateway.ipfscdn.io/ipfs/QmNZUpm36ATxdb3bJcAP6riYqakafm73xK24HhqGnc5t7G/0",
+                "https://gateway.ipfscdn.io/ipfs/QmU42yoCfKxvRVVPuHn82rGMnRRSm7LSLAiUFsCUoxjNiZ/0",
+                "https://gateway.ipfscdn.io/ipfs/Qme9UUwzDgLgpXebPGrx2ECPfEYAsBKStvct7wdcmRVMYM/0"
+              ]
+            },
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/alta.app/images/logo.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/alta.app/images/banner.jpeg",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/alta.app/images/screenshots-0.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/alta.app/images/screenshots-1.jpeg",
+                  "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/alta.app/images/screenshots-2.jpeg"
+                ]
+              }
+            }
+          }
         }
       ]
     }

@@ -101,7 +101,16 @@
     },
     "category": {
       "type": "string",
-      "description": "The category of the dApp store. You can assign one category to your dApp store. The category you select is particularly important for your dapp store's discoverability on the dApp Stores. This will be the category in which the dapp store appears when users browse the dApp Stores or filter search results, and it determines placement on the dApp stores tab or Games"
+      "description": "The category of the dApp store. You can assign one category to your dApp store. The category you select is particularly important for your dapp store's discoverability on the dApp Stores. This will be the category in which the dapp store appears when users browse the dApp Stores or filter search results, and it determines placement on the dApp stores tab or Games",
+      "enum": [
+        "games",
+        "finance",
+        "browsers",
+        "wallets",
+        "nft-social",
+        "universal",
+        "others"
+      ]
     },
     "dappsEnrich": {
       "type": "array",
@@ -165,7 +174,8 @@
     "minAge",
     "isForMatureAudience",
     "isListed",
-    "listDate"
+    "listDate",
+    "category"
   ],
   "additionalProperties": false
 }
