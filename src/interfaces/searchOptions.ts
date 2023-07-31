@@ -55,3 +55,45 @@ export interface CategoryObject {
 export interface ObjectNumberValueType {
   [key: string]: number;
 }
+
+export interface AppStoreSearchPayload {
+  language?: string;
+  isForMatureAudience?: boolean | string;
+  minAge?: number;
+  allowedInCountries?: string[];
+  blockedInCountries?: string[];
+  category?: string;
+  limit?: number;
+  isListed?: boolean | string;
+  page?: string | number;
+  key?: string | string[];
+  storeId?: string | string[];
+  developer?: { id: string };
+  searchById?: boolean;
+  ownerAddress?: string;
+  tokenIds?: string;
+  listedOnOrAfter?: Date;
+  listedOnOrBefore?: Date;
+  orderBy?: string | OrderParams;
+  scrollId?: string;
+  size?: number;
+  _source?: string[];
+}
+
+export interface DeveloperSearchPayload {
+  limit?: number;
+  isListed?: boolean | string;
+  page?: string | number;
+  devId?: string | string[];
+  searchById?: boolean;
+  ownerAddress?: string;
+  tokenIds?: string;
+  listedOnOrAfter?: Date;
+  listedOnOrBefore?: Date;
+  orderBy?: string | OrderParams;
+  scrollId?: string;
+  size?: number;
+  _source?: string[];
+  credentialsId?: string;
+  credentialsType?: string;
+}

@@ -1,4 +1,6 @@
 import { DAppSchema } from "./dAppSchema";
+import { StoreSchema } from "./dAppStoreSchema";
+import { DeveloperSchema } from "./developerSchema";
 
 export interface CreateIndexRes {
   acknowledged: boolean;
@@ -116,4 +118,26 @@ export interface DAppSchemaDoc extends DAppSchema {
   nameKeyword: string;
   subCategoryKeyword?: string;
   dappIdKeyword: string;
+}
+
+export interface AppStoreSchemaDoc extends StoreSchema {
+  id?: string;
+  keyKeyword: string;
+  categoryKeyword?: string;
+  storeIdKeyword: string;
+}
+
+export interface UpdateAppStoreBulkDocs {
+  doc: AppStoreSchemaDoc;
+  update: { _index: string; _id: string };
+}
+
+export interface UpdateDAppSchemaBulkDocs {
+  doc: DAppSchemaDoc;
+  update: { _index: string; _id: string };
+}
+
+export interface DeveloperSchemaDoc extends DeveloperSchema {
+  id: string;
+  devIdKeyword: string;
 }

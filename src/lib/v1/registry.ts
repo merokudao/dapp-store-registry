@@ -2,6 +2,10 @@ import { format } from "date-fns";
 
 import { OpensearchRequest } from "../../handlers";
 import {
+  settings,
+  mappings
+} from "../../handlers/opensearch-handlers/config.json";
+import {
   AddDappPayload,
   DAppSchema,
   DAppSchemaDoc,
@@ -58,7 +62,13 @@ export class DappStoreRegistryV1 {
         ...d
       } as DAppSchemaDoc;
     });
-    return this.openSearchApis.createBulkDoc(index, dappDocs);
+    const dappsDocsBulk = {
+      datasource: dappDocs,
+      onDocument(doc: DAppSchemaDoc) {
+        return { index: { _index: index, _id: doc.id } };
+      }
+    };
+    return this.openSearchApis.createBulkDoc(dappsDocsBulk);
   };
 
   /**
@@ -70,7 +80,7 @@ export class DappStoreRegistryV1 {
       new Date(),
       "yyyy-MM-dd-HH-mm-ss"
     )}`;
-    await this.openSearchApis.createIndex(indexName);
+    await this.openSearchApis.createIndex(indexName, settings, mappings);
     return {
       status: 200,
       message: ["success"],
@@ -446,7 +456,16 @@ export class DappStoreRegistryV1 {
   public async updateDocs(index: string, body: DAppSchemaDoc[]) {
     const chunks = [];
     while (body.length > 0) {
-      chunks.push(body.splice(0, 100000));
+      let chunk = body.splice(0, 10000);
+      chunk = chunk.reduce((aggs: any[], doc: DAppSchemaDoc) => {
+        aggs = aggs.concat([
+          { update: { _index: index, _id: doc.dappId } },
+          { doc }
+        ]);
+        return aggs;
+      }, []);
+      chunks.push(chunk);
+      chunks.push(chunk);
     }
     return Promise.allSettled(
       chunks.map(chunk => this.openSearchApis.updateDocs(index, chunk))

@@ -1,0 +1,140 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 2,
+      "number_of_replicas": 1
+    },
+    "analysis": {
+      "analyzer": {
+        "autocomplete": {
+          "tokenizer": "autocomplete_tokenizer",
+          "filter": ["lowercase"]
+        },
+        "autocomplete_search": {
+          "tokenizer": "lowercase"
+        }
+      },
+      "tokenizer": {
+        "autocomplete_tokenizer": {
+          "type": "edge_ngram",
+          "min_gram": 2,
+          "max_gram": 20,
+          "token_chars": ["letter", "digit"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "legalName": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "legalNameKeyword": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "website": {
+        "type": "keyword"
+      },
+      "external_url": {
+        "type": "keyword"
+      },
+      "image": {
+        "type": "keyword"
+      },
+      "images": {
+        "properties": {
+          "logo": {
+            "type": "keyword"
+          }
+        }
+      },
+      "devId": {
+        "type": "text",
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "devIdKeyword": {
+        "type": "keyword"
+      },
+      "minAge": {
+        "type": "integer"
+      },
+      "expiryDate": {
+        "type": "date"
+      },
+      "ownerAddress": {
+        "type": "keyword"
+      },
+      "tokenId": {
+        "type": "keyword"
+      },
+      "cdn": {
+        "properties": {
+          "images": {
+            "properties": {
+              "logo": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "credentials": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "attributes": {
+        "type": "nested",
+        "properties": {
+          "display_type": { "type": "text" },
+          "trait_type": { "type": "text" },
+          "value": { "type": "text" }
+        }
+      }
+    },
+    "minted": {
+      "type": "boolean"
+    },
+    "listDate": {
+      "type": "date"
+    },
+    "isListed": {
+      "type": "boolean"
+    }
+  },
+  "_source": {
+    "autocompleteFields": ["legalName", "devId", "website", "ownerAddress"],
+    "searchFields": [
+      "legalName",
+      "description",
+      "website",
+      "images",
+      "cdn",
+      "external_url",
+      "name",
+      "credentials",
+      "ownerAddress",
+      "minted",
+      "cdn",
+      "tokenId"
+    ]
+  }
+}

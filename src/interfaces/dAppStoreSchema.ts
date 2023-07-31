@@ -14,6 +14,7 @@ export interface StoreSchema {
   featuredSections?: FeaturedSection[];
 
   key: string;
+  storeId: string;
   name: string;
   description: string;
   url: string;
