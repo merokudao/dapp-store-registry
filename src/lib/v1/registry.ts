@@ -18,7 +18,10 @@ import {
 import { DappStoreRegistry } from "../";
 import { searchFilters } from "../utils";
 import debug from "debug";
-import { FilterOptionsSearch } from "../../interfaces/searchOptions";
+import {
+  FilterOptionsSearch,
+  ObjectArrayOfStringValueType
+} from "../../interfaces/searchOptions";
 
 export const searchRegistry = {
   indexPrefix: `${process.env.ENVIRONMENT}_dapp_registries`,
@@ -448,6 +451,61 @@ export class DappStoreRegistryV1 {
   }
 
   /**
+   * get all dapp Ids matched for query
+   * @param dappId
+   * @returns all Matched dappIds
+   */
+  public async getFeaturedDappIDs(
+    storeKey: string | null
+  ): Promise<StandardResponse> {
+    const query = { featured: true };
+    if (storeKey) Object.assign(query, { storeKey });
+    const { finalQuery } = searchFilters("", query);
+    Object.assign(finalQuery, {
+      _source: ["dappId", "featuredForStores"],
+      size: 500
+    });
+    const result: SearchResult = await this.openSearchApis.search(
+      searchRegistry.alias,
+      finalQuery
+    );
+    const {
+      hits: { hits: res }
+    } = result.body || { hits: { hits: [] } };
+
+    // start: format featured section for all stores
+    const storeDappIdMapping = res.reduce(
+      (aggs: ObjectArrayOfStringValueType, value) => {
+        const { dappId, featuredForStores = [] } = value._source;
+        return featuredForStores.reduce(
+          (aggs1: ObjectArrayOfStringValueType, storeId: string) => {
+            aggs1[storeId] = aggs1[storeId] || [];
+            aggs1[storeId].push(dappId);
+            return aggs1;
+          },
+          aggs
+        );
+      },
+      {}
+    );
+    const data = Object.keys(storeDappIdMapping).map((storeId: string) => {
+      return {
+        title: `${storeId} whitelist`,
+        description: `A curated list of dapps.`,
+        dappIds: storeDappIdMapping[storeId],
+        key: storeId
+      };
+    });
+    // end: format feartured section for all stores
+
+    return {
+      status: 200,
+      message: ["success"],
+      data
+    };
+  }
+
+  /**
    * update multiple docs
    * @param index string
    * @param body { isVerfied: true, dappId }
@@ -464,7 +522,6 @@ export class DappStoreRegistryV1 {
         ]);
         return aggs;
       }, []);
-      chunks.push(chunk);
       chunks.push(chunk);
     }
     return Promise.allSettled(

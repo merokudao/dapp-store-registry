@@ -24,6 +24,7 @@ export interface FilterOptionsSearch {
   scrollId?: string;
   size?: number;
   _source?: string[];
+  featured?: boolean;
 }
 
 export interface OrderParams {
@@ -45,6 +46,10 @@ export interface SortByOrderQuery {
 
 export interface ObjectStringValueType {
   [key: string]: string[] | string;
+}
+
+export interface ObjectArrayOfStringValueType {
+  [key: string]: string[];
 }
 
 export interface CategoryObject {
