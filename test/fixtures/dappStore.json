@@ -4,7 +4,8 @@
       "name": "goku",
       "description": "yoyo",
       "url": "https://goku.app",
-      "key": "goku.appStore",
+      "storeId": "goku.appStore",
+      "key": "goku",
       "geoRestrictions": {
         "blockedCountries": ["AF"]
       },
