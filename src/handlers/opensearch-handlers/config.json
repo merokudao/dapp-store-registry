@@ -244,6 +244,9 @@
       "whitelistedForStores": {
         "type": "keyword"
       },
+      "featuredForStores": {
+        "type": "keyword"
+      },
       "attributes": {
         "type": "nested",
         "properties": {

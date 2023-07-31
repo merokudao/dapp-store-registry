@@ -40,6 +40,7 @@ export interface DAppSearchDataSchema extends DAppSchema {
   tokenId?: string;
   ownerAddress?: string;
   metrics?: object;
+  featuredForStores?: string[];
 }
 
 export interface DAppSchemaSearch {

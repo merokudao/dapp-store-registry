@@ -362,7 +362,8 @@ export const searchFilters = (
     ownerAddress = null,
     isMinted = null,
     tokenIds = [],
-    storeKey = ""
+    storeKey = "",
+    featured = false
   } = payload;
   let { limit = recordsPerPage, dappId = "" } = payload;
 
@@ -378,6 +379,10 @@ export const searchFilters = (
 
   if (storeKey.length)
     query.bool.must.push({ term: { whitelistedForStores: storeKey } });
+  if (storeKey.length && featured)
+    query.bool.must.push({ term: { featured: storeKey } });
+  else if (featured)
+    query.bool.must.push({ exists: { field: "featuredForStores" } });
   if (minAge) query.bool.must.push({ range: { minAge: { gte: minAge } } });
   if (chainId) query.bool.must.push({ match: { chains: chainId } });
   if (language) query.bool.must.push({ match: { language } });
