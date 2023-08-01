@@ -108,16 +108,16 @@
           "trait_type": { "type": "text" },
           "value": { "type": "text" }
         }
+      },
+      "minted": {
+        "type": "boolean"
+      },
+      "listDate": {
+        "type": "date"
+      },
+      "isListed": {
+        "type": "boolean"
       }
-    },
-    "minted": {
-      "type": "boolean"
-    },
-    "listDate": {
-      "type": "date"
-    },
-    "isListed": {
-      "type": "boolean"
     }
   },
   "_source": {
