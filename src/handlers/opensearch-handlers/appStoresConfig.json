@@ -233,6 +233,7 @@
   "_source": {
     "autocompleteFields": [
       "name",
+      "storeId",
       "key",
       "url",
       "category",
