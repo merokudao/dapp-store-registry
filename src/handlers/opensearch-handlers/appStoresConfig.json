@@ -187,7 +187,41 @@
         "type": "nested",
         "properties": {
           "dappId": { "type": "text" },
-          "fields": { "type": "text" }
+          "fields": {
+            "properties": {
+              "minAge": { "type": "integer" },
+              "description": { "type": "keyword" },
+              "isForMatureAudience": { "type": "boolean" },
+              "geoRestrictions": {
+                "properties": {
+                  "allowedCountries": {
+                    "type": "text"
+                  },
+                  "blockedCountries": {
+                    "type": "text"
+                  }
+                }
+              },
+              "tags": { "type": "text" },
+              "images": {
+                "properties": {
+                  "logo": {
+                    "type": "keyword"
+                  },
+                  "banner": {
+                    "type": "keyword"
+                  },
+                  "screenshots": {
+                    "type": "nested",
+                    "properties": {
+                      "index": { "type": "keyword" },
+                      "value": { "type": "keyword" }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "image": { "type": "text" },
