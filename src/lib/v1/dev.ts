@@ -481,7 +481,7 @@ export class DevRegistry {
   public async updateDocs(index: string, body: DeveloperSchemaDoc[]) {
     const chunks = [];
     while (body.length > 0) {
-      let chunk = body.splice(0, 10000);
+      let chunk = body.splice(0, 500);
       chunk = chunk.reduce((aggs: any[], doc: DeveloperSchemaDoc) => {
         aggs = aggs.concat([
           { update: { _index: index, _id: doc.devId } },

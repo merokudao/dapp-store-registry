@@ -65,13 +65,20 @@ export class DappStoreRegistryV1 {
         ...d
       } as DAppSchemaDoc;
     });
-    const dappsDocsBulk = {
-      datasource: dappDocs,
-      onDocument(doc: DAppSchemaDoc) {
-        return { index: { _index: index, _id: doc.id } };
-      }
-    };
-    return this.openSearchApis.createBulkDoc(dappsDocsBulk);
+    const chunks = [];
+    while (dappDocs.length > 0) {
+      const chunk = dappDocs.splice(0, 500);
+      const bulkChunk = {
+        datasource: chunk,
+        onDocument(doc: DAppSchemaDoc) {
+          return { index: { _index: index, _id: doc.id } };
+        }
+      };
+      chunks.push(bulkChunk);
+    }
+    return Promise.allSettled(
+      chunks.map(chunk => this.openSearchApis.createBulkDoc(chunk))
+    );
   };
 
   /**
@@ -514,7 +521,7 @@ export class DappStoreRegistryV1 {
   public async updateDocs(index: string, body: DAppSchemaDoc[]) {
     const chunks = [];
     while (body.length > 0) {
-      let chunk = body.splice(0, 10000);
+      let chunk = body.splice(0, 500);
       chunk = chunk.reduce((aggs: any[], doc: DAppSchemaDoc) => {
         aggs = aggs.concat([
           { update: { _index: index, _id: doc.dappId } },

@@ -83,6 +83,7 @@ export interface AppStoreSearchPayload {
   scrollId?: string;
   size?: number;
   _source?: string[];
+  isMinted?: string;
 }
 
 export interface DeveloperSearchPayload {

@@ -64,7 +64,7 @@ export class AppStoreRegistry {
       language = null,
       allowedInCountries = null,
       blockedInCountries = null,
-      category = "",
+      category = [],
       isListed = "true",
       developer = null,
       page = 1,
@@ -72,7 +72,8 @@ export class AppStoreRegistry {
       ownerAddress = null,
       tokenIds = "",
       listedOnOrAfter = null,
-      listedOnOrBefore = null
+      listedOnOrBefore = null,
+      isMinted = "false"
     } = payload;
     let { limit = recordsPerPage, key = "", storeId = "" } = payload;
 
@@ -120,7 +121,7 @@ export class AppStoreRegistry {
 
     if (key.length) query.bool.must.push({ terms: { keyKeyword: key } });
     if (storeId.length)
-      query.bool.must.push({ terms: { storeIdKeyword: key } });
+      query.bool.must.push({ terms: { storeIdKeyword: storeId } });
     if (tokenIds.length)
       query.bool.must.push({
         terms: {
@@ -153,6 +154,10 @@ export class AppStoreRegistry {
 
     if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
 
+    if (isMinted)
+      query.bool.must.push({
+        match: { minted: isMinted === "true" ? true : false }
+      });
     if (isListed && !searchById && !search && !ownerAddress)
       query.bool.must.push({
         match: { isListed: isListed === "true" ? true : false }
@@ -161,9 +166,6 @@ export class AppStoreRegistry {
       query.bool.must.push({
         terms: {
           categoryKeyword: category
-            .split(",")
-            .map((c: string) => c.trim())
-            .filter((c: string) => c.length)
         }
       });
 
@@ -542,7 +544,7 @@ export class AppStoreRegistry {
   public async updateDocs(index: string, body: AppStoreSchemaDoc[]) {
     const chunks = [];
     while (body.length > 0) {
-      let chunk = body.splice(0, 10000);
+      let chunk = body.splice(0, 500);
       chunk = chunk.reduce((aggs: any[], doc: AppStoreSchemaDoc) => {
         aggs = aggs.concat([
           { update: { _index: index, _id: doc.storeId } },
