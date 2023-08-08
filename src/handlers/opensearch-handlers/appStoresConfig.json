@@ -258,7 +258,11 @@
       "minted",
       "cdn",
       "tokenId",
-      "attributes"
+      "attributes",
+      "featuredSections",
+      "dappsEnrich",
+      "whiteListedDAppIds",
+      "bannedDAppIds"
     ]
   }
 }

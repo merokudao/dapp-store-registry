@@ -1,6 +1,11 @@
 import Dotenv from "dotenv";
 import { fetch } from "cross-fetch";
-import { DAppSchema, DAppStoreSchema, FilterOptions } from "../interfaces";
+import {
+  DAppSchema,
+  DAppStoreSchema,
+  EnrichSchema,
+  FilterOptions
+} from "../interfaces";
 import MiniSearch from "minisearch";
 import parseISO from "date-fns/parseISO";
 import Ajv2019 from "ajv/dist/2019";
@@ -241,14 +246,47 @@ export class DappStoreRegistry {
     this.searchEngine?.addAll(docs);
   };
 
-  public enrichMetadataForDappStore(storeKey: string, res: DAppSchema[]) {
+  public enrichMetadataForDappStore(
+    storeKey: string,
+    res: DAppSchema[],
+    dappsEnrichData: EnrichSchema[] = []
+  ) {
     const dappStoreEnrichData = dappEnrichCustomDetails.dappStores.find(
       dStores => dStores.key === storeKey
     );
-    if (!dappStoreEnrichData) return res;
-    dappStoreEnrichData.dappEnrich.forEach(dappEnrichData => {
+    const { dappEnrich = [] } = dappStoreEnrichData || {};
+    if (!dappEnrich?.length && !dappsEnrichData.length) return res;
+    dappEnrich.forEach(dappEnrichData => {
       const idx = res.findIndex(r => r.dappId === dappEnrichData.dappId);
       if (idx !== -1) res[idx] = _.merge(res[idx], dappEnrichData.fields);
+    });
+    dappsEnrichData.forEach((dappEnrichData: EnrichSchema) => {
+      const idx = res.findIndex(r => r.dappId === dappEnrichData.dappId);
+      if (idx !== -1) {
+        dappEnrichData.fields?.images?.screenshots?.forEach(val => {
+          const index = val.index as number;
+          const imagePath = val.value as string;
+          if (res[idx].images?.screenshots?.[index]) {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            res[idx].images.screenshots?.[index] = imagePath;
+          } else res[idx].images?.screenshots?.push(imagePath);
+        });
+        delete dappEnrichData.fields?.images?.screenshots;
+        dappEnrichData.fields?.cdn?.images?.screenshots?.forEach(val => {
+          const index = val.index as number;
+          const imagePath = val.value as string;
+
+          if (res[idx].cdn?.images?.screenshots?.[index]) {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            res[idx].cdn?.images.screenshots?.[index] = imagePath;
+          } else res[idx].cdn?.images?.screenshots?.push(imagePath);
+        });
+        delete dappEnrichData.fields?.cdn?.images?.screenshots;
+
+        res[idx] = _.merge(res[idx], dappEnrichData.fields);
+      }
     });
     return res;
   }
@@ -360,7 +398,7 @@ export class DappStoreRegistry {
           d =>
             d.whitelistedForStores && d.whitelistedForStores.includes(storeKey)
         );
-        res = this.enrichMetadataForDappStore(storeKey, res);
+        res = this.enrichMetadataForDappStore(storeKey, res, []);
       }
     }
 

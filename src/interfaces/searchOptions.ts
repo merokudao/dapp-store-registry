@@ -25,6 +25,8 @@ export interface FilterOptionsSearch {
   size?: number;
   _source?: string[];
   featured?: boolean;
+  bannedDAppIds?: string[];
+  whitelistedDAppIds?: string[];
 }
 
 export interface OrderParams {
