@@ -89,7 +89,7 @@
       "expiryDate": {
         "type": "date"
       },
-      "whiteListedDAppIds": {
+      "whitelistedDAppIds": {
         "type": "text"
       },
       "bannedDAppIds": {
@@ -261,7 +261,7 @@
       "attributes",
       "featuredSections",
       "dappsEnrich",
-      "whiteListedDAppIds",
+      "whitelistedDAppIds",
       "bannedDAppIds"
     ]
   }
