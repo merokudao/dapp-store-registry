@@ -363,9 +363,27 @@ export const searchFilters = (
     isMinted = null,
     tokenIds = [],
     storeKey = "",
-    featured = false
+    featured = false,
+    whitelistedDAppIds = null,
+    bannedDAppIds = null
   } = payload;
   let { limit = recordsPerPage, dappId = "" } = payload;
+
+  if (
+    whitelistedDAppIds &&
+    Array.isArray(whitelistedDAppIds) &&
+    whitelistedDAppIds.length
+  ) {
+    query.bool.filter.push({
+      terms: { dappIdKeyword: whitelistedDAppIds }
+    });
+  }
+
+  if (bannedDAppIds && Array.isArray(bannedDAppIds) && bannedDAppIds.length) {
+    query.bool.must_not.push({
+      terms: { dappIdKeyword: bannedDAppIds }
+    });
+  }
 
   if (dappId.length && typeof dappId === "string")
     dappId = dappId.split(",").map((di: string) => di.trim());

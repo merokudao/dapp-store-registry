@@ -73,7 +73,7 @@ export class AppStoreRegistry {
       tokenIds = "",
       listedOnOrAfter = null,
       listedOnOrBefore = null,
-      isMinted = "false"
+      isMinted = null
     } = payload;
     let { limit = recordsPerPage, key = "", storeId = "" } = payload;
 
@@ -120,8 +120,16 @@ export class AppStoreRegistry {
       });
 
     if (key.length) query.bool.must.push({ terms: { keyKeyword: key } });
-    if (storeId.length)
-      query.bool.must.push({ terms: { storeIdKeyword: storeId } });
+    if (storeId.length) {
+      query.bool.must.push({
+        bool: {
+          should: [
+            { terms: { keyKeyword: storeId } },
+            { terms: { storeIdKeyword: storeId } }
+          ]
+        }
+      });
+    }
     if (tokenIds.length)
       query.bool.must.push({
         terms: {
