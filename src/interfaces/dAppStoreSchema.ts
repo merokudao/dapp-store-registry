@@ -82,6 +82,12 @@ export interface EnrichFieldSchema {
     blockedCountries?: string[];
   };
   tags?: string[];
+  name?: string;
+  appUrl?: string;
+  chains?: string[];
+  category?: string;
+  subCategory?: string;
+  availableOnPlatform?: string[];
 }
 
 export interface ScreenShotSchema {
