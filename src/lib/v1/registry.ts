@@ -436,7 +436,7 @@ export class DappStoreRegistryV1 {
    */
   public async getDappIDs(
     dappId: string,
-    size: number
+    size: number = 20
   ): Promise<DocsCountResponse> {
     const { finalQuery } = searchFilters("", {
       dappId,
