@@ -434,12 +434,15 @@ export class DappStoreRegistryV1 {
    * @param dappId
    * @returns all Matched dappIds
    */
-  public async getDappIDs(dappId: string): Promise<DocsCountResponse> {
+  public async getDappIDs(
+    dappId: string,
+    size = 20
+  ): Promise<DocsCountResponse> {
     const { finalQuery } = searchFilters("", {
       dappId,
       searchById: true
     });
-    Object.assign(finalQuery, { _source: ["dappId"] });
+    Object.assign(finalQuery, { _source: ["dappId"], size, from: 0 });
     const result: SearchResult = await this.openSearchApis.search(
       searchRegistry.alias,
       finalQuery

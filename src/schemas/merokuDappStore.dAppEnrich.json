@@ -16,6 +16,67 @@
         "cdn": {
           "images": { "$ref": "merokuDappStore.dAppEnrichImagesSchema.json" }
         },
+        "name": {
+          "type": "string",
+          "description": "The name of the dApp. This is what is shown on listing",
+          "maxLength": 100
+        },
+        "appUrl": {
+          "type": "string",
+          "description": "The URL of the dApp",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the dApp. You can assign one category to your dApp. The category you select is particularly important for your app’s discoverability on the dApp Store. This will be the category in which the app appears when users browse the dApp Store or filter search results, and it determines placement on the dApps tab or Games",
+          "enum": [
+            "books",
+            "business",
+            "finance",
+            "developer-tools",
+            "education",
+            "entertainment",
+            "food-and-drink",
+            "games",
+            "gambling",
+            "health-and-fitness",
+            "kids",
+            "lifestyle",
+            "news",
+            "nft",
+            "personalization",
+            "photography",
+            "productivity",
+            "shopping",
+            "social-networking",
+            "sports",
+            "travel",
+            "utilities"
+          ]
+        },
+        "subCategory": {
+          "type": "string",
+          "description": "The sub-category of the dapp. You can assign one sub-category to your dApp. The category you select is particularly important for your app's discoverability on the dApp Store. This will be the category in which the app appears when users browse the dApp Store or filter search results, and it determines placement on the dApps tab or Games"
+        },
+        "availableOnPlatform": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["ios", "web", "android"]
+          },
+          "minItems": 1,
+          "description": "A string signifying if the dApp is available on which platform - web, iOS, android"
+        },
+        "chains": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer"
+          }
+        },
         "description": {
           "type": "string",
           "description": "A detailed description of the dApp"
@@ -61,6 +122,387 @@
       "additionalProperties": false
     }
   },
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "books" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["audiobooks", "document-readers", "ebooks"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "business" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "communication",
+              "decentralized-business-tools",
+              "human-resources",
+              "project-management"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "developer tools" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "analytics",
+              "block-explorer",
+              "bridges",
+              "developer-infra",
+              "discovery-tool",
+              "front-ends",
+              "identity",
+              "indexer",
+              "monitoring",
+              "node-infra",
+              "oracle",
+              "security",
+              "storage"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "education" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["language-learning", "learning-tools", "reference", "stem"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "entertainment" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "live-events",
+              "music",
+              "music-streaming",
+              "video",
+              "video-streaming"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "finance" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "airdrop-tool",
+              "banking",
+              "exchanges",
+              "farming",
+              "defi",
+              "insurance",
+              "lending-and-borrowing",
+              "liquid-staking",
+              "others",
+              "payments",
+              "prediction-markets",
+              "price-aggregator",
+              "ramp",
+              "stablecoins",
+              "tooling",
+              "tokenization",
+              "trading"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "food and drink" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["cooking", "recipes", "restaurant-finding"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "games" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "action",
+              "adventure",
+              "board ",
+              "metaverse",
+              "puzzle",
+              "racing",
+              "role-playing",
+              "simulation",
+              "strategy",
+              "studios",
+              "word"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "health and fitness" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "medical",
+              "meditation",
+              "nutrition",
+              "sleep-trackers",
+              "workout-apps"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "lifestyle" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["dating", "fashion", "home-automation"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "news" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "decentralized-news-platforms",
+              "live-news",
+              "magazines",
+              "newspapers",
+              "sports-news"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "photography" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["camera-apps", "photo-editing", "photo-sharing"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "productivity" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "calendar",
+              "decentralized-collaboration-tools",
+              "decentralized-collaboration-tools-investing",
+              "decentralized-collaboration-tools-misc",
+              "decentralized-collaboration-tools-tools",
+              "graphics-and-design",
+              "note-taking",
+              "task-management",
+              "time-management"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "shopping" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["ecommerce"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "social-networking" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "decentralized-social-networks",
+              "messaging",
+              "social-media"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "sports" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["live-scores", "team-management"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "travel" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "accommodation-booking",
+              "navigation",
+              "transportation",
+              "trip-planning"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "utilities" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "browsers",
+              "file-management",
+              "security-and-privacy",
+              "wallets",
+              "weather"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "personalization" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": ["customization-tools", "themes", "wallpapers"]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "nft" }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "art",
+              "domain-names",
+              "nft-marketplaces",
+              "pfps",
+              "tooling"
+            ]
+          }
+        }
+      }
+    }
+  ],
   "required": ["dappId", "fields"],
   "additionalProperties": false
 }
