@@ -118,6 +118,7 @@ export class DevRegistry {
     payload.page = parseInt(page as string);
     payload.page = payload.page > 0 ? payload.page : 1;
     if (limit > recordsPerPage) limit = recordsPerPage;
+    if (typeof limit === "string") limit = parseInt(limit);
     const finalQuery: PaginationQuery = {
       _source: _source.searchFields,
       query,
