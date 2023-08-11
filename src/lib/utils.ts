@@ -358,7 +358,6 @@ export const searchFilters = (
     isListed = "true",
     developer = null,
     page = 1,
-    searchById = false,
     ownerAddress = null,
     isMinted = null,
     tokenIds = [],
@@ -367,7 +366,15 @@ export const searchFilters = (
     whitelistedDAppIds = null,
     bannedDAppIds = null
   } = payload;
-  let { limit = recordsPerPage, dappId = "" } = payload;
+  let { limit = recordsPerPage, dappId = "", searchById = false } = payload;
+  if (autoComplete && search && search.endsWith(".app")) {
+    searchById = true;
+    dappId = search.trim();
+    search = "";
+    query.bool.must.push({
+      match: { isListed: isListed === "true" ? true : false }
+    });
+  }
 
   if (
     whitelistedDAppIds &&
