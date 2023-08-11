@@ -510,6 +510,7 @@ export const searchFilters = (
   payload.page = payload.page > 0 ? payload.page : 1;
   const limitV1 = autoComplete ? recordsPerPageAutoComplete : recordsPerPage;
   if (limit > limitV1) limit = limitV1;
+  if (typeof limit === "string") limit = parseInt(limit);
   const finalQuery: PaginationQuery = {
     _source: autoComplete ? autocompleteFields : searchFields,
     query,
