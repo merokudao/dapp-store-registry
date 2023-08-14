@@ -47,13 +47,6 @@ export class DappStoreRegistryV1 {
     index: string,
     dapps: DAppSchema[] = []
   ) => {
-    if (!dapps.length) {
-      const dappsResponse = await this.dappStoreRegistry.registry();
-      dapps = dappsResponse.dapps.map(x => {
-        return { ...x, minted: false };
-      });
-    }
-
     if (!dapps.length) return;
 
     const dappDocs = dapps.map(d => {
