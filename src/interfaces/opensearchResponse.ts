@@ -34,6 +34,7 @@ export interface PaginationQuery {
   from?: number;
   size?: number;
   sort?: object[];
+  aggs?: any;
 }
 
 export interface DAppSearchDataSchema extends DAppSchema {
@@ -63,6 +64,7 @@ export interface SearchResult {
       max_score: string;
       hits: DAppSchemaSearch[];
     };
+    aggregations?: any;
   };
 }
 
@@ -117,6 +119,7 @@ export interface FinalQuery {
 export interface DAppSchemaDoc extends DAppSchema {
   id?: string;
   nameKeyword: string;
+  categoryKeyword?: string;
   subCategoryKeyword?: string;
   dappIdKeyword: string;
 }
@@ -141,4 +144,12 @@ export interface UpdateDAppSchemaBulkDocs {
 export interface DeveloperSchemaDoc extends DeveloperSchema {
   id: string;
   devIdKeyword: string;
+}
+
+export interface Bucket {
+  key: string;
+  doc_count: number;
+  subCategory?: {
+    buckets: Bucket[];
+  };
 }
