@@ -157,6 +157,9 @@
         "analyzer": "autocomplete",
         "search_analyzer": "autocomplete_search"
       },
+      "categoryKeyword": {
+        "type": "keyword"
+      },
       "packageId": {
         "type": "keyword"
       },

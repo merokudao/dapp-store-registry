@@ -7,11 +7,13 @@ import {
 } from "../../handlers/opensearch-handlers/config.json";
 import {
   AddDappPayload,
+  Bucket,
   DAppSchema,
   DAppSchemaDoc,
   DeleteDappPayload,
   DocsCountResponse,
   OpenSearchConnectionOptions,
+  PaginationQuery,
   SearchResult,
   StandardResponse
 } from "../../interfaces";
@@ -54,6 +56,7 @@ export class DappStoreRegistryV1 {
         id: d.dappId,
         nameKeyword: d.name,
         subCategoryKeyword: d.subCategory,
+        categoryKeyword: d.category,
         dappIdKeyword: d.dappId,
         ...d
       } as DAppSchemaDoc;
@@ -168,6 +171,7 @@ export class DappStoreRegistryV1 {
       id: dapp.dappId,
       nameKeyword: dapp.name,
       subCategoryKeyword: dapp.subCategory as string,
+      categoryKeyword: dapp.category,
       dappIdKeyword: dapp.dappId,
       ...dapp
     });
@@ -326,6 +330,7 @@ export class DappStoreRegistryV1 {
       id: dapp.dappId,
       nameKeyword: dapp.name,
       subCategoryKeyword: dapp.subCategory,
+      categoryKeyword: dapp.category,
       dappIdKeyword: dapp.dappId,
       ...dapp
     });
@@ -530,5 +535,74 @@ export class DappStoreRegistryV1 {
     return Promise.allSettled(
       chunks.map(chunk => this.openSearchApis.updateDocs(index, chunk))
     );
+  }
+
+  public async updateByQuery(index: string, body: string) {
+    return this.openSearchApis.updateByQuery(index, body);
+  }
+
+  private aggsByCatSubcat(finalQuery: PaginationQuery) {
+    finalQuery.aggs = {
+      category: {
+        terms: {
+          field: "categoryKeyword",
+          size: 1000
+        },
+        aggs: {
+          subCategory: {
+            terms: {
+              field: "subCategoryKeyword",
+              size: 1000
+            }
+          }
+        }
+      }
+    };
+    return finalQuery;
+  }
+
+  /**
+   * Get dapps count based on category and subcategory
+   * @param filterOpts
+   * @returns
+   */
+  public async getCategoriesAggs(
+    filterOpts: FilterOptionsSearch = { isListed: "true" }
+  ) {
+    let { finalQuery } = searchFilters("", filterOpts);
+    delete finalQuery.from;
+    delete finalQuery._source;
+    delete finalQuery.sort;
+    finalQuery.size = 0;
+    finalQuery = this.aggsByCatSubcat(finalQuery);
+    const result: SearchResult = await this.openSearchApis.search(
+      searchRegistry.alias,
+      finalQuery
+    );
+    const {
+      hits: { total },
+      aggregations
+    } = result.body;
+    const categories =
+      (aggregations.category && aggregations.category.buckets) || [];
+    const categoriesMap = categories.map((bucket: Bucket) => {
+      const { subCategory, key, doc_count } = bucket;
+      return {
+        category: key,
+        count: doc_count,
+        subCategories: subCategory?.buckets.map(subBucket => {
+          return { subCategory: subBucket.key, count: subBucket.doc_count };
+        })
+      };
+    });
+
+    return {
+      status: 200,
+      message: ["success"],
+      data: {
+        total: total.value,
+        categories: categoriesMap
+      }
+    };
   }
 }

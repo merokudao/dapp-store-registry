@@ -200,4 +200,8 @@ export class OpensearchRequest {
       body
     });
   }
+
+  public async updateByQuery(index: string, body: any): Promise<any> {
+    return this.opensearchClient.update_by_query({ index, body });
+  }
 }
