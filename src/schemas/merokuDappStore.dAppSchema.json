@@ -434,7 +434,7 @@
             "enum": [
               "action",
               "adventure",
-              "board ",
+              "board",
               "metaverse",
               "puzzle",
               "racing",
@@ -566,7 +566,8 @@
             "enum": [
               "decentralized-social-networks",
               "messaging",
-              "social-media"
+              "social-media",
+              "social-graph"
             ]
           }
         }
