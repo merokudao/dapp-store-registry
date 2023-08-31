@@ -585,24 +585,28 @@ export class DappStoreRegistryV1 {
     } = result.body;
     const categories =
       (aggregations.category && aggregations.category.buckets) || [];
-    const categoriesMap = categories.map((bucket: Bucket) => {
-      const { subCategory, key, doc_count } = bucket;
-      return {
-        category: key,
-        count: doc_count,
-        subCategories: subCategory?.buckets.map(subBucket => {
-          return { subCategory: subBucket.key, count: subBucket.doc_count };
-        })
-      };
-    });
+    const categoriesMap = categories
+      .filter((bucket: Bucket) => bucket.doc_count > 0)
+      .map((bucket: Bucket) => {
+        const { subCategory, key, doc_count } = bucket;
+        const filteredCategory = subCategory?.buckets.filter(
+          subBucket => subBucket.doc_count > 0
+        );
+        return {
+          category: key,
+          count: doc_count,
+          subCategory: filteredCategory?.map(x => x.key),
+          subCategoriesWithCount: filteredCategory?.map(subBucket => {
+            return { subCategory: subBucket.key, count: subBucket.doc_count };
+          })
+        };
+      });
 
     return {
       status: 200,
       message: ["success"],
-      data: {
-        total: total.value,
-        categories: categoriesMap
-      }
+      total: total.value,
+      data: categoriesMap
     };
   }
 }
