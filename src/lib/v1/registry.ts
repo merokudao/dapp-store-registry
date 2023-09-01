@@ -519,14 +519,22 @@ export class DappStoreRegistryV1 {
    * @param body { isVerfied: true, dappId }
    * @returns
    */
-  public async updateDocs(index: string, body: DAppSchemaDoc[]) {
+  public async updateDocs(index: string, body: DAppSchema[]) {
     const chunks = [];
     while (body.length > 0) {
       let chunk = body.splice(0, 500);
-      chunk = chunk.reduce((aggs: any[], doc: DAppSchemaDoc) => {
+      chunk = chunk.reduce((aggs: any[], doc: DAppSchema) => {
         aggs = aggs.concat([
           { update: { _index: index, _id: doc.dappId } },
-          { doc }
+          {
+            doc: {
+              nameKeyword: doc.name,
+              subCategoryKeyword: doc.subCategory,
+              categoryKeyword: doc.category,
+              dappIdKeyword: doc.dappId,
+              ...doc
+            }
+          }
         ]);
         return aggs;
       }, []);
