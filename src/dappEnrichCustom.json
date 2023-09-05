@@ -4,26 +4,6 @@
       "key": "unstoppable-domains-apps-store",
       "dappEnrich": [
         {
-          "dappId": "polygon.app",
-          "fields": {
-            "name": "Polygon",
-            "description": "Polygon is the most proven way to build and scale your projects on Ethereum, the world's largest blockchain ecosystem.",
-            "appUrl": "https://polygon.technology/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
-            "minAge": 6,
-            "chains": [137],
-            "category": "developer-tools",
-            "subCategory": "developer-infra",
-            "images": {
-              "banner": "https://gateway.ipfscdn.io/ipfs/QmcwGwXYCNcqjm5nk7QcnmX7JvYZk4ipC54cxKCrXgE6ap/0"
-            },
-            "cdn": {
-              "images": {
-                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/polygon.app/images/banner.jpeg"
-              }
-            }
-          }
-        },
-        {
           "dappId": "alchemy.app",
           "fields": {
             "description": "Blockchain API and Node service. Alchemy combines the most powerful developer tools in blockchain with helpful resources, talented community, and legendary support.",
@@ -97,24 +77,6 @@
             "cdn": {
               "images": {
                 "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/crypto.app/images/banner.png"
-              }
-            }
-          }
-        },
-        {
-          "dappId": "opera.app",
-          "fields": {
-            "description": "View decentralized websites natively - no plug ins",
-            "appUrl": "https://www.opera.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
-            "minAge": 6,
-            "isForMatureAudience": false,
-            "subCategory": "wallets",
-            "images": {
-              "banner": "https://gateway.ipfscdn.io/ipfs/QmbUyB3PiEctJjk5rZx9fvwktBrkEhbPCPX9P3Enngg62d/0"
-            },
-            "cdn": {
-              "images": {
-                "banner": "https://d1zqng1f5phxhg.cloudfront.net/unstoppable-domains-apps-store/dappEnrich/opera.app/images/banner.jpeg"
               }
             }
           }
@@ -318,6 +280,117 @@
               }
             }
           }
+        },
+        {
+          "fields": {
+            "name": "DeRace",
+            "description": "DeRace is a complete NFT horse racing ecosystem based on blockchain and powered by $DERC token",
+            "appUrl": "https://derace.com/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "images": {
+              "logo": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeif4hdgb7zs6glziw3324mhqsusbud7bsvijmrrfzyas7gqzuo53mq/0?filename=logo-0a3bfac2-901e-46c9-aad1-6ff454aa1927.png",
+              "banner": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeifbwwj3fmgiled5x35shmyv2tbsiliueflekkktigwutmklnqsxtq/0?filename=banner-526151c2-2f15-4819-b8e1-2c72cfb4b60f.png",
+              "screenshots": [
+                "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeicobxsvjva24qjmfb4ptxotrnejnj3fvzhj4m6inpx5l75jfr24bu/0?filename=screenshots.0-3d7dfd77-621f-4071-b31e-f356e83b0894.png"
+              ]
+            },
+            "minAge": 6,
+            "category": "games",
+            "chains": [137],
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/derace.app/images/logo-8919b735-f4de-4b38-b23c-6311f75b0706.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/derace.app/images/banner-aabb2d5d-daa9-4b1e-9e15-97bc592da860.png",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/derace.app/images/screenshots.0-66905571-dfd3-414e-9027-7f586a25260f.png"
+                ]
+              }
+            }
+          },
+          "dappId": "derace.app"
+        },
+        {
+          "fields": {
+            "name": "Opera Crypto Browser",
+            "description": "Experience the Web3 browser for crypto users. Get crypto-oriented security enhancements, manage multiple crypto wallets simultaneously, and access Discord, Telegram and more directly from the sidebar.",
+            "appUrl": "https://www.opera.com/crypto/next?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "images": {
+              "logo": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeieoloyfu5mmtadb26deniut7fzw3dm7qv74mtuwv5jia2rzyuzn2m/0?filename=logo-e1f294d9-6d17-4f6d-8595-4b048ff3ddf0.png",
+              "banner": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeibhxbgghaqhxf3zjmqusstqk6cauez3uz77hv64lqaqpl2j5cggsi/0?filename=banner-02fb90fa-aacd-43ad-b824-c62a46fce202.png",
+              "screenshots": [
+                "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeieolodgnlyxxivyd5pk3vmduj3nmgxxm4twg6nmohqvjsoafky4se/0?filename=screenshots.0-dfc43467-c521-4911-935a-f2549e716d98.png"
+              ]
+            },
+            "minAge": 6,
+            "category": "utilities",
+            "chains": [137],
+            "subCategory": "browsers",
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/opera.app/images/logo-f295bb2a-3755-4055-905f-58e3684f25ba.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/opera.app/images/banner-3692accb-7755-414e-b645-7ac6fa0fd65b.png",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/opera.app/images/screenshots.0-ac65a0fb-3147-4694-87d6-de6217d87fd6.png"
+                ]
+              }
+            }
+          },
+          "dappId": "opera.app"
+        },
+        {
+          "fields": {
+            "name": "Polygon",
+            "description": "Polygon is the most proven way to build and scale your projects on Ethereum, the world's largest blockchain ecosystem.",
+            "appUrl": "https://polygon.technology/?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "images": {
+              "logo": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeifjoglhv6kihanucjctco4h77dnjcgjcfyotfbjdh2pi27jhqp66e/0?filename=logo-71a6c086-b5c0-4231-9ad8-ea12cd12c1a7.jpeg",
+              "banner": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeihkhpg4prmfdygv55dhlpmhefefmvmhzf5yqmwbqbzsxevanauagy/0?filename=banner-1a325c6d-20d2-4f1e-aef8-38e24b4199a1.jpeg",
+              "screenshots": [
+                "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeid36bemhg4hp7ndto7jkcbacihxzcrfytuqg2kg6cyzfmnpyfhd4u/0?filename=screenshots.0-bf070648-5295-4daf-b300-71e6a30bc20a.png"
+              ]
+            },
+            "minAge": 6,
+            "category": "developer-tools",
+            "chains": [137],
+            "subCategory": "developer-infra",
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/polygon.app/images/logo-73040b10-8115-46de-9440-47845b1d0177.jpeg",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/polygon.app/images/banner-127bfc9c-465a-4d59-98f0-d4e0e2d317b0.jpeg",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/polygon.app/images/screenshots.0-0ad90619-5833-4639-a130-87c0ffd40447.png"
+                ]
+              }
+            }
+          },
+          "dappId": "polygon.app"
+        },
+        {
+          "fields": {
+            "name": "Token Pocket",
+            "description": "TokenPocket is the world’s leading multi-chain self-custodial wallet, which supports mainstream public chains including BTC, ETH, BSC, TRON, Polygon, Solana, HECO, Klaytn, Avalanche, OKC, HSC, Fantom, Polkadot, Kusama, etc. The trinity of TokenPocket mobile wallet, chrome extension wallet, and hardware wallet has been formally formed. The Secret Recovery Phrase and Private Key are stored in the user’s own device and the user can fully control his own crypto assets. TokenPocket has provided reliable services for over 20 million users around the world. The number of monthly active users exceeds 3.5 million and the users are located in more than 200 countries around the world.",
+            "appUrl": "http://tokenpocket.pro?utm_source=Meroku&utm_medium=deeplink&utm_campaign=dAppStoreKit",
+            "images": {
+              "logo": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeibxfr4e6att2fkap3ixklndxgi554yubshvlldnhthv42h6fsoutm/0?filename=logo-8245463f-4402-4189-9f56-7a97ef892bc5.png",
+              "banner": "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeif6mjdcfop2qaf6mq5qom6m5vnjl3psrwk3myizqwqzkyqa6hs4qa/0?filename=banner-86cc50b7-3480-4a40-a21b-a79518b0c733.jpeg",
+              "screenshots": [
+                "https://f6e117d959b2bab70ce7a3475f98bad0.ipfscdn.io/ipfs/bafybeifusqg2p72fdssdjgbqlzxhab6x3vzssomuv7yus4ga27fjzzunuq/0?filename=screenshots.0-7239e69c-5f96-4835-bf6e-113c2d4094d2.png"
+              ]
+            },
+            "minAge": 6,
+            "category": "utilities",
+            "chains": [137],
+            "subCategory": "wallets",
+            "cdn": {
+              "images": {
+                "logo": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/tokenpocket.app/images/logo-040bc226-be1e-4a8d-9f09-1808db1af1ab.png",
+                "banner": "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/tokenpocket.app/images/banner-bb6e67df-5187-4e8a-bdb8-fa301b075deb.jpeg",
+                "screenshots": [
+                  "https://d1zqng1f5phxhg.cloudfront.net/kailash.appStore/dappEnrich/tokenpocket.app/images/screenshots.0-0d06fec5-27f1-435c-9ae6-a479ea65a1d6.png"
+                ]
+              }
+            }
+          },
+          "dappId": "tokenpocket.app"
         }
       ]
     }
