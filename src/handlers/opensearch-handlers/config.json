@@ -205,6 +205,7 @@
           "uninstalls": { "type": "integer" },
           "ratingsCount": { "type": "integer" },
           "visits": { "type": "integer" },
+          "impressions": { "type": "integer" },
           "rating": { "type": "double" }
         }
       },
