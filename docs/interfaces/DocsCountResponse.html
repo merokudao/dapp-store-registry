@@ -89,18 +89,22 @@
         <section class="tsd-panel tsd-hierarchy">
           <h4>Hierarchy</h4>
           <ul class="tsd-hierarchy">
-            <li><span class="target">DocsCountResponse</span></li>
+            <li>
+              <a
+                href="StandardResponse.html"
+                class="tsd-signature-type"
+                data-tsd-kind="Interface"
+                >StandardResponse</a
+              >
+              <ul class="tsd-hierarchy">
+                <li><span class="target">DocsCountResponse</span></li>
+              </ul>
+            </li>
           </ul>
         </section>
         <aside class="tsd-sources">
           <ul>
-            <li>
-              Defined in
-              <a
-                href="https://github.com/merokudao/dapp-store-registry/blob/da2cf9e/src/interfaces/opensearchResponse.ts#L96"
-                >interfaces/opensearchResponse.ts:96</a
-              >
-            </li>
+            <li>Defined in interfaces/opensearchResponse.ts:107</li>
           </ul>
         </aside>
         <section class="tsd-panel-group tsd-index-group">
@@ -127,7 +131,7 @@
                   <h3 class="tsd-index-heading">Properties</h3>
                   <div class="tsd-index-list">
                     <a
-                      href="DocsCountResponse.html#_shard"
+                      href="DocsCountResponse.html#countRes"
                       class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"
                       ><svg
                         class="tsd-kind-icon"
@@ -151,11 +155,11 @@
                           fill="var(--color-text)"
                           id="icon-1024-text"
                         ></path></svg
-                      ><span>_shard</span></a
+                      ><span>count<wbr />Res</span></a
                     >
                     <a
-                      href="DocsCountResponse.html#count"
-                      class="tsd-index-link tsd-kind-property tsd-parent-kind-interface"
+                      href="DocsCountResponse.html#data"
+                      class="tsd-index-link tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
                       ><svg
                         class="tsd-kind-icon"
                         width="24"
@@ -164,7 +168,59 @@
                       >
                         <use href="#icon-1024-path"></use>
                         <use href="#icon-1024-text"></use></svg
-                      ><span>count</span></a
+                      ><span>data?</span></a
+                    >
+                    <a
+                      href="DocsCountResponse.html#message"
+                      class="tsd-index-link tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                      ><svg
+                        class="tsd-kind-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <use href="#icon-1024-path"></use>
+                        <use href="#icon-1024-text"></use></svg
+                      ><span>message?</span></a
+                    >
+                    <a
+                      href="DocsCountResponse.html#pagination"
+                      class="tsd-index-link tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                      ><svg
+                        class="tsd-kind-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <use href="#icon-1024-path"></use>
+                        <use href="#icon-1024-text"></use></svg
+                      ><span>pagination?</span></a
+                    >
+                    <a
+                      href="DocsCountResponse.html#scrollId"
+                      class="tsd-index-link tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                      ><svg
+                        class="tsd-kind-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <use href="#icon-1024-path"></use>
+                        <use href="#icon-1024-text"></use></svg
+                      ><span>scroll<wbr />Id?</span></a
+                    >
+                    <a
+                      href="DocsCountResponse.html#status"
+                      class="tsd-index-link tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                      ><svg
+                        class="tsd-kind-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <use href="#icon-1024-path"></use>
+                        <use href="#icon-1024-text"></use></svg
+                      ><span>status</span></a
                     >
                   </div>
                 </section>
@@ -177,10 +233,13 @@
           <section
             class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
           >
-            <a id="_shard" class="tsd-anchor"></a>
+            <a id="countRes" class="tsd-anchor"></a>
             <h3 class="tsd-anchor-link">
-              <span>_shard</span
-              ><a href="#_shard" aria-label="Permalink" class="tsd-anchor-icon"
+              <span>count<wbr />Res</span
+              ><a
+                href="#countRes"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
                 ><svg
                   class="icon icon-tabler icon-tabler-link"
                   viewBox="0 0 24 24"
@@ -207,10 +266,15 @@
               ></a>
             </h3>
             <div class="tsd-signature">
-              _shard<span class="tsd-signature-symbol">:</span>
+              count<wbr />Res<span class="tsd-signature-symbol">:</span>
               <span class="tsd-signature-symbol">{ </span><br /><span>    </span
-              >total<span class="tsd-signature-symbol">: </span
+              >count<span class="tsd-signature-symbol">: </span
               ><span class="tsd-signature-type">number</span
+              ><span class="tsd-signature-symbol">; </span><br /><span
+                >    </span
+              >dappIds<span class="tsd-signature-symbol">: </span
+              ><span class="tsd-signature-type">string</span
+              ><span class="tsd-signature-symbol">[]</span
               ><span class="tsd-signature-symbol">; </span><br /><span
                 class="tsd-signature-symbol"
                 >}</span
@@ -221,31 +285,33 @@
               <ul class="tsd-parameters">
                 <li class="tsd-parameter">
                   <h5>
-                    total<span class="tsd-signature-symbol">: </span
+                    count<span class="tsd-signature-symbol">: </span
                     ><span class="tsd-signature-type">number</span>
+                  </h5>
+                </li>
+                <li class="tsd-parameter">
+                  <h5>
+                    dapp<wbr />Ids<span class="tsd-signature-symbol">: </span
+                    ><span class="tsd-signature-type">string</span
+                    ><span class="tsd-signature-symbol">[]</span>
                   </h5>
                 </li>
               </ul>
             </div>
             <aside class="tsd-sources">
               <ul>
-                <li>
-                  Defined in
-                  <a
-                    href="https://github.com/merokudao/dapp-store-registry/blob/da2cf9e/src/interfaces/opensearchResponse.ts#L98"
-                    >interfaces/opensearchResponse.ts:98</a
-                  >
-                </li>
+                <li>Defined in interfaces/opensearchResponse.ts:108</li>
               </ul>
             </aside>
           </section>
           <section
-            class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface"
+            class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
           >
-            <a id="count" class="tsd-anchor"></a>
+            <a id="data" class="tsd-anchor"></a>
             <h3 class="tsd-anchor-link">
-              <span>count</span
-              ><a href="#count" aria-label="Permalink" class="tsd-anchor-icon"
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>data</span
+              ><a href="#data" aria-label="Permalink" class="tsd-anchor-icon"
                 ><svg
                   class="icon icon-tabler icon-tabler-link"
                   viewBox="0 0 24 24"
@@ -261,18 +327,187 @@
               ></a>
             </h3>
             <div class="tsd-signature">
-              count<span class="tsd-signature-symbol">:</span>
+              data<span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">object</span
+              ><span class="tsd-signature-symbol">[]</span>
+            </div>
+            <aside class="tsd-sources">
+              <p>
+                Inherited from
+                <a href="StandardResponse.html">StandardResponse</a>.<a
+                  href="StandardResponse.html#data"
+                  >data</a
+                >
+              </p>
+              <ul>
+                <li>Defined in interfaces/opensearchResponse.ts:84</li>
+              </ul>
+            </aside>
+          </section>
+          <section
+            class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+          >
+            <a id="message" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>message</span
+              ><a href="#message" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg
+                  class="icon icon-tabler icon-tabler-link"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="#icon-anchor-a"></use>
+                  <use href="#icon-anchor-b"></use>
+                  <use href="#icon-anchor-c"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              message<span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span
+              ><span class="tsd-signature-symbol">[]</span>
+            </div>
+            <aside class="tsd-sources">
+              <p>
+                Inherited from
+                <a href="StandardResponse.html">StandardResponse</a>.<a
+                  href="StandardResponse.html#message"
+                  >message</a
+                >
+              </p>
+              <ul>
+                <li>Defined in interfaces/opensearchResponse.ts:83</li>
+              </ul>
+            </aside>
+          </section>
+          <section
+            class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+          >
+            <a id="pagination" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>pagination</span
+              ><a
+                href="#pagination"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg
+                  class="icon icon-tabler icon-tabler-link"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="#icon-anchor-a"></use>
+                  <use href="#icon-anchor-b"></use>
+                  <use href="#icon-anchor-c"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              pagination<span class="tsd-signature-symbol">?:</span>
+              <a
+                href="Pagination.html"
+                class="tsd-signature-type"
+                data-tsd-kind="Interface"
+                >Pagination</a
+              >
+            </div>
+            <aside class="tsd-sources">
+              <p>
+                Inherited from
+                <a href="StandardResponse.html">StandardResponse</a>.<a
+                  href="StandardResponse.html#pagination"
+                  >pagination</a
+                >
+              </p>
+              <ul>
+                <li>Defined in interfaces/opensearchResponse.ts:85</li>
+              </ul>
+            </aside>
+          </section>
+          <section
+            class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+          >
+            <a id="scrollId" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>scroll<wbr />Id</span
+              ><a
+                href="#scrollId"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg
+                  class="icon icon-tabler icon-tabler-link"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="#icon-anchor-a"></use>
+                  <use href="#icon-anchor-b"></use>
+                  <use href="#icon-anchor-c"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              scroll<wbr />Id<span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <aside class="tsd-sources">
+              <p>
+                Inherited from
+                <a href="StandardResponse.html">StandardResponse</a>.<a
+                  href="StandardResponse.html#scrollId"
+                  >scrollId</a
+                >
+              </p>
+              <ul>
+                <li>Defined in interfaces/opensearchResponse.ts:86</li>
+              </ul>
+            </aside>
+          </section>
+          <section
+            class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+          >
+            <a id="status" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>status</span
+              ><a href="#status" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg
+                  class="icon icon-tabler icon-tabler-link"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="#icon-anchor-a"></use>
+                  <use href="#icon-anchor-b"></use>
+                  <use href="#icon-anchor-c"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              status<span class="tsd-signature-symbol">:</span>
               <span class="tsd-signature-type">number</span>
             </div>
             <aside class="tsd-sources">
+              <p>
+                Inherited from
+                <a href="StandardResponse.html">StandardResponse</a>.<a
+                  href="StandardResponse.html#status"
+                  >status</a
+                >
+              </p>
               <ul>
-                <li>
-                  Defined in
-                  <a
-                    href="https://github.com/merokudao/dapp-store-registry/blob/da2cf9e/src/interfaces/opensearchResponse.ts#L97"
-                    >interfaces/opensearchResponse.ts:97</a
-                  >
-                </li>
+                <li>Defined in interfaces/opensearchResponse.ts:82</li>
               </ul>
             </aside>
           </section>
@@ -495,7 +730,9 @@
               >
               <ul>
                 <li class="tsd-kind-property tsd-parent-kind-interface">
-                  <a href="DocsCountResponse.html#_shard" class="tsd-index-link"
+                  <a
+                    href="DocsCountResponse.html#countRes"
+                    class="tsd-index-link"
                     ><svg
                       class="tsd-kind-icon"
                       width="24"
@@ -504,11 +741,13 @@
                     >
                       <use href="#icon-1024-path"></use>
                       <use href="#icon-1024-text"></use></svg
-                    >_shard</a
+                    >count<wbr />Res</a
                   >
                 </li>
-                <li class="tsd-kind-property tsd-parent-kind-interface">
-                  <a href="DocsCountResponse.html#count" class="tsd-index-link"
+                <li
+                  class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                >
+                  <a href="DocsCountResponse.html#data" class="tsd-index-link"
                     ><svg
                       class="tsd-kind-icon"
                       width="24"
@@ -517,7 +756,73 @@
                     >
                       <use href="#icon-1024-path"></use>
                       <use href="#icon-1024-text"></use></svg
-                    >count</a
+                    >data?</a
+                  >
+                </li>
+                <li
+                  class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                >
+                  <a
+                    href="DocsCountResponse.html#message"
+                    class="tsd-index-link"
+                    ><svg
+                      class="tsd-kind-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="#icon-1024-path"></use>
+                      <use href="#icon-1024-text"></use></svg
+                    >message?</a
+                  >
+                </li>
+                <li
+                  class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                >
+                  <a
+                    href="DocsCountResponse.html#pagination"
+                    class="tsd-index-link"
+                    ><svg
+                      class="tsd-kind-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="#icon-1024-path"></use>
+                      <use href="#icon-1024-text"></use></svg
+                    >pagination?</a
+                  >
+                </li>
+                <li
+                  class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                >
+                  <a
+                    href="DocsCountResponse.html#scrollId"
+                    class="tsd-index-link"
+                    ><svg
+                      class="tsd-kind-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="#icon-1024-path"></use>
+                      <use href="#icon-1024-text"></use></svg
+                    >scroll<wbr />Id?</a
+                  >
+                </li>
+                <li
+                  class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"
+                >
+                  <a href="DocsCountResponse.html#status" class="tsd-index-link"
+                    ><svg
+                      class="tsd-kind-icon"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <use href="#icon-1024-path"></use>
+                      <use href="#icon-1024-text"></use></svg
+                    >status</a
                   >
                 </li>
               </ul>
