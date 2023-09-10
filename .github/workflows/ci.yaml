@@ -50,6 +50,6 @@ jobs:
         run: yarn install --immutable
 
       - name: Publish npmjs packages
-        run: ./scripts/npm-publish
+        run: ./scripts/npm-publish.sh
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
