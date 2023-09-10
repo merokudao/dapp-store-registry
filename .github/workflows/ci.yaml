@@ -23,3 +23,33 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - run: npm test
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    strategy:
+      matrix:
+        node-version: [ 18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Uses Nodejs ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Publish npmjs packages
+        run: ./scripts/npm-publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
