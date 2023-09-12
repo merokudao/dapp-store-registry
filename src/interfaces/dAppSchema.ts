@@ -171,4 +171,11 @@ export interface DAppSchema {
     downloadBaseUrls?: DownloadBaseUrls[];
   };
   whitelistedForStores?: string[];
+  social?: {
+    twitterUrl?: string;
+    discordUrl?: string;
+    instagramUrl?: string;
+    facebookUrl?: string;
+    other?: string;
+  };
 }
