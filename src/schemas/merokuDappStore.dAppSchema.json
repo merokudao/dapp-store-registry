@@ -265,6 +265,41 @@
         }
       }
     },
+    "social": {
+      "type": "object",
+      "properties": {
+        "twitterUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        },
+        "discordUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        },
+        "instagramUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        },
+        "facebookUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        },
+        "other": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|http?|ipfs?)://",
+          "minLength": 1
+        }
+      }
+    },
     "cdn": {
       "images": { "$ref": "merokuDappStore.dAppImagesSchema.json" },
       "downloadBaseUrls": {
