@@ -178,4 +178,7 @@ export interface DAppSchema {
     facebookUrl?: string;
     other?: string;
   };
+  ownerAddress?: string;
+  tokenId?: string;
+  metrics?: object;
 }
