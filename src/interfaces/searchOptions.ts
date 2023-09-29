@@ -69,7 +69,7 @@ export interface AppStoreSearchPayload {
   minAge?: number;
   allowedInCountries?: string[];
   blockedInCountries?: string[];
-  category?: string;
+  category?: string[];
   limit?: number;
   isListed?: boolean | string;
   page?: string | number;
