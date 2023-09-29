@@ -54,6 +54,10 @@ export interface StoreSchema {
   developer?: DeveloperSchema;
   isListed: boolean;
   listDate: string;
+  expiryDate: string;
+  minted: boolean;
+  ownerAddress: string;
+  tokenId: string;
 }
 
 export interface EnrichSchema {
