@@ -181,4 +181,12 @@ export interface DAppSchema {
   ownerAddress?: string;
   tokenId?: string;
   metrics?: object;
+  /**
+   * The third party verification status of the dApp that is available on the dApp store
+   */
+  isVerified: boolean;
+  /**
+   * The verification details url of the dApp that is available on the dApp store
+   */
+  resultURL: string;
 }
