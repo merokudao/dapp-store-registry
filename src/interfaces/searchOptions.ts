@@ -27,6 +27,7 @@ export interface FilterOptionsSearch {
   featured?: boolean;
   bannedDAppIds?: string[];
   whitelistedDAppIds?: string[];
+  isStoreFound?: boolean;
 }
 
 export interface OrderParams {
