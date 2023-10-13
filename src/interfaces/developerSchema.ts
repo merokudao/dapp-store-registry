@@ -32,4 +32,9 @@ export interface DeveloperSchema {
     value: string;
     display_type: string;
   }[];
+  expiryDate?: string;
+  minted?: boolean;
+  ownerAddress?: string;
+  tokenId?: string;
+  email?: string;
 }

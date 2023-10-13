@@ -105,4 +105,5 @@ export interface DeveloperSearchPayload {
   _source?: string[];
   credentialsId?: string;
   credentialsType?: string;
+  isMinted?: boolean | string;
 }

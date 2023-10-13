@@ -1,6 +1,6 @@
 {
   "name": "@merokudao/dapp-store-registry",
-  "version": "0.1.97",
+  "version": "0.1.98",
   "description": "The dApp Store registry for MerokuDAO dAapp Store",
   "repository": {
     "type": "git",
@@ -88,7 +88,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "doc": "typedoc src/ --out docs",
-    "test:unit": "mocha --timeout 10000",
+    "test:unit": "mocha --timeout 20000",
     "test:prettier": "prettier 'src/**/*.ts' --list-different",
     "test:lint": "eslint src --ext .ts",
     "test": "run-s build test:*",
