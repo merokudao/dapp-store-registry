@@ -181,4 +181,5 @@ export interface DAppSchema {
   ownerAddress?: string;
   tokenId?: string;
   metrics?: object;
+  verification?: object;
 }
