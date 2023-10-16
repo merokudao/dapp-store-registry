@@ -1,14 +1,14 @@
 export interface VerificationDetails {
-    verification: {
+  verification: {
+    icon: string;
+    verified: {
+      resultURL: string;
       icon: string;
-      verified: {
-        resultURL: string;
-        icon: string;
-        description?: string;
-        type: string;
-        vendorName: string;
-        verificationExpires: string;
-        verifiedOn: string;
-      }[];
-    };
-  }
+      description?: string;
+      type: string;
+      vendorName: string;
+      verificationExpires: string;
+      verifiedOn: string;
+    }[];
+  };
+}
