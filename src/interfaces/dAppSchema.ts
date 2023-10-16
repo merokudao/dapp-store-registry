@@ -1,4 +1,5 @@
 import { DeveloperSchema } from "./developerSchema";
+import { VerificationDetails } from "./verificationDetailsSchema";
 
 export const dAppDeploymentPlatforms = ["ios", "web", "android"] as const;
 
@@ -181,4 +182,5 @@ export interface DAppSchema {
   ownerAddress?: string;
   tokenId?: string;
   metrics?: object;
+  verification?: VerificationDetails;
 }
