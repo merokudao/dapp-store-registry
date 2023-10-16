@@ -6,7 +6,7 @@ export interface VerificationDetails {
       icon: string;
       description?: string;
       type: string;
-      vendorName: string;
+      vendor: string;
       verificationExpires: string;
       verifiedOn: string;
     }[];
