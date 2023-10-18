@@ -39,6 +39,7 @@ export interface Images {
   logo?: string;
   banner?: string;
   screenshots?: string[];
+  mobileScreenshots?: string[];
 }
 
 /**

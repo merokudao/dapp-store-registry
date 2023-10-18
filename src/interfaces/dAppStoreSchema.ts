@@ -29,12 +29,14 @@ export interface StoreSchema {
     logo?: string;
     banner?: string;
     screenshots?: string[];
+    mobileScreenshots?: string[];
   };
   cdn?: {
     images?: {
       logo?: string;
       banner?: string;
       screenshots?: string[];
+      mobileScreenshots?: string[];
     };
   };
   isForMatureAudience: boolean;
@@ -70,12 +72,14 @@ export interface EnrichFieldSchema {
     logo?: string;
     banner?: string;
     screenshots?: ScreenShotSchema[];
+    mobileScreenshots?: ScreenShotSchema[];
   };
   cdn?: {
     images?: {
       logo?: string;
       banner?: string;
       screenshots?: ScreenShotSchema[];
+      mobileScreenshots?: ScreenShotSchema[];
     };
   };
   description?: string;
