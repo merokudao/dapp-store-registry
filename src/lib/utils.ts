@@ -1,18 +1,10 @@
-import * as opensearchConfig from "../handlers/opensearch-handlers/config.json";
-
-const {
-  _source: { autocompleteFields, searchFields }
-} = opensearchConfig;
 import {
   DAppStoreSchema,
   StoresSchema,
-  OpenSearchCompositeQuery,
-  PaginationQuery,
   DappEnrichPayload,
   EnrichSchema,
   ScreenShotSchema,
-  DAppSchema,
-  FinalQuery
+  DAppSchema
 } from "../interfaces";
 import storesJson from "../dappStore.json";
 import registryJson from "./../registry.json";
@@ -34,20 +26,10 @@ import { DappStoreRegistry, RegistryStrategy } from "./registry";
 import crypto from "crypto";
 import {
   CategoryObject,
-  FilterOptionsSearch,
-  ObjectStringValueType,
-  OrderParams,
-  SortByOrderQuery
+  ObjectStringValueType
 } from "../interfaces/searchOptions";
 
 const debug = Debug("@merokudao:dapp-store-registry:utils");
-const defaultBoost = process.env.DEFAULT_BOOST || "1";
-const boostScore = {
-  name: parseInt(process.env.BOOST_NAME || defaultBoost),
-  description: parseInt(process.env.BOOST_DESCRIPTION || defaultBoost),
-  dappId: parseInt(process.env.BOOST_DAPPID || defaultBoost),
-  category: parseInt(process.env.BOOST_CATEGORY || defaultBoost)
-};
 
 export class cloneable {
   public static deepCopy<T>(source: T): T {
@@ -70,48 +52,6 @@ export class cloneable {
       : (source as T);
   }
 }
-
-export const recordsPerPage = 20;
-export const recordsPerPageAutoComplete = 7;
-
-/**
- * return order
- * @param params
- * @returns
- */
-export const orderBy = (params: OrderParams) => {
-  const order: SortByOrderQuery[] = [{ _score: { order: "desc" } }];
-  try {
-    params = JSON.parse(params as string);
-  } catch (error) {
-    //
-  }
-  const {
-    rating = null,
-    visits = null,
-    installs = null,
-    listDate = null,
-    name = null
-  } = params;
-  if (rating) {
-    order.push({ "metrics.rating": { order: rating } });
-  }
-  if (visits) {
-    order.push({ "metrics.visits": { order: visits } });
-  }
-  if (installs) {
-    order.push({ "metrics.installs": { order: installs } });
-  }
-
-  if (listDate) {
-    order.push({ listDate: { order: listDate } });
-  }
-
-  if (name) {
-    order.push({ nameKeyword: { order: name } });
-  }
-  return order;
-};
 
 export const validateSchema = (json: StoresSchema | DAppStoreSchema) => {
   let uniqueIDs: string[];
@@ -328,205 +268,6 @@ export const getCatSubCatMapping = (
     });
     return catFilter;
   });
-};
-
-export const searchFilters = (
-  search: string,
-  payload: FilterOptionsSearch,
-  autoComplete = false
-): FinalQuery => {
-  const query: OpenSearchCompositeQuery = {
-    bool: {
-      must: [],
-      must_not: [],
-      should: [],
-      filter: []
-    }
-  };
-  const {
-    isForMatureAudience = null,
-    minAge = null,
-    chainId = null,
-    language = null,
-    availableOnPlatform = null,
-    listedOnOrAfter = null,
-    listedOnOrBefore = null,
-    allowedInCountries = null,
-    blockedInCountries = null,
-    categories = [],
-    subCategories = [],
-    isListed = "true",
-    developer = null,
-    page = 1,
-    ownerAddress = null,
-    isMinted = null,
-    tokenIds = [],
-    storeKey = "",
-    featured = false,
-    whitelistedDAppIds = null,
-    bannedDAppIds = null
-  } = payload;
-  let { limit = recordsPerPage, dappId = "", searchById = false } = payload;
-  if (autoComplete && search && search.endsWith(".app")) {
-    searchById = true;
-    dappId = search.trim();
-    search = "";
-    query.bool.must.push({
-      match: { isListed: isListed === "true" ? true : false }
-    });
-  }
-
-  if (
-    whitelistedDAppIds &&
-    Array.isArray(whitelistedDAppIds) &&
-    whitelistedDAppIds.length
-  ) {
-    query.bool.filter.push({
-      terms: { dappIdKeyword: whitelistedDAppIds }
-    });
-  }
-
-  if (bannedDAppIds && Array.isArray(bannedDAppIds) && bannedDAppIds.length) {
-    query.bool.must_not.push({
-      terms: { dappIdKeyword: bannedDAppIds }
-    });
-  }
-
-  if (dappId.length && typeof dappId === "string")
-    dappId = dappId.split(",").map((di: string) => di.trim());
-  // eslint-disable-next-line no-extra-boolean-cast
-  if (!!isForMatureAudience)
-    query.bool.must.push({
-      match: {
-        isForMatureAudience: isForMatureAudience === "true" ? true : false
-      }
-    });
-
-  if (storeKey.length)
-    query.bool.must.push({ term: { whitelistedForStores: storeKey } });
-  if (storeKey.length && featured)
-    query.bool.must.push({ term: { featured: storeKey } });
-  else if (featured)
-    query.bool.must.push({ exists: { field: "featuredForStores" } });
-  if (minAge) query.bool.must.push({ range: { minAge: { gte: minAge } } });
-  if (chainId) query.bool.must.push({ match: { chains: chainId } });
-  if (language) query.bool.must.push({ match: { language } });
-  if (availableOnPlatform)
-    query.bool.must.push({
-      terms: { availableOnPlatform }
-    });
-  if (listedOnOrAfter)
-    query.bool.must.push({ range: { listDate: { gte: listedOnOrAfter } } });
-  if (listedOnOrBefore)
-    query.bool.must.push({ range: { listDate: { lte: listedOnOrBefore } } });
-
-  // it should be filter users location current not more then one country
-  if (allowedInCountries && allowedInCountries.length) {
-    query.bool.should.push({
-      terms: { "geoRestrictions.allowedCountries": allowedInCountries }
-    });
-    allowedInCountries.forEach((ac: string) => {
-      query.bool.must_not.push({
-        term: { "geoRestrictions.blockedCountries": ac }
-      });
-    });
-  }
-  // it should be filter users location current not more then one country
-  if (blockedInCountries && blockedInCountries.length)
-    query.bool.must.push({
-      terms: { "geoRestrictions.blockedCountries": blockedInCountries }
-    });
-
-  if (developer && developer.id)
-    query.bool.must.push({
-      match: { "developer.credentials.id": developer.id.trim() }
-    });
-
-  // create a category query with or between each category + apply subCategory filter
-  // category filter is must match but in case of multiple categories a doc atleast match to one category
-  // once a doc matched to one category it should match for subcategory if any values passed for sub category
-  const catSubCatMapping = getCatSubCatMapping(categories, subCategories);
-  if (catSubCatMapping.length) {
-    const categoryQuery = catSubCatMapping.map(catMapp => {
-      const { category, subCategory } = catMapp;
-      if (!subCategory.length) return { match: { category } };
-      return {
-        bool: {
-          must: [
-            { match: { category } },
-            { terms: { subCategoryKeyword: subCategory } }
-          ]
-        }
-      };
-    });
-    query.bool.must.push({ bool: { should: categoryQuery } });
-  }
-
-  if (dappId.length) query.bool.must.push({ terms: { dappIdKeyword: dappId } });
-  if (tokenIds.length) query.bool.must.push({ terms: { tokenId: tokenIds } });
-
-  // search on customer string
-  if (!!search && search.length) {
-    query.bool.should.push({
-      match: {
-        name: {
-          query: search,
-          boost: boostScore.name,
-          fuzziness: "6",
-          operator: "and"
-        }
-      }
-    });
-    query.bool.should.push({
-      match: {
-        description: {
-          query: search,
-          boost: boostScore.description,
-          fuzziness: "3"
-        }
-      }
-    });
-    query.bool.should.push({
-      match: { daapId: { query: search, boost: boostScore.dappId } }
-    });
-    query.bool.should.push({
-      match: { category: { query: search, boost: boostScore.category } }
-    });
-    query.bool.filter.push({
-      term: { isListed: isListed === "true" ? true : false }
-    });
-    // query.bool.filter.push({ term: { isVerified: true} });
-  }
-
-  if (ownerAddress) query.bool.must.push({ match: { ownerAddress } });
-
-  if (isMinted)
-    query.bool.must.push({
-      match: { minted: isMinted === "true" ? true : false }
-    });
-
-  if (isListed && !searchById && !search && !ownerAddress)
-    query.bool.must.push({
-      match: { isListed: isListed === "true" ? true : false }
-    });
-
-  // if (!ownerAddress)
-  //   query.bool.filter.push({ term: { isVerified: true} });
-
-  payload.page = parseInt(page as string);
-  payload.page = payload.page > 0 ? payload.page : 1;
-  const limitV1 = autoComplete ? recordsPerPageAutoComplete : recordsPerPage;
-  if (limit > limitV1) limit = limitV1;
-  if (typeof limit === "string") limit = parseInt(limit);
-  const finalQuery: PaginationQuery = {
-    _source: autoComplete ? autocompleteFields : searchFields,
-    query,
-    from: (payload.page - 1) * limit,
-    size: limit,
-    sort: orderBy((payload.orderBy || {}) as OrderParams)
-  };
-
-  return { finalQuery, limit };
 };
 
 export const addNewDappEnrichDataForStore = (

@@ -38,15 +38,6 @@ export interface OrderParams {
   name?: string;
 }
 
-export interface SortByOrderQuery {
-  _score?: { order: string };
-  listDate?: { order: string };
-  "metrics.rating"?: { order: string };
-  "metrics.visits"?: { order: string };
-  "metrics.installs"?: { order: string };
-  nameKeyword?: { order: string };
-}
-
 export interface ObjectStringValueType {
   [key: string]: string[] | string;
 }
