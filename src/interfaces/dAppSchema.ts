@@ -184,4 +184,7 @@ export interface DAppSchema {
   tokenId?: string;
   metrics?: object;
   verification?: VerificationDetails;
+  version?: string;
+  versionCode?: string;
+  packageId?: string;
 }
