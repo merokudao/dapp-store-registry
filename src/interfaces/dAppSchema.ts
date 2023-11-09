@@ -27,7 +27,8 @@ export const dAppCategory = [
   "social-networking",
   "sports",
   "travel",
-  "utilities"
+  "utilities",
+  "Ai"
 ] as const;
 
 export type DAppCategory = (typeof dAppCategory)[number];

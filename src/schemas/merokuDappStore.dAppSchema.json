@@ -203,7 +203,8 @@
         "social-networking",
         "sports",
         "travel",
-        "utilities"
+        "utilities",
+        "Ai"
       ]
     },
     "subCategory": {
@@ -690,6 +691,30 @@
               "nft-marketplaces",
               "pfps",
               "tooling"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": {
+            "const": "Ai"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "subCategory": {
+            "enum": [
+              "text",
+              "image",
+              "audio",
+              "video",
+              "business",
+              "code",
+              "others"
             ]
           }
         }
