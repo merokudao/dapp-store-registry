@@ -204,7 +204,7 @@
         "sports",
         "travel",
         "utilities",
-        "Ai"
+        "ai"
       ]
     },
     "subCategory": {
@@ -700,7 +700,7 @@
       "if": {
         "properties": {
           "category": {
-            "const": "Ai"
+            "const": "ai"
           }
         }
       },

@@ -185,5 +185,17 @@
       "wallets",
       "weather"
     ]
+  },
+  {
+    "category": "ai",
+    "subCategory": [
+      "text",
+      "image",
+      "audio",
+      "video",
+      "business",
+      "code",
+      "others"
+    ]
   }
 ]
