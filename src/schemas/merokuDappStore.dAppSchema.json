@@ -314,6 +314,35 @@
       },
       "minItems": 1,
       "uniqueItems": true
+    },
+    "tokens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "symbol", "address", "chains"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the token"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "The symbol of the token"
+          },
+          "address": {
+            "type": "string",
+            "description": "The address of the token"
+          },
+          "chains": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      }
     }
   },
   "allOf": [
