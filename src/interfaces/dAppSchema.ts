@@ -58,6 +58,13 @@ export interface DownloadBaseUrls {
   versionCode?: string;
 }
 
+export interface Token {
+  name: string;
+  symbol: string;
+  address: string;
+  chains: number[];
+}
+
 /**
  * A schema for dapps for dApp Registry
  */
@@ -188,4 +195,5 @@ export interface DAppSchema {
   version?: string;
   versionCode?: string;
   packageId?: string;
+  tokens?: Token[];
 }
