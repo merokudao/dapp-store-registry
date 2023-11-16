@@ -156,7 +156,7 @@ export interface DAppSchema {
   /**
    * @minItems 1
    */
-  chains: number[];
+  chains?: number[];
 
   category: DAppCategory;
 

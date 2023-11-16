@@ -128,7 +128,7 @@ describe("DappStoreRegistry", () => {
     it("is able to filter results on chainId", async () => {
       const registry_dapps_1 = await registry.dApps({ chainId: 1 });
       const dapps_1 = fixtureRegistryJson.dapps.filter(dapp =>
-        dapp.chains.includes(1)
+        dapp.chains?.includes(1)
       );
       registry_dapps_1.should.deep.equal(dapps_1);
     });
