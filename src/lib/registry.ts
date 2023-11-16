@@ -300,7 +300,7 @@ export class DappStoreRegistry {
       }
       if (filterOpts.chainId) {
         const chainId = filterOpts.chainId;
-        res = res.filter(d => d.chains.includes(chainId));
+        res = res.filter(d => d.chains?.includes(chainId));
       }
 
       res = res.filter(
