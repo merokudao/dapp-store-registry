@@ -29,7 +29,7 @@ export const dAppCategory = [
   "travel",
   "utilities",
   "ai",
-  "naming_services"
+  "naming-services"
 ] as const;
 
 export type DAppCategory = (typeof dAppCategory)[number];
